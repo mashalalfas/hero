@@ -1,0 +1,1633 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/git/branch.py",
+      "type": "file",
+      "name": "branch.py",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "File: branch.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/git/branch.py:create_pipeline_branch",
+      "type": "function",
+      "name": "create_pipeline_branch",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "Function create_pipeline_branch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/git/branch.py:commit_pipeline_changes",
+      "type": "function",
+      "name": "commit_pipeline_changes",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "Function commit_pipeline_changes",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/git/branch.py:rollback_pipeline",
+      "type": "function",
+      "name": "rollback_pipeline",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "Function rollback_pipeline",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/git/branch.py:get_current_branch",
+      "type": "function",
+      "name": "get_current_branch",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "Function get_current_branch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/pipeline/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/pipeline/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/pipeline/executor.py",
+      "type": "file",
+      "name": "executor.py",
+      "filePath": "src/hero/pipeline/executor.py",
+      "summary": "File: executor.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/pipeline/executor.py:PipelineResult",
+      "type": "class",
+      "name": "PipelineResult",
+      "filePath": "src/hero/pipeline/executor.py",
+      "summary": "Class PipelineResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/pipeline/executor.py:PipelineExecutor",
+      "type": "class",
+      "name": "PipelineExecutor",
+      "filePath": "src/hero/pipeline/executor.py",
+      "summary": "Class PipelineExecutor",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/pipeline/watcher.py",
+      "type": "file",
+      "name": "watcher.py",
+      "filePath": "src/hero/pipeline/watcher.py",
+      "summary": "File: watcher.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/pipeline/watcher.py:start_background_watcher",
+      "type": "function",
+      "name": "start_background_watcher",
+      "filePath": "src/hero/pipeline/watcher.py",
+      "summary": "Function start_background_watcher",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/pipeline/watcher.py:PipelineWatcher",
+      "type": "class",
+      "name": "PipelineWatcher",
+      "filePath": "src/hero/pipeline/watcher.py",
+      "summary": "Class PipelineWatcher",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/reliability/circuit_breaker.py",
+      "type": "file",
+      "name": "circuit_breaker.py",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "File: circuit_breaker.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:_load",
+      "type": "function",
+      "name": "_load",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function _load",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:_save",
+      "type": "function",
+      "name": "_save",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function _save",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:_ensure_sandbox",
+      "type": "function",
+      "name": "_ensure_sandbox",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function _ensure_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:record_failure",
+      "type": "function",
+      "name": "record_failure",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function record_failure",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:record_success",
+      "type": "function",
+      "name": "record_success",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function record_success",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:is_quarantined",
+      "type": "function",
+      "name": "is_quarantined",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function is_quarantined",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:unquarantine",
+      "type": "function",
+      "name": "unquarantine",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function unquarantine",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:get_status",
+      "type": "function",
+      "name": "get_status",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function get_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:get_all_status",
+      "type": "function",
+      "name": "get_all_status",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function get_all_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/soldier/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/context.py",
+      "type": "file",
+      "name": "context.py",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "File: context.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/context.py:build_context",
+      "type": "function",
+      "name": "build_context",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Function build_context",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/context.py:BudgetConfig",
+      "type": "class",
+      "name": "BudgetConfig",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Class BudgetConfig",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/context.py:KatanaData",
+      "type": "class",
+      "name": "KatanaData",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Class KatanaData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/context.py:SandboxData",
+      "type": "class",
+      "name": "SandboxData",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Class SandboxData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/context.py:ContextCache",
+      "type": "class",
+      "name": "ContextCache",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Class ContextCache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/dispatch.py",
+      "type": "file",
+      "name": "dispatch.py",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "File: dispatch.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_ensure_dir",
+      "type": "function",
+      "name": "_ensure_dir",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _ensure_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:enqueue",
+      "type": "function",
+      "name": "enqueue",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function enqueue",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_write_toon_entry",
+      "type": "function",
+      "name": "_write_toon_entry",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _write_toon_entry",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_read_task_file",
+      "type": "function",
+      "name": "_read_task_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _read_task_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_write_task_file",
+      "type": "function",
+      "name": "_write_task_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _write_task_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_iter_task_files",
+      "type": "function",
+      "name": "_iter_task_files",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _iter_task_files",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_load_task_from_file",
+      "type": "function",
+      "name": "_load_task_from_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _load_task_from_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_parse_toon_file",
+      "type": "function",
+      "name": "_parse_toon_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _parse_toon_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_parse_toon_value",
+      "type": "function",
+      "name": "_parse_toon_value",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _parse_toon_value",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:list_pending",
+      "type": "function",
+      "name": "list_pending",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function list_pending",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:list_all",
+      "type": "function",
+      "name": "list_all",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function list_all",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:get_task",
+      "type": "function",
+      "name": "get_task",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function get_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:mark_dispatched",
+      "type": "function",
+      "name": "mark_dispatched",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function mark_dispatched",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:mark_completed",
+      "type": "function",
+      "name": "mark_completed",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function mark_completed",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:mark_failed",
+      "type": "function",
+      "name": "mark_failed",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function mark_failed",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:purge_stale",
+      "type": "function",
+      "name": "purge_stale",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function purge_stale",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:clear_completed",
+      "type": "function",
+      "name": "clear_completed",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function clear_completed",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:get_sessions_spawn_command",
+      "type": "function",
+      "name": "get_sessions_spawn_command",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function get_sessions_spawn_command",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_delete_task_file",
+      "type": "function",
+      "name": "_delete_task_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _delete_task_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_build_task_prompt",
+      "type": "function",
+      "name": "_build_task_prompt",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _build_task_prompt",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/heartbeat.py",
+      "type": "file",
+      "name": "heartbeat.py",
+      "filePath": "src/hero/soldier/heartbeat.py",
+      "summary": "File: heartbeat.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/heartbeat.py:KatanaCheckpoint",
+      "type": "class",
+      "name": "KatanaCheckpoint",
+      "filePath": "src/hero/soldier/heartbeat.py",
+      "summary": "Class KatanaCheckpoint",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/heartbeat.py:HeartbeatData",
+      "type": "class",
+      "name": "HeartbeatData",
+      "filePath": "src/hero/soldier/heartbeat.py",
+      "summary": "Class HeartbeatData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/heartbeat.py:HeartbeatState",
+      "type": "class",
+      "name": "HeartbeatState",
+      "filePath": "src/hero/soldier/heartbeat.py",
+      "summary": "Class HeartbeatState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/spawner.py",
+      "type": "file",
+      "name": "spawner.py",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "File: spawner.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:load_army_config",
+      "type": "function",
+      "name": "load_army_config",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function load_army_config",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:_compute_complexity",
+      "type": "function",
+      "name": "_compute_complexity",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function _compute_complexity",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:estimate_budget",
+      "type": "function",
+      "name": "estimate_budget",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function estimate_budget",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:get_model_for_role",
+      "type": "function",
+      "name": "get_model_for_role",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function get_model_for_role",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:_build_hermes_command",
+      "type": "function",
+      "name": "_build_hermes_command",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function _build_hermes_command",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:_resolve_tokens",
+      "type": "function",
+      "name": "_resolve_tokens",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function _resolve_tokens",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/spawner.py:SoldierSpawner",
+      "type": "class",
+      "name": "SoldierSpawner",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Class SoldierSpawner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/state/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/budget.py",
+      "type": "file",
+      "name": "budget.py",
+      "filePath": "src/hero/state/budget.py",
+      "summary": "File: budget.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/budget.py:BudgetData",
+      "type": "class",
+      "name": "BudgetData",
+      "filePath": "src/hero/state/budget.py",
+      "summary": "Class BudgetData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/budget.py:BudgetState",
+      "type": "class",
+      "name": "BudgetState",
+      "filePath": "src/hero/state/budget.py",
+      "summary": "Class BudgetState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/budget_history.py",
+      "type": "file",
+      "name": "budget_history.py",
+      "filePath": "src/hero/state/budget_history.py",
+      "summary": "File: budget_history.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/budget_history.py:record_event",
+      "type": "function",
+      "name": "record_event",
+      "filePath": "src/hero/state/budget_history.py",
+      "summary": "Function record_event",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/budget_history.py:get_history",
+      "type": "function",
+      "name": "get_history",
+      "filePath": "src/hero/state/budget_history.py",
+      "summary": "Function get_history",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/budget_history.py:get_all_history",
+      "type": "function",
+      "name": "get_all_history",
+      "filePath": "src/hero/state/budget_history.py",
+      "summary": "Function get_all_history",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/index.py",
+      "type": "file",
+      "name": "index.py",
+      "filePath": "src/hero/state/index.py",
+      "summary": "File: index.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/index.py:SandboxEntry",
+      "type": "class",
+      "name": "SandboxEntry",
+      "filePath": "src/hero/state/index.py",
+      "summary": "Class SandboxEntry",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/index.py:IndexData",
+      "type": "class",
+      "name": "IndexData",
+      "filePath": "src/hero/state/index.py",
+      "summary": "Class IndexData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/index.py:IndexState",
+      "type": "class",
+      "name": "IndexState",
+      "filePath": "src/hero/state/index.py",
+      "summary": "Class IndexState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/sandbox.py",
+      "type": "file",
+      "name": "sandbox.py",
+      "filePath": "src/hero/state/sandbox.py",
+      "summary": "File: sandbox.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/sandbox.py:invalidate_cache",
+      "type": "function",
+      "name": "invalidate_cache",
+      "filePath": "src/hero/state/sandbox.py",
+      "summary": "Function invalidate_cache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/sandbox.py:get_cache",
+      "type": "function",
+      "name": "get_cache",
+      "filePath": "src/hero/state/sandbox.py",
+      "summary": "Function get_cache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/sandbox.py:BudgetData",
+      "type": "class",
+      "name": "BudgetData",
+      "filePath": "src/hero/state/sandbox.py",
+      "summary": "Class BudgetData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/sandbox.py:KatanaData",
+      "type": "class",
+      "name": "KatanaData",
+      "filePath": "src/hero/state/sandbox.py",
+      "summary": "Class KatanaData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/sandbox.py:SandboxData",
+      "type": "class",
+      "name": "SandboxData",
+      "filePath": "src/hero/state/sandbox.py",
+      "summary": "Class SandboxData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/sandbox.py:SandboxState",
+      "type": "class",
+      "name": "SandboxState",
+      "filePath": "src/hero/state/sandbox.py",
+      "summary": "Class SandboxState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/status.py",
+      "type": "file",
+      "name": "status.py",
+      "filePath": "src/hero/state/status.py",
+      "summary": "File: status.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/status.py:_ensure_dir",
+      "type": "function",
+      "name": "_ensure_dir",
+      "filePath": "src/hero/state/status.py",
+      "summary": "Function _ensure_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/status.py:write_status",
+      "type": "function",
+      "name": "write_status",
+      "filePath": "src/hero/state/status.py",
+      "summary": "Function write_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/status.py:read_status",
+      "type": "function",
+      "name": "read_status",
+      "filePath": "src/hero/state/status.py",
+      "summary": "Function read_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/status.py:list_status",
+      "type": "function",
+      "name": "list_status",
+      "filePath": "src/hero/state/status.py",
+      "summary": "Function list_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/status.py:clean_status",
+      "type": "function",
+      "name": "clean_status",
+      "filePath": "src/hero/state/status.py",
+      "summary": "Function clean_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/toon.py",
+      "type": "file",
+      "name": "toon.py",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "File: toon.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:toon_read",
+      "type": "function",
+      "name": "toon_read",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function toon_read",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:_parse_toon",
+      "type": "function",
+      "name": "_parse_toon",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function _parse_toon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:_parse_inline_dict",
+      "type": "function",
+      "name": "_parse_inline_dict",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function _parse_inline_dict",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:_parse_value",
+      "type": "function",
+      "name": "_parse_value",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function _parse_value",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:toon_write",
+      "type": "function",
+      "name": "toon_write",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function toon_write",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:_format_toon_data",
+      "type": "function",
+      "name": "_format_toon_data",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function _format_toon_data",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:_format_dict_inline",
+      "type": "function",
+      "name": "_format_dict_inline",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function _format_dict_inline",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:json_to_toon",
+      "type": "function",
+      "name": "json_to_toon",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function json_to_toon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/toon.py:toon_to_json",
+      "type": "function",
+      "name": "toon_to_json",
+      "filePath": "src/hero/state/toon.py",
+      "summary": "Function toon_to_json",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/usage.py",
+      "type": "file",
+      "name": "usage.py",
+      "filePath": "src/hero/state/usage.py",
+      "summary": "File: usage.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/usage.py:record_usage",
+      "type": "function",
+      "name": "record_usage",
+      "filePath": "src/hero/state/usage.py",
+      "summary": "Function record_usage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/usage.py:get_usage",
+      "type": "function",
+      "name": "get_usage",
+      "filePath": "src/hero/state/usage.py",
+      "summary": "Function get_usage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/state/usage.py:sum_sandbox_usage",
+      "type": "function",
+      "name": "sum_sandbox_usage",
+      "filePath": "src/hero/state/usage.py",
+      "summary": "Function sum_sandbox_usage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/git/branch.py",
+      "target": "function:src/hero/git/branch.py:create_pipeline_branch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/git/branch.py",
+      "target": "function:src/hero/git/branch.py:commit_pipeline_changes",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/git/branch.py",
+      "target": "function:src/hero/git/branch.py:rollback_pipeline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/git/branch.py",
+      "target": "function:src/hero/git/branch.py:get_current_branch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/pipeline/executor.py",
+      "target": "class:src/hero/pipeline/executor.py:PipelineResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/pipeline/executor.py",
+      "target": "class:src/hero/pipeline/executor.py:PipelineExecutor",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/pipeline/watcher.py",
+      "target": "function:src/hero/pipeline/watcher.py:start_background_watcher",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/pipeline/watcher.py",
+      "target": "class:src/hero/pipeline/watcher.py:PipelineWatcher",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:_load",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:_save",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:_ensure_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:record_failure",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:record_success",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:is_quarantined",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:unquarantine",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:get_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:get_all_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "function:src/hero/soldier/context.py:build_context",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "class:src/hero/soldier/context.py:BudgetConfig",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "class:src/hero/soldier/context.py:KatanaData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "class:src/hero/soldier/context.py:SandboxData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "class:src/hero/soldier/context.py:ContextCache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_ensure_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:enqueue",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_write_toon_entry",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_read_task_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_write_task_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_iter_task_files",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_load_task_from_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_parse_toon_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_parse_toon_value",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:list_pending",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:list_all",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:get_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:mark_dispatched",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:mark_completed",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:mark_failed",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:purge_stale",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:clear_completed",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:get_sessions_spawn_command",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_delete_task_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_build_task_prompt",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/heartbeat.py",
+      "target": "class:src/hero/soldier/heartbeat.py:KatanaCheckpoint",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/heartbeat.py",
+      "target": "class:src/hero/soldier/heartbeat.py:HeartbeatData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/heartbeat.py",
+      "target": "class:src/hero/soldier/heartbeat.py:HeartbeatState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:load_army_config",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:_compute_complexity",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:estimate_budget",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:get_model_for_role",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:_build_hermes_command",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:_resolve_tokens",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "class:src/hero/soldier/spawner.py:SoldierSpawner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/budget.py",
+      "target": "class:src/hero/state/budget.py:BudgetData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/budget.py",
+      "target": "class:src/hero/state/budget.py:BudgetState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/budget_history.py",
+      "target": "function:src/hero/state/budget_history.py:record_event",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/budget_history.py",
+      "target": "function:src/hero/state/budget_history.py:get_history",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/budget_history.py",
+      "target": "function:src/hero/state/budget_history.py:get_all_history",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/index.py",
+      "target": "class:src/hero/state/index.py:SandboxEntry",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/index.py",
+      "target": "class:src/hero/state/index.py:IndexData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/index.py",
+      "target": "class:src/hero/state/index.py:IndexState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/sandbox.py",
+      "target": "function:src/hero/state/sandbox.py:invalidate_cache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/sandbox.py",
+      "target": "function:src/hero/state/sandbox.py:get_cache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/sandbox.py",
+      "target": "class:src/hero/state/sandbox.py:BudgetData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/sandbox.py",
+      "target": "class:src/hero/state/sandbox.py:KatanaData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/sandbox.py",
+      "target": "class:src/hero/state/sandbox.py:SandboxData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/sandbox.py",
+      "target": "class:src/hero/state/sandbox.py:SandboxState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/status.py",
+      "target": "function:src/hero/state/status.py:_ensure_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/status.py",
+      "target": "function:src/hero/state/status.py:write_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/status.py",
+      "target": "function:src/hero/state/status.py:read_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/status.py",
+      "target": "function:src/hero/state/status.py:list_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/status.py",
+      "target": "function:src/hero/state/status.py:clean_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:toon_read",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:_parse_toon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:_parse_inline_dict",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:_parse_value",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:toon_write",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:_format_toon_data",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:_format_dict_inline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:json_to_toon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/toon.py",
+      "target": "function:src/hero/state/toon.py:toon_to_json",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/usage.py",
+      "target": "function:src/hero/state/usage.py:record_usage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/usage.py",
+      "target": "function:src/hero/state/usage.py:get_usage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/usage.py",
+      "target": "function:src/hero/state/usage.py:sum_sandbox_usage",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

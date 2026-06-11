@@ -1,0 +1,85 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "hero-teach/src/data/commands.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 348,
+      "nonEmptyLines": 348,
+      "sections": [
+        {
+          "heading": "groups",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "commands",
+          "level": 1,
+          "line": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "hero-teach/src/data/pipeline.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 232,
+      "nonEmptyLines": 232,
+      "sections": [
+        {
+          "heading": "nodes",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "edges",
+          "level": 1,
+          "line": 218
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "hero-teach/src/data/roles.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 333,
+      "nonEmptyLines": 333,
+      "sections": [
+        {
+          "heading": "roles",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "escalation",
+          "level": 1,
+          "line": 317
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    }
+  ]
+}

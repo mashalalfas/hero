@@ -1,0 +1,1192 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "VIEWPORT_IMPROVE_PLAN_DS4.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 477,
+      "nonEmptyLines": 377,
+      "sections": [
+        {
+          "heading": "VIEWPORT IMPROVE PLAN — DS4",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Build Progress Summary",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Current State (v2 — Tree Mode)",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "DS4 Vision: Tactical Operations Console",
+          "level": 2,
+          "line": 69
+        },
+        {
+          "heading": "DS4 Improvement Tiers",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "TIER 1 — Info-Rich Header (Foundation)",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "TIER 2 — Log Panel (Real-time Awareness)",
+          "level": 3,
+          "line": 112
+        },
+        {
+          "heading": "TIER 3 — Sparklines & History (Trends)",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "TIER 4 — Drill-Down & Detail Panel",
+          "level": 3,
+          "line": 140
+        },
+        {
+          "heading": "TIER 5 — Search & Filter",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "TIER 6 — Export & Snapshot",
+          "level": 3,
+          "line": 169
+        },
+        {
+          "heading": "TIER 7 — Adaptive Layout & Themes",
+          "level": 3,
+          "line": 183
+        },
+        {
+          "heading": "TIER 8 — Mouse Support",
+          "level": 3,
+          "line": 197
+        },
+        {
+          "heading": "TIER 9 — Alert Engine",
+          "level": 3,
+          "line": 210
+        },
+        {
+          "heading": "TIER 10 — Gauges & Visual Widgets",
+          "level": 3,
+          "line": 226
+        },
+        {
+          "heading": "Implementation — Kimi's Plan (Actual Build Order)",
+          "level": 2,
+          "line": 239
+        },
+        {
+          "heading": "Architecture (Current)",
+          "level": 2,
+          "line": 283
+        },
+        {
+          "heading": "Files (2,406 lines total)",
+          "level": 3,
+          "line": 285
+        },
+        {
+          "heading": "Key Dataclasses",
+          "level": 3,
+          "line": 301
+        },
+        {
+          "heading": "Key Dataclass Changes",
+          "level": 3,
+          "line": 368
+        },
+        {
+          "heading": "Event Publishing Points",
+          "level": 3,
+          "line": 394
+        },
+        {
+          "heading": "Success Criteria",
+          "level": 2,
+          "line": 413
+        },
+        {
+          "heading": "UX Principles (DS4)",
+          "level": 2,
+          "line": 428
+        },
+        {
+          "heading": "Appendix: Keyboard Map (DS4)",
+          "level": 2,
+          "line": 440
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 24
+      }
+    },
+    {
+      "path": "improvement_plan_deepseek.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 300,
+      "nonEmptyLines": 227,
+      "sections": [
+        {
+          "heading": "improvement_plan_deepseek.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "One-Sentence Pitch",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Visual Paradigm: The Flow-Sprawl",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Why Flow Over Tree or Table",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Key Features",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "1. Time-Layered Swimlanes (The Core)",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "2. Active/Idle/Vertical Zoning",
+          "level": 3,
+          "line": 77
+        },
+        {
+          "heading": "3. Flare-Anchored Error Display",
+          "level": 3,
+          "line": 96
+        },
+        {
+          "heading": "4. Model-Switching Visual Grammar",
+          "level": 3,
+          "line": 114
+        },
+        {
+          "heading": "5. Intelligent Analysis Panel (The Deep Part)",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "6. Pattern Search (`/`)",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "7. Detail Drill-Down (`Enter` on block)",
+          "level": 3,
+          "line": 154
+        },
+        {
+          "heading": "Data Sources",
+          "level": 2,
+          "line": 174
+        },
+        {
+          "heading": "New Files",
+          "level": 3,
+          "line": 187
+        },
+        {
+          "heading": "Interaction Map",
+          "level": 2,
+          "line": 220
+        },
+        {
+          "heading": "Mouse Support (Phase 2)",
+          "level": 3,
+          "line": 239
+        },
+        {
+          "heading": "Why This Fits DeepSeek V4 Flash",
+          "level": 2,
+          "line": 248
+        },
+        {
+          "heading": "Quick Start (If Implemented)",
+          "level": 2,
+          "line": 273
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 296
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "improvement_plan_mimov25.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 244,
+      "nonEmptyLines": 192,
+      "sections": [
+        {
+          "heading": "Improvement Plan — mimo-v2.5 (Lead Model)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "One-sentence pitch",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Visual Paradigm: The Situation Room",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Key Features",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "1. Cross-Sandbox Bottleneck Detection",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "2. Escalation Path Visualization",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "3. Resource Allocation Heatmap",
+          "level": 3,
+          "line": 74
+        },
+        {
+          "heading": "4. Dependency Chain Awareness",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "5. Cost Projection & Budget Warnings",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "6. Quick Actions Panel",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "Data Sources",
+          "level": 2,
+          "line": 118
+        },
+        {
+          "heading": "New MetricsCollector fields",
+          "level": 3,
+          "line": 130
+        },
+        {
+          "heading": "Interaction Map",
+          "level": 2,
+          "line": 150
+        },
+        {
+          "heading": "Zone Navigation",
+          "level": 3,
+          "line": 152
+        },
+        {
+          "heading": "Actions",
+          "level": 3,
+          "line": 161
+        },
+        {
+          "heading": "Detail Drill-Down",
+          "level": 3,
+          "line": 175
+        },
+        {
+          "heading": "Why This Fits mimo-v2.5",
+          "level": 2,
+          "line": 201
+        },
+        {
+          "heading": "Quick Start (if implemented)",
+          "level": 2,
+          "line": 218
+        },
+        {
+          "heading": "Phase 1: Core Intelligence (2-3 hours)",
+          "level": 3,
+          "line": 220
+        },
+        {
+          "heading": "Phase 2: Resource Map (1-2 hours)",
+          "level": 3,
+          "line": 226
+        },
+        {
+          "heading": "Phase 3: Actions & Dependencies (2-3 hours)",
+          "level": 3,
+          "line": 232
+        },
+        {
+          "heading": "Phase 4: Polish (1 hour)",
+          "level": 3,
+          "line": 238
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 22
+      }
+    },
+    {
+      "path": "improvement_plan_mimov25pro.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 451,
+      "nonEmptyLines": 343,
+      "sections": [
+        {
+          "heading": "improvement_plan_mimo_v25_pro.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "One-sentence pitch",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Visual Paradigm: The Code Intelligence Command Center",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Layout Philosophy",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "Key Features",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "1. Complexity Heatmap (left panel)",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "2. Risk Radar (top-left quadrant)",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "3. Dependency Graph (bottom-left quadrant)",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "4. Build Health Matrix (right panel)",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "5. Session Telemetry (bottom-right quadrant)",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "6. Mode Tabs",
+          "level": 3,
+          "line": 164
+        },
+        {
+          "heading": "Data Sources",
+          "level": 2,
+          "line": 178
+        },
+        {
+          "heading": "Existing (no new dependencies)",
+          "level": 3,
+          "line": 180
+        },
+        {
+          "heading": "New integrations (lightweight)",
+          "level": 3,
+          "line": 190
+        },
+        {
+          "heading": "No external services required",
+          "level": 3,
+          "line": 199
+        },
+        {
+          "heading": "Interaction Map",
+          "level": 2,
+          "line": 205
+        },
+        {
+          "heading": "Navigation",
+          "level": 3,
+          "line": 207
+        },
+        {
+          "heading": "Drill-down behavior",
+          "level": 3,
+          "line": 225
+        },
+        {
+          "heading": "Filters",
+          "level": 3,
+          "line": 240
+        },
+        {
+          "heading": "Why This Fits the Architect Model",
+          "level": 2,
+          "line": 252
+        },
+        {
+          "heading": "The Architect thinks in systems",
+          "level": 3,
+          "line": 254
+        },
+        {
+          "heading": "Code intelligence > process visualization",
+          "level": 3,
+          "line": 265
+        },
+        {
+          "heading": "Implementation path is clean",
+          "level": 3,
+          "line": 274
+        },
+        {
+          "heading": "No new external dependencies (except optional `radon`)",
+          "level": 3,
+          "line": 286
+        },
+        {
+          "heading": "Quick Start (if implemented)",
+          "level": 2,
+          "line": 292
+        },
+        {
+          "heading": "Phase 1: Foundation (Day 1–2)",
+          "level": 3,
+          "line": 294
+        },
+        {
+          "heading": "Phase 2: Panels (Day 3–4)",
+          "level": 3,
+          "line": 312
+        },
+        {
+          "heading": "Phase 3: Interaction (Day 5–6)",
+          "level": 3,
+          "line": 332
+        },
+        {
+          "heading": "Phase 4: Polish (Day 7)",
+          "level": 3,
+          "line": 341
+        },
+        {
+          "heading": "Configuration",
+          "level": 3,
+          "line": 350
+        },
+        {
+          "heading": "Architecture: New Module Structure",
+          "level": 2,
+          "line": 364
+        },
+        {
+          "heading": "Data flow",
+          "level": 3,
+          "line": 385
+        },
+        {
+          "heading": "Extension points",
+          "level": 3,
+          "line": 405
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 432
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 34
+      }
+    },
+    {
+      "path": "improvement_plan_minimax.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 183,
+      "nonEmptyLines": 143,
+      "sections": [
+        {
+          "heading": "improvement_plan_minimax.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "One-sentence pitch",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Visual Paradigm: Information Flow Map",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Key Features",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "1. Three-Lane Information Flow",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "2. Knowledge Gap Tracker",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "3. Research Thread Timeline",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "4. Documentation Density Indicators",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "5. Archive Trail",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Data Sources",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "Interaction Map",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "Why This Fits MiniMax M2.7",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "Quick Start (if implemented)",
+          "level": 2,
+          "line": 145
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "improvement_plan_step35.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 287,
+      "nonEmptyLines": 228,
+      "sections": [
+        {
+          "heading": "improvement_plan_step35.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "One-sentence pitch",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Visual Paradigm",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "The Cockpit Layout",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "What makes this feel like a cockpit",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Key Features",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "1. Army Health Ring (new, top bar)",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "2. Sandbox Card Grid (replaces the table)",
+          "level": 3,
+          "line": 74
+        },
+        {
+          "heading": "3. Mission Log (new, bottom third)",
+          "level": 3,
+          "line": 94
+        },
+        {
+          "heading": "4. Sandbox Detail Drill-Down",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "5. Keyboard Layout (three tiers)",
+          "level": 3,
+          "line": 135
+        },
+        {
+          "heading": "6. Health Overlay (`[h]`)",
+          "level": 3,
+          "line": 154
+        },
+        {
+          "heading": "Data Sources",
+          "level": 2,
+          "line": 165
+        },
+        {
+          "heading": "Interaction Map",
+          "level": 2,
+          "line": 181
+        },
+        {
+          "heading": "What's preserved from current viewport",
+          "level": 3,
+          "line": 213
+        },
+        {
+          "heading": "What's new",
+          "level": 3,
+          "line": 219
+        },
+        {
+          "heading": "Why This Fits stepfun-plan/step-3.5-flash-2603",
+          "level": 2,
+          "line": 227
+        },
+        {
+          "heading": "The reasoning",
+          "level": 3,
+          "line": 231
+        },
+        {
+          "heading": "Design philosophy",
+          "level": 3,
+          "line": 243
+        },
+        {
+          "heading": "What would make me excited to open this every morning",
+          "level": 3,
+          "line": 250
+        },
+        {
+          "heading": "Quick Start (if implemented)",
+          "level": 2,
+          "line": 259
+        },
+        {
+          "heading": "Phase 1 — Core cockpit (this plan)",
+          "level": 3,
+          "line": 261
+        },
+        {
+          "heading": "Phase 2 — Detail panel",
+          "level": 3,
+          "line": 268
+        },
+        {
+          "heading": "Phase 3 — Polish",
+          "level": 3,
+          "line": 273
+        },
+        {
+          "heading": "Phase 4 — Optional extras",
+          "level": 3,
+          "line": 279
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 25
+      }
+    },
+    {
+      "path": "improvement_plan_step36.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 341,
+      "nonEmptyLines": 260,
+      "sections": [
+        {
+          "heading": "improvement_plan_step36.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "One-sentence pitch",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Visual Paradigm (your unique concept)",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Key Features",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "1. **NOW Feed — Real-time Activity Stream**",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "2. **Delta Strip — Change Detection**",
+          "level": 3,
+          "line": 76
+        },
+        {
+          "heading": "3. **Velocity Graph — Sparkline Trend View**",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "4. **Acceleration Metrics — Rate-of-Change Display**",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "5. **Threshold Watchers — Event-Based Alerts**",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "6. **Compact Mode — Minimal State Overview**",
+          "level": 3,
+          "line": 144
+        },
+        {
+          "heading": "Data Sources",
+          "level": 2,
+          "line": 160
+        },
+        {
+          "heading": "Existing (already collected in v1)",
+          "level": 3,
+          "line": 162
+        },
+        {
+          "heading": "New additions",
+          "level": 3,
+          "line": 168
+        },
+        {
+          "heading": "1. **History Buffer** (`~/.hero/viewport_history.jsonl`)",
+          "level": 4,
+          "line": 170
+        },
+        {
+          "heading": "2. **Event Stream** (in-memory, per refresh)",
+          "level": 4,
+          "line": 195
+        },
+        {
+          "heading": "3. **Baseline Window** (last 15 cycles / ~30 seconds)",
+          "level": 4,
+          "line": 210
+        },
+        {
+          "heading": "4. **Git Integration** (optional, opt-in)",
+          "level": 4,
+          "line": 213
+        },
+        {
+          "heading": "5. **CI/CD Status** (optional, opt-in)",
+          "level": 4,
+          "line": 221
+        },
+        {
+          "heading": "Interaction Map",
+          "level": 2,
+          "line": 231
+        },
+        {
+          "heading": "Drill-Down Detail View",
+          "level": 3,
+          "line": 247
+        },
+        {
+          "heading": "Why This Fits step-3.6",
+          "level": 2,
+          "line": 285
+        },
+        {
+          "heading": "I am fast and new — velocity is my natural lens",
+          "level": 3,
+          "line": 287
+        },
+        {
+          "heading": "Quick Start (if implemented)",
+          "level": 2,
+          "line": 305
+        },
+        {
+          "heading": "Phase 1: Core Infrastructure",
+          "level": 3,
+          "line": 307
+        },
+        {
+          "heading": "Phase 2: Renderer Extensions",
+          "level": 3,
+          "line": 312
+        },
+        {
+          "heading": "Phase 3: Compact Mode",
+          "level": 3,
+          "line": 320
+        },
+        {
+          "heading": "Phase 4: Interaction",
+          "level": 3,
+          "line": 324
+        },
+        {
+          "heading": "Phase 5: Polish",
+          "level": 3,
+          "line": 329
+        },
+        {
+          "heading": "The Result",
+          "level": 3,
+          "line": 335
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 29
+      }
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 41,
+      "nonEmptyLines": 35,
+      "sections": [
+        {
+          "heading": "project",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "project.scripts",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "project.optional-dependencies",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "build-system",
+          "level": 1,
+          "line": 26
+        },
+        {
+          "heading": "tool.pytest.ini_options",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "tool.ruff",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "tool.ruff.format",
+          "level": 3,
+          "line": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "viewport_competition_all_entries.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 182,
+      "nonEmptyLines": 124,
+      "sections": [
+        {
+          "heading": "HERO Viewport — Model Competition: All Entries",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Entry 1: Step 3.5 Flash (Communicator) — `improvement_plan_step35.md`",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Entry 2: MiMo V2.5 (Lead) — `improvement_plan_mimov25.md`",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Entry 3: MiMo V2.5 Pro (Architect) — `improvement_plan_mimov25pro.md`",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "Entry 4: DeepSeek V4 Flash (Soldier/Deep Worker) — `improvement_plan_deepseek.md`",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "Entry 5: MiniMax M2.7 (Researcher/Archivist) — `improvement_plan_minimax.md`",
+          "level": 2,
+          "line": 111
+        },
+        {
+          "heading": "Entry 6: Step 3.6 (Fast Worker) — `improvement_plan_step36.md`",
+          "level": 2,
+          "line": 135
+        },
+        {
+          "heading": "Supplementary: Mashal's Tree Concept — `Ideas_by_me.md`",
+          "level": 2,
+          "line": 162
+        },
+        {
+          "heading": "Comparison Matrix",
+          "level": 2,
+          "line": 172
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "viewport_competition_kimi_review.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 277,
+      "nonEmptyLines": 185,
+      "sections": [
+        {
+          "heading": "HERO Viewport Competition — Kimi K2.6 Review",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Overall Assessment",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Strongest Entry: MiMo V2.5 (Lead) — \"Command Center\"",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "2. Per-Entry Feedback",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "Entry 1: Step 3.5 Flash — \"Cockpit\"",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "Entry 2: MiMo V2.5 — \"Command Center\" *(Winner)*",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "Entry 3: MiMo V2.5 Pro — \"Code Intelligence\"",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "Entry 4: DeepSeek V4 Flash — \"Diagnostic Console\"",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "Entry 5: MiniMax M2.7 — \"Knowledge Ops Center\"",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "Entry 6: Step 3.6 — \"Velocity Center\"",
+          "level": 3,
+          "line": 94
+        },
+        {
+          "heading": "Entry 7: Mashal — \"Command Hierarchy Tree\"",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "3. What They ALL Missed",
+          "level": 2,
+          "line": 122
+        },
+        {
+          "heading": "Missing: Compaction / Summarization",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "Missing: Goal / Mission Layer",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "Missing: Sandbox Lifecycle State Machine",
+          "level": 3,
+          "line": 148
+        },
+        {
+          "heading": "Missing: Budget as a First-Class Concern",
+          "level": 3,
+          "line": 160
+        },
+        {
+          "heading": "Missing: The \"What Changed Since I Left\" View",
+          "level": 3,
+          "line": 172
+        },
+        {
+          "heading": "4. Recommendation: What to Build for v2",
+          "level": 2,
+          "line": 186
+        },
+        {
+          "heading": "The Combination: MiMo V2.5 + Mashal's Tree + Step 3.5 Health Ring",
+          "level": 3,
+          "line": 188
+        },
+        {
+          "heading": "Implementation Order",
+          "level": 3,
+          "line": 203
+        },
+        {
+          "heading": "What to Explicitly NOT Build in v2",
+          "level": 3,
+          "line": 239
+        },
+        {
+          "heading": "The v2 Philosophy",
+          "level": 3,
+          "line": 246
+        },
+        {
+          "heading": "Appendix: Quick Ranking",
+          "level": 2,
+          "line": 261
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 23
+      }
+    }
+  ]
+}

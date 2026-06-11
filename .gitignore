@@ -1,0 +1,7 @@
+# HERO local state — never commit
+.hero/
+*.pyc
+__pycache__/
+.venv/
+.pytest_cache/
+*.egg-info/

@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "service:.github/workflows/bandit.yml",
+      "type": "service",
+      "name": "bandit.yml",
+      "filePath": ".github/workflows/bandit.yml",
+      "summary": "Service: bandit.yml",
+      "tags": [
+        "yaml",
+        "infra"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.github/workflows/bandit.yml:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".github/workflows/bandit.yml",
+      "summary": "Section: section",
+      "tags": [
+        "yaml",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

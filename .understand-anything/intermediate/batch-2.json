@@ -1,0 +1,845 @@
+{
+  "nodes": [
+    {
+      "id": "file:hero-teach/src/App.tsx",
+      "type": "file",
+      "name": "App.tsx",
+      "filePath": "hero-teach/src/App.tsx",
+      "summary": "File: App.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/App.tsx:PageLoader",
+      "type": "function",
+      "name": "PageLoader",
+      "filePath": "hero-teach/src/App.tsx",
+      "summary": "Function PageLoader",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/App.tsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "hero-teach/src/App.tsx",
+      "summary": "Function App",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/Callout.tsx",
+      "type": "file",
+      "name": "Callout.tsx",
+      "filePath": "hero-teach/src/components/Callout.tsx",
+      "summary": "File: Callout.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/Callout.tsx:Callout",
+      "type": "function",
+      "name": "Callout",
+      "filePath": "hero-teach/src/components/Callout.tsx",
+      "summary": "Function Callout",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/CodeBlock.tsx",
+      "type": "file",
+      "name": "CodeBlock.tsx",
+      "filePath": "hero-teach/src/components/CodeBlock.tsx",
+      "summary": "File: CodeBlock.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/CodeBlock.tsx:CodeBlock",
+      "type": "function",
+      "name": "CodeBlock",
+      "filePath": "hero-teach/src/components/CodeBlock.tsx",
+      "summary": "Function CodeBlock",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/Footer.tsx",
+      "type": "file",
+      "name": "Footer.tsx",
+      "filePath": "hero-teach/src/components/Footer.tsx",
+      "summary": "File: Footer.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/Footer.tsx:Footer",
+      "type": "function",
+      "name": "Footer",
+      "filePath": "hero-teach/src/components/Footer.tsx",
+      "summary": "Function Footer",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/GitHubIcon.tsx",
+      "type": "file",
+      "name": "GitHubIcon.tsx",
+      "filePath": "hero-teach/src/components/GitHubIcon.tsx",
+      "summary": "File: GitHubIcon.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/GitHubIcon.tsx:GitHubIcon",
+      "type": "function",
+      "name": "GitHubIcon",
+      "filePath": "hero-teach/src/components/GitHubIcon.tsx",
+      "summary": "Function GitHubIcon",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/Nav.tsx",
+      "type": "file",
+      "name": "Nav.tsx",
+      "filePath": "hero-teach/src/components/Nav.tsx",
+      "summary": "File: Nav.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/Nav.tsx:Nav",
+      "type": "function",
+      "name": "Nav",
+      "filePath": "hero-teach/src/components/Nav.tsx",
+      "summary": "Function Nav",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/NodePanel.tsx",
+      "type": "file",
+      "name": "NodePanel.tsx",
+      "filePath": "hero-teach/src/components/NodePanel.tsx",
+      "summary": "File: NodePanel.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/NodePanel.tsx:NodePanel",
+      "type": "function",
+      "name": "NodePanel",
+      "filePath": "hero-teach/src/components/NodePanel.tsx",
+      "summary": "Function NodePanel",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/NodePill.tsx",
+      "type": "file",
+      "name": "NodePill.tsx",
+      "filePath": "hero-teach/src/components/NodePill.tsx",
+      "summary": "File: NodePill.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/NodePill.tsx:NodePill",
+      "type": "function",
+      "name": "NodePill",
+      "filePath": "hero-teach/src/components/NodePill.tsx",
+      "summary": "Function NodePill",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/PipelineMap.tsx",
+      "type": "file",
+      "name": "PipelineMap.tsx",
+      "filePath": "hero-teach/src/components/PipelineMap.tsx",
+      "summary": "File: PipelineMap.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/PipelineMap.tsx:filterByScope",
+      "type": "function",
+      "name": "filterByScope",
+      "filePath": "hero-teach/src/components/PipelineMap.tsx",
+      "summary": "Function filterByScope",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/PipelineMap.tsx:buildGraph",
+      "type": "function",
+      "name": "buildGraph",
+      "filePath": "hero-teach/src/components/PipelineMap.tsx",
+      "summary": "Function buildGraph",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/PipelineMap.tsx:PipelineMap",
+      "type": "function",
+      "name": "PipelineMap",
+      "filePath": "hero-teach/src/components/PipelineMap.tsx",
+      "summary": "Function PipelineMap",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/ScoreBadge.tsx",
+      "type": "file",
+      "name": "ScoreBadge.tsx",
+      "filePath": "hero-teach/src/components/ScoreBadge.tsx",
+      "summary": "File: ScoreBadge.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/ScoreBadge.tsx:ScoreBadge",
+      "type": "function",
+      "name": "ScoreBadge",
+      "filePath": "hero-teach/src/components/ScoreBadge.tsx",
+      "summary": "Function ScoreBadge",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/SearchBar.tsx",
+      "type": "file",
+      "name": "SearchBar.tsx",
+      "filePath": "hero-teach/src/components/SearchBar.tsx",
+      "summary": "File: SearchBar.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/SearchBar.tsx:SearchBar",
+      "type": "function",
+      "name": "SearchBar",
+      "filePath": "hero-teach/src/components/SearchBar.tsx",
+      "summary": "Function SearchBar",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/ThemeToggle.tsx",
+      "type": "file",
+      "name": "ThemeToggle.tsx",
+      "filePath": "hero-teach/src/components/ThemeToggle.tsx",
+      "summary": "File: ThemeToggle.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/ThemeToggle.tsx:ThemeToggle",
+      "type": "function",
+      "name": "ThemeToggle",
+      "filePath": "hero-teach/src/components/ThemeToggle.tsx",
+      "summary": "Function ThemeToggle",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/components/ToonVsJson.tsx",
+      "type": "file",
+      "name": "ToonVsJson.tsx",
+      "filePath": "hero-teach/src/components/ToonVsJson.tsx",
+      "summary": "File: ToonVsJson.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/components/ToonVsJson.tsx:ToonVsJson",
+      "type": "function",
+      "name": "ToonVsJson",
+      "filePath": "hero-teach/src/components/ToonVsJson.tsx",
+      "summary": "Function ToonVsJson",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "filePath": "hero-teach/src/main.tsx",
+      "summary": "File: main.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/About.tsx",
+      "type": "file",
+      "name": "About.tsx",
+      "filePath": "hero-teach/src/pages/About.tsx",
+      "summary": "File: About.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/About.tsx:About",
+      "type": "function",
+      "name": "About",
+      "filePath": "hero-teach/src/pages/About.tsx",
+      "summary": "Function About",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/Architecture.tsx",
+      "type": "file",
+      "name": "Architecture.tsx",
+      "filePath": "hero-teach/src/pages/Architecture.tsx",
+      "summary": "File: Architecture.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Architecture.tsx:Architecture",
+      "type": "function",
+      "name": "Architecture",
+      "filePath": "hero-teach/src/pages/Architecture.tsx",
+      "summary": "Function Architecture",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/Commands.tsx",
+      "type": "file",
+      "name": "Commands.tsx",
+      "filePath": "hero-teach/src/pages/Commands.tsx",
+      "summary": "File: Commands.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Commands.tsx:CommandCard",
+      "type": "function",
+      "name": "CommandCard",
+      "filePath": "hero-teach/src/pages/Commands.tsx",
+      "summary": "Function CommandCard",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Commands.tsx:Commands",
+      "type": "function",
+      "name": "Commands",
+      "filePath": "hero-teach/src/pages/Commands.tsx",
+      "summary": "Function Commands",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/Examples.tsx",
+      "type": "file",
+      "name": "Examples.tsx",
+      "filePath": "hero-teach/src/pages/Examples.tsx",
+      "summary": "File: Examples.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Examples.tsx:Examples",
+      "type": "function",
+      "name": "Examples",
+      "filePath": "hero-teach/src/pages/Examples.tsx",
+      "summary": "Function Examples",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/ExchangeLayer.tsx",
+      "type": "file",
+      "name": "ExchangeLayer.tsx",
+      "filePath": "hero-teach/src/pages/ExchangeLayer.tsx",
+      "summary": "File: ExchangeLayer.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/ExchangeLayer.tsx:ExchangeLayer",
+      "type": "function",
+      "name": "ExchangeLayer",
+      "filePath": "hero-teach/src/pages/ExchangeLayer.tsx",
+      "summary": "Function ExchangeLayer",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/GettingStarted.tsx",
+      "type": "file",
+      "name": "GettingStarted.tsx",
+      "filePath": "hero-teach/src/pages/GettingStarted.tsx",
+      "summary": "File: GettingStarted.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/GettingStarted.tsx:GettingStarted",
+      "type": "function",
+      "name": "GettingStarted",
+      "filePath": "hero-teach/src/pages/GettingStarted.tsx",
+      "summary": "Function GettingStarted",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/Home.tsx",
+      "type": "file",
+      "name": "Home.tsx",
+      "filePath": "hero-teach/src/pages/Home.tsx",
+      "summary": "File: Home.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Home.tsx:Home",
+      "type": "function",
+      "name": "Home",
+      "filePath": "hero-teach/src/pages/Home.tsx",
+      "summary": "Function Home",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/NotFound.tsx",
+      "type": "file",
+      "name": "NotFound.tsx",
+      "filePath": "hero-teach/src/pages/NotFound.tsx",
+      "summary": "File: NotFound.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/NotFound.tsx:NotFound",
+      "type": "function",
+      "name": "NotFound",
+      "filePath": "hero-teach/src/pages/NotFound.tsx",
+      "summary": "Function NotFound",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/Pipeline.tsx",
+      "type": "file",
+      "name": "Pipeline.tsx",
+      "filePath": "hero-teach/src/pages/Pipeline.tsx",
+      "summary": "File: Pipeline.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Pipeline.tsx:StageSection",
+      "type": "function",
+      "name": "StageSection",
+      "filePath": "hero-teach/src/pages/Pipeline.tsx",
+      "summary": "Function StageSection",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Pipeline.tsx:Pipeline",
+      "type": "function",
+      "name": "Pipeline",
+      "filePath": "hero-teach/src/pages/Pipeline.tsx",
+      "summary": "Function Pipeline",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/RolePage.tsx",
+      "type": "file",
+      "name": "RolePage.tsx",
+      "filePath": "hero-teach/src/pages/RolePage.tsx",
+      "summary": "File: RolePage.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/RolePage.tsx:RolePage",
+      "type": "function",
+      "name": "RolePage",
+      "filePath": "hero-teach/src/pages/RolePage.tsx",
+      "summary": "Function RolePage",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/RolePage.tsx:WrenchIcon",
+      "type": "function",
+      "name": "WrenchIcon",
+      "filePath": "hero-teach/src/pages/RolePage.tsx",
+      "summary": "Function WrenchIcon",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/pages/Roles.tsx",
+      "type": "file",
+      "name": "Roles.tsx",
+      "filePath": "hero-teach/src/pages/Roles.tsx",
+      "summary": "File: Roles.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Roles.tsx:formatContext",
+      "type": "function",
+      "name": "formatContext",
+      "filePath": "hero-teach/src/pages/Roles.tsx",
+      "summary": "Function formatContext",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/pages/Roles.tsx:Roles",
+      "type": "function",
+      "name": "Roles",
+      "filePath": "hero-teach/src/pages/Roles.tsx",
+      "summary": "Function Roles",
+      "tags": [
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hero-teach/src/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "hero-teach/src/types.ts",
+      "summary": "File: types.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:hero-teach/src/App.tsx",
+      "target": "function:hero-teach/src/App.tsx:PageLoader",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/App.tsx",
+      "target": "function:hero-teach/src/App.tsx:App",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/Callout.tsx",
+      "target": "function:hero-teach/src/components/Callout.tsx:Callout",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/CodeBlock.tsx",
+      "target": "function:hero-teach/src/components/CodeBlock.tsx:CodeBlock",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/Footer.tsx",
+      "target": "function:hero-teach/src/components/Footer.tsx:Footer",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/GitHubIcon.tsx",
+      "target": "function:hero-teach/src/components/GitHubIcon.tsx:GitHubIcon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/Nav.tsx",
+      "target": "function:hero-teach/src/components/Nav.tsx:Nav",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/NodePanel.tsx",
+      "target": "function:hero-teach/src/components/NodePanel.tsx:NodePanel",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/NodePill.tsx",
+      "target": "function:hero-teach/src/components/NodePill.tsx:NodePill",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/PipelineMap.tsx",
+      "target": "function:hero-teach/src/components/PipelineMap.tsx:filterByScope",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/PipelineMap.tsx",
+      "target": "function:hero-teach/src/components/PipelineMap.tsx:buildGraph",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/PipelineMap.tsx",
+      "target": "function:hero-teach/src/components/PipelineMap.tsx:PipelineMap",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/ScoreBadge.tsx",
+      "target": "function:hero-teach/src/components/ScoreBadge.tsx:ScoreBadge",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/SearchBar.tsx",
+      "target": "function:hero-teach/src/components/SearchBar.tsx:SearchBar",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/ThemeToggle.tsx",
+      "target": "function:hero-teach/src/components/ThemeToggle.tsx:ThemeToggle",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/components/ToonVsJson.tsx",
+      "target": "function:hero-teach/src/components/ToonVsJson.tsx:ToonVsJson",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/About.tsx",
+      "target": "function:hero-teach/src/pages/About.tsx:About",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Architecture.tsx",
+      "target": "function:hero-teach/src/pages/Architecture.tsx:Architecture",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Commands.tsx",
+      "target": "function:hero-teach/src/pages/Commands.tsx:CommandCard",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Commands.tsx",
+      "target": "function:hero-teach/src/pages/Commands.tsx:Commands",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Examples.tsx",
+      "target": "function:hero-teach/src/pages/Examples.tsx:Examples",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/ExchangeLayer.tsx",
+      "target": "function:hero-teach/src/pages/ExchangeLayer.tsx:ExchangeLayer",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/GettingStarted.tsx",
+      "target": "function:hero-teach/src/pages/GettingStarted.tsx:GettingStarted",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Home.tsx",
+      "target": "function:hero-teach/src/pages/Home.tsx:Home",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/NotFound.tsx",
+      "target": "function:hero-teach/src/pages/NotFound.tsx:NotFound",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Pipeline.tsx",
+      "target": "function:hero-teach/src/pages/Pipeline.tsx:StageSection",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Pipeline.tsx",
+      "target": "function:hero-teach/src/pages/Pipeline.tsx:Pipeline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/RolePage.tsx",
+      "target": "function:hero-teach/src/pages/RolePage.tsx:RolePage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/RolePage.tsx",
+      "target": "function:hero-teach/src/pages/RolePage.tsx:WrenchIcon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Roles.tsx",
+      "target": "function:hero-teach/src/pages/Roles.tsx:formatContext",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:hero-teach/src/pages/Roles.tsx",
+      "target": "function:hero-teach/src/pages/Roles.tsx:Roles",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

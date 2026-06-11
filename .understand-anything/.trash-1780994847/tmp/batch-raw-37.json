@@ -1,0 +1,2399 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "tests/test_qa_gate.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 226,
+      "nonEmptyLines": 171,
+      "functions": [
+        {
+          "name": "sandbox_with_git",
+          "startLine": 18,
+          "endLine": 42,
+          "params": [
+            "tmp_path"
+          ]
+        },
+        {
+          "name": "_add_and_stage",
+          "startLine": 45,
+          "endLine": 50,
+          "params": [
+            "repo",
+            "rel_path",
+            "content"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestQAResult",
+          "startLine": 56,
+          "endLine": 69,
+          "methods": [
+            "test_passed_no_violations",
+            "test_failed_with_violations",
+            "test_default_violations_is_empty"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestFileScopeCheck",
+          "startLine": 75,
+          "endLine": 114,
+          "methods": [
+            "test_allows_whitelisted_file",
+            "test_rejects_unlisted_file",
+            "test_accepts_nested_allowed_file",
+            "test_scope_violation_has_terse_message"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestDiffSizeCheck",
+          "startLine": 120,
+          "endLine": 173,
+          "methods": [
+            "test_small_diff_passes",
+            "test_large_diff_fails",
+            "test_max_diff_lines_zero_rejects_any_change",
+            "test_multiple_files_exceed_limit"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestHandleFailure",
+          "startLine": 179,
+          "endLine": 226,
+          "methods": [
+            "test_logs_and_sends_to_dlq",
+            "test_handle_failure_creates_dlq_entry",
+            "test_handle_failure_silent_on_pass"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "sandbox_with_git",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "_add_and_stage",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "TestQAResult",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "TestFileScopeCheck",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "TestDiffSizeCheck",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "TestHandleFailure",
+          "line": 179,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sandbox_with_git",
+          "callee": "repo.mkdir",
+          "lineNumber": 21
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "subprocess.run",
+          "lineNumber": 22
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "str",
+          "lineNumber": 22
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "subprocess.run",
+          "lineNumber": 23
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "str",
+          "lineNumber": 25
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "subprocess.run",
+          "lineNumber": 28
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "str",
+          "lineNumber": 30
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "initial.write_text",
+          "lineNumber": 35
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "subprocess.run",
+          "lineNumber": 36
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "str",
+          "lineNumber": 36
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "subprocess.run",
+          "lineNumber": 37
+        },
+        {
+          "caller": "sandbox_with_git",
+          "callee": "str",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_add_and_stage",
+          "callee": "target.parent.mkdir",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_add_and_stage",
+          "callee": "target.write_text",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_add_and_stage",
+          "callee": "subprocess.run",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_add_and_stage",
+          "callee": "str",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_passed_no_violations",
+          "callee": "QAResult",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_failed_with_violations",
+          "callee": "QAResult",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_default_violations_is_empty",
+          "callee": "QAResult",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_allows_whitelisted_file",
+          "callee": "QAGate",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_allows_whitelisted_file",
+          "callee": "(sandbox_with_git / \"README.md\").write_text",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_allows_whitelisted_file",
+          "callee": "gate.run",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_rejects_unlisted_file",
+          "callee": "QAGate",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_rejects_unlisted_file",
+          "callee": "_add_and_stage",
+          "lineNumber": 90
+        },
+        {
+          "caller": "test_rejects_unlisted_file",
+          "callee": "gate.run",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_rejects_unlisted_file",
+          "callee": "any",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_accepts_nested_allowed_file",
+          "callee": "QAGate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_accepts_nested_allowed_file",
+          "callee": "_add_and_stage",
+          "lineNumber": 100
+        },
+        {
+          "caller": "test_accepts_nested_allowed_file",
+          "callee": "gate.run",
+          "lineNumber": 102
+        },
+        {
+          "caller": "test_scope_violation_has_terse_message",
+          "callee": "QAGate",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_scope_violation_has_terse_message",
+          "callee": "_add_and_stage",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_scope_violation_has_terse_message",
+          "callee": "gate.run",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_scope_violation_has_terse_message",
+          "callee": "len",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_small_diff_passes",
+          "callee": "QAGate",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_small_diff_passes",
+          "callee": "_add_and_stage",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_small_diff_passes",
+          "callee": "gate.run",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_large_diff_fails",
+          "callee": "QAGate",
+          "lineNumber": 132
+        },
+        {
+          "caller": "test_large_diff_fails",
+          "callee": "\"\\n\".join",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_large_diff_fails",
+          "callee": "range",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_large_diff_fails",
+          "callee": "_add_and_stage",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_large_diff_fails",
+          "callee": "gate.run",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_large_diff_fails",
+          "callee": "any",
+          "lineNumber": 142
+        },
+        {
+          "caller": "test_large_diff_fails",
+          "callee": "any",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_max_diff_lines_zero_rejects_any_change",
+          "callee": "QAGate",
+          "lineNumber": 146
+        },
+        {
+          "caller": "test_max_diff_lines_zero_rejects_any_change",
+          "callee": "_add_and_stage",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_max_diff_lines_zero_rejects_any_change",
+          "callee": "gate.run",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_multiple_files_exceed_limit",
+          "callee": "QAGate",
+          "lineNumber": 157
+        },
+        {
+          "caller": "test_multiple_files_exceed_limit",
+          "callee": "_add_and_stage",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_multiple_files_exceed_limit",
+          "callee": "_add_and_stage",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_multiple_files_exceed_limit",
+          "callee": "gate.run",
+          "lineNumber": 169
+        },
+        {
+          "caller": "test_multiple_files_exceed_limit",
+          "callee": "len",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_logs_and_sends_to_dlq",
+          "callee": "QAGate",
+          "lineNumber": 181
+        },
+        {
+          "caller": "test_logs_and_sends_to_dlq",
+          "callee": "_add_and_stage",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_logs_and_sends_to_dlq",
+          "callee": "gate.run",
+          "lineNumber": 184
+        },
+        {
+          "caller": "test_logs_and_sends_to_dlq",
+          "callee": "gate.handle_failure",
+          "lineNumber": 188
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "QAGate",
+          "lineNumber": 191
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "_add_and_stage",
+          "lineNumber": 192
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "gate.run",
+          "lineNumber": 194
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "Path.home",
+          "lineNumber": 198
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "dlq_file.exists",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "dlq_file.unlink",
+          "lineNumber": 201
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "gate.handle_failure",
+          "lineNumber": 203
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "dlq_file.exists",
+          "lineNumber": 205
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "json.loads",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "dlq_file.read_text",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "record.get",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "record.get",
+          "lineNumber": 209
+        },
+        {
+          "caller": "test_handle_failure_creates_dlq_entry",
+          "callee": "dlq_file.unlink",
+          "lineNumber": 212
+        },
+        {
+          "caller": "test_handle_failure_silent_on_pass",
+          "callee": "QAGate",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_handle_failure_silent_on_pass",
+          "callee": "_add_and_stage",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_handle_failure_silent_on_pass",
+          "callee": "gate.run",
+          "lineNumber": 222
+        },
+        {
+          "caller": "test_handle_failure_silent_on_pass",
+          "callee": "gate.handle_failure",
+          "lineNumber": 226
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 2,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "tests/test_score.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 208,
+      "nonEmptyLines": 166,
+      "functions": [
+        {
+          "name": "runner",
+          "startLine": 23,
+          "endLine": 24,
+          "params": []
+        },
+        {
+          "name": "tmp_project",
+          "startLine": 28,
+          "endLine": 35,
+          "params": [
+            "tmp_path"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestResolveSandbox",
+          "startLine": 40,
+          "endLine": 65,
+          "methods": [
+            "test_named_sandbox",
+            "test_direct_path",
+            "test_development_fallback",
+            "test_not_found_raises"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestDetectProjectType",
+          "startLine": 68,
+          "endLine": 86,
+          "methods": [
+            "test_flutter",
+            "test_rust",
+            "test_node",
+            "test_python",
+            "test_unknown"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestSecretScan",
+          "startLine": 91,
+          "endLine": 106,
+          "methods": [
+            "test_clean_project",
+            "test_secret_detected",
+            "test_skips_node_modules"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestCopyrightHeaders",
+          "startLine": 111,
+          "endLine": 125,
+          "methods": [
+            "test_all_present",
+            "test_missing_header",
+            "test_spdx_header_accepted"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestScoreVerify",
+          "startLine": 130,
+          "endLine": 167,
+          "methods": [
+            "test_all_pass",
+            "test_penalty_below_50",
+            "test_penalty_below_70"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestCLI",
+          "startLine": 172,
+          "endLine": 208,
+          "methods": [
+            "test_help",
+            "test_score_on_project",
+            "test_json_output",
+            "test_unknown_pipeline",
+            "test_missing_sandbox"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "runner",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "tmp_project",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "TestResolveSandbox",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "TestDetectProjectType",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "TestSecretScan",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "TestCopyrightHeaders",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "TestScoreVerify",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "TestCLI",
+          "line": 172,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "runner",
+          "callee": "CliRunner",
+          "lineNumber": 24
+        },
+        {
+          "caller": "tmp_project",
+          "callee": "(tmp_path / \"pubspec.yaml\").write_text",
+          "lineNumber": 30
+        },
+        {
+          "caller": "tmp_project",
+          "callee": "(tmp_path / \"lib\").mkdir",
+          "lineNumber": 31
+        },
+        {
+          "caller": "tmp_project",
+          "callee": "(tmp_path / \"lib\" / \"main.dart\").write_text",
+          "lineNumber": 32
+        },
+        {
+          "caller": "test_named_sandbox",
+          "callee": "patch",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_named_sandbox",
+          "callee": "sandbox_dir.mkdir",
+          "lineNumber": 44
+        },
+        {
+          "caller": "test_named_sandbox",
+          "callee": "_resolve_sandbox",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_direct_path",
+          "callee": "_resolve_sandbox",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_direct_path",
+          "callee": "str",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_development_fallback",
+          "callee": "fake_dev.mkdir",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_development_fallback",
+          "callee": "target.mkdir",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_development_fallback",
+          "callee": "patch",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_development_fallback",
+          "callee": "patch",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_development_fallback",
+          "callee": "_resolve_sandbox",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_not_found_raises",
+          "callee": "patch",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_not_found_raises",
+          "callee": "pytest.raises",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_not_found_raises",
+          "callee": "_resolve_sandbox",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_flutter",
+          "callee": "(tmp_path / \"pubspec.yaml\").write_text",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_flutter",
+          "callee": "_detect_project_type",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_rust",
+          "callee": "(tmp_path / \"Cargo.toml\").write_text",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_rust",
+          "callee": "_detect_project_type",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_node",
+          "callee": "(tmp_path / \"package.json\").write_text",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_node",
+          "callee": "_detect_project_type",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_python",
+          "callee": "(tmp_path / \"pyproject.toml\").write_text",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_python",
+          "callee": "_detect_project_type",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_unknown",
+          "callee": "_detect_project_type",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_clean_project",
+          "callee": "_scan_secrets_fallback",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_secret_detected",
+          "callee": "(tmp_path / \"config.yaml\").write_text",
+          "lineNumber": 97
+        },
+        {
+          "caller": "test_secret_detected",
+          "callee": "_scan_secrets_fallback",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_skips_node_modules",
+          "callee": "nm.mkdir",
+          "lineNumber": 103
+        },
+        {
+          "caller": "test_skips_node_modules",
+          "callee": "(nm / \"pkg.js\").write_text",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_skips_node_modules",
+          "callee": "_scan_secrets_fallback",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_all_present",
+          "callee": "(tmp_path / \"main.dart\").write_text",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_all_present",
+          "callee": "_count_copyright_headers",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_missing_header",
+          "callee": "(tmp_path / \"main.dart\").write_text",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_missing_header",
+          "callee": "_count_copyright_headers",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_spdx_header_accepted",
+          "callee": "(tmp_path / \"main.dart\").write_text",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_spdx_header_accepted",
+          "callee": "_count_copyright_headers",
+          "lineNumber": 124
+        },
+        {
+          "caller": "test_all_pass",
+          "callee": "_score_verify",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_penalty_below_50",
+          "callee": "_score_verify",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_penalty_below_70",
+          "callee": "_score_verify",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_help",
+          "callee": "runner.invoke",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_help",
+          "callee": "result.output.lower",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_help",
+          "callee": "result.output.lower",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_score_on_project",
+          "callee": "runner.invoke",
+          "lineNumber": 180
+        },
+        {
+          "caller": "test_score_on_project",
+          "callee": "str",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_score_on_project",
+          "callee": "result.output.lower",
+          "lineNumber": 186
+        },
+        {
+          "caller": "test_json_output",
+          "callee": "runner.invoke",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_json_output",
+          "callee": "str",
+          "lineNumber": 191
+        },
+        {
+          "caller": "test_json_output",
+          "callee": "json.loads",
+          "lineNumber": 195
+        },
+        {
+          "caller": "test_unknown_pipeline",
+          "callee": "runner.invoke",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_unknown_pipeline",
+          "callee": "str",
+          "lineNumber": 202
+        },
+        {
+          "caller": "test_missing_sandbox",
+          "callee": "runner.invoke",
+          "lineNumber": 207
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 2,
+        "classCount": 6
+      }
+    },
+    {
+      "path": "tests/test_spawn.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 200,
+      "nonEmptyLines": 154,
+      "functions": [
+        {
+          "name": "clear_dispatch_queue_env",
+          "startLine": 14,
+          "endLine": 22,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestSoldierSpawner",
+          "startLine": 25,
+          "endLine": 141,
+          "methods": [
+            "test_launch_uses_hermes_agent_cli_with_correct_args",
+            "test_launch_builds_correct_toon_context",
+            "test_launch_generates_unique_soldier_ids",
+            "test_launch_uses_hermes_agent_z_flag"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestBuildContext",
+          "startLine": 144,
+          "endLine": 200,
+          "methods": [
+            "test_build_context_with_pending_and_issues",
+            "test_build_context_empty_katana",
+            "test_build_context_tokens_unlimited_when_none"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "clear_dispatch_queue_env",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "TestSoldierSpawner",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "TestBuildContext",
+          "line": 144,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "clear_dispatch_queue_env",
+          "callee": "os.environ.get",
+          "lineNumber": 16
+        },
+        {
+          "caller": "clear_dispatch_queue_env",
+          "callee": "os.environ.pop",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "sandbox_path.mkdir",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "BudgetConfig",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "MagicMock",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "SoldierSpawner",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "spawner.launch",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "mock_popen.assert_called_once",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "str",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "str",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_cli_with_correct_args",
+          "callee": "len",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_launch_builds_correct_toon_context",
+          "callee": "sandbox_path.mkdir",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_launch_builds_correct_toon_context",
+          "callee": "BudgetConfig",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_launch_builds_correct_toon_context",
+          "callee": "MagicMock",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_launch_builds_correct_toon_context",
+          "callee": "SoldierSpawner",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_launch_builds_correct_toon_context",
+          "callee": "spawner.launch",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_launch_generates_unique_soldier_ids",
+          "callee": "sandbox_path.mkdir",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_launch_generates_unique_soldier_ids",
+          "callee": "BudgetConfig",
+          "lineNumber": 112
+        },
+        {
+          "caller": "test_launch_generates_unique_soldier_ids",
+          "callee": "MagicMock",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_launch_generates_unique_soldier_ids",
+          "callee": "SoldierSpawner",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_launch_generates_unique_soldier_ids",
+          "callee": "spawner.launch",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_launch_generates_unique_soldier_ids",
+          "callee": "spawner.launch",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_z_flag",
+          "callee": "sandbox_path.mkdir",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_z_flag",
+          "callee": "BudgetConfig",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_z_flag",
+          "callee": "MagicMock",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_z_flag",
+          "callee": "SoldierSpawner",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_launch_uses_hermes_agent_z_flag",
+          "callee": "spawner.launch",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "SandboxData",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "BudgetConfig",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "KatanaData",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "build_context",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "context.split",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "any",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "any",
+          "lineNumber": 166
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "any",
+          "lineNumber": 167
+        },
+        {
+          "caller": "test_build_context_with_pending_and_issues",
+          "callee": "any",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_build_context_empty_katana",
+          "callee": "SandboxData",
+          "lineNumber": 172
+        },
+        {
+          "caller": "test_build_context_empty_katana",
+          "callee": "BudgetConfig",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_build_context_empty_katana",
+          "callee": "KatanaData",
+          "lineNumber": 175
+        },
+        {
+          "caller": "test_build_context_empty_katana",
+          "callee": "build_context",
+          "lineNumber": 178
+        },
+        {
+          "caller": "test_build_context_tokens_unlimited_when_none",
+          "callee": "SandboxData",
+          "lineNumber": 188
+        },
+        {
+          "caller": "test_build_context_tokens_unlimited_when_none",
+          "callee": "BudgetConfig",
+          "lineNumber": 190
+        },
+        {
+          "caller": "test_build_context_tokens_unlimited_when_none",
+          "callee": "KatanaData",
+          "lineNumber": 195
+        },
+        {
+          "caller": "test_build_context_tokens_unlimited_when_none",
+          "callee": "build_context",
+          "lineNumber": 198
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "tests/test_state.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 270,
+      "nonEmptyLines": 229,
+      "classes": [
+        {
+          "name": "TestIndexState",
+          "startLine": 13,
+          "endLine": 99,
+          "methods": [
+            "test_load_empty_index",
+            "test_save_and_load",
+            "test_add_sandbox",
+            "test_add_duplicate_sandbox_updates",
+            "test_remove_sandbox",
+            "test_remove_nonexistent_sandbox",
+            "test_get_sandbox",
+            "test_get_nonexistent_sandbox",
+            "test_list_sandboxes",
+            "test_update_last_seen"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestSandboxState",
+          "startLine": 102,
+          "endLine": 165,
+          "methods": [
+            "test_load_new_sandbox",
+            "test_save_and_load",
+            "test_update_status",
+            "test_add_pending_task",
+            "test_add_known_issue",
+            "test_files_created_in_correct_locations"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestBudgetState",
+          "startLine": 168,
+          "endLine": 270,
+          "methods": [
+            "test_load_default_budget",
+            "test_update_field",
+            "test_spawn_decrement",
+            "test_spawn_decrement_caps_at_zero",
+            "test_complete_increment",
+            "test_complete_increment_caps_at_bootstrap_max",
+            "test_compact_reset",
+            "test_record_compaction",
+            "test_is_exhausted_false",
+            "test_is_exhausted_true",
+            "test_get_remaining_ratio",
+            "test_katana_cycle"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestIndexState",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "TestSandboxState",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "TestBudgetState",
+          "line": 168,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_load_empty_index",
+          "callee": "IndexState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_load_empty_index",
+          "callee": "state.load",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_save_and_load",
+          "callee": "IndexState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_save_and_load",
+          "callee": "state.save",
+          "lineNumber": 32
+        },
+        {
+          "caller": "test_save_and_load",
+          "callee": "state.load",
+          "lineNumber": 33
+        },
+        {
+          "caller": "test_save_and_load",
+          "callee": "len",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_add_sandbox",
+          "callee": "IndexState",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_add_sandbox",
+          "callee": "state.add_sandbox",
+          "lineNumber": 40
+        },
+        {
+          "caller": "test_add_sandbox",
+          "callee": "state.load",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_add_sandbox",
+          "callee": "len",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_add_duplicate_sandbox_updates",
+          "callee": "IndexState",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_add_duplicate_sandbox_updates",
+          "callee": "state.add_sandbox",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_add_duplicate_sandbox_updates",
+          "callee": "state.add_sandbox",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_add_duplicate_sandbox_updates",
+          "callee": "state.load",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_add_duplicate_sandbox_updates",
+          "callee": "len",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_remove_sandbox",
+          "callee": "IndexState",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_remove_sandbox",
+          "callee": "state.add_sandbox",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_remove_sandbox",
+          "callee": "state.add_sandbox",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_remove_sandbox",
+          "callee": "state.remove_sandbox",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_remove_sandbox",
+          "callee": "state.load",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_remove_sandbox",
+          "callee": "len",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_remove_nonexistent_sandbox",
+          "callee": "IndexState",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_remove_nonexistent_sandbox",
+          "callee": "state.remove_sandbox",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_get_sandbox",
+          "callee": "IndexState",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_get_sandbox",
+          "callee": "state.add_sandbox",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_get_sandbox",
+          "callee": "state.get_sandbox",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_get_nonexistent_sandbox",
+          "callee": "IndexState",
+          "lineNumber": 81
+        },
+        {
+          "caller": "test_get_nonexistent_sandbox",
+          "callee": "state.get_sandbox",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_list_sandboxes",
+          "callee": "IndexState",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_list_sandboxes",
+          "callee": "state.add_sandbox",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_list_sandboxes",
+          "callee": "state.add_sandbox",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_list_sandboxes",
+          "callee": "state.list_sandboxes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "test_list_sandboxes",
+          "callee": "len",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_update_last_seen",
+          "callee": "IndexState",
+          "lineNumber": 95
+        },
+        {
+          "caller": "test_update_last_seen",
+          "callee": "state.add_sandbox",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_update_last_seen",
+          "callee": "state.update_last_seen",
+          "lineNumber": 97
+        },
+        {
+          "caller": "test_update_last_seen",
+          "callee": "state.get_sandbox",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_load_new_sandbox",
+          "callee": "SandboxState",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_load_new_sandbox",
+          "callee": "state.load",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_save_and_load",
+          "callee": "SandboxState",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_save_and_load",
+          "callee": "state.save",
+          "lineNumber": 124
+        },
+        {
+          "caller": "test_save_and_load",
+          "callee": "state.load",
+          "lineNumber": 125
+        },
+        {
+          "caller": "test_update_status",
+          "callee": "SandboxState",
+          "lineNumber": 132
+        },
+        {
+          "caller": "test_update_status",
+          "callee": "state.save",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_update_status",
+          "callee": "state.update_status",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_update_status",
+          "callee": "state.load",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_add_pending_task",
+          "callee": "SandboxState",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_add_pending_task",
+          "callee": "state.add_pending_task",
+          "lineNumber": 141
+        },
+        {
+          "caller": "test_add_pending_task",
+          "callee": "state.load",
+          "lineNumber": 142
+        },
+        {
+          "caller": "test_add_known_issue",
+          "callee": "SandboxState",
+          "lineNumber": 147
+        },
+        {
+          "caller": "test_add_known_issue",
+          "callee": "state.add_known_issue",
+          "lineNumber": 148
+        },
+        {
+          "caller": "test_add_known_issue",
+          "callee": "state.load",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_files_created_in_correct_locations",
+          "callee": "SandboxState",
+          "lineNumber": 154
+        },
+        {
+          "caller": "test_files_created_in_correct_locations",
+          "callee": "state.save",
+          "lineNumber": 155
+        },
+        {
+          "caller": "test_files_created_in_correct_locations",
+          "callee": "(tmp_path / \"test-sandbox\" / \"BUDGET.toon\").exists",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_files_created_in_correct_locations",
+          "callee": "(tmp_path / \"test-sandbox\" / \"SKILLS.toon\").exists",
+          "lineNumber": 163
+        },
+        {
+          "caller": "test_files_created_in_correct_locations",
+          "callee": "(tmp_path / \"test-sandbox\" / \"MEMORY.toon\").exists",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_files_created_in_correct_locations",
+          "callee": "(tmp_path / \"test-sandbox\" / \"HEARTBEAT.toon\").exists",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_load_default_budget",
+          "callee": "BudgetState",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_load_default_budget",
+          "callee": "state.load",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_update_field",
+          "callee": "BudgetState",
+          "lineNumber": 181
+        },
+        {
+          "caller": "test_update_field",
+          "callee": "state.update",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_update_field",
+          "callee": "state.load",
+          "lineNumber": 183
+        },
+        {
+          "caller": "test_spawn_decrement",
+          "callee": "BudgetState",
+          "lineNumber": 188
+        },
+        {
+          "caller": "test_spawn_decrement",
+          "callee": "state.spawn_decrement",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_spawn_decrement",
+          "callee": "state.load",
+          "lineNumber": 191
+        },
+        {
+          "caller": "test_spawn_decrement_caps_at_zero",
+          "callee": "BudgetState",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_spawn_decrement_caps_at_zero",
+          "callee": "state.update",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_spawn_decrement_caps_at_zero",
+          "callee": "state.spawn_decrement",
+          "lineNumber": 198
+        },
+        {
+          "caller": "test_complete_increment",
+          "callee": "BudgetState",
+          "lineNumber": 203
+        },
+        {
+          "caller": "test_complete_increment",
+          "callee": "state.update",
+          "lineNumber": 204
+        },
+        {
+          "caller": "test_complete_increment",
+          "callee": "state.complete_increment",
+          "lineNumber": 205
+        },
+        {
+          "caller": "test_complete_increment_caps_at_bootstrap_max",
+          "callee": "BudgetState",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_complete_increment_caps_at_bootstrap_max",
+          "callee": "state.update",
+          "lineNumber": 211
+        },
+        {
+          "caller": "test_complete_increment_caps_at_bootstrap_max",
+          "callee": "state.complete_increment",
+          "lineNumber": 212
+        },
+        {
+          "caller": "test_compact_reset",
+          "callee": "BudgetState",
+          "lineNumber": 217
+        },
+        {
+          "caller": "test_compact_reset",
+          "callee": "state.update",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_compact_reset",
+          "callee": "state.compact_reset",
+          "lineNumber": 219
+        },
+        {
+          "caller": "test_compact_reset",
+          "callee": "state.load",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_record_compaction",
+          "callee": "BudgetState",
+          "lineNumber": 225
+        },
+        {
+          "caller": "test_record_compaction",
+          "callee": "state.record_compaction",
+          "lineNumber": 226
+        },
+        {
+          "caller": "test_record_compaction",
+          "callee": "state.record_compaction",
+          "lineNumber": 228
+        },
+        {
+          "caller": "test_is_exhausted_false",
+          "callee": "BudgetState",
+          "lineNumber": 233
+        },
+        {
+          "caller": "test_is_exhausted_false",
+          "callee": "state.is_exhausted",
+          "lineNumber": 234
+        },
+        {
+          "caller": "test_is_exhausted_true",
+          "callee": "BudgetState",
+          "lineNumber": 238
+        },
+        {
+          "caller": "test_is_exhausted_true",
+          "callee": "state.update",
+          "lineNumber": 239
+        },
+        {
+          "caller": "test_is_exhausted_true",
+          "callee": "state.is_exhausted",
+          "lineNumber": 240
+        },
+        {
+          "caller": "test_get_remaining_ratio",
+          "callee": "BudgetState",
+          "lineNumber": 244
+        },
+        {
+          "caller": "test_get_remaining_ratio",
+          "callee": "state.update",
+          "lineNumber": 245
+        },
+        {
+          "caller": "test_get_remaining_ratio",
+          "callee": "state.get_remaining_ratio",
+          "lineNumber": 246
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "BudgetState",
+          "lineNumber": 251
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.load",
+          "lineNumber": 254
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.spawn_decrement",
+          "lineNumber": 258
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.load",
+          "lineNumber": 259
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.complete_increment",
+          "lineNumber": 262
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.load",
+          "lineNumber": 263
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.record_compaction",
+          "lineNumber": 266
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.record_compaction",
+          "lineNumber": 267
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.load",
+          "lineNumber": 268
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.compact_reset",
+          "lineNumber": 269
+        },
+        {
+          "caller": "test_katana_cycle",
+          "callee": "state.load",
+          "lineNumber": 270
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 0,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "tests/test_status.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 107,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "_isolate_status_dir",
+          "startLine": 20,
+          "endLine": 26,
+          "params": [
+            "tmp_path",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "_write",
+          "startLine": 29,
+          "endLine": 30,
+          "params": [
+            "task_id",
+            "**kwargs"
+          ]
+        },
+        {
+          "name": "test_write_and_read_roundtrip",
+          "startLine": 33,
+          "endLine": 41,
+          "params": []
+        },
+        {
+          "name": "test_read_missing_returns_none",
+          "startLine": 44,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "test_overwrite_is_atomic",
+          "startLine": 48,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "test_list_status_empty_when_no_files",
+          "startLine": 58,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "test_list_status_sorted_newest_first",
+          "startLine": 62,
+          "endLine": 67,
+          "params": []
+        },
+        {
+          "name": "test_list_status_filter_by_sandbox",
+          "startLine": 70,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "test_clean_status_removes_old",
+          "startLine": 77,
+          "endLine": 91,
+          "params": []
+        },
+        {
+          "name": "test_clean_status_noop_on_empty_dir",
+          "startLine": 94,
+          "endLine": 99,
+          "params": [
+            "tmp_path",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_write_adds_timestamp",
+          "startLine": 102,
+          "endLine": 107,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_isolate_status_dir",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "_write",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "test_write_and_read_roundtrip",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "test_read_missing_returns_none",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "test_overwrite_is_atomic",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "test_list_status_empty_when_no_files",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "test_list_status_sorted_newest_first",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "test_list_status_filter_by_sandbox",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "test_clean_status_removes_old",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "test_clean_status_noop_on_empty_dir",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "test_write_adds_timestamp",
+          "line": 102,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_isolate_status_dir",
+          "callee": "test_dir.mkdir",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_isolate_status_dir",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 24
+        },
+        {
+          "caller": "_write",
+          "callee": "write_status",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_write_and_read_roundtrip",
+          "callee": "_write",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_write_and_read_roundtrip",
+          "callee": "read_status",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_read_missing_returns_none",
+          "callee": "read_status",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_overwrite_is_atomic",
+          "callee": "_write",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_overwrite_is_atomic",
+          "callee": "time.sleep",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_overwrite_is_atomic",
+          "callee": "_write",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_overwrite_is_atomic",
+          "callee": "read_status",
+          "lineNumber": 52
+        },
+        {
+          "caller": "test_overwrite_is_atomic",
+          "callee": "list",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_overwrite_is_atomic",
+          "callee": "STATUS_DIR.glob",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_list_status_empty_when_no_files",
+          "callee": "list_status",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_list_status_sorted_newest_first",
+          "callee": "_write",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_list_status_sorted_newest_first",
+          "callee": "time.sleep",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_list_status_sorted_newest_first",
+          "callee": "_write",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_list_status_sorted_newest_first",
+          "callee": "list_status",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_list_status_filter_by_sandbox",
+          "callee": "_write",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_list_status_filter_by_sandbox",
+          "callee": "_write",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_list_status_filter_by_sandbox",
+          "callee": "list_status",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_clean_status_removes_old",
+          "callee": "_write",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_clean_status_removes_old",
+          "callee": "old_file.exists",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_clean_status_removes_old",
+          "callee": "time.time",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_clean_status_removes_old",
+          "callee": "os.utime",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_clean_status_removes_old",
+          "callee": "_write",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_clean_status_removes_old",
+          "callee": "clean_status",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_clean_status_removes_old",
+          "callee": "read_status",
+          "lineNumber": 90
+        },
+        {
+          "caller": "test_clean_status_removes_old",
+          "callee": "read_status",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_clean_status_noop_on_empty_dir",
+          "callee": "empty_dir.mkdir",
+          "lineNumber": 97
+        },
+        {
+          "caller": "test_clean_status_noop_on_empty_dir",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_clean_status_noop_on_empty_dir",
+          "callee": "clean_status",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_write_adds_timestamp",
+          "callee": "time.time",
+          "lineNumber": 103
+        },
+        {
+          "caller": "test_write_adds_timestamp",
+          "callee": "_write",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_write_adds_timestamp",
+          "callee": "time.time",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_write_adds_timestamp",
+          "callee": "read_status",
+          "lineNumber": 106
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 11,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_toon.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 255,
+      "nonEmptyLines": 182,
+      "classes": [
+        {
+          "name": "TestToonRead",
+          "startLine": 18,
+          "endLine": 95,
+          "methods": [
+            "test_simple_key_value",
+            "test_list_format",
+            "test_nested_dict",
+            "test_comments_ignored",
+            "test_empty_list",
+            "test_boolean_values",
+            "test_float_values",
+            "test_file_not_found"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestToonWrite",
+          "startLine": 98,
+          "endLine": 142,
+          "methods": [
+            "test_simple_key_value",
+            "test_list_format",
+            "test_nested_dict",
+            "test_empty_list"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestRoundTrip",
+          "startLine": 145,
+          "endLine": 193,
+          "methods": [
+            "test_simple_dict_roundtrip",
+            "test_dict_with_lists_roundtrip",
+            "test_dict_with_nested_roundtrip",
+            "test_mixed_types_roundtrip"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestJsonToToon",
+          "startLine": 196,
+          "endLine": 233,
+          "methods": [
+            "test_simple_json_conversion",
+            "test_json_with_lists",
+            "test_json_with_nested",
+            "test_json_to_toon_returns_toon_string"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestErrorHandling",
+          "startLine": 236,
+          "endLine": 255,
+          "methods": [
+            "test_malformed_toon_non_dict",
+            "test_json_to_toon_invalid_json"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestToonRead",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "TestToonWrite",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "TestRoundTrip",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "TestJsonToToon",
+          "line": 196,
+          "isDefault": false
+        },
+        {
+          "name": "TestErrorHandling",
+          "line": 236,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_simple_key_value",
+          "callee": "path.write_text",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_simple_key_value",
+          "callee": "toon_read",
+          "lineNumber": 27
+        },
+        {
+          "caller": "test_list_format",
+          "callee": "path.write_text",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_list_format",
+          "callee": "toon_read",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_nested_dict",
+          "callee": "path.write_text",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_nested_dict",
+          "callee": "toon_read",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_comments_ignored",
+          "callee": "path.write_text",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_comments_ignored",
+          "callee": "toon_read",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_empty_list",
+          "callee": "path.write_text",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_empty_list",
+          "callee": "toon_read",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_boolean_values",
+          "callee": "path.write_text",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_boolean_values",
+          "callee": "toon_read",
+          "lineNumber": 77
+        },
+        {
+          "caller": "test_float_values",
+          "callee": "path.write_text",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_float_values",
+          "callee": "toon_read",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_file_not_found",
+          "callee": "toon_read",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_simple_key_value",
+          "callee": "toon_write",
+          "lineNumber": 106
+        },
+        {
+          "caller": "test_simple_key_value",
+          "callee": "path.read_text",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_list_format",
+          "callee": "toon_write",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_list_format",
+          "callee": "path.read_text",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_nested_dict",
+          "callee": "toon_write",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_nested_dict",
+          "callee": "path.read_text",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_empty_list",
+          "callee": "toon_write",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_empty_list",
+          "callee": "path.read_text",
+          "lineNumber": 141
+        },
+        {
+          "caller": "test_simple_dict_roundtrip",
+          "callee": "toon_write",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_simple_dict_roundtrip",
+          "callee": "toon_read",
+          "lineNumber": 154
+        },
+        {
+          "caller": "test_dict_with_lists_roundtrip",
+          "callee": "toon_write",
+          "lineNumber": 163
+        },
+        {
+          "caller": "test_dict_with_lists_roundtrip",
+          "callee": "toon_read",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_dict_with_nested_roundtrip",
+          "callee": "toon_write",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_dict_with_nested_roundtrip",
+          "callee": "toon_read",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_mixed_types_roundtrip",
+          "callee": "toon_write",
+          "lineNumber": 190
+        },
+        {
+          "caller": "test_mixed_types_roundtrip",
+          "callee": "toon_read",
+          "lineNumber": 191
+        },
+        {
+          "caller": "test_simple_json_conversion",
+          "callee": "json_to_toon",
+          "lineNumber": 202
+        },
+        {
+          "caller": "test_json_with_lists",
+          "callee": "json_to_toon",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_json_with_nested",
+          "callee": "json_to_toon",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_json_to_toon_returns_toon_string",
+          "callee": "json.dumps",
+          "lineNumber": 226
+        },
+        {
+          "caller": "test_json_to_toon_returns_toon_string",
+          "callee": "json_to_toon",
+          "lineNumber": 228
+        },
+        {
+          "caller": "test_malformed_toon_non_dict",
+          "callee": "path.write_text",
+          "lineNumber": 244
+        },
+        {
+          "caller": "test_malformed_toon_non_dict",
+          "callee": "toon_read",
+          "lineNumber": 247
+        },
+        {
+          "caller": "test_json_to_toon_invalid_json",
+          "callee": "pytest.raises",
+          "lineNumber": 254
+        },
+        {
+          "caller": "test_json_to_toon_invalid_json",
+          "callee": "json_to_toon",
+          "lineNumber": 255
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 5
+      }
+    }
+  ]
+}

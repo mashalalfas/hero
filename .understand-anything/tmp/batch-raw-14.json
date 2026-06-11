@@ -1,0 +1,137 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".understand-anything/.trash-1780994847/import-map-input.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "sections": [
+        {
+          "heading": "projectRoot",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".understand-anything/.trash-1780994847/import-map.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1000,
+      "nonEmptyLines": 1000,
+      "sections": [
+        {
+          "heading": "scriptCompleted",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "stats",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "importMap",
+          "level": 1,
+          "line": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": ".understand-anything/.trash-1780994847/layers.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1751,
+      "nonEmptyLines": 1751,
+      "sections": [
+        {
+          "heading": "layers",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": ".understand-anything/.trash-1780994847/review.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 545,
+      "nonEmptyLines": 545,
+      "sections": [
+        {
+          "heading": "issues",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "warnings",
+          "level": 1,
+          "line": 526
+        },
+        {
+          "heading": "stats",
+          "level": 1,
+          "line": 527
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": ".understand-anything/.trash-1780994847/tour.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 136,
+      "nonEmptyLines": 136,
+      "sections": [
+        {
+          "heading": "steps",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    }
+  ]
+}

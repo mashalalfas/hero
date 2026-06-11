@@ -1,0 +1,21 @@
+/* HERO Viewport — animations.css */
+/* Subtle fades only — Notion-style minimal */
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in     { animation: fadeIn var(--duration-normal) var(--ease-out) forwards; }
+.animate-slide-up    { animation: slideUp var(--duration-normal) var(--ease-out) forwards; }
+.animate-slide-right { animation: slideInRight var(--duration-normal) var(--ease-out) forwards; }

@@ -1,0 +1,1000 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 522,
+    "filesWithImports": 127,
+    "totalEdges": 341
+  },
+  "importMap": {
+    ".github/workflows/bandit.yml": [],
+    ".openclaw/workspace-state.json": [],
+    "AGENTS.md": [],
+    "ARCHITECT_BLUEPRINT.md": [],
+    "COUNCIL_REPORT_HERO_REBUILD.md": [],
+    "COUNCIL_REPORT_LEGAL_PHASE.md": [],
+    "docs/EXCHANGE_LAYER_IMPLEMENT.md": [],
+    "docs/EXCHANGE_LAYER_SPEC.md": [],
+    "docs/PIPELINE.md": [],
+    "docs/SUPERPOWER_INTEGRATION_PROPOSAL.md": [],
+    "docs/TEACH_SKILL_BUILD.md": [],
+    "docs/TEACH_SKILL_DESIGN.md": [],
+    "graphify-out/.graphify_labels.json": [],
+    "graphify-out/.graphify_root": [],
+    "graphify-out/cache/ast/007fbc919a1ffbbdebcb0f9a7038635692650ced8104140ce4dc3e6cf5f3a870.json": [],
+    "graphify-out/cache/ast/00c11bd8fd6e882941e73c45c239663523176befa42a02ffc726751a026fc7f4.json": [],
+    "graphify-out/cache/ast/011a9793463f87d3f4b02e42ede27bda0d1c908d335b893a494ff1745830362b.json": [],
+    "graphify-out/cache/ast/0160e3f12f825d828421261eaa5b8afb66836acdf4f9fcf438b032645ba64b83.json": [],
+    "graphify-out/cache/ast/02a3fceed22694c273a882501e2dff6578c87606316854d5c0591e128f73b4c6.json": [],
+    "graphify-out/cache/ast/02b2cae0fb3381d233c77e1b502b07f65728911f8770729358ef9abc75d9e817.json": [],
+    "graphify-out/cache/ast/033637c4309283f3cb14b00d49b7f063d0e76d475b35c8736b16ef421e70d368.json": [],
+    "graphify-out/cache/ast/0487c0b676a4691edb15a09001ba4dfadc64fac20f9f1869592a844d2cdcbf9a.json": [],
+    "graphify-out/cache/ast/0502190e799ab5471947b27f45e012e8562045e3f12153cc564ac38a8fbb8144.json": [],
+    "graphify-out/cache/ast/065cff6e8cb0fcc296101b7113b38e3aa7c285ece60e9c39e553dea86a59c994.json": [],
+    "graphify-out/cache/ast/06e786bd829a4476af839addd211657c1225bbb1b28db388d1410e575d306c0c.json": [],
+    "graphify-out/cache/ast/081b77c78b60383c119413b89d6ea2949fedbfd2eff55b82c0f2683c3da5605e.json": [],
+    "graphify-out/cache/ast/08e8f84f88b33d6283c8ac03eebdd62278cc8c1bea78cc39bd1e767075f9a0c1.json": [],
+    "graphify-out/cache/ast/0af6516edef62b9cc1e39c106bdcad06c26701ba0bd8fdd877f58152ba71416f.json": [],
+    "graphify-out/cache/ast/0d735c8bdd4907d1a486de0418f1f0a4b1b9e29ce7c4b84a62b982cd6866c768.json": [],
+    "graphify-out/cache/ast/0e58ce0b875a4595a3708f047d031d4a51a6fc41b58fe2a59d04ead4f09073fc.json": [],
+    "graphify-out/cache/ast/0f2eb3225f1078b151cf48a0c9889733d5324b94c9c3f399a25c28bbf8d76bfc.json": [],
+    "graphify-out/cache/ast/0ff6727d6d7f31a982b4e209efa9a8d134fd03a7cf9045fc08c31cca2adb1838.json": [],
+    "graphify-out/cache/ast/0ffb1112d39676143fc7c546632c77533b591cce253eed712253778a07002bff.json": [],
+    "graphify-out/cache/ast/10561c9dbcbcc2554693b75997410e91bd7d5b01224ac9b8baeb0a87b1c8990c.json": [],
+    "graphify-out/cache/ast/10df2c8bddd968cee821ae7f6e31317214b869f280a75547d3df19201d9798ce.json": [],
+    "graphify-out/cache/ast/10e3b99dcbb3b03c0b50cb6322e7f4c16eb2a6f5254c3612d1fc01da93ef07bf.json": [],
+    "graphify-out/cache/ast/1187f278691ed1a6de465d9b9c740ad43d4166d569406d42f548aad1e6248559.json": [],
+    "graphify-out/cache/ast/12648da6447dcf4bbd82a9766530247b3df62fddce397feb517bb6ebb4058b13.json": [],
+    "graphify-out/cache/ast/13ee7080485cfff82b87ab971d02c4902fa30bbfac1022efa4d7ca938457d711.json": [],
+    "graphify-out/cache/ast/150e88115dd87e40fd96d18c63fc8811dcb44ac04664122b835202a9c92f7489.json": [],
+    "graphify-out/cache/ast/15d1d0e91a6372e606389d53fb46c79d86538f592d42a82d5aa14b8447fe4964.json": [],
+    "graphify-out/cache/ast/15debd15f0a5ba1c9bc81f1c49f786a95f0bd41fafa498faf7707533fc124551.json": [],
+    "graphify-out/cache/ast/167710cfa1eb71c2cd5c8a685e01a2653277706165cd4723d49a9c0d777ff2cc.json": [],
+    "graphify-out/cache/ast/18d2aebc456913de132699e1027c70a6eb673ad36a74056af0dc6fbf36c16ff7.json": [],
+    "graphify-out/cache/ast/190d255cb02bc9f4680edba0d02fdbcf2c7ab5ab5fdf7dc4d95d3be30a1649c7.json": [],
+    "graphify-out/cache/ast/1993e85dc982e202f74e787969ec86e108133d528fa1107e06e2125533a58885.json": [],
+    "graphify-out/cache/ast/1a2568dc64219ccbcf145fa8c5d19908d6ce6b2205964108e2b1a7ddcd7c30dd.json": [],
+    "graphify-out/cache/ast/1a6309185041437a668226d0df378fcfa12a9cc2f5d2e299f08e088fadcbf514.json": [],
+    "graphify-out/cache/ast/1a7bbfee9e8ae9a7eb56b839f5831387fb19c5eb1d05949e69e91f009008a5b5.json": [],
+    "graphify-out/cache/ast/1b52c5eb949e8c46d0cf6ccfa5156d29d4cf5feba49d3067550c727955295adf.json": [],
+    "graphify-out/cache/ast/1b66e061d4980f43a04354503237ba10fb026cd3e2e96ee2d834ce6ebd6eaf63.json": [],
+    "graphify-out/cache/ast/1d58ebb96e3fa831dca13eeb0f91e4a3115971d2e30ef16fb93c95e3e54ce2a5.json": [],
+    "graphify-out/cache/ast/1e1b2918a39cb299634593489184c1cdc7809e908a79fb936366eca68d450658.json": [],
+    "graphify-out/cache/ast/21cdbe1942b2b9465fab5f3776ef47f4cf88ece0325ef609d32d17d8a71a204c.json": [],
+    "graphify-out/cache/ast/23a2d820f578e3a9f8bf06dfe363e802776e87f825f02d76a8bce2b480b343ae.json": [],
+    "graphify-out/cache/ast/2681b663d1fcda1bc0ffc0e913826e3a775bd350d51d4698690a17d80ddbdf53.json": [],
+    "graphify-out/cache/ast/26da0d3b9fd36a046a305209b4ab1a24e16f67cbbf11e56aec961db0833569a7.json": [],
+    "graphify-out/cache/ast/2766da5bb359f5a53e1f12e18046e1f7c8193b1f9f9a8a05bbc1c7d01a7a45ed.json": [],
+    "graphify-out/cache/ast/2c30913839f40c631ce589814c1daa8717f44bfe89b8e5f3fa6044852e04a3ee.json": [],
+    "graphify-out/cache/ast/2d8dd0fbe65f7ddf93627a513b5c5165ee68536b0bbbe3ea42ac38be75b06266.json": [],
+    "graphify-out/cache/ast/2de702049e89094fe4c91c6bc395ffde80acb3f8bc4a2ed8db928f42c58f0f2e.json": [],
+    "graphify-out/cache/ast/2e2585f4e95ee93193674552577ad70753f4adea88e00c14f36c38b07231969b.json": [],
+    "graphify-out/cache/ast/2e2df866827a5a65b472fb5cf35bd277ab8f37aa09bd319dd12fb7994dfac00f.json": [],
+    "graphify-out/cache/ast/2e8bfda4651266dec5351a615a4db0e86ae59653a39c44e7a8e17277ebd78436.json": [],
+    "graphify-out/cache/ast/314371853d2fb0951a739a5661574df1c3d4b60ab1f51b3e8cb42dc5a03251c1.json": [],
+    "graphify-out/cache/ast/31989d8a172a725ec2720931b420edff90ac1361b2e5d2ac067754ff54612420.json": [],
+    "graphify-out/cache/ast/3297ea1d2f6237d2d84437207f16a82f8deb57e42df97f0b46391531c2bd0c16.json": [],
+    "graphify-out/cache/ast/34006f551199c9d07f6cc990a257076a599b4d7a6db5372028113bca0e2e3fe8.json": [],
+    "graphify-out/cache/ast/34cfe081e22a9c93d59d69bef8589e9d749c1110c815cf6c2aeef0f6f0be59d4.json": [],
+    "graphify-out/cache/ast/3757165edb88278d38ea81018ae2214337f016652b581021b1f6189f30af5fef.json": [],
+    "graphify-out/cache/ast/375a2387378156e86559fcdd863741ccd0be3431dfd8f1b0b75d344c1792d654.json": [],
+    "graphify-out/cache/ast/37bee7ed40bb32e2210ee4abaff45885a52991219de2b53f2f9a3cf464c1c309.json": [],
+    "graphify-out/cache/ast/3bb71f2f0ebfc1178c7da1d4b22b798773a7ede442ca24f4036ec71334ebb9fd.json": [],
+    "graphify-out/cache/ast/3c8936deba599d91efbb471f761d49d4dde83b83ac2b25ef305a97fa9e15434c.json": [],
+    "graphify-out/cache/ast/3ca3adf3427270d22e9a49eef6104579390fc7606d353c56c12a54677b8a42d6.json": [],
+    "graphify-out/cache/ast/3e3d65e2796abf5eb654275f67331426f509e47710c59517f7c6a0a00f6da02b.json": [],
+    "graphify-out/cache/ast/3e49b5c4230086d25f363c0ca86a949340b94be941d8aef64c40227d67793fbf.json": [],
+    "graphify-out/cache/ast/3ef3c519515ff0161381da76f263562ed90dc2406ef16c813e3e1e8d554777bf.json": [],
+    "graphify-out/cache/ast/4455dd9b10db06b2ed1caacd02310d1cc60d000c22479f49d355935255664609.json": [],
+    "graphify-out/cache/ast/44befa78436b0e2020ce145150a8581685fcc4ccf739fb565909a86945a156ab.json": [],
+    "graphify-out/cache/ast/44cb1ef2a5166c7be4a0b780138142919e65e47a5a9006beffb2539b2cffb836.json": [],
+    "graphify-out/cache/ast/44ccacb455defb456e1f01ac5439bca9739a4186160c23ef099cc594cba383eb.json": [],
+    "graphify-out/cache/ast/452b0737e4c82c849c304990d5c1edd9a2edabc005ea83e0ad7859650d351229.json": [],
+    "graphify-out/cache/ast/4535582124d9fd31088b301a187f09f994366d208c80ba45424cf22243e1e285.json": [],
+    "graphify-out/cache/ast/456cf762eedb9ef7c60d88d0aa5ecdcbe2002021cdeaf0f3ca80e081331eb26e.json": [],
+    "graphify-out/cache/ast/47ef13a28a5c2e5ce28f8d73568a9ce2d5eb8ec409f06170bbde19a8e0dd7efe.json": [],
+    "graphify-out/cache/ast/4bf6186d7961c45929f2feeb1e101c9c2524b1c7e5309e4f48696d962f7b253c.json": [],
+    "graphify-out/cache/ast/4d3fb3f191e7a887d4fdc5f6404786610db7ee668856e57f126d3296f1598e64.json": [],
+    "graphify-out/cache/ast/4d6392d02410a46050bc29f41d184d270291c34d293be27e0e7cd736e3763267.json": [],
+    "graphify-out/cache/ast/4d92f225f0abf71ef566b57c11aaf392db005f2cbe40318499de203bdec20370.json": [],
+    "graphify-out/cache/ast/4f07554d487469259665c4348c6c3890d4a95348baa38843308a6ca23c7b5873.json": [],
+    "graphify-out/cache/ast/501764183545bc39c90b9b210e87c26edc5ca7df88978e856c59e5c3af6bbfb8.json": [],
+    "graphify-out/cache/ast/513d24ea89d1fd13be21ee2e240362fe666802b5b31b0ac37964328d848bb56a.json": [],
+    "graphify-out/cache/ast/523bf5d8efae914f594ee874f60eae503bae766d9f555efe9c769af51d090fb4.json": [],
+    "graphify-out/cache/ast/564aed779470c76ac7571369b006744aaa4397984bf4233bdcc4c836e5ed0709.json": [],
+    "graphify-out/cache/ast/57a80b0abcfd93f0b0c856654745b472b8c52036d32206c5a6957e882d381155.json": [],
+    "graphify-out/cache/ast/58840e209d23ad4078a7788fd4c625cbcb638e27d9a0ffe15f76522b97319a2c.json": [],
+    "graphify-out/cache/ast/599830be9b2076755741e6dd0f52bfb07255eb8fa255d586bfb602fbc4a33747.json": [],
+    "graphify-out/cache/ast/5b4d3ba6366aa2856885e6add12328972f9f62647eb837d908de1495d92f17ca.json": [],
+    "graphify-out/cache/ast/5cd4f81a0ef24bffc68c066d8579981e0918edb70ebf7def175a9a4dec783de8.json": [],
+    "graphify-out/cache/ast/5f6538c782fe7ed0a2f6b038c9afac30433a6de075c59e49e454eba730f1c4d1.json": [],
+    "graphify-out/cache/ast/5fb4ed5b9d07f623cd5ae84e75a039e5939bbfbdedc02263332949b47a542d8f.json": [],
+    "graphify-out/cache/ast/5fc64928d073025cd4b54564a00d8f403758bc5a9c90ed675f84119403cb31a4.json": [],
+    "graphify-out/cache/ast/602f82cc6e5f76a7682072d8a8a32032d64594e1f43090d17859c3f041a3730e.json": [],
+    "graphify-out/cache/ast/667ee276e2e286dbe2d060de7ee0363cf4fb3ea84199487fc5ac3fcd825bacc8.json": [],
+    "graphify-out/cache/ast/668be27b7a6fe10a8c6138a5071fc5d84bd8912f4a98b8e0c4121d3f6f2b2e41.json": [],
+    "graphify-out/cache/ast/681914a44de664fc5925619e4be7cac4065d0ef2c657157533a0ce18c9bc7f54.json": [],
+    "graphify-out/cache/ast/6a7a0b98a056c4dc8c87577d84411586a4253824563a44c7f5ad1b0daf0000b5.json": [],
+    "graphify-out/cache/ast/6aef33f759a8575817a2d870e5d91085aa2e3d6af712b9785dfbe2456cd3cd07.json": [],
+    "graphify-out/cache/ast/6b202566a4ff58a1a7370cb6be1babedfd7a3f2609c6d0596d0c3f9f54b20d5f.json": [],
+    "graphify-out/cache/ast/6b3955b4bce6cdfa8096560d566749fd75c1112450d7b4b7f26489b5781cfead.json": [],
+    "graphify-out/cache/ast/6d6c3365557d0cf5889aeccfe50209983b317550b7fa79523eb1069cda91f392.json": [],
+    "graphify-out/cache/ast/6db5d2ef97026fbfdea24b672ba4581ef1820f7ad0046e045c42397c5044c0b8.json": [],
+    "graphify-out/cache/ast/6de642b86534b0e02cfdaec711b5b7d19ec0af03a84b82147610f3011f33e8af.json": [],
+    "graphify-out/cache/ast/6e5dab96a66e16ddcf8a7dc584c279222a33a1aebaf38e4bd02560787287d1cd.json": [],
+    "graphify-out/cache/ast/6f27e4da607b5df4dbc6ed331b9416802251539fb5ddfbe079c10ac6e27b37fb.json": [],
+    "graphify-out/cache/ast/70591b61646bdf8c432dc350f1a39f2ba2a5ba0f538678aa67c11eb5f7892073.json": [],
+    "graphify-out/cache/ast/7097c71258bdda58ffeb524486316e49c9cbcf845f570dea3acf82d943bc20d5.json": [],
+    "graphify-out/cache/ast/7164f3ffa957a57558eb14e414a62c2bf63fd71d3dc8f5b6482d52c01d191833.json": [],
+    "graphify-out/cache/ast/724203b4be234b4774973636370341fa073dea0f6547739ce164556f4bc9b064.json": [],
+    "graphify-out/cache/ast/75365d794d46311449037fa3515291114e7983e1182d99a33db0fe81af73bc0c.json": [],
+    "graphify-out/cache/ast/75bdbd4d0f5414cede29d98f66ef97bf80d750dbd5036d875c570bc093403f34.json": [],
+    "graphify-out/cache/ast/75eb9c900fbcc7cb241f97f8a18839e519c679c0da87f251ebae3cfeab6b39d5.json": [],
+    "graphify-out/cache/ast/7614979e583fdde7aab7ef318cd8550dd66f550671a78185a21c67a4bfbc5629.json": [],
+    "graphify-out/cache/ast/781352549dda00cd14fdb89f798c3bdee7dfe2f9f893cbb2777fbc1a68fefc90.json": [],
+    "graphify-out/cache/ast/7820476ca31b1fd62a97303abb3d6ccd22a9460064d46010fd560c4b8ad794a1.json": [],
+    "graphify-out/cache/ast/7933d9e7e51be7d4b049dba27e75b7f3fed2484aec9fac6d3012d598a1e8044b.json": [],
+    "graphify-out/cache/ast/7a1be97f9d5e7813580388d90eeb0909510ac19446def6ff74c7c75049c4a621.json": [],
+    "graphify-out/cache/ast/7a25992eb42c89cd4b793f381a32605b61545430293a155c33ac90ca6458b1fc.json": [],
+    "graphify-out/cache/ast/7ad8047d2cea673650b24741c58a3d1eee505f941129401b195d19c9322da185.json": [],
+    "graphify-out/cache/ast/7c7e3be17a869b623dfbaabd63bfe2d4575597c2b5d25ba1dfa39e77876996e2.json": [],
+    "graphify-out/cache/ast/7c9ef60e0c0d8cc7544691b0d2e3f0bf25ca2238bbfbf559b9a0b2f8a23e01b2.json": [],
+    "graphify-out/cache/ast/7ce99abe4bbacf791c209d29475b9f49014ed4ef17ff9860c347e3570ba3b345.json": [],
+    "graphify-out/cache/ast/7d1618482e9ca3f6420fc223caab30a0bd3dd5602ed784e669e6fd0ee9643c72.json": [],
+    "graphify-out/cache/ast/7e2ddaf5c6a07b38c93ca84e434c36439da570e3622424a68188a8c6e1eeaf08.json": [],
+    "graphify-out/cache/ast/7fdd33a93180493299159abcbb00c78f6c2e2dc14fa6efb66906b3ff551b16c8.json": [],
+    "graphify-out/cache/ast/814336b32c174facd8871bf540d39a9489ba5f813e1562e71f5ea4a107402991.json": [],
+    "graphify-out/cache/ast/8194fa71c3c00ca5313aff1a587c45e1590c8fe0ff67ab8db3b128f074f0b56d.json": [],
+    "graphify-out/cache/ast/82c52df575371d9f4fdfa3ae0b213e70a105d84003711b32d361eee6d249c49e.json": [],
+    "graphify-out/cache/ast/84e8138403709c9f33aed843641ebd1dc801ba215ae5aca8f90a9ed0301e71a4.json": [],
+    "graphify-out/cache/ast/8572568f4f0523e1016ce9bbf0ee5bdf565900862c4e71eac080b0d65c3375d3.json": [],
+    "graphify-out/cache/ast/8627e58d3c26566f8b1493a3eeab31643abbc64d9f783f6efd213aff0c02af90.json": [],
+    "graphify-out/cache/ast/88679c6034d4ddb87b1cd611f2ac49c5040d389b85c90db0576063e1dbcff84d.json": [],
+    "graphify-out/cache/ast/8a3b27b1c6e5d8af0fffb8f38141dd99a571db566f0ca995bc06ccd1b7a43468.json": [],
+    "graphify-out/cache/ast/8ca6e611a7f90ac58a8e114d492173f6a6768a81be64944046de48946efa5056.json": [],
+    "graphify-out/cache/ast/8cd281237a4e6f3e2c29828d549a2985640f1d24fc872ca9b56159b07947c130.json": [],
+    "graphify-out/cache/ast/8f3d4470dc903deb7d0f28caa1118d44e30401d869d85e56374dc97b16616fc5.json": [],
+    "graphify-out/cache/ast/8f726ebfc2556fbae81b8443c7ac891771340e65ed5c327199126cacb044b9ce.json": [],
+    "graphify-out/cache/ast/8f8917f06e36ab7892f81fcbf4b440ac9ec53f3337d3f925c64a54f9ace970e2.json": [],
+    "graphify-out/cache/ast/8fe7b2db6137305b8c352ec026afe79dfb38595eb345254b3eace25380cc84c8.json": [],
+    "graphify-out/cache/ast/918eaf8ce02c8383d01ea4c3b3bf34a67e554f9687d8ab90b96e84495cfbe1eb.json": [],
+    "graphify-out/cache/ast/921249c0c04bfd44e6c88a1e2e56f30a5d0a650407e25c4ef8312126fa8f2347.json": [],
+    "graphify-out/cache/ast/9232931723eb4c73ebbe15353adce418a88c420a91275c9da3211629fe366c55.json": [],
+    "graphify-out/cache/ast/92d76322ce576c24481f92cd33692f1372ec3d7af64d54ad19dff8c65125502a.json": [],
+    "graphify-out/cache/ast/92f183b41c44378a7dae0409400f14f1be2a09812a313cef43cdd6cac74c3c6a.json": [],
+    "graphify-out/cache/ast/946cd23f0fcf960d081446f12a98dbfbdeac34128e1bd671f65280a14afc9897.json": [],
+    "graphify-out/cache/ast/95270ce182f8518282ba2a919e7afed29858df35f50e95785cfa5c248d86883a.json": [],
+    "graphify-out/cache/ast/95c3bbbf589e4e367c9a96cff7ca93a58f697455e0a4f46e63b9fbd2b258060c.json": [],
+    "graphify-out/cache/ast/96038b5f26a49cd9380730920c30ddf3a694029ec5b2aeb8280f41cf39e72b10.json": [],
+    "graphify-out/cache/ast/971612d22d599351a16f476915ddb84f4a1f8fef08c0d92fa9a13eb5a0bf53fe.json": [],
+    "graphify-out/cache/ast/997933f14be2e01222b8de2b4b2a51e8f7a41082461330714a2d232eab491767.json": [],
+    "graphify-out/cache/ast/9a85c91cff5ef756e03073e1dd551ce98325720eb32bb243b17d3633e2dff1d5.json": [],
+    "graphify-out/cache/ast/9d1ce9e0e326777070453339c6bf3c3b822a4ce959c8408c5152e686b94ab1a0.json": [],
+    "graphify-out/cache/ast/9d1fdd727b0f022d09c253caf851431765858a1dd11c989414410f65a3df8e9c.json": [],
+    "graphify-out/cache/ast/9edcd68c771a9b7158c8b1481a0291cb4db0ee83fd709b8ef7a110179299732d.json": [],
+    "graphify-out/cache/ast/a004b3b8eb2bf30b98216a716cc74a27885623d55f3a616de38073c935869b4d.json": [],
+    "graphify-out/cache/ast/a0172624c8fb57fd3b5283da7997a987a5d8c008819a6044aa6ed096fff871b4.json": [],
+    "graphify-out/cache/ast/a5d035e02fd0b424ce5966980248f6a131dee08d560351e30b7b1072b19c55e5.json": [],
+    "graphify-out/cache/ast/a64f2fc86fdfbfaa03d0f7921b953d289129e849bc93b94f52be343801bca714.json": [],
+    "graphify-out/cache/ast/a82c00af29a1359c3b8519b21d967fed46b017072021eddb066c780d226d4031.json": [],
+    "graphify-out/cache/ast/a8cec6077c87e10560945e2f8ddd21c9299f4669db216aec27ff415e9f11a845.json": [],
+    "graphify-out/cache/ast/af282dca9202456de2a78f139871abe0981abf83dfe9037332ba92faf71c4251.json": [],
+    "graphify-out/cache/ast/b04c675e1af06d0b5c7cf420645d4e88c4d8d9fe2df3320f75fcbcd7e3e1a83f.json": [],
+    "graphify-out/cache/ast/b0f4c97d91ecf4ef0ef738b6f7830e19bf241139f4d85f342dd2a4c8948793e2.json": [],
+    "graphify-out/cache/ast/b12745c0463fa67375c426738398149430e287486c3f44f8f462dad442645d90.json": [],
+    "graphify-out/cache/ast/b3b5daace8a1402f19712c99c87f222d0ed4d6e5b93118b7e90066608afa89fa.json": [],
+    "graphify-out/cache/ast/b4a5367879a513cff3c5d3468f8a23a91cdcb84113889d412be37cb570e23405.json": [],
+    "graphify-out/cache/ast/b4cc7511b37507b536421aca35aef2789c90a432bc8d2fdb21e73ea4682ec4f4.json": [],
+    "graphify-out/cache/ast/b576e1b42531936fad54c9daf3fab0ef640d3215a973c0369dc89d951ced83d8.json": [],
+    "graphify-out/cache/ast/b7819a78c60b04e354907db2f1064177ab64b65cd26e628e008d24789d059a25.json": [],
+    "graphify-out/cache/ast/b7afec5dac55d8f652d360811e1b47ebae127d7da092dfe3099765bb3ef262bd.json": [],
+    "graphify-out/cache/ast/b7f0dd02e9f229a0f1d17477efb5252ab9cf961ccbf94d41da042f947266fdb9.json": [],
+    "graphify-out/cache/ast/b8ecf78ef948f08611b5ae0ea313d3eabb94560f8600b89ccf423e28dbda0702.json": [],
+    "graphify-out/cache/ast/b9870d47b60d62e6fad548093409ed051b2d983f35bf070d52e1ea313aeee80a.json": [],
+    "graphify-out/cache/ast/bc4c112c6c3ac79f1c9bac99eed45d230360917b2a50a29e9f4536b11b59c428.json": [],
+    "graphify-out/cache/ast/bcb6c7738300432e9a30f4d57ecf237491c875b4b54be54939a94dfa3e345e76.json": [],
+    "graphify-out/cache/ast/bd3998491e3932b573821fc1539dc70f5fe1b2dedd62655668b554a1b1965e73.json": [],
+    "graphify-out/cache/ast/bd8a07eabe2c1309c71be6ad8de501068b90c3ebf6cf9054c67cdbdc3ba58eee.json": [],
+    "graphify-out/cache/ast/bebf09734bd2dd98f751d0fc386c21bf8d285a49bc4e2ab3ee30483f2a11a622.json": [],
+    "graphify-out/cache/ast/bfe57f7e9fa4eae8e079f815c04a1711eb3d989560df5a40b28d52bfa960e724.json": [],
+    "graphify-out/cache/ast/c4dd16996972efedc0abdbe558ef47b79f5cfa7960a291d714686cca95e81f75.json": [],
+    "graphify-out/cache/ast/c599d65439bd0c0b1624e84cc3ece733c1deabe4f12dd9e9e89d52b39ad6709d.json": [],
+    "graphify-out/cache/ast/c7142f999356247d8ac045058e0c327f5fed9833df326060e766454fe323e366.json": [],
+    "graphify-out/cache/ast/c7ab7ba17c76e1e5e256c98d7dbdd0af26b75bd8abc7558b8dc7a0ff72cd83f6.json": [],
+    "graphify-out/cache/ast/ca0a608404e0f6a0ec96a2cc70fed642a72cd7e81ae98fa84858d37be2e60147.json": [],
+    "graphify-out/cache/ast/ca8a41a31e4635dc762b84feb932cdfbcb04b6120bb8623362020c9713426a25.json": [],
+    "graphify-out/cache/ast/cab59e6d7342eee7841da856edca7613c6a6e596965b932323bffc52ae6ba3d1.json": [],
+    "graphify-out/cache/ast/cb7d4e8bb64d286ff05266a5fa8394b1abc67a2d9523eadfc4d9a0db8c3c2b1f.json": [],
+    "graphify-out/cache/ast/cdee75ff77f142f1328b6e0411d63104a39a58c5b81c3a9216e7cd9d52e4cf82.json": [],
+    "graphify-out/cache/ast/ceb228c9dcac78aa697b8af0ff7cf0fcccc3f3c12327033bec3ff1ad8a4c9e07.json": [],
+    "graphify-out/cache/ast/cfdc3da6cc658998f2171a31c1f6f76aaac07a214ac8a3e6128a34b05578fc47.json": [],
+    "graphify-out/cache/ast/d06314b75dde6d6df93cfb2f266dbbde3ef0ef77c2117db42a6bb095e3649ebc.json": [],
+    "graphify-out/cache/ast/d0b18cd5f3a1d289b8b3011732b58808d8958d009567f3fa0c8880ff38ec1be7.json": [],
+    "graphify-out/cache/ast/d14356d809c8eb16fc2d7bb530a08ab0a47e08ea35a035f4334588b1b55bc6a5.json": [],
+    "graphify-out/cache/ast/d1dfd70298deb37b74b8cb4baa4a355530e75321e437ad985fd813978950176b.json": [],
+    "graphify-out/cache/ast/d1ed8d69b07783f8b423baa27a2787661b74cb861c87d30a71e653c6789dd9f8.json": [],
+    "graphify-out/cache/ast/d202b5f925831b5e8317377937bbb4b4452e551e3b7666b51236a15be477af1a.json": [],
+    "graphify-out/cache/ast/d3116535d9e2b0993def9d629cbcfdb6bb3254bbec858445a15bd873dec96764.json": [],
+    "graphify-out/cache/ast/d37bd4b8e69744a778e04004df001f9beaf2b245697ccb7eea8d2b50b2cd2c5d.json": [],
+    "graphify-out/cache/ast/d3d09bade624a073eec1988fa832d93abbe79a130a267a3d8d7bf8517695ac7c.json": [],
+    "graphify-out/cache/ast/d4767ec3c61cba5700ea6026014dfbc452407408065e13594527786033127844.json": [],
+    "graphify-out/cache/ast/d6c1d0b94544b70740b9c753306e81c8a6d367727e523b751884d758706b4f8a.json": [],
+    "graphify-out/cache/ast/d7b0423c5f3acde02799e2258f19422077bab9f0e0cbd2c4a809c080237ea74d.json": [],
+    "graphify-out/cache/ast/d7f09cdd93428b9375eefab09c89e998fd3786e472cfb8dd723ac4db31619330.json": [],
+    "graphify-out/cache/ast/d9a424bb1b0c8d88b3f1a5cd1fc11c65f4df4deb7ee63e8a9cf03a6dfb890207.json": [],
+    "graphify-out/cache/ast/db0a124c8edf0538bdcac4637ef05d729f443c406b7df74d4500f5df704d5acd.json": [],
+    "graphify-out/cache/ast/dbcc7725099bbdd035ec455549ca3b3f1d70870f3ea90c6957a1307edebe1bb7.json": [],
+    "graphify-out/cache/ast/df4022974ec727da357df0139384630982385ba2de209f5d548d1058dad53970.json": [],
+    "graphify-out/cache/ast/e00b11476e27f0bd0ffb371fb6d02eb7f4e6e6f89addcdd84ae96b4d612b3014.json": [],
+    "graphify-out/cache/ast/e180b25a2b0300d4a74aca654a5aee12c2c830caa6f43e1705a0edfa973b9517.json": [],
+    "graphify-out/cache/ast/e182e40e9c06e6175389d332c42e06bfd30ef842f091fe0ca7d6002d63253bad.json": [],
+    "graphify-out/cache/ast/e1e6e4536941a0fdaf631a9d72ba5f4be686add0498a63f29d0a3b908a37f760.json": [],
+    "graphify-out/cache/ast/e21c209e3f1160405fdcd2ec329dc47a9fb23057ea6206fe391c6147dca5af42.json": [],
+    "graphify-out/cache/ast/e24cf82cbbf10581ccb772153a62929d1f79643aba07e335926c049a69e00fb5.json": [],
+    "graphify-out/cache/ast/e31594cff8d6cbd3d081cfb98242f8973b126bae4a19b4be1dd3730dd12098ac.json": [],
+    "graphify-out/cache/ast/e40c802a233bacd293a62951fb9d5b0b928eac2a9eccdecad0022e6c43c37ed7.json": [],
+    "graphify-out/cache/ast/e427042f02f34527229e4cd36efef4bebe05124aa1c8e3dd987564c4002b43cf.json": [],
+    "graphify-out/cache/ast/e49b9432789f36aacbe2a4d8b7f2aafaab27298797aea9ddf35075a6a13a929a.json": [],
+    "graphify-out/cache/ast/e878a00562265cb587b2f1a91885528f7a9467cce770414baa00a8291a55d6cb.json": [],
+    "graphify-out/cache/ast/e8da616a36ed0444d0364267b6d8d5dcb46a19d15475e9095a3e4c3b3b0b0234.json": [],
+    "graphify-out/cache/ast/e901275da8a4988508024518c7117042bda74ee6a1ada823edce9f750325a019.json": [],
+    "graphify-out/cache/ast/ebf7d511ebe14a331b98e4e6789b4025e2f5d0491efda8a368b9fb1569ceba13.json": [],
+    "graphify-out/cache/ast/ec01b91877a3e35e61983e839115153cacb24733d7886ba5bfab6196169ce62f.json": [],
+    "graphify-out/cache/ast/ec5105433938557daf51706f1f07440e59d2fdabb263080110a933ed1be250ba.json": [],
+    "graphify-out/cache/ast/ed62796560c547933412285a679ff9ea51b00a1025744ce447a4e1bca6ebfdb4.json": [],
+    "graphify-out/cache/ast/f05d13fae06646cadd1c216de7450b8a04fdff8244e092c4f75b20f74268c84a.json": [],
+    "graphify-out/cache/ast/f16027e40e258c6fae9fcc23c7e680b2d6570724e7860b544f4512f9f46d247d.json": [],
+    "graphify-out/cache/ast/f26d5e0d53f19447aa7c61febfc1126c8dc038c7df3d8e564f5352455feb37e8.json": [],
+    "graphify-out/cache/ast/f4938c45a3f8376f281c5d34796310b090d7eccab3530ed8deca2f8a834dd017.json": [],
+    "graphify-out/cache/ast/f646c7b6886cad8142478503742d22a3664a7c75f4bb0585f142b33bf247ce7d.json": [],
+    "graphify-out/cache/ast/f6def51998c0417ea6d18ff807feb2f1ad7fcfe0ff5c4c9aff623eb5afc386fb.json": [],
+    "graphify-out/cache/ast/f78dbad8857d58882d74603e2bac78a630b34af66ab98364758ee46844c6257e.json": [],
+    "graphify-out/cache/ast/f84a7be69294365ea7394e20423123728c91662c4daad39794c10f69196b5722.json": [],
+    "graphify-out/cache/ast/f901d55e61dbcbf25646a76b03779e703efba6694c79b8b99ae7183b2648643e.json": [],
+    "graphify-out/cache/ast/fa1e8d58fd960e86fdcd72b65568781ae1fbf4105a2e2430f29a9aae8202b493.json": [],
+    "graphify-out/cache/ast/fc8570a35fc27d8e4caf4d2686b9b760609368ab2d4986f9e01ac3feffd7c0b6.json": [],
+    "graphify-out/cache/ast/fcafdb24c0ba85fc55e2bfa7f7b29603793a18930b1a4ad5ada7a216bc533a9e.json": [],
+    "graphify-out/cache/ast/fe40add8cb9659522b775457c92e5ed84a34283e2adc8a63a11b23e2f540ff2e.json": [],
+    "graphify-out/cache/ast/fea62c5e47a4333aab73cce903f07836feb266955d8a988c7afb345ab7cafdf1.json": [],
+    "graphify-out/cache/stat-index.json": [],
+    "graphify-out/GRAPH_REPORT.md": [],
+    "graphify-out/graph.html": [],
+    "graphify-out/graph.json": [],
+    "graphify-out/manifest.json": [],
+    "HEARTBEAT.md": [],
+    "HEARTBEAT.toon": [],
+    "hero-teach/index.html": [],
+    "hero-teach/package.json": [],
+    "hero-teach/postcss.config.js": [],
+    "hero-teach/scripts/extract-commands.mjs": [],
+    "hero-teach/scripts/extract-roles.mjs": [],
+    "hero-teach/src/App.tsx": [
+      "hero-teach/src/components/Footer.tsx",
+      "hero-teach/src/components/Nav.tsx",
+      "hero-teach/src/components/ThemeToggle.tsx",
+      "hero-teach/src/pages/Commands.tsx",
+      "hero-teach/src/pages/Home.tsx",
+      "hero-teach/src/pages/NotFound.tsx"
+    ],
+    "hero-teach/src/components/Callout.tsx": [],
+    "hero-teach/src/components/CodeBlock.tsx": [],
+    "hero-teach/src/components/Footer.tsx": [
+      "hero-teach/src/components/GitHubIcon.tsx"
+    ],
+    "hero-teach/src/components/GitHubIcon.tsx": [],
+    "hero-teach/src/components/Nav.tsx": [
+      "hero-teach/src/components/GitHubIcon.tsx"
+    ],
+    "hero-teach/src/components/NodePanel.tsx": [
+      "hero-teach/src/types.ts"
+    ],
+    "hero-teach/src/components/NodePill.tsx": [
+      "hero-teach/src/types.ts"
+    ],
+    "hero-teach/src/components/PipelineMap.tsx": [
+      "hero-teach/src/components/NodePanel.tsx",
+      "hero-teach/src/components/NodePill.tsx",
+      "hero-teach/src/data/pipeline.json",
+      "hero-teach/src/types.ts"
+    ],
+    "hero-teach/src/components/ScoreBadge.tsx": [],
+    "hero-teach/src/components/SearchBar.tsx": [],
+    "hero-teach/src/components/ThemeToggle.tsx": [],
+    "hero-teach/src/components/ToonVsJson.tsx": [],
+    "hero-teach/src/data/commands.json": [],
+    "hero-teach/src/data/pipeline.json": [],
+    "hero-teach/src/data/roles.json": [],
+    "hero-teach/src/main.tsx": [
+      "hero-teach/src/App.tsx",
+      "hero-teach/src/styles/globals.css"
+    ],
+    "hero-teach/src/pages/About.tsx": [
+      "hero-teach/src/components/CodeBlock.tsx",
+      "hero-teach/src/components/GitHubIcon.tsx"
+    ],
+    "hero-teach/src/pages/Architecture.tsx": [
+      "hero-teach/src/components/CodeBlock.tsx",
+      "hero-teach/src/components/PipelineMap.tsx"
+    ],
+    "hero-teach/src/pages/Commands.tsx": [
+      "hero-teach/src/components/CodeBlock.tsx",
+      "hero-teach/src/components/SearchBar.tsx",
+      "hero-teach/src/data/commands.json",
+      "hero-teach/src/types.ts"
+    ],
+    "hero-teach/src/pages/Examples.tsx": [
+      "hero-teach/src/components/CodeBlock.tsx"
+    ],
+    "hero-teach/src/pages/ExchangeLayer.tsx": [
+      "hero-teach/src/components/Callout.tsx",
+      "hero-teach/src/components/CodeBlock.tsx"
+    ],
+    "hero-teach/src/pages/GettingStarted.tsx": [
+      "hero-teach/src/components/Callout.tsx",
+      "hero-teach/src/components/CodeBlock.tsx"
+    ],
+    "hero-teach/src/pages/Home.tsx": [
+      "hero-teach/src/components/CodeBlock.tsx",
+      "hero-teach/src/components/PipelineMap.tsx",
+      "hero-teach/src/components/ToonVsJson.tsx"
+    ],
+    "hero-teach/src/pages/Learn.tsx": [],
+    "hero-teach/src/pages/NotFound.tsx": [],
+    "hero-teach/src/pages/Pipeline.tsx": [
+      "hero-teach/src/components/Callout.tsx",
+      "hero-teach/src/components/CodeBlock.tsx",
+      "hero-teach/src/components/PipelineMap.tsx",
+      "hero-teach/src/components/ScoreBadge.tsx",
+      "hero-teach/src/data/pipeline.json",
+      "hero-teach/src/types.ts"
+    ],
+    "hero-teach/src/pages/RolePage.tsx": [
+      "hero-teach/src/data/roles.json",
+      "hero-teach/src/types.ts"
+    ],
+    "hero-teach/src/pages/Roles.tsx": [
+      "hero-teach/src/data/roles.json",
+      "hero-teach/src/types.ts"
+    ],
+    "hero-teach/src/styles/globals.css": [],
+    "hero-teach/src/types.ts": [],
+    "hero-teach/src/vite-env.d.ts": [],
+    "hero-teach/tailwind.config.ts": [],
+    "hero-teach/tsconfig.json": [],
+    "hero-teach/vite.config.ts": [],
+    "Ideas_by_me.md": [],
+    "IDENTITY.md": [],
+    "improvement_plan_deepseek.md": [],
+    "improvement_plan_mimov25.md": [],
+    "improvement_plan_mimov25pro.md": [],
+    "improvement_plan_minimax.md": [],
+    "improvement_plan_step35.md": [],
+    "improvement_plan_step36.md": [],
+    "KIMI_NOTION_PLAN.md": [],
+    "LEAD_DISPATCH_FIX.md": [],
+    "memory/2026-06-01.md": [],
+    "MINIMAX_KILL_FIX.md": [],
+    "PIPELINE_DESIGN.md": [],
+    "PLAN.md": [],
+    "prompts/LEAD_BRIEF.md": [],
+    "prompts/soldier-1-design-system.md": [],
+    "prompts/soldier-2-api-layer.md": [],
+    "prompts/soldier-3-components.md": [],
+    "prompts/soldier-4-control-features.md": [],
+    "prompts/soldier-5-mobile-responsive.md": [],
+    "prompts/soldier-6-futuristic-polish.md": [],
+    "prompts/soldier-7-integration.md": [],
+    "pyproject.toml": [],
+    "README.md": [],
+    "RESOURCES.md": [],
+    "scripts/install-hero.sh": [],
+    "SOUL.md": [],
+    "SPEC_VIEWPORT.md": [],
+    "SPEC.md": [],
+    "src/hero/__init__.py": [],
+    "src/hero/__main__.py": [
+      "src/hero/cli.py"
+    ],
+    "src/hero/analysis_cache.py": [],
+    "src/hero/archivist/__init__.py": [],
+    "src/hero/archivist/inline.py": [],
+    "src/hero/cli.py": [
+      "src/hero/__init__.py",
+      "src/hero/commands/archive.py",
+      "src/hero/commands/assemble.py",
+      "src/hero/commands/budget.py",
+      "src/hero/commands/build.py",
+      "src/hero/commands/check.py",
+      "src/hero/commands/cipr.py",
+      "src/hero/commands/clean.py",
+      "src/hero/commands/deploy.py",
+      "src/hero/commands/dispatch.py",
+      "src/hero/commands/dlq.py",
+      "src/hero/commands/eval.py",
+      "src/hero/commands/exchange.py",
+      "src/hero/commands/go.py",
+      "src/hero/commands/graph.py",
+      "src/hero/commands/harden.py",
+      "src/hero/commands/heartbeat.py",
+      "src/hero/commands/katana.py",
+      "src/hero/commands/kill.py",
+      "src/hero/commands/legal.py",
+      "src/hero/commands/map.py",
+      "src/hero/commands/orchestrate.py",
+      "src/hero/commands/pipeline.py",
+      "src/hero/commands/pre_commit.py",
+      "src/hero/commands/prune.py",
+      "src/hero/commands/ready.py",
+      "src/hero/commands/scan.py",
+      "src/hero/commands/score.py",
+      "src/hero/commands/spawn.py",
+      "src/hero/commands/status.py",
+      "src/hero/commands/sweep.py",
+      "src/hero/commands/tell.py",
+      "src/hero/commands/verify.py",
+      "src/hero/commands/viewport.py",
+      "src/hero/commands/watch.py",
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/commands/__init__.py": [
+      "src/hero/commands/archive.py",
+      "src/hero/commands/build.py",
+      "src/hero/commands/cipr.py",
+      "src/hero/commands/deploy.py",
+      "src/hero/commands/dispatch.py",
+      "src/hero/commands/graph.py",
+      "src/hero/commands/harden.py",
+      "src/hero/commands/legal.py",
+      "src/hero/commands/pre_commit.py",
+      "src/hero/commands/ready.py",
+      "src/hero/commands/scan.py",
+      "src/hero/commands/score.py",
+      "src/hero/commands/spawn.py",
+      "src/hero/commands/status.py",
+      "src/hero/commands/verify.py"
+    ],
+    "src/hero/commands/archive.py": [
+      "src/hero/archivist/inline.py",
+      "src/hero/commands/check.py",
+      "src/hero/commands/pre_commit.py"
+    ],
+    "src/hero/commands/assemble.py": [
+      "src/hero/soldier/dispatch.py",
+      "src/hero/soldier/spawner.py",
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/brainstorm.py": [],
+    "src/hero/commands/budget.py": [
+      "src/hero/state/budget_history.py",
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/commands/build.py": [
+      "src/hero/commands/check.py",
+      "src/hero/commands/pre_commit.py"
+    ],
+    "src/hero/commands/check.py": [
+      "src/hero/reliability/circuit_breaker.py",
+      "src/hero/soldier/dispatch.py",
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/commands/cipr.py": [
+      "src/hero/commands/check.py",
+      "src/hero/commands/pre_commit.py"
+    ],
+    "src/hero/commands/clean.py": [
+      "src/hero/soldier/dispatch.py",
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/commands/deploy.py": [
+      "src/hero/soldier/context.py",
+      "src/hero/soldier/spawner.py",
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/dispatch.py": [
+      "src/hero/soldier/dispatch.py"
+    ],
+    "src/hero/commands/dlq.py": [
+      "src/hero/reliability/dlq.py"
+    ],
+    "src/hero/commands/eval.py": [
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/exchange.py": [
+      "src/hero/exchange/core.py",
+      "src/hero/exchange/message.py",
+      "src/hero/exchange/pipe.py",
+      "src/hero/exchange/reliability.py",
+      "src/hero/exchange/review.py",
+      "src/hero/exchange/task_list.py",
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/commands/go.py": [
+      "src/hero/analysis_cache.py",
+      "src/hero/commands/archive.py",
+      "src/hero/commands/build.py",
+      "src/hero/commands/cipr.py",
+      "src/hero/commands/harden.py",
+      "src/hero/commands/legal.py",
+      "src/hero/commands/pre_commit.py",
+      "src/hero/commands/verify.py",
+      "src/hero/soldier/dispatch.py",
+      "src/hero/soldier/spawner.py",
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/graph.py": [
+      "src/hero/graphify/client.py",
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/harden.py": [
+      "src/hero/commands/check.py",
+      "src/hero/commands/pre_commit.py"
+    ],
+    "src/hero/commands/heartbeat.py": [
+      "src/hero/soldier/heartbeat.py"
+    ],
+    "src/hero/commands/katana.py": [
+      "src/hero/state/index.py",
+      "src/hero/state/sandbox.py"
+    ],
+    "src/hero/commands/kill_sandbox.py": [
+      "src/hero/soldier/dispatch.py",
+      "src/hero/state/index.py",
+      "src/hero/state/sandbox.py"
+    ],
+    "src/hero/commands/kill.py": [
+      "src/hero/commands/kill_sandbox.py",
+      "src/hero/state/sandbox.py"
+    ],
+    "src/hero/commands/legal.py": [
+      "src/hero/commands/check.py",
+      "src/hero/commands/pre_commit.py"
+    ],
+    "src/hero/commands/map.py": [
+      "src/hero/logging/__init__.py",
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/orchestrate.py": [
+      "src/hero/soldier/dispatch.py",
+      "src/hero/soldier/spawner.py",
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/pipeline.py": [
+      "src/hero/pipeline/executor.py"
+    ],
+    "src/hero/commands/pre_commit.py": [
+      "src/hero/commands/check.py"
+    ],
+    "src/hero/commands/prune.py": [
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/ready.py": [
+      "src/hero/commands/check.py",
+      "src/hero/commands/pre_commit.py"
+    ],
+    "src/hero/commands/scan.py": [
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/score.py": [
+      "src/hero/commands/check.py"
+    ],
+    "src/hero/commands/spawn.py": [
+      "src/hero/soldier/context.py",
+      "src/hero/soldier/spawner.py",
+      "src/hero/state/index.py",
+      "src/hero/state/sandbox.py"
+    ],
+    "src/hero/commands/status.py": [
+      "src/hero/state/index.py",
+      "src/hero/state/sandbox.py"
+    ],
+    "src/hero/commands/sweep.py": [
+      "src/hero/commands/clean.py",
+      "src/hero/commands/kill.py",
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/commands/tell.py": [
+      "src/hero/soldier/context.py",
+      "src/hero/soldier/dispatch.py",
+      "src/hero/soldier/spawner.py",
+      "src/hero/state/index.py"
+    ],
+    "src/hero/commands/verify.py": [
+      "src/hero/commands/check.py",
+      "src/hero/commands/pre_commit.py",
+      "src/hero/commands/score.py"
+    ],
+    "src/hero/commands/viewport_audit.py": [],
+    "src/hero/commands/viewport.py": [
+      "src/hero/viewport/metrics.py",
+      "src/hero/viewport/renderer.py",
+      "src/hero/viewport/tree_renderer.py"
+    ],
+    "src/hero/commands/watch.py": [
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/core/__init__.py": [
+      "src/hero/core/project.py",
+      "src/hero/core/subprocess.py"
+    ],
+    "src/hero/core/project.py": [],
+    "src/hero/core/subprocess.py": [
+      "src/hero/core/subprocess.py"
+    ],
+    "src/hero/eval/__init__.py": [
+      "src/hero/eval/engine.py",
+      "src/hero/eval/report.py",
+      "src/hero/eval/scorer.py"
+    ],
+    "src/hero/eval/engine.py": [
+      "src/hero/eval/phases/__init__.py",
+      "src/hero/eval/phases/accessibility.py",
+      "src/hero/eval/phases/baseline.py",
+      "src/hero/eval/phases/cicd.py",
+      "src/hero/eval/phases/code_review.py",
+      "src/hero/eval/phases/fix.py",
+      "src/hero/eval/phases/performance.py",
+      "src/hero/eval/phases/security.py",
+      "src/hero/eval/phases/ship.py",
+      "src/hero/eval/phases/tdd.py",
+      "src/hero/eval/phases/verify.py",
+      "src/hero/eval/report.py",
+      "src/hero/eval/scorer.py"
+    ],
+    "src/hero/eval/phases/__init__.py": [],
+    "src/hero/eval/phases/accessibility.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/baseline.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/cicd.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/code_review.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/fix.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/performance.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/security.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/ship.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/tdd.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/eval/phases/verify.py": [
+      "src/hero/eval/phases/__init__.py",
+      "src/hero/eval/phases/baseline.py"
+    ],
+    "src/hero/eval/report.py": [
+      "src/hero/eval/scorer.py"
+    ],
+    "src/hero/eval/scorer.py": [
+      "src/hero/eval/phases/__init__.py"
+    ],
+    "src/hero/exchange/__init__.py": [
+      "src/hero/exchange/core.py",
+      "src/hero/exchange/message.py"
+    ],
+    "src/hero/exchange/core.py": [
+      "src/hero/exchange/message.py",
+      "src/hero/exchange/reliability.py",
+      "src/hero/logging/__init__.py",
+      "src/hero/state/status.py"
+    ],
+    "src/hero/exchange/lock.py": [
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/exchange/message.py": [
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/exchange/pipe.py": [
+      "src/hero/exchange/core.py",
+      "src/hero/exchange/message.py",
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/exchange/reliability.py": [
+      "src/hero/exchange/message.py",
+      "src/hero/logging/__init__.py",
+      "src/hero/reliability/dlq.py"
+    ],
+    "src/hero/exchange/review.py": [
+      "src/hero/exchange/core.py",
+      "src/hero/exchange/message.py",
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/exchange/task_list.py": [
+      "src/hero/exchange/core.py",
+      "src/hero/exchange/lock.py",
+      "src/hero/exchange/message.py",
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/git/__init__.py": [
+      "src/hero/git/branch.py"
+    ],
+    "src/hero/git/branch.py": [],
+    "src/hero/graph/__init__.py": [],
+    "src/hero/graph/dependencies.py": [],
+    "src/hero/graphify/__init__.py": [
+      "src/hero/graphify/client.py",
+      "src/hero/graphify/query.py"
+    ],
+    "src/hero/graphify/client.py": [
+      "src/hero/graphify/query.py"
+    ],
+    "src/hero/graphify/query.py": [],
+    "src/hero/logging/__init__.py": [
+      "src/hero/logging/handler.py"
+    ],
+    "src/hero/logging/handler.py": [],
+    "src/hero/mcp_server.py": [],
+    "src/hero/pipeline/__init__.py": [
+      "src/hero/pipeline/executor.py",
+      "src/hero/pipeline/watcher.py"
+    ],
+    "src/hero/pipeline/executor.py": [
+      "src/hero/archivist/inline.py",
+      "src/hero/git/branch.py",
+      "src/hero/qa/gate.py",
+      "src/hero/reliability/circuit_breaker.py",
+      "src/hero/soldier/context.py",
+      "src/hero/soldier/dispatch.py"
+    ],
+    "src/hero/pipeline/watcher.py": [
+      "src/hero/logging/__init__.py",
+      "src/hero/soldier/dispatch.py",
+      "src/hero/state/budget.py",
+      "src/hero/state/usage.py"
+    ],
+    "src/hero/prompts/__init__.py": [
+      "src/hero/prompts/loader.py"
+    ],
+    "src/hero/prompts/defaults/phases/archive.md": [],
+    "src/hero/prompts/defaults/phases/fix.md": [],
+    "src/hero/prompts/defaults/phases/verify.md": [],
+    "src/hero/prompts/defaults/roles/architect.md": [],
+    "src/hero/prompts/defaults/roles/archivist.md": [],
+    "src/hero/prompts/defaults/roles/communicator.md": [],
+    "src/hero/prompts/defaults/roles/lead.md": [],
+    "src/hero/prompts/defaults/roles/researcher.md": [],
+    "src/hero/prompts/defaults/roles/soldier.md": [],
+    "src/hero/prompts/defaults/roles/utility.md": [],
+    "src/hero/prompts/defaults/rules/context-budget.md": [],
+    "src/hero/prompts/defaults/rules/tdd.md": [],
+    "src/hero/prompts/loader.py": [],
+    "src/hero/qa/__init__.py": [
+      "src/hero/qa/gate.py",
+      "src/hero/qa/tdd_gate.py"
+    ],
+    "src/hero/qa/gate.py": [
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/qa/tdd_gate.py": [
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/reliability/__init__.py": [
+      "src/hero/reliability/dlq.py"
+    ],
+    "src/hero/reliability/circuit_breaker.py": [
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/reliability/dlq.py": [
+      "src/hero/logging/__init__.py",
+      "src/hero/soldier/dispatch.py"
+    ],
+    "src/hero/soldier/__init__.py": [
+      "src/hero/soldier/context.py",
+      "src/hero/soldier/heartbeat.py",
+      "src/hero/soldier/spawner.py"
+    ],
+    "src/hero/soldier/context.py": [],
+    "src/hero/soldier/dispatch.py": [
+      "src/hero/logging/__init__.py"
+    ],
+    "src/hero/soldier/heartbeat.py": [
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/soldier/spawner.py": [
+      "src/hero/logging/__init__.py",
+      "src/hero/reliability/circuit_breaker.py",
+      "src/hero/soldier/context.py",
+      "src/hero/soldier/dispatch.py",
+      "src/hero/state/budget_history.py"
+    ],
+    "src/hero/stages/__init__.py": [],
+    "src/hero/stages/archive.py": [
+      "src/hero/commands/archive.py"
+    ],
+    "src/hero/stages/build.py": [
+      "src/hero/commands/build.py"
+    ],
+    "src/hero/stages/cipr.py": [
+      "src/hero/commands/cipr.py"
+    ],
+    "src/hero/stages/harden.py": [
+      "src/hero/commands/harden.py"
+    ],
+    "src/hero/stages/legal.py": [
+      "src/hero/commands/legal.py"
+    ],
+    "src/hero/stages/navigate.py": [
+      "src/hero/graphify/client.py"
+    ],
+    "src/hero/stages/pre_commit.py": [
+      "src/hero/commands/pre_commit.py"
+    ],
+    "src/hero/stages/verify.py": [
+      "src/hero/commands/verify.py"
+    ],
+    "src/hero/state/__init__.py": [
+      "src/hero/state/budget_history.py",
+      "src/hero/state/budget.py",
+      "src/hero/state/cache.py",
+      "src/hero/state/index.py",
+      "src/hero/state/sandbox.py",
+      "src/hero/state/status.py",
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/state/budget_history.py": [],
+    "src/hero/state/budget.py": [
+      "src/hero/state/budget_history.py",
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/state/cache.py": [],
+    "src/hero/state/index.py": [
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/state/sandbox.py": [
+      "src/hero/state/cache.py",
+      "src/hero/state/toon.py"
+    ],
+    "src/hero/state/status.py": [],
+    "src/hero/state/toon.py": [],
+    "src/hero/state/usage.py": [],
+    "src/hero/viewport/__init__.py": [],
+    "src/hero/viewport/compaction.py": [],
+    "src/hero/viewport/delta.py": [
+      "src/hero/viewport/metrics.py"
+    ],
+    "src/hero/viewport/intel.py": [
+      "src/hero/viewport/metrics.py",
+      "src/hero/viewport/states.py"
+    ],
+    "src/hero/viewport/metrics.py": [
+      "src/hero/state/cache.py",
+      "src/hero/state/usage.py",
+      "src/hero/viewport/__init__.py",
+      "src/hero/viewport/states.py"
+    ],
+    "src/hero/viewport/renderer.py": [
+      "src/hero/viewport/delta.py",
+      "src/hero/viewport/metrics.py",
+      "src/hero/viewport/tree_renderer.py"
+    ],
+    "src/hero/viewport/states.py": [],
+    "src/hero/viewport/tree_renderer.py": [
+      "src/hero/viewport/delta.py",
+      "src/hero/viewport/intel.py",
+      "src/hero/viewport/metrics.py",
+      "src/hero/viewport/tree.py"
+    ],
+    "src/hero/viewport/tree.py": [
+      "src/hero/viewport/__init__.py"
+    ],
+    "src/hero/web/__init__.py": [],
+    "src/hero/web/COUNCIL_ANALYSIS.md": [],
+    "src/hero/web/COUNCIL_GLM_OPINION.md": [],
+    "src/hero/web/COUNCIL_KIMI_OPINION.md": [],
+    "src/hero/web/COUNCIL_MIMO_OPINION.md": [],
+    "src/hero/web/server.py": [
+      "src/hero/logging/__init__.py",
+      "src/hero/state/cache.py",
+      "src/hero/viewport/intel.py",
+      "src/hero/viewport/metrics.py",
+      "src/hero/viewport/tree.py"
+    ],
+    "src/hero/web/SPEC_DASHBOARD_V4.md": [],
+    "src/hero/web/static/css/animations.css": [],
+    "src/hero/web/static/css/base.css": [],
+    "src/hero/web/static/css/components.css": [],
+    "src/hero/web/static/css/layout.css": [],
+    "src/hero/web/static/css/tokens.css": [],
+    "src/hero/web/static/index.html": [],
+    "src/hero/web/static/js/app.js": [
+      "src/hero/web/static/js/components/detail-panel.js",
+      "src/hero/web/static/js/components/header.js",
+      "src/hero/web/static/js/components/sandbox-card.js",
+      "src/hero/web/static/js/components/stats-bar.js",
+      "src/hero/web/static/js/components/toast.js",
+      "src/hero/web/static/js/services/api.js",
+      "src/hero/web/static/js/services/auth.js",
+      "src/hero/web/static/js/services/sse.js",
+      "src/hero/web/static/js/services/state.js",
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/controls.js": [
+      "src/hero/web/static/js/components/modal.js",
+      "src/hero/web/static/js/components/toast.js",
+      "src/hero/web/static/js/services/api.js",
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/detail-panel.js": [
+      "src/hero/web/static/js/components/timeline.js",
+      "src/hero/web/static/js/services/api.js",
+      "src/hero/web/static/js/services/state.js",
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/header.js": [
+      "src/hero/web/static/js/services/state.js",
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/modal.js": [
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/sandbox-card.js": [
+      "src/hero/web/static/js/components/controls.js",
+      "src/hero/web/static/js/components/tree-node.js",
+      "src/hero/web/static/js/services/state.js",
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/sparkline.js": [],
+    "src/hero/web/static/js/components/stats-bar.js": [
+      "src/hero/web/static/js/services/state.js",
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/timeline.js": [
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/toast.js": [
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/components/tree-node.js": [
+      "src/hero/web/static/js/utils/dom.js"
+    ],
+    "src/hero/web/static/js/services/api.js": [
+      "src/hero/web/static/js/services/auth.js"
+    ],
+    "src/hero/web/static/js/services/auth.js": [],
+    "src/hero/web/static/js/services/sse.js": [],
+    "src/hero/web/static/js/services/state.js": [],
+    "src/hero/web/static/js/utils/dom.js": [],
+    "src/renderer/styles/desktop.css": [],
+    "tests/__init__.py": [],
+    "tests/conftest.py": [],
+    "tests/test_analysis_cache.py": [],
+    "tests/test_budget_katana.py": [],
+    "tests/test_budget.py": [],
+    "tests/test_build.py": [],
+    "tests/test_cache.py": [],
+    "tests/test_cipr.py": [],
+    "tests/test_core.py": [],
+    "tests/test_deploy.py": [],
+    "tests/test_dlq.py": [],
+    "tests/test_graphify.py": [],
+    "tests/test_harden.py": [],
+    "tests/test_heartbeat.py": [],
+    "tests/test_legal.py": [],
+    "tests/test_logging.py": [],
+    "tests/test_pipeline_executor_qa.py": [],
+    "tests/test_pipeline_executor.py": [],
+    "tests/test_pre_commit.py": [],
+    "tests/test_prompts.py": [],
+    "tests/test_qa_gate.py": [],
+    "tests/test_score.py": [],
+    "tests/test_spawn.py": [],
+    "tests/test_state.py": [],
+    "tests/test_status.py": [],
+    "tests/test_toon.py": [],
+    "TOOLS.md": [],
+    "USER.md": [],
+    "viewport_competition_all_entries.md": [],
+    "viewport_competition_kimi_review.md": [],
+    "VIEWPORT_HANDOFF.md": [],
+    "VIEWPORT_IMPROVE_PLAN_DS4.md": []
+  }
+}

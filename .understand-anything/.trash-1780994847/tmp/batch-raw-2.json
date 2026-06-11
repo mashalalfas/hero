@@ -1,0 +1,1405 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 26,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "hero-teach/src/App.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "PageLoader",
+          "startLine": 21,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "App",
+          "startLine": 31,
+          "endLine": 61,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "App",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/Callout.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "Callout",
+          "startLine": 31,
+          "endLine": 53,
+          "params": [
+            "{\n  kind = \"info\",\n  title,\n  children,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Callout",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/CodeBlock.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "CodeBlock",
+          "startLine": 3,
+          "endLine": 26,
+          "params": [
+            "{\n  children,\n  lang = \"bash\",\n  title,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CodeBlock",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/Footer.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "Footer",
+          "startLine": 4,
+          "endLine": 81,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Footer",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/GitHubIcon.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 7,
+      "functions": [
+        {
+          "name": "GitHubIcon",
+          "startLine": 1,
+          "endLine": 7,
+          "params": [
+            "{ className }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GitHubIcon",
+          "line": 1,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/Nav.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 89,
+      "functions": [
+        {
+          "name": "Nav",
+          "startLine": 15,
+          "endLine": 96,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Nav",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Nav",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Nav",
+          "callee": "useLocation",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Nav",
+          "callee": "LINKS.map",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Nav",
+          "callee": "isActive",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Nav",
+          "callee": "setOpen",
+          "lineNumber": 58
+        },
+        {
+          "caller": "Nav",
+          "callee": "LINKS.map",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Nav",
+          "callee": "setOpen",
+          "lineNumber": 73
+        },
+        {
+          "caller": "Nav",
+          "callee": "isActive",
+          "lineNumber": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/NodePanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 124,
+      "nonEmptyLines": 118,
+      "functions": [
+        {
+          "name": "NodePanel",
+          "startLine": 4,
+          "endLine": 124,
+          "params": [
+            "{\n  node,\n  onClose,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NodePanel",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "NodePanel",
+          "callee": "node.body\n                  .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class=\"text-[var(--color-accent)]\">$1</strong>')\n                  .replace(/\\n\\n/g, \"</p><p class='mt-2'>\")\n                  .replace(/\\n/g, \"<br/>\")\n                  .replace(/^/, \"<p>\")\n                  .replace",
+          "lineNumber": 42
+        },
+        {
+          "caller": "NodePanel",
+          "callee": "node.body\n                  .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class=\"text-[var(--color-accent)]\">$1</strong>')\n                  .replace(/\\n\\n/g, \"</p><p class='mt-2'>\")\n                  .replace(/\\n/g, \"<br/>\")\n                  .replace",
+          "lineNumber": 42
+        },
+        {
+          "caller": "NodePanel",
+          "callee": "node.body\n                  .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class=\"text-[var(--color-accent)]\">$1</strong>')\n                  .replace(/\\n\\n/g, \"</p><p class='mt-2'>\")\n                  .replace",
+          "lineNumber": 42
+        },
+        {
+          "caller": "NodePanel",
+          "callee": "node.body\n                  .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class=\"text-[var(--color-accent)]\">$1</strong>')\n                  .replace",
+          "lineNumber": 42
+        },
+        {
+          "caller": "NodePanel",
+          "callee": "node.body\n                  .replace",
+          "lineNumber": 42
+        },
+        {
+          "caller": "NodePanel",
+          "callee": "node.models.join",
+          "lineNumber": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/NodePill.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "NodePill",
+          "startLine": 19,
+          "endLine": 71,
+          "params": [
+            "{ data }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NodePill",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/PipelineMap.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 264,
+      "nonEmptyLines": 236,
+      "functions": [
+        {
+          "name": "filterByScope",
+          "startLine": 31,
+          "endLine": 39,
+          "params": [
+            "scope"
+          ]
+        },
+        {
+          "name": "buildGraph",
+          "startLine": 41,
+          "endLine": 102,
+          "params": [
+            "scope"
+          ]
+        },
+        {
+          "name": "PipelineMap",
+          "startLine": 104,
+          "endLine": 264,
+          "params": [
+            "{\n  scope = \"full\",\n  height = 480,\n  interactive = true,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PipelineMap",
+          "line": 104,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "buildGraph",
+          "callee": "filterByScope",
+          "lineNumber": 42
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "pipelineData.nodes.filter",
+          "lineNumber": 43
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "includeIds.has",
+          "lineNumber": 43
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "dataNodes.map",
+          "lineNumber": 48
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "dataNodes.filter",
+          "lineNumber": 50
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "dataNodes.filter",
+          "lineNumber": 51
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "dataNodes.filter",
+          "lineNumber": 58
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "dataNodes.filter",
+          "lineNumber": 62
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "pipelineData.edges\n    .filter((e) => includeIds.has(e.source) && includeIds.has(e.target))\n    .map",
+          "lineNumber": 87
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "pipelineData.edges\n    .filter",
+          "lineNumber": 87
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "includeIds.has",
+          "lineNumber": 88
+        },
+        {
+          "caller": "buildGraph",
+          "callee": "includeIds.has",
+          "lineNumber": 88
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useState",
+          "lineNumber": 113
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useState",
+          "lineNumber": 114
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useRef",
+          "lineNumber": 115
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useRef",
+          "lineNumber": 116
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useMemo",
+          "lineNumber": 118
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "buildGraph",
+          "lineNumber": 118
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useNodesState",
+          "lineNumber": 119
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useEdgesState",
+          "lineNumber": 120
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useEffect",
+          "lineNumber": 122
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "buildGraph",
+          "lineNumber": 123
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "setNodes",
+          "lineNumber": 124
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "setEdges",
+          "lineNumber": 125
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "newEdges.map",
+          "lineNumber": 125
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useCallback",
+          "lineNumber": 128
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "clearTimeout",
+          "lineNumber": 130
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "setIsReplaying",
+          "lineNumber": 131
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "buildGraph",
+          "lineNumber": 132
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "setNodes",
+          "lineNumber": 133
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "setIsReplaying",
+          "lineNumber": 138
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "filterByScope",
+          "lineNumber": 140
+        },
+        {
+          "caller": "animateNext",
+          "callee": "setIsReplaying",
+          "lineNumber": 144
+        },
+        {
+          "caller": "animateNext",
+          "callee": "setNodes",
+          "lineNumber": 152
+        },
+        {
+          "caller": "animateNext",
+          "callee": "nds.map",
+          "lineNumber": 153
+        },
+        {
+          "caller": "animateNext",
+          "callee": "setTimeout",
+          "lineNumber": 177
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "animateNext",
+          "lineNumber": 180
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useEffect",
+          "lineNumber": 183
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "clearTimeout",
+          "lineNumber": 185
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useCallback",
+          "lineNumber": 189
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "setSelectedId",
+          "lineNumber": 191
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "useMemo",
+          "lineNumber": 196
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "pipelineData.nodes.find",
+          "lineNumber": 197
+        },
+        {
+          "caller": "PipelineMap",
+          "callee": "setSelectedId",
+          "lineNumber": 260
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/ScoreBadge.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "ScoreBadge",
+          "startLine": 1,
+          "endLine": 18,
+          "params": [
+            "{ value, size = \"sm\" }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScoreBadge",
+          "line": 1,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/SearchBar.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "SearchBar",
+          "startLine": 3,
+          "endLine": 24,
+          "params": [
+            "{\n  value,\n  onChange,\n  placeholder = \"Search...\",\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SearchBar",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SearchBar",
+          "callee": "onChange",
+          "lineNumber": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/ThemeToggle.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "ThemeToggle",
+          "startLine": 6,
+          "endLine": 40,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ThemeToggle",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ThemeToggle",
+          "callee": "useState",
+          "lineNumber": 7
+        },
+        {
+          "caller": "ThemeToggle",
+          "callee": "useEffect",
+          "lineNumber": 9
+        },
+        {
+          "caller": "ThemeToggle",
+          "callee": "localStorage.getItem",
+          "lineNumber": 10
+        },
+        {
+          "caller": "ThemeToggle",
+          "callee": "window.matchMedia",
+          "lineNumber": 13
+        },
+        {
+          "caller": "ThemeToggle",
+          "callee": "setTheme",
+          "lineNumber": 16
+        },
+        {
+          "caller": "toggle",
+          "callee": "setTheme",
+          "lineNumber": 21
+        },
+        {
+          "caller": "toggle",
+          "callee": "localStorage.setItem",
+          "lineNumber": 22
+        },
+        {
+          "caller": "toggle",
+          "callee": "document.documentElement.classList.toggle",
+          "lineNumber": 23
+        },
+        {
+          "caller": "toggle",
+          "callee": "document.documentElement.classList.toggle",
+          "lineNumber": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/components/ToonVsJson.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 61,
+      "functions": [
+        {
+          "name": "ToonVsJson",
+          "startLine": 3,
+          "endLine": 65,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ToonVsJson",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/main.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 12,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/About.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 188,
+      "nonEmptyLines": 183,
+      "functions": [
+        {
+          "name": "About",
+          "startLine": 57,
+          "endLine": 188,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "About",
+          "line": 57,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "About",
+          "callee": "[\n            {\n              title: \"Show, don't tell\",\n              desc: \"Every concept has a visual — a node in a graph, a coloured stage badge, an animated message flowing between sandboxes.\",\n            },\n            {\n              title: \"One canonical pipeline map\",\n              desc: \"The same pipeline component renders everywhere. Only the level of detail changes.\",\n            },\n            {\n              title: \"Offline by default\",\n              desc: \"HERO is a local tool. No cloud dependencies. No analytics. Works on an airplane.\",\n            },\n            {\n              title: \"TOON-first\",\n              desc: \"All state files use TOON — a format that uses 40% fewer tokens than JSON, reducing inference costs.\",\n            },\n            {\n              title: \"Dark by default\",\n              desc: \"HERO lives in the terminal. Dark mode is the homepage. Light mode is available for accessibility.\",\n            },\n            {\n              title: \"Engineered, not decorative\",\n              desc: \"Sharp lines, monospace text, information density. The diagram should feel like a control panel.\",\n            },\n          ].map",
+          "lineNumber": 96
+        },
+        {
+          "caller": "About",
+          "callee": "PHASES.map",
+          "lineNumber": 140
+        },
+        {
+          "caller": "About",
+          "callee": "p.items.map",
+          "lineNumber": 152
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/Architecture.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 109,
+      "functions": [
+        {
+          "name": "Architecture",
+          "startLine": 42,
+          "endLine": 114,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Architecture",
+          "line": 42,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Architecture",
+          "callee": "BOTTOM_RAIL.map",
+          "lineNumber": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/Commands.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 131,
+      "nonEmptyLines": 119,
+      "functions": [
+        {
+          "name": "CommandCard",
+          "startLine": 11,
+          "endLine": 69,
+          "params": [
+            "{ cmd }"
+          ]
+        },
+        {
+          "name": "Commands",
+          "startLine": 71,
+          "endLine": 131,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Commands",
+          "line": 71,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CommandCard",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "CommandCard",
+          "callee": "setExpanded",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Commands",
+          "callee": "useState",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Commands",
+          "callee": "useMemo",
+          "lineNumber": 74
+        },
+        {
+          "caller": "Commands",
+          "callee": "fuse.search(query).map",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Commands",
+          "callee": "fuse.search",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Commands",
+          "callee": "useMemo",
+          "lineNumber": 81
+        },
+        {
+          "caller": "Commands",
+          "callee": "map.has",
+          "lineNumber": 85
+        },
+        {
+          "caller": "Commands",
+          "callee": "map.set",
+          "lineNumber": 85
+        },
+        {
+          "caller": "Commands",
+          "callee": "map.get(g)!.push",
+          "lineNumber": 86
+        },
+        {
+          "caller": "Commands",
+          "callee": "map.get",
+          "lineNumber": 86
+        },
+        {
+          "caller": "Commands",
+          "callee": "groups.map",
+          "lineNumber": 110
+        },
+        {
+          "caller": "Commands",
+          "callee": "groupedByGroup.get",
+          "lineNumber": 111
+        },
+        {
+          "caller": "Commands",
+          "callee": "cmds.map",
+          "lineNumber": 122
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/Examples.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 211,
+      "nonEmptyLines": 184,
+      "functions": [
+        {
+          "name": "Examples",
+          "startLine": 166,
+          "endLine": 211,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Examples",
+          "line": 166,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Examples",
+          "callee": "EXAMPLES.map",
+          "lineNumber": 180
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/ExchangeLayer.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 216,
+      "nonEmptyLines": 206,
+      "functions": [
+        {
+          "name": "ExchangeLayer",
+          "startLine": 55,
+          "endLine": 216,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExchangeLayer",
+          "line": 55,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ExchangeLayer",
+          "callee": "PATTERNS.map",
+          "lineNumber": 92
+        },
+        {
+          "caller": "ExchangeLayer",
+          "callee": "[\n                [\"hero exchange send\", \"Send a .toon message to a soldier's inbox\"],\n                [\"hero exchange listen\", \"Listen for incoming messages on a channel\"],\n                [\"hero exchange broadcast\", \"Broadcast to all listening soldiers\"],\n                [\"hero exchange status\", \"Show exchange layer health and queue depth\"],\n                [\"hero exchange claim\", \"Claim a task from the shared task list\"],\n                [\"hero exchange complete\", \"Mark a claimed task as complete\"],\n                [\"hero exchange purge\", \"Purge all exchange files (danger zone)\"],\n              ].map",
+          "lineNumber": 137
+        },
+        {
+          "caller": "ExchangeLayer",
+          "callee": "[\n                [\"Transport\", \"TOON files + fs events\", \"HTTP + SSE\", \"RPC calls\"],\n                [\"Isolation\", \"Per-sandbox processes\", \"Shared memory\", \"Container-level\"],\n                [\"Auditability\", \"Every message is a file\", \"Log stream only\", \"Centralized logs\"],\n                [\"Offline capable\", \"Yes — fully local\", \"No\", \"No\"],\n                [\"Multi-agent\", \"Yes — first-class\", \"Teams (beta)\", \"Single agent only\"],\n                [\"DLQ\", \"Built-in\", \"Manual\", \"None\"],\n              ].map",
+          "lineNumber": 172
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/GettingStarted.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 201,
+      "nonEmptyLines": 184,
+      "functions": [
+        {
+          "name": "GettingStarted",
+          "startLine": 129,
+          "endLine": 201,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GettingStarted",
+          "line": 129,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GettingStarted",
+          "callee": "STEPS.map",
+          "lineNumber": 148
+        },
+        {
+          "caller": "GettingStarted",
+          "callee": "[\n            { to: \"/pipeline\", label: \"Deep-dive the Pipeline\", desc: \"Understand every stage, score formula, and failure mode.\" },\n            { to: \"/architecture\", label: \"Explore Architecture\", desc: \"Interactive map of the full HERO system.\" },\n            { to: \"/exchange\", label: \"Learn Exchange Layer\", desc: \"How soldiers communicate in isolated sandboxes.\" },\n          ].map",
+          "lineNumber": 176
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/Home.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 142,
+      "nonEmptyLines": 134,
+      "functions": [
+        {
+          "name": "Home",
+          "startLine": 28,
+          "endLine": 142,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Home",
+          "line": 28,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Home",
+          "callee": "FEATURES.map",
+          "lineNumber": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/NotFound.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 24,
+      "functions": [
+        {
+          "name": "NotFound",
+          "startLine": 4,
+          "endLine": 25,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NotFound",
+          "line": 4,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/Pipeline.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 101,
+      "functions": [
+        {
+          "name": "StageSection",
+          "startLine": 23,
+          "endLine": 74,
+          "params": [
+            "{ node }"
+          ]
+        },
+        {
+          "name": "Pipeline",
+          "startLine": 76,
+          "endLine": 113,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Pipeline",
+          "line": 76,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StageSection",
+          "callee": "(node.body || \"\")\n                .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class=\"text-[var(--color-accent)]\">$1</strong>')\n                .replace(/\\n\\n/g, \"</p><p class='mt-2'>\")\n                .replace(/\\n/g, \"<br/>\")\n                .replace(/^/, \"<p>\")\n                .replace",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StageSection",
+          "callee": "(node.body || \"\")\n                .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class=\"text-[var(--color-accent)]\">$1</strong>')\n                .replace(/\\n\\n/g, \"</p><p class='mt-2'>\")\n                .replace(/\\n/g, \"<br/>\")\n                .replace",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StageSection",
+          "callee": "(node.body || \"\")\n                .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class=\"text-[var(--color-accent)]\">$1</strong>')\n                .replace(/\\n\\n/g, \"</p><p class='mt-2'>\")\n                .replace",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StageSection",
+          "callee": "(node.body || \"\")\n                .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class=\"text-[var(--color-accent)]\">$1</strong>')\n                .replace",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StageSection",
+          "callee": "(node.body || \"\")\n                .replace",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Pipeline",
+          "callee": "executionNodes.map",
+          "lineNumber": 108
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/RolePage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 207,
+      "nonEmptyLines": 195,
+      "functions": [
+        {
+          "name": "RolePage",
+          "startLine": 8,
+          "endLine": 198,
+          "params": []
+        },
+        {
+          "name": "WrenchIcon",
+          "startLine": 201,
+          "endLine": 207,
+          "params": [
+            "{ className }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RolePage",
+          "line": 8,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RolePage",
+          "callee": "useParams",
+          "lineNumber": 9
+        },
+        {
+          "caller": "RolePage",
+          "callee": "roles.find",
+          "lineNumber": 10
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.name.replace",
+          "lineNumber": 37
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.models.map",
+          "lineNumber": 51
+        },
+        {
+          "caller": "RolePage",
+          "callee": "(m.context_window / 1000).toFixed",
+          "lineNumber": 59
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.model_fallbacks.map",
+          "lineNumber": 80
+        },
+        {
+          "caller": "RolePage",
+          "callee": "(role.context_window / 1000).toFixed",
+          "lineNumber": 98
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.max_tokens_injected.toLocaleString",
+          "lineNumber": 104
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.priority.replace",
+          "lineNumber": 122
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.triggers.map",
+          "lineNumber": 137
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.never_runs_for.map",
+          "lineNumber": 154
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.tools_required.map",
+          "lineNumber": 171
+        },
+        {
+          "caller": "RolePage",
+          "callee": "role.produces.map",
+          "lineNumber": 187
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/pages/Roles.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 135,
+      "nonEmptyLines": 129,
+      "functions": [
+        {
+          "name": "formatContext",
+          "startLine": 21,
+          "endLine": 25,
+          "params": [
+            "num"
+          ]
+        },
+        {
+          "name": "Roles",
+          "startLine": 27,
+          "endLine": 135,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Roles",
+          "line": 27,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "formatContext",
+          "callee": "(num / 1000000).toFixed",
+          "lineNumber": 22
+        },
+        {
+          "caller": "formatContext",
+          "callee": "(num / 1000).toFixed",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Roles",
+          "callee": "roles.map",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Roles",
+          "callee": "role.name.replace",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Roles",
+          "callee": "formatContext",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Roles",
+          "callee": "role.models.slice(0, 3).map",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Roles",
+          "callee": "role.models.slice",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Roles",
+          "callee": "[\n            {\n              tier: \"Tier 1\",\n              label: \"Fast & Cheap\",\n              model: \"step-3.5-flash\",\n              description: \"80% of tasks. Step 3.5 Flash — 128K context, fast inference, minimal cost.\",\n              bg: \"border-l-emerald-500\",\n            },\n            {\n              tier: \"Tier 2\",\n              label: \"Agent Reasoning\",\n              model: escalation[0]?.model || \"kimi-k2.6\",\n              description: escalation[0]?.description || \"When soldier gets stuck — agent reasoning with deeper analysis.\",\n              bg: \"border-l-amber-500\",\n            },\n            {\n              tier: \"Tier 3\",\n              label: \"Deep Think\",\n              model: escalation[1]?.model || \"mimo-v2.5-pro\",\n              description: escalation[1]?.description || \"Nuclear option — deepest reasoning for the hardest problems.\",\n              bg: \"border-l-rose-500\",\n            },\n          ].map",
+          "lineNumber": 97
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "hero-teach/src/types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 73,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

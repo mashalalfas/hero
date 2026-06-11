@@ -1,0 +1,280 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/hero/core/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 9,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/core/project.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 198,
+      "nonEmptyLines": 164,
+      "functions": [
+        {
+          "name": "_parse_index_toon",
+          "startLine": 36,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "resolve_sandbox",
+          "startLine": 47,
+          "endLine": 78,
+          "params": [
+            "sandbox_name_or_path"
+          ]
+        },
+        {
+          "name": "detect_project_type",
+          "startLine": 83,
+          "endLine": 198,
+          "params": [
+            "path"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_parse_index_toon",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_sandbox",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "detect_project_type",
+          "line": 83,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_parse_index_toon",
+          "callee": "INDEX_PATH.exists",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_parse_index_toon",
+          "callee": "INDEX_PATH.read_text",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_parse_index_toon",
+          "callee": "m.group",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_parse_index_toon",
+          "callee": "m.group",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_parse_index_toon",
+          "callee": "_INDEX_ENTRY_RE.finditer",
+          "lineNumber": 44
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "_parse_index_toon",
+          "lineNumber": 60
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "Path(index[sandbox_name_or_path]).resolve",
+          "lineNumber": 62
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "Path",
+          "lineNumber": 62
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "Path",
+          "lineNumber": 65
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "candidate.exists",
+          "lineNumber": 66
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "candidate.resolve",
+          "lineNumber": 67
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "dev.exists",
+          "lineNumber": 71
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "dev.resolve",
+          "lineNumber": 72
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "FileNotFoundError",
+          "lineNumber": 74
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"project.godot\").exists",
+          "lineNumber": 118
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"engine.cfg\").exists",
+          "lineNumber": 118
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 119
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"pubspec.yaml\").exists",
+          "lineNumber": 126
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 127
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"package.json\").exists",
+          "lineNumber": 137
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "json.loads",
+          "lineNumber": 140
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "pkg.read_text",
+          "lineNumber": 140
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "pkg_data.get",
+          "lineNumber": 145
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "pkg_data.get",
+          "lineNumber": 146
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "pkg_data.get",
+          "lineNumber": 148
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 151
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 162
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"pyproject.toml\").exists",
+          "lineNumber": 178
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 179
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"Cargo.toml\").exists",
+          "lineNumber": 188
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 189
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/core/subprocess.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 47,
+      "functions": [
+        {
+          "name": "safe_run",
+          "startLine": 16,
+          "endLine": 54,
+          "params": [
+            "cmd",
+            "cwd",
+            "timeout"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "safe_run",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "safe_run",
+          "callee": "subprocess.run",
+          "lineNumber": 41
+        },
+        {
+          "caller": "safe_run",
+          "callee": "str",
+          "lineNumber": 43
+        },
+        {
+          "caller": "safe_run",
+          "callee": "str",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

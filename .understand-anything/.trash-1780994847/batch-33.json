@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "id": "document:src/hero/web/COUNCIL_ANALYSIS.md",
+      "type": "document",
+      "name": "COUNCIL_ANALYSIS.md",
+      "filePath": "src/hero/web/COUNCIL_ANALYSIS.md",
+      "summary": "Document: COUNCIL_ANALYSIS.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/COUNCIL_ANALYSIS.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "src/hero/web/COUNCIL_ANALYSIS.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:src/hero/web/COUNCIL_GLM_OPINION.md",
+      "type": "document",
+      "name": "COUNCIL_GLM_OPINION.md",
+      "filePath": "src/hero/web/COUNCIL_GLM_OPINION.md",
+      "summary": "Document: COUNCIL_GLM_OPINION.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/COUNCIL_GLM_OPINION.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "src/hero/web/COUNCIL_GLM_OPINION.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:src/hero/web/COUNCIL_KIMI_OPINION.md",
+      "type": "document",
+      "name": "COUNCIL_KIMI_OPINION.md",
+      "filePath": "src/hero/web/COUNCIL_KIMI_OPINION.md",
+      "summary": "Document: COUNCIL_KIMI_OPINION.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/COUNCIL_KIMI_OPINION.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "src/hero/web/COUNCIL_KIMI_OPINION.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:src/hero/web/COUNCIL_MIMO_OPINION.md",
+      "type": "document",
+      "name": "COUNCIL_MIMO_OPINION.md",
+      "filePath": "src/hero/web/COUNCIL_MIMO_OPINION.md",
+      "summary": "Document: COUNCIL_MIMO_OPINION.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/COUNCIL_MIMO_OPINION.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "src/hero/web/COUNCIL_MIMO_OPINION.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:src/hero/web/SPEC_DASHBOARD_V4.md",
+      "type": "document",
+      "name": "SPEC_DASHBOARD_V4.md",
+      "filePath": "src/hero/web/SPEC_DASHBOARD_V4.md",
+      "summary": "Document: SPEC_DASHBOARD_V4.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/SPEC_DASHBOARD_V4.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "src/hero/web/SPEC_DASHBOARD_V4.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

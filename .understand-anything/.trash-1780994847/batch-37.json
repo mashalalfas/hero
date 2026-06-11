@@ -1,0 +1,690 @@
+{
+  "nodes": [
+    {
+      "id": "file:tests/test_qa_gate.py",
+      "type": "file",
+      "name": "test_qa_gate.py",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "File: test_qa_gate.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_qa_gate.py:sandbox_with_git",
+      "type": "function",
+      "name": "sandbox_with_git",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Function sandbox_with_git",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_qa_gate.py:_add_and_stage",
+      "type": "function",
+      "name": "_add_and_stage",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Function _add_and_stage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_qa_gate.py:TestQAResult",
+      "type": "class",
+      "name": "TestQAResult",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Class TestQAResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_qa_gate.py:TestFileScopeCheck",
+      "type": "class",
+      "name": "TestFileScopeCheck",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Class TestFileScopeCheck",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_qa_gate.py:TestDiffSizeCheck",
+      "type": "class",
+      "name": "TestDiffSizeCheck",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Class TestDiffSizeCheck",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_qa_gate.py:TestHandleFailure",
+      "type": "class",
+      "name": "TestHandleFailure",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Class TestHandleFailure",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_score.py",
+      "type": "file",
+      "name": "test_score.py",
+      "filePath": "tests/test_score.py",
+      "summary": "File: test_score.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_score.py:runner",
+      "type": "function",
+      "name": "runner",
+      "filePath": "tests/test_score.py",
+      "summary": "Function runner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_score.py:tmp_project",
+      "type": "function",
+      "name": "tmp_project",
+      "filePath": "tests/test_score.py",
+      "summary": "Function tmp_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestResolveSandbox",
+      "type": "class",
+      "name": "TestResolveSandbox",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestResolveSandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestDetectProjectType",
+      "type": "class",
+      "name": "TestDetectProjectType",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestDetectProjectType",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestSecretScan",
+      "type": "class",
+      "name": "TestSecretScan",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestSecretScan",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestCopyrightHeaders",
+      "type": "class",
+      "name": "TestCopyrightHeaders",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestCopyrightHeaders",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestScoreVerify",
+      "type": "class",
+      "name": "TestScoreVerify",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestScoreVerify",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestCLI",
+      "type": "class",
+      "name": "TestCLI",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestCLI",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_spawn.py",
+      "type": "file",
+      "name": "test_spawn.py",
+      "filePath": "tests/test_spawn.py",
+      "summary": "File: test_spawn.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_spawn.py:clear_dispatch_queue_env",
+      "type": "function",
+      "name": "clear_dispatch_queue_env",
+      "filePath": "tests/test_spawn.py",
+      "summary": "Function clear_dispatch_queue_env",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_spawn.py:TestSoldierSpawner",
+      "type": "class",
+      "name": "TestSoldierSpawner",
+      "filePath": "tests/test_spawn.py",
+      "summary": "Class TestSoldierSpawner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_spawn.py:TestBuildContext",
+      "type": "class",
+      "name": "TestBuildContext",
+      "filePath": "tests/test_spawn.py",
+      "summary": "Class TestBuildContext",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_state.py",
+      "type": "file",
+      "name": "test_state.py",
+      "filePath": "tests/test_state.py",
+      "summary": "File: test_state.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_state.py:TestIndexState",
+      "type": "class",
+      "name": "TestIndexState",
+      "filePath": "tests/test_state.py",
+      "summary": "Class TestIndexState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_state.py:TestSandboxState",
+      "type": "class",
+      "name": "TestSandboxState",
+      "filePath": "tests/test_state.py",
+      "summary": "Class TestSandboxState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_state.py:TestBudgetState",
+      "type": "class",
+      "name": "TestBudgetState",
+      "filePath": "tests/test_state.py",
+      "summary": "Class TestBudgetState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_status.py",
+      "type": "file",
+      "name": "test_status.py",
+      "filePath": "tests/test_status.py",
+      "summary": "File: test_status.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:_isolate_status_dir",
+      "type": "function",
+      "name": "_isolate_status_dir",
+      "filePath": "tests/test_status.py",
+      "summary": "Function _isolate_status_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:_write",
+      "type": "function",
+      "name": "_write",
+      "filePath": "tests/test_status.py",
+      "summary": "Function _write",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_write_and_read_roundtrip",
+      "type": "function",
+      "name": "test_write_and_read_roundtrip",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_write_and_read_roundtrip",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_read_missing_returns_none",
+      "type": "function",
+      "name": "test_read_missing_returns_none",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_read_missing_returns_none",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_overwrite_is_atomic",
+      "type": "function",
+      "name": "test_overwrite_is_atomic",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_overwrite_is_atomic",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_list_status_empty_when_no_files",
+      "type": "function",
+      "name": "test_list_status_empty_when_no_files",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_list_status_empty_when_no_files",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_list_status_sorted_newest_first",
+      "type": "function",
+      "name": "test_list_status_sorted_newest_first",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_list_status_sorted_newest_first",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_list_status_filter_by_sandbox",
+      "type": "function",
+      "name": "test_list_status_filter_by_sandbox",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_list_status_filter_by_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_clean_status_removes_old",
+      "type": "function",
+      "name": "test_clean_status_removes_old",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_clean_status_removes_old",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_clean_status_noop_on_empty_dir",
+      "type": "function",
+      "name": "test_clean_status_noop_on_empty_dir",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_clean_status_noop_on_empty_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_write_adds_timestamp",
+      "type": "function",
+      "name": "test_write_adds_timestamp",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_write_adds_timestamp",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_toon.py",
+      "type": "file",
+      "name": "test_toon.py",
+      "filePath": "tests/test_toon.py",
+      "summary": "File: test_toon.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_toon.py:TestToonRead",
+      "type": "class",
+      "name": "TestToonRead",
+      "filePath": "tests/test_toon.py",
+      "summary": "Class TestToonRead",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_toon.py:TestToonWrite",
+      "type": "class",
+      "name": "TestToonWrite",
+      "filePath": "tests/test_toon.py",
+      "summary": "Class TestToonWrite",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_toon.py:TestRoundTrip",
+      "type": "class",
+      "name": "TestRoundTrip",
+      "filePath": "tests/test_toon.py",
+      "summary": "Class TestRoundTrip",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_toon.py:TestJsonToToon",
+      "type": "class",
+      "name": "TestJsonToToon",
+      "filePath": "tests/test_toon.py",
+      "summary": "Class TestJsonToToon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_toon.py:TestErrorHandling",
+      "type": "class",
+      "name": "TestErrorHandling",
+      "filePath": "tests/test_toon.py",
+      "summary": "Class TestErrorHandling",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "function:tests/test_qa_gate.py:sandbox_with_git",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "function:tests/test_qa_gate.py:_add_and_stage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "class:tests/test_qa_gate.py:TestQAResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "class:tests/test_qa_gate.py:TestFileScopeCheck",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "class:tests/test_qa_gate.py:TestDiffSizeCheck",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "class:tests/test_qa_gate.py:TestHandleFailure",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "function:tests/test_score.py:runner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "function:tests/test_score.py:tmp_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestResolveSandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestDetectProjectType",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestSecretScan",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestCopyrightHeaders",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestScoreVerify",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestCLI",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_spawn.py",
+      "target": "function:tests/test_spawn.py:clear_dispatch_queue_env",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_spawn.py",
+      "target": "class:tests/test_spawn.py:TestSoldierSpawner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_spawn.py",
+      "target": "class:tests/test_spawn.py:TestBuildContext",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_state.py",
+      "target": "class:tests/test_state.py:TestIndexState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_state.py",
+      "target": "class:tests/test_state.py:TestSandboxState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_state.py",
+      "target": "class:tests/test_state.py:TestBudgetState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:_isolate_status_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:_write",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_write_and_read_roundtrip",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_read_missing_returns_none",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_overwrite_is_atomic",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_list_status_empty_when_no_files",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_list_status_sorted_newest_first",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_list_status_filter_by_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_clean_status_removes_old",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_clean_status_noop_on_empty_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_write_adds_timestamp",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_toon.py",
+      "target": "class:tests/test_toon.py:TestToonRead",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_toon.py",
+      "target": "class:tests/test_toon.py:TestToonWrite",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_toon.py",
+      "target": "class:tests/test_toon.py:TestRoundTrip",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_toon.py",
+      "target": "class:tests/test_toon.py:TestJsonToToon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_toon.py",
+      "target": "class:tests/test_toon.py:TestErrorHandling",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

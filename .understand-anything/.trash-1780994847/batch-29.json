@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "config:hero-teach/src/data/commands.json",
+      "type": "config",
+      "name": "commands.json",
+      "filePath": "hero-teach/src/data/commands.json",
+      "summary": "Config: commands.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/data/commands.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "hero-teach/src/data/commands.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:hero-teach/src/data/pipeline.json",
+      "type": "config",
+      "name": "pipeline.json",
+      "filePath": "hero-teach/src/data/pipeline.json",
+      "summary": "Config: pipeline.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/data/pipeline.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "hero-teach/src/data/pipeline.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:hero-teach/src/data/roles.json",
+      "type": "config",
+      "name": "roles.json",
+      "filePath": "hero-teach/src/data/roles.json",
+      "summary": "Config: roles.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/src/data/roles.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "hero-teach/src/data/roles.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

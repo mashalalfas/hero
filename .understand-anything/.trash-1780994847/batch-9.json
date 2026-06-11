@@ -1,0 +1,309 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/graphify/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/graphify/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/graphify/client.py",
+      "type": "file",
+      "name": "client.py",
+      "filePath": "src/hero/graphify/client.py",
+      "summary": "File: client.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/graphify/client.py:_find_graphify_binary",
+      "type": "function",
+      "name": "_find_graphify_binary",
+      "filePath": "src/hero/graphify/client.py",
+      "summary": "Function _find_graphify_binary",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/graphify/client.py:GraphifyClient",
+      "type": "class",
+      "name": "GraphifyClient",
+      "filePath": "src/hero/graphify/client.py",
+      "summary": "Class GraphifyClient",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/graphify/query.py",
+      "type": "file",
+      "name": "query.py",
+      "filePath": "src/hero/graphify/query.py",
+      "summary": "File: query.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/graphify/query.py:build_query",
+      "type": "function",
+      "name": "build_query",
+      "filePath": "src/hero/graphify/query.py",
+      "summary": "Function build_query",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/graphify/query.py:parse_response",
+      "type": "function",
+      "name": "parse_response",
+      "filePath": "src/hero/graphify/query.py",
+      "summary": "Function parse_response",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/stages/navigate.py",
+      "type": "file",
+      "name": "navigate.py",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "File: navigate.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:run_navigate",
+      "type": "function",
+      "name": "run_navigate",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function run_navigate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_is_graphify_stale",
+      "type": "function",
+      "name": "_is_graphify_stale",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _is_graphify_stale",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_is_understand_stale",
+      "type": "function",
+      "name": "_is_understand_stale",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _is_understand_stale",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_iter_source_files",
+      "type": "function",
+      "name": "_iter_source_files",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _iter_source_files",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_synthesise_navigation_tree",
+      "type": "function",
+      "name": "_synthesise_navigation_tree",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _synthesise_navigation_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_load_json",
+      "type": "function",
+      "name": "_load_json",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _load_json",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_safe_len",
+      "type": "function",
+      "name": "_safe_len",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _safe_len",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_render_graphify_tree",
+      "type": "function",
+      "name": "_render_graphify_tree",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _render_graphify_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_render_understand_tree",
+      "type": "function",
+      "name": "_render_understand_tree",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _render_understand_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_render_file_index",
+      "type": "function",
+      "name": "_render_file_index",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _render_file_index",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/navigate.py:_pick_hub",
+      "type": "function",
+      "name": "_pick_hub",
+      "filePath": "src/hero/stages/navigate.py",
+      "summary": "Function _pick_hub",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/graphify/client.py",
+      "target": "function:src/hero/graphify/client.py:_find_graphify_binary",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graphify/client.py",
+      "target": "class:src/hero/graphify/client.py:GraphifyClient",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graphify/query.py",
+      "target": "function:src/hero/graphify/query.py:build_query",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graphify/query.py",
+      "target": "function:src/hero/graphify/query.py:parse_response",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:run_navigate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_is_graphify_stale",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_is_understand_stale",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_iter_source_files",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_synthesise_navigation_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_load_json",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_safe_len",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_render_graphify_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_render_understand_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_render_file_index",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/navigate.py",
+      "target": "function:src/hero/stages/navigate.py:_pick_hub",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

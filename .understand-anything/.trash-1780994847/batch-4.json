@@ -1,0 +1,1395 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/commands/dlq.py",
+      "type": "file",
+      "name": "dlq.py",
+      "filePath": "src/hero/commands/dlq.py",
+      "summary": "File: dlq.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dlq.py:dlq",
+      "type": "function",
+      "name": "dlq",
+      "filePath": "src/hero/commands/dlq.py",
+      "summary": "Function dlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dlq.py:list_cmd",
+      "type": "function",
+      "name": "list_cmd",
+      "filePath": "src/hero/commands/dlq.py",
+      "summary": "Function list_cmd",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dlq.py:retry_cmd",
+      "type": "function",
+      "name": "retry_cmd",
+      "filePath": "src/hero/commands/dlq.py",
+      "summary": "Function retry_cmd",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dlq.py:clear_cmd",
+      "type": "function",
+      "name": "clear_cmd",
+      "filePath": "src/hero/commands/dlq.py",
+      "summary": "Function clear_cmd",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/exchange.py",
+      "type": "file",
+      "name": "exchange.py",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "File: exchange.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:exchange",
+      "type": "function",
+      "name": "exchange",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function exchange",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:send",
+      "type": "function",
+      "name": "send",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function send",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:broadcast",
+      "type": "function",
+      "name": "broadcast",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function broadcast",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:listen",
+      "type": "function",
+      "name": "listen",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function listen",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:_print_inbox",
+      "type": "function",
+      "name": "_print_inbox",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function _print_inbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:mark_read",
+      "type": "function",
+      "name": "mark_read",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function mark_read",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:reply",
+      "type": "function",
+      "name": "reply",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function reply",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:status",
+      "type": "function",
+      "name": "status",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:roster",
+      "type": "function",
+      "name": "roster",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function roster",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:purge",
+      "type": "function",
+      "name": "purge",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function purge",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:task",
+      "type": "function",
+      "name": "task",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:task_post",
+      "type": "function",
+      "name": "task_post",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function task_post",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:task_list_cmd",
+      "type": "function",
+      "name": "task_list_cmd",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function task_list_cmd",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:task_claim",
+      "type": "function",
+      "name": "task_claim",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function task_claim",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:task_done",
+      "type": "function",
+      "name": "task_done",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function task_done",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:task_fail",
+      "type": "function",
+      "name": "task_fail",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function task_fail",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:pipe",
+      "type": "function",
+      "name": "pipe",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function pipe",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:pipe_push",
+      "type": "function",
+      "name": "pipe_push",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function pipe_push",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:pipe_pull",
+      "type": "function",
+      "name": "pipe_pull",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function pipe_pull",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:pipe_status",
+      "type": "function",
+      "name": "pipe_status",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function pipe_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:review",
+      "type": "function",
+      "name": "review",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function review",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:review_request",
+      "type": "function",
+      "name": "review_request",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function review_request",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:review_respond",
+      "type": "function",
+      "name": "review_respond",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function review_respond",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:review_status",
+      "type": "function",
+      "name": "review_status",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function review_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:assign",
+      "type": "function",
+      "name": "assign",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function assign",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:assign_write",
+      "type": "function",
+      "name": "assign_write",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function assign_write",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/exchange.py:assign_read",
+      "type": "function",
+      "name": "assign_read",
+      "filePath": "src/hero/commands/exchange.py",
+      "summary": "Function assign_read",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/watch.py",
+      "type": "file",
+      "name": "watch.py",
+      "filePath": "src/hero/commands/watch.py",
+      "summary": "File: watch.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/watch.py:_write_pid",
+      "type": "function",
+      "name": "_write_pid",
+      "filePath": "src/hero/commands/watch.py",
+      "summary": "Function _write_pid",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/watch.py:_read_pid",
+      "type": "function",
+      "name": "_read_pid",
+      "filePath": "src/hero/commands/watch.py",
+      "summary": "Function _read_pid",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/watch.py:_stop_existing",
+      "type": "function",
+      "name": "_stop_existing",
+      "filePath": "src/hero/commands/watch.py",
+      "summary": "Function _stop_existing",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/watch.py:watch",
+      "type": "function",
+      "name": "watch",
+      "filePath": "src/hero/commands/watch.py",
+      "summary": "Function watch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/exchange/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/exchange/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/exchange/core.py",
+      "type": "file",
+      "name": "core.py",
+      "filePath": "src/hero/exchange/core.py",
+      "summary": "File: core.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/exchange/core.py:ExchangeLayer",
+      "type": "class",
+      "name": "ExchangeLayer",
+      "filePath": "src/hero/exchange/core.py",
+      "summary": "Class ExchangeLayer",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/exchange/lock.py",
+      "type": "file",
+      "name": "lock.py",
+      "filePath": "src/hero/exchange/lock.py",
+      "summary": "File: lock.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/lock.py:acquire_lock",
+      "type": "function",
+      "name": "acquire_lock",
+      "filePath": "src/hero/exchange/lock.py",
+      "summary": "Function acquire_lock",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/lock.py:release_lock",
+      "type": "function",
+      "name": "release_lock",
+      "filePath": "src/hero/exchange/lock.py",
+      "summary": "Function release_lock",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/lock.py:is_locked",
+      "type": "function",
+      "name": "is_locked",
+      "filePath": "src/hero/exchange/lock.py",
+      "summary": "Function is_locked",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/exchange/message.py",
+      "type": "file",
+      "name": "message.py",
+      "filePath": "src/hero/exchange/message.py",
+      "summary": "File: message.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/message.py:get_msg_dir",
+      "type": "function",
+      "name": "get_msg_dir",
+      "filePath": "src/hero/exchange/message.py",
+      "summary": "Function get_msg_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/message.py:msg_file_path",
+      "type": "function",
+      "name": "msg_file_path",
+      "filePath": "src/hero/exchange/message.py",
+      "summary": "Function msg_file_path",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/message.py:iter_messages",
+      "type": "function",
+      "name": "iter_messages",
+      "filePath": "src/hero/exchange/message.py",
+      "summary": "Function iter_messages",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/exchange/message.py:MailMessage",
+      "type": "class",
+      "name": "MailMessage",
+      "filePath": "src/hero/exchange/message.py",
+      "summary": "Class MailMessage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/exchange/pipe.py",
+      "type": "file",
+      "name": "pipe.py",
+      "filePath": "src/hero/exchange/pipe.py",
+      "summary": "File: pipe.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/exchange/pipe.py:ResultPipe",
+      "type": "class",
+      "name": "ResultPipe",
+      "filePath": "src/hero/exchange/pipe.py",
+      "summary": "Class ResultPipe",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/exchange/reliability.py",
+      "type": "file",
+      "name": "reliability.py",
+      "filePath": "src/hero/exchange/reliability.py",
+      "summary": "File: reliability.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/reliability.py:check_ttl_and_auto_expire",
+      "type": "function",
+      "name": "check_ttl_and_auto_expire",
+      "filePath": "src/hero/exchange/reliability.py",
+      "summary": "Function check_ttl_and_auto_expire",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/reliability.py:handle_failed_delivery",
+      "type": "function",
+      "name": "handle_failed_delivery",
+      "filePath": "src/hero/exchange/reliability.py",
+      "summary": "Function handle_failed_delivery",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/exchange/reliability.py:purge_old",
+      "type": "function",
+      "name": "purge_old",
+      "filePath": "src/hero/exchange/reliability.py",
+      "summary": "Function purge_old",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/exchange/review.py",
+      "type": "file",
+      "name": "review.py",
+      "filePath": "src/hero/exchange/review.py",
+      "summary": "File: review.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/exchange/review.py:Review",
+      "type": "class",
+      "name": "Review",
+      "filePath": "src/hero/exchange/review.py",
+      "summary": "Class Review",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/exchange/task_list.py",
+      "type": "file",
+      "name": "task_list.py",
+      "filePath": "src/hero/exchange/task_list.py",
+      "summary": "File: task_list.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/exchange/task_list.py:Assignment",
+      "type": "class",
+      "name": "Assignment",
+      "filePath": "src/hero/exchange/task_list.py",
+      "summary": "Class Assignment",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/exchange/task_list.py:TaskList",
+      "type": "class",
+      "name": "TaskList",
+      "filePath": "src/hero/exchange/task_list.py",
+      "summary": "Class TaskList",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/logging/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/logging/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/logging/__init__.py:get_logger",
+      "type": "function",
+      "name": "get_logger",
+      "filePath": "src/hero/logging/__init__.py",
+      "summary": "Function get_logger",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/logging/handler.py",
+      "type": "file",
+      "name": "handler.py",
+      "filePath": "src/hero/logging/handler.py",
+      "summary": "File: handler.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/logging/handler.py:_load_level",
+      "type": "function",
+      "name": "_load_level",
+      "filePath": "src/hero/logging/handler.py",
+      "summary": "Function _load_level",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/logging/handler.py:_get_level",
+      "type": "function",
+      "name": "_get_level",
+      "filePath": "src/hero/logging/handler.py",
+      "summary": "Function _get_level",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/logging/handler.py:_ensure_log_dir",
+      "type": "function",
+      "name": "_ensure_log_dir",
+      "filePath": "src/hero/logging/handler.py",
+      "summary": "Function _ensure_log_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/logging/handler.py:_log_file",
+      "type": "function",
+      "name": "_log_file",
+      "filePath": "src/hero/logging/handler.py",
+      "summary": "Function _log_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/logging/handler.py:_rotate_logs",
+      "type": "function",
+      "name": "_rotate_logs",
+      "filePath": "src/hero/logging/handler.py",
+      "summary": "Function _rotate_logs",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/logging/handler.py:Logger",
+      "type": "class",
+      "name": "Logger",
+      "filePath": "src/hero/logging/handler.py",
+      "summary": "Class Logger",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/qa/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/qa/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/qa/gate.py",
+      "type": "file",
+      "name": "gate.py",
+      "filePath": "src/hero/qa/gate.py",
+      "summary": "File: gate.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/qa/gate.py:QAResult",
+      "type": "class",
+      "name": "QAResult",
+      "filePath": "src/hero/qa/gate.py",
+      "summary": "Class QAResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/qa/gate.py:QAGate",
+      "type": "class",
+      "name": "QAGate",
+      "filePath": "src/hero/qa/gate.py",
+      "summary": "Class QAGate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/qa/tdd_gate.py",
+      "type": "file",
+      "name": "tdd_gate.py",
+      "filePath": "src/hero/qa/tdd_gate.py",
+      "summary": "File: tdd_gate.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/qa/tdd_gate.py:_make_class_name",
+      "type": "function",
+      "name": "_make_class_name",
+      "filePath": "src/hero/qa/tdd_gate.py",
+      "summary": "Function _make_class_name",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/qa/tdd_gate.py:_make_method_name",
+      "type": "function",
+      "name": "_make_method_name",
+      "filePath": "src/hero/qa/tdd_gate.py",
+      "summary": "Function _make_method_name",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/qa/tdd_gate.py:TDDResult",
+      "type": "class",
+      "name": "TDDResult",
+      "filePath": "src/hero/qa/tdd_gate.py",
+      "summary": "Class TDDResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/qa/tdd_gate.py:TDDGate",
+      "type": "class",
+      "name": "TDDGate",
+      "filePath": "src/hero/qa/tdd_gate.py",
+      "summary": "Class TDDGate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/reliability/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/reliability/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/reliability/dlq.py",
+      "type": "file",
+      "name": "dlq.py",
+      "filePath": "src/hero/reliability/dlq.py",
+      "summary": "File: dlq.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/dlq.py:_ensure_dlq_dir",
+      "type": "function",
+      "name": "_ensure_dlq_dir",
+      "filePath": "src/hero/reliability/dlq.py",
+      "summary": "Function _ensure_dlq_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/dlq.py:_dlq_path",
+      "type": "function",
+      "name": "_dlq_path",
+      "filePath": "src/hero/reliability/dlq.py",
+      "summary": "Function _dlq_path",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/dlq.py:send_to_dlq",
+      "type": "function",
+      "name": "send_to_dlq",
+      "filePath": "src/hero/reliability/dlq.py",
+      "summary": "Function send_to_dlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/dlq.py:list_dlq",
+      "type": "function",
+      "name": "list_dlq",
+      "filePath": "src/hero/reliability/dlq.py",
+      "summary": "Function list_dlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/dlq.py:retry_from_dlq",
+      "type": "function",
+      "name": "retry_from_dlq",
+      "filePath": "src/hero/reliability/dlq.py",
+      "summary": "Function retry_from_dlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/dlq.py:clear_dlq",
+      "type": "function",
+      "name": "clear_dlq",
+      "filePath": "src/hero/reliability/dlq.py",
+      "summary": "Function clear_dlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/commands/dlq.py",
+      "target": "function:src/hero/commands/dlq.py:dlq",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dlq.py",
+      "target": "function:src/hero/commands/dlq.py:list_cmd",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dlq.py",
+      "target": "function:src/hero/commands/dlq.py:retry_cmd",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dlq.py",
+      "target": "function:src/hero/commands/dlq.py:clear_cmd",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:exchange",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:send",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:broadcast",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:listen",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:_print_inbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:mark_read",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:reply",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:roster",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:purge",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:task_post",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:task_list_cmd",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:task_claim",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:task_done",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:task_fail",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:pipe",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:pipe_push",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:pipe_pull",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:pipe_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:review",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:review_request",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:review_respond",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:review_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:assign",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:assign_write",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/exchange.py",
+      "target": "function:src/hero/commands/exchange.py:assign_read",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/watch.py",
+      "target": "function:src/hero/commands/watch.py:_write_pid",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/watch.py",
+      "target": "function:src/hero/commands/watch.py:_read_pid",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/watch.py",
+      "target": "function:src/hero/commands/watch.py:_stop_existing",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/watch.py",
+      "target": "function:src/hero/commands/watch.py:watch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/core.py",
+      "target": "class:src/hero/exchange/core.py:ExchangeLayer",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/lock.py",
+      "target": "function:src/hero/exchange/lock.py:acquire_lock",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/lock.py",
+      "target": "function:src/hero/exchange/lock.py:release_lock",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/lock.py",
+      "target": "function:src/hero/exchange/lock.py:is_locked",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/message.py",
+      "target": "function:src/hero/exchange/message.py:get_msg_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/message.py",
+      "target": "function:src/hero/exchange/message.py:msg_file_path",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/message.py",
+      "target": "function:src/hero/exchange/message.py:iter_messages",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/message.py",
+      "target": "class:src/hero/exchange/message.py:MailMessage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/pipe.py",
+      "target": "class:src/hero/exchange/pipe.py:ResultPipe",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/reliability.py",
+      "target": "function:src/hero/exchange/reliability.py:check_ttl_and_auto_expire",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/reliability.py",
+      "target": "function:src/hero/exchange/reliability.py:handle_failed_delivery",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/reliability.py",
+      "target": "function:src/hero/exchange/reliability.py:purge_old",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/review.py",
+      "target": "class:src/hero/exchange/review.py:Review",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/task_list.py",
+      "target": "class:src/hero/exchange/task_list.py:Assignment",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/exchange/task_list.py",
+      "target": "class:src/hero/exchange/task_list.py:TaskList",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/logging/__init__.py",
+      "target": "function:src/hero/logging/__init__.py:get_logger",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/logging/handler.py",
+      "target": "function:src/hero/logging/handler.py:_load_level",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/logging/handler.py",
+      "target": "function:src/hero/logging/handler.py:_get_level",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/logging/handler.py",
+      "target": "function:src/hero/logging/handler.py:_ensure_log_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/logging/handler.py",
+      "target": "function:src/hero/logging/handler.py:_log_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/logging/handler.py",
+      "target": "function:src/hero/logging/handler.py:_rotate_logs",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/logging/handler.py",
+      "target": "class:src/hero/logging/handler.py:Logger",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/qa/gate.py",
+      "target": "class:src/hero/qa/gate.py:QAResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/qa/gate.py",
+      "target": "class:src/hero/qa/gate.py:QAGate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/qa/tdd_gate.py",
+      "target": "function:src/hero/qa/tdd_gate.py:_make_class_name",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/qa/tdd_gate.py",
+      "target": "function:src/hero/qa/tdd_gate.py:_make_method_name",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/qa/tdd_gate.py",
+      "target": "class:src/hero/qa/tdd_gate.py:TDDResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/qa/tdd_gate.py",
+      "target": "class:src/hero/qa/tdd_gate.py:TDDGate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/dlq.py",
+      "target": "function:src/hero/reliability/dlq.py:_ensure_dlq_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/dlq.py",
+      "target": "function:src/hero/reliability/dlq.py:_dlq_path",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/dlq.py",
+      "target": "function:src/hero/reliability/dlq.py:send_to_dlq",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/dlq.py",
+      "target": "function:src/hero/reliability/dlq.py:list_dlq",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/dlq.py",
+      "target": "function:src/hero/reliability/dlq.py:retry_from_dlq",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/dlq.py",
+      "target": "function:src/hero/reliability/dlq.py:clear_dlq",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

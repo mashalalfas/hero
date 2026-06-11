@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/web/static/css/animations.css",
+      "type": "file",
+      "name": "animations.css",
+      "filePath": "src/hero/web/static/css/animations.css",
+      "summary": "File: animations.css",
+      "tags": [
+        "css",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/css/base.css",
+      "type": "file",
+      "name": "base.css",
+      "filePath": "src/hero/web/static/css/base.css",
+      "summary": "File: base.css",
+      "tags": [
+        "css",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/css/components.css",
+      "type": "file",
+      "name": "components.css",
+      "filePath": "src/hero/web/static/css/components.css",
+      "summary": "File: components.css",
+      "tags": [
+        "css",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/css/layout.css",
+      "type": "file",
+      "name": "layout.css",
+      "filePath": "src/hero/web/static/css/layout.css",
+      "summary": "File: layout.css",
+      "tags": [
+        "css",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/css/tokens.css",
+      "type": "file",
+      "name": "tokens.css",
+      "filePath": "src/hero/web/static/css/tokens.css",
+      "summary": "File: tokens.css",
+      "tags": [
+        "css",
+        "markup"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": []
+}

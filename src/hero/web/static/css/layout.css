@@ -1,0 +1,55 @@
+/* HERO Viewport — layout.css */
+/* Simple responsive grid — Notion-style */
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+}
+
+/* Stats bar: horizontal flex */
+.stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Sandbox card grid: auto-fill, responsive */
+.sandbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-4);
+  padding-bottom: var(--space-6);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .container { padding: 0 var(--space-3); }
+  .header { padding: 0 var(--space-3); }
+  .sandbox-grid { grid-template-columns: 1fr; gap: var(--space-3); }
+  .stats-bar { flex-direction: column; }
+  .stat-card { min-width: 100%; }
+  .card { padding: var(--space-4); }
+  .card-title { font-size: var(--text-lg); }
+  .badge { font-size: 12px; padding: 4px 12px; }
+}

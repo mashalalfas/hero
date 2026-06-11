@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "document:src/hero/prompts/defaults/roles/architect.md",
+      "type": "document",
+      "name": "architect.md",
+      "filePath": "src/hero/prompts/defaults/roles/architect.md",
+      "summary": "Document: architect.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/roles/archivist.md",
+      "type": "document",
+      "name": "archivist.md",
+      "filePath": "src/hero/prompts/defaults/roles/archivist.md",
+      "summary": "Document: archivist.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/prompts/defaults/roles/archivist.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "src/hero/prompts/defaults/roles/archivist.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/roles/communicator.md",
+      "type": "document",
+      "name": "communicator.md",
+      "filePath": "src/hero/prompts/defaults/roles/communicator.md",
+      "summary": "Document: communicator.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/roles/lead.md",
+      "type": "document",
+      "name": "lead.md",
+      "filePath": "src/hero/prompts/defaults/roles/lead.md",
+      "summary": "Document: lead.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/roles/researcher.md",
+      "type": "document",
+      "name": "researcher.md",
+      "filePath": "src/hero/prompts/defaults/roles/researcher.md",
+      "summary": "Document: researcher.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/roles/soldier.md",
+      "type": "document",
+      "name": "soldier.md",
+      "filePath": "src/hero/prompts/defaults/roles/soldier.md",
+      "summary": "Document: soldier.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/roles/utility.md",
+      "type": "document",
+      "name": "utility.md",
+      "filePath": "src/hero/prompts/defaults/roles/utility.md",
+      "summary": "Document: utility.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": []
+}

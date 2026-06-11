@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": "file:hero-teach/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "hero-teach/index.html",
+      "summary": "File: index.html",
+      "tags": [
+        "html",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:hero-teach/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "hero-teach/package.json",
+      "summary": "Config: package.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/package.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "hero-teach/package.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:hero-teach/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "hero-teach/tsconfig.json",
+      "summary": "Config: tsconfig.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:hero-teach/tsconfig.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "hero-teach/tsconfig.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,7262 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/hero/commands/viewport.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "viewport",
+          "startLine": 43,
+          "endLine": 66,
+          "params": [
+            "once",
+            "sandbox",
+            "mode"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "viewport",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "viewport",
+          "callee": "uvicorn.run",
+          "lineNumber": 62
+        },
+        {
+          "caller": "viewport",
+          "callee": "run_tree",
+          "lineNumber": 64
+        },
+        {
+          "caller": "viewport",
+          "callee": "run",
+          "lineNumber": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/state/cache.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 293,
+      "nonEmptyLines": 242,
+      "classes": [
+        {
+          "name": "CacheEntry",
+          "startLine": 35,
+          "endLine": 54,
+          "methods": [
+            "is_valid",
+            "refresh"
+          ],
+          "properties": [
+            "data",
+            "ttl",
+            "created_at"
+          ]
+        },
+        {
+          "name": "StateCache",
+          "startLine": 61,
+          "endLine": 285,
+          "methods": [
+            "__init__",
+            "_touch",
+            "_evict_lru",
+            "_purge_expired",
+            "get",
+            "set",
+            "invalidate",
+            "invalidate_stale",
+            "batch_load",
+            "size",
+            "stats",
+            "clear_stats",
+            "__len__",
+            "__contains__",
+            "__repr__"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CacheEntry",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "StateCache",
+          "line": 61,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "is_valid",
+          "callee": "time.time",
+          "lineNumber": 50
+        },
+        {
+          "caller": "refresh",
+          "callee": "time.time",
+          "lineNumber": 54
+        },
+        {
+          "caller": "__init__",
+          "callee": "OrderedDict",
+          "lineNumber": 77
+        },
+        {
+          "caller": "__init__",
+          "callee": "threading.Lock",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_touch",
+          "callee": "self._store.move_to_end",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_evict_lru",
+          "callee": "len",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_evict_lru",
+          "callee": "self._store.popitem",
+          "lineNumber": 94
+        },
+        {
+          "caller": "_purge_expired",
+          "callee": "time.time",
+          "lineNumber": 99
+        },
+        {
+          "caller": "_purge_expired",
+          "callee": "self._store.items",
+          "lineNumber": 100
+        },
+        {
+          "caller": "get",
+          "callee": "self._store.get",
+          "lineNumber": 114
+        },
+        {
+          "caller": "get",
+          "callee": "self._touch",
+          "lineNumber": 122
+        },
+        {
+          "caller": "set",
+          "callee": "self._purge_expired",
+          "lineNumber": 141
+        },
+        {
+          "caller": "set",
+          "callee": "self._evict_lru",
+          "lineNumber": 142
+        },
+        {
+          "caller": "set",
+          "callee": "self._store.move_to_end",
+          "lineNumber": 144
+        },
+        {
+          "caller": "set",
+          "callee": "CacheEntry",
+          "lineNumber": 145
+        },
+        {
+          "caller": "invalidate",
+          "callee": "self._store.clear",
+          "lineNumber": 157
+        },
+        {
+          "caller": "invalidate",
+          "callee": "self._store.pop",
+          "lineNumber": 159
+        },
+        {
+          "caller": "invalidate_stale",
+          "callee": "time.time",
+          "lineNumber": 164
+        },
+        {
+          "caller": "invalidate_stale",
+          "callee": "self._store.items",
+          "lineNumber": 165
+        },
+        {
+          "caller": "invalidate_stale",
+          "callee": "len",
+          "lineNumber": 168
+        },
+        {
+          "caller": "batch_load",
+          "callee": "self._purge_expired",
+          "lineNumber": 201
+        },
+        {
+          "caller": "batch_load",
+          "callee": "self._store.get",
+          "lineNumber": 205
+        },
+        {
+          "caller": "batch_load",
+          "callee": "self._touch",
+          "lineNumber": 207
+        },
+        {
+          "caller": "batch_load",
+          "callee": "to_load.append",
+          "lineNumber": 214
+        },
+        {
+          "caller": "batch_load",
+          "callee": "SandboxState",
+          "lineNumber": 223
+        },
+        {
+          "caller": "batch_load",
+          "callee": "SandboxState",
+          "lineNumber": 225
+        },
+        {
+          "caller": "batch_load",
+          "callee": "ss.load",
+          "lineNumber": 226
+        },
+        {
+          "caller": "batch_load",
+          "callee": "self._evict_lru",
+          "lineNumber": 228
+        },
+        {
+          "caller": "batch_load",
+          "callee": "CacheEntry",
+          "lineNumber": 229
+        },
+        {
+          "caller": "size",
+          "callee": "self._purge_expired",
+          "lineNumber": 242
+        },
+        {
+          "caller": "size",
+          "callee": "len",
+          "lineNumber": 243
+        },
+        {
+          "caller": "stats",
+          "callee": "self._purge_expired",
+          "lineNumber": 248
+        },
+        {
+          "caller": "stats",
+          "callee": "len",
+          "lineNumber": 252
+        },
+        {
+          "caller": "stats",
+          "callee": "len",
+          "lineNumber": 253
+        },
+        {
+          "caller": "stats",
+          "callee": "round",
+          "lineNumber": 257
+        },
+        {
+          "caller": "stats",
+          "callee": "list",
+          "lineNumber": 260
+        },
+        {
+          "caller": "stats",
+          "callee": "self._store.keys",
+          "lineNumber": 260
+        },
+        {
+          "caller": "__contains__",
+          "callee": "self._store.get",
+          "lineNumber": 275
+        },
+        {
+          "caller": "__contains__",
+          "callee": "bool",
+          "lineNumber": 276
+        },
+        {
+          "caller": "__repr__",
+          "callee": "self.stats",
+          "lineNumber": 279
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "src/hero/viewport/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/viewport/delta.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 178,
+      "nonEmptyLines": 138,
+      "functions": [
+        {
+          "name": "capture_previous",
+          "startLine": 43,
+          "endLine": 53,
+          "params": [
+            "army"
+          ]
+        },
+        {
+          "name": "compute_delta",
+          "startLine": 56,
+          "endLine": 102,
+          "params": [
+            "current",
+            "previous"
+          ]
+        },
+        {
+          "name": "_copy_sandbox",
+          "startLine": 105,
+          "endLine": 119,
+          "params": [
+            "sb"
+          ]
+        },
+        {
+          "name": "_render_delta_banner",
+          "startLine": 125,
+          "endLine": 178,
+          "params": [
+            "delta"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SessionDelta",
+          "startLine": 20,
+          "endLine": 35,
+          "methods": [
+            "is_empty"
+          ],
+          "properties": [
+            "new_sandboxes",
+            "finished_sandboxes",
+            "errored_count",
+            "budget_delta",
+            "time_elapsed"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SessionDelta",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "capture_previous",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "compute_delta",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "_copy_sandbox",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "_render_delta_banner",
+          "line": 125,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "capture_previous",
+          "callee": "ArmyMetrics",
+          "lineNumber": 46
+        },
+        {
+          "caller": "capture_previous",
+          "callee": "_copy_sandbox",
+          "lineNumber": 52
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "SessionDelta",
+          "lineNumber": 69
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "SessionDelta",
+          "lineNumber": 71
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "sorted",
+          "lineNumber": 77
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "sorted",
+          "lineNumber": 78
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "sum",
+          "lineNumber": 83
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "curr_status.get",
+          "lineNumber": 86
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "prev_status.get",
+          "lineNumber": 87
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "int",
+          "lineNumber": 93
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "round",
+          "lineNumber": 93
+        },
+        {
+          "caller": "compute_delta",
+          "callee": "datetime.utcnow",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_copy_sandbox",
+          "callee": "SandboxMetrics",
+          "lineNumber": 107
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "delta.is_empty",
+          "lineNumber": 133
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "\", \".join",
+          "lineNumber": 139
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "len",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "len",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 144
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "\", \".join",
+          "lineNumber": 147
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "len",
+          "lineNumber": 148
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "len",
+          "lineNumber": 149
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 150
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 152
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 155
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 156
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 157
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "str",
+          "lineNumber": 157
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 161
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 162
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "parts.append",
+          "lineNumber": 164
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "Text",
+          "lineNumber": 166
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "enumerate",
+          "lineNumber": 167
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "text.append",
+          "lineNumber": 169
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "text.append",
+          "lineNumber": 170
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "Panel",
+          "lineNumber": 174
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/hero/viewport/intel.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 604,
+      "nonEmptyLines": 521,
+      "functions": [
+        {
+          "name": "detect_bottlenecks",
+          "startLine": 59,
+          "endLine": 208,
+          "params": [
+            "army",
+            "dispatch_data"
+          ]
+        },
+        {
+          "name": "compute_budget_projections",
+          "startLine": 213,
+          "endLine": 293,
+          "params": [
+            "army",
+            "prev_army"
+          ]
+        },
+        {
+          "name": "generate_actions",
+          "startLine": 298,
+          "endLine": 391,
+          "params": [
+            "bottlenecks",
+            "projections"
+          ]
+        },
+        {
+          "name": "_bottleneck_action_type",
+          "startLine": 394,
+          "endLine": 403,
+          "params": [
+            "kind"
+          ]
+        },
+        {
+          "name": "_git_summary",
+          "startLine": 446,
+          "endLine": 472,
+          "params": [
+            "workdir"
+          ]
+        },
+        {
+          "name": "collect_sandbox_detail",
+          "startLine": 475,
+          "endLine": 604,
+          "params": [
+            "sandbox_name",
+            "army",
+            "dispatch_map"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Bottleneck",
+          "startLine": 24,
+          "endLine": 32,
+          "methods": [],
+          "properties": [
+            "sandbox_name",
+            "kind",
+            "severity",
+            "detail",
+            "impacted_sandboxes",
+            "suggestion"
+          ]
+        },
+        {
+          "name": "BudgetProjection",
+          "startLine": 36,
+          "endLine": 45,
+          "methods": [],
+          "properties": [
+            "sandbox_name",
+            "tokens_used",
+            "tokens_budget",
+            "usage_pct",
+            "burn_rate",
+            "eta_minutes",
+            "status"
+          ]
+        },
+        {
+          "name": "Action",
+          "startLine": 49,
+          "endLine": 56,
+          "methods": [],
+          "properties": [
+            "priority",
+            "sandbox",
+            "action_type",
+            "description",
+            "suggestion"
+          ]
+        },
+        {
+          "name": "SandboxDetail",
+          "startLine": 409,
+          "endLine": 441,
+          "methods": [],
+          "properties": [
+            "name",
+            "status",
+            "model",
+            "current_task",
+            "workdir",
+            "tokens_used",
+            "tokens_budget",
+            "usage_pct",
+            "compactions_used",
+            "tool_calls",
+            "subagent_count",
+            "no_progress_counter",
+            "pipeline_task",
+            "pipeline_steps",
+            "pipeline_created",
+            "dispatch_tasks",
+            "errors",
+            "pending_tasks",
+            "known_issues",
+            "last_compacted"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Bottleneck",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "BudgetProjection",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "Action",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "detect_bottlenecks",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "compute_budget_projections",
+          "line": 213,
+          "isDefault": false
+        },
+        {
+          "name": "generate_actions",
+          "line": 298,
+          "isDefault": false
+        },
+        {
+          "name": "_bottleneck_action_type",
+          "line": 394,
+          "isDefault": false
+        },
+        {
+          "name": "SandboxDetail",
+          "line": 408,
+          "isDefault": false
+        },
+        {
+          "name": "_git_summary",
+          "line": 446,
+          "isDefault": false
+        },
+        {
+          "name": "collect_sandbox_detail",
+          "line": 475,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "time.time",
+          "lineNumber": 81
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "dispatch_data.get",
+          "lineNumber": 90
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "bottlenecks.append",
+          "lineNumber": 97
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "Bottleneck",
+          "lineNumber": 97
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "dispatch.get",
+          "lineNumber": 115
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "float",
+          "lineNumber": 118
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "bottlenecks.append",
+          "lineNumber": 126
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "Bottleneck",
+          "lineNumber": 126
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "dispatch.get",
+          "lineNumber": 143
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "bottlenecks.append",
+          "lineNumber": 145
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "Bottleneck",
+          "lineNumber": 145
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "cb_quarantined",
+          "lineNumber": 162
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "bottlenecks.append",
+          "lineNumber": 163
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "Bottleneck",
+          "lineNumber": 163
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "dispatch_data.get(sb.name, {}).get",
+          "lineNumber": 184
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "dispatch_data.get",
+          "lineNumber": 184
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "model_counts.setdefault(model, []).append",
+          "lineNumber": 186
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "model_counts.setdefault",
+          "lineNumber": 186
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "model_counts.items",
+          "lineNumber": 188
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "len",
+          "lineNumber": 189
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "max",
+          "lineNumber": 189
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "len",
+          "lineNumber": 189
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "bottlenecks.append",
+          "lineNumber": 190
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "Bottleneck",
+          "lineNumber": 190
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "len",
+          "lineNumber": 195
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "len",
+          "lineNumber": 195
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "bottlenecks.sort",
+          "lineNumber": 207
+        },
+        {
+          "caller": "detect_bottlenecks",
+          "callee": "severity_order.get",
+          "lineNumber": 207
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "time.time",
+          "lineNumber": 234
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "next",
+          "lineNumber": 253
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "max",
+          "lineNumber": 264
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "max",
+          "lineNumber": 268
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "max",
+          "lineNumber": 271
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "int",
+          "lineNumber": 271
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "round",
+          "lineNumber": 271
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "projections.append",
+          "lineNumber": 283
+        },
+        {
+          "caller": "compute_budget_projections",
+          "callee": "BudgetProjection",
+          "lineNumber": 283
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "set",
+          "lineNumber": 315
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "actions.append",
+          "lineNumber": 320
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "Action",
+          "lineNumber": 320
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "_bottleneck_action_type",
+          "lineNumber": 323
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "b.severity.upper",
+          "lineNumber": 324
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "high_priority_sbs.add",
+          "lineNumber": 328
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "actions.append",
+          "lineNumber": 330
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "Action",
+          "lineNumber": 330
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "b.severity.upper",
+          "lineNumber": 334
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "actions.append",
+          "lineNumber": 338
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "Action",
+          "lineNumber": 338
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "b.severity.upper",
+          "lineNumber": 342
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "actions.append",
+          "lineNumber": 346
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "Action",
+          "lineNumber": 346
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "b.severity.upper",
+          "lineNumber": 350
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "actions.append",
+          "lineNumber": 357
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "Action",
+          "lineNumber": 357
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "int",
+          "lineNumber": 367
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "high_priority_sbs.add",
+          "lineNumber": 371
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "actions.append",
+          "lineNumber": 373
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "Action",
+          "lineNumber": 373
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "actions.sort",
+          "lineNumber": 390
+        },
+        {
+          "caller": "generate_actions",
+          "callee": "priority_order.get",
+          "lineNumber": 390
+        },
+        {
+          "caller": "_bottleneck_action_type",
+          "callee": "mapping.get",
+          "lineNumber": 403
+        },
+        {
+          "caller": "_git_summary",
+          "callee": "Path(workdir).exists",
+          "lineNumber": 448
+        },
+        {
+          "caller": "_git_summary",
+          "callee": "Path",
+          "lineNumber": 448
+        },
+        {
+          "caller": "_git_summary",
+          "callee": "subprocess.run(\n            [\"git\", \"-C\", workdir, \"branch\", \"--show-current\"],\n            capture_output=True, text=True, timeout=5\n        ).stdout.strip",
+          "lineNumber": 452
+        },
+        {
+          "caller": "_git_summary",
+          "callee": "subprocess.run",
+          "lineNumber": 452
+        },
+        {
+          "caller": "_git_summary",
+          "callee": "subprocess.run(\n                [\"git\", \"-C\", workdir, \"rev-parse\", \"--short\", \"HEAD\"],\n                capture_output=True, text=True, timeout=5\n            ).stdout.strip",
+          "lineNumber": 458
+        },
+        {
+          "caller": "_git_summary",
+          "callee": "subprocess.run",
+          "lineNumber": 458
+        },
+        {
+          "caller": "_git_summary",
+          "callee": "subprocess.run(\n            [\"git\", \"-C\", workdir, \"status\", \"--porcelain\"],\n            capture_output=True, text=True, timeout=5\n        ).stdout.strip",
+          "lineNumber": 463
+        },
+        {
+          "caller": "_git_summary",
+          "callee": "subprocess.run",
+          "lineNumber": 463
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "next",
+          "lineNumber": 506
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "SandboxState",
+          "lineNumber": 510
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "ss.load",
+          "lineNumber": 511
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "state_data.get",
+          "lineNumber": 513
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "budget.get",
+          "lineNumber": 514
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "budget.get",
+          "lineNumber": 515
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "budget.get",
+          "lineNumber": 516
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "state_data.get",
+          "lineNumber": 518
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "katana.get",
+          "lineNumber": 519
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "katana.get",
+          "lineNumber": 520
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "_load_dispatch_files",
+          "lineNumber": 525
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dispatch_map.items",
+          "lineNumber": 532
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 535
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 536
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 537
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 538
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 539
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 539
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 540
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 541
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 542
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 543
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dispatch_tasks.append",
+          "lineNumber": 545
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 548
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 549
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 550
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 553
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 554
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "errors.append",
+          "lineNumber": 555
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dd.get",
+          "lineNumber": 557
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "str",
+          "lineNumber": 558
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "dispatch_tasks[0].get",
+          "lineNumber": 562
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "_load_pipeline_manifest",
+          "lineNumber": 566
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "manifest.get",
+          "lineNumber": 571
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "manifest.get",
+          "lineNumber": 572
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "manifest.get",
+          "lineNumber": 573
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "_git_summary",
+          "lineNumber": 576
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "max",
+          "lineNumber": 581
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "SandboxDetail",
+          "lineNumber": 583
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "state_data.get",
+          "lineNumber": 585
+        },
+        {
+          "caller": "collect_sandbox_detail",
+          "callee": "state_data.get",
+          "lineNumber": 588
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 10,
+        "functionCount": 6,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "src/hero/viewport/metrics.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 340,
+      "nonEmptyLines": 292,
+      "functions": [
+        {
+          "name": "_parse_viewport_toon",
+          "startLine": 288,
+          "endLine": 316,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "collect",
+          "startLine": 319,
+          "endLine": 340,
+          "params": [
+            "sandbox_filter"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SandboxMetrics",
+          "startLine": 26,
+          "endLine": 76,
+          "methods": [
+            "usage_ratio",
+            "health_color",
+            "status_color"
+          ],
+          "properties": [
+            "name",
+            "tokens_used",
+            "tokens_remaining",
+            "tokens_budget",
+            "tool_calls",
+            "subagent_count",
+            "status",
+            "progress",
+            "current_task",
+            "model",
+            "last_updated",
+            "no_progress_counter",
+            "last_state_override"
+          ]
+        },
+        {
+          "name": "ArmyMetrics",
+          "startLine": 80,
+          "endLine": 109,
+          "methods": [
+            "usage_ratio",
+            "army_health"
+          ],
+          "properties": [
+            "total_tokens_used",
+            "total_tokens_budget",
+            "total_tool_calls",
+            "active_subagents",
+            "idle_subagents",
+            "sandboxes",
+            "previous_army"
+          ]
+        },
+        {
+          "name": "MetricsCollector",
+          "startLine": 112,
+          "endLine": 285,
+          "methods": [
+            "__init__",
+            "collect",
+            "_read_dispatch_files"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SandboxMetrics",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "ArmyMetrics",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "MetricsCollector",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "_parse_viewport_toon",
+          "line": 288,
+          "isDefault": false
+        },
+        {
+          "name": "collect",
+          "line": 319,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "status_color",
+          "callee": "self.status.lower",
+          "lineNumber": 63
+        },
+        {
+          "caller": "army_health",
+          "callee": "sum",
+          "lineNumber": 103
+        },
+        {
+          "caller": "army_health",
+          "callee": "sum",
+          "lineNumber": 104
+        },
+        {
+          "caller": "collect",
+          "callee": "IndexState",
+          "lineNumber": 140
+        },
+        {
+          "caller": "collect",
+          "callee": "index.list_sandboxes",
+          "lineNumber": 141
+        },
+        {
+          "caller": "collect",
+          "callee": "e.get",
+          "lineNumber": 142
+        },
+        {
+          "caller": "collect",
+          "callee": "SandboxState",
+          "lineNumber": 149
+        },
+        {
+          "caller": "collect",
+          "callee": "ss.load",
+          "lineNumber": 150
+        },
+        {
+          "caller": "collect",
+          "callee": "self._read_dispatch_files",
+          "lineNumber": 153
+        },
+        {
+          "caller": "collect",
+          "callee": "cache_states.get",
+          "lineNumber": 164
+        },
+        {
+          "caller": "collect",
+          "callee": "state.get",
+          "lineNumber": 165
+        },
+        {
+          "caller": "collect",
+          "callee": "budget.get",
+          "lineNumber": 166
+        },
+        {
+          "caller": "collect",
+          "callee": "budget.get",
+          "lineNumber": 167
+        },
+        {
+          "caller": "collect",
+          "callee": "budget.get",
+          "lineNumber": 168
+        },
+        {
+          "caller": "collect",
+          "callee": "sum_sandbox_usage",
+          "lineNumber": 171
+        },
+        {
+          "caller": "collect",
+          "callee": "max",
+          "lineNumber": 178
+        },
+        {
+          "caller": "collect",
+          "callee": "dispatch_map.get",
+          "lineNumber": 181
+        },
+        {
+          "caller": "collect",
+          "callee": "disp.get",
+          "lineNumber": 182
+        },
+        {
+          "caller": "collect",
+          "callee": "len",
+          "lineNumber": 184
+        },
+        {
+          "caller": "collect",
+          "callee": "disp.get",
+          "lineNumber": 184
+        },
+        {
+          "caller": "collect",
+          "callee": "min",
+          "lineNumber": 185
+        },
+        {
+          "caller": "collect",
+          "callee": "state.get",
+          "lineNumber": 188
+        },
+        {
+          "caller": "collect",
+          "callee": "min",
+          "lineNumber": 190
+        },
+        {
+          "caller": "collect",
+          "callee": "int",
+          "lineNumber": 190
+        },
+        {
+          "caller": "collect",
+          "callee": "SandboxMetrics",
+          "lineNumber": 192
+        },
+        {
+          "caller": "collect",
+          "callee": "max",
+          "lineNumber": 194
+        },
+        {
+          "caller": "collect",
+          "callee": "max",
+          "lineNumber": 195
+        },
+        {
+          "caller": "collect",
+          "callee": "disp.get",
+          "lineNumber": 197
+        },
+        {
+          "caller": "collect",
+          "callee": "disp.get",
+          "lineNumber": 198
+        },
+        {
+          "caller": "collect",
+          "callee": "disp.get",
+          "lineNumber": 200
+        },
+        {
+          "caller": "collect",
+          "callee": "disp.get",
+          "lineNumber": 201
+        },
+        {
+          "caller": "collect",
+          "callee": "datetime.utcnow",
+          "lineNumber": 202
+        },
+        {
+          "caller": "collect",
+          "callee": "self._prev_tool_calls.get",
+          "lineNumber": 207
+        },
+        {
+          "caller": "collect",
+          "callee": "self._no_progress_counters.get",
+          "lineNumber": 211
+        },
+        {
+          "caller": "collect",
+          "callee": "self._no_progress_counters.get",
+          "lineNumber": 214
+        },
+        {
+          "caller": "collect",
+          "callee": "states.compute_sandbox_state",
+          "lineNumber": 217
+        },
+        {
+          "caller": "collect",
+          "callee": "_load_pipeline_manifest",
+          "lineNumber": 235
+        },
+        {
+          "caller": "collect",
+          "callee": "manifest.get",
+          "lineNumber": 236
+        },
+        {
+          "caller": "collect",
+          "callee": "sandboxes.append",
+          "lineNumber": 242
+        },
+        {
+          "caller": "collect",
+          "callee": "ArmyMetrics",
+          "lineNumber": 252
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "DISPATCH_DIR.exists",
+          "lineNumber": 267
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "set",
+          "lineNumber": 269
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "sorted",
+          "lineNumber": 271
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "DISPATCH_DIR.glob",
+          "lineNumber": 271
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "seen.add",
+          "lineNumber": 275
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "_parse_viewport_toon",
+          "lineNumber": 278
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "f.read_text",
+          "lineNumber": 278
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "json.loads",
+          "lineNumber": 280
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "f.read_text",
+          "lineNumber": 280
+        },
+        {
+          "caller": "_read_dispatch_files",
+          "callee": "results.append",
+          "lineNumber": 282
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "content.strip().split",
+          "lineNumber": 292
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "content.strip",
+          "lineNumber": 292
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "line.rstrip",
+          "lineNumber": 293
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "re.match",
+          "lineNumber": 296
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "m.group",
+          "lineNumber": 298
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "m.group(2).strip",
+          "lineNumber": 298
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "m.group",
+          "lineNumber": 298
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "val.startswith",
+          "lineNumber": 299
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "val.endswith",
+          "lineNumber": 299
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "float",
+          "lineNumber": 310
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "int",
+          "lineNumber": 312
+        },
+        {
+          "caller": "collect",
+          "callee": "MetricsCollector",
+          "lineNumber": 331
+        },
+        {
+          "caller": "collect",
+          "callee": "IndexState",
+          "lineNumber": 334
+        },
+        {
+          "caller": "collect",
+          "callee": "index.list_sandboxes",
+          "lineNumber": 335
+        },
+        {
+          "caller": "collect",
+          "callee": "e.get",
+          "lineNumber": 336
+        },
+        {
+          "caller": "collect",
+          "callee": "sandbox_filter.lower",
+          "lineNumber": 338
+        },
+        {
+          "caller": "collect",
+          "callee": "n.lower",
+          "lineNumber": 338
+        },
+        {
+          "caller": "collect",
+          "callee": "collector.collect",
+          "lineNumber": 339
+        },
+        {
+          "caller": "collect",
+          "callee": "collector.collect",
+          "lineNumber": 340
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 5,
+        "functionCount": 2,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "src/hero/viewport/renderer.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 562,
+      "nonEmptyLines": 479,
+      "functions": [
+        {
+          "name": "_usage_bar",
+          "startLine": 28,
+          "endLine": 31,
+          "params": [
+            "ratio",
+            "width"
+          ]
+        },
+        {
+          "name": "_bar_color",
+          "startLine": 34,
+          "endLine": 39,
+          "params": [
+            "ratio"
+          ]
+        },
+        {
+          "name": "_status_badge",
+          "startLine": 42,
+          "endLine": 61,
+          "params": [
+            "status"
+          ]
+        },
+        {
+          "name": "_health_color",
+          "startLine": 64,
+          "endLine": 69,
+          "params": [
+            "ratio"
+          ]
+        },
+        {
+          "name": "_render_status_bar",
+          "startLine": 72,
+          "endLine": 102,
+          "params": [
+            "army",
+            "timestamp",
+            "error_count",
+            "frame"
+          ]
+        },
+        {
+          "name": "_render_header",
+          "startLine": 107,
+          "endLine": 131,
+          "params": [
+            "army",
+            "sparkline",
+            "burn_rate"
+          ]
+        },
+        {
+          "name": "_render_delta_banner",
+          "startLine": 134,
+          "endLine": 140,
+          "params": [
+            "delta"
+          ]
+        },
+        {
+          "name": "_render_sandboxes",
+          "startLine": 143,
+          "endLine": 181,
+          "params": [
+            "army"
+          ]
+        },
+        {
+          "name": "_render_footer",
+          "startLine": 184,
+          "endLine": 195,
+          "params": [
+            "show_delta_hint"
+          ]
+        },
+        {
+          "name": "build_layout",
+          "startLine": 200,
+          "endLine": 235,
+          "params": [
+            "army",
+            "delta"
+          ]
+        },
+        {
+          "name": "render_once",
+          "startLine": 240,
+          "endLine": 245,
+          "params": [
+            "sandbox_filter"
+          ]
+        },
+        {
+          "name": "render_live",
+          "startLine": 248,
+          "endLine": 304,
+          "params": [
+            "console",
+            "sandbox_filter"
+          ]
+        },
+        {
+          "name": "run",
+          "startLine": 309,
+          "endLine": 319,
+          "params": [
+            "once",
+            "sandbox"
+          ]
+        },
+        {
+          "name": "run_tree",
+          "startLine": 322,
+          "endLine": 562,
+          "params": [
+            "once",
+            "sandbox"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_usage_bar",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "_bar_color",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "_status_badge",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "_health_color",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "_render_status_bar",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "_render_header",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "_render_delta_banner",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "_render_sandboxes",
+          "line": 143,
+          "isDefault": false
+        },
+        {
+          "name": "_render_footer",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "build_layout",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "render_once",
+          "line": 240,
+          "isDefault": false
+        },
+        {
+          "name": "render_live",
+          "line": 248,
+          "isDefault": false
+        },
+        {
+          "name": "run",
+          "line": 309,
+          "isDefault": false
+        },
+        {
+          "name": "run_tree",
+          "line": 322,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_usage_bar",
+          "callee": "max",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_usage_bar",
+          "callee": "min",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_usage_bar",
+          "callee": "round",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_status_badge",
+          "callee": "status.lower",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_status_badge",
+          "callee": "palette.get",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_status_badge",
+          "callee": "Text",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "sum",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "len",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "parts.append",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "parts.append",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "parts.append",
+          "lineNumber": 88
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "parts.append",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "str",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "parts.append",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "parts.append",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "str",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "Text",
+          "lineNumber": 94
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "Panel",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_render_header",
+          "callee": "_usage_bar",
+          "lineNumber": 108
+        },
+        {
+          "caller": "_render_header",
+          "callee": "_bar_color",
+          "lineNumber": 109
+        },
+        {
+          "caller": "_render_header",
+          "callee": "Text",
+          "lineNumber": 112
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 113
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_render_header",
+          "callee": "int",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 119
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 121
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_render_header",
+          "callee": "header_text.append",
+          "lineNumber": 124
+        },
+        {
+          "caller": "_render_header",
+          "callee": "datetime.utcnow().strftime",
+          "lineNumber": 124
+        },
+        {
+          "caller": "_render_header",
+          "callee": "datetime.utcnow",
+          "lineNumber": 124
+        },
+        {
+          "caller": "_render_header",
+          "callee": "Panel",
+          "lineNumber": 126
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "delta.is_empty",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_render_delta_banner",
+          "callee": "_make_banner",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "Table",
+          "lineNumber": 144
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "table.add_column",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "table.add_column",
+          "lineNumber": 154
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "table.add_column",
+          "lineNumber": 155
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "table.add_column",
+          "lineNumber": 156
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "table.add_column",
+          "lineNumber": 157
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "_usage_bar",
+          "lineNumber": 164
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "_bar_color",
+          "lineNumber": 165
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "_status_badge",
+          "lineNumber": 166
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "table.add_row",
+          "lineNumber": 168
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "Text",
+          "lineNumber": 171
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "Text.assemble",
+          "lineNumber": 172
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "int",
+          "lineNumber": 172
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "str",
+          "lineNumber": 173
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "Panel",
+          "lineNumber": 176
+        },
+        {
+          "caller": "_render_sandboxes",
+          "callee": "Text",
+          "lineNumber": 178
+        },
+        {
+          "caller": "_render_footer",
+          "callee": "parts.append",
+          "lineNumber": 192
+        },
+        {
+          "caller": "_render_footer",
+          "callee": "parts.append",
+          "lineNumber": 193
+        },
+        {
+          "caller": "_render_footer",
+          "callee": "Text.assemble",
+          "lineNumber": 194
+        },
+        {
+          "caller": "_render_footer",
+          "callee": "Panel",
+          "lineNumber": 195
+        },
+        {
+          "caller": "build_layout",
+          "callee": "Layout",
+          "lineNumber": 206
+        },
+        {
+          "caller": "build_layout",
+          "callee": "delta.is_empty",
+          "lineNumber": 209
+        },
+        {
+          "caller": "build_layout",
+          "callee": "delta.is_empty",
+          "lineNumber": 212
+        },
+        {
+          "caller": "build_layout",
+          "callee": "min",
+          "lineNumber": 213
+        },
+        {
+          "caller": "build_layout",
+          "callee": "len",
+          "lineNumber": 213
+        },
+        {
+          "caller": "build_layout",
+          "callee": "layout.split_column",
+          "lineNumber": 217
+        },
+        {
+          "caller": "build_layout",
+          "callee": "Layout",
+          "lineNumber": 218
+        },
+        {
+          "caller": "build_layout",
+          "callee": "Layout",
+          "lineNumber": 219
+        },
+        {
+          "caller": "build_layout",
+          "callee": "Layout",
+          "lineNumber": 220
+        },
+        {
+          "caller": "build_layout",
+          "callee": "Layout",
+          "lineNumber": 221
+        },
+        {
+          "caller": "build_layout",
+          "callee": "layout.split_column",
+          "lineNumber": 224
+        },
+        {
+          "caller": "build_layout",
+          "callee": "Layout",
+          "lineNumber": 225
+        },
+        {
+          "caller": "build_layout",
+          "callee": "Layout",
+          "lineNumber": 226
+        },
+        {
+          "caller": "build_layout",
+          "callee": "Layout",
+          "lineNumber": 227
+        },
+        {
+          "caller": "build_layout",
+          "callee": "layout[\"header\"].update",
+          "lineNumber": 230
+        },
+        {
+          "caller": "build_layout",
+          "callee": "_render_header",
+          "lineNumber": 230
+        },
+        {
+          "caller": "build_layout",
+          "callee": "layout[\"delta\"].update",
+          "lineNumber": 232
+        },
+        {
+          "caller": "build_layout",
+          "callee": "_render_delta_banner",
+          "lineNumber": 232
+        },
+        {
+          "caller": "build_layout",
+          "callee": "layout[\"sandboxes\"].update",
+          "lineNumber": 233
+        },
+        {
+          "caller": "build_layout",
+          "callee": "_render_sandboxes",
+          "lineNumber": 233
+        },
+        {
+          "caller": "build_layout",
+          "callee": "layout[\"footer\"].update",
+          "lineNumber": 234
+        },
+        {
+          "caller": "build_layout",
+          "callee": "_render_footer",
+          "lineNumber": 234
+        },
+        {
+          "caller": "render_once",
+          "callee": "Console",
+          "lineNumber": 242
+        },
+        {
+          "caller": "render_once",
+          "callee": "collect",
+          "lineNumber": 243
+        },
+        {
+          "caller": "render_once",
+          "callee": "compute_delta",
+          "lineNumber": 244
+        },
+        {
+          "caller": "render_once",
+          "callee": "console.print",
+          "lineNumber": 245
+        },
+        {
+          "caller": "render_once",
+          "callee": "build_layout",
+          "lineNumber": 245
+        },
+        {
+          "caller": "render_live",
+          "callee": "Live",
+          "lineNumber": 254
+        },
+        {
+          "caller": "render_live",
+          "callee": "collect",
+          "lineNumber": 256
+        },
+        {
+          "caller": "render_live",
+          "callee": "capture_previous",
+          "lineNumber": 257
+        },
+        {
+          "caller": "render_live",
+          "callee": "termios.tcgetattr",
+          "lineNumber": 263
+        },
+        {
+          "caller": "render_live",
+          "callee": "termios.tcsetattr",
+          "lineNumber": 266
+        },
+        {
+          "caller": "render_live",
+          "callee": "collect",
+          "lineNumber": 272
+        },
+        {
+          "caller": "render_live",
+          "callee": "compute_delta",
+          "lineNumber": 273
+        },
+        {
+          "caller": "render_live",
+          "callee": "live.update",
+          "lineNumber": 274
+        },
+        {
+          "caller": "render_live",
+          "callee": "build_layout",
+          "lineNumber": 274
+        },
+        {
+          "caller": "render_live",
+          "callee": "capture_previous",
+          "lineNumber": 275
+        },
+        {
+          "caller": "render_live",
+          "callee": "select.select",
+          "lineNumber": 278
+        },
+        {
+          "caller": "render_live",
+          "callee": "sys.stdin.read",
+          "lineNumber": 279
+        },
+        {
+          "caller": "render_live",
+          "callee": "_time.sleep",
+          "lineNumber": 289
+        },
+        {
+          "caller": "render_live",
+          "callee": "select.select",
+          "lineNumber": 291
+        },
+        {
+          "caller": "render_live",
+          "callee": "sys.stdin.read",
+          "lineNumber": 292
+        },
+        {
+          "caller": "render_live",
+          "callee": "ch.isdigit",
+          "lineNumber": 295
+        },
+        {
+          "caller": "render_live",
+          "callee": "int",
+          "lineNumber": 296
+        },
+        {
+          "caller": "render_live",
+          "callee": "len",
+          "lineNumber": 297
+        },
+        {
+          "caller": "render_live",
+          "callee": "termios.tcsetattr",
+          "lineNumber": 302
+        },
+        {
+          "caller": "run",
+          "callee": "render_once",
+          "lineNumber": 317
+        },
+        {
+          "caller": "run",
+          "callee": "render_live",
+          "lineNumber": 319
+        },
+        {
+          "caller": "run",
+          "callee": "Console",
+          "lineNumber": 319
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Console",
+          "lineNumber": 332
+        },
+        {
+          "caller": "run_tree",
+          "callee": "collect",
+          "lineNumber": 333
+        },
+        {
+          "caller": "run_tree",
+          "callee": "_build_dispatch_map",
+          "lineNumber": 337
+        },
+        {
+          "caller": "run_tree",
+          "callee": "detect_bottlenecks",
+          "lineNumber": 339
+        },
+        {
+          "caller": "run_tree",
+          "callee": "compute_budget_projections",
+          "lineNumber": 340
+        },
+        {
+          "caller": "run_tree",
+          "callee": "generate_actions",
+          "lineNumber": 341
+        },
+        {
+          "caller": "run_tree",
+          "callee": "_render_header",
+          "lineNumber": 344
+        },
+        {
+          "caller": "run_tree",
+          "callee": "console.print",
+          "lineNumber": 350
+        },
+        {
+          "caller": "run_tree",
+          "callee": "build_tree_layout",
+          "lineNumber": 351
+        },
+        {
+          "caller": "run_tree",
+          "callee": "console.print",
+          "lineNumber": 357
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Live",
+          "lineNumber": 360
+        },
+        {
+          "caller": "run_tree",
+          "callee": "termios.tcgetattr",
+          "lineNumber": 364
+        },
+        {
+          "caller": "run_tree",
+          "callee": "termios.tcsetattr",
+          "lineNumber": 367
+        },
+        {
+          "caller": "run_tree",
+          "callee": "SparklineTracker",
+          "lineNumber": 379
+        },
+        {
+          "caller": "run_tree",
+          "callee": "capture_previous",
+          "lineNumber": 380
+        },
+        {
+          "caller": "run_tree",
+          "callee": "collect",
+          "lineNumber": 386
+        },
+        {
+          "caller": "run_tree",
+          "callee": "sparkline_tracker.record",
+          "lineNumber": 389
+        },
+        {
+          "caller": "run_tree",
+          "callee": "sparkline_tracker.sparkline",
+          "lineNumber": 390
+        },
+        {
+          "caller": "run_tree",
+          "callee": "sparkline_tracker.burn_rate",
+          "lineNumber": 391
+        },
+        {
+          "caller": "run_tree",
+          "callee": "compute_delta",
+          "lineNumber": 394
+        },
+        {
+          "caller": "run_tree",
+          "callee": "capture_previous",
+          "lineNumber": 395
+        },
+        {
+          "caller": "run_tree",
+          "callee": "_render_delta_banner",
+          "lineNumber": 396
+        },
+        {
+          "caller": "run_tree",
+          "callee": "sorted",
+          "lineNumber": 399
+        },
+        {
+          "caller": "run_tree",
+          "callee": "n.lower",
+          "lineNumber": 401
+        },
+        {
+          "caller": "run_tree",
+          "callee": "search_query.lower",
+          "lineNumber": 405
+        },
+        {
+          "caller": "run_tree",
+          "callee": "s.lower",
+          "lineNumber": 405
+        },
+        {
+          "caller": "run_tree",
+          "callee": "sorted",
+          "lineNumber": 408
+        },
+        {
+          "caller": "run_tree",
+          "callee": "any",
+          "lineNumber": 411
+        },
+        {
+          "caller": "run_tree",
+          "callee": "n.lower",
+          "lineNumber": 413
+        },
+        {
+          "caller": "run_tree",
+          "callee": "len",
+          "lineNumber": 420
+        },
+        {
+          "caller": "run_tree",
+          "callee": "len",
+          "lineNumber": 421
+        },
+        {
+          "caller": "run_tree",
+          "callee": "_build_dispatch_map",
+          "lineNumber": 430
+        },
+        {
+          "caller": "run_tree",
+          "callee": "detect_bottlenecks",
+          "lineNumber": 431
+        },
+        {
+          "caller": "run_tree",
+          "callee": "compute_budget_projections",
+          "lineNumber": 432
+        },
+        {
+          "caller": "run_tree",
+          "callee": "generate_actions",
+          "lineNumber": 433
+        },
+        {
+          "caller": "run_tree",
+          "callee": "_render_header",
+          "lineNumber": 436
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Layout",
+          "lineNumber": 439
+        },
+        {
+          "caller": "run_tree",
+          "callee": "layout.split_column",
+          "lineNumber": 441
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Layout",
+          "lineNumber": 442
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Layout",
+          "lineNumber": 443
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Layout",
+          "lineNumber": 444
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Layout",
+          "lineNumber": 445
+        },
+        {
+          "caller": "run_tree",
+          "callee": "layout[\"header\"].update",
+          "lineNumber": 447
+        },
+        {
+          "caller": "run_tree",
+          "callee": "layout[\"delta\"].update",
+          "lineNumber": 448
+        },
+        {
+          "caller": "run_tree",
+          "callee": "layout.split_column",
+          "lineNumber": 450
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Layout",
+          "lineNumber": 451
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Layout",
+          "lineNumber": 452
+        },
+        {
+          "caller": "run_tree",
+          "callee": "Layout",
+          "lineNumber": 453
+        },
+        {
+          "caller": "run_tree",
+          "callee": "layout[\"header\"].update",
+          "lineNumber": 455
+        },
+        {
+          "caller": "run_tree",
+          "callee": "build_tree_layout",
+          "lineNumber": 458
+        },
+        {
+          "caller": "run_tree",
+          "callee": "layout[\"body\"].update",
+          "lineNumber": 469
+        },
+        {
+          "caller": "run_tree",
+          "callee": "sum",
+          "lineNumber": 472
+        },
+        {
+          "caller": "run_tree",
+          "callee": "_render_status_bar",
+          "lineNumber": 473
+        },
+        {
+          "caller": "run_tree",
+          "callee": "datetime.now().strftime",
+          "lineNumber": 475
+        },
+        {
+          "caller": "run_tree",
+          "callee": "datetime.now",
+          "lineNumber": 475
+        },
+        {
+          "caller": "run_tree",
+          "callee": "layout[\"status_bar\"].update",
+          "lineNumber": 479
+        },
+        {
+          "caller": "run_tree",
+          "callee": "live.update",
+          "lineNumber": 481
+        },
+        {
+          "caller": "run_tree",
+          "callee": "select.select",
+          "lineNumber": 484
+        },
+        {
+          "caller": "run_tree",
+          "callee": "sys.stdin.read",
+          "lineNumber": 485
+        },
+        {
+          "caller": "run_tree",
+          "callee": "len",
+          "lineNumber": 513
+        },
+        {
+          "caller": "run_tree",
+          "callee": "len",
+          "lineNumber": 517
+        },
+        {
+          "caller": "run_tree",
+          "callee": "_time.sleep",
+          "lineNumber": 536
+        },
+        {
+          "caller": "run_tree",
+          "callee": "select.select",
+          "lineNumber": 538
+        },
+        {
+          "caller": "run_tree",
+          "callee": "sys.stdin.read",
+          "lineNumber": 539
+        },
+        {
+          "caller": "run_tree",
+          "callee": "len",
+          "lineNumber": 543
+        },
+        {
+          "caller": "run_tree",
+          "callee": "len",
+          "lineNumber": 547
+        },
+        {
+          "caller": "run_tree",
+          "callee": "ch.isdigit",
+          "lineNumber": 553
+        },
+        {
+          "caller": "run_tree",
+          "callee": "int",
+          "lineNumber": 554
+        },
+        {
+          "caller": "run_tree",
+          "callee": "len",
+          "lineNumber": 555
+        },
+        {
+          "caller": "run_tree",
+          "callee": "termios.tcsetattr",
+          "lineNumber": 560
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 14,
+        "functionCount": 14,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/viewport/states.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "compute_sandbox_state",
+          "startLine": 47,
+          "endLine": 89,
+          "params": [
+            "state_data",
+            "prev_state",
+            "tool_call_count",
+            "no_progress_counter"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SandboxState",
+          "startLine": 20,
+          "endLine": 30,
+          "methods": [
+            "__str__"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SandboxState",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "compute_sandbox_state",
+          "line": 47,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "compute_sandbox_state",
+          "callee": "state_data.get",
+          "lineNumber": 72
+        },
+        {
+          "caller": "compute_sandbox_state",
+          "callee": "_STATUS_INITIAL.get",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/hero/viewport/tree.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 620,
+      "nonEmptyLines": 544,
+      "functions": [
+        {
+          "name": "_status_icon",
+          "startLine": 52,
+          "endLine": 55,
+          "params": [
+            "status"
+          ]
+        },
+        {
+          "name": "_load_pipeline_manifest",
+          "startLine": 90,
+          "endLine": 106,
+          "params": [
+            "sandbox_name"
+          ]
+        },
+        {
+          "name": "_load_dispatch_files",
+          "startLine": 109,
+          "endLine": 134,
+          "params": [
+            "sandbox_name"
+          ]
+        },
+        {
+          "name": "_parse_viewport_toon",
+          "startLine": 137,
+          "endLine": 165,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "build_tree",
+          "startLine": 171,
+          "endLine": 424,
+          "params": [
+            "sandbox_name",
+            "sandbox_data",
+            "dispatch_data",
+            "manifest"
+          ]
+        },
+        {
+          "name": "_extract_pipeline_nodes",
+          "startLine": 430,
+          "endLine": 551,
+          "params": [
+            "manifest",
+            "dispatch_data"
+          ]
+        },
+        {
+          "name": "_resolve_status",
+          "startLine": 557,
+          "endLine": 563,
+          "params": [
+            "manifest_status",
+            "has_manifest"
+          ]
+        },
+        {
+          "name": "_arch_status",
+          "startLine": 566,
+          "endLine": 578,
+          "params": [
+            "manifest"
+          ]
+        },
+        {
+          "name": "_soldier_status",
+          "startLine": 581,
+          "endLine": 591,
+          "params": [
+            "sd"
+          ]
+        },
+        {
+          "name": "build_pipeline_state",
+          "startLine": 597,
+          "endLine": 620,
+          "params": [
+            "sandbox_name",
+            "sandbox_data",
+            "dispatch_data"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TreeNode",
+          "startLine": 62,
+          "endLine": 73,
+          "methods": [],
+          "properties": [
+            "role",
+            "name",
+            "status",
+            "model",
+            "task",
+            "children",
+            "is_error",
+            "error_detail",
+            "retry_count"
+          ]
+        },
+        {
+          "name": "PipelineState",
+          "startLine": 77,
+          "endLine": 84,
+          "methods": [],
+          "properties": [
+            "sandbox_name",
+            "task",
+            "root_node",
+            "active",
+            "created_at"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_status_icon",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "TreeNode",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "PipelineState",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "_load_pipeline_manifest",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "_load_dispatch_files",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "_parse_viewport_toon",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "build_tree",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "_extract_pipeline_nodes",
+          "line": 430,
+          "isDefault": false
+        },
+        {
+          "name": "_resolve_status",
+          "line": 557,
+          "isDefault": false
+        },
+        {
+          "name": "_arch_status",
+          "line": 566,
+          "isDefault": false
+        },
+        {
+          "name": "_soldier_status",
+          "line": 581,
+          "isDefault": false
+        },
+        {
+          "name": "build_pipeline_state",
+          "line": 597,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_status_icon",
+          "callee": "(status or \"idle\").lower",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_status_icon",
+          "callee": "_STATUS_META.get",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_load_pipeline_manifest",
+          "callee": "PIPELINE_DIR.exists",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_load_pipeline_manifest",
+          "callee": "PIPELINE_DIR.glob",
+          "lineNumber": 99
+        },
+        {
+          "caller": "_load_pipeline_manifest",
+          "callee": "json.loads",
+          "lineNumber": 101
+        },
+        {
+          "caller": "_load_pipeline_manifest",
+          "callee": "f.read_text",
+          "lineNumber": 101
+        },
+        {
+          "caller": "_load_pipeline_manifest",
+          "callee": "data.get",
+          "lineNumber": 102
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "DISPATCH_DIR.exists",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "DISPATCH_DIR.glob",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "_parse_viewport_toon",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "f.read_text",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "data.get",
+          "lineNumber": 121
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "data.get",
+          "lineNumber": 122
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "DISPATCH_DIR.glob",
+          "lineNumber": 126
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "json.loads",
+          "lineNumber": 128
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "f.read_text",
+          "lineNumber": 128
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "data.get",
+          "lineNumber": 129
+        },
+        {
+          "caller": "_load_dispatch_files",
+          "callee": "data.get",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "content.strip().split",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "content.strip",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "line.rstrip",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "re.match",
+          "lineNumber": 145
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "m.group",
+          "lineNumber": 147
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "m.group(2).strip",
+          "lineNumber": 147
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "m.group",
+          "lineNumber": 147
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "val.startswith",
+          "lineNumber": 148
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "val.endswith",
+          "lineNumber": 148
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "float",
+          "lineNumber": 159
+        },
+        {
+          "caller": "_parse_viewport_toon",
+          "callee": "int",
+          "lineNumber": 161
+        },
+        {
+          "caller": "build_tree",
+          "callee": "_load_dispatch_files",
+          "lineNumber": 198
+        },
+        {
+          "caller": "build_tree",
+          "callee": "_load_pipeline_manifest",
+          "lineNumber": 201
+        },
+        {
+          "caller": "build_tree",
+          "callee": "_extract_pipeline_nodes",
+          "lineNumber": 203
+        },
+        {
+          "caller": "build_tree",
+          "callee": "_resolve_status",
+          "lineNumber": 221
+        },
+        {
+          "caller": "build_tree",
+          "callee": "manifest.get",
+          "lineNumber": 222
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 225
+        },
+        {
+          "caller": "build_tree",
+          "callee": "manifest.get",
+          "lineNumber": 230
+        },
+        {
+          "caller": "build_tree",
+          "callee": "brainstorm_data.get",
+          "lineNumber": 236
+        },
+        {
+          "caller": "build_tree",
+          "callee": "brainstorm_data.get",
+          "lineNumber": 239
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 242
+        },
+        {
+          "caller": "build_tree",
+          "callee": "brainstorm_data.get",
+          "lineNumber": 245
+        },
+        {
+          "caller": "build_tree",
+          "callee": "comm_node.children.append",
+          "lineNumber": 249
+        },
+        {
+          "caller": "build_tree",
+          "callee": "worktree_data.get",
+          "lineNumber": 252
+        },
+        {
+          "caller": "build_tree",
+          "callee": "worktree_data.get",
+          "lineNumber": 253
+        },
+        {
+          "caller": "build_tree",
+          "callee": "worktree_data.get",
+          "lineNumber": 253
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 257
+        },
+        {
+          "caller": "build_tree",
+          "callee": "worktree_data.get",
+          "lineNumber": 261
+        },
+        {
+          "caller": "build_tree",
+          "callee": "comm_node.children.append",
+          "lineNumber": 264
+        },
+        {
+          "caller": "build_tree",
+          "callee": "analysis_data.get",
+          "lineNumber": 267
+        },
+        {
+          "caller": "build_tree",
+          "callee": "analysis_data.get",
+          "lineNumber": 269
+        },
+        {
+          "caller": "build_tree",
+          "callee": "analysis_data.get",
+          "lineNumber": 270
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 274
+        },
+        {
+          "caller": "build_tree",
+          "callee": "comm_node.children.append",
+          "lineNumber": 281
+        },
+        {
+          "caller": "build_tree",
+          "callee": "manifest.get(\"steps\", {}).get(\"analysis\", {}).get",
+          "lineNumber": 286
+        },
+        {
+          "caller": "build_tree",
+          "callee": "manifest.get(\"steps\", {}).get",
+          "lineNumber": 286
+        },
+        {
+          "caller": "build_tree",
+          "callee": "manifest.get",
+          "lineNumber": 286
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 289
+        },
+        {
+          "caller": "build_tree",
+          "callee": "manifest.get",
+          "lineNumber": 294
+        },
+        {
+          "caller": "build_tree",
+          "callee": "comm_node.children.append",
+          "lineNumber": 297
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 300
+        },
+        {
+          "caller": "build_tree",
+          "callee": "_arch_status",
+          "lineNumber": 303
+        },
+        {
+          "caller": "build_tree",
+          "callee": "lead_node.children.append",
+          "lineNumber": 308
+        },
+        {
+          "caller": "build_tree",
+          "callee": "_soldier_status",
+          "lineNumber": 313
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 314
+        },
+        {
+          "caller": "build_tree",
+          "callee": "sd.get",
+          "lineNumber": 316
+        },
+        {
+          "caller": "build_tree",
+          "callee": "sd.get",
+          "lineNumber": 316
+        },
+        {
+          "caller": "build_tree",
+          "callee": "sd.get",
+          "lineNumber": 318
+        },
+        {
+          "caller": "build_tree",
+          "callee": "sd.get",
+          "lineNumber": 319
+        },
+        {
+          "caller": "build_tree",
+          "callee": "sd.get",
+          "lineNumber": 319
+        },
+        {
+          "caller": "build_tree",
+          "callee": "sd.get",
+          "lineNumber": 321
+        },
+        {
+          "caller": "build_tree",
+          "callee": "arch_node.children.append",
+          "lineNumber": 324
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 328
+        },
+        {
+          "caller": "build_tree",
+          "callee": "fix_task.get",
+          "lineNumber": 332
+        },
+        {
+          "caller": "build_tree",
+          "callee": "fix_task.get",
+          "lineNumber": 333
+        },
+        {
+          "caller": "build_tree",
+          "callee": "soldier_node.children.append",
+          "lineNumber": 336
+        },
+        {
+          "caller": "build_tree",
+          "callee": "arch_node.children.append",
+          "lineNumber": 338
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 338
+        },
+        {
+          "caller": "build_tree",
+          "callee": "verify_fix_loop_data.get",
+          "lineNumber": 347
+        },
+        {
+          "caller": "build_tree",
+          "callee": "verify_fix_loop_data.get",
+          "lineNumber": 348
+        },
+        {
+          "caller": "build_tree",
+          "callee": "verify_fix_loop_data.get",
+          "lineNumber": 349
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 351
+        },
+        {
+          "caller": "build_tree",
+          "callee": "enumerate",
+          "lineNumber": 359
+        },
+        {
+          "caller": "build_tree",
+          "callee": "verify_fix_loop_data.get",
+          "lineNumber": 359
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 361
+        },
+        {
+          "caller": "build_tree",
+          "callee": "t.get",
+          "lineNumber": 364
+        },
+        {
+          "caller": "build_tree",
+          "callee": "t.get",
+          "lineNumber": 365
+        },
+        {
+          "caller": "build_tree",
+          "callee": "t.get",
+          "lineNumber": 366
+        },
+        {
+          "caller": "build_tree",
+          "callee": "t.get",
+          "lineNumber": 366
+        },
+        {
+          "caller": "build_tree",
+          "callee": "vfl_node.children.append",
+          "lineNumber": 368
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 371
+        },
+        {
+          "caller": "build_tree",
+          "callee": "verify_task.get",
+          "lineNumber": 374
+        },
+        {
+          "caller": "build_tree",
+          "callee": "vfl_node.children.append",
+          "lineNumber": 380
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 380
+        },
+        {
+          "caller": "build_tree",
+          "callee": "verify_task.get",
+          "lineNumber": 382
+        },
+        {
+          "caller": "build_tree",
+          "callee": "verify_task.get",
+          "lineNumber": 383
+        },
+        {
+          "caller": "build_tree",
+          "callee": "verify_task.get",
+          "lineNumber": 384
+        },
+        {
+          "caller": "build_tree",
+          "callee": "vfl_node.children.append",
+          "lineNumber": 388
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 388
+        },
+        {
+          "caller": "build_tree",
+          "callee": "fix_task.get",
+          "lineNumber": 390
+        },
+        {
+          "caller": "build_tree",
+          "callee": "fix_task.get",
+          "lineNumber": 391
+        },
+        {
+          "caller": "build_tree",
+          "callee": "fix_task.get",
+          "lineNumber": 392
+        },
+        {
+          "caller": "build_tree",
+          "callee": "fix_task.get",
+          "lineNumber": 393
+        },
+        {
+          "caller": "build_tree",
+          "callee": "arch_node.children.append",
+          "lineNumber": 396
+        },
+        {
+          "caller": "build_tree",
+          "callee": "archive_task.get",
+          "lineNumber": 399
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 400
+        },
+        {
+          "caller": "build_tree",
+          "callee": "archive_task.get",
+          "lineNumber": 402
+        },
+        {
+          "caller": "build_tree",
+          "callee": "archive_task.get",
+          "lineNumber": 404
+        },
+        {
+          "caller": "build_tree",
+          "callee": "arch_node.children.append",
+          "lineNumber": 407
+        },
+        {
+          "caller": "build_tree",
+          "callee": "report_task.get",
+          "lineNumber": 412
+        },
+        {
+          "caller": "build_tree",
+          "callee": "TreeNode",
+          "lineNumber": 415
+        },
+        {
+          "caller": "build_tree",
+          "callee": "comm_node.children.append",
+          "lineNumber": 422
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "manifest.get",
+          "lineNumber": 452
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "manifest.get",
+          "lineNumber": 455
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "sd.get",
+          "lineNumber": 456
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "dict",
+          "lineNumber": 458
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "merged.update",
+          "lineNumber": 459
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "soldiers.append",
+          "lineNumber": 460
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "soldiers.append",
+          "lineNumber": 462
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 465
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "bs_step.get",
+          "lineNumber": 468
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "len",
+          "lineNumber": 469
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "bs_step.get",
+          "lineNumber": 469
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 472
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "wt_step.get",
+          "lineNumber": 475
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "wt_step.get",
+          "lineNumber": 476
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "wt_step.get",
+          "lineNumber": 477
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "wt_step.get",
+          "lineNumber": 478
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 481
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "an_step.get",
+          "lineNumber": 484
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "an_step.get",
+          "lineNumber": 485
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "an_step.get",
+          "lineNumber": 486
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 489
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "vfl_step.get",
+          "lineNumber": 492
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "vfl_step.get",
+          "lineNumber": 493
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "vfl_step.get",
+          "lineNumber": 494
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "vfl_step.get",
+          "lineNumber": 495
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "manifest.get",
+          "lineNumber": 499
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "isinstance",
+          "lineNumber": 500
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "re.search",
+          "lineNumber": 502
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "re.search",
+          "lineNumber": 503
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "re.search",
+          "lineNumber": 504
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "verify_match.group(1).strip",
+          "lineNumber": 506
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "verify_match.group",
+          "lineNumber": 506
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "dispatch_data.get",
+          "lineNumber": 507
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "fix_match.group(1).strip",
+          "lineNumber": 509
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "fix_match.group",
+          "lineNumber": 509
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "dispatch_data.get",
+          "lineNumber": 510
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "archive_match.group(1).strip",
+          "lineNumber": 512
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "archive_match.group",
+          "lineNumber": 512
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "dispatch_data.get",
+          "lineNumber": 513
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get(\"verify\", {}).get",
+          "lineNumber": 516
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 516
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 517
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "verify_step.get",
+          "lineNumber": 519
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get(\"fix\", {}).get",
+          "lineNumber": 522
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 522
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 523
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "fix_step.get",
+          "lineNumber": 525
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "fix_step.get",
+          "lineNumber": 527
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "fix_step.get",
+          "lineNumber": 528
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get(\"archive\", {}).get",
+          "lineNumber": 530
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 530
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 531
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "archive_step.get",
+          "lineNumber": 532
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get(\"report\", {}).get",
+          "lineNumber": 535
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "steps.get",
+          "lineNumber": 535
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "dispatch_data.items",
+          "lineNumber": 539
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "(data.get(\"role\") or \"\").lower",
+          "lineNumber": 540
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "data.get",
+          "lineNumber": 540
+        },
+        {
+          "caller": "_extract_pipeline_nodes",
+          "callee": "soldiers.append",
+          "lineNumber": 542
+        },
+        {
+          "caller": "_resolve_status",
+          "callee": "manifest_status.lower",
+          "lineNumber": 559
+        },
+        {
+          "caller": "_resolve_status",
+          "callee": "_status_icon",
+          "lineNumber": 560
+        },
+        {
+          "caller": "_arch_status",
+          "callee": "manifest.get",
+          "lineNumber": 570
+        },
+        {
+          "caller": "_arch_status",
+          "callee": "steps.get(phase, {}).get",
+          "lineNumber": 573
+        },
+        {
+          "caller": "_arch_status",
+          "callee": "steps.get",
+          "lineNumber": 573
+        },
+        {
+          "caller": "_soldier_status",
+          "callee": "sd.get",
+          "lineNumber": 583
+        },
+        {
+          "caller": "_soldier_status",
+          "callee": "raw.lower",
+          "lineNumber": 584
+        },
+        {
+          "caller": "build_pipeline_state",
+          "callee": "build_tree",
+          "lineNumber": 603
+        },
+        {
+          "caller": "build_pipeline_state",
+          "callee": "_load_pipeline_manifest",
+          "lineNumber": 604
+        },
+        {
+          "caller": "build_pipeline_state",
+          "callee": "manifest.get",
+          "lineNumber": 605
+        },
+        {
+          "caller": "build_pipeline_state",
+          "callee": "manifest.get",
+          "lineNumber": 608
+        },
+        {
+          "caller": "build_pipeline_state",
+          "callee": "manifest.get",
+          "lineNumber": 608
+        },
+        {
+          "caller": "build_pipeline_state",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 611
+        },
+        {
+          "caller": "build_pipeline_state",
+          "callee": "PipelineState",
+          "lineNumber": 614
+        },
+        {
+          "caller": "build_pipeline_state",
+          "callee": "manifest.get",
+          "lineNumber": 616
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 12,
+        "functionCount": 10,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "src/hero/viewport/tree_renderer.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 923,
+      "nonEmptyLines": 783,
+      "functions": [
+        {
+          "name": "_status_icon",
+          "startLine": 44,
+          "endLine": 56,
+          "params": [
+            "status",
+            "frame"
+          ]
+        },
+        {
+          "name": "_render_simple_tree",
+          "startLine": 62,
+          "endLine": 118,
+          "params": [
+            "node",
+            "indent",
+            "branch",
+            "is_root"
+          ]
+        },
+        {
+          "name": "build_tree_text",
+          "startLine": 121,
+          "endLine": 125,
+          "params": [
+            "root"
+          ]
+        },
+        {
+          "name": "_build_rich_tree",
+          "startLine": 128,
+          "endLine": 163,
+          "params": [
+            "node",
+            "parent_tree",
+            "frame"
+          ]
+        },
+        {
+          "name": "_render_tree_panel",
+          "startLine": 168,
+          "endLine": 170,
+          "params": [
+            "tree_node",
+            "title"
+          ]
+        },
+        {
+          "name": "_render_collapsed_sandbox",
+          "startLine": 173,
+          "endLine": 189,
+          "params": [
+            "sandbox_name",
+            "status",
+            "current_task",
+            "selected"
+          ]
+        },
+        {
+          "name": "_render_intel_panel",
+          "startLine": 192,
+          "endLine": 232,
+          "params": [
+            "bottlenecks"
+          ]
+        },
+        {
+          "name": "_render_budget_panel",
+          "startLine": 235,
+          "endLine": 292,
+          "params": [
+            "projections"
+          ]
+        },
+        {
+          "name": "_render_action_panel",
+          "startLine": 295,
+          "endLine": 337,
+          "params": [
+            "actions"
+          ]
+        },
+        {
+          "name": "_collect_pipeline_sandboxes",
+          "startLine": 342,
+          "endLine": 362,
+          "params": []
+        },
+        {
+          "name": "_build_dispatch_map",
+          "startLine": 365,
+          "endLine": 379,
+          "params": [
+            "sandbox_names"
+          ]
+        },
+        {
+          "name": "_render_footer",
+          "startLine": 384,
+          "endLine": 395,
+          "params": []
+        },
+        {
+          "name": "_render_status_bar",
+          "startLine": 398,
+          "endLine": 434,
+          "params": [
+            "army",
+            "last_refresh",
+            "error_count",
+            "frame"
+          ]
+        },
+        {
+          "name": "_render_single_node_tree",
+          "startLine": 439,
+          "endLine": 467,
+          "params": [
+            "sandbox_name",
+            "status",
+            "task",
+            "model",
+            "selected"
+          ]
+        },
+        {
+          "name": "_render_sandbox_detail_panel",
+          "startLine": 496,
+          "endLine": 654,
+          "params": [
+            "detail"
+          ]
+        },
+        {
+          "name": "_estimate_height",
+          "startLine": 657,
+          "endLine": 678,
+          "params": [
+            "panel"
+          ]
+        },
+        {
+          "name": "build_tree_layout",
+          "startLine": 759,
+          "endLine": 923,
+          "params": [
+            "army",
+            "bottlenecks",
+            "projections",
+            "actions",
+            "selected_sandbox",
+            "highlight_sandbox",
+            "dispatch_map",
+            "frame",
+            "delta"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SparklineTracker",
+          "startLine": 683,
+          "endLine": 754,
+          "methods": [
+            "__init__",
+            "record",
+            "sparkline",
+            "burn_rate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_status_icon",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "_render_simple_tree",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "build_tree_text",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "_build_rich_tree",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "_render_tree_panel",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "_render_collapsed_sandbox",
+          "line": 173,
+          "isDefault": false
+        },
+        {
+          "name": "_render_intel_panel",
+          "line": 192,
+          "isDefault": false
+        },
+        {
+          "name": "_render_budget_panel",
+          "line": 235,
+          "isDefault": false
+        },
+        {
+          "name": "_render_action_panel",
+          "line": 295,
+          "isDefault": false
+        },
+        {
+          "name": "_collect_pipeline_sandboxes",
+          "line": 342,
+          "isDefault": false
+        },
+        {
+          "name": "_build_dispatch_map",
+          "line": 365,
+          "isDefault": false
+        },
+        {
+          "name": "_render_footer",
+          "line": 384,
+          "isDefault": false
+        },
+        {
+          "name": "_render_status_bar",
+          "line": 398,
+          "isDefault": false
+        },
+        {
+          "name": "_render_single_node_tree",
+          "line": 439,
+          "isDefault": false
+        },
+        {
+          "name": "_render_sandbox_detail_panel",
+          "line": 496,
+          "isDefault": false
+        },
+        {
+          "name": "_estimate_height",
+          "line": 657,
+          "isDefault": false
+        },
+        {
+          "name": "SparklineTracker",
+          "line": 683,
+          "isDefault": false
+        },
+        {
+          "name": "build_tree_layout",
+          "line": 759,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_status_icon",
+          "callee": "_status_icon_original",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_status_icon",
+          "callee": "(status or \"idle\").lower",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_status_icon",
+          "callee": "_PULSE_FRAMES.get",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_status_icon",
+          "callee": "len",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_render_simple_tree",
+          "callee": "_status_icon",
+          "lineNumber": 79
+        },
+        {
+          "caller": "_render_simple_tree",
+          "callee": "lines.append",
+          "lineNumber": 94
+        },
+        {
+          "caller": "_render_simple_tree",
+          "callee": "len",
+          "lineNumber": 99
+        },
+        {
+          "caller": "_render_simple_tree",
+          "callee": "lines.append",
+          "lineNumber": 102
+        },
+        {
+          "caller": "_render_simple_tree",
+          "callee": "len",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_render_simple_tree",
+          "callee": "enumerate",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_render_simple_tree",
+          "callee": "_render_simple_tree",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_render_simple_tree",
+          "callee": "lines.extend",
+          "lineNumber": 116
+        },
+        {
+          "caller": "build_tree_text",
+          "callee": "_render_simple_tree",
+          "lineNumber": 123
+        },
+        {
+          "caller": "build_tree_text",
+          "callee": "Text.from_markup",
+          "lineNumber": 125
+        },
+        {
+          "caller": "build_tree_text",
+          "callee": "\"\\n\".join",
+          "lineNumber": 125
+        },
+        {
+          "caller": "_build_rich_tree",
+          "callee": "_status_icon",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_build_rich_tree",
+          "callee": "RichTree",
+          "lineNumber": 156
+        },
+        {
+          "caller": "_build_rich_tree",
+          "callee": "parent_tree.add",
+          "lineNumber": 158
+        },
+        {
+          "caller": "_build_rich_tree",
+          "callee": "_build_rich_tree",
+          "lineNumber": 161
+        },
+        {
+          "caller": "_render_tree_panel",
+          "callee": "build_tree_text",
+          "lineNumber": 169
+        },
+        {
+          "caller": "_render_tree_panel",
+          "callee": "Panel",
+          "lineNumber": 170
+        },
+        {
+          "caller": "_render_collapsed_sandbox",
+          "callee": "_status_icon",
+          "lineNumber": 179
+        },
+        {
+          "caller": "_render_collapsed_sandbox",
+          "callee": "Text",
+          "lineNumber": 181
+        },
+        {
+          "caller": "_render_collapsed_sandbox",
+          "callee": "line.append",
+          "lineNumber": 183
+        },
+        {
+          "caller": "_render_collapsed_sandbox",
+          "callee": "line.append",
+          "lineNumber": 185
+        },
+        {
+          "caller": "_render_collapsed_sandbox",
+          "callee": "line.append",
+          "lineNumber": 186
+        },
+        {
+          "caller": "_render_collapsed_sandbox",
+          "callee": "line.append",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_render_collapsed_sandbox",
+          "callee": "line.append",
+          "lineNumber": 188
+        },
+        {
+          "caller": "_render_collapsed_sandbox",
+          "callee": "Panel",
+          "lineNumber": 189
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "Panel",
+          "lineNumber": 201
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "Text",
+          "lineNumber": 202
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "{\n            \"critical\": \"red\",\n            \"warning\": \"yellow\",\n            \"info\": \"blue\",\n        }.get",
+          "lineNumber": 210
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "Text",
+          "lineNumber": 216
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "line.append",
+          "lineNumber": 217
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "line.append",
+          "lineNumber": 218
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "line.append",
+          "lineNumber": 219
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "line.append",
+          "lineNumber": 220
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "line.append",
+          "lineNumber": 221
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "line.append",
+          "lineNumber": 222
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "lines.append",
+          "lineNumber": 223
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "lines.append",
+          "lineNumber": 224
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "Text",
+          "lineNumber": 224
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "Text.assemble",
+          "lineNumber": 226
+        },
+        {
+          "caller": "_render_intel_panel",
+          "callee": "Panel",
+          "lineNumber": 227
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Panel",
+          "lineNumber": 242
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Text",
+          "lineNumber": 243
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Table",
+          "lineNumber": 250
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "table.add_column",
+          "lineNumber": 258
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "table.add_column",
+          "lineNumber": 259
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "table.add_column",
+          "lineNumber": 260
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "table.add_column",
+          "lineNumber": 261
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "table.add_column",
+          "lineNumber": 262
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "table.add_column",
+          "lineNumber": 263
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "status_color_map.get",
+          "lineNumber": 272
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "str",
+          "lineNumber": 273
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "table.add_row",
+          "lineNumber": 278
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Text",
+          "lineNumber": 279
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Text",
+          "lineNumber": 280
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Text",
+          "lineNumber": 281
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Text",
+          "lineNumber": 282
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Text",
+          "lineNumber": 283
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Text",
+          "lineNumber": 284
+        },
+        {
+          "caller": "_render_budget_panel",
+          "callee": "Panel",
+          "lineNumber": 287
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "Panel",
+          "lineNumber": 301
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "Text",
+          "lineNumber": 302
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "priority_icon.get",
+          "lineNumber": 321
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "priority_color.get",
+          "lineNumber": 322
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "Text",
+          "lineNumber": 323
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "line.append",
+          "lineNumber": 324
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "line.append",
+          "lineNumber": 325
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "line.append",
+          "lineNumber": 326
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "line.append",
+          "lineNumber": 327
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "lines.append",
+          "lineNumber": 328
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "lines.append",
+          "lineNumber": 329
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "Text",
+          "lineNumber": 329
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "Text.assemble",
+          "lineNumber": 331
+        },
+        {
+          "caller": "_render_action_panel",
+          "callee": "Panel",
+          "lineNumber": 332
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "Path.home",
+          "lineNumber": 344
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "pipeline_dir.exists",
+          "lineNumber": 345
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "set",
+          "lineNumber": 347
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "sorted",
+          "lineNumber": 349
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "pipeline_dir.glob",
+          "lineNumber": 349
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "json.loads",
+          "lineNumber": 351
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "f.read_text",
+          "lineNumber": 351
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "data.get",
+          "lineNumber": 352
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "data.get",
+          "lineNumber": 353
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "seen.add",
+          "lineNumber": 358
+        },
+        {
+          "caller": "_collect_pipeline_sandboxes",
+          "callee": "result.append",
+          "lineNumber": 359
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "_collect_pipeline_sandboxes",
+          "lineNumber": 368
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "_load_dispatch_files",
+          "lineNumber": 370
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "max",
+          "lineNumber": 372
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "dispatch_files.values",
+          "lineNumber": 372
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "float",
+          "lineNumber": 372
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "d.get",
+          "lineNumber": 372
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "set",
+          "lineNumber": 374
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "_load_dispatch_files",
+          "lineNumber": 375
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "max",
+          "lineNumber": 377
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "dispatch_files.values",
+          "lineNumber": 377
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "float",
+          "lineNumber": 377
+        },
+        {
+          "caller": "_build_dispatch_map",
+          "callee": "d.get",
+          "lineNumber": 377
+        },
+        {
+          "caller": "_render_footer",
+          "callee": "Text.assemble",
+          "lineNumber": 394
+        },
+        {
+          "caller": "_render_footer",
+          "callee": "Panel",
+          "lineNumber": 395
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "datetime.now().strftime",
+          "lineNumber": 413
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "datetime.now",
+          "lineNumber": 413
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "sum",
+          "lineNumber": 414
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "len",
+          "lineNumber": 418
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "Text",
+          "lineNumber": 420
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 421
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 422
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 423
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 424
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 425
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 426
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 427
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 428
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 429
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 430
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 431
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "text.append",
+          "lineNumber": 432
+        },
+        {
+          "caller": "_render_status_bar",
+          "callee": "Panel",
+          "lineNumber": 434
+        },
+        {
+          "caller": "_render_single_node_tree",
+          "callee": "_status_icon",
+          "lineNumber": 453
+        },
+        {
+          "caller": "_render_single_node_tree",
+          "callee": "lines.append",
+          "lineNumber": 459
+        },
+        {
+          "caller": "_render_single_node_tree",
+          "callee": "lines.append",
+          "lineNumber": 464
+        },
+        {
+          "caller": "_render_single_node_tree",
+          "callee": "Text.from_markup",
+          "lineNumber": 466
+        },
+        {
+          "caller": "_render_single_node_tree",
+          "callee": "\"\\n\".join",
+          "lineNumber": 466
+        },
+        {
+          "caller": "_render_single_node_tree",
+          "callee": "Panel",
+          "lineNumber": 467
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "_status_icon",
+          "lineNumber": 514
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 515
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "header.append",
+          "lineNumber": 516
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "header.append",
+          "lineNumber": 517
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "header.append",
+          "lineNumber": 518
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "header.append",
+          "lineNumber": 520
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "header.append",
+          "lineNumber": 522
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "header.append",
+          "lineNumber": 523
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 524
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 525
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "max",
+          "lineNumber": 529
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "min",
+          "lineNumber": 529
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "round",
+          "lineNumber": 529
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "str",
+          "lineNumber": 535
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "str",
+          "lineNumber": 536
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "str",
+          "lineNumber": 537
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "str",
+          "lineNumber": 538
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 540
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 541
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 543
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.append",
+          "lineNumber": 544
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.append",
+          "lineNumber": 546
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.append",
+          "lineNumber": 548
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 549
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 550
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 554
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text.from_markup",
+          "lineNumber": 554
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 555
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 555
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 557
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 557
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 558
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 562
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text.from_markup",
+          "lineNumber": 562
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 563
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 563
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 565
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 565
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "detail.pipeline_steps.items",
+          "lineNumber": 567
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "isinstance",
+          "lineNumber": 568
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "step_data.get",
+          "lineNumber": 569
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "_DETAIL_STEP_COLORS.get",
+          "lineNumber": 570
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "_DETAIL_STEP_ICONS.get",
+          "lineNumber": 571
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 572
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.append",
+          "lineNumber": 573
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "step_data.get",
+          "lineNumber": 574
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.append",
+          "lineNumber": 575
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 576
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 577
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 581
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text.from_markup",
+          "lineNumber": 581
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Table",
+          "lineNumber": 583
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "dt_table.add_column",
+          "lineNumber": 591
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "dt_table.add_column",
+          "lineNumber": 592
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "dt_table.add_column",
+          "lineNumber": 593
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "dt_table.add_column",
+          "lineNumber": 594
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "dt_table.add_column",
+          "lineNumber": 595
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.get",
+          "lineNumber": 598
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "_DETAIL_STEP_COLORS.get",
+          "lineNumber": 599
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "_DETAIL_STEP_ICONS.get",
+          "lineNumber": 600
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "dt_table.add_row",
+          "lineNumber": 601
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 602
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.get",
+          "lineNumber": 602
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 603
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.get",
+          "lineNumber": 603
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 604
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 605
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.get",
+          "lineNumber": 605
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.get",
+          "lineNumber": 605
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 606
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "t.get",
+          "lineNumber": 606
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 609
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 610
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 614
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text.from_markup",
+          "lineNumber": 614
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 614
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 616
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "e.append",
+          "lineNumber": 617
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "err.get",
+          "lineNumber": 617
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "e.append",
+          "lineNumber": 618
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "err.get",
+          "lineNumber": 618
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "e.append",
+          "lineNumber": 619
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "err.get",
+          "lineNumber": 619
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 620
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 621
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 622
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 622
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 622
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 623
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 627
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text.from_markup",
+          "lineNumber": 627
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 627
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 629
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 629
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 630
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 631
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 631
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 631
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 632
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 635
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text.from_markup",
+          "lineNumber": 635
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 635
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 637
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 637
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 638
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 639
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text",
+          "lineNumber": 639
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "len",
+          "lineNumber": 639
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 640
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "lines.append",
+          "lineNumber": 643
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Text.from_markup",
+          "lineNumber": 643
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "RichGroup",
+          "lineNumber": 648
+        },
+        {
+          "caller": "_render_sandbox_detail_panel",
+          "callee": "Panel",
+          "lineNumber": 649
+        },
+        {
+          "caller": "_estimate_height",
+          "callee": "isinstance",
+          "lineNumber": 666
+        },
+        {
+          "caller": "_estimate_height",
+          "callee": "hasattr",
+          "lineNumber": 668
+        },
+        {
+          "caller": "_estimate_height",
+          "callee": "max",
+          "lineNumber": 669
+        },
+        {
+          "caller": "_estimate_height",
+          "callee": "hasattr",
+          "lineNumber": 671
+        },
+        {
+          "caller": "_estimate_height",
+          "callee": "hasattr",
+          "lineNumber": 673
+        },
+        {
+          "caller": "_estimate_height",
+          "callee": "str",
+          "lineNumber": 674
+        },
+        {
+          "caller": "_estimate_height",
+          "callee": "text.count",
+          "lineNumber": 677
+        },
+        {
+          "caller": "_estimate_height",
+          "callee": "max",
+          "lineNumber": 678
+        },
+        {
+          "caller": "record",
+          "callee": "time.time",
+          "lineNumber": 700
+        },
+        {
+          "caller": "record",
+          "callee": "self.history[\"__total__\"].append",
+          "lineNumber": 706
+        },
+        {
+          "caller": "record",
+          "callee": "self._times[\"__total__\"].append",
+          "lineNumber": 707
+        },
+        {
+          "caller": "record",
+          "callee": "len",
+          "lineNumber": 708
+        },
+        {
+          "caller": "record",
+          "callee": "self.history[name].append",
+          "lineNumber": 717
+        },
+        {
+          "caller": "record",
+          "callee": "self._times[name].append",
+          "lineNumber": 718
+        },
+        {
+          "caller": "record",
+          "callee": "len",
+          "lineNumber": 719
+        },
+        {
+          "caller": "sparkline",
+          "callee": "self.history.get",
+          "lineNumber": 725
+        },
+        {
+          "caller": "sparkline",
+          "callee": "len",
+          "lineNumber": 726
+        },
+        {
+          "caller": "sparkline",
+          "callee": "min",
+          "lineNumber": 728
+        },
+        {
+          "caller": "sparkline",
+          "callee": "max",
+          "lineNumber": 728
+        },
+        {
+          "caller": "sparkline",
+          "callee": "max",
+          "lineNumber": 729
+        },
+        {
+          "caller": "sparkline",
+          "callee": "\"\".join",
+          "lineNumber": 731
+        },
+        {
+          "caller": "sparkline",
+          "callee": "min",
+          "lineNumber": 731
+        },
+        {
+          "caller": "sparkline",
+          "callee": "int",
+          "lineNumber": 731
+        },
+        {
+          "caller": "burn_rate",
+          "callee": "self.history.get",
+          "lineNumber": 739
+        },
+        {
+          "caller": "burn_rate",
+          "callee": "self._times.get",
+          "lineNumber": 740
+        },
+        {
+          "caller": "burn_rate",
+          "callee": "len",
+          "lineNumber": 741
+        },
+        {
+          "caller": "burn_rate",
+          "callee": "len",
+          "lineNumber": 746
+        },
+        {
+          "caller": "burn_rate",
+          "callee": "len",
+          "lineNumber": 751
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_build_dispatch_map",
+          "lineNumber": 802
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "collect_sandbox_detail",
+          "lineNumber": 803
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_sandbox_detail_panel",
+          "lineNumber": 804
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "sum",
+          "lineNumber": 805
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_status_bar",
+          "lineNumber": 806
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 807
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout.split_column",
+          "lineNumber": 808
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 809
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_estimate_height",
+          "lineNumber": 809
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 810
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout[\"detail\"].update",
+          "lineNumber": 812
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout[\"footer\"].update",
+          "lineNumber": 813
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_build_dispatch_map",
+          "lineNumber": 818
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_collect_pipeline_sandboxes",
+          "lineNumber": 821
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_intel_panel",
+          "lineNumber": 827
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "tree_panels.append",
+          "lineNumber": 828
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_budget_panel",
+          "lineNumber": 832
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "tree_panels.append",
+          "lineNumber": 833
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_action_panel",
+          "lineNumber": 837
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "tree_panels.append",
+          "lineNumber": 838
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "delta.is_empty",
+          "lineNumber": 841
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_delta_banner",
+          "lineNumber": 842
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "tree_panels.append",
+          "lineNumber": 844
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "next",
+          "lineNumber": 848
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_load_dispatch_files",
+          "lineNumber": 856
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "build_pipeline_state",
+          "lineNumber": 857
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_build_rich_tree",
+          "lineNumber": 865
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "tree_panels.append",
+          "lineNumber": 866
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Panel",
+          "lineNumber": 866
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "tree_panels.append",
+          "lineNumber": 874
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_collapsed_sandbox",
+          "lineNumber": 874
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "set",
+          "lineNumber": 879
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "sorted",
+          "lineNumber": 880
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "next",
+          "lineNumber": 881
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "tree_panels.append",
+          "lineNumber": 890
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_single_node_tree",
+          "lineNumber": 890
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "tree_panels.append",
+          "lineNumber": 895
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_collapsed_sandbox",
+          "lineNumber": 895
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "bool",
+          "lineNumber": 899
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "sum",
+          "lineNumber": 902
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_status_bar",
+          "lineNumber": 903
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 904
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout.split_column",
+          "lineNumber": 905
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 906
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_estimate_height",
+          "lineNumber": 906
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_intel_panel",
+          "lineNumber": 906
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 907
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout[\"panel\"].update",
+          "lineNumber": 909
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_intel_panel",
+          "lineNumber": 909
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout[\"footer\"].update",
+          "lineNumber": 910
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_estimate_height",
+          "lineNumber": 913
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 914
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "enumerate",
+          "lineNumber": 914
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "sum",
+          "lineNumber": 915
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "_render_status_bar",
+          "lineNumber": 916
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 917
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout.split_column",
+          "lineNumber": 918
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "Layout",
+          "lineNumber": 918
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "enumerate",
+          "lineNumber": 920
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout[f\"p{i}\"].update",
+          "lineNumber": 921
+        },
+        {
+          "caller": "build_tree_layout",
+          "callee": "layout[\"footer\"].update",
+          "lineNumber": 922
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 18,
+        "functionCount": 17,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/hero/web/server.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1176,
+      "nonEmptyLines": 1024,
+      "functions": [
+        {
+          "name": "_startup_watch_dispatch",
+          "startLine": 71,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "_cleanup_stale_dispatches",
+          "startLine": 77,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "_watch_dispatch_dir",
+          "startLine": 125,
+          "endLine": 155,
+          "params": []
+        },
+        {
+          "name": "_check_auth",
+          "startLine": 159,
+          "endLine": 166,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "_build_army_tree",
+          "startLine": 172,
+          "endLine": 319,
+          "params": [
+            "name",
+            "status",
+            "model",
+            "current_task",
+            "tokens_used",
+            "tokens_budget",
+            "tool_calls"
+          ]
+        },
+        {
+          "name": "api_tree",
+          "startLine": 323,
+          "endLine": 357,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "api_summary",
+          "startLine": 361,
+          "endLine": 369,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "api_sandbox",
+          "startLine": 373,
+          "endLine": 385,
+          "params": [
+            "name",
+            "request"
+          ]
+        },
+        {
+          "name": "api_sandbox_timeline",
+          "startLine": 389,
+          "endLine": 409,
+          "params": [
+            "name",
+            "request"
+          ]
+        },
+        {
+          "name": "api_kill_sandbox",
+          "startLine": 413,
+          "endLine": 441,
+          "params": [
+            "name",
+            "request"
+          ]
+        },
+        {
+          "name": "api_spawn_sandbox",
+          "startLine": 445,
+          "endLine": 472,
+          "params": [
+            "name",
+            "request"
+          ]
+        },
+        {
+          "name": "api_bottlenecks",
+          "startLine": 476,
+          "endLine": 484,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "api_events",
+          "startLine": 488,
+          "endLine": 505,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "index",
+          "startLine": 509,
+          "endLine": 515,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "_serialize",
+          "startLine": 521,
+          "endLine": 531,
+          "params": [
+            "obj"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_startup_watch_dispatch",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "_cleanup_stale_dispatches",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "_watch_dispatch_dir",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "_check_auth",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "_build_army_tree",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "api_tree",
+          "line": 322,
+          "isDefault": false
+        },
+        {
+          "name": "api_summary",
+          "line": 360,
+          "isDefault": false
+        },
+        {
+          "name": "api_sandbox",
+          "line": 372,
+          "isDefault": false
+        },
+        {
+          "name": "api_sandbox_timeline",
+          "line": 388,
+          "isDefault": false
+        },
+        {
+          "name": "api_kill_sandbox",
+          "line": 412,
+          "isDefault": false
+        },
+        {
+          "name": "api_spawn_sandbox",
+          "line": 444,
+          "isDefault": false
+        },
+        {
+          "name": "api_bottlenecks",
+          "line": 475,
+          "isDefault": false
+        },
+        {
+          "name": "api_events",
+          "line": 487,
+          "isDefault": false
+        },
+        {
+          "name": "index",
+          "line": 508,
+          "isDefault": false
+        },
+        {
+          "name": "_serialize",
+          "line": 521,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_response",
+          "callee": "super().get_response",
+          "lineNumber": 60
+        },
+        {
+          "caller": "get_response",
+          "callee": "super",
+          "lineNumber": 60
+        },
+        {
+          "caller": "get_response",
+          "callee": "path.endswith",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_startup_watch_dispatch",
+          "callee": "asyncio.create_task",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_startup_watch_dispatch",
+          "callee": "_watch_dispatch_dir",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_startup_watch_dispatch",
+          "callee": "asyncio.create_task",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_startup_watch_dispatch",
+          "callee": "_cleanup_stale_dispatches",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "Path.home",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "set",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "set",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "INDEX.exists",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "INDEX.read_text",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "re.finditer",
+          "lineNumber": 94
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "m.group",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "m.group",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "active.add",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "dead.add",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "DISPATCH_DIR.exists",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "DISPATCH_DIR.iterdir",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "d.is_dir",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "logger.info",
+          "lineNumber": 107
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "shutil.rmtree",
+          "lineNumber": 108
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "DISPATCH_DIR.glob",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "_parse_viewport_toon",
+          "lineNumber": 113
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "f.read_text",
+          "lineNumber": 113
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "data.get",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "f.unlink",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "logger.warning",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_cleanup_stale_dispatches",
+          "callee": "asyncio.sleep",
+          "lineNumber": 122
+        },
+        {
+          "caller": "_watch_dispatch_dir",
+          "callee": "asyncio.sleep",
+          "lineNumber": 129
+        },
+        {
+          "caller": "_watch_dispatch_dir",
+          "callee": "DISPATCH_DIR.exists",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_watch_dispatch_dir",
+          "callee": "DISPATCH_DIR.iterdir",
+          "lineNumber": 134
+        },
+        {
+          "caller": "_watch_dispatch_dir",
+          "callee": "f.is_file",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_watch_dispatch_dir",
+          "callee": "f.stat",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_watch_dispatch_dir",
+          "callee": "current.items",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_watch_dispatch_dir",
+          "callee": "_dispatch_watch_mtimes.get",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_watch_dispatch_dir",
+          "callee": "logger.info",
+          "lineNumber": 155
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "os.environ.get",
+          "lineNumber": 161
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "request.headers.get",
+          "lineNumber": 164
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "HTTPException",
+          "lineNumber": 166
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "defaultdict",
+          "lineNumber": 184
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "sorted",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "DISPATCH_DIR.glob",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_parse_viewport_toon",
+          "lineNumber": 189
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "f.read_text",
+          "lineNumber": 189
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "data.get",
+          "lineNumber": 190
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "(data.get(\"role\") or \"SOLDIER\").upper",
+          "lineNumber": 191
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "data.get",
+          "lineNumber": 191
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "dispatch_roles[role].append",
+          "lineNumber": 192
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "sb_dir.exists",
+          "lineNumber": 198
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "sorted",
+          "lineNumber": 199
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "sb_dir.glob",
+          "lineNumber": 199
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "json.loads",
+          "lineNumber": 201
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "f.read_text",
+          "lineNumber": 201
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "(data.get(\"role\") or \"SOLDIER\").upper",
+          "lineNumber": 202
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "data.get",
+          "lineNumber": 202
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "dispatch_roles[role].append",
+          "lineNumber": 203
+        },
+        {
+          "caller": "_role_status",
+          "callee": "dispatch_roles.get",
+          "lineNumber": 217
+        },
+        {
+          "caller": "_role_status",
+          "callee": "max",
+          "lineNumber": 219
+        },
+        {
+          "caller": "_role_status",
+          "callee": "float",
+          "lineNumber": 219
+        },
+        {
+          "caller": "_role_status",
+          "callee": "e.get",
+          "lineNumber": 219
+        },
+        {
+          "caller": "_role_status",
+          "callee": "(latest.get(\"status\") or \"dispatched\").lower",
+          "lineNumber": 220
+        },
+        {
+          "caller": "_role_status",
+          "callee": "latest.get",
+          "lineNumber": 220
+        },
+        {
+          "caller": "_role_model",
+          "callee": "dispatch_roles.get",
+          "lineNumber": 233
+        },
+        {
+          "caller": "_role_model",
+          "callee": "max",
+          "lineNumber": 235
+        },
+        {
+          "caller": "_role_model",
+          "callee": "float",
+          "lineNumber": 235
+        },
+        {
+          "caller": "_role_model",
+          "callee": "e.get",
+          "lineNumber": 235
+        },
+        {
+          "caller": "_role_model",
+          "callee": "latest.get",
+          "lineNumber": 236
+        },
+        {
+          "caller": "_role_model",
+          "callee": "m.split",
+          "lineNumber": 238
+        },
+        {
+          "caller": "_role_task",
+          "callee": "dispatch_roles.get",
+          "lineNumber": 242
+        },
+        {
+          "caller": "_role_task",
+          "callee": "max",
+          "lineNumber": 244
+        },
+        {
+          "caller": "_role_task",
+          "callee": "float",
+          "lineNumber": 244
+        },
+        {
+          "caller": "_role_task",
+          "callee": "e.get",
+          "lineNumber": 244
+        },
+        {
+          "caller": "_role_task",
+          "callee": "latest.get",
+          "lineNumber": 245
+        },
+        {
+          "caller": "_role_task",
+          "callee": "latest.get",
+          "lineNumber": 245
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "dispatch_roles.get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "enumerate",
+          "lineNumber": 265
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "(e.get(\"status\") or \"dispatched\").lower",
+          "lineNumber": 266
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get",
+          "lineNumber": 266
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get(\"model\",\"\").split",
+          "lineNumber": 270
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get",
+          "lineNumber": 270
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get",
+          "lineNumber": 270
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "soldiers.append",
+          "lineNumber": 271
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_node",
+          "lineNumber": 271
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get",
+          "lineNumber": 274
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get",
+          "lineNumber": 274
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "dispatch_roles.get",
+          "lineNumber": 278
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "enumerate",
+          "lineNumber": 280
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "(e.get(\"status\") or \"dispatched\").lower",
+          "lineNumber": 281
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get",
+          "lineNumber": 281
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "verifiers.append",
+          "lineNumber": 285
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_node",
+          "lineNumber": 285
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get",
+          "lineNumber": 286
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "e.get",
+          "lineNumber": 286
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_role_status",
+          "lineNumber": 289
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_role_model",
+          "lineNumber": 290
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_role_task",
+          "lineNumber": 291
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_role_status",
+          "lineNumber": 293
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_role_model",
+          "lineNumber": 294
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_role_task",
+          "lineNumber": 295
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "status.lower",
+          "lineNumber": 299
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_node",
+          "lineNumber": 305
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "model.split",
+          "lineNumber": 306
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_node",
+          "lineNumber": 309
+        },
+        {
+          "caller": "_build_army_tree",
+          "callee": "_node",
+          "lineNumber": 313
+        },
+        {
+          "caller": "api_tree",
+          "callee": "_check_auth",
+          "lineNumber": 325
+        },
+        {
+          "caller": "api_tree",
+          "callee": "collect",
+          "lineNumber": 327
+        },
+        {
+          "caller": "api_tree",
+          "callee": "_build_army_tree",
+          "lineNumber": 336
+        },
+        {
+          "caller": "api_tree",
+          "callee": "trees.append",
+          "lineNumber": 345
+        },
+        {
+          "caller": "api_tree",
+          "callee": "(s.model or \"\").split",
+          "lineNumber": 348
+        },
+        {
+          "caller": "api_tree",
+          "callee": "JSONResponse",
+          "lineNumber": 354
+        },
+        {
+          "caller": "api_tree",
+          "callee": "logger.exception",
+          "lineNumber": 356
+        },
+        {
+          "caller": "api_tree",
+          "callee": "HTTPException",
+          "lineNumber": 357
+        },
+        {
+          "caller": "api_tree",
+          "callee": "str",
+          "lineNumber": 357
+        },
+        {
+          "caller": "api_summary",
+          "callee": "_check_auth",
+          "lineNumber": 363
+        },
+        {
+          "caller": "api_summary",
+          "callee": "collect",
+          "lineNumber": 365
+        },
+        {
+          "caller": "api_summary",
+          "callee": "JSONResponse",
+          "lineNumber": 366
+        },
+        {
+          "caller": "api_summary",
+          "callee": "_serialize",
+          "lineNumber": 366
+        },
+        {
+          "caller": "api_summary",
+          "callee": "logger.exception",
+          "lineNumber": 368
+        },
+        {
+          "caller": "api_summary",
+          "callee": "HTTPException",
+          "lineNumber": 369
+        },
+        {
+          "caller": "api_summary",
+          "callee": "str",
+          "lineNumber": 369
+        },
+        {
+          "caller": "api_sandbox",
+          "callee": "_check_auth",
+          "lineNumber": 375
+        },
+        {
+          "caller": "api_sandbox",
+          "callee": "collect_sandbox_detail",
+          "lineNumber": 377
+        },
+        {
+          "caller": "api_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 379
+        },
+        {
+          "caller": "api_sandbox",
+          "callee": "JSONResponse",
+          "lineNumber": 380
+        },
+        {
+          "caller": "api_sandbox",
+          "callee": "_serialize",
+          "lineNumber": 380
+        },
+        {
+          "caller": "api_sandbox",
+          "callee": "logger.exception",
+          "lineNumber": 384
+        },
+        {
+          "caller": "api_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 385
+        },
+        {
+          "caller": "api_sandbox",
+          "callee": "str",
+          "lineNumber": 385
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "_check_auth",
+          "lineNumber": 391
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "_load_dispatch_files",
+          "lineNumber": 393
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "files.items",
+          "lineNumber": 395
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "data.get",
+          "lineNumber": 396
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "data.get",
+          "lineNumber": 396
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "events.append",
+          "lineNumber": 398
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "str",
+          "lineNumber": 399
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "data.get",
+          "lineNumber": 402
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "data.get",
+          "lineNumber": 403
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "data.get",
+          "lineNumber": 404
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "data.get",
+          "lineNumber": 404
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "events.sort",
+          "lineNumber": 406
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "str",
+          "lineNumber": 406
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "JSONResponse",
+          "lineNumber": 407
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "HTTPException",
+          "lineNumber": 409
+        },
+        {
+          "caller": "api_sandbox_timeline",
+          "callee": "str",
+          "lineNumber": 409
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "_check_auth",
+          "lineNumber": 415
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "request.json",
+          "lineNumber": 417
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 419
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "body.get",
+          "lineNumber": 420
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 422
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 424
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "subprocess.run",
+          "lineNumber": 428
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "result.stderr.strip",
+          "lineNumber": 433
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "result.stdout.strip",
+          "lineNumber": 433
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 434
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 436
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 438
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "logger.info",
+          "lineNumber": 440
+        },
+        {
+          "caller": "api_kill_sandbox",
+          "callee": "JSONResponse",
+          "lineNumber": 441
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "_check_auth",
+          "lineNumber": 447
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "request.json",
+          "lineNumber": 449
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 451
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "body.get",
+          "lineNumber": 452
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "body.get",
+          "lineNumber": 453
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "cmd.extend",
+          "lineNumber": 459
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "cmd.extend",
+          "lineNumber": 461
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "subprocess.run",
+          "lineNumber": 462
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "result.stderr.strip",
+          "lineNumber": 464
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "result.stdout.strip",
+          "lineNumber": 464
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 465
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 467
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "HTTPException",
+          "lineNumber": 469
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "logger.info",
+          "lineNumber": 471
+        },
+        {
+          "caller": "api_spawn_sandbox",
+          "callee": "JSONResponse",
+          "lineNumber": 472
+        },
+        {
+          "caller": "api_bottlenecks",
+          "callee": "_check_auth",
+          "lineNumber": 478
+        },
+        {
+          "caller": "api_bottlenecks",
+          "callee": "detect_bottlenecks",
+          "lineNumber": 480
+        },
+        {
+          "caller": "api_bottlenecks",
+          "callee": "JSONResponse",
+          "lineNumber": 481
+        },
+        {
+          "caller": "api_bottlenecks",
+          "callee": "_serialize",
+          "lineNumber": 481
+        },
+        {
+          "caller": "api_bottlenecks",
+          "callee": "logger.exception",
+          "lineNumber": 483
+        },
+        {
+          "caller": "api_bottlenecks",
+          "callee": "HTTPException",
+          "lineNumber": 484
+        },
+        {
+          "caller": "api_bottlenecks",
+          "callee": "str",
+          "lineNumber": 484
+        },
+        {
+          "caller": "api_events",
+          "callee": "_check_auth",
+          "lineNumber": 490
+        },
+        {
+          "caller": "event_generator",
+          "callee": "collect",
+          "lineNumber": 496
+        },
+        {
+          "caller": "event_generator",
+          "callee": "json.dumps",
+          "lineNumber": 497
+        },
+        {
+          "caller": "event_generator",
+          "callee": "_serialize",
+          "lineNumber": 497
+        },
+        {
+          "caller": "event_generator",
+          "callee": "str",
+          "lineNumber": 502
+        },
+        {
+          "caller": "event_generator",
+          "callee": "asyncio.sleep",
+          "lineNumber": 503
+        },
+        {
+          "caller": "api_events",
+          "callee": "EventSourceResponse",
+          "lineNumber": 505
+        },
+        {
+          "caller": "api_events",
+          "callee": "event_generator",
+          "lineNumber": 505
+        },
+        {
+          "caller": "index",
+          "callee": "_check_auth",
+          "lineNumber": 511
+        },
+        {
+          "caller": "index",
+          "callee": "static_index.exists",
+          "lineNumber": 513
+        },
+        {
+          "caller": "index",
+          "callee": "FileResponse",
+          "lineNumber": 514
+        },
+        {
+          "caller": "index",
+          "callee": "str",
+          "lineNumber": 514
+        },
+        {
+          "caller": "index",
+          "callee": "HTMLResponse",
+          "lineNumber": 515
+        },
+        {
+          "caller": "_serialize",
+          "callee": "hasattr",
+          "lineNumber": 523
+        },
+        {
+          "caller": "_serialize",
+          "callee": "_serialize",
+          "lineNumber": 524
+        },
+        {
+          "caller": "_serialize",
+          "callee": "getattr",
+          "lineNumber": 524
+        },
+        {
+          "caller": "_serialize",
+          "callee": "isinstance",
+          "lineNumber": 525
+        },
+        {
+          "caller": "_serialize",
+          "callee": "_serialize",
+          "lineNumber": 526
+        },
+        {
+          "caller": "_serialize",
+          "callee": "obj.items",
+          "lineNumber": 526
+        },
+        {
+          "caller": "_serialize",
+          "callee": "isinstance",
+          "lineNumber": 527
+        },
+        {
+          "caller": "_serialize",
+          "callee": "_serialize",
+          "lineNumber": 528
+        },
+        {
+          "caller": "_serialize",
+          "callee": "isinstance",
+          "lineNumber": 529
+        },
+        {
+          "caller": "_serialize",
+          "callee": "type",
+          "lineNumber": 529
+        },
+        {
+          "caller": "_serialize",
+          "callee": "str",
+          "lineNumber": 530
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 15,
+        "functionCount": 15,
+        "classCount": 0
+      }
+    }
+  ]
+}

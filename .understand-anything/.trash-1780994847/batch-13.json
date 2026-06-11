@@ -1,0 +1,245 @@
+{
+  "nodes": [
+    {
+      "id": "document:VIEWPORT_IMPROVE_PLAN_DS4.md",
+      "type": "document",
+      "name": "VIEWPORT_IMPROVE_PLAN_DS4.md",
+      "filePath": "VIEWPORT_IMPROVE_PLAN_DS4.md",
+      "summary": "Document: VIEWPORT_IMPROVE_PLAN_DS4.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:VIEWPORT_IMPROVE_PLAN_DS4.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "VIEWPORT_IMPROVE_PLAN_DS4.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:improvement_plan_deepseek.md",
+      "type": "document",
+      "name": "improvement_plan_deepseek.md",
+      "filePath": "improvement_plan_deepseek.md",
+      "summary": "Document: improvement_plan_deepseek.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:improvement_plan_deepseek.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "improvement_plan_deepseek.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:improvement_plan_mimov25.md",
+      "type": "document",
+      "name": "improvement_plan_mimov25.md",
+      "filePath": "improvement_plan_mimov25.md",
+      "summary": "Document: improvement_plan_mimov25.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:improvement_plan_mimov25.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "improvement_plan_mimov25.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:improvement_plan_mimov25pro.md",
+      "type": "document",
+      "name": "improvement_plan_mimov25pro.md",
+      "filePath": "improvement_plan_mimov25pro.md",
+      "summary": "Document: improvement_plan_mimov25pro.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:improvement_plan_mimov25pro.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "improvement_plan_mimov25pro.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:improvement_plan_minimax.md",
+      "type": "document",
+      "name": "improvement_plan_minimax.md",
+      "filePath": "improvement_plan_minimax.md",
+      "summary": "Document: improvement_plan_minimax.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:improvement_plan_minimax.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "improvement_plan_minimax.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:improvement_plan_step35.md",
+      "type": "document",
+      "name": "improvement_plan_step35.md",
+      "filePath": "improvement_plan_step35.md",
+      "summary": "Document: improvement_plan_step35.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:improvement_plan_step35.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "improvement_plan_step35.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:improvement_plan_step36.md",
+      "type": "document",
+      "name": "improvement_plan_step36.md",
+      "filePath": "improvement_plan_step36.md",
+      "summary": "Document: improvement_plan_step36.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:improvement_plan_step36.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "improvement_plan_step36.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:pyproject.toml",
+      "type": "config",
+      "name": "pyproject.toml",
+      "filePath": "pyproject.toml",
+      "summary": "Config: pyproject.toml",
+      "tags": [
+        "toml",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:pyproject.toml:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "pyproject.toml",
+      "summary": "Section: section",
+      "tags": [
+        "toml",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:viewport_competition_all_entries.md",
+      "type": "document",
+      "name": "viewport_competition_all_entries.md",
+      "filePath": "viewport_competition_all_entries.md",
+      "summary": "Document: viewport_competition_all_entries.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:viewport_competition_all_entries.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "viewport_competition_all_entries.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:viewport_competition_kimi_review.md",
+      "type": "document",
+      "name": "viewport_competition_kimi_review.md",
+      "filePath": "viewport_competition_kimi_review.md",
+      "summary": "Document: viewport_competition_kimi_review.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:viewport_competition_kimi_review.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "viewport_competition_kimi_review.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

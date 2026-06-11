@@ -1,0 +1,6 @@
+"""HERO CLI entry point."""
+
+from hero.cli import main
+
+if __name__ == "__main__":
+    main()

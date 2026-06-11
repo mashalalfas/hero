@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "id": "config:.understand-anything/.trash-1780994847/import-map-input.json",
+      "type": "config",
+      "name": "import-map-input.json",
+      "filePath": ".understand-anything/.trash-1780994847/import-map-input.json",
+      "summary": "Config: import-map-input.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/import-map-input.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/import-map-input.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/import-map.json",
+      "type": "config",
+      "name": "import-map.json",
+      "filePath": ".understand-anything/.trash-1780994847/import-map.json",
+      "summary": "Config: import-map.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/import-map.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/import-map.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/layers.json",
+      "type": "config",
+      "name": "layers.json",
+      "filePath": ".understand-anything/.trash-1780994847/layers.json",
+      "summary": "Config: layers.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/layers.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/layers.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/review.json",
+      "type": "config",
+      "name": "review.json",
+      "filePath": ".understand-anything/.trash-1780994847/review.json",
+      "summary": "Config: review.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/review.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/review.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/tour.json",
+      "type": "config",
+      "name": "tour.json",
+      "filePath": ".understand-anything/.trash-1780994847/tour.json",
+      "summary": "Config: tour.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/tour.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/tour.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

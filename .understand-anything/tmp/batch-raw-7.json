@@ -1,0 +1,2803 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 15,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/hero/web/static/js/app.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 124,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "connectSSE",
+          "startLine": 18,
+          "endLine": 41,
+          "params": []
+        },
+        {
+          "name": "loadData",
+          "startLine": 44,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "init",
+          "startLine": 92,
+          "endLine": 122,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "connectSSE",
+          "callee": "getToken",
+          "lineNumber": 19
+        },
+        {
+          "caller": "connectSSE",
+          "callee": "sse.connect",
+          "lineNumber": 20
+        },
+        {
+          "caller": "connectSSE",
+          "callee": "sse.connect",
+          "lineNumber": 20
+        },
+        {
+          "caller": "connectSSE",
+          "callee": "sse.on",
+          "lineNumber": 21
+        },
+        {
+          "caller": "connectSSE",
+          "callee": "getState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "connectSSE",
+          "callee": "setState",
+          "lineNumber": 38
+        },
+        {
+          "caller": "connectSSE",
+          "callee": "sse.on",
+          "lineNumber": 40
+        },
+        {
+          "caller": "connectSSE",
+          "callee": "setState",
+          "lineNumber": 40
+        },
+        {
+          "caller": "loadData",
+          "callee": "Promise.all",
+          "lineNumber": 46
+        },
+        {
+          "caller": "loadData",
+          "callee": "fetchTree",
+          "lineNumber": 47
+        },
+        {
+          "caller": "loadData",
+          "callee": "fetchSummary",
+          "lineNumber": 48
+        },
+        {
+          "caller": "loadData",
+          "callee": "setState",
+          "lineNumber": 72
+        },
+        {
+          "caller": "loadData",
+          "callee": "getState",
+          "lineNumber": 81
+        },
+        {
+          "caller": "loadData",
+          "callee": "history.push",
+          "lineNumber": 82
+        },
+        {
+          "caller": "loadData",
+          "callee": "history.shift",
+          "lineNumber": 83
+        },
+        {
+          "caller": "loadData",
+          "callee": "setState",
+          "lineNumber": 84
+        },
+        {
+          "caller": "loadData",
+          "callee": "setState",
+          "lineNumber": 86
+        },
+        {
+          "caller": "loadData",
+          "callee": "showToast",
+          "lineNumber": 87
+        },
+        {
+          "caller": "init",
+          "callee": "initToastContainer",
+          "lineNumber": 93
+        },
+        {
+          "caller": "init",
+          "callee": "$",
+          "lineNumber": 96
+        },
+        {
+          "caller": "init",
+          "callee": "createHeader",
+          "lineNumber": 97
+        },
+        {
+          "caller": "init",
+          "callee": "$",
+          "lineNumber": 100
+        },
+        {
+          "caller": "init",
+          "callee": "createStatsBar",
+          "lineNumber": 101
+        },
+        {
+          "caller": "init",
+          "callee": "$",
+          "lineNumber": 104
+        },
+        {
+          "caller": "init",
+          "callee": "createSandboxCard",
+          "lineNumber": 105
+        },
+        {
+          "caller": "init",
+          "callee": "$",
+          "lineNumber": 108
+        },
+        {
+          "caller": "init",
+          "callee": "createDetailPanel",
+          "lineNumber": 109
+        },
+        {
+          "caller": "init",
+          "callee": "loadData",
+          "lineNumber": 112
+        },
+        {
+          "caller": "init",
+          "callee": "connectSSE",
+          "lineNumber": 113
+        },
+        {
+          "caller": "init",
+          "callee": "window.addEventListener",
+          "lineNumber": 116
+        },
+        {
+          "caller": "init",
+          "callee": "loadData",
+          "lineNumber": 117
+        },
+        {
+          "caller": "init",
+          "callee": "setInterval",
+          "lineNumber": 121
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 0,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/controls.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 82,
+      "functions": [
+        {
+          "name": "renderControls",
+          "startLine": 15,
+          "endLine": 93,
+          "params": [
+            "container",
+            "sandboxName",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "renderControls",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "renderControls",
+          "callee": "(status || '').toLowerCase",
+          "lineNumber": 19
+        },
+        {
+          "caller": "renderControls",
+          "callee": "escapeAttr",
+          "lineNumber": 23
+        },
+        {
+          "caller": "renderControls",
+          "callee": "escapeAttr",
+          "lineNumber": 23
+        },
+        {
+          "caller": "renderControls",
+          "callee": "container.querySelector",
+          "lineNumber": 32
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "setTimeout",
+          "lineNumber": 43
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "console.debug",
+          "lineNumber": 45
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "showModal",
+          "lineNumber": 47
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "escapeAttr",
+          "lineNumber": 49
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "console.debug",
+          "lineNumber": 54
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "killSandbox",
+          "lineNumber": 55
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "showToast",
+          "lineNumber": 56
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "window.dispatchEvent",
+          "lineNumber": 57
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "showToast",
+          "lineNumber": 59
+        },
+        {
+          "caller": "showConfirm",
+          "callee": "showToast",
+          "lineNumber": 63
+        },
+        {
+          "caller": "renderControls",
+          "callee": "btn.addEventListener",
+          "lineNumber": 69
+        },
+        {
+          "caller": "renderControls",
+          "callee": "btn.getBoundingClientRect",
+          "lineNumber": 73
+        },
+        {
+          "caller": "renderControls",
+          "callee": "e.preventDefault",
+          "lineNumber": 78
+        },
+        {
+          "caller": "renderControls",
+          "callee": "showConfirm",
+          "lineNumber": 79
+        },
+        {
+          "caller": "renderControls",
+          "callee": "btn.addEventListener",
+          "lineNumber": 83
+        },
+        {
+          "caller": "renderControls",
+          "callee": "showConfirm",
+          "lineNumber": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/detail-panel.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 234,
+      "nonEmptyLines": 208,
+      "functions": [
+        {
+          "name": "create",
+          "startLine": 6,
+          "endLine": 234,
+          "params": [
+            "container"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "initPanel",
+          "callee": "document.createElement",
+          "lineNumber": 14
+        },
+        {
+          "caller": "initPanel",
+          "callee": "panelEl.setAttribute",
+          "lineNumber": 17
+        },
+        {
+          "caller": "initPanel",
+          "callee": "panelEl.setAttribute",
+          "lineNumber": 18
+        },
+        {
+          "caller": "initPanel",
+          "callee": "panelEl.setAttribute",
+          "lineNumber": 19
+        },
+        {
+          "caller": "initPanel",
+          "callee": "container.appendChild",
+          "lineNumber": 21
+        },
+        {
+          "caller": "initPanel",
+          "callee": "document.createElement",
+          "lineNumber": 23
+        },
+        {
+          "caller": "initPanel",
+          "callee": "container.appendChild",
+          "lineNumber": 26
+        },
+        {
+          "caller": "initPanel",
+          "callee": "backdropEl.addEventListener",
+          "lineNumber": 29
+        },
+        {
+          "caller": "closePanel",
+          "callee": "document.removeEventListener",
+          "lineNumber": 36
+        },
+        {
+          "caller": "closePanel",
+          "callee": "getState",
+          "lineNumber": 37
+        },
+        {
+          "caller": "closePanel",
+          "callee": "setState",
+          "lineNumber": 39
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "closePanel",
+          "lineNumber": 45
+        },
+        {
+          "caller": "openPanel",
+          "callee": "initPanel",
+          "lineNumber": 50
+        },
+        {
+          "caller": "openPanel",
+          "callee": "escapeHtml",
+          "lineNumber": 55
+        },
+        {
+          "caller": "openPanel",
+          "callee": "document.addEventListener",
+          "lineNumber": 69
+        },
+        {
+          "caller": "openPanel",
+          "callee": "panelEl.querySelector",
+          "lineNumber": 72
+        },
+        {
+          "caller": "openPanel",
+          "callee": "closeBtn.addEventListener",
+          "lineNumber": 73
+        },
+        {
+          "caller": "openPanel",
+          "callee": "loadSandboxData",
+          "lineNumber": 76
+        },
+        {
+          "caller": "loadSandboxData",
+          "callee": "panelEl.querySelector",
+          "lineNumber": 80
+        },
+        {
+          "caller": "loadSandboxData",
+          "callee": "panelEl.querySelector",
+          "lineNumber": 81
+        },
+        {
+          "caller": "loadSandboxData",
+          "callee": "Promise.all",
+          "lineNumber": 85
+        },
+        {
+          "caller": "loadSandboxData",
+          "callee": "fetchSandbox",
+          "lineNumber": 86
+        },
+        {
+          "caller": "loadSandboxData",
+          "callee": "fetchSandboxTimeline",
+          "lineNumber": 87
+        },
+        {
+          "caller": "loadSandboxData",
+          "callee": "buildSections",
+          "lineNumber": 91
+        },
+        {
+          "caller": "loadSandboxData",
+          "callee": "escapeHtml",
+          "lineNumber": 94
+        },
+        {
+          "caller": "fetchSandboxTimeline",
+          "callee": "fetch",
+          "lineNumber": 101
+        },
+        {
+          "caller": "fetchSandboxTimeline",
+          "callee": "encodeURIComponent",
+          "lineNumber": 101
+        },
+        {
+          "caller": "fetchSandboxTimeline",
+          "callee": "resp.json",
+          "lineNumber": 103
+        },
+        {
+          "caller": "buildSections",
+          "callee": "Math.min",
+          "lineNumber": 115
+        },
+        {
+          "caller": "buildSections",
+          "callee": "Math.round",
+          "lineNumber": 115
+        },
+        {
+          "caller": "buildSections",
+          "callee": "sections.push",
+          "lineNumber": 116
+        },
+        {
+          "caller": "buildSections",
+          "callee": "tokenBarClass",
+          "lineNumber": 121
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 123
+        },
+        {
+          "caller": "buildSections",
+          "callee": "formatNumber",
+          "lineNumber": 123
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 123
+        },
+        {
+          "caller": "buildSections",
+          "callee": "formatNumber",
+          "lineNumber": 123
+        },
+        {
+          "caller": "buildSections",
+          "callee": "sections.push",
+          "lineNumber": 131
+        },
+        {
+          "caller": "buildSections",
+          "callee": "pipelineSteps.map(step => `\n            <li class=\"pipeline-step status-${step.status || 'pending'}\">\n              <span class=\"step-name\">${escapeHtml(step.name || 'Step')}</span>\n              ${step.duration ? `<span class=\"step-duration\">${escapeHtml(step.duration)}</span>` : ''}\n            </li>`).join",
+          "lineNumber": 135
+        },
+        {
+          "caller": "buildSections",
+          "callee": "pipelineSteps.map",
+          "lineNumber": 135
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 137
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 138
+        },
+        {
+          "caller": "buildSections",
+          "callee": "sections.push",
+          "lineNumber": 147
+        },
+        {
+          "caller": "buildSections",
+          "callee": "tasks.map(t => `\n            <li class=\"task-item status-${t.status || 'pending'}\">\n              <span class=\"task-text\">${escapeHtml(t.task || t.name || 'Unnamed task')}</span>\n              <span class=\"task-status\">${escapeHtml(t.status || 'pending')}</span>\n            </li>`).join",
+          "lineNumber": 151
+        },
+        {
+          "caller": "buildSections",
+          "callee": "tasks.map",
+          "lineNumber": 151
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 153
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 154
+        },
+        {
+          "caller": "buildSections",
+          "callee": "sections.push",
+          "lineNumber": 163
+        },
+        {
+          "caller": "buildSections",
+          "callee": "errors.map(e => `\n            <li class=\"error-item\">\n              <code>${escapeHtml(e.message || e)}</code>\n              ${e.count ? `<span class=\"error-count\">x${e.count}</span>` : ''}\n            </li>`).join",
+          "lineNumber": 167
+        },
+        {
+          "caller": "buildSections",
+          "callee": "errors.map",
+          "lineNumber": 167
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 169
+        },
+        {
+          "caller": "buildSections",
+          "callee": "sections.push",
+          "lineNumber": 179
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 182
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 183
+        },
+        {
+          "caller": "buildSections",
+          "callee": "escapeHtml",
+          "lineNumber": 184
+        },
+        {
+          "caller": "buildSections",
+          "callee": "sections.push",
+          "lineNumber": 190
+        },
+        {
+          "caller": "buildSections",
+          "callee": "renderTimeline",
+          "lineNumber": 194
+        },
+        {
+          "caller": "buildSections",
+          "callee": "sections.join",
+          "lineNumber": 199
+        },
+        {
+          "caller": "create",
+          "callee": "subscribe",
+          "lineNumber": 209
+        },
+        {
+          "caller": "create",
+          "callee": "openPanel",
+          "lineNumber": 212
+        },
+        {
+          "caller": "create",
+          "callee": "closePanel",
+          "lineNumber": 214
+        },
+        {
+          "caller": "create",
+          "callee": "closePanel",
+          "lineNumber": 221
+        },
+        {
+          "caller": "create",
+          "callee": "unsubscribe",
+          "lineNumber": 222
+        },
+        {
+          "caller": "create",
+          "callee": "panelEl.remove",
+          "lineNumber": 224
+        },
+        {
+          "caller": "create",
+          "callee": "backdropEl.remove",
+          "lineNumber": 228
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/header.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "create",
+          "startLine": 4,
+          "endLine": 31,
+          "params": [
+            "container"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "getState",
+          "lineNumber": 5
+        },
+        {
+          "caller": "create",
+          "callee": "subscribe",
+          "lineNumber": 22
+        },
+        {
+          "caller": "create",
+          "callee": "container.querySelector",
+          "lineNumber": 23
+        },
+        {
+          "caller": "create",
+          "callee": "indicator.querySelector",
+          "lineNumber": 26
+        },
+        {
+          "caller": "create",
+          "callee": "unsubscribe",
+          "lineNumber": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/modal.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 179,
+      "nonEmptyLines": 152,
+      "functions": [
+        {
+          "name": "showModal",
+          "startLine": 16,
+          "endLine": 146,
+          "params": []
+        },
+        {
+          "name": "closeModal",
+          "startLine": 151,
+          "endLine": 179,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "showModal",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "closeModal",
+          "line": 151,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "showModal",
+          "callee": "closeModal",
+          "lineNumber": 26
+        },
+        {
+          "caller": "showModal",
+          "callee": "Date.now",
+          "lineNumber": 28
+        },
+        {
+          "caller": "showModal",
+          "callee": "document.createElement",
+          "lineNumber": 30
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.setAttribute",
+          "lineNumber": 33
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.setAttribute",
+          "lineNumber": 34
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.setAttribute",
+          "lineNumber": 35
+        },
+        {
+          "caller": "showModal",
+          "callee": "escapeHtml",
+          "lineNumber": 40
+        },
+        {
+          "caller": "showModal",
+          "callee": "escapeHtml",
+          "lineNumber": 45
+        },
+        {
+          "caller": "showModal",
+          "callee": "escapeAttr",
+          "lineNumber": 46
+        },
+        {
+          "caller": "showModal",
+          "callee": "escapeHtml",
+          "lineNumber": 46
+        },
+        {
+          "caller": "showModal",
+          "callee": "document.body.appendChild",
+          "lineNumber": 52
+        },
+        {
+          "caller": "showModal",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 56
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.classList.add",
+          "lineNumber": 57
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.querySelectorAll",
+          "lineNumber": 61
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.querySelector",
+          "lineNumber": 66
+        },
+        {
+          "caller": "showModal",
+          "callee": "cancelBtn.focus",
+          "lineNumber": 67
+        },
+        {
+          "caller": "handleConfirm",
+          "callee": "closeModal",
+          "lineNumber": 79
+        },
+        {
+          "caller": "handleConfirm",
+          "callee": "onConfirm",
+          "lineNumber": 80
+        },
+        {
+          "caller": "handleCancel",
+          "callee": "closeModal",
+          "lineNumber": 84
+        },
+        {
+          "caller": "handleCancel",
+          "callee": "onCancel",
+          "lineNumber": 85
+        },
+        {
+          "caller": "handleBackdropClick",
+          "callee": "e.target.classList.contains",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleBackdropClick",
+          "callee": "handleCancel",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "e.preventDefault",
+          "lineNumber": 96
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "handleCancel",
+          "lineNumber": 97
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "e.preventDefault",
+          "lineNumber": 105
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "handleConfirm",
+          "lineNumber": 106
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "e.preventDefault",
+          "lineNumber": 115
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "lastFocusable?.focus",
+          "lineNumber": 116
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "e.preventDefault",
+          "lineNumber": 120
+        },
+        {
+          "caller": "handleKeydown",
+          "callee": "firstFocusable?.focus",
+          "lineNumber": 121
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.querySelector",
+          "lineNumber": 128
+        },
+        {
+          "caller": "showModal",
+          "callee": "confirmBtn.addEventListener",
+          "lineNumber": 129
+        },
+        {
+          "caller": "showModal",
+          "callee": "cancelBtn.addEventListener",
+          "lineNumber": 132
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.querySelector",
+          "lineNumber": 135
+        },
+        {
+          "caller": "showModal",
+          "callee": "closeBtn.addEventListener",
+          "lineNumber": 136
+        },
+        {
+          "caller": "showModal",
+          "callee": "overlay.addEventListener",
+          "lineNumber": 139
+        },
+        {
+          "caller": "showModal",
+          "callee": "document.addEventListener",
+          "lineNumber": 142
+        },
+        {
+          "caller": "closeModal",
+          "callee": "overlay.querySelector",
+          "lineNumber": 159
+        },
+        {
+          "caller": "closeModal",
+          "callee": "overlay.querySelector",
+          "lineNumber": 160
+        },
+        {
+          "caller": "closeModal",
+          "callee": "overlay.querySelector",
+          "lineNumber": 161
+        },
+        {
+          "caller": "closeModal",
+          "callee": "confirmBtn.removeEventListener",
+          "lineNumber": 163
+        },
+        {
+          "caller": "closeModal",
+          "callee": "cancelBtn.removeEventListener",
+          "lineNumber": 164
+        },
+        {
+          "caller": "closeModal",
+          "callee": "closeBtn.removeEventListener",
+          "lineNumber": 165
+        },
+        {
+          "caller": "closeModal",
+          "callee": "overlay.removeEventListener",
+          "lineNumber": 166
+        },
+        {
+          "caller": "closeModal",
+          "callee": "document.removeEventListener",
+          "lineNumber": 168
+        },
+        {
+          "caller": "closeModal",
+          "callee": "overlay.classList.add",
+          "lineNumber": 172
+        },
+        {
+          "caller": "closeModal",
+          "callee": "setTimeout",
+          "lineNumber": 173
+        },
+        {
+          "caller": "closeModal",
+          "callee": "overlay.parentNode.removeChild",
+          "lineNumber": 174
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/sandbox-card.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 101,
+      "functions": [
+        {
+          "name": "create",
+          "startLine": 6,
+          "endLine": 32,
+          "params": [
+            "container"
+          ]
+        },
+        {
+          "name": "render",
+          "startLine": 34,
+          "endLine": 68,
+          "params": [
+            "container",
+            "state"
+          ]
+        },
+        {
+          "name": "renderCard",
+          "startLine": 70,
+          "endLine": 114,
+          "params": [
+            "sb"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "getState",
+          "lineNumber": 7
+        },
+        {
+          "caller": "create",
+          "callee": "render",
+          "lineNumber": 10
+        },
+        {
+          "caller": "create",
+          "callee": "container.addEventListener",
+          "lineNumber": 14
+        },
+        {
+          "caller": "create",
+          "callee": "e.target.closest",
+          "lineNumber": 15
+        },
+        {
+          "caller": "create",
+          "callee": "e.target.closest",
+          "lineNumber": 16
+        },
+        {
+          "caller": "create",
+          "callee": "setState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "create",
+          "callee": "subscribe",
+          "lineNumber": 23
+        },
+        {
+          "caller": "create",
+          "callee": "render",
+          "lineNumber": 24
+        },
+        {
+          "caller": "create",
+          "callee": "unsubscribe",
+          "lineNumber": 29
+        },
+        {
+          "caller": "render",
+          "callee": "Object.entries",
+          "lineNumber": 38
+        },
+        {
+          "caller": "render",
+          "callee": "allSandboxes.find",
+          "lineNumber": 39
+        },
+        {
+          "caller": "render",
+          "callee": "allSandboxes.push",
+          "lineNumber": 40
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 46
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 51
+        },
+        {
+          "caller": "render",
+          "callee": "allSandboxes.map(sb => renderCard(sb)).join",
+          "lineNumber": 56
+        },
+        {
+          "caller": "render",
+          "callee": "allSandboxes.map",
+          "lineNumber": 56
+        },
+        {
+          "caller": "render",
+          "callee": "renderCard",
+          "lineNumber": 56
+        },
+        {
+          "caller": "render",
+          "callee": "allSandboxes.forEach",
+          "lineNumber": 61
+        },
+        {
+          "caller": "render",
+          "callee": "(sb.status || '').toLowerCase",
+          "lineNumber": 62
+        },
+        {
+          "caller": "render",
+          "callee": "container.querySelector",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "escapeAttr",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "['active', 'running', 'working', 'spawning'].includes",
+          "lineNumber": 64
+        },
+        {
+          "caller": "render",
+          "callee": "renderControls",
+          "lineNumber": 65
+        },
+        {
+          "caller": "renderCard",
+          "callee": "(sb.status || 'idle').toLowerCase",
+          "lineNumber": 72
+        },
+        {
+          "caller": "renderCard",
+          "callee": "Math.min",
+          "lineNumber": 76
+        },
+        {
+          "caller": "renderCard",
+          "callee": "Math.round",
+          "lineNumber": 76
+        },
+        {
+          "caller": "renderCard",
+          "callee": "['active', 'running', 'working', 'spawning'].includes",
+          "lineNumber": 77
+        },
+        {
+          "caller": "renderCard",
+          "callee": "renderTree",
+          "lineNumber": 82
+        },
+        {
+          "caller": "renderCard",
+          "callee": "escapeAttr",
+          "lineNumber": 85
+        },
+        {
+          "caller": "renderCard",
+          "callee": "escapeAttr",
+          "lineNumber": 85
+        },
+        {
+          "caller": "renderCard",
+          "callee": "escapeHtml",
+          "lineNumber": 87
+        },
+        {
+          "caller": "renderCard",
+          "callee": "escapeHtml",
+          "lineNumber": 88
+        },
+        {
+          "caller": "renderCard",
+          "callee": "escapeHtml",
+          "lineNumber": 89
+        },
+        {
+          "caller": "renderCard",
+          "callee": "escapeAttr",
+          "lineNumber": 90
+        },
+        {
+          "caller": "renderCard",
+          "callee": "escapeAttr",
+          "lineNumber": 94
+        },
+        {
+          "caller": "renderCard",
+          "callee": "formatNumber",
+          "lineNumber": 100
+        },
+        {
+          "caller": "renderCard",
+          "callee": "formatNumber",
+          "lineNumber": 101
+        },
+        {
+          "caller": "renderCard",
+          "callee": "escapeAttr",
+          "lineNumber": 109
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/stats-bar.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "create",
+          "startLine": 4,
+          "endLine": 19,
+          "params": [
+            "container"
+          ]
+        },
+        {
+          "name": "render",
+          "startLine": 21,
+          "endLine": 59,
+          "params": [
+            "container",
+            "state"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "getState",
+          "lineNumber": 5
+        },
+        {
+          "caller": "create",
+          "callee": "render",
+          "lineNumber": 8
+        },
+        {
+          "caller": "create",
+          "callee": "subscribe",
+          "lineNumber": 10
+        },
+        {
+          "caller": "create",
+          "callee": "render",
+          "lineNumber": 11
+        },
+        {
+          "caller": "create",
+          "callee": "unsubscribe",
+          "lineNumber": 16
+        },
+        {
+          "caller": "render",
+          "callee": "Math.round",
+          "lineNumber": 26
+        },
+        {
+          "caller": "render",
+          "callee": "Object.values",
+          "lineNumber": 29
+        },
+        {
+          "caller": "render",
+          "callee": "sandboxList.filter",
+          "lineNumber": 30
+        },
+        {
+          "caller": "render",
+          "callee": "(sb.status || '').toLowerCase",
+          "lineNumber": 31
+        },
+        {
+          "caller": "render",
+          "callee": "['active', 'running', 'working', 'spawning'].includes",
+          "lineNumber": 32
+        },
+        {
+          "caller": "render",
+          "callee": "formatNumber",
+          "lineNumber": 40
+        },
+        {
+          "caller": "render",
+          "callee": "formatNumber",
+          "lineNumber": 45
+        },
+        {
+          "caller": "render",
+          "callee": "formatNumber",
+          "lineNumber": 50
+        },
+        {
+          "caller": "render",
+          "callee": "formatNumber",
+          "lineNumber": 51
+        },
+        {
+          "caller": "render",
+          "callee": "formatNumber",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/timeline.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "renderTimeline",
+          "startLine": 15,
+          "endLine": 32,
+          "params": [
+            "events"
+          ]
+        },
+        {
+          "name": "renderEvent",
+          "startLine": 34,
+          "endLine": 58,
+          "params": [
+            "event",
+            "idx",
+            "total"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "renderTimeline",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "renderTimeline",
+          "callee": "Array.isArray",
+          "lineNumber": 16
+        },
+        {
+          "caller": "renderTimeline",
+          "callee": "[...events].sort",
+          "lineNumber": 21
+        },
+        {
+          "caller": "renderTimeline",
+          "callee": "sorted.map((event, idx) => renderEvent(event, idx, sorted.length)).join",
+          "lineNumber": 29
+        },
+        {
+          "caller": "renderTimeline",
+          "callee": "sorted.map",
+          "lineNumber": 29
+        },
+        {
+          "caller": "renderTimeline",
+          "callee": "renderEvent",
+          "lineNumber": 29
+        },
+        {
+          "caller": "renderEvent",
+          "callee": "timeAgo",
+          "lineNumber": 42
+        },
+        {
+          "caller": "renderEvent",
+          "callee": "escapeAttr",
+          "lineNumber": 46
+        },
+        {
+          "caller": "renderEvent",
+          "callee": "escapeHtml",
+          "lineNumber": 52
+        },
+        {
+          "caller": "renderEvent",
+          "callee": "escapeHtml",
+          "lineNumber": 53
+        },
+        {
+          "caller": "renderEvent",
+          "callee": "escapeHtml",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/toast.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 130,
+      "nonEmptyLines": 107,
+      "functions": [
+        {
+          "name": "initToastContainer",
+          "startLine": 17,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "showToast",
+          "startLine": 37,
+          "endLine": 85,
+          "params": [
+            "message",
+            "type",
+            "duration"
+          ]
+        },
+        {
+          "name": "dismissToast",
+          "startLine": 87,
+          "endLine": 101,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "typeIcon",
+          "startLine": 103,
+          "endLine": 111,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "showSuccessToast",
+          "startLine": 116,
+          "endLine": 118,
+          "params": [
+            "message",
+            "duration"
+          ]
+        },
+        {
+          "name": "showErrorToast",
+          "startLine": 120,
+          "endLine": 122,
+          "params": [
+            "message",
+            "duration"
+          ]
+        },
+        {
+          "name": "showInfoToast",
+          "startLine": 124,
+          "endLine": 126,
+          "params": [
+            "message",
+            "duration"
+          ]
+        },
+        {
+          "name": "showWarningToast",
+          "startLine": 128,
+          "endLine": 130,
+          "params": [
+            "message",
+            "duration"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "initToastContainer",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "showToast",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "showSuccessToast",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "showErrorToast",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "showInfoToast",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "showWarningToast",
+          "line": 128,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "initToastContainer",
+          "callee": "document.body.contains",
+          "lineNumber": 18
+        },
+        {
+          "caller": "initToastContainer",
+          "callee": "document.createElement",
+          "lineNumber": 20
+        },
+        {
+          "caller": "initToastContainer",
+          "callee": "container.setAttribute",
+          "lineNumber": 23
+        },
+        {
+          "caller": "initToastContainer",
+          "callee": "container.setAttribute",
+          "lineNumber": 24
+        },
+        {
+          "caller": "initToastContainer",
+          "callee": "document.body.appendChild",
+          "lineNumber": 25
+        },
+        {
+          "caller": "showToast",
+          "callee": "initToastContainer",
+          "lineNumber": 38
+        },
+        {
+          "caller": "showToast",
+          "callee": "activeToasts.shift",
+          "lineNumber": 46
+        },
+        {
+          "caller": "showToast",
+          "callee": "dismissToast",
+          "lineNumber": 47
+        },
+        {
+          "caller": "showToast",
+          "callee": "document.createElement",
+          "lineNumber": 50
+        },
+        {
+          "caller": "showToast",
+          "callee": "toastEl.setAttribute",
+          "lineNumber": 53
+        },
+        {
+          "caller": "showToast",
+          "callee": "typeIcon",
+          "lineNumber": 57
+        },
+        {
+          "caller": "showToast",
+          "callee": "escapeHtml",
+          "lineNumber": 58
+        },
+        {
+          "caller": "showToast",
+          "callee": "toastEl.querySelector",
+          "lineNumber": 64
+        },
+        {
+          "caller": "showToast",
+          "callee": "dismissBtn.addEventListener",
+          "lineNumber": 66
+        },
+        {
+          "caller": "showToast",
+          "callee": "dismissToast",
+          "lineNumber": 67
+        },
+        {
+          "caller": "showToast",
+          "callee": "container.appendChild",
+          "lineNumber": 71
+        },
+        {
+          "caller": "showToast",
+          "callee": "activeToasts.push",
+          "lineNumber": 72
+        },
+        {
+          "caller": "showToast",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 75
+        },
+        {
+          "caller": "showToast",
+          "callee": "toastEl.classList.add",
+          "lineNumber": 76
+        },
+        {
+          "caller": "showToast",
+          "callee": "setTimeout",
+          "lineNumber": 81
+        },
+        {
+          "caller": "showToast",
+          "callee": "dismissToast",
+          "lineNumber": 82
+        },
+        {
+          "caller": "dismissToast",
+          "callee": "activeToasts.indexOf",
+          "lineNumber": 88
+        },
+        {
+          "caller": "dismissToast",
+          "callee": "activeToasts.splice",
+          "lineNumber": 89
+        },
+        {
+          "caller": "dismissToast",
+          "callee": "container?.querySelector",
+          "lineNumber": 91
+        },
+        {
+          "caller": "dismissToast",
+          "callee": "el.classList.remove",
+          "lineNumber": 94
+        },
+        {
+          "caller": "dismissToast",
+          "callee": "el.classList.add",
+          "lineNumber": 95
+        },
+        {
+          "caller": "dismissToast",
+          "callee": "setTimeout",
+          "lineNumber": 98
+        },
+        {
+          "caller": "dismissToast",
+          "callee": "el.parentNode.removeChild",
+          "lineNumber": 99
+        },
+        {
+          "caller": "showSuccessToast",
+          "callee": "showToast",
+          "lineNumber": 117
+        },
+        {
+          "caller": "showErrorToast",
+          "callee": "showToast",
+          "lineNumber": 121
+        },
+        {
+          "caller": "showInfoToast",
+          "callee": "showToast",
+          "lineNumber": 125
+        },
+        {
+          "caller": "showWarningToast",
+          "callee": "showToast",
+          "lineNumber": 129
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/components/tree-node.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 55,
+      "functions": [
+        {
+          "name": "getDotClass",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "status"
+          ]
+        },
+        {
+          "name": "renderTreeNode",
+          "startLine": 27,
+          "endLine": 60,
+          "params": [
+            "node"
+          ]
+        },
+        {
+          "name": "renderTree",
+          "startLine": 62,
+          "endLine": 65,
+          "params": [
+            "tree"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "renderTreeNode",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "renderTree",
+          "line": 62,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "renderTreeNode",
+          "callee": "getDotClass",
+          "lineNumber": 41
+        },
+        {
+          "caller": "renderTreeNode",
+          "callee": "Array.isArray",
+          "lineNumber": 44
+        },
+        {
+          "caller": "renderTreeNode",
+          "callee": "node.children.map(child => renderTreeNode(child, depth + 1)).join",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderTreeNode",
+          "callee": "node.children.map",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderTreeNode",
+          "callee": "renderTreeNode",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderTreeNode",
+          "callee": "escapeHtml",
+          "lineNumber": 53
+        },
+        {
+          "caller": "renderTreeNode",
+          "callee": "escapeHtml",
+          "lineNumber": 54
+        },
+        {
+          "caller": "renderTreeNode",
+          "callee": "escapeHtml",
+          "lineNumber": 55
+        },
+        {
+          "caller": "renderTree",
+          "callee": "renderTreeNode",
+          "lineNumber": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/services/api.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 30,
+      "functions": [
+        {
+          "name": "apiFetch",
+          "startLine": 6,
+          "endLine": 16,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "fetchTree",
+          "startLine": 18,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "fetchSummary",
+          "startLine": 19,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "fetchSandbox",
+          "startLine": 20,
+          "endLine": 20,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "fetchBottlenecks",
+          "startLine": 21,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "killSandbox",
+          "startLine": 23,
+          "endLine": 28,
+          "params": [
+            "name",
+            "confirmToken"
+          ]
+        },
+        {
+          "name": "spawnSandbox",
+          "startLine": 30,
+          "endLine": 35,
+          "params": [
+            "name",
+            "task"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "apiFetch",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "fetchTree",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "fetchSummary",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "fetchSandbox",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "fetchBottlenecks",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "killSandbox",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "spawnSandbox",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "apiFetch",
+          "callee": "getToken",
+          "lineNumber": 7
+        },
+        {
+          "caller": "apiFetch",
+          "callee": "fetch",
+          "lineNumber": 10
+        },
+        {
+          "caller": "apiFetch",
+          "callee": "window.dispatchEvent",
+          "lineNumber": 12
+        },
+        {
+          "caller": "apiFetch",
+          "callee": "res.json",
+          "lineNumber": 15
+        },
+        {
+          "caller": "fetchTree",
+          "callee": "apiFetch",
+          "lineNumber": 18
+        },
+        {
+          "caller": "fetchSummary",
+          "callee": "apiFetch",
+          "lineNumber": 19
+        },
+        {
+          "caller": "fetchSandbox",
+          "callee": "apiFetch",
+          "lineNumber": 20
+        },
+        {
+          "caller": "fetchSandbox",
+          "callee": "encodeURIComponent",
+          "lineNumber": 20
+        },
+        {
+          "caller": "fetchBottlenecks",
+          "callee": "apiFetch",
+          "lineNumber": 21
+        },
+        {
+          "caller": "killSandbox",
+          "callee": "apiFetch",
+          "lineNumber": 24
+        },
+        {
+          "caller": "killSandbox",
+          "callee": "encodeURIComponent",
+          "lineNumber": 24
+        },
+        {
+          "caller": "killSandbox",
+          "callee": "JSON.stringify",
+          "lineNumber": 26
+        },
+        {
+          "caller": "spawnSandbox",
+          "callee": "apiFetch",
+          "lineNumber": 31
+        },
+        {
+          "caller": "spawnSandbox",
+          "callee": "encodeURIComponent",
+          "lineNumber": 31
+        },
+        {
+          "caller": "spawnSandbox",
+          "callee": "JSON.stringify",
+          "lineNumber": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/services/auth.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 14,
+      "functions": [
+        {
+          "name": "setToken",
+          "startLine": 4,
+          "endLine": 6,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "getToken",
+          "startLine": 8,
+          "endLine": 10,
+          "params": []
+        },
+        {
+          "name": "clearToken",
+          "startLine": 12,
+          "endLine": 14,
+          "params": []
+        },
+        {
+          "name": "hasToken",
+          "startLine": 16,
+          "endLine": 18,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "setToken",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "getToken",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "clearToken",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "hasToken",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setToken",
+          "callee": "sessionStorage.setItem",
+          "lineNumber": 5
+        },
+        {
+          "caller": "getToken",
+          "callee": "sessionStorage.getItem",
+          "lineNumber": 9
+        },
+        {
+          "caller": "clearToken",
+          "callee": "sessionStorage.removeItem",
+          "lineNumber": 13
+        },
+        {
+          "caller": "hasToken",
+          "callee": "getToken",
+          "lineNumber": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/services/sse.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 101,
+      "nonEmptyLines": 86,
+      "classes": [
+        {
+          "name": "SSEManager",
+          "startLine": 3,
+          "endLine": 99,
+          "methods": [
+            "constructor",
+            "connect",
+            "_createConnection",
+            "on",
+            "disconnect",
+            "_emit",
+            "_reconnect"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SSEManager",
+          "line": 101,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "connect",
+          "callee": "this._createConnection",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "url.searchParams.set",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "url.toString",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this.eventSource.addEventListener",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this.eventSource.addEventListener",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this._emit",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this.handlers.forEach",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this.eventSource.addEventListener",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this._emit",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "JSON.parse",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this.eventSource.addEventListener",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this.eventSource.close",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_createConnection",
+          "callee": "this._reconnect",
+          "lineNumber": 55
+        },
+        {
+          "caller": "on",
+          "callee": "this.handlers.has",
+          "lineNumber": 60
+        },
+        {
+          "caller": "on",
+          "callee": "this.handlers.set",
+          "lineNumber": 60
+        },
+        {
+          "caller": "on",
+          "callee": "this.handlers.get(event).add",
+          "lineNumber": 61
+        },
+        {
+          "caller": "on",
+          "callee": "this.handlers.get",
+          "lineNumber": 61
+        },
+        {
+          "caller": "on",
+          "callee": "this.eventSource.addEventListener",
+          "lineNumber": 65
+        },
+        {
+          "caller": "on",
+          "callee": "this._emit",
+          "lineNumber": 67
+        },
+        {
+          "caller": "on",
+          "callee": "JSON.parse",
+          "lineNumber": 67
+        },
+        {
+          "caller": "on",
+          "callee": "this.handlers.get(event)?.delete",
+          "lineNumber": 70
+        },
+        {
+          "caller": "on",
+          "callee": "this.handlers.get",
+          "lineNumber": 70
+        },
+        {
+          "caller": "disconnect",
+          "callee": "this.eventSource.close",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_emit",
+          "callee": "this.handlers.get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_emit",
+          "callee": "cbs.forEach",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_emit",
+          "callee": "cb",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_reconnect",
+          "callee": "Math.min",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_reconnect",
+          "callee": "Math.pow",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_reconnect",
+          "callee": "setTimeout",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_reconnect",
+          "callee": "this._createConnection",
+          "lineNumber": 96
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/services/state.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "_createStore",
+          "startLine": 4,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "_getInstance",
+          "startLine": 32,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "getState",
+          "startLine": 48,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "setState",
+          "startLine": 49,
+          "endLine": 49,
+          "params": [
+            "partial"
+          ]
+        },
+        {
+          "name": "subscribe",
+          "startLine": 50,
+          "endLine": 50,
+          "params": [
+            "cb"
+          ]
+        },
+        {
+          "name": "getSnapshot",
+          "startLine": 51,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "createStore",
+          "startLine": 54,
+          "endLine": 59,
+          "params": [
+            "initial"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getState",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "setState",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "subscribe",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "getSnapshot",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "createStore",
+          "line": 54,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_createStore",
+          "callee": "listeners.forEach",
+          "lineNumber": 14
+        },
+        {
+          "caller": "_createStore",
+          "callee": "cbs.forEach",
+          "lineNumber": 15
+        },
+        {
+          "caller": "_createStore",
+          "callee": "cb",
+          "lineNumber": 15
+        },
+        {
+          "caller": "_createStore",
+          "callee": "Date.now",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_createStore",
+          "callee": "Math.random",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_createStore",
+          "callee": "listeners.has",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_createStore",
+          "callee": "listeners.set",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_createStore",
+          "callee": "listeners.get(key).add",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_createStore",
+          "callee": "listeners.get",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_createStore",
+          "callee": "listeners.get(key)?.delete",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_createStore",
+          "callee": "listeners.get",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_getInstance",
+          "callee": "_createStore",
+          "lineNumber": 33
+        },
+        {
+          "caller": "getState",
+          "callee": "_getInstance().getState",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getState",
+          "callee": "_getInstance",
+          "lineNumber": 48
+        },
+        {
+          "caller": "setState",
+          "callee": "_getInstance().setState",
+          "lineNumber": 49
+        },
+        {
+          "caller": "setState",
+          "callee": "_getInstance",
+          "lineNumber": 49
+        },
+        {
+          "caller": "subscribe",
+          "callee": "_getInstance().subscribe",
+          "lineNumber": 50
+        },
+        {
+          "caller": "subscribe",
+          "callee": "_getInstance",
+          "lineNumber": 50
+        },
+        {
+          "caller": "getSnapshot",
+          "callee": "_getInstance().getSnapshot",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getSnapshot",
+          "callee": "_getInstance",
+          "lineNumber": 51
+        },
+        {
+          "caller": "createStore",
+          "callee": "_getInstance",
+          "lineNumber": 55
+        },
+        {
+          "caller": "createStore",
+          "callee": "inst.setState",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/web/static/js/utils/dom.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "escapeHtml",
+          "startLine": 3,
+          "endLine": 7,
+          "params": [
+            "str"
+          ]
+        },
+        {
+          "name": "escapeAttr",
+          "startLine": 9,
+          "endLine": 11,
+          "params": [
+            "str"
+          ]
+        },
+        {
+          "name": "$",
+          "startLine": 13,
+          "endLine": 16,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "$$",
+          "startLine": 18,
+          "endLine": 20,
+          "params": [
+            "sel"
+          ]
+        },
+        {
+          "name": "createElement",
+          "startLine": 22,
+          "endLine": 46,
+          "params": [
+            "tag"
+          ]
+        },
+        {
+          "name": "debounce",
+          "startLine": 48,
+          "endLine": 56,
+          "params": [
+            "fn"
+          ]
+        },
+        {
+          "name": "timeAgo",
+          "startLine": 58,
+          "endLine": 72,
+          "params": [
+            "ts"
+          ]
+        },
+        {
+          "name": "formatNumber",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "n"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "escapeHtml",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "escapeAttr",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "$",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "$$",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "createElement",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "debounce",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "timeAgo",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "formatNumber",
+          "line": 74,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "escapeHtml",
+          "callee": "document.createElement",
+          "lineNumber": 4
+        },
+        {
+          "caller": "escapeHtml",
+          "callee": "div.appendChild",
+          "lineNumber": 5
+        },
+        {
+          "caller": "escapeHtml",
+          "callee": "document.createTextNode",
+          "lineNumber": 5
+        },
+        {
+          "caller": "escapeAttr",
+          "callee": "String(str).replace(/\"/g, '&quot;').replace",
+          "lineNumber": 10
+        },
+        {
+          "caller": "escapeAttr",
+          "callee": "String(str).replace",
+          "lineNumber": 10
+        },
+        {
+          "caller": "escapeAttr",
+          "callee": "String",
+          "lineNumber": 10
+        },
+        {
+          "caller": "$",
+          "callee": "document.getElementById",
+          "lineNumber": 15
+        },
+        {
+          "caller": "$",
+          "callee": "id.replace",
+          "lineNumber": 15
+        },
+        {
+          "caller": "$$",
+          "callee": "document.querySelectorAll",
+          "lineNumber": 19
+        },
+        {
+          "caller": "createElement",
+          "callee": "document.createElement",
+          "lineNumber": 23
+        },
+        {
+          "caller": "createElement",
+          "callee": "Object.entries",
+          "lineNumber": 24
+        },
+        {
+          "caller": "createElement",
+          "callee": "Object.assign",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createElement",
+          "callee": "key.startsWith",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createElement",
+          "callee": "el.addEventListener",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createElement",
+          "callee": "key.slice(2).toLowerCase",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createElement",
+          "callee": "key.slice",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createElement",
+          "callee": "Object.assign",
+          "lineNumber": 32
+        },
+        {
+          "caller": "createElement",
+          "callee": "el.setAttribute",
+          "lineNumber": 34
+        },
+        {
+          "caller": "createElement",
+          "callee": "el.appendChild",
+          "lineNumber": 40
+        },
+        {
+          "caller": "createElement",
+          "callee": "document.createTextNode",
+          "lineNumber": 40
+        },
+        {
+          "caller": "createElement",
+          "callee": "String",
+          "lineNumber": 40
+        },
+        {
+          "caller": "createElement",
+          "callee": "el.appendChild",
+          "lineNumber": 42
+        },
+        {
+          "caller": "debounced",
+          "callee": "clearTimeout",
+          "lineNumber": 51
+        },
+        {
+          "caller": "debounced",
+          "callee": "setTimeout",
+          "lineNumber": 52
+        },
+        {
+          "caller": "debounced",
+          "callee": "fn.apply",
+          "lineNumber": 52
+        },
+        {
+          "caller": "debounce",
+          "callee": "clearTimeout",
+          "lineNumber": 54
+        },
+        {
+          "caller": "timeAgo",
+          "callee": "Date.now",
+          "lineNumber": 59
+        },
+        {
+          "caller": "timeAgo",
+          "callee": "new Date(ts).getTime",
+          "lineNumber": 60
+        },
+        {
+          "caller": "timeAgo",
+          "callee": "Math.floor",
+          "lineNumber": 61
+        },
+        {
+          "caller": "timeAgo",
+          "callee": "Math.floor",
+          "lineNumber": 64
+        },
+        {
+          "caller": "timeAgo",
+          "callee": "Math.floor",
+          "lineNumber": 66
+        },
+        {
+          "caller": "timeAgo",
+          "callee": "Math.floor",
+          "lineNumber": 68
+        },
+        {
+          "caller": "timeAgo",
+          "callee": "Math.floor",
+          "lineNumber": 70
+        },
+        {
+          "caller": "formatNumber",
+          "callee": "Number(n).toLocaleString",
+          "lineNumber": 75
+        },
+        {
+          "caller": "formatNumber",
+          "callee": "Number",
+          "lineNumber": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    }
+  ]
+}

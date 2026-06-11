@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "id": "document:docs/EXCHANGE_LAYER_IMPLEMENT.md",
+      "type": "document",
+      "name": "EXCHANGE_LAYER_IMPLEMENT.md",
+      "filePath": "docs/EXCHANGE_LAYER_IMPLEMENT.md",
+      "summary": "Document: EXCHANGE_LAYER_IMPLEMENT.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docs/EXCHANGE_LAYER_IMPLEMENT.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "docs/EXCHANGE_LAYER_IMPLEMENT.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/EXCHANGE_LAYER_SPEC.md",
+      "type": "document",
+      "name": "EXCHANGE_LAYER_SPEC.md",
+      "filePath": "docs/EXCHANGE_LAYER_SPEC.md",
+      "summary": "Document: EXCHANGE_LAYER_SPEC.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docs/EXCHANGE_LAYER_SPEC.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "docs/EXCHANGE_LAYER_SPEC.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/PIPELINE.md",
+      "type": "document",
+      "name": "PIPELINE.md",
+      "filePath": "docs/PIPELINE.md",
+      "summary": "Document: PIPELINE.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docs/PIPELINE.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "docs/PIPELINE.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/SUPERPOWER_INTEGRATION_PROPOSAL.md",
+      "type": "document",
+      "name": "SUPERPOWER_INTEGRATION_PROPOSAL.md",
+      "filePath": "docs/SUPERPOWER_INTEGRATION_PROPOSAL.md",
+      "summary": "Document: SUPERPOWER_INTEGRATION_PROPOSAL.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docs/SUPERPOWER_INTEGRATION_PROPOSAL.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "docs/SUPERPOWER_INTEGRATION_PROPOSAL.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/TEACH_SKILL_BUILD.md",
+      "type": "document",
+      "name": "TEACH_SKILL_BUILD.md",
+      "filePath": "docs/TEACH_SKILL_BUILD.md",
+      "summary": "Document: TEACH_SKILL_BUILD.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docs/TEACH_SKILL_BUILD.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "docs/TEACH_SKILL_BUILD.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/TEACH_SKILL_DESIGN.md",
+      "type": "document",
+      "name": "TEACH_SKILL_DESIGN.md",
+      "filePath": "docs/TEACH_SKILL_DESIGN.md",
+      "summary": "Document: TEACH_SKILL_DESIGN.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docs/TEACH_SKILL_DESIGN.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "docs/TEACH_SKILL_DESIGN.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

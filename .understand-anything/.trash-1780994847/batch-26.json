@@ -1,0 +1,485 @@
+{
+  "nodes": [
+    {
+      "id": "config:graphify-out/cache/ast/d9a424bb1b0c8d88b3f1a5cd1fc11c65f4df4deb7ee63e8a9cf03a6dfb890207.json",
+      "type": "config",
+      "name": "d9a424bb1b0c8d88b3f1a5cd1fc11c65f4df4deb7ee63e8a9cf03a6dfb890207.json",
+      "filePath": "graphify-out/cache/ast/d9a424bb1b0c8d88b3f1a5cd1fc11c65f4df4deb7ee63e8a9cf03a6dfb890207.json",
+      "summary": "Config: d9a424bb1b0c8d88b3f1a5cd1fc11c65f4df4deb7ee63e8a9cf03a6dfb890207.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/d9a424bb1b0c8d88b3f1a5cd1fc11c65f4df4deb7ee63e8a9cf03a6dfb890207.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/d9a424bb1b0c8d88b3f1a5cd1fc11c65f4df4deb7ee63e8a9cf03a6dfb890207.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/db0a124c8edf0538bdcac4637ef05d729f443c406b7df74d4500f5df704d5acd.json",
+      "type": "config",
+      "name": "db0a124c8edf0538bdcac4637ef05d729f443c406b7df74d4500f5df704d5acd.json",
+      "filePath": "graphify-out/cache/ast/db0a124c8edf0538bdcac4637ef05d729f443c406b7df74d4500f5df704d5acd.json",
+      "summary": "Config: db0a124c8edf0538bdcac4637ef05d729f443c406b7df74d4500f5df704d5acd.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/db0a124c8edf0538bdcac4637ef05d729f443c406b7df74d4500f5df704d5acd.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/db0a124c8edf0538bdcac4637ef05d729f443c406b7df74d4500f5df704d5acd.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/dbcc7725099bbdd035ec455549ca3b3f1d70870f3ea90c6957a1307edebe1bb7.json",
+      "type": "config",
+      "name": "dbcc7725099bbdd035ec455549ca3b3f1d70870f3ea90c6957a1307edebe1bb7.json",
+      "filePath": "graphify-out/cache/ast/dbcc7725099bbdd035ec455549ca3b3f1d70870f3ea90c6957a1307edebe1bb7.json",
+      "summary": "Config: dbcc7725099bbdd035ec455549ca3b3f1d70870f3ea90c6957a1307edebe1bb7.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/dbcc7725099bbdd035ec455549ca3b3f1d70870f3ea90c6957a1307edebe1bb7.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/dbcc7725099bbdd035ec455549ca3b3f1d70870f3ea90c6957a1307edebe1bb7.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/df4022974ec727da357df0139384630982385ba2de209f5d548d1058dad53970.json",
+      "type": "config",
+      "name": "df4022974ec727da357df0139384630982385ba2de209f5d548d1058dad53970.json",
+      "filePath": "graphify-out/cache/ast/df4022974ec727da357df0139384630982385ba2de209f5d548d1058dad53970.json",
+      "summary": "Config: df4022974ec727da357df0139384630982385ba2de209f5d548d1058dad53970.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/df4022974ec727da357df0139384630982385ba2de209f5d548d1058dad53970.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/df4022974ec727da357df0139384630982385ba2de209f5d548d1058dad53970.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e00b11476e27f0bd0ffb371fb6d02eb7f4e6e6f89addcdd84ae96b4d612b3014.json",
+      "type": "config",
+      "name": "e00b11476e27f0bd0ffb371fb6d02eb7f4e6e6f89addcdd84ae96b4d612b3014.json",
+      "filePath": "graphify-out/cache/ast/e00b11476e27f0bd0ffb371fb6d02eb7f4e6e6f89addcdd84ae96b4d612b3014.json",
+      "summary": "Config: e00b11476e27f0bd0ffb371fb6d02eb7f4e6e6f89addcdd84ae96b4d612b3014.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e00b11476e27f0bd0ffb371fb6d02eb7f4e6e6f89addcdd84ae96b4d612b3014.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e00b11476e27f0bd0ffb371fb6d02eb7f4e6e6f89addcdd84ae96b4d612b3014.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e180b25a2b0300d4a74aca654a5aee12c2c830caa6f43e1705a0edfa973b9517.json",
+      "type": "config",
+      "name": "e180b25a2b0300d4a74aca654a5aee12c2c830caa6f43e1705a0edfa973b9517.json",
+      "filePath": "graphify-out/cache/ast/e180b25a2b0300d4a74aca654a5aee12c2c830caa6f43e1705a0edfa973b9517.json",
+      "summary": "Config: e180b25a2b0300d4a74aca654a5aee12c2c830caa6f43e1705a0edfa973b9517.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e180b25a2b0300d4a74aca654a5aee12c2c830caa6f43e1705a0edfa973b9517.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e180b25a2b0300d4a74aca654a5aee12c2c830caa6f43e1705a0edfa973b9517.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e182e40e9c06e6175389d332c42e06bfd30ef842f091fe0ca7d6002d63253bad.json",
+      "type": "config",
+      "name": "e182e40e9c06e6175389d332c42e06bfd30ef842f091fe0ca7d6002d63253bad.json",
+      "filePath": "graphify-out/cache/ast/e182e40e9c06e6175389d332c42e06bfd30ef842f091fe0ca7d6002d63253bad.json",
+      "summary": "Config: e182e40e9c06e6175389d332c42e06bfd30ef842f091fe0ca7d6002d63253bad.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e182e40e9c06e6175389d332c42e06bfd30ef842f091fe0ca7d6002d63253bad.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e182e40e9c06e6175389d332c42e06bfd30ef842f091fe0ca7d6002d63253bad.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e1e6e4536941a0fdaf631a9d72ba5f4be686add0498a63f29d0a3b908a37f760.json",
+      "type": "config",
+      "name": "e1e6e4536941a0fdaf631a9d72ba5f4be686add0498a63f29d0a3b908a37f760.json",
+      "filePath": "graphify-out/cache/ast/e1e6e4536941a0fdaf631a9d72ba5f4be686add0498a63f29d0a3b908a37f760.json",
+      "summary": "Config: e1e6e4536941a0fdaf631a9d72ba5f4be686add0498a63f29d0a3b908a37f760.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e1e6e4536941a0fdaf631a9d72ba5f4be686add0498a63f29d0a3b908a37f760.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e1e6e4536941a0fdaf631a9d72ba5f4be686add0498a63f29d0a3b908a37f760.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e21c209e3f1160405fdcd2ec329dc47a9fb23057ea6206fe391c6147dca5af42.json",
+      "type": "config",
+      "name": "e21c209e3f1160405fdcd2ec329dc47a9fb23057ea6206fe391c6147dca5af42.json",
+      "filePath": "graphify-out/cache/ast/e21c209e3f1160405fdcd2ec329dc47a9fb23057ea6206fe391c6147dca5af42.json",
+      "summary": "Config: e21c209e3f1160405fdcd2ec329dc47a9fb23057ea6206fe391c6147dca5af42.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e21c209e3f1160405fdcd2ec329dc47a9fb23057ea6206fe391c6147dca5af42.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e21c209e3f1160405fdcd2ec329dc47a9fb23057ea6206fe391c6147dca5af42.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e24cf82cbbf10581ccb772153a62929d1f79643aba07e335926c049a69e00fb5.json",
+      "type": "config",
+      "name": "e24cf82cbbf10581ccb772153a62929d1f79643aba07e335926c049a69e00fb5.json",
+      "filePath": "graphify-out/cache/ast/e24cf82cbbf10581ccb772153a62929d1f79643aba07e335926c049a69e00fb5.json",
+      "summary": "Config: e24cf82cbbf10581ccb772153a62929d1f79643aba07e335926c049a69e00fb5.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e24cf82cbbf10581ccb772153a62929d1f79643aba07e335926c049a69e00fb5.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e24cf82cbbf10581ccb772153a62929d1f79643aba07e335926c049a69e00fb5.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e31594cff8d6cbd3d081cfb98242f8973b126bae4a19b4be1dd3730dd12098ac.json",
+      "type": "config",
+      "name": "e31594cff8d6cbd3d081cfb98242f8973b126bae4a19b4be1dd3730dd12098ac.json",
+      "filePath": "graphify-out/cache/ast/e31594cff8d6cbd3d081cfb98242f8973b126bae4a19b4be1dd3730dd12098ac.json",
+      "summary": "Config: e31594cff8d6cbd3d081cfb98242f8973b126bae4a19b4be1dd3730dd12098ac.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e31594cff8d6cbd3d081cfb98242f8973b126bae4a19b4be1dd3730dd12098ac.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e31594cff8d6cbd3d081cfb98242f8973b126bae4a19b4be1dd3730dd12098ac.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e40c802a233bacd293a62951fb9d5b0b928eac2a9eccdecad0022e6c43c37ed7.json",
+      "type": "config",
+      "name": "e40c802a233bacd293a62951fb9d5b0b928eac2a9eccdecad0022e6c43c37ed7.json",
+      "filePath": "graphify-out/cache/ast/e40c802a233bacd293a62951fb9d5b0b928eac2a9eccdecad0022e6c43c37ed7.json",
+      "summary": "Config: e40c802a233bacd293a62951fb9d5b0b928eac2a9eccdecad0022e6c43c37ed7.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e40c802a233bacd293a62951fb9d5b0b928eac2a9eccdecad0022e6c43c37ed7.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e40c802a233bacd293a62951fb9d5b0b928eac2a9eccdecad0022e6c43c37ed7.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e427042f02f34527229e4cd36efef4bebe05124aa1c8e3dd987564c4002b43cf.json",
+      "type": "config",
+      "name": "e427042f02f34527229e4cd36efef4bebe05124aa1c8e3dd987564c4002b43cf.json",
+      "filePath": "graphify-out/cache/ast/e427042f02f34527229e4cd36efef4bebe05124aa1c8e3dd987564c4002b43cf.json",
+      "summary": "Config: e427042f02f34527229e4cd36efef4bebe05124aa1c8e3dd987564c4002b43cf.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e427042f02f34527229e4cd36efef4bebe05124aa1c8e3dd987564c4002b43cf.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e427042f02f34527229e4cd36efef4bebe05124aa1c8e3dd987564c4002b43cf.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e49b9432789f36aacbe2a4d8b7f2aafaab27298797aea9ddf35075a6a13a929a.json",
+      "type": "config",
+      "name": "e49b9432789f36aacbe2a4d8b7f2aafaab27298797aea9ddf35075a6a13a929a.json",
+      "filePath": "graphify-out/cache/ast/e49b9432789f36aacbe2a4d8b7f2aafaab27298797aea9ddf35075a6a13a929a.json",
+      "summary": "Config: e49b9432789f36aacbe2a4d8b7f2aafaab27298797aea9ddf35075a6a13a929a.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e49b9432789f36aacbe2a4d8b7f2aafaab27298797aea9ddf35075a6a13a929a.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e49b9432789f36aacbe2a4d8b7f2aafaab27298797aea9ddf35075a6a13a929a.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e878a00562265cb587b2f1a91885528f7a9467cce770414baa00a8291a55d6cb.json",
+      "type": "config",
+      "name": "e878a00562265cb587b2f1a91885528f7a9467cce770414baa00a8291a55d6cb.json",
+      "filePath": "graphify-out/cache/ast/e878a00562265cb587b2f1a91885528f7a9467cce770414baa00a8291a55d6cb.json",
+      "summary": "Config: e878a00562265cb587b2f1a91885528f7a9467cce770414baa00a8291a55d6cb.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e878a00562265cb587b2f1a91885528f7a9467cce770414baa00a8291a55d6cb.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e878a00562265cb587b2f1a91885528f7a9467cce770414baa00a8291a55d6cb.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e8da616a36ed0444d0364267b6d8d5dcb46a19d15475e9095a3e4c3b3b0b0234.json",
+      "type": "config",
+      "name": "e8da616a36ed0444d0364267b6d8d5dcb46a19d15475e9095a3e4c3b3b0b0234.json",
+      "filePath": "graphify-out/cache/ast/e8da616a36ed0444d0364267b6d8d5dcb46a19d15475e9095a3e4c3b3b0b0234.json",
+      "summary": "Config: e8da616a36ed0444d0364267b6d8d5dcb46a19d15475e9095a3e4c3b3b0b0234.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e8da616a36ed0444d0364267b6d8d5dcb46a19d15475e9095a3e4c3b3b0b0234.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e8da616a36ed0444d0364267b6d8d5dcb46a19d15475e9095a3e4c3b3b0b0234.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/e901275da8a4988508024518c7117042bda74ee6a1ada823edce9f750325a019.json",
+      "type": "config",
+      "name": "e901275da8a4988508024518c7117042bda74ee6a1ada823edce9f750325a019.json",
+      "filePath": "graphify-out/cache/ast/e901275da8a4988508024518c7117042bda74ee6a1ada823edce9f750325a019.json",
+      "summary": "Config: e901275da8a4988508024518c7117042bda74ee6a1ada823edce9f750325a019.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/e901275da8a4988508024518c7117042bda74ee6a1ada823edce9f750325a019.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/e901275da8a4988508024518c7117042bda74ee6a1ada823edce9f750325a019.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/ebf7d511ebe14a331b98e4e6789b4025e2f5d0491efda8a368b9fb1569ceba13.json",
+      "type": "config",
+      "name": "ebf7d511ebe14a331b98e4e6789b4025e2f5d0491efda8a368b9fb1569ceba13.json",
+      "filePath": "graphify-out/cache/ast/ebf7d511ebe14a331b98e4e6789b4025e2f5d0491efda8a368b9fb1569ceba13.json",
+      "summary": "Config: ebf7d511ebe14a331b98e4e6789b4025e2f5d0491efda8a368b9fb1569ceba13.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/ebf7d511ebe14a331b98e4e6789b4025e2f5d0491efda8a368b9fb1569ceba13.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/ebf7d511ebe14a331b98e4e6789b4025e2f5d0491efda8a368b9fb1569ceba13.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/ec01b91877a3e35e61983e839115153cacb24733d7886ba5bfab6196169ce62f.json",
+      "type": "config",
+      "name": "ec01b91877a3e35e61983e839115153cacb24733d7886ba5bfab6196169ce62f.json",
+      "filePath": "graphify-out/cache/ast/ec01b91877a3e35e61983e839115153cacb24733d7886ba5bfab6196169ce62f.json",
+      "summary": "Config: ec01b91877a3e35e61983e839115153cacb24733d7886ba5bfab6196169ce62f.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/ec01b91877a3e35e61983e839115153cacb24733d7886ba5bfab6196169ce62f.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/ec01b91877a3e35e61983e839115153cacb24733d7886ba5bfab6196169ce62f.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/ec5105433938557daf51706f1f07440e59d2fdabb263080110a933ed1be250ba.json",
+      "type": "config",
+      "name": "ec5105433938557daf51706f1f07440e59d2fdabb263080110a933ed1be250ba.json",
+      "filePath": "graphify-out/cache/ast/ec5105433938557daf51706f1f07440e59d2fdabb263080110a933ed1be250ba.json",
+      "summary": "Config: ec5105433938557daf51706f1f07440e59d2fdabb263080110a933ed1be250ba.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/ec5105433938557daf51706f1f07440e59d2fdabb263080110a933ed1be250ba.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/ec5105433938557daf51706f1f07440e59d2fdabb263080110a933ed1be250ba.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

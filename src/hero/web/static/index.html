@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>HERO Viewport</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/static/css/tokens.css?v=4">
+  <link rel="stylesheet" href="/static/css/base.css?v=4">
+  <link rel="stylesheet" href="/static/css/layout.css?v=4">
+  <link rel="stylesheet" href="/static/css/components.css?v=4">
+  <link rel="stylesheet" href="/static/css/animations.css?v=4">
+
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+  <header class="header" id="header"></header>
+
+  <main class="container">
+    <div id="stats-bar" class="stats-bar"></div>
+    <div id="sandbox-grid"></div>
+    <div id="empty-state" class="empty-state" style="display:none">
+      <div class="empty-state-icon">⚡</div>
+      <h3 class="empty-state-title">No sandboxes yet</h3>
+      <p class="empty-state-text">Waiting for HERO to deploy an army...</p>
+    </div>
+  </main>
+
+  <aside class="drawer" id="detail-drawer" role="dialog" aria-modal="true"></aside>
+
+  <script type="module" src="/static/js/app.js?v=4"></script>
+</body>
+</html>

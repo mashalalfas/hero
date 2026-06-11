@@ -1,0 +1,4584 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "graphify-out/.graphify_labels.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 339,
+      "nonEmptyLines": 339,
+      "sections": [
+        {
+          "heading": "0",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "1",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "2",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "3",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "4",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "5",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "6",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "7",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "8",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "9",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "10",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "11",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "12",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "13",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "14",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "15",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "16",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "17",
+          "level": 1,
+          "line": 19
+        },
+        {
+          "heading": "18",
+          "level": 1,
+          "line": 20
+        },
+        {
+          "heading": "19",
+          "level": 1,
+          "line": 21
+        },
+        {
+          "heading": "20",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "21",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "22",
+          "level": 1,
+          "line": 24
+        },
+        {
+          "heading": "23",
+          "level": 1,
+          "line": 25
+        },
+        {
+          "heading": "24",
+          "level": 1,
+          "line": 26
+        },
+        {
+          "heading": "25",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "26",
+          "level": 1,
+          "line": 28
+        },
+        {
+          "heading": "27",
+          "level": 1,
+          "line": 29
+        },
+        {
+          "heading": "28",
+          "level": 1,
+          "line": 30
+        },
+        {
+          "heading": "29",
+          "level": 1,
+          "line": 31
+        },
+        {
+          "heading": "30",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "31",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "32",
+          "level": 1,
+          "line": 34
+        },
+        {
+          "heading": "33",
+          "level": 1,
+          "line": 35
+        },
+        {
+          "heading": "34",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "35",
+          "level": 1,
+          "line": 37
+        },
+        {
+          "heading": "36",
+          "level": 1,
+          "line": 38
+        },
+        {
+          "heading": "37",
+          "level": 1,
+          "line": 39
+        },
+        {
+          "heading": "38",
+          "level": 1,
+          "line": 40
+        },
+        {
+          "heading": "39",
+          "level": 1,
+          "line": 41
+        },
+        {
+          "heading": "40",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "41",
+          "level": 1,
+          "line": 43
+        },
+        {
+          "heading": "42",
+          "level": 1,
+          "line": 44
+        },
+        {
+          "heading": "43",
+          "level": 1,
+          "line": 45
+        },
+        {
+          "heading": "44",
+          "level": 1,
+          "line": 46
+        },
+        {
+          "heading": "45",
+          "level": 1,
+          "line": 47
+        },
+        {
+          "heading": "46",
+          "level": 1,
+          "line": 48
+        },
+        {
+          "heading": "47",
+          "level": 1,
+          "line": 49
+        },
+        {
+          "heading": "48",
+          "level": 1,
+          "line": 50
+        },
+        {
+          "heading": "49",
+          "level": 1,
+          "line": 51
+        },
+        {
+          "heading": "50",
+          "level": 1,
+          "line": 52
+        },
+        {
+          "heading": "51",
+          "level": 1,
+          "line": 53
+        },
+        {
+          "heading": "52",
+          "level": 1,
+          "line": 54
+        },
+        {
+          "heading": "53",
+          "level": 1,
+          "line": 55
+        },
+        {
+          "heading": "54",
+          "level": 1,
+          "line": 56
+        },
+        {
+          "heading": "55",
+          "level": 1,
+          "line": 57
+        },
+        {
+          "heading": "56",
+          "level": 1,
+          "line": 58
+        },
+        {
+          "heading": "57",
+          "level": 1,
+          "line": 59
+        },
+        {
+          "heading": "58",
+          "level": 1,
+          "line": 60
+        },
+        {
+          "heading": "59",
+          "level": 1,
+          "line": 61
+        },
+        {
+          "heading": "60",
+          "level": 1,
+          "line": 62
+        },
+        {
+          "heading": "61",
+          "level": 1,
+          "line": 63
+        },
+        {
+          "heading": "62",
+          "level": 1,
+          "line": 64
+        },
+        {
+          "heading": "63",
+          "level": 1,
+          "line": 65
+        },
+        {
+          "heading": "64",
+          "level": 1,
+          "line": 66
+        },
+        {
+          "heading": "65",
+          "level": 1,
+          "line": 67
+        },
+        {
+          "heading": "66",
+          "level": 1,
+          "line": 68
+        },
+        {
+          "heading": "67",
+          "level": 1,
+          "line": 69
+        },
+        {
+          "heading": "68",
+          "level": 1,
+          "line": 70
+        },
+        {
+          "heading": "69",
+          "level": 1,
+          "line": 71
+        },
+        {
+          "heading": "70",
+          "level": 1,
+          "line": 72
+        },
+        {
+          "heading": "71",
+          "level": 1,
+          "line": 73
+        },
+        {
+          "heading": "72",
+          "level": 1,
+          "line": 74
+        },
+        {
+          "heading": "73",
+          "level": 1,
+          "line": 75
+        },
+        {
+          "heading": "74",
+          "level": 1,
+          "line": 76
+        },
+        {
+          "heading": "75",
+          "level": 1,
+          "line": 77
+        },
+        {
+          "heading": "76",
+          "level": 1,
+          "line": 78
+        },
+        {
+          "heading": "77",
+          "level": 1,
+          "line": 79
+        },
+        {
+          "heading": "78",
+          "level": 1,
+          "line": 80
+        },
+        {
+          "heading": "79",
+          "level": 1,
+          "line": 81
+        },
+        {
+          "heading": "80",
+          "level": 1,
+          "line": 82
+        },
+        {
+          "heading": "81",
+          "level": 1,
+          "line": 83
+        },
+        {
+          "heading": "82",
+          "level": 1,
+          "line": 84
+        },
+        {
+          "heading": "83",
+          "level": 1,
+          "line": 85
+        },
+        {
+          "heading": "84",
+          "level": 1,
+          "line": 86
+        },
+        {
+          "heading": "85",
+          "level": 1,
+          "line": 87
+        },
+        {
+          "heading": "86",
+          "level": 1,
+          "line": 88
+        },
+        {
+          "heading": "87",
+          "level": 1,
+          "line": 89
+        },
+        {
+          "heading": "88",
+          "level": 1,
+          "line": 90
+        },
+        {
+          "heading": "89",
+          "level": 1,
+          "line": 91
+        },
+        {
+          "heading": "90",
+          "level": 1,
+          "line": 92
+        },
+        {
+          "heading": "91",
+          "level": 1,
+          "line": 93
+        },
+        {
+          "heading": "92",
+          "level": 1,
+          "line": 94
+        },
+        {
+          "heading": "93",
+          "level": 1,
+          "line": 95
+        },
+        {
+          "heading": "94",
+          "level": 1,
+          "line": 96
+        },
+        {
+          "heading": "95",
+          "level": 1,
+          "line": 97
+        },
+        {
+          "heading": "96",
+          "level": 1,
+          "line": 98
+        },
+        {
+          "heading": "97",
+          "level": 1,
+          "line": 99
+        },
+        {
+          "heading": "98",
+          "level": 1,
+          "line": 100
+        },
+        {
+          "heading": "99",
+          "level": 1,
+          "line": 101
+        },
+        {
+          "heading": "100",
+          "level": 1,
+          "line": 102
+        },
+        {
+          "heading": "101",
+          "level": 1,
+          "line": 103
+        },
+        {
+          "heading": "102",
+          "level": 1,
+          "line": 104
+        },
+        {
+          "heading": "103",
+          "level": 1,
+          "line": 105
+        },
+        {
+          "heading": "104",
+          "level": 1,
+          "line": 106
+        },
+        {
+          "heading": "105",
+          "level": 1,
+          "line": 107
+        },
+        {
+          "heading": "106",
+          "level": 1,
+          "line": 108
+        },
+        {
+          "heading": "107",
+          "level": 1,
+          "line": 109
+        },
+        {
+          "heading": "108",
+          "level": 1,
+          "line": 110
+        },
+        {
+          "heading": "109",
+          "level": 1,
+          "line": 111
+        },
+        {
+          "heading": "110",
+          "level": 1,
+          "line": 112
+        },
+        {
+          "heading": "111",
+          "level": 1,
+          "line": 113
+        },
+        {
+          "heading": "112",
+          "level": 1,
+          "line": 114
+        },
+        {
+          "heading": "113",
+          "level": 1,
+          "line": 115
+        },
+        {
+          "heading": "114",
+          "level": 1,
+          "line": 116
+        },
+        {
+          "heading": "115",
+          "level": 1,
+          "line": 117
+        },
+        {
+          "heading": "116",
+          "level": 1,
+          "line": 118
+        },
+        {
+          "heading": "117",
+          "level": 1,
+          "line": 119
+        },
+        {
+          "heading": "118",
+          "level": 1,
+          "line": 120
+        },
+        {
+          "heading": "119",
+          "level": 1,
+          "line": 121
+        },
+        {
+          "heading": "120",
+          "level": 1,
+          "line": 122
+        },
+        {
+          "heading": "121",
+          "level": 1,
+          "line": 123
+        },
+        {
+          "heading": "122",
+          "level": 1,
+          "line": 124
+        },
+        {
+          "heading": "123",
+          "level": 1,
+          "line": 125
+        },
+        {
+          "heading": "124",
+          "level": 1,
+          "line": 126
+        },
+        {
+          "heading": "125",
+          "level": 1,
+          "line": 127
+        },
+        {
+          "heading": "126",
+          "level": 1,
+          "line": 128
+        },
+        {
+          "heading": "127",
+          "level": 1,
+          "line": 129
+        },
+        {
+          "heading": "128",
+          "level": 1,
+          "line": 130
+        },
+        {
+          "heading": "129",
+          "level": 1,
+          "line": 131
+        },
+        {
+          "heading": "130",
+          "level": 1,
+          "line": 132
+        },
+        {
+          "heading": "131",
+          "level": 1,
+          "line": 133
+        },
+        {
+          "heading": "132",
+          "level": 1,
+          "line": 134
+        },
+        {
+          "heading": "133",
+          "level": 1,
+          "line": 135
+        },
+        {
+          "heading": "134",
+          "level": 1,
+          "line": 136
+        },
+        {
+          "heading": "135",
+          "level": 1,
+          "line": 137
+        },
+        {
+          "heading": "136",
+          "level": 1,
+          "line": 138
+        },
+        {
+          "heading": "137",
+          "level": 1,
+          "line": 139
+        },
+        {
+          "heading": "138",
+          "level": 1,
+          "line": 140
+        },
+        {
+          "heading": "139",
+          "level": 1,
+          "line": 141
+        },
+        {
+          "heading": "140",
+          "level": 1,
+          "line": 142
+        },
+        {
+          "heading": "141",
+          "level": 1,
+          "line": 143
+        },
+        {
+          "heading": "142",
+          "level": 1,
+          "line": 144
+        },
+        {
+          "heading": "143",
+          "level": 1,
+          "line": 145
+        },
+        {
+          "heading": "144",
+          "level": 1,
+          "line": 146
+        },
+        {
+          "heading": "145",
+          "level": 1,
+          "line": 147
+        },
+        {
+          "heading": "146",
+          "level": 1,
+          "line": 148
+        },
+        {
+          "heading": "147",
+          "level": 1,
+          "line": 149
+        },
+        {
+          "heading": "148",
+          "level": 1,
+          "line": 150
+        },
+        {
+          "heading": "149",
+          "level": 1,
+          "line": 151
+        },
+        {
+          "heading": "150",
+          "level": 1,
+          "line": 152
+        },
+        {
+          "heading": "151",
+          "level": 1,
+          "line": 153
+        },
+        {
+          "heading": "152",
+          "level": 1,
+          "line": 154
+        },
+        {
+          "heading": "153",
+          "level": 1,
+          "line": 155
+        },
+        {
+          "heading": "154",
+          "level": 1,
+          "line": 156
+        },
+        {
+          "heading": "155",
+          "level": 1,
+          "line": 157
+        },
+        {
+          "heading": "156",
+          "level": 1,
+          "line": 158
+        },
+        {
+          "heading": "157",
+          "level": 1,
+          "line": 159
+        },
+        {
+          "heading": "158",
+          "level": 1,
+          "line": 160
+        },
+        {
+          "heading": "159",
+          "level": 1,
+          "line": 161
+        },
+        {
+          "heading": "160",
+          "level": 1,
+          "line": 162
+        },
+        {
+          "heading": "161",
+          "level": 1,
+          "line": 163
+        },
+        {
+          "heading": "162",
+          "level": 1,
+          "line": 164
+        },
+        {
+          "heading": "163",
+          "level": 1,
+          "line": 165
+        },
+        {
+          "heading": "164",
+          "level": 1,
+          "line": 166
+        },
+        {
+          "heading": "165",
+          "level": 1,
+          "line": 167
+        },
+        {
+          "heading": "166",
+          "level": 1,
+          "line": 168
+        },
+        {
+          "heading": "167",
+          "level": 1,
+          "line": 169
+        },
+        {
+          "heading": "168",
+          "level": 1,
+          "line": 170
+        },
+        {
+          "heading": "169",
+          "level": 1,
+          "line": 171
+        },
+        {
+          "heading": "170",
+          "level": 1,
+          "line": 172
+        },
+        {
+          "heading": "171",
+          "level": 1,
+          "line": 173
+        },
+        {
+          "heading": "172",
+          "level": 1,
+          "line": 174
+        },
+        {
+          "heading": "173",
+          "level": 1,
+          "line": 175
+        },
+        {
+          "heading": "174",
+          "level": 1,
+          "line": 176
+        },
+        {
+          "heading": "175",
+          "level": 1,
+          "line": 177
+        },
+        {
+          "heading": "176",
+          "level": 1,
+          "line": 178
+        },
+        {
+          "heading": "177",
+          "level": 1,
+          "line": 179
+        },
+        {
+          "heading": "178",
+          "level": 1,
+          "line": 180
+        },
+        {
+          "heading": "179",
+          "level": 1,
+          "line": 181
+        },
+        {
+          "heading": "180",
+          "level": 1,
+          "line": 182
+        },
+        {
+          "heading": "181",
+          "level": 1,
+          "line": 183
+        },
+        {
+          "heading": "182",
+          "level": 1,
+          "line": 184
+        },
+        {
+          "heading": "183",
+          "level": 1,
+          "line": 185
+        },
+        {
+          "heading": "184",
+          "level": 1,
+          "line": 186
+        },
+        {
+          "heading": "185",
+          "level": 1,
+          "line": 187
+        },
+        {
+          "heading": "186",
+          "level": 1,
+          "line": 188
+        },
+        {
+          "heading": "187",
+          "level": 1,
+          "line": 189
+        },
+        {
+          "heading": "188",
+          "level": 1,
+          "line": 190
+        },
+        {
+          "heading": "189",
+          "level": 1,
+          "line": 191
+        },
+        {
+          "heading": "190",
+          "level": 1,
+          "line": 192
+        },
+        {
+          "heading": "191",
+          "level": 1,
+          "line": 193
+        },
+        {
+          "heading": "192",
+          "level": 1,
+          "line": 194
+        },
+        {
+          "heading": "193",
+          "level": 1,
+          "line": 195
+        },
+        {
+          "heading": "194",
+          "level": 1,
+          "line": 196
+        },
+        {
+          "heading": "195",
+          "level": 1,
+          "line": 197
+        },
+        {
+          "heading": "196",
+          "level": 1,
+          "line": 198
+        },
+        {
+          "heading": "197",
+          "level": 1,
+          "line": 199
+        },
+        {
+          "heading": "198",
+          "level": 1,
+          "line": 200
+        },
+        {
+          "heading": "199",
+          "level": 1,
+          "line": 201
+        },
+        {
+          "heading": "200",
+          "level": 1,
+          "line": 202
+        },
+        {
+          "heading": "201",
+          "level": 1,
+          "line": 203
+        },
+        {
+          "heading": "202",
+          "level": 1,
+          "line": 204
+        },
+        {
+          "heading": "203",
+          "level": 1,
+          "line": 205
+        },
+        {
+          "heading": "204",
+          "level": 1,
+          "line": 206
+        },
+        {
+          "heading": "205",
+          "level": 1,
+          "line": 207
+        },
+        {
+          "heading": "206",
+          "level": 1,
+          "line": 208
+        },
+        {
+          "heading": "207",
+          "level": 1,
+          "line": 209
+        },
+        {
+          "heading": "208",
+          "level": 1,
+          "line": 210
+        },
+        {
+          "heading": "209",
+          "level": 1,
+          "line": 211
+        },
+        {
+          "heading": "210",
+          "level": 1,
+          "line": 212
+        },
+        {
+          "heading": "211",
+          "level": 1,
+          "line": 213
+        },
+        {
+          "heading": "212",
+          "level": 1,
+          "line": 214
+        },
+        {
+          "heading": "213",
+          "level": 1,
+          "line": 215
+        },
+        {
+          "heading": "214",
+          "level": 1,
+          "line": 216
+        },
+        {
+          "heading": "215",
+          "level": 1,
+          "line": 217
+        },
+        {
+          "heading": "216",
+          "level": 1,
+          "line": 218
+        },
+        {
+          "heading": "217",
+          "level": 1,
+          "line": 219
+        },
+        {
+          "heading": "218",
+          "level": 1,
+          "line": 220
+        },
+        {
+          "heading": "219",
+          "level": 1,
+          "line": 221
+        },
+        {
+          "heading": "220",
+          "level": 1,
+          "line": 222
+        },
+        {
+          "heading": "221",
+          "level": 1,
+          "line": 223
+        },
+        {
+          "heading": "222",
+          "level": 1,
+          "line": 224
+        },
+        {
+          "heading": "223",
+          "level": 1,
+          "line": 225
+        },
+        {
+          "heading": "224",
+          "level": 1,
+          "line": 226
+        },
+        {
+          "heading": "225",
+          "level": 1,
+          "line": 227
+        },
+        {
+          "heading": "226",
+          "level": 1,
+          "line": 228
+        },
+        {
+          "heading": "227",
+          "level": 1,
+          "line": 229
+        },
+        {
+          "heading": "228",
+          "level": 1,
+          "line": 230
+        },
+        {
+          "heading": "229",
+          "level": 1,
+          "line": 231
+        },
+        {
+          "heading": "230",
+          "level": 1,
+          "line": 232
+        },
+        {
+          "heading": "231",
+          "level": 1,
+          "line": 233
+        },
+        {
+          "heading": "232",
+          "level": 1,
+          "line": 234
+        },
+        {
+          "heading": "233",
+          "level": 1,
+          "line": 235
+        },
+        {
+          "heading": "234",
+          "level": 1,
+          "line": 236
+        },
+        {
+          "heading": "235",
+          "level": 1,
+          "line": 237
+        },
+        {
+          "heading": "236",
+          "level": 1,
+          "line": 238
+        },
+        {
+          "heading": "237",
+          "level": 1,
+          "line": 239
+        },
+        {
+          "heading": "238",
+          "level": 1,
+          "line": 240
+        },
+        {
+          "heading": "239",
+          "level": 1,
+          "line": 241
+        },
+        {
+          "heading": "240",
+          "level": 1,
+          "line": 242
+        },
+        {
+          "heading": "241",
+          "level": 1,
+          "line": 243
+        },
+        {
+          "heading": "242",
+          "level": 1,
+          "line": 244
+        },
+        {
+          "heading": "243",
+          "level": 1,
+          "line": 245
+        },
+        {
+          "heading": "244",
+          "level": 1,
+          "line": 246
+        },
+        {
+          "heading": "245",
+          "level": 1,
+          "line": 247
+        },
+        {
+          "heading": "246",
+          "level": 1,
+          "line": 248
+        },
+        {
+          "heading": "247",
+          "level": 1,
+          "line": 249
+        },
+        {
+          "heading": "248",
+          "level": 1,
+          "line": 250
+        },
+        {
+          "heading": "249",
+          "level": 1,
+          "line": 251
+        },
+        {
+          "heading": "250",
+          "level": 1,
+          "line": 252
+        },
+        {
+          "heading": "251",
+          "level": 1,
+          "line": 253
+        },
+        {
+          "heading": "252",
+          "level": 1,
+          "line": 254
+        },
+        {
+          "heading": "253",
+          "level": 1,
+          "line": 255
+        },
+        {
+          "heading": "254",
+          "level": 1,
+          "line": 256
+        },
+        {
+          "heading": "255",
+          "level": 1,
+          "line": 257
+        },
+        {
+          "heading": "256",
+          "level": 1,
+          "line": 258
+        },
+        {
+          "heading": "257",
+          "level": 1,
+          "line": 259
+        },
+        {
+          "heading": "258",
+          "level": 1,
+          "line": 260
+        },
+        {
+          "heading": "259",
+          "level": 1,
+          "line": 261
+        },
+        {
+          "heading": "260",
+          "level": 1,
+          "line": 262
+        },
+        {
+          "heading": "261",
+          "level": 1,
+          "line": 263
+        },
+        {
+          "heading": "262",
+          "level": 1,
+          "line": 264
+        },
+        {
+          "heading": "263",
+          "level": 1,
+          "line": 265
+        },
+        {
+          "heading": "264",
+          "level": 1,
+          "line": 266
+        },
+        {
+          "heading": "265",
+          "level": 1,
+          "line": 267
+        },
+        {
+          "heading": "266",
+          "level": 1,
+          "line": 268
+        },
+        {
+          "heading": "267",
+          "level": 1,
+          "line": 269
+        },
+        {
+          "heading": "268",
+          "level": 1,
+          "line": 270
+        },
+        {
+          "heading": "269",
+          "level": 1,
+          "line": 271
+        },
+        {
+          "heading": "270",
+          "level": 1,
+          "line": 272
+        },
+        {
+          "heading": "271",
+          "level": 1,
+          "line": 273
+        },
+        {
+          "heading": "272",
+          "level": 1,
+          "line": 274
+        },
+        {
+          "heading": "273",
+          "level": 1,
+          "line": 275
+        },
+        {
+          "heading": "274",
+          "level": 1,
+          "line": 276
+        },
+        {
+          "heading": "275",
+          "level": 1,
+          "line": 277
+        },
+        {
+          "heading": "276",
+          "level": 1,
+          "line": 278
+        },
+        {
+          "heading": "277",
+          "level": 1,
+          "line": 279
+        },
+        {
+          "heading": "278",
+          "level": 1,
+          "line": 280
+        },
+        {
+          "heading": "279",
+          "level": 1,
+          "line": 281
+        },
+        {
+          "heading": "280",
+          "level": 1,
+          "line": 282
+        },
+        {
+          "heading": "281",
+          "level": 1,
+          "line": 283
+        },
+        {
+          "heading": "282",
+          "level": 1,
+          "line": 284
+        },
+        {
+          "heading": "283",
+          "level": 1,
+          "line": 285
+        },
+        {
+          "heading": "284",
+          "level": 1,
+          "line": 286
+        },
+        {
+          "heading": "285",
+          "level": 1,
+          "line": 287
+        },
+        {
+          "heading": "286",
+          "level": 1,
+          "line": 288
+        },
+        {
+          "heading": "287",
+          "level": 1,
+          "line": 289
+        },
+        {
+          "heading": "288",
+          "level": 1,
+          "line": 290
+        },
+        {
+          "heading": "289",
+          "level": 1,
+          "line": 291
+        },
+        {
+          "heading": "290",
+          "level": 1,
+          "line": 292
+        },
+        {
+          "heading": "291",
+          "level": 1,
+          "line": 293
+        },
+        {
+          "heading": "292",
+          "level": 1,
+          "line": 294
+        },
+        {
+          "heading": "293",
+          "level": 1,
+          "line": 295
+        },
+        {
+          "heading": "294",
+          "level": 1,
+          "line": 296
+        },
+        {
+          "heading": "295",
+          "level": 1,
+          "line": 297
+        },
+        {
+          "heading": "296",
+          "level": 1,
+          "line": 298
+        },
+        {
+          "heading": "297",
+          "level": 1,
+          "line": 299
+        },
+        {
+          "heading": "298",
+          "level": 1,
+          "line": 300
+        },
+        {
+          "heading": "299",
+          "level": 1,
+          "line": 301
+        },
+        {
+          "heading": "300",
+          "level": 1,
+          "line": 302
+        },
+        {
+          "heading": "301",
+          "level": 1,
+          "line": 303
+        },
+        {
+          "heading": "302",
+          "level": 1,
+          "line": 304
+        },
+        {
+          "heading": "303",
+          "level": 1,
+          "line": 305
+        },
+        {
+          "heading": "304",
+          "level": 1,
+          "line": 306
+        },
+        {
+          "heading": "305",
+          "level": 1,
+          "line": 307
+        },
+        {
+          "heading": "306",
+          "level": 1,
+          "line": 308
+        },
+        {
+          "heading": "307",
+          "level": 1,
+          "line": 309
+        },
+        {
+          "heading": "308",
+          "level": 1,
+          "line": 310
+        },
+        {
+          "heading": "309",
+          "level": 1,
+          "line": 311
+        },
+        {
+          "heading": "310",
+          "level": 1,
+          "line": 312
+        },
+        {
+          "heading": "311",
+          "level": 1,
+          "line": 313
+        },
+        {
+          "heading": "312",
+          "level": 1,
+          "line": 314
+        },
+        {
+          "heading": "313",
+          "level": 1,
+          "line": 315
+        },
+        {
+          "heading": "314",
+          "level": 1,
+          "line": 316
+        },
+        {
+          "heading": "315",
+          "level": 1,
+          "line": 317
+        },
+        {
+          "heading": "316",
+          "level": 1,
+          "line": 318
+        },
+        {
+          "heading": "317",
+          "level": 1,
+          "line": 319
+        },
+        {
+          "heading": "318",
+          "level": 1,
+          "line": 320
+        },
+        {
+          "heading": "319",
+          "level": 1,
+          "line": 321
+        },
+        {
+          "heading": "320",
+          "level": 1,
+          "line": 322
+        },
+        {
+          "heading": "321",
+          "level": 1,
+          "line": 323
+        },
+        {
+          "heading": "322",
+          "level": 1,
+          "line": 324
+        },
+        {
+          "heading": "323",
+          "level": 1,
+          "line": 325
+        },
+        {
+          "heading": "324",
+          "level": 1,
+          "line": 326
+        },
+        {
+          "heading": "325",
+          "level": 1,
+          "line": 327
+        },
+        {
+          "heading": "326",
+          "level": 1,
+          "line": 328
+        },
+        {
+          "heading": "327",
+          "level": 1,
+          "line": 329
+        },
+        {
+          "heading": "328",
+          "level": 1,
+          "line": 330
+        },
+        {
+          "heading": "329",
+          "level": 1,
+          "line": 331
+        },
+        {
+          "heading": "330",
+          "level": 1,
+          "line": 332
+        },
+        {
+          "heading": "331",
+          "level": 1,
+          "line": 333
+        },
+        {
+          "heading": "332",
+          "level": 1,
+          "line": 334
+        },
+        {
+          "heading": "333",
+          "level": 1,
+          "line": 335
+        },
+        {
+          "heading": "334",
+          "level": 1,
+          "line": 336
+        },
+        {
+          "heading": "335",
+          "level": 1,
+          "line": 337
+        },
+        {
+          "heading": "336",
+          "level": 1,
+          "line": 338
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 337
+      }
+    },
+    {
+      "path": "graphify-out/GRAPH_REPORT.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1489,
+      "nonEmptyLines": 1203,
+      "sections": [
+        {
+          "heading": "Graph Report - HERO  (2026-06-09)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Corpus Check",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Community Hubs (Navigation)",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "God Nodes (most connected - your core abstractions)",
+          "level": 2,
+          "line": 335
+        },
+        {
+          "heading": "Surprising Connections (you probably didn't know these)",
+          "level": 2,
+          "line": 347
+        },
+        {
+          "heading": "Import Cycles",
+          "level": 2,
+          "line": 359
+        },
+        {
+          "heading": "Communities (337 total, 45 thin omitted)",
+          "level": 2,
+          "line": 362
+        },
+        {
+          "heading": "Community 0 - \"Community 0\"",
+          "level": 3,
+          "line": 364
+        },
+        {
+          "heading": "Community 1 - \"Community 1\"",
+          "level": 3,
+          "line": 368
+        },
+        {
+          "heading": "Community 2 - \"Community 2\"",
+          "level": 3,
+          "line": 372
+        },
+        {
+          "heading": "Community 3 - \"Community 3\"",
+          "level": 3,
+          "line": 376
+        },
+        {
+          "heading": "Community 4 - \"Community 4\"",
+          "level": 3,
+          "line": 380
+        },
+        {
+          "heading": "Community 5 - \"Community 5\"",
+          "level": 3,
+          "line": 384
+        },
+        {
+          "heading": "Community 6 - \"Community 6\"",
+          "level": 3,
+          "line": 388
+        },
+        {
+          "heading": "Community 7 - \"Community 7\"",
+          "level": 3,
+          "line": 392
+        },
+        {
+          "heading": "Community 8 - \"Community 8\"",
+          "level": 3,
+          "line": 396
+        },
+        {
+          "heading": "Community 9 - \"Community 9\"",
+          "level": 3,
+          "line": 400
+        },
+        {
+          "heading": "Community 10 - \"Community 10\"",
+          "level": 3,
+          "line": 404
+        },
+        {
+          "heading": "Community 11 - \"Community 11\"",
+          "level": 3,
+          "line": 408
+        },
+        {
+          "heading": "Community 12 - \"Community 12\"",
+          "level": 3,
+          "line": 412
+        },
+        {
+          "heading": "Community 13 - \"Community 13\"",
+          "level": 3,
+          "line": 416
+        },
+        {
+          "heading": "Community 14 - \"Community 14\"",
+          "level": 3,
+          "line": 420
+        },
+        {
+          "heading": "Community 15 - \"Community 15\"",
+          "level": 3,
+          "line": 424
+        },
+        {
+          "heading": "Community 16 - \"Community 16\"",
+          "level": 3,
+          "line": 428
+        },
+        {
+          "heading": "Community 18 - \"Community 18\"",
+          "level": 3,
+          "line": 432
+        },
+        {
+          "heading": "Community 41 - \"Community 41\"",
+          "level": 3,
+          "line": 436
+        },
+        {
+          "heading": "Community 42 - \"Community 42\"",
+          "level": 3,
+          "line": 440
+        },
+        {
+          "heading": "Community 43 - \"Community 43\"",
+          "level": 3,
+          "line": 444
+        },
+        {
+          "heading": "Community 44 - \"Community 44\"",
+          "level": 3,
+          "line": 448
+        },
+        {
+          "heading": "Community 45 - \"Community 45\"",
+          "level": 3,
+          "line": 452
+        },
+        {
+          "heading": "Community 46 - \"Community 46\"",
+          "level": 3,
+          "line": 456
+        },
+        {
+          "heading": "Community 47 - \"Community 47\"",
+          "level": 3,
+          "line": 460
+        },
+        {
+          "heading": "Community 48 - \"Community 48\"",
+          "level": 3,
+          "line": 464
+        },
+        {
+          "heading": "Community 49 - \"Community 49\"",
+          "level": 3,
+          "line": 468
+        },
+        {
+          "heading": "Community 50 - \"Community 50\"",
+          "level": 3,
+          "line": 472
+        },
+        {
+          "heading": "Community 51 - \"Community 51\"",
+          "level": 3,
+          "line": 476
+        },
+        {
+          "heading": "Community 52 - \"Community 52\"",
+          "level": 3,
+          "line": 480
+        },
+        {
+          "heading": "Community 53 - \"Community 53\"",
+          "level": 3,
+          "line": 484
+        },
+        {
+          "heading": "Community 54 - \"Community 54\"",
+          "level": 3,
+          "line": 488
+        },
+        {
+          "heading": "Community 55 - \"Community 55\"",
+          "level": 3,
+          "line": 492
+        },
+        {
+          "heading": "Community 56 - \"Community 56\"",
+          "level": 3,
+          "line": 496
+        },
+        {
+          "heading": "Community 57 - \"Community 57\"",
+          "level": 3,
+          "line": 500
+        },
+        {
+          "heading": "Community 58 - \"Community 58\"",
+          "level": 3,
+          "line": 504
+        },
+        {
+          "heading": "Community 59 - \"Community 59\"",
+          "level": 3,
+          "line": 508
+        },
+        {
+          "heading": "Community 60 - \"Community 60\"",
+          "level": 3,
+          "line": 512
+        },
+        {
+          "heading": "Community 61 - \"Community 61\"",
+          "level": 3,
+          "line": 516
+        },
+        {
+          "heading": "Community 62 - \"Community 62\"",
+          "level": 3,
+          "line": 520
+        },
+        {
+          "heading": "Community 63 - \"Community 63\"",
+          "level": 3,
+          "line": 524
+        },
+        {
+          "heading": "Community 64 - \"Community 64\"",
+          "level": 3,
+          "line": 528
+        },
+        {
+          "heading": "Community 65 - \"Community 65\"",
+          "level": 3,
+          "line": 532
+        },
+        {
+          "heading": "Community 66 - \"Community 66\"",
+          "level": 3,
+          "line": 536
+        },
+        {
+          "heading": "Community 67 - \"Community 67\"",
+          "level": 3,
+          "line": 540
+        },
+        {
+          "heading": "Community 68 - \"Community 68\"",
+          "level": 3,
+          "line": 544
+        },
+        {
+          "heading": "Community 69 - \"Community 69\"",
+          "level": 3,
+          "line": 548
+        },
+        {
+          "heading": "Community 70 - \"Community 70\"",
+          "level": 3,
+          "line": 552
+        },
+        {
+          "heading": "Community 71 - \"Community 71\"",
+          "level": 3,
+          "line": 556
+        },
+        {
+          "heading": "Community 72 - \"Community 72\"",
+          "level": 3,
+          "line": 560
+        },
+        {
+          "heading": "Community 73 - \"Community 73\"",
+          "level": 3,
+          "line": 564
+        },
+        {
+          "heading": "Community 74 - \"Community 74\"",
+          "level": 3,
+          "line": 568
+        },
+        {
+          "heading": "Community 75 - \"Community 75\"",
+          "level": 3,
+          "line": 572
+        },
+        {
+          "heading": "Community 76 - \"Community 76\"",
+          "level": 3,
+          "line": 576
+        },
+        {
+          "heading": "Community 77 - \"Community 77\"",
+          "level": 3,
+          "line": 580
+        },
+        {
+          "heading": "Community 78 - \"Community 78\"",
+          "level": 3,
+          "line": 584
+        },
+        {
+          "heading": "Community 79 - \"Community 79\"",
+          "level": 3,
+          "line": 588
+        },
+        {
+          "heading": "Community 80 - \"Community 80\"",
+          "level": 3,
+          "line": 592
+        },
+        {
+          "heading": "Community 81 - \"Community 81\"",
+          "level": 3,
+          "line": 596
+        },
+        {
+          "heading": "Community 82 - \"Community 82\"",
+          "level": 3,
+          "line": 600
+        },
+        {
+          "heading": "Community 83 - \"Community 83\"",
+          "level": 3,
+          "line": 604
+        },
+        {
+          "heading": "Community 84 - \"Community 84\"",
+          "level": 3,
+          "line": 608
+        },
+        {
+          "heading": "Community 85 - \"Community 85\"",
+          "level": 3,
+          "line": 612
+        },
+        {
+          "heading": "Community 86 - \"Community 86\"",
+          "level": 3,
+          "line": 616
+        },
+        {
+          "heading": "Community 87 - \"Community 87\"",
+          "level": 3,
+          "line": 620
+        },
+        {
+          "heading": "Community 88 - \"Community 88\"",
+          "level": 3,
+          "line": 624
+        },
+        {
+          "heading": "Community 89 - \"Community 89\"",
+          "level": 3,
+          "line": 628
+        },
+        {
+          "heading": "Community 90 - \"Community 90\"",
+          "level": 3,
+          "line": 632
+        },
+        {
+          "heading": "Community 91 - \"Community 91\"",
+          "level": 3,
+          "line": 636
+        },
+        {
+          "heading": "Community 92 - \"Community 92\"",
+          "level": 3,
+          "line": 640
+        },
+        {
+          "heading": "Community 93 - \"Community 93\"",
+          "level": 3,
+          "line": 644
+        },
+        {
+          "heading": "Community 94 - \"Community 94\"",
+          "level": 3,
+          "line": 648
+        },
+        {
+          "heading": "Community 95 - \"Community 95\"",
+          "level": 3,
+          "line": 652
+        },
+        {
+          "heading": "Community 96 - \"Community 96\"",
+          "level": 3,
+          "line": 656
+        },
+        {
+          "heading": "Community 97 - \"Community 97\"",
+          "level": 3,
+          "line": 660
+        },
+        {
+          "heading": "Community 98 - \"Community 98\"",
+          "level": 3,
+          "line": 664
+        },
+        {
+          "heading": "Community 99 - \"Community 99\"",
+          "level": 3,
+          "line": 668
+        },
+        {
+          "heading": "Community 100 - \"Community 100\"",
+          "level": 3,
+          "line": 672
+        },
+        {
+          "heading": "Community 101 - \"Community 101\"",
+          "level": 3,
+          "line": 676
+        },
+        {
+          "heading": "Community 102 - \"Community 102\"",
+          "level": 3,
+          "line": 680
+        },
+        {
+          "heading": "Community 103 - \"Community 103\"",
+          "level": 3,
+          "line": 684
+        },
+        {
+          "heading": "Community 104 - \"Community 104\"",
+          "level": 3,
+          "line": 688
+        },
+        {
+          "heading": "Community 105 - \"Community 105\"",
+          "level": 3,
+          "line": 692
+        },
+        {
+          "heading": "Community 106 - \"Community 106\"",
+          "level": 3,
+          "line": 696
+        },
+        {
+          "heading": "Community 107 - \"Community 107\"",
+          "level": 3,
+          "line": 700
+        },
+        {
+          "heading": "Community 108 - \"Community 108\"",
+          "level": 3,
+          "line": 704
+        },
+        {
+          "heading": "Community 109 - \"Community 109\"",
+          "level": 3,
+          "line": 708
+        },
+        {
+          "heading": "Community 110 - \"Community 110\"",
+          "level": 3,
+          "line": 712
+        },
+        {
+          "heading": "Community 111 - \"Community 111\"",
+          "level": 3,
+          "line": 716
+        },
+        {
+          "heading": "Community 112 - \"Community 112\"",
+          "level": 3,
+          "line": 720
+        },
+        {
+          "heading": "Community 113 - \"Community 113\"",
+          "level": 3,
+          "line": 724
+        },
+        {
+          "heading": "Community 114 - \"Community 114\"",
+          "level": 3,
+          "line": 728
+        },
+        {
+          "heading": "Community 115 - \"Community 115\"",
+          "level": 3,
+          "line": 732
+        },
+        {
+          "heading": "Community 116 - \"Community 116\"",
+          "level": 3,
+          "line": 736
+        },
+        {
+          "heading": "Community 117 - \"Community 117\"",
+          "level": 3,
+          "line": 740
+        },
+        {
+          "heading": "Community 118 - \"Community 118\"",
+          "level": 3,
+          "line": 744
+        },
+        {
+          "heading": "Community 119 - \"Community 119\"",
+          "level": 3,
+          "line": 748
+        },
+        {
+          "heading": "Community 120 - \"Community 120\"",
+          "level": 3,
+          "line": 752
+        },
+        {
+          "heading": "Community 121 - \"Community 121\"",
+          "level": 3,
+          "line": 756
+        },
+        {
+          "heading": "Community 122 - \"Community 122\"",
+          "level": 3,
+          "line": 760
+        },
+        {
+          "heading": "Community 123 - \"Community 123\"",
+          "level": 3,
+          "line": 764
+        },
+        {
+          "heading": "Community 124 - \"Community 124\"",
+          "level": 3,
+          "line": 768
+        },
+        {
+          "heading": "Community 125 - \"Community 125\"",
+          "level": 3,
+          "line": 772
+        },
+        {
+          "heading": "Community 126 - \"Community 126\"",
+          "level": 3,
+          "line": 776
+        },
+        {
+          "heading": "Community 127 - \"Community 127\"",
+          "level": 3,
+          "line": 780
+        },
+        {
+          "heading": "Community 128 - \"Community 128\"",
+          "level": 3,
+          "line": 784
+        },
+        {
+          "heading": "Community 129 - \"Community 129\"",
+          "level": 3,
+          "line": 788
+        },
+        {
+          "heading": "Community 130 - \"Community 130\"",
+          "level": 3,
+          "line": 792
+        },
+        {
+          "heading": "Community 131 - \"Community 131\"",
+          "level": 3,
+          "line": 796
+        },
+        {
+          "heading": "Community 132 - \"Community 132\"",
+          "level": 3,
+          "line": 800
+        },
+        {
+          "heading": "Community 133 - \"Community 133\"",
+          "level": 3,
+          "line": 804
+        },
+        {
+          "heading": "Community 134 - \"Community 134\"",
+          "level": 3,
+          "line": 808
+        },
+        {
+          "heading": "Community 135 - \"Community 135\"",
+          "level": 3,
+          "line": 812
+        },
+        {
+          "heading": "Community 136 - \"Community 136\"",
+          "level": 3,
+          "line": 816
+        },
+        {
+          "heading": "Community 138 - \"Community 138\"",
+          "level": 3,
+          "line": 820
+        },
+        {
+          "heading": "Community 139 - \"Community 139\"",
+          "level": 3,
+          "line": 824
+        },
+        {
+          "heading": "Community 140 - \"Community 140\"",
+          "level": 3,
+          "line": 828
+        },
+        {
+          "heading": "Community 141 - \"Community 141\"",
+          "level": 3,
+          "line": 832
+        },
+        {
+          "heading": "Community 142 - \"Community 142\"",
+          "level": 3,
+          "line": 836
+        },
+        {
+          "heading": "Community 143 - \"Community 143\"",
+          "level": 3,
+          "line": 840
+        },
+        {
+          "heading": "Community 144 - \"Community 144\"",
+          "level": 3,
+          "line": 844
+        },
+        {
+          "heading": "Community 145 - \"Community 145\"",
+          "level": 3,
+          "line": 848
+        },
+        {
+          "heading": "Community 146 - \"Community 146\"",
+          "level": 3,
+          "line": 852
+        },
+        {
+          "heading": "Community 147 - \"Community 147\"",
+          "level": 3,
+          "line": 856
+        },
+        {
+          "heading": "Community 148 - \"Community 148\"",
+          "level": 3,
+          "line": 860
+        },
+        {
+          "heading": "Community 149 - \"Community 149\"",
+          "level": 3,
+          "line": 864
+        },
+        {
+          "heading": "Community 150 - \"Community 150\"",
+          "level": 3,
+          "line": 868
+        },
+        {
+          "heading": "Community 151 - \"Community 151\"",
+          "level": 3,
+          "line": 872
+        },
+        {
+          "heading": "Community 152 - \"Community 152\"",
+          "level": 3,
+          "line": 876
+        },
+        {
+          "heading": "Community 153 - \"Community 153\"",
+          "level": 3,
+          "line": 880
+        },
+        {
+          "heading": "Community 154 - \"Community 154\"",
+          "level": 3,
+          "line": 884
+        },
+        {
+          "heading": "Community 155 - \"Community 155\"",
+          "level": 3,
+          "line": 888
+        },
+        {
+          "heading": "Community 156 - \"Community 156\"",
+          "level": 3,
+          "line": 892
+        },
+        {
+          "heading": "Community 157 - \"Community 157\"",
+          "level": 3,
+          "line": 896
+        },
+        {
+          "heading": "Community 158 - \"Community 158\"",
+          "level": 3,
+          "line": 900
+        },
+        {
+          "heading": "Community 159 - \"Community 159\"",
+          "level": 3,
+          "line": 904
+        },
+        {
+          "heading": "Community 160 - \"Community 160\"",
+          "level": 3,
+          "line": 908
+        },
+        {
+          "heading": "Community 161 - \"Community 161\"",
+          "level": 3,
+          "line": 912
+        },
+        {
+          "heading": "Community 162 - \"Community 162\"",
+          "level": 3,
+          "line": 916
+        },
+        {
+          "heading": "Community 163 - \"Community 163\"",
+          "level": 3,
+          "line": 920
+        },
+        {
+          "heading": "Community 164 - \"Community 164\"",
+          "level": 3,
+          "line": 924
+        },
+        {
+          "heading": "Community 165 - \"Community 165\"",
+          "level": 3,
+          "line": 928
+        },
+        {
+          "heading": "Community 166 - \"Community 166\"",
+          "level": 3,
+          "line": 932
+        },
+        {
+          "heading": "Community 167 - \"Community 167\"",
+          "level": 3,
+          "line": 936
+        },
+        {
+          "heading": "Community 168 - \"Community 168\"",
+          "level": 3,
+          "line": 940
+        },
+        {
+          "heading": "Community 169 - \"Community 169\"",
+          "level": 3,
+          "line": 944
+        },
+        {
+          "heading": "Community 170 - \"Community 170\"",
+          "level": 3,
+          "line": 948
+        },
+        {
+          "heading": "Community 171 - \"Community 171\"",
+          "level": 3,
+          "line": 952
+        },
+        {
+          "heading": "Community 172 - \"Community 172\"",
+          "level": 3,
+          "line": 956
+        },
+        {
+          "heading": "Community 173 - \"Community 173\"",
+          "level": 3,
+          "line": 960
+        },
+        {
+          "heading": "Community 174 - \"Community 174\"",
+          "level": 3,
+          "line": 964
+        },
+        {
+          "heading": "Community 175 - \"Community 175\"",
+          "level": 3,
+          "line": 968
+        },
+        {
+          "heading": "Community 176 - \"Community 176\"",
+          "level": 3,
+          "line": 972
+        },
+        {
+          "heading": "Community 177 - \"Community 177\"",
+          "level": 3,
+          "line": 976
+        },
+        {
+          "heading": "Community 178 - \"Community 178\"",
+          "level": 3,
+          "line": 980
+        },
+        {
+          "heading": "Community 179 - \"Community 179\"",
+          "level": 3,
+          "line": 984
+        },
+        {
+          "heading": "Community 180 - \"Community 180\"",
+          "level": 3,
+          "line": 988
+        },
+        {
+          "heading": "Community 181 - \"Community 181\"",
+          "level": 3,
+          "line": 992
+        },
+        {
+          "heading": "Community 182 - \"Community 182\"",
+          "level": 3,
+          "line": 996
+        },
+        {
+          "heading": "Community 183 - \"Community 183\"",
+          "level": 3,
+          "line": 1000
+        },
+        {
+          "heading": "Community 184 - \"Community 184\"",
+          "level": 3,
+          "line": 1004
+        },
+        {
+          "heading": "Community 185 - \"Community 185\"",
+          "level": 3,
+          "line": 1008
+        },
+        {
+          "heading": "Community 186 - \"Community 186\"",
+          "level": 3,
+          "line": 1012
+        },
+        {
+          "heading": "Community 187 - \"Community 187\"",
+          "level": 3,
+          "line": 1016
+        },
+        {
+          "heading": "Community 188 - \"Community 188\"",
+          "level": 3,
+          "line": 1020
+        },
+        {
+          "heading": "Community 189 - \"Community 189\"",
+          "level": 3,
+          "line": 1024
+        },
+        {
+          "heading": "Community 190 - \"Community 190\"",
+          "level": 3,
+          "line": 1028
+        },
+        {
+          "heading": "Community 191 - \"Community 191\"",
+          "level": 3,
+          "line": 1032
+        },
+        {
+          "heading": "Community 192 - \"Community 192\"",
+          "level": 3,
+          "line": 1036
+        },
+        {
+          "heading": "Community 193 - \"Community 193\"",
+          "level": 3,
+          "line": 1040
+        },
+        {
+          "heading": "Community 194 - \"Community 194\"",
+          "level": 3,
+          "line": 1044
+        },
+        {
+          "heading": "Community 195 - \"Community 195\"",
+          "level": 3,
+          "line": 1048
+        },
+        {
+          "heading": "Community 196 - \"Community 196\"",
+          "level": 3,
+          "line": 1052
+        },
+        {
+          "heading": "Community 197 - \"Community 197\"",
+          "level": 3,
+          "line": 1056
+        },
+        {
+          "heading": "Community 198 - \"Community 198\"",
+          "level": 3,
+          "line": 1060
+        },
+        {
+          "heading": "Community 199 - \"Community 199\"",
+          "level": 3,
+          "line": 1064
+        },
+        {
+          "heading": "Community 200 - \"Community 200\"",
+          "level": 3,
+          "line": 1068
+        },
+        {
+          "heading": "Community 201 - \"Community 201\"",
+          "level": 3,
+          "line": 1072
+        },
+        {
+          "heading": "Community 202 - \"Community 202\"",
+          "level": 3,
+          "line": 1076
+        },
+        {
+          "heading": "Community 203 - \"Community 203\"",
+          "level": 3,
+          "line": 1080
+        },
+        {
+          "heading": "Community 204 - \"Community 204\"",
+          "level": 3,
+          "line": 1084
+        },
+        {
+          "heading": "Community 205 - \"Community 205\"",
+          "level": 3,
+          "line": 1088
+        },
+        {
+          "heading": "Community 206 - \"Community 206\"",
+          "level": 3,
+          "line": 1092
+        },
+        {
+          "heading": "Community 207 - \"Community 207\"",
+          "level": 3,
+          "line": 1096
+        },
+        {
+          "heading": "Community 208 - \"Community 208\"",
+          "level": 3,
+          "line": 1100
+        },
+        {
+          "heading": "Community 209 - \"Community 209\"",
+          "level": 3,
+          "line": 1104
+        },
+        {
+          "heading": "Community 210 - \"Community 210\"",
+          "level": 3,
+          "line": 1108
+        },
+        {
+          "heading": "Community 211 - \"Community 211\"",
+          "level": 3,
+          "line": 1112
+        },
+        {
+          "heading": "Community 212 - \"Community 212\"",
+          "level": 3,
+          "line": 1116
+        },
+        {
+          "heading": "Community 213 - \"Community 213\"",
+          "level": 3,
+          "line": 1120
+        },
+        {
+          "heading": "Community 214 - \"Community 214\"",
+          "level": 3,
+          "line": 1124
+        },
+        {
+          "heading": "Community 215 - \"Community 215\"",
+          "level": 3,
+          "line": 1128
+        },
+        {
+          "heading": "Community 216 - \"Community 216\"",
+          "level": 3,
+          "line": 1132
+        },
+        {
+          "heading": "Community 217 - \"Community 217\"",
+          "level": 3,
+          "line": 1136
+        },
+        {
+          "heading": "Community 218 - \"Community 218\"",
+          "level": 3,
+          "line": 1140
+        },
+        {
+          "heading": "Community 219 - \"Community 219\"",
+          "level": 3,
+          "line": 1144
+        },
+        {
+          "heading": "Community 220 - \"Community 220\"",
+          "level": 3,
+          "line": 1148
+        },
+        {
+          "heading": "Community 221 - \"Community 221\"",
+          "level": 3,
+          "line": 1152
+        },
+        {
+          "heading": "Community 222 - \"Community 222\"",
+          "level": 3,
+          "line": 1156
+        },
+        {
+          "heading": "Community 223 - \"Community 223\"",
+          "level": 3,
+          "line": 1160
+        },
+        {
+          "heading": "Community 224 - \"Community 224\"",
+          "level": 3,
+          "line": 1164
+        },
+        {
+          "heading": "Community 225 - \"Community 225\"",
+          "level": 3,
+          "line": 1168
+        },
+        {
+          "heading": "Community 226 - \"Community 226\"",
+          "level": 3,
+          "line": 1172
+        },
+        {
+          "heading": "Community 227 - \"Community 227\"",
+          "level": 3,
+          "line": 1176
+        },
+        {
+          "heading": "Community 228 - \"Community 228\"",
+          "level": 3,
+          "line": 1180
+        },
+        {
+          "heading": "Community 229 - \"Community 229\"",
+          "level": 3,
+          "line": 1184
+        },
+        {
+          "heading": "Community 230 - \"Community 230\"",
+          "level": 3,
+          "line": 1188
+        },
+        {
+          "heading": "Community 231 - \"Community 231\"",
+          "level": 3,
+          "line": 1192
+        },
+        {
+          "heading": "Community 232 - \"Community 232\"",
+          "level": 3,
+          "line": 1196
+        },
+        {
+          "heading": "Community 233 - \"Community 233\"",
+          "level": 3,
+          "line": 1200
+        },
+        {
+          "heading": "Community 234 - \"Community 234\"",
+          "level": 3,
+          "line": 1204
+        },
+        {
+          "heading": "Community 235 - \"Community 235\"",
+          "level": 3,
+          "line": 1208
+        },
+        {
+          "heading": "Community 236 - \"Community 236\"",
+          "level": 3,
+          "line": 1212
+        },
+        {
+          "heading": "Community 237 - \"Community 237\"",
+          "level": 3,
+          "line": 1216
+        },
+        {
+          "heading": "Community 238 - \"Community 238\"",
+          "level": 3,
+          "line": 1220
+        },
+        {
+          "heading": "Community 239 - \"Community 239\"",
+          "level": 3,
+          "line": 1224
+        },
+        {
+          "heading": "Community 240 - \"Community 240\"",
+          "level": 3,
+          "line": 1228
+        },
+        {
+          "heading": "Community 241 - \"Community 241\"",
+          "level": 3,
+          "line": 1232
+        },
+        {
+          "heading": "Community 242 - \"Community 242\"",
+          "level": 3,
+          "line": 1236
+        },
+        {
+          "heading": "Community 243 - \"Community 243\"",
+          "level": 3,
+          "line": 1240
+        },
+        {
+          "heading": "Community 244 - \"Community 244\"",
+          "level": 3,
+          "line": 1244
+        },
+        {
+          "heading": "Community 245 - \"Community 245\"",
+          "level": 3,
+          "line": 1248
+        },
+        {
+          "heading": "Community 246 - \"Community 246\"",
+          "level": 3,
+          "line": 1252
+        },
+        {
+          "heading": "Community 247 - \"Community 247\"",
+          "level": 3,
+          "line": 1256
+        },
+        {
+          "heading": "Community 248 - \"Community 248\"",
+          "level": 3,
+          "line": 1260
+        },
+        {
+          "heading": "Community 249 - \"Community 249\"",
+          "level": 3,
+          "line": 1264
+        },
+        {
+          "heading": "Community 250 - \"Community 250\"",
+          "level": 3,
+          "line": 1268
+        },
+        {
+          "heading": "Community 251 - \"Community 251\"",
+          "level": 3,
+          "line": 1272
+        },
+        {
+          "heading": "Community 252 - \"Community 252\"",
+          "level": 3,
+          "line": 1276
+        },
+        {
+          "heading": "Community 253 - \"Community 253\"",
+          "level": 3,
+          "line": 1280
+        },
+        {
+          "heading": "Community 254 - \"Community 254\"",
+          "level": 3,
+          "line": 1284
+        },
+        {
+          "heading": "Community 255 - \"Community 255\"",
+          "level": 3,
+          "line": 1288
+        },
+        {
+          "heading": "Community 256 - \"Community 256\"",
+          "level": 3,
+          "line": 1292
+        },
+        {
+          "heading": "Community 257 - \"Community 257\"",
+          "level": 3,
+          "line": 1296
+        },
+        {
+          "heading": "Community 258 - \"Community 258\"",
+          "level": 3,
+          "line": 1300
+        },
+        {
+          "heading": "Community 259 - \"Community 259\"",
+          "level": 3,
+          "line": 1304
+        },
+        {
+          "heading": "Community 260 - \"Community 260\"",
+          "level": 3,
+          "line": 1308
+        },
+        {
+          "heading": "Community 261 - \"Community 261\"",
+          "level": 3,
+          "line": 1312
+        },
+        {
+          "heading": "Community 262 - \"Community 262\"",
+          "level": 3,
+          "line": 1316
+        },
+        {
+          "heading": "Community 263 - \"Community 263\"",
+          "level": 3,
+          "line": 1320
+        },
+        {
+          "heading": "Community 264 - \"Community 264\"",
+          "level": 3,
+          "line": 1324
+        },
+        {
+          "heading": "Community 265 - \"Community 265\"",
+          "level": 3,
+          "line": 1328
+        },
+        {
+          "heading": "Community 266 - \"Community 266\"",
+          "level": 3,
+          "line": 1332
+        },
+        {
+          "heading": "Community 267 - \"Community 267\"",
+          "level": 3,
+          "line": 1336
+        },
+        {
+          "heading": "Community 268 - \"Community 268\"",
+          "level": 3,
+          "line": 1340
+        },
+        {
+          "heading": "Community 269 - \"Community 269\"",
+          "level": 3,
+          "line": 1344
+        },
+        {
+          "heading": "Community 270 - \"Community 270\"",
+          "level": 3,
+          "line": 1348
+        },
+        {
+          "heading": "Community 271 - \"Community 271\"",
+          "level": 3,
+          "line": 1352
+        },
+        {
+          "heading": "Community 272 - \"Community 272\"",
+          "level": 3,
+          "line": 1356
+        },
+        {
+          "heading": "Community 273 - \"Community 273\"",
+          "level": 3,
+          "line": 1360
+        },
+        {
+          "heading": "Community 274 - \"Community 274\"",
+          "level": 3,
+          "line": 1364
+        },
+        {
+          "heading": "Community 275 - \"Community 275\"",
+          "level": 3,
+          "line": 1368
+        },
+        {
+          "heading": "Community 277 - \"Community 277\"",
+          "level": 3,
+          "line": 1372
+        },
+        {
+          "heading": "Community 278 - \"Community 278\"",
+          "level": 3,
+          "line": 1376
+        },
+        {
+          "heading": "Community 279 - \"Community 279\"",
+          "level": 3,
+          "line": 1380
+        },
+        {
+          "heading": "Community 280 - \"Community 280\"",
+          "level": 3,
+          "line": 1384
+        },
+        {
+          "heading": "Community 281 - \"Community 281\"",
+          "level": 3,
+          "line": 1388
+        },
+        {
+          "heading": "Community 282 - \"Community 282\"",
+          "level": 3,
+          "line": 1392
+        },
+        {
+          "heading": "Community 283 - \"Community 283\"",
+          "level": 3,
+          "line": 1396
+        },
+        {
+          "heading": "Community 284 - \"Community 284\"",
+          "level": 3,
+          "line": 1400
+        },
+        {
+          "heading": "Community 286 - \"Community 286\"",
+          "level": 3,
+          "line": 1404
+        },
+        {
+          "heading": "Community 287 - \"Community 287\"",
+          "level": 3,
+          "line": 1408
+        },
+        {
+          "heading": "Community 288 - \"Community 288\"",
+          "level": 3,
+          "line": 1412
+        },
+        {
+          "heading": "Community 289 - \"Community 289\"",
+          "level": 3,
+          "line": 1416
+        },
+        {
+          "heading": "Community 290 - \"Community 290\"",
+          "level": 3,
+          "line": 1420
+        },
+        {
+          "heading": "Community 291 - \"Community 291\"",
+          "level": 3,
+          "line": 1424
+        },
+        {
+          "heading": "Community 292 - \"Community 292\"",
+          "level": 3,
+          "line": 1428
+        },
+        {
+          "heading": "Community 293 - \"Community 293\"",
+          "level": 3,
+          "line": 1432
+        },
+        {
+          "heading": "Community 294 - \"Community 294\"",
+          "level": 3,
+          "line": 1436
+        },
+        {
+          "heading": "Community 296 - \"Community 296\"",
+          "level": 3,
+          "line": 1440
+        },
+        {
+          "heading": "Community 298 - \"Community 298\"",
+          "level": 3,
+          "line": 1444
+        },
+        {
+          "heading": "Community 299 - \"Community 299\"",
+          "level": 3,
+          "line": 1448
+        },
+        {
+          "heading": "Community 300 - \"Community 300\"",
+          "level": 3,
+          "line": 1452
+        },
+        {
+          "heading": "Community 301 - \"Community 301\"",
+          "level": 3,
+          "line": 1456
+        },
+        {
+          "heading": "Community 304 - \"Community 304\"",
+          "level": 3,
+          "line": 1460
+        },
+        {
+          "heading": "Community 305 - \"Community 305\"",
+          "level": 3,
+          "line": 1464
+        },
+        {
+          "heading": "Knowledge Gaps",
+          "level": 2,
+          "line": 1468
+        },
+        {
+          "heading": "Suggested Questions",
+          "level": 2,
+          "line": 1473
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 286
+      }
+    },
+    {
+      "path": "graphify-out/graph.html",
+      "language": "html",
+      "fileCategory": "markup",
+      "totalLines": 307,
+      "nonEmptyLines": 293,
+      "metrics": {}
+    },
+    {
+      "path": "graphify-out/graph.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 118630,
+      "nonEmptyLines": 118630,
+      "sections": [
+        {
+          "heading": "directed",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "multigraph",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "graph",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "nodes",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "links",
+          "level": 1,
+          "line": 744
+        },
+        {
+          "heading": "hyperedges",
+          "level": 1,
+          "line": 118629
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "graphify-out/manifest.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1362,
+      "nonEmptyLines": 1362,
+      "sections": [
+        {
+          "heading": "tests/test_budget.py",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "tests/test_spawn.py",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "tests/test_budget_katana.py",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "tests/test_deploy.py",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "tests/__init__.py",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "tests/test_toon.py",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "tests/test_heartbeat.py",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "tests/test_graphify.py",
+          "level": 1,
+          "line": 37
+        },
+        {
+          "heading": "tests/test_state.py",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "src/hero/cli.py",
+          "level": 1,
+          "line": 47
+        },
+        {
+          "heading": "src/hero/__init__.py",
+          "level": 1,
+          "line": 52
+        },
+        {
+          "heading": "src/hero/__main__.py",
+          "level": 1,
+          "line": 57
+        },
+        {
+          "heading": "src/hero/graphify/client.py",
+          "level": 1,
+          "line": 62
+        },
+        {
+          "heading": "src/hero/graphify/__init__.py",
+          "level": 1,
+          "line": 67
+        },
+        {
+          "heading": "src/hero/graphify/query.py",
+          "level": 1,
+          "line": 72
+        },
+        {
+          "heading": "src/hero/state/toon.py",
+          "level": 1,
+          "line": 77
+        },
+        {
+          "heading": "src/hero/state/index.py",
+          "level": 1,
+          "line": 82
+        },
+        {
+          "heading": "src/hero/state/budget.py",
+          "level": 1,
+          "line": 87
+        },
+        {
+          "heading": "src/hero/state/sandbox.py",
+          "level": 1,
+          "line": 92
+        },
+        {
+          "heading": "src/hero/state/__init__.py",
+          "level": 1,
+          "line": 97
+        },
+        {
+          "heading": "src/hero/soldier/heartbeat.py",
+          "level": 1,
+          "line": 102
+        },
+        {
+          "heading": "src/hero/soldier/context.py",
+          "level": 1,
+          "line": 107
+        },
+        {
+          "heading": "src/hero/soldier/spawner.py",
+          "level": 1,
+          "line": 112
+        },
+        {
+          "heading": "src/hero/soldier/__init__.py",
+          "level": 1,
+          "line": 117
+        },
+        {
+          "heading": "src/hero/commands/deploy.py",
+          "level": 1,
+          "line": 122
+        },
+        {
+          "heading": "src/hero/commands/status.py",
+          "level": 1,
+          "line": 127
+        },
+        {
+          "heading": "src/hero/commands/heartbeat.py",
+          "level": 1,
+          "line": 132
+        },
+        {
+          "heading": "src/hero/commands/katana.py",
+          "level": 1,
+          "line": 137
+        },
+        {
+          "heading": "src/hero/commands/budget.py",
+          "level": 1,
+          "line": 142
+        },
+        {
+          "heading": "src/hero/commands/__init__.py",
+          "level": 1,
+          "line": 147
+        },
+        {
+          "heading": "src/hero/commands/spawn.py",
+          "level": 1,
+          "line": 152
+        },
+        {
+          "heading": "src/hero/commands/scan.py",
+          "level": 1,
+          "line": 157
+        },
+        {
+          "heading": "src/hero/commands/graph.py",
+          "level": 1,
+          "line": 162
+        },
+        {
+          "heading": "SPEC.md",
+          "level": 1,
+          "line": 167
+        },
+        {
+          "heading": "README.md",
+          "level": 1,
+          "line": 172
+        },
+        {
+          "heading": "PLAN.md",
+          "level": 1,
+          "line": 177
+        },
+        {
+          "heading": "RESOURCES.md",
+          "level": 1,
+          "line": 182
+        },
+        {
+          "heading": ".openclaw/workspace-state.json",
+          "level": 1,
+          "line": 187
+        },
+        {
+          "heading": "hero-teach/package.json",
+          "level": 1,
+          "line": 192
+        },
+        {
+          "heading": "hero-teach/postcss.config.js",
+          "level": 1,
+          "line": 197
+        },
+        {
+          "heading": "hero-teach/scripts/extract-commands.mjs",
+          "level": 1,
+          "line": 202
+        },
+        {
+          "heading": "hero-teach/scripts/extract-roles.mjs",
+          "level": 1,
+          "line": 207
+        },
+        {
+          "heading": "hero-teach/src/App.tsx",
+          "level": 1,
+          "line": 212
+        },
+        {
+          "heading": "hero-teach/src/components/Callout.tsx",
+          "level": 1,
+          "line": 217
+        },
+        {
+          "heading": "hero-teach/src/components/CodeBlock.tsx",
+          "level": 1,
+          "line": 222
+        },
+        {
+          "heading": "hero-teach/src/components/Footer.tsx",
+          "level": 1,
+          "line": 227
+        },
+        {
+          "heading": "hero-teach/src/components/GitHubIcon.tsx",
+          "level": 1,
+          "line": 232
+        },
+        {
+          "heading": "hero-teach/src/components/Nav.tsx",
+          "level": 1,
+          "line": 237
+        },
+        {
+          "heading": "hero-teach/src/components/NodePanel.tsx",
+          "level": 1,
+          "line": 242
+        },
+        {
+          "heading": "hero-teach/src/components/NodePill.tsx",
+          "level": 1,
+          "line": 247
+        },
+        {
+          "heading": "hero-teach/src/components/PipelineMap.tsx",
+          "level": 1,
+          "line": 252
+        },
+        {
+          "heading": "hero-teach/src/components/ScoreBadge.tsx",
+          "level": 1,
+          "line": 257
+        },
+        {
+          "heading": "hero-teach/src/components/SearchBar.tsx",
+          "level": 1,
+          "line": 262
+        },
+        {
+          "heading": "hero-teach/src/components/ThemeToggle.tsx",
+          "level": 1,
+          "line": 267
+        },
+        {
+          "heading": "hero-teach/src/components/ToonVsJson.tsx",
+          "level": 1,
+          "line": 272
+        },
+        {
+          "heading": "hero-teach/src/data/commands.json",
+          "level": 1,
+          "line": 277
+        },
+        {
+          "heading": "hero-teach/src/data/pipeline.json",
+          "level": 1,
+          "line": 282
+        },
+        {
+          "heading": "hero-teach/src/data/roles.json",
+          "level": 1,
+          "line": 287
+        },
+        {
+          "heading": "hero-teach/src/main.tsx",
+          "level": 1,
+          "line": 292
+        },
+        {
+          "heading": "hero-teach/src/pages/About.tsx",
+          "level": 1,
+          "line": 297
+        },
+        {
+          "heading": "hero-teach/src/pages/Architecture.tsx",
+          "level": 1,
+          "line": 302
+        },
+        {
+          "heading": "hero-teach/src/pages/Commands.tsx",
+          "level": 1,
+          "line": 307
+        },
+        {
+          "heading": "hero-teach/src/pages/Examples.tsx",
+          "level": 1,
+          "line": 312
+        },
+        {
+          "heading": "hero-teach/src/pages/ExchangeLayer.tsx",
+          "level": 1,
+          "line": 317
+        },
+        {
+          "heading": "hero-teach/src/pages/GettingStarted.tsx",
+          "level": 1,
+          "line": 322
+        },
+        {
+          "heading": "hero-teach/src/pages/Home.tsx",
+          "level": 1,
+          "line": 327
+        },
+        {
+          "heading": "hero-teach/src/pages/Learn.tsx",
+          "level": 1,
+          "line": 332
+        },
+        {
+          "heading": "hero-teach/src/pages/NotFound.tsx",
+          "level": 1,
+          "line": 337
+        },
+        {
+          "heading": "hero-teach/src/pages/Pipeline.tsx",
+          "level": 1,
+          "line": 342
+        },
+        {
+          "heading": "hero-teach/src/pages/RolePage.tsx",
+          "level": 1,
+          "line": 347
+        },
+        {
+          "heading": "hero-teach/src/pages/Roles.tsx",
+          "level": 1,
+          "line": 352
+        },
+        {
+          "heading": "hero-teach/src/types.ts",
+          "level": 1,
+          "line": 357
+        },
+        {
+          "heading": "hero-teach/src/vite-env.d.ts",
+          "level": 1,
+          "line": 362
+        },
+        {
+          "heading": "hero-teach/tailwind.config.ts",
+          "level": 1,
+          "line": 367
+        },
+        {
+          "heading": "hero-teach/tsconfig.json",
+          "level": 1,
+          "line": 372
+        },
+        {
+          "heading": "hero-teach/vite.config.ts",
+          "level": 1,
+          "line": 377
+        },
+        {
+          "heading": "scripts/install-hero.sh",
+          "level": 1,
+          "line": 382
+        },
+        {
+          "heading": "src/hero/analysis_cache.py",
+          "level": 1,
+          "line": 387
+        },
+        {
+          "heading": "src/hero/archivist/__init__.py",
+          "level": 1,
+          "line": 392
+        },
+        {
+          "heading": "src/hero/archivist/inline.py",
+          "level": 1,
+          "line": 397
+        },
+        {
+          "heading": "src/hero/commands/archive.py",
+          "level": 1,
+          "line": 402
+        },
+        {
+          "heading": "src/hero/commands/assemble.py",
+          "level": 1,
+          "line": 407
+        },
+        {
+          "heading": "src/hero/commands/brainstorm.py",
+          "level": 1,
+          "line": 412
+        },
+        {
+          "heading": "src/hero/commands/build.py",
+          "level": 1,
+          "line": 417
+        },
+        {
+          "heading": "src/hero/commands/check.py",
+          "level": 1,
+          "line": 422
+        },
+        {
+          "heading": "src/hero/commands/cipr.py",
+          "level": 1,
+          "line": 427
+        },
+        {
+          "heading": "src/hero/commands/clean.py",
+          "level": 1,
+          "line": 432
+        },
+        {
+          "heading": "src/hero/commands/dispatch.py",
+          "level": 1,
+          "line": 437
+        },
+        {
+          "heading": "src/hero/commands/dlq.py",
+          "level": 1,
+          "line": 442
+        },
+        {
+          "heading": "src/hero/commands/eval.py",
+          "level": 1,
+          "line": 447
+        },
+        {
+          "heading": "src/hero/commands/exchange.py",
+          "level": 1,
+          "line": 452
+        },
+        {
+          "heading": "src/hero/commands/go.py",
+          "level": 1,
+          "line": 457
+        },
+        {
+          "heading": "src/hero/commands/harden.py",
+          "level": 1,
+          "line": 462
+        },
+        {
+          "heading": "src/hero/commands/kill.py",
+          "level": 1,
+          "line": 467
+        },
+        {
+          "heading": "src/hero/commands/kill_sandbox.py",
+          "level": 1,
+          "line": 472
+        },
+        {
+          "heading": "src/hero/commands/legal.py",
+          "level": 1,
+          "line": 477
+        },
+        {
+          "heading": "src/hero/commands/map.py",
+          "level": 1,
+          "line": 482
+        },
+        {
+          "heading": "src/hero/commands/orchestrate.py",
+          "level": 1,
+          "line": 487
+        },
+        {
+          "heading": "src/hero/commands/pipeline.py",
+          "level": 1,
+          "line": 492
+        },
+        {
+          "heading": "src/hero/commands/pre_commit.py",
+          "level": 1,
+          "line": 497
+        },
+        {
+          "heading": "src/hero/commands/prune.py",
+          "level": 1,
+          "line": 502
+        },
+        {
+          "heading": "src/hero/commands/ready.py",
+          "level": 1,
+          "line": 507
+        },
+        {
+          "heading": "src/hero/commands/score.py",
+          "level": 1,
+          "line": 512
+        },
+        {
+          "heading": "src/hero/commands/sweep.py",
+          "level": 1,
+          "line": 517
+        },
+        {
+          "heading": "src/hero/commands/tell.py",
+          "level": 1,
+          "line": 522
+        },
+        {
+          "heading": "src/hero/commands/verify.py",
+          "level": 1,
+          "line": 527
+        },
+        {
+          "heading": "src/hero/commands/viewport.py",
+          "level": 1,
+          "line": 532
+        },
+        {
+          "heading": "src/hero/commands/viewport_audit.py",
+          "level": 1,
+          "line": 537
+        },
+        {
+          "heading": "src/hero/commands/watch.py",
+          "level": 1,
+          "line": 542
+        },
+        {
+          "heading": "src/hero/core/__init__.py",
+          "level": 1,
+          "line": 547
+        },
+        {
+          "heading": "src/hero/core/project.py",
+          "level": 1,
+          "line": 552
+        },
+        {
+          "heading": "src/hero/core/subprocess.py",
+          "level": 1,
+          "line": 557
+        },
+        {
+          "heading": "src/hero/eval/__init__.py",
+          "level": 1,
+          "line": 562
+        },
+        {
+          "heading": "src/hero/eval/engine.py",
+          "level": 1,
+          "line": 567
+        },
+        {
+          "heading": "src/hero/eval/phases/__init__.py",
+          "level": 1,
+          "line": 572
+        },
+        {
+          "heading": "src/hero/eval/phases/accessibility.py",
+          "level": 1,
+          "line": 577
+        },
+        {
+          "heading": "src/hero/eval/phases/baseline.py",
+          "level": 1,
+          "line": 582
+        },
+        {
+          "heading": "src/hero/eval/phases/cicd.py",
+          "level": 1,
+          "line": 587
+        },
+        {
+          "heading": "src/hero/eval/phases/code_review.py",
+          "level": 1,
+          "line": 592
+        },
+        {
+          "heading": "src/hero/eval/phases/fix.py",
+          "level": 1,
+          "line": 597
+        },
+        {
+          "heading": "src/hero/eval/phases/performance.py",
+          "level": 1,
+          "line": 602
+        },
+        {
+          "heading": "src/hero/eval/phases/security.py",
+          "level": 1,
+          "line": 607
+        },
+        {
+          "heading": "src/hero/eval/phases/ship.py",
+          "level": 1,
+          "line": 612
+        },
+        {
+          "heading": "src/hero/eval/phases/tdd.py",
+          "level": 1,
+          "line": 617
+        },
+        {
+          "heading": "src/hero/eval/phases/verify.py",
+          "level": 1,
+          "line": 622
+        },
+        {
+          "heading": "src/hero/eval/report.py",
+          "level": 1,
+          "line": 627
+        },
+        {
+          "heading": "src/hero/eval/scorer.py",
+          "level": 1,
+          "line": 632
+        },
+        {
+          "heading": "src/hero/exchange/__init__.py",
+          "level": 1,
+          "line": 637
+        },
+        {
+          "heading": "src/hero/exchange/core.py",
+          "level": 1,
+          "line": 642
+        },
+        {
+          "heading": "src/hero/exchange/lock.py",
+          "level": 1,
+          "line": 647
+        },
+        {
+          "heading": "src/hero/exchange/message.py",
+          "level": 1,
+          "line": 652
+        },
+        {
+          "heading": "src/hero/exchange/pipe.py",
+          "level": 1,
+          "line": 657
+        },
+        {
+          "heading": "src/hero/exchange/reliability.py",
+          "level": 1,
+          "line": 662
+        },
+        {
+          "heading": "src/hero/exchange/review.py",
+          "level": 1,
+          "line": 667
+        },
+        {
+          "heading": "src/hero/exchange/task_list.py",
+          "level": 1,
+          "line": 672
+        },
+        {
+          "heading": "src/hero/git/__init__.py",
+          "level": 1,
+          "line": 677
+        },
+        {
+          "heading": "src/hero/git/branch.py",
+          "level": 1,
+          "line": 682
+        },
+        {
+          "heading": "src/hero/graph/__init__.py",
+          "level": 1,
+          "line": 687
+        },
+        {
+          "heading": "src/hero/graph/dependencies.py",
+          "level": 1,
+          "line": 692
+        },
+        {
+          "heading": "src/hero/logging/__init__.py",
+          "level": 1,
+          "line": 697
+        },
+        {
+          "heading": "src/hero/logging/handler.py",
+          "level": 1,
+          "line": 702
+        },
+        {
+          "heading": "src/hero/mcp_server.py",
+          "level": 1,
+          "line": 707
+        },
+        {
+          "heading": "src/hero/pipeline/__init__.py",
+          "level": 1,
+          "line": 712
+        },
+        {
+          "heading": "src/hero/pipeline/executor.py",
+          "level": 1,
+          "line": 717
+        },
+        {
+          "heading": "src/hero/pipeline/watcher.py",
+          "level": 1,
+          "line": 722
+        },
+        {
+          "heading": "src/hero/prompts/__init__.py",
+          "level": 1,
+          "line": 727
+        },
+        {
+          "heading": "src/hero/prompts/loader.py",
+          "level": 1,
+          "line": 732
+        },
+        {
+          "heading": "src/hero/qa/__init__.py",
+          "level": 1,
+          "line": 737
+        },
+        {
+          "heading": "src/hero/qa/gate.py",
+          "level": 1,
+          "line": 742
+        },
+        {
+          "heading": "src/hero/qa/tdd_gate.py",
+          "level": 1,
+          "line": 747
+        },
+        {
+          "heading": "src/hero/reliability/__init__.py",
+          "level": 1,
+          "line": 752
+        },
+        {
+          "heading": "src/hero/reliability/circuit_breaker.py",
+          "level": 1,
+          "line": 757
+        },
+        {
+          "heading": "src/hero/reliability/dlq.py",
+          "level": 1,
+          "line": 762
+        },
+        {
+          "heading": "src/hero/soldier/dispatch.py",
+          "level": 1,
+          "line": 767
+        },
+        {
+          "heading": "src/hero/stages/__init__.py",
+          "level": 1,
+          "line": 772
+        },
+        {
+          "heading": "src/hero/stages/archive.py",
+          "level": 1,
+          "line": 777
+        },
+        {
+          "heading": "src/hero/stages/build.py",
+          "level": 1,
+          "line": 782
+        },
+        {
+          "heading": "src/hero/stages/cipr.py",
+          "level": 1,
+          "line": 787
+        },
+        {
+          "heading": "src/hero/stages/harden.py",
+          "level": 1,
+          "line": 792
+        },
+        {
+          "heading": "src/hero/stages/legal.py",
+          "level": 1,
+          "line": 797
+        },
+        {
+          "heading": "src/hero/stages/navigate.py",
+          "level": 1,
+          "line": 802
+        },
+        {
+          "heading": "src/hero/stages/pre_commit.py",
+          "level": 1,
+          "line": 807
+        },
+        {
+          "heading": "src/hero/stages/verify.py",
+          "level": 1,
+          "line": 812
+        },
+        {
+          "heading": "src/hero/state/budget_history.py",
+          "level": 1,
+          "line": 817
+        },
+        {
+          "heading": "src/hero/state/cache.py",
+          "level": 1,
+          "line": 822
+        },
+        {
+          "heading": "src/hero/state/status.py",
+          "level": 1,
+          "line": 827
+        },
+        {
+          "heading": "src/hero/state/usage.py",
+          "level": 1,
+          "line": 832
+        },
+        {
+          "heading": "src/hero/viewport/__init__.py",
+          "level": 1,
+          "line": 837
+        },
+        {
+          "heading": "src/hero/viewport/compaction.py",
+          "level": 1,
+          "line": 842
+        },
+        {
+          "heading": "src/hero/viewport/delta.py",
+          "level": 1,
+          "line": 847
+        },
+        {
+          "heading": "src/hero/viewport/intel.py",
+          "level": 1,
+          "line": 852
+        },
+        {
+          "heading": "src/hero/viewport/metrics.py",
+          "level": 1,
+          "line": 857
+        },
+        {
+          "heading": "src/hero/viewport/renderer.py",
+          "level": 1,
+          "line": 862
+        },
+        {
+          "heading": "src/hero/viewport/states.py",
+          "level": 1,
+          "line": 867
+        },
+        {
+          "heading": "src/hero/viewport/tree.py",
+          "level": 1,
+          "line": 872
+        },
+        {
+          "heading": "src/hero/viewport/tree_renderer.py",
+          "level": 1,
+          "line": 877
+        },
+        {
+          "heading": "src/hero/web/__init__.py",
+          "level": 1,
+          "line": 882
+        },
+        {
+          "heading": "src/hero/web/server.py",
+          "level": 1,
+          "line": 887
+        },
+        {
+          "heading": "src/hero/web/static/js/app.js",
+          "level": 1,
+          "line": 892
+        },
+        {
+          "heading": "src/hero/web/static/js/components/controls.js",
+          "level": 1,
+          "line": 897
+        },
+        {
+          "heading": "src/hero/web/static/js/components/detail-panel.js",
+          "level": 1,
+          "line": 902
+        },
+        {
+          "heading": "src/hero/web/static/js/components/header.js",
+          "level": 1,
+          "line": 907
+        },
+        {
+          "heading": "src/hero/web/static/js/components/modal.js",
+          "level": 1,
+          "line": 912
+        },
+        {
+          "heading": "src/hero/web/static/js/components/sandbox-card.js",
+          "level": 1,
+          "line": 917
+        },
+        {
+          "heading": "src/hero/web/static/js/components/sparkline.js",
+          "level": 1,
+          "line": 922
+        },
+        {
+          "heading": "src/hero/web/static/js/components/stats-bar.js",
+          "level": 1,
+          "line": 927
+        },
+        {
+          "heading": "src/hero/web/static/js/components/timeline.js",
+          "level": 1,
+          "line": 932
+        },
+        {
+          "heading": "src/hero/web/static/js/components/toast.js",
+          "level": 1,
+          "line": 937
+        },
+        {
+          "heading": "src/hero/web/static/js/components/tree-node.js",
+          "level": 1,
+          "line": 942
+        },
+        {
+          "heading": "src/hero/web/static/js/services/api.js",
+          "level": 1,
+          "line": 947
+        },
+        {
+          "heading": "src/hero/web/static/js/services/auth.js",
+          "level": 1,
+          "line": 952
+        },
+        {
+          "heading": "src/hero/web/static/js/services/sse.js",
+          "level": 1,
+          "line": 957
+        },
+        {
+          "heading": "src/hero/web/static/js/services/state.js",
+          "level": 1,
+          "line": 962
+        },
+        {
+          "heading": "src/hero/web/static/js/utils/dom.js",
+          "level": 1,
+          "line": 967
+        },
+        {
+          "heading": "tests/conftest.py",
+          "level": 1,
+          "line": 972
+        },
+        {
+          "heading": "tests/test_analysis_cache.py",
+          "level": 1,
+          "line": 977
+        },
+        {
+          "heading": "tests/test_build.py",
+          "level": 1,
+          "line": 982
+        },
+        {
+          "heading": "tests/test_cache.py",
+          "level": 1,
+          "line": 987
+        },
+        {
+          "heading": "tests/test_cipr.py",
+          "level": 1,
+          "line": 992
+        },
+        {
+          "heading": "tests/test_core.py",
+          "level": 1,
+          "line": 997
+        },
+        {
+          "heading": "tests/test_dlq.py",
+          "level": 1,
+          "line": 1002
+        },
+        {
+          "heading": "tests/test_harden.py",
+          "level": 1,
+          "line": 1007
+        },
+        {
+          "heading": "tests/test_legal.py",
+          "level": 1,
+          "line": 1012
+        },
+        {
+          "heading": "tests/test_logging.py",
+          "level": 1,
+          "line": 1017
+        },
+        {
+          "heading": "tests/test_pipeline_executor.py",
+          "level": 1,
+          "line": 1022
+        },
+        {
+          "heading": "tests/test_pipeline_executor_qa.py",
+          "level": 1,
+          "line": 1027
+        },
+        {
+          "heading": "tests/test_pre_commit.py",
+          "level": 1,
+          "line": 1032
+        },
+        {
+          "heading": "tests/test_prompts.py",
+          "level": 1,
+          "line": 1037
+        },
+        {
+          "heading": "tests/test_qa_gate.py",
+          "level": 1,
+          "line": 1042
+        },
+        {
+          "heading": "tests/test_score.py",
+          "level": 1,
+          "line": 1047
+        },
+        {
+          "heading": "tests/test_status.py",
+          "level": 1,
+          "line": 1052
+        },
+        {
+          "heading": ".github/workflows/bandit.yml",
+          "level": 1,
+          "line": 1057
+        },
+        {
+          "heading": "AGENTS.md",
+          "level": 1,
+          "line": 1062
+        },
+        {
+          "heading": "ARCHITECT_BLUEPRINT.md",
+          "level": 1,
+          "line": 1067
+        },
+        {
+          "heading": "COUNCIL_REPORT_HERO_REBUILD.md",
+          "level": 1,
+          "line": 1072
+        },
+        {
+          "heading": "COUNCIL_REPORT_LEGAL_PHASE.md",
+          "level": 1,
+          "line": 1077
+        },
+        {
+          "heading": "HEARTBEAT.md",
+          "level": 1,
+          "line": 1082
+        },
+        {
+          "heading": "IDENTITY.md",
+          "level": 1,
+          "line": 1087
+        },
+        {
+          "heading": "Ideas_by_me.md",
+          "level": 1,
+          "line": 1092
+        },
+        {
+          "heading": "KIMI_NOTION_PLAN.md",
+          "level": 1,
+          "line": 1097
+        },
+        {
+          "heading": "LEAD_DISPATCH_FIX.md",
+          "level": 1,
+          "line": 1102
+        },
+        {
+          "heading": "MINIMAX_KILL_FIX.md",
+          "level": 1,
+          "line": 1107
+        },
+        {
+          "heading": "PIPELINE_DESIGN.md",
+          "level": 1,
+          "line": 1112
+        },
+        {
+          "heading": "SOUL.md",
+          "level": 1,
+          "line": 1117
+        },
+        {
+          "heading": "SPEC_VIEWPORT.md",
+          "level": 1,
+          "line": 1122
+        },
+        {
+          "heading": "TOOLS.md",
+          "level": 1,
+          "line": 1127
+        },
+        {
+          "heading": "USER.md",
+          "level": 1,
+          "line": 1132
+        },
+        {
+          "heading": "VIEWPORT_HANDOFF.md",
+          "level": 1,
+          "line": 1137
+        },
+        {
+          "heading": "VIEWPORT_IMPROVE_PLAN_DS4.md",
+          "level": 1,
+          "line": 1142
+        },
+        {
+          "heading": "docs/EXCHANGE_LAYER_IMPLEMENT.md",
+          "level": 1,
+          "line": 1147
+        },
+        {
+          "heading": "docs/EXCHANGE_LAYER_SPEC.md",
+          "level": 1,
+          "line": 1152
+        },
+        {
+          "heading": "docs/PIPELINE.md",
+          "level": 1,
+          "line": 1157
+        },
+        {
+          "heading": "docs/SUPERPOWER_INTEGRATION_PROPOSAL.md",
+          "level": 1,
+          "line": 1162
+        },
+        {
+          "heading": "docs/TEACH_SKILL_BUILD.md",
+          "level": 1,
+          "line": 1167
+        },
+        {
+          "heading": "docs/TEACH_SKILL_DESIGN.md",
+          "level": 1,
+          "line": 1172
+        },
+        {
+          "heading": "hero-teach/index.html",
+          "level": 1,
+          "line": 1177
+        },
+        {
+          "heading": "improvement_plan_deepseek.md",
+          "level": 1,
+          "line": 1182
+        },
+        {
+          "heading": "improvement_plan_mimov25.md",
+          "level": 1,
+          "line": 1187
+        },
+        {
+          "heading": "improvement_plan_mimov25pro.md",
+          "level": 1,
+          "line": 1192
+        },
+        {
+          "heading": "improvement_plan_minimax.md",
+          "level": 1,
+          "line": 1197
+        },
+        {
+          "heading": "improvement_plan_step35.md",
+          "level": 1,
+          "line": 1202
+        },
+        {
+          "heading": "improvement_plan_step36.md",
+          "level": 1,
+          "line": 1207
+        },
+        {
+          "heading": "memory/2026-06-01.md",
+          "level": 1,
+          "line": 1212
+        },
+        {
+          "heading": "prompts/LEAD_BRIEF.md",
+          "level": 1,
+          "line": 1217
+        },
+        {
+          "heading": "prompts/soldier-1-design-system.md",
+          "level": 1,
+          "line": 1222
+        },
+        {
+          "heading": "prompts/soldier-2-api-layer.md",
+          "level": 1,
+          "line": 1227
+        },
+        {
+          "heading": "prompts/soldier-3-components.md",
+          "level": 1,
+          "line": 1232
+        },
+        {
+          "heading": "prompts/soldier-4-control-features.md",
+          "level": 1,
+          "line": 1237
+        },
+        {
+          "heading": "prompts/soldier-5-mobile-responsive.md",
+          "level": 1,
+          "line": 1242
+        },
+        {
+          "heading": "prompts/soldier-6-futuristic-polish.md",
+          "level": 1,
+          "line": 1247
+        },
+        {
+          "heading": "prompts/soldier-7-integration.md",
+          "level": 1,
+          "line": 1252
+        },
+        {
+          "heading": "src/hero/prompts/defaults/phases/archive.md",
+          "level": 1,
+          "line": 1257
+        },
+        {
+          "heading": "src/hero/prompts/defaults/phases/fix.md",
+          "level": 1,
+          "line": 1262
+        },
+        {
+          "heading": "src/hero/prompts/defaults/phases/verify.md",
+          "level": 1,
+          "line": 1267
+        },
+        {
+          "heading": "src/hero/prompts/defaults/roles/architect.md",
+          "level": 1,
+          "line": 1272
+        },
+        {
+          "heading": "src/hero/prompts/defaults/roles/archivist.md",
+          "level": 1,
+          "line": 1277
+        },
+        {
+          "heading": "src/hero/prompts/defaults/roles/communicator.md",
+          "level": 1,
+          "line": 1282
+        },
+        {
+          "heading": "src/hero/prompts/defaults/roles/lead.md",
+          "level": 1,
+          "line": 1287
+        },
+        {
+          "heading": "src/hero/prompts/defaults/roles/researcher.md",
+          "level": 1,
+          "line": 1292
+        },
+        {
+          "heading": "src/hero/prompts/defaults/roles/soldier.md",
+          "level": 1,
+          "line": 1297
+        },
+        {
+          "heading": "src/hero/prompts/defaults/roles/utility.md",
+          "level": 1,
+          "line": 1302
+        },
+        {
+          "heading": "src/hero/prompts/defaults/rules/context-budget.md",
+          "level": 1,
+          "line": 1307
+        },
+        {
+          "heading": "src/hero/prompts/defaults/rules/tdd.md",
+          "level": 1,
+          "line": 1312
+        },
+        {
+          "heading": "src/hero/web/COUNCIL_ANALYSIS.md",
+          "level": 1,
+          "line": 1317
+        },
+        {
+          "heading": "src/hero/web/COUNCIL_GLM_OPINION.md",
+          "level": 1,
+          "line": 1322
+        },
+        {
+          "heading": "src/hero/web/COUNCIL_KIMI_OPINION.md",
+          "level": 1,
+          "line": 1327
+        },
+        {
+          "heading": "src/hero/web/COUNCIL_MIMO_OPINION.md",
+          "level": 1,
+          "line": 1332
+        },
+        {
+          "heading": "src/hero/web/SPEC_DASHBOARD_V4.md",
+          "level": 1,
+          "line": 1337
+        },
+        {
+          "heading": "src/hero/web/static/index.html",
+          "level": 1,
+          "line": 1342
+        },
+        {
+          "heading": "viewport_competition_all_entries.md",
+          "level": 1,
+          "line": 1347
+        },
+        {
+          "heading": "viewport_competition_kimi_review.md",
+          "level": 1,
+          "line": 1352
+        },
+        {
+          "heading": "hero-teach/public/favicon.svg",
+          "level": 1,
+          "line": 1357
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 272
+      }
+    }
+  ]
+}

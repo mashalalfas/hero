@@ -1,0 +1,1 @@
+{"projectRoot": "/home/max/Development/HERO", "batchFiles": [{"path": ".github/workflows/bandit.yml", "language": "yaml", "sizeLines": 25, "fileCategory": "infra"}], "batchImportData": {".github/workflows/bandit.yml": []}}
