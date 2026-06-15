@@ -39,6 +39,7 @@ class PipelineResult:
     status: str  # running | completed | failed
     soldiers: list[dict] = field(default_factory=list)
     verify_status: str | None = None
+    self_review_status: str | None = None
     archive_status: str | None = None
     started_at: str = ""
     completed_at: str | None = None
@@ -55,6 +56,8 @@ class PipelineResult:
         ]
         if failed:
             parts.append(f"{failed} failed")
+        if self.self_review_status:
+            parts.append(f"self-review: {self.self_review_status}")
         if self.verify_status:
             parts.append(f"verify: {self.verify_status}")
         return " | ".join(parts)
@@ -96,6 +99,7 @@ class PipelineExecutor:
         # ── Build the list of tracked soldiers ──────────────────────────
         self.soldiers: list[dict[str, Any]] = self._build_soldiers()
         self.verify_tasks: list[dict[str, Any]] = []
+        self.self_review_tasks: list[dict[str, Any]] = []
         self.archive_tasks: list[dict[str, Any]] = []
 
     # ── Internal helpers ────────────────────────────────────────────────
@@ -133,7 +137,12 @@ class PipelineExecutor:
     def _find_extra_tasks(self) -> None:
         """Extract non-soldier task IDs (verify, fix, archive) from manifest."""
         steps = self.manifest.get("steps", {})
-        for phase_key, role_label in [("verify", "Verify"), ("fix", "Fix"), ("archive", "Archive")]:
+        for phase_key, role_label in [
+            ("verify", "Verify"),
+            ("fix", "Fix"),
+            ("self_review", "Self-Review"),
+            ("archive", "Archive"),
+        ]:
             phase = steps.get(phase_key, {})
             tid = phase.get("task_id")
             if tid:
@@ -145,6 +154,8 @@ class PipelineExecutor:
                 }
                 if phase_key == "verify":
                     self.verify_tasks.append(entry)
+                elif phase_key == "self_review":
+                    self.self_review_tasks.append(entry)
                 else:
                     self.archive_tasks.append(entry)
 
@@ -168,6 +179,7 @@ class PipelineExecutor:
         status: str,
         soldiers: list[dict[str, Any]],
         verify_status: str | None = None,
+        self_review_status: str | None = None,
         archive_status: str | None = None,
     ) -> None:
         """Persist current pipeline state to the manifest file."""
@@ -178,6 +190,8 @@ class PipelineExecutor:
 
         if verify_status is not None:
             self.manifest["verify_status"] = verify_status
+        if self_review_status is not None:
+            self.manifest["self_review_status"] = self_review_status
         if archive_status is not None:
             self.manifest["archive_status"] = archive_status
 
@@ -298,8 +312,8 @@ class PipelineExecutor:
                 updated = True
                 break
 
-        # Also check verify / archive tasks
-        for task_list in (self.verify_tasks, self.archive_tasks):
+        # Also check verify / self-review / archive tasks
+        for task_list in (self.verify_tasks, self.self_review_tasks, self.archive_tasks):
             for t in task_list:
                 if t.get("task_id") == task_id:
                     t["status"] = status
@@ -420,9 +434,23 @@ class PipelineExecutor:
         if soldier_failures:
             status = "failed"
             verify_status = None
+            self_review_status = None
             archive_status = None
             self._update_manifest(status, self.soldiers)
         else:
+            # ── Stage 2b: Self-Review — between archivist and verify ────
+            self_review_status = None
+            if self.self_review_tasks:
+                self._poll_tasks(
+                    self.self_review_tasks, poll_interval, max_wait // 5
+                )
+                sr_failures = [
+                    t for t in self.self_review_tasks if t["status"] == "failed"
+                ]
+                self_review_status = "failed" if sr_failures else "passed"
+            else:
+                self_review_status = "passed"  # no self-review = auto-pass
+
             # ── Stage 3: Verify tasks ───────────────────────────────────
             verify_status = None
             if self.verify_tasks:
@@ -452,6 +480,7 @@ class PipelineExecutor:
                 status,
                 self.soldiers,
                 verify_status=verify_status,
+                self_review_status=self_review_status,
                 archive_status=archive_status,
             )
 
@@ -476,6 +505,7 @@ class PipelineExecutor:
             status=status,
             soldiers=self.soldiers,
             verify_status=verify_status,
+            self_review_status=self_review_status,
             archive_status=archive_status,
             started_at=started_at,
             completed_at=datetime.now().isoformat()

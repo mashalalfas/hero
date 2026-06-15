@@ -60,6 +60,7 @@ def manifest_data() -> dict:
                 ],
             },
             "verify": {"enabled": True, "task_id": "verify01"},
+            "self_review": {"enabled": True, "task_id": "selfreview01"},
             "archive": {"enabled": True, "task_id": "archive01"},
         },
     }
@@ -197,6 +198,13 @@ class TestPipelineExecutorFindExtraTasks:
         assert len(executor.archive_tasks) == 1
         assert executor.archive_tasks[0]["task_id"] == "archive01"
 
+    def test_detects_self_review_task(self, manifest_file: Path) -> None:
+        executor = PipelineExecutor(manifest_file)
+        executor._find_extra_tasks()
+        assert len(executor.self_review_tasks) == 1
+        assert executor.self_review_tasks[0]["task_id"] == "selfreview01"
+        assert executor.self_review_tasks[0]["label"] == "Self-Review (self_review)"
+
 
 class TestPipelineExecutorPollTasks:
     """Tests for _poll_tasks with mocked dispatch."""
@@ -302,6 +310,7 @@ class TestPipelineExecutorRun:
         """Run returns completed when all soldiers succeed."""
         _make_dispatch_toon(dispatch_dir, "soldier01", "completed", "ok")
         _make_dispatch_toon(dispatch_dir, "soldier02", "completed", "ok")
+        _make_dispatch_toon(dispatch_dir, "selfreview01", "completed", "ready")
         _make_dispatch_toon(dispatch_dir, "verify01", "completed", "passed")
         _make_dispatch_toon(dispatch_dir, "archive01", "completed", "done")
 
@@ -314,6 +323,7 @@ class TestPipelineExecutorRun:
             result = executor.run(poll_interval=0.1, max_wait=30)
 
         assert result.status == "completed"
+        assert result.self_review_status == "passed"
         assert result.verify_status == "passed"
         assert result.archive_status == "completed"
         assert result.completed_at is not None
@@ -338,6 +348,7 @@ class TestPipelineExecutorRun:
         """Run returns verify_failed when verify task fails."""
         _make_dispatch_toon(dispatch_dir, "soldier01", "completed", "ok")
         _make_dispatch_toon(dispatch_dir, "soldier02", "completed", "ok")
+        _make_dispatch_toon(dispatch_dir, "selfreview01", "completed", "ready")
         _make_dispatch_toon(dispatch_dir, "verify01", "failed", "build broke")
         _make_dispatch_toon(dispatch_dir, "archive01", "pending", "")
 
@@ -352,6 +363,7 @@ class TestPipelineExecutorRun:
         assert result.status == "verify_failed"
         assert result.verify_status == "failed"
         assert result.archive_status == "skipped"
+
 
     def test_no_verify_no_archive(self, manifest_file: Path, tmp_path: Path) -> None:
         """Run with no verify/archive task IDs passes through."""
@@ -391,6 +403,7 @@ class TestPipelineExecutorRun:
         """Run writes status changes back to the manifest file."""
         _make_dispatch_toon(dispatch_dir, "soldier01", "completed", "ok")
         _make_dispatch_toon(dispatch_dir, "soldier02", "completed", "ok")
+        _make_dispatch_toon(dispatch_dir, "selfreview01", "completed", "ready")
         _make_dispatch_toon(dispatch_dir, "verify01", "completed", "passed")
         _make_dispatch_toon(dispatch_dir, "archive01", "completed", "done")
 
@@ -407,6 +420,7 @@ class TestPipelineExecutorRun:
         assert updated.get("status") == "completed"
         assert len(updated.get("soldiers", [])) == 2
         assert updated.get("verify_status") == "passed"
+        assert updated.get("self_review_status") == "passed"
         assert updated.get("archive_status") == "completed"
         assert updated.get("started_at") is not None
         assert updated.get("completed_at") is not None
