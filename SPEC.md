@@ -31,13 +31,14 @@ HERO is a CLI orchestration tool that manages a team of AI agents (soldiers) wor
 - `hero spawn` — Launch soldier agents with TOON state injection and graphify context
 - `hero status` — Show all sandbox states in compact TOON
 - `hero deploy` — Deploy soldier armies to target sandboxes with role-based delegation
-- `hero go` — Full pipeline: navigate → pre-commit → build → harden → legal → cipr → verify → archive → report
-  - `--mode quick` — navigate + pre-commit + build + verify (fast dev loop)
-  - `--mode ci` — pre-commit + build + cipr + verify (CI simulation)
+- `hero go` — Full pipeline: navigate → pre-commit → build → **self_review** → harden → legal → cipr → verify → archive → report
+  - `--mode quick` — navigate + pre-commit + build + **self_review** + verify (fast dev loop)
+  - `--mode ci` — pre-commit + build + **self_review** + cipr + verify (CI simulation)
   - `--mode audit` — harden + legal only (security/legal review)
-  - `--mode full` — all 8 stages (production deploy)
+  - `--mode full` — all 8 stages + self_review (production deploy)
   - `--stage X` — run exactly one stage (e.g. `--stage harden`)
   - `--from X --to Y` — run a stage range (e.g. `--from navigate --to build`)
+  - `--skip self_review` / `--no-self-review` — skip the self-review phase
 - `hero pipeline run` — Execute existing pipeline manifest or create new one with same flags as above
 - `hero budget` — Query, summarize, alert, and history-track sandbox token budgets
 - `hero dlq` — Dead letter queue management (list, retry, clear)
@@ -465,6 +466,30 @@ Each manifest contains:
 - `hero pipeline list` — List all manifests sorted by creation time (newest first)
 - `hero pipeline rollback <id>` — Revert git changes, delete feature branch
 - `hero go --sandbox X --task Y --auto` — Create manifest + auto-execute inline
+
+### Self-Review Stage
+
+Self-review runs between BUILD and VERIFY (after soldier completes, before verify gate).
+It is not a separate soldier spawn — the same model that built the diff re-reads its
+own work in a single fresh turn.
+
+**Prompt template:** `~/.hero/prompts/phases/self-review.md`
+
+**Procedure:**
+1. Re-read the original task requirements
+2. Map each requirement to file:line coverage in the diff
+3. Check against `load_rule("code-quality")` (minimal diff, no new deps, no comments, style match)
+4. Scan for debug prints, dead code, TODO/FIXME
+5. Emit structured checklist with binary verdict
+
+**Verdict flow:**
+- `READY` → proceed to next stage (harden → legal → cipr → verify)
+- `NEEDS_FIX` → loop back to BUILD with the checklist as input
+
+**Configuration:**
+- Enabled by default in all modes
+- Skip: `--skip self_review` or `--no-self-review`
+- Not run in legacy verify⇄fix-only mode
 
 ### Dependencies
 

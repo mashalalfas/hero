@@ -35,6 +35,12 @@
                           │  └───────────────────────────────────┘  │
                           │            ↓                            │
                           │  ┌───────────────────────────────────┐  │
+                          │  │   ③.5  SELF-REVIEW               │  │
+                          │  │  Builder re-reads own diff        │  │
+                          │  │  Verdict: READY / NEEDS_FIX       │  │
+                          │  └───────────────────────────────────┘  │
+                          │            ↓ (if READY)                 │
+                          │  ┌───────────────────────────────────┐  │
                           │  │      ④  HARDEN                   │  │
                           │  │  Trivy · Semgrep · Root detect   │  │
                           │  │  Cert pinning                     │  │
@@ -73,6 +79,7 @@
 | ① | **NAVIGATION** | `graphify --update` + `hero map` | NAVIGATION_TREE.md written | **Archivist** (sub-task) |
 | ② | **PRE-COMMIT** | Gitleaks, eslint, copyright scan | No secrets, lint passes | Soldier |
 | ③ | **BUILD** | npm build, flutter build, ProGuard | Binary compiles | Soldier |
+| ③½ | **SELF-REVIEW** | Builder re-reads own diff vs task requirements | READY / NEEDS_FIX checklist | Same model (builder) |
 | ④ | **HARDEN** | Trivy, Semgrep, root detect | No CRITICAL CVEs | Soldier |
 | ⑤ | **LEGAL** | license-checker, SBOM, EULA | All licenses clear | Soldier |
 | ⑥ | **CI/PR** | Tests, security scan, artifacts | All tests pass | Soldier |
@@ -83,7 +90,7 @@
 
 | Mode | Stages | Use Case |
 |------|--------|----------|
-| `smart` (default) | All 8 stages | Full rebuild, auto-detect |
+| `smart` (default) | All 8 stages + self-review | Full rebuild, auto-detect |
 | `quick` | navigate + pre-commit + build + verify | Fast dev iteration |
 | `ci` | pre-commit + build + cipr + verify | CI pipeline simulation |
 | `audit` | harden + legal | Security/legal review |
@@ -149,7 +156,59 @@ hero go --sandbox <name> --task "<desc>" --no-verify
 
 # Skip archive phase
 hero go --sandbox <name> --task "<desc>" --no-archive
+
+# Skip self-review phase
+hero go --sandbox <name> --task "<desc>" --no-self-review
+# or
+hero go --sandbox <name> --task "<desc>" --skip self_review
 ```
+
+---
+
+## Self-Review Stage (③½)
+
+Self-review sits between BUILD and HARDEN. The same model that built the diff
+takes one fresh turn to re-read its work against the original task.
+
+**Purpose:** Catch scope creep, missing requirements, and style violations
+before the more expensive multi-model VERIFY pass.
+
+**Prompt template:** `~/.hero/prompts/phases/self-review.md`
+
+**Procedure:**
+1. Re-read the original task requirements line by line
+2. Map each requirement to a file:line in the diff
+3. Check against code-quality heuristics (`load_rule("code-quality")`)
+4. Scan for debug prints, dead code, TODO/FIXME
+5. Emit a structured checklist with binary verdict
+
+**Verdict:**
+| Result | Action |
+|--------|--------|
+| 🟢 READY | Proceed to HARDEN |
+| 🔴 NEEDS_FIX | Loop back to BUILD with checklist as input |
+
+**Pipeline flow:**
+
+```mermaid
+graph TD
+    NAV[Navigate] --> PC[Pre-commit]
+    PC --> BLD[Build: Soldier]
+    BLD --> SR[Self-Review: same model, single turn]
+    SR -->|READY| HRD[Harden]
+    SR -->|NEEDS_FIX| BLD
+    HRD --> LEG[Legal]
+    LEG --> CIP[CI/PR]
+    CIP --> VRF[Verify⇄Fix]
+    VRF --> ARC[Archive]
+    style SR fill:#ff9,stroke:#333
+```
+
+**Configuration:**
+- Enabled by default in all modes (`smart`, `full`, `quick`, `ci`)
+- Skip with `--skip self_review` or `--no-self-review`
+- Not run in legacy verify⇄fix-only mode
+- Same model as BUILD (default: soldier model from army.yaml)
 
 ---
 

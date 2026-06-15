@@ -35,6 +35,7 @@ hero go --sandbox qlearner --task "fix all issues"
 
 # Auto-execute pipeline
 hero go --sandbox fury-os --task "Phase 2 polish" --auto
+hero go --sandbox fury-os --task "Phase 2 polish" --no-self-review  # Skip self-review
 
 # Live dashboard
 hero viewport
@@ -64,9 +65,9 @@ hero viewport
 | `hero dispatch list` | Show all dispatched tasks in the queue |
 | `hero orchestrate --sandbox X --goal G` | Plan and generate subtasks for a goal |
 | `hero assemble --sandbox X --goal G` | Assemble and deploy a full plan to a sandbox |
-| `hero go --sandbox X --task Y` | Full pipeline: navigate → pre-commit → build → harden → legal → cipr → verify → archive |
-| `hero go --sandbox X --task Y --mode quick` | Quick mode: navigate + pre-commit + build + verify |
-| `hero go --sandbox X --task Y --mode ci` | CI mode: pre-commit + build + cipr + verify |
+| `hero go --sandbox X --task Y` | Full pipeline: navigate → pre-commit → build → self_review → harden → legal → cipr → verify → archive |
+| `hero go --sandbox X --task Y --mode quick` | Quick mode: navigate + pre-commit + build + self-review + verify |
+| `hero go --sandbox X --task Y --mode ci` | CI mode: pre-commit + build + self-review + cipr + verify |
 | `hero go --sandbox X --task Y --mode audit` | Audit mode: harden + legal only |
 | `hero go --sandbox X --task Y --from navigate --to build` | Stage range: runs navigate through build |
 | `hero go --sandbox X --task Y --stage harden` | Single stage: runs exactly one stage |

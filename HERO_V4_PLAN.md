@@ -4,11 +4,16 @@
 > **Author:** Council deliberation (MiMo V2.5 Pro)  
 > **Status:** DESIGN — pending approval
 
+> **Update (2026-06-15):** Self-review phase (between BUILD and VERIFY)
+> has been implemented and shipped — see `~/.hero/prompts/phases/self-review.md`.
+> The v4 plan below does not reference self-review; treat it as a separate
+> live feature.
+
 ---
 
 ## 1. Motivation
 
-HERO currently runs 8 pipeline stages: `navigate → pre_commit → build → harden → legal → cipr → verify → archive`. These catch basic issues but don't leverage advanced agent skills (addyosmani TDD, shadcn/improve) or production-hardening gates (encryption audit, APK protection, anti-AI detection).
+HERO currently runs 9 pipeline stages: `navigate → pre_commit → build → self_review → harden → legal → cipr → verify → archive`. These catch basic issues but don't leverage advanced agent skills (addyosmani TDD, shadcn/improve) or production-hardening gates (encryption audit, APK protection, anti-AI detection).
 
 HERO v4 adds **4 new stage groups** that slot into the existing pipeline without breaking any existing stage:
 
