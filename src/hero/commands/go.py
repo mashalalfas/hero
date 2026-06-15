@@ -1,7 +1,7 @@
 """hero go — One-command full pipeline.
 
 Queues soldiers, outputs sessions_spawn manifest, runs pipeline execution
-line inline (pre-commit → build → harden → legal → cipr → verify → archive),
+line inline (pre-commit → build → self_review → harden → legal → cipr → verify → archive),
 writes pipeline file for the Communicator to execute: spawn → report.
 
 Pipeline phases:
@@ -11,7 +11,7 @@ Pipeline phases:
     2.  Lead            (break task into focused subtasks)
     3.  Dispatch        (queue soldiers)
     3b. Spawn           (generate sessions_spawn commands)
-    4.  Pipeline        (direct inline: pre-commit → build → harden → legal → cipr → verify → archive)
+    4.  Pipeline        (direct inline: pre-commit → build → self_review → harden → legal → cipr → verify → archive)
     5.  Report          (communicator summary)
 
 Usage:
@@ -67,6 +67,7 @@ _DEFAULT_STAGE_ORDER = [
     "navigate",
     "pre_commit",
     "build",
+    "self_review",
     "harden",
     "legal",
     "cipr",
@@ -76,9 +77,9 @@ _DEFAULT_STAGE_ORDER = [
 
 # ── Mode → stage list (fallback when hero.stages.resolve_mode is missing)
 _MODE_STAGES = {
-    "smart": ["navigate", "pre_commit", "build", "verify", "archive"],
+    "smart": ["navigate", "pre_commit", "build", "self_review", "verify", "archive"],
     "quick": ["navigate", "pre_commit", "build"],
-    "full": _DEFAULT_STAGE_ORDER,
+    "full": ["navigate", "pre_commit", "build", "self_review", "harden", "legal", "cipr", "verify", "archive"],
     "ci": ["pre_commit", "build", "cipr"],
     "audit": ["navigate", "pre_commit", "harden", "legal"],
 }
@@ -472,6 +473,24 @@ def _build_archive_task(sandbox: str, task: str, sandbox_path: Path) -> str:
     )
 
 
+def _build_self_review_task(project: dict, sandbox: str, original_task: str) -> str:
+    """Build a self-review task prompt that re-reads diff against original task.
+
+    The self-review phase runs between BUILD and VERIFY. The Builder re-reads
+    its own diff in a single fresh turn and produces a structured checklist.
+    """
+    from hero.prompts import render_template
+
+    return render_template(
+        "phases/self-review.md",
+        sandbox=sandbox,
+        original_task=original_task,
+        task_id="{{TASK_ID}}",  # filled at runtime by the soldier
+        diff="{{DIFF}}",
+        files_touched="{{FILES_TOUCHED}}",
+    )
+
+
 def _get_escalation_model(tier: str = "tier1_to_tier2") -> str:
     """Get the full model name for an escalation tier from army.yaml.
 
@@ -538,6 +557,7 @@ def _get_ts_errors(sandbox_path: Path) -> list[str]:
 @click.option("--budget", type=int, default=None, help="Budget per soldier (auto-estimated from task complexity if not set).")
 @click.option("--dry-run", is_flag=True, help="Plan without dispatching.")
 @click.option("--verify/--no-verify", default=True, help="Run verify step after soldiers (default: yes)")
+@click.option("--self-review/--no-self-review", default=True, help="Run self-review after build, before verify (default: yes)")
 @click.option("--archive/--no-archive", default=True, help="Update memory after completion (default: yes)")
 @click.option(
     "--viewport",
@@ -548,7 +568,7 @@ def _get_ts_errors(sandbox_path: Path) -> list[str]:
 @click.option("--full-pipeline", is_flag=True, default=False,
               help="Run ALL planning phases (Council, Research, PE, Architect, Lead)")
 @click.option("--skip", type=str, multiple=True,
-              help="Skip specific stages: pre-commit, build, harden, legal, cipr, verify, archive")
+              help="Skip specific stages: pre-commit, build, self_review, harden, legal, cipr, verify, archive")
 @click.option("--legacy-verify", is_flag=True, default=False,
               help="Use legacy verify\u21d4fix loop instead of direct pipeline execution")
 @click.option("--verbose", "-v", is_flag=True, default=False,
@@ -563,7 +583,8 @@ def _get_ts_errors(sandbox_path: Path) -> list[str]:
 @click.option("--stage", "single_stage", type=str, default=None,
               help="Run a single stage (e.g. pre_commit). Exclusive with --mode and --from/--to.")
 def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
-       archive: bool, viewport: bool, full_pipeline: bool = False,
+       self_review: bool, archive: bool, viewport: bool,
+       full_pipeline: bool = False,
        skip: tuple[str, ...] = (), legacy_verify: bool = False,
        verbose: bool = False, mode: str | None = None,
        from_stage: str | None = None, to_stage: str | None = None,
@@ -590,6 +611,7 @@ def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
     click.echo(f"  Task:      {task}")
     click.echo(f"  Budget:    {budget if budget is not None else 'auto'} tokens")
     click.echo(f"  Verify:    {'yes' if verify else 'no'}")
+    click.echo(f"  Self-review: {'yes' if self_review else 'no'}")
     click.echo(f"  Archive:   {'yes' if archive else 'no'}")
     click.echo(f"  Mode:      {'DRY RUN' if dry_run else 'LIVE'}")
     click.echo("=" * 60)
@@ -843,6 +865,10 @@ def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
     skip_set = set(skip)
     if not verify:
         skip_set.add("verify")
+    if not self_review:
+        skip_set.add("self_review")
+    if legacy_verify:
+        skip_set.add("self_review")
     if not archive:
         skip_set.add("archive")
 
@@ -964,6 +990,7 @@ def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
                 ("navigate",),
                 ("pre_commit",),
                 ("build",),
+                ("self_review",),
                 ("harden",),
                 ("legal",),
                 ("cipr",),
@@ -985,7 +1012,25 @@ def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
 
                 click.echo(f"  Running {stage_name}...")
                 try:
-                    if stage_name == "archive":
+                    if stage_name == "self_review":
+                        # Self-review: enqueue as dispatch task (executor polls it)
+                        sr_prompt = _build_self_review_task(project, sandbox, task)
+                        sr_task_id = enqueue(
+                            sandbox=sandbox,
+                            task=sr_prompt,
+                            role="self_review",
+                            model=soldier_model,
+                            budget=min(budget, 2000),
+                            workdir=active_workdir,
+                            timeout=300,
+                            label=f"{sandbox}-self-review",
+                        )
+                        click.echo(f"  [\u2713] {sr_task_id} — self-review queued")
+                        result = {
+                            "score": 100, "status": "enqueued", "passed": True,
+                            "task_id": sr_task_id,
+                        }
+                    elif stage_name == "archive":
                         result = _run_stage_safe(
                             stage_name, sandbox_path, verbose=verbose,
                             pipeline_id=pipeline_id, task=task,
@@ -1075,6 +1120,10 @@ def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
                     for stage_name, r in pipeline_results.items()
                 },
             },
+            "self_review": {
+                "status": pipeline_results.get("self_review", {}).get("status", "skipped"),
+                "task_id": pipeline_results.get("self_review", {}).get("task_id"),
+            },
             "report": {
                 "status": "pending",
             },
@@ -1099,7 +1148,9 @@ def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
             "EXECUTION ORDER:\n"
             "1. → spawn soldiers (one per subtask)\n"
             "2. WAIT for soldiers to complete\n"
-            "3. Report results to user"
+            "3. Self-review (checks diff against original task)\n"
+            "4. Verify (analyze + build check)\n"
+            "5. Report results to user"
         ),
     }
 
