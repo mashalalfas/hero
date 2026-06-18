@@ -1,0 +1,203 @@
+# HERO Army — OpenClaw-native model assignments
+# Model names use OpenClaw's "provider/model" format for sessions_spawn
+#
+# Communicator: deepseek-v4-flash (deepseek)
+# Lead: mimo-v2.5 (xiaomi-token-plan)
+# Architect: custom-api-canopywave-io/moonshotai/kimi-k2.6
+# Soldier: custom-api-canopywave-io/moonshotai/kimi-k2.6 (always) + step-3.7-flash + deepseek-v4-pro
+# Researcher: deepseek-v4-flash (deepseek)
+# Archivist: step-3.5-flash (stepfun-plan)
+# Council: custom-api-canopywave-io/moonshotai/kimi-k2.6 (Analyst) + MiniMax-M3 (Reasoner) + mimo-v2.5-pro (Deep Thinker)
+# Escalation: T1=custom-api-canopywave-io/moonshotai/kimi-k2.6, T2=mimo-v2.5-pro
+# Prompt Engineer: MiniMax-M3 (minimax)
+# Utility: step-3.5-flash + deepseek-v4-flash
+
+roles:
+  communicator:
+    model: "deepseek-v4-flash"
+    provider: "deepseek"
+    description: "Always online — talks to user, routes tasks, no other duties.
+    Project questions: checks <project>/knowledge/NAVIGATION_TREE.md first
+    before answering from scratch."
+    context_window: 200000
+    max_tokens_injected: 5000
+    priority: "always_free"
+
+  lead:
+    model: "mimo-v2.5"
+    provider: "xiaomi-token-plan"
+    description: "Orchestrator — 1M context, keeps full army state, runs in agent layer with tool access.
+    Pre-spawn SOP: reads <project>/knowledge/NAVIGATION_TREE.md before spawning soldiers.
+    Includes relevant sections in soldier context payload."
+    context_window: 1000000
+    max_tokens_injected: 50000
+    tools_required: ["sessions_spawn", "exec", "read", "sessions_yield"]
+
+  architect:
+    model: "deepseek-v4-pro"
+    provider: "deepseek"
+    description: "Pipeline phase — sits between Prompt Engineer and Lead. Validates prompt bundles with a DIFFERENT reasoning style than the Prompt Engineer (MiMo Pro). Catches blind spots MiMo misses. Produces architectural blueprint: file structure, patterns, risks, dependency graph."
+    context_window: 131072
+    max_tokens_injected: 50000
+
+  soldier:
+    timeout: 600
+    model: "custom-api-canopywave-io/moonshotai/kimi-k2.6"
+    provider: "custom-api-canopywave-io"
+    description: "Always-on elite — Kimi K2.6, agent reasoning, 204K ctx"
+    context_window: 204800
+    models:
+      - model: "step-3.7-flash"
+        provider: "stepfun-plan"
+        description: "Step 3.7 Flash — 196B MoE, 256K ctx, multimodal"
+        context_window: 256000
+      - model: "deepseek-v4-pro"
+        provider: "deepseek"
+        description: "DeepSeek V4 Pro — deep reasoning"
+        context_window: 200000
+        timeout: 900
+    model_fallbacks:
+      - "deepseek-v4-pro"
+      - "step-3.7-flash"
+      - "step-3.5-flash"
+    strategy: "round-robin"
+    description: "Kimi K2.6 (always) + step-3.7-flash + deepseek-v4-pro"
+    max_tokens_injected: 24000
+
+  researcher:
+    model: "deepseek-v4-flash"
+    provider: "deepseek"
+    description: "Online research via web search, Google, repos, synthesis. DeepSeek V4 Flash for fast research."
+    context_window: 200000
+    max_tokens_injected: 20000
+    tools_required:
+      - "web"
+      - "browser"
+      - "search"
+
+  archivist:
+    model: "step-3.5-flash"
+    provider: "stepfun-plan"
+    description: "Inline historian — ALIVE throughout pipeline. Phase 0-2: zero-cost inline journaling (Python). Phase 3: synthesis agent. Captures council, planning, execution, then finalizes docs + memory.
+    Sub-task: Navigation — after work cycles, runs graphify + hero map to build/update
+    knowledge/NAVIGATION_TREE.md per project. Read-only synthesis, never edits code."
+    context_window: 128000
+    max_tokens_injected: 15000
+
+  janitor:
+    model: "step-3.5-flash"
+    provider: "stepfun-plan"
+    description: "Post-verify cleanup — sweeps soldier debris (dead code, orphaned files, debug detritus) before archival. Runs on Step 3.5 Flash budget tier."
+    context_window: 15000
+    max_tokens_injected: 10000
+    timeout_seconds: 120
+
+  utility:
+    models:
+      - model: "step-3.5-flash"
+        provider: "stepfun-plan"
+        context_window: 64000
+      - model: "step-3.5-flash"
+        provider: "stepfun-plan"
+        context_window: 64000
+      - model: "deepseek-v4-flash"
+        provider: "deepseek"
+        context_window: 128000
+    model_fallbacks:
+      - "deepseek-v4-flash"
+      - "step-3.5-flash"
+    strategy: "round-robin"
+    description: "Heartbeats, status checks, summaries"
+    max_tokens_injected: 2000
+
+  council:
+    description: "Multi-model deliberation panel — spawns 3+ diverse models to analyze a problem, diagnose convergence or disagreement, and produce a structured verdict"
+    quorum: 3
+    models:
+      - model: "custom-api-canopywave-io/moonshotai/kimi-k2.6"
+        provider: "custom-api-canopywave-io"
+        role: "analyst"
+        context_window: 204800
+        max_tokens_injected: 15000
+      - model: "MiniMax-M3"
+        provider: "minimax"
+        role: "reasoner"
+        context_window: 1000000
+        max_tokens_injected: 15000
+      - model: "mimo-v2.5-pro"
+        provider: "xiaomi-token-plan"
+        role: "deep_thinker"
+        context_window: 1000000
+        max_tokens_injected: 15000
+    trigger:
+      - "complexity >= 7 (estimated by Lead)"
+      - "architect requests second opinion"
+      - "soldier fails verification 2x (circuit breaker pre-trigger)"
+      - "cross-cutting architectural decision affecting 3+ files"
+      - "Communicator flags ambiguity that Lead cannot resolve alone"
+    output_format: "structured_diagnosis"
+    never_runs_for:
+      - "simple bug fixes (complexity 1-3)"
+      - "routine dependency updates"
+      - "formatting/lint fixes"
+
+  prompt_engineer:
+    model: "MiniMax-M3"
+    provider: "minimax"
+    description: "Crafts, refines, and version-controls all prompt templates via the Discussion Layer — produces PROPOSALS, not final writes. Communicator reviews/approves before any template hits disk. Uses M3 advanced reasoning for prompt design (structured outputs, constraint engineering, failure-mode prediction)."
+    context_window: 1000000
+    max_tokens_injected: 50000
+    tools_required: ["read", "write", "edit", "exec"]
+    discussion_layer: true
+    produces:
+      - "~/.hero/prompts/roles/*.md (soldier, architect, lead, researcher, archivist, council, prompt_engineer)"
+      - "~/.hero/prompts/phases/*.md (archivist-phase0..3, verify, fix, brainstorm)"
+      - "~/.hero/prompts/rules/*.md (context-budget, tdd, scope-guard)"
+      - "~/.hero/prompts/briefs/council-brief.md"
+      - "~/.hero/prompts/briefs/soldier-brief.md"
+    trigger:
+      - "new task type detected (no matching template exists)"
+      - "soldier output quality below threshold (verify fails >1x for prompt-clarity reasons)"
+      - "council produces inconsistent results (prompt ambiguity suspected)"
+      - "explicit request from Communicator or Lead"
+      - "monthly template audit (cron)"
+    never_runs_for:
+      - "routine pipeline steps with working templates"
+      - "one-off tasks that don't repeat"
+      - "typo fixes (Communicator can fast-track bypass)"
+
+  web-designer:
+    model: "step-3.7-flash"
+    provider: "stepfun-plan"
+    description: "Builds website frontends: HTML/CSS/JS with GSAP, Three.js, parallax effects. Knows modern CSS, animation libraries, responsive design."
+    context_window: 64000
+    max_tokens_injected: 8000
+    timeout: 600
+
+  web-design-researcher:
+    model: "step-3.5-flash"
+    provider: "stepfun-plan"
+    description: "Researches web design libraries, trends, patterns. Produces compact reference cards for the web-designer skill kit."
+    context_window: 100000
+    max_tokens_injected: 12000
+    timeout: 300
+
+escalation:
+  tier1_to_tier2:
+    model: "deepseek-v4-pro"
+    provider: "deepseek"
+    description: "When soldier gets stuck — agent reasoning"
+    context_window: 131072
+
+  tier2_to_tier3:
+    model: "mimo-v2.5-pro"
+    provider: "xiaomi-token-plan"
+    description: "Nuclear option — deepest reasoning (unchanged)"
+    context_window: 1000000
+
+special:
+  multimodal:
+    model: "mimo-v2.5"
+    provider: "xiaomi-token-plan"
+    description: "Screenshots, UI debugging, audio/video"
+    context_window: 1000000
