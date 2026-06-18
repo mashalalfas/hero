@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feya PDF — Illuminate what matters</title>
+  <meta name="description" content="Feya is a premium PDF reader. Read. Highlight. Secure. Illuminate what matters." />
+  <meta property="og:title" content="Feya PDF — Illuminate what matters" />
+  <meta property="og:description" content="A premium PDF reader for the curious mind." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='6' y='6' width='4' height='4' fill='%23D4A373' transform='rotate(45 8 8)'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
+  <!-- Lenis -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+
+  <style>
+    /* ── Reset ────────────────────────────────────────── */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── CSS Variables ─────────────────────────────────── */
+    :root {
+      --bg: #0A0A0A;
+      --text-primary: #F0EDE8;
+      --text-secondary: #8A8682;
+      --text-tertiary: #5C5A56;
+      --accent-amber: #D4A373;
+      --accent-rose: #C97B84;
+      --border: #1F1E1C;
+      --hover-bg: rgba(255, 255, 255, 0.03);
+    }
+
+    /* ── Grain Texture ─────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAMAAAAJixmgAAAAMFBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnB1lBAAAAD3RSTlMAM2Z3mZq7zN3u//+Z25UCAAABa0lEQVR4nO3Yy27DIBRAUQKJ8zD//7dVGqXqQrQiVnfGNJ2z7I0kxB0M2F0BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4R+qfq1QqZ1+lnDPPEQAAoG9bzxUKJZEpAADA6aHnCgXfeZ3cAQAAjtt6roD+BAAA4Eet5wqE1x3mDgAAcNLWcwWMKwAAiLr2XCE33nNxAABA2NZzBbTtAQAAftTWcwVoOwAAwI9iPVfoY507AAAAG9RzBT7Y6gAAAO/o3oV2HxUAAICN3e9C+/2kAAAA/Nn9LpR+rggAAEBm965kny0EAADgtTvm/JwuHwAAgIFdc77PFw4AAECnXT/U5wsIAACgx64/NQAAAJ10/7F5AQAAOmDfj8sLAABw9b7/mBcAAFj3/4d5AQCAZd+H8wIAAEu+D/MCAABLvg/zAgAAS74P8wIAAD/2fZgXAAD4se/DvAAAwI99H+YFAIAf+z7MCwAAP/Z9mBcAAHjS9g8zLy4GAOZI3wAAAABJRU5ErkJggg==");
+      background-repeat: repeat;
+      background-size: 240px;
+    }
+
+    /* ── Cursor Warmth (set via JS) ────────────────────── */
+    #cursor-warmth {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      pointer-events: none;
+      transition: background 0.08s ease-out;
+    }
+
+    /* ── Grain overlay for sections (on top of cursor warmth) ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9997;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.003) 2px,
+        rgba(255, 255, 255, 0.003) 4px
+      );
+    }
+
+    /* ── Top Bar ──────────────────────────────────────── */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      font-size: 11px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    .top-bar .left {
+      color: var(--text-primary);
+    }
+
+    .top-bar .right {
+      color: var(--text-secondary);
+    }
+
+    /* ── Hero ──────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 300;
+      font-size: clamp(5rem, 15vw, 14rem);
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 48px;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .hero__glyph {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .hero__glyph-line {
+      width: 60px;
+      height: 1px;
+      background-color: var(--text-primary);
+      flex-shrink: 0;
+    }
+
+    .hero__glyph-diamond {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-amber);
+      transform: rotate(45deg);
+      margin-left: -4px;
+      flex-shrink: 0;
+    }
+
+    /* ── Manifesto ─────────────────────────────────────── */
+    .manifesto {
+      min-height: 60vh;
+      padding: 8rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 40%;
+      border-top: 1px solid var(--border);
+    }
+
+    .hairline-rule {
+      width: 40%;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 4rem;
+    }
+
+    .manifesto-line {
+      font-family: 'Playfair Display', serif;
+      font-weight: 300;
+      font-size: 32px;
+      color: var(--text-primary);
+      line-height: 1.6;
+      letter-spacing: -0.02em;
+    }
+
+    .manifesto-glyph {
+      font-size: 14px;
+      color: var(--accent-amber);
+      margin-top: 3rem;
+      opacity: 0.6;
+    }
+
+    /* ── Works Grid ─────────────────────────────────────── */
+    .works {
+      padding: 6rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .work-card {
+      padding: 2rem;
+      cursor: pointer;
+      transition: background 300ms ease;
+      border-radius: 4px;
+    }
+
+    .work-card:hover {
+      background: var(--hover-bg);
+    }
+
+    .card-number {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      font-family: 'Inter', sans-serif;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 28px;
+      color: var(--text-primary);
+      font-family: 'Playfair Display', serif;
+      font-weight: 350;
+      margin: 0;
+      transition: letter-spacing 300ms ease;
+      letter-spacing: 0.02em;
+    }
+
+    .work-card:hover .card-title {
+      letter-spacing: 0.04em;
+    }
+
+    .card-author {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-family: 'Inter', sans-serif;
+      margin: 0.3rem 0 1rem;
+    }
+
+    .card-stripe {
+      height: 3px;
+      width: 60px;
+      transition: width 300ms ease;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .card-stripe.amber {
+      background: var(--accent-amber);
+    }
+
+    .card-stripe.rose {
+      background: var(--accent-rose);
+    }
+
+    .work-card:hover .card-stripe {
+      width: 100%;
+    }
+
+    .card-excerpt {
+      font-size: 16px;
+      color: var(--text-secondary);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* ── Capabilities ──────────────────────────────────── */
+    .capabilities {
+      padding: 6rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cap-card {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .cap-glyph {
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+    }
+
+    .cap-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--text-primary);
+      font-weight: 350;
+      margin: 0 0 0.5rem;
+    }
+
+    .cap-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ── Vault ─────────────────────────────────────────── */
+    .vault {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .vault-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 10vw, 7.5rem);
+      font-weight: 250;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+      margin: 0 0 2rem;
+    }
+
+    .vault-lock-container {
+      margin-bottom: 1.5rem;
+    }
+
+    .lock-svg {
+      display: block;
+    }
+
+    .lock-shape {
+      fill: none;
+      stroke: var(--accent-amber);
+      stroke-width: 2;
+    }
+
+    .lock-bar {
+      stroke: var(--accent-amber);
+      stroke-width: 2;
+    }
+
+    .check-path {
+      stroke: var(--accent-amber);
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .vault-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--text-secondary);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Cross-Platform ──────────────────────────────────── */
+    .cross-platform {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-top: 1px solid var(--border);
+    }
+
+    .cross-platform::before,
+    .cross-platform::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .cross-platform::before {
+      top: 20%;
+    }
+
+    .cross-platform::after {
+      bottom: 20%;
+    }
+
+    .cp-content {
+      text-align: center;
+    }
+
+    .cp-line-1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--text-primary);
+      font-weight: 300;
+      margin: 0 0 0.5rem;
+    }
+
+    .cp-line-2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--text-primary);
+      letter-spacing: 0.08em;
+      margin: 0 0 1.5rem;
+    }
+
+    .cp-glyph {
+      font-size: 14px;
+      color: var(--accent-amber);
+      opacity: 0.5;
+    }
+
+    /* ── CTA ──────────────────────────────────────────────── */
+    .cta {
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .cta-content {
+      text-align: center;
+    }
+
+    .cta-glyph {
+      font-size: 20px;
+      color: var(--accent-amber);
+      display: block;
+      margin-bottom: 1.5rem;
+      animation: glyphPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes glyphPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.7; }
+    }
+
+    .cta-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--text-primary);
+      font-weight: 300;
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      margin: 0 0 3rem;
+    }
+
+    .cta-text::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 100%;
+      height: 1px;
+      background: var(--accent-amber);
+      transition: transform 400ms ease;
+      transform-origin: center;
+    }
+
+    .cta-text:hover::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    .cta-footer {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: var(--text-tertiary);
+      opacity: 0.4;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Responsive ─────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero__title { font-size: clamp(3rem, 20vw, 5rem) !important; }
+      .manifesto { padding: 4rem 1.5rem; margin-left: 10% !important; }
+      .manifesto-line { font-size: 24px !important; }
+      .works-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+      .capabilities-grid { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+      .vault-headline { font-size: clamp(2.5rem, 12vw, 4rem) !important; }
+      .cta-text { font-size: 22px !important; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .works-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      .capabilities-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+
+    /* ── Utility ───────────────────────────────────────── */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cursor Warmth Layer -->
+  <div id="cursor-warmth"></div>
+
+  <!-- Top Bar -->
+  <header class="top-bar" id="topBar">
+    <span class="left">FEYA</span>
+    <span class="right">Illuminate</span>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h1 class="hero__title" id="heroTitle">Feya</h1>
+    <div class="hero__glyph" id="heroGlyph">
+      <span class="hero__glyph-line"></span>
+      <span class="hero__glyph-diamond"></span>
+    </div>
+  </section>
+
+  <!-- Manifesto -->
+  <section class="manifesto" data-section="manifesto">
+    <div class="manifesto-line hairline-rule"></div>
+    <p class="manifesto-line line-1">A highlight is a thought made visible.</p>
+    <p class="manifesto-line line-2">A document is a conversation with yourself.</p>
+    <p class="manifesto-line line-3">Feya is the instrument.</p>
+    <span class="manifesto-glyph">⎯◇</span>
+  </section>
+
+  <!-- Section: Works -->
+  <section class="works" data-section="works" id="section-works">
+    <div class="works-grid">
+      <div class="work-card" data-stripe="amber">
+        <span class="card-number">01</span>
+        <h3 class="card-title">Moby-Dick</h3>
+        <p class="card-author">Herman Melville</p>
+        <div class="card-stripe amber"></div>
+        <p class="card-excerpt">"Call me Ishmael."</p>
+      </div>
+      <div class="work-card" data-stripe="rose">
+        <span class="card-number">02</span>
+        <h3 class="card-title">Romeo and Juliet</h3>
+        <p class="card-author">William Shakespeare</p>
+        <div class="card-stripe rose"></div>
+        <p class="card-excerpt">"Parting is sweet sorrow."</p>
+      </div>
+      <div class="work-card" data-stripe="amber">
+        <span class="card-number">03</span>
+        <h3 class="card-title">Leaves of Grass</h3>
+        <p class="card-author">Walt Whitman</p>
+        <div class="card-stripe amber"></div>
+        <p class="card-excerpt">"I celebrate myself."</p>
+      </div>
+      <div class="work-card" data-stripe="rose">
+        <span class="card-number">04</span>
+        <h3 class="card-title">The Great Gatsby</h3>
+        <p class="card-author">F. Scott Fitzgerald</p>
+        <div class="card-stripe rose"></div>
+        <p class="card-excerpt">"Gatsby believed in green light."</p>
+      </div>
+      <div class="work-card" data-stripe="amber">
+        <span class="card-number">05</span>
+        <h3 class="card-title">Pride and Prejudice</h3>
+        <p class="card-author">Jane Austen</p>
+        <div class="card-stripe amber"></div>
+        <p class="card-excerpt">"It is a truth."</p>
+      </div>
+      <div class="work-card" data-stripe="rose">
+        <span class="card-number">06</span>
+        <h3 class="card-title">The Raven</h3>
+        <p class="card-author">Edgar Allan Poe</p>
+        <div class="card-stripe rose"></div>
+        <p class="card-excerpt">"Nevermore."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Capabilities -->
+  <section class="capabilities" data-section="capabilities">
+    <div class="capabilities-grid">
+      <div class="cap-card">
+        <svg class="cap-glyph" viewBox="0 0 24 24" width="24" height="24">
+          <line x1="12" y1="2" x2="12" y2="22" stroke="var(--accent-amber)" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="10" fill="none" stroke="var(--text-tertiary)" stroke-width="0.5"/>
+        </svg>
+        <h3 class="cap-title">Read</h3>
+        <p class="cap-desc">Continuous scroll. Night mode. Every typeface preserved.</p>
+      </div>
+      <div class="cap-card">
+        <svg class="cap-glyph" viewBox="0 0 24 24" width="24" height="24">
+          <line x1="4" y1="12" x2="20" y2="12" stroke="var(--accent-amber)" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="10" fill="none" stroke="var(--text-tertiary)" stroke-width="0.5"/>
+        </svg>
+        <h3 class="cap-title">Highlight</h3>
+        <p class="cap-desc">Precision stroke. Subtle glow. Your library of marginalia.</p>
+      </div>
+      <div class="cap-card">
+        <svg class="cap-glyph" viewBox="0 0 24 24" width="24" height="24">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="var(--accent-amber)" stroke-width="1.5"/>
+        </svg>
+        <h3 class="cap-title">Secure</h3>
+        <p class="cap-desc">Biometric lock. Encrypted at rest. Your documents, yours only.</p>
+      </div>
+      <div class="cap-card">
+        <svg class="cap-glyph" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M12 2 L12 22 M2 12 L22 12 M4 4 L20 20 M20 4 L4 20" stroke="var(--accent-amber)" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="12" cy="12" r="10" fill="none" stroke="var(--text-tertiary)" stroke-width="0.5"/>
+        </svg>
+        <h3 class="cap-title">Sync</h3>
+        <p class="cap-desc">Across devices. Offline-first. One library everywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Vault -->
+  <section class="vault" data-section="vault">
+    <h2 class="vault-headline">Secure</h2>
+    <div class="vault-lock-container">
+      <svg class="lock-svg" viewBox="0 0 48 48" width="48" height="48">
+        <circle class="lock-shape" cx="24" cy="24" r="18" fill="none" stroke="var(--accent-amber)" stroke-width="2"/>
+        <line class="lock-bar" x1="24" y1="6" x2="24" y2="18" stroke="var(--accent-amber)" stroke-width="2"/>
+      </svg>
+    </div>
+    <p class="vault-tagline">Biometric. Encrypted. Yours alone.</p>
+  </section>
+
+  <!-- Section: Cross-Platform -->
+  <section class="cross-platform" data-section="cross-platform">
+    <div class="cp-content">
+      <p class="cp-line-1">Phone. Tablet. Desktop.</p>
+      <p class="cp-line-2">One library.</p>
+      <span class="cp-glyph">⎯◇</span>
+    </div>
+  </section>
+
+  <!-- Section: CTA -->
+  <section class="cta" data-section="cta">
+    <div class="cta-content">
+      <span class="cta-glyph">◇</span>
+      <p class="cta-text">Illuminate what matters</p>
+      <p class="cta-footer">Feya PDF © 2026</p>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // ── Wait for everything to load ────────────────────
+      const init = function() {
+
+        // ── Lenis Smooth Scroll ──────────────────────────
+        const lenis = new Lenis({
+          duration: 0.6,
+          easing: function(t) {
+            return Math.min(1, 1.001 - Math.pow(2, -10 * t));
+          },
+          orientation: 'vertical',
+          smoothWheel: true,
+        });
+
+        // ── GSAP ticker integration ──────────────────────
+        gsap.ticker.add(function(time) {
+          lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        // ── Register ScrollTrigger ───────────────────────
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ── Lenis ←→ ScrollTrigger bridge ────────────────
+        lenis.on('scroll', ScrollTrigger.update);
+
+        // ── Mouse Warmth ──────────────────────────────────
+        const warmth = document.getElementById('cursor-warmth');
+
+        function updateWarmth(e) {
+          const x = e.clientX;
+          const y = e.clientY;
+          warmth.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(212, 163, 115, 0.15), transparent 60%)`;
+        }
+
+        document.addEventListener('mousemove', updateWarmth);
+
+        // Also set a default center glow on load
+        warmth.style.background = `radial-gradient(600px circle at 50% 50%, rgba(212, 163, 115, 0.12), transparent 60%)`;
+
+        // ── Hero Fade-in Timeline ─────────────────────────
+        const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+
+        tl.to('#heroTitle', {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+        })
+        .to('#heroGlyph', {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+        }, '-=0.3');
+
+        // ── Top Bar Scroll Behavior ──────────────────────
+        ScrollTrigger.create({
+          trigger: '.hero',
+          start: 'bottom-=100 top',
+          end: '+=100',
+          scrub: true,
+          animation: gsap.to('#topBar', {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+          }),
+        });
+
+        // ── Manifesto Line Animations ────────────────────
+        gsap.fromTo('.line-1',
+          { opacity: 0, y: 20, letterSpacing: '-0.05em' },
+          {
+            scrollTrigger: {
+              trigger: '.manifesto',
+              start: 'top bottom',
+              toggleActions: 'play none none none',
+            },
+            opacity: 1,
+            y: 0,
+            letterSpacing: '0em',
+            duration: 0.6,
+            ease: 'power2.out',
+          }
+        );
+
+        gsap.fromTo('.line-2',
+          { opacity: 0, y: 20, letterSpacing: '-0.05em' },
+          {
+            scrollTrigger: {
+              trigger: '.manifesto',
+              start: 'top+=25% bottom',
+              toggleActions: 'play none none none',
+            },
+            opacity: 1,
+            y: 0,
+            letterSpacing: '0em',
+            duration: 0.6,
+            ease: 'power2.out',
+          }
+        );
+
+        gsap.fromTo('.line-3',
+          { opacity: 0, y: 20, letterSpacing: '-0.05em' },
+          {
+            scrollTrigger: {
+              trigger: '.manifesto',
+              start: 'top+=50% bottom',
+              toggleActions: 'play none none none',
+            },
+            opacity: 1,
+            y: 0,
+            letterSpacing: '0em',
+            duration: 0.6,
+            ease: 'power2.out',
+          }
+        );
+
+        // ── Works Grid Animation (row by row) ──────────────
+        const worksCards = document.querySelectorAll('.work-card');
+
+        if (worksCards.length > 0) {
+          // Row 1: indices 0–2, Row 2: indices 3–5
+          var row1Cards = gsap.utils.toArray(worksCards).slice(0, 3);
+          var row2Cards = gsap.utils.toArray(worksCards).slice(3, 6);
+
+          var worksTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.works',
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+            defaults: { duration: 0.5, ease: 'power2.out' },
+          });
+
+          // Row 1
+          worksTl.from(row1Cards, {
+            opacity: 0,
+            y: 40,
+          });
+
+          // Card numbers slide in for row 1
+          worksTl.from(row1Cards.map(function(c) { return c.querySelector('.card-number'); }), {
+            x: -20,
+            duration: 0.4,
+          }, '<');
+
+          // Row 2 (after 200ms stagger from row 1)
+          worksTl.from(row2Cards, {
+            opacity: 0,
+            y: 40,
+          }, '>+0.2');
+
+          // Card numbers slide in for row 2
+          worksTl.from(row2Cards.map(function(c) { return c.querySelector('.card-number'); }), {
+            x: -20,
+            duration: 0.4,
+          }, '<');
+        }
+
+        // ── Capabilities Scroll Animation ──────────────────
+        gsap.from('.cap-card', {
+          scrollTrigger: {
+            trigger: '.capabilities',
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+          opacity: 0,
+          y: 30,
+          duration: 0.5,
+          stagger: 0.15,
+          ease: 'power2.out'
+        });
+
+        // ── Cross-Platform Scroll Animation ────────────────
+        gsap.from('.cp-content', {
+          scrollTrigger: {
+            trigger: '.cross-platform',
+            start: 'top 85%',
+          },
+          opacity: 0,
+          y: 20,
+          duration: 500,
+          ease: 'power2.out'
+        });
+
+        // ── CTA Scroll Animation ───────────────────────────
+        gsap.from('.cta-text', {
+          scrollTrigger: {
+            trigger: '.cta',
+            start: 'top 85%',
+          },
+          opacity: 0,
+          y: 15,
+          duration: 600,
+          ease: 'power2.out'
+        });
+
+        // ── Vault Lock Morph (GSAP ScrollTrigger scrub) ────
+        const lockBar = document.querySelector('.lock-bar');
+        const lockShape = document.querySelector('.lock-shape');
+
+        if (lockBar && lockShape) {
+          const vaultTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.vault',
+              start: 'top center+=20%',
+              end: 'center center',
+              scrub: 1
+            }
+          });
+
+          // Morph: bar slides down and checkmark draws
+          vaultTl.to(lockBar, { attr: { y1: 30, y2: 30 }, duration: 0.5 })
+            .to(lockBar, { opacity: 0, duration: 0.3 }, '-=0.2')
+            .call(function() {
+              var check = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+              check.setAttribute('d', 'M16 24 L22 30 L32 18');
+              check.setAttribute('stroke', 'var(--accent-amber)');
+              check.setAttribute('stroke-width', '2');
+              check.setAttribute('fill', 'none');
+              check.setAttribute('stroke-linecap', 'round');
+              check.setAttribute('stroke-linejoin', 'round');
+              check.classList.add('check-path');
+              document.querySelector('.lock-svg').appendChild(check);
+              // Animate draw
+              var length = check.getTotalLength();
+              check.style.strokeDasharray = length;
+              check.style.strokeDashoffset = length;
+              gsap.to(check, { strokeDashoffset: 0, duration: 0.6, ease: 'power2.inOut' });
+            }, [], 0.5);
+        }
+
+        // ── Cleanup on page unload ───────────────────────
+        window.addEventListener('beforeunload', function() {
+          lenis.destroy();
+          ScrollTrigger.getAll().forEach(function(st) { st.kill(); });
+          document.removeEventListener('mousemove', updateWarmth);
+        });
+
+      };
+
+      // ── Ensure all deps are available ──────────────────
+      if (typeof Lenis !== 'undefined' && typeof gsap !== 'undefined') {
+        init();
+      } else {
+        // Retry after scripts load
+        var checkReady = setInterval(function() {
+          if (typeof Lenis !== 'undefined' && typeof gsap !== 'undefined') {
+            clearInterval(checkReady);
+            init();
+          }
+        }, 50);
+        // Safety timeout
+        setTimeout(function() { clearInterval(checkReady); }, 10000);
+      }
+
+    })();
+  </script>
+</body>
+</html>

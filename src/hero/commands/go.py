@@ -45,6 +45,7 @@ from hero.commands.legal import run_legal
 from hero.commands.cipr import run_cipr
 from hero.commands.verify import run_verify
 from hero.commands.archive import run_archive
+from hero.stages.validate_output import run_validate_output
 
 # ── New core/stages layer (graceful fallback if not yet installed) ─────
 try:
@@ -67,6 +68,7 @@ _DEFAULT_STAGE_ORDER = [
     "navigate",
     "pre_commit",
     "build",
+    "validate_output",
     "self_review",
     "harden",
     "legal",
@@ -77,10 +79,10 @@ _DEFAULT_STAGE_ORDER = [
 
 # ── Mode → stage list (fallback when hero.stages.resolve_mode is missing)
 _MODE_STAGES = {
-    "smart": ["navigate", "pre_commit", "build", "self_review", "verify", "archive"],
+    "smart": ["navigate", "pre_commit", "build", "validate_output", "self_review", "verify", "archive"],
     "quick": ["navigate", "pre_commit", "build"],
-    "full": ["navigate", "pre_commit", "build", "self_review", "harden", "legal", "cipr", "verify", "archive"],
-    "ci": ["pre_commit", "build", "cipr"],
+    "full": ["navigate", "pre_commit", "build", "validate_output", "self_review", "harden", "legal", "cipr", "verify", "archive"],
+    "ci": ["pre_commit", "build", "validate_output", "cipr"],
     "audit": ["navigate", "pre_commit", "harden", "legal"],
 }
 
@@ -103,17 +105,31 @@ def _resolve_mode(mode: str) -> list[str]:
 def _run_stage_safe(name: str, sandbox_path, verbose: bool = False, **kwargs):
     """Run a stage via hero.stages if available, else direct function call."""
     if _stages_run:
-        return _stages_run(name, sandbox_path, verbose=verbose, **kwargs)
+        try:
+            return _stages_run(name, sandbox_path, verbose=verbose, **kwargs)
+        except (ValueError, ImportError):
+            # Stage not registered in hero.stages module — fall through
+            # to the inline fallback below. This allows new stages like
+            # validate_output to work before the stages module is updated.
+            pass
     # Fallback: use old direct imports
     _FALLBACKS = {
         "navigate": None,   # no old navigate function exists
         "pre_commit": (
             run_pre_commit,
-            lambda sp, v, **kw: run_pre_commit(sp, verbose=v),
+            lambda sp, v, **kw: run_pre_commit(sp, verbose=v, target=kw.get("target", {})),
         ),
         "build": (
             run_build,
-            lambda sp, v, **kw: run_build(sp, verbose=v, bump=kw.get("bump", False)),
+            lambda sp, v, **kw: run_build(sp, verbose=v, bump=kw.get("bump", False), target=kw.get("target", {})),
+        ),
+        "validate_output": (
+            run_validate_output,
+            lambda sp, v, **kw: run_validate_output(
+                sp,
+                target=kw.get("target", {}),
+                verbose=v,
+            ),
         ),
         "harden": (
             run_harden,
@@ -430,6 +446,131 @@ def _detect_project_type(path: Path) -> dict:
     return result
 
 
+def _detect_target_platform(task: str, sandbox_path: Path) -> dict:
+    """Determine WHAT to build from the task description, not from disk files.
+
+    Returns a dict with platform classification independent of what exists
+    on disk. Falls back to source detection when the task is ambiguous.
+
+    Returns dict keys: platform, build_tool, output_dir, output_files, validation
+    """
+    task_lower = task.lower()
+    source_type = _detect_project_type(sandbox_path)["type"]
+
+    # ── Keyword-based classification (ordered by specificity) ──
+    website_keywords = [
+        "website", "landing page", "static site", "web page",
+        "html", "css", "frontend site", "homepage",
+        "interactive page", "hero section", "animation section",
+        "scroll effect", "parallax", "landing", "marketing page",
+        "portfolio", "single page", "spa", "web app", "frontend",
+        "ui", "landing-page", "hero", "banner", "web design",
+        "gsap", "three.js", "globe", "3d scene", "web component",
+    ]
+    docs_keywords = [
+        "documentation", "docs site", "readme site", "mkdocs",
+        "readme", "docs", "doc site", "wiki", "api docs",
+        "swagger", "storybook", "style guide", "component library docs",
+    ]
+    flutter_keywords = [
+        "flutter app", "apk", "mobile app", "ios app", "widget",
+        "android app", "dart", "flutter widget", "flutter screen",
+        "flutter feature", "cupertino", "material design",
+        "play store", "app store", "mobile", "cross-platform", "ios",
+    ]
+    api_keywords = [
+        "api", "endpoint", "backend", "server", "rest",
+        "rest api", "graphql", "webhook", "web socket", "websocket",
+        "lambda", "cloud function", "serverless", "microservice",
+        "database", "crud", "auth", "login", "register",
+        "web service", "backend service", "route", "middleware",
+    ]
+
+    if any(kw in task_lower for kw in website_keywords):
+        return {
+            "platform": "static_website",
+            "build_tool": "npm",
+            "output_dir": "dist/",
+            "output_files": ["index.html"],
+            "validation": "static_site",
+        }
+    if any(kw in task_lower for kw in docs_keywords):
+        return {
+            "platform": "documentation",
+            "build_tool": "mkdocs" if (sandbox_path / "mkdocs.yml").exists() else "npm",
+            "output_dir": "site/",
+            "output_files": ["index.html"],
+            "validation": "static_site",
+        }
+    if any(kw in task_lower for kw in api_keywords):
+        return {
+            "platform": "backend_api",
+            "build_tool": "npm",
+            "output_dir": "dist/",
+            "output_files": ["server.js", "index.js"],
+            "validation": "api_tests",
+        }
+    if any(kw in task_lower for kw in flutter_keywords):
+        return {
+            "platform": "flutter_app",
+            "build_tool": "flutter",
+            "output_dir": "build/app/outputs/flutter-apk/",
+            "output_files": ["app-release.apk"],
+            "validation": "flutter",
+        }
+
+    # ── Fallback: match source type ──
+    if source_type == "flutter":
+        return {
+            "platform": "flutter_app",
+            "build_tool": "flutter",
+            "output_dir": "build/app/outputs/flutter-apk/",
+            "output_files": ["app-release.apk"],
+            "validation": "flutter",
+        }
+    if source_type == "godot":
+        return {
+            "platform": "godot_game",
+            "build_tool": "godot",
+            "output_dir": "build/",
+            "output_files": ["game"],
+            "validation": "godot",
+        }
+    if source_type == "python":
+        return {
+            "platform": "python_package",
+            "build_tool": "python",
+            "output_dir": "dist/",
+            "output_files": [],
+            "validation": "pytest",
+        }
+    if source_type == "node":
+        return {
+            "platform": "node_app",
+            "build_tool": "npm",
+            "output_dir": "dist/",
+            "output_files": ["index.js"],
+            "validation": "npm_test",
+        }
+    if source_type == "electron":
+        return {
+            "platform": "electron_app",
+            "build_tool": "npm",
+            "output_dir": "dist/",
+            "output_files": [],
+            "validation": "npm_test",
+        }
+
+    # ── Ultimate fallback ──
+    return {
+        "platform": "unknown",
+        "build_tool": "unknown",
+        "output_dir": "",
+        "output_files": [],
+        "validation": "unknown",
+    }
+
+
 def _run_analysis(analyze_cmd: list[str], cwd: Path,
                    source_globs: list[str] | None = None) -> dict:
     """Run analysis and return results (delegates to cached_analyze)."""
@@ -568,7 +709,7 @@ def _get_ts_errors(sandbox_path: Path) -> list[str]:
 @click.option("--full-pipeline", is_flag=True, default=False,
               help="Run ALL planning phases (Council, Research, PE, Architect, Lead)")
 @click.option("--skip", type=str, multiple=True,
-              help="Skip specific stages: pre-commit, build, self_review, harden, legal, cipr, verify, archive")
+              help="Skip specific stages: pre-commit, build, validate_output, self_review, harden, legal, cipr, verify, archive")
 @click.option("--legacy-verify", is_flag=True, default=False,
               help="Use legacy verify\u21d4fix loop instead of direct pipeline execution")
 @click.option("--verbose", "-v", is_flag=True, default=False,
@@ -582,13 +723,16 @@ def _get_ts_errors(sandbox_path: Path) -> list[str]:
               help="End stage (e.g. build, verify, archive). Requires --from. Exclusive with --mode and --stage.")
 @click.option("--stage", "single_stage", type=str, default=None,
               help="Run a single stage (e.g. pre_commit). Exclusive with --mode and --from/--to.")
+@click.option("--target", "target_override", type=str, default=None,
+              help="Override target platform: static_website, flutter_app, documentation, backend_api")
 def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
        self_review: bool, archive: bool, viewport: bool,
        full_pipeline: bool = False,
        skip: tuple[str, ...] = (), legacy_verify: bool = False,
        verbose: bool = False, mode: str | None = None,
        from_stage: str | None = None, to_stage: str | None = None,
-       single_stage: str | None = None) -> None:
+       single_stage: str | None = None,
+       target_override: str | None = None) -> None:
     """One-command full pipeline: plan → dispatch → spawn → verify → archive.
 
     Queues soldiers, writes a pipeline manifest file at ~/.hero/pipeline/,
@@ -719,6 +863,58 @@ def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
                 project_size = sum(1 for _ in sandbox_path.rglob("*"))
         budget = estimate_budget(task, files=[], project_size=project_size)
         click.echo(f"  Auto-estimated budget: {budget} tokens (project size: {project_size} files)")
+    click.echo("")
+
+    # Phase 1b: Target platform detection (WHAT to build, separate from source)
+    click.echo("── Phase 1b: Target Detection ────────────────")
+    target = _detect_target_platform(task, sandbox_path)
+
+    # ——target override: explicit CLI flag takes precedence over task-based detection
+    if target_override is not None:
+        _VALID_TARGETS = {
+            "static_website": {
+                "platform": "static_website",
+                "build_tool": "npm",
+                "output_dir": "dist/",
+                "output_files": ["index.html"],
+                "validation": "static_site",
+            },
+            "flutter_app": {
+                "platform": "flutter_app",
+                "build_tool": "flutter",
+                "output_dir": "build/app/outputs/flutter-apk/",
+                "output_files": ["app-release.apk"],
+                "validation": "flutter",
+            },
+            "documentation": {
+                "platform": "documentation",
+                "build_tool": "mkdocs" if (sandbox_path / "mkdocs.yml").exists() else "npm",
+                "output_dir": "site/",
+                "output_files": ["index.html"],
+                "validation": "static_site",
+            },
+            "backend_api": {
+                "platform": "backend_api",
+                "build_tool": "npm",
+                "output_dir": "dist/",
+                "output_files": ["server.js", "index.js"],
+                "validation": "api_tests",
+            },
+        }
+        if target_override not in _VALID_TARGETS:
+            raise click.ClickException(
+                f"Unknown target platform '{target_override}'. "
+                f"Valid options: {', '.join(sorted(_VALID_TARGETS.keys()))}"
+            )
+        override = _VALID_TARGETS[target_override]
+        # Detect build tool from sandbox for documentation (mkdocs vs npm)
+        if target_override == "documentation":
+            override["build_tool"] = "mkdocs" if (sandbox_path / "mkdocs.yml").exists() else "npm"
+        click.echo(f"  ⚡ --target override: {target_override}")
+        target = override
+
+    click.echo(f"  Target platform: {target['platform']}")
+    click.echo(f"  Target build:    {target['build_tool']}")
     click.echo("")
 
     # Phase 2: LEAD — analyze sandbox, break task into focused subtasks
@@ -1039,6 +1235,7 @@ def go(sandbox: str, task: str, budget: int, dry_run: bool, verify: bool,
                     else:
                         result = _run_stage_safe(
                             stage_name, sandbox_path, verbose=verbose,
+                            target=target,
                         )
                 except Exception as e:
                     click.echo(f"  \U0001f534 {stage_name}: EXCEPTION — {e}")
