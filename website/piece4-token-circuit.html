@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERO — Token Economy &amp; Circuit Breaker</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --card-hi: #161622;
+    --cyan: #00ffcc;
+    --cyan-dim: rgba(0,255,204,0.5);
+    --cyan-faint: rgba(0,255,204,0.1);
+    --cyan-border: rgba(0,255,204,0.2);
+    --red: #ff3355;
+    --red-faint: rgba(255,51,85,0.12);
+    --red-border: rgba(255,51,85,0.3);
+    --amber: #ffb347;
+    --amber-faint: rgba(255,179,71,0.12);
+    --amber-border: rgba(255,179,71,0.3);
+    --green: #00ff88;
+    --green-faint: rgba(0,255,136,0.12);
+    --green-border: rgba(0,255,136,0.3);
+    --border: rgba(0,255,204,0.1);
+    --text: #d8d8e0;
+    --muted: #5a5a6a;
+    --mono: 'JetBrains Mono','Fira Code','SF Mono',Menlo,Consolas,monospace;
+    --sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  }
+
+  html, body { height: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    overflow-x: hidden;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,255,204,0.10), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 110%, rgba(0,255,204,0.06), transparent 60%),
+      radial-gradient(ellipse 50% 30% at 10% 80%, rgba(255,51,85,0.04), transparent 60%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,255,204,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,204,0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: var(--cyan);
+    box-shadow: 0 0 16px rgba(0,255,204,0.25), inset 0 0 12px rgba(0,255,204,0.1);
+    position: relative;
+  }
+  .brand-mark::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--cyan-faint);
+    border-radius: 4px;
+  }
+  .brand-mark svg { width: 18px; height: 18px; }
+
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo {
+    font-family: var(--mono);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 6px;
+    text-shadow: 0 0 12px rgba(0,255,204,0.55), 0 0 24px rgba(0,255,204,0.25);
+  }
+  .logo-sub {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 3px;
+    margin-top: 4px;
+  }
+
+  .hub-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--green);
+    padding: 8px 14px;
+    border: 1px solid var(--green-border);
+    border-radius: 999px;
+    background: var(--green-faint);
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green), 0 0 16px rgba(0,255,136,0.4);
+    animation: pulse 1.8s ease-in-out infinite;
+    position: relative;
+  }
+  .status-dot::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid var(--green);
+    animation: ring 1.8s ease-out infinite;
+    opacity: 0;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.55; transform: scale(0.9); }
+  }
+  @keyframes ring {
+    0% { transform: scale(0.6); opacity: 0.8; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+
+  /* ---------- Main / Title block ---------- */
+  main {
+    flex: 1;
+    padding: 56px 0 64px;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--cyan);
+    margin-bottom: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.85;
+  }
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--cyan);
+  }
+
+  h1.page-title {
+    font-family: var(--sans);
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    margin-bottom: 12px;
+    background: linear-gradient(180deg, #ffffff 0%, #c0c0d0 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .hero-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-stat .number {
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 18px rgba(0,255,204,0.45), 0 0 36px rgba(0,255,204,0.18);
+  }
+  .hero-stat .label {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 2.5px;
+  }
+
+  /* ---------- Panel grid ---------- */
+  .panels {
+    display: grid;
+    grid-template-columns: 60fr 38fr;
+    gap: 24px;
+  }
+
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 26px 26px;
+    position: relative;
+    overflow: hidden;
+  }
+  .panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--cyan-border) 50%, transparent 100%);
+  }
+
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .panel-title {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--text);
+  }
+  .panel-sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    margin-top: 3px;
+  }
+
+  /* ---------- Chart panel ---------- */
+  .chart-legend {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch {
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    position: relative;
+  }
+  .legend-swatch.dashed {
+    background: transparent;
+    border-top: 2px dashed currentColor;
+    height: 0;
+  }
+  .legend-swatch.solid { background: currentColor; height: 2px; }
+  .legend-item.red   { color: var(--red); }
+  .legend-item.cyan  { color: var(--cyan); }
+
+  .badge-down {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: var(--green);
+    background: var(--green-faint);
+    border: 1px solid var(--green-border);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  .chart-wrap {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  #tokenChart {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .chart-stats {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .chart-stats .saved-num {
+    font-family: var(--mono);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 18px rgba(0,255,204,0.45), 0 0 36px rgba(0,255,204,0.18);
+    line-height: 1;
+  }
+  .chart-stats .saved-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2.5px;
+    margin-top: 6px;
+  }
+  .chart-stats .saved-meta {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+  }
+  .chart-stats .saved-meta strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .chart-stats .saved-meta .ok { color: var(--green); }
+
+  /* ---------- Circuit panel ---------- */
+  .cb-status {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--green);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cb-status .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+
+  .cb-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cb-card {
+    position: relative;
+    background: var(--card-hi);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 16px 22px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .cb-card.in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.45s ease, transform 0.45s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  }
+
+  /* left gradient accent bar */
+  .cb-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+  .cb-card.amber::before { background: linear-gradient(180deg, var(--amber) 0%, rgba(255,179,71,0.2) 100%); }
+  .cb-card.red::before   { background: linear-gradient(180deg, var(--red) 0%, rgba(255,51,85,0.2) 100%); }
+  .cb-card.cyan::before  { background: linear-gradient(180deg, var(--cyan) 0%, rgba(0,255,204,0.2) 100%); }
+
+  .cb-card.amber { border-color: var(--amber-border); }
+  .cb-card.red   { border-color: var(--red-border); }
+  .cb-card.cyan  { border-color: var(--cyan-border); }
+
+  .cb-card.amber:hover {
+    transform: translateY(-3px);
+    background: #1a1820;
+    box-shadow: 0 10px 28px rgba(255,179,71,0.15), 0 0 0 1px var(--amber-border);
+  }
+  .cb-card.red:hover {
+    transform: translateY(-3px);
+    background: #1c1418;
+    box-shadow: 0 10px 28px rgba(255,51,85,0.18), 0 0 0 1px var(--red-border);
+  }
+  .cb-card.cyan:hover {
+    transform: translateY(-3px);
+    background: #0f1a18;
+    box-shadow: 0 10px 28px rgba(0,255,204,0.18), 0 0 0 1px var(--cyan-border);
+  }
+
+  .cb-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .cb-name {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+  }
+  .cb-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+  }
+  .cb-icon.amber { background: var(--amber-faint); color: var(--amber); border: 1px solid var(--amber-border); }
+  .cb-icon.red   { background: var(--red-faint);   color: var(--red);   border: 1px solid var(--red-border); }
+  .cb-icon.cyan  { background: var(--cyan-faint);  color: var(--cyan);  border: 1px solid var(--cyan-border); }
+  .cb-icon svg { width: 14px; height: 14px; }
+
+  .cb-count {
+    font-family: var(--mono);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1px;
+    display: inline-block;
+    transform-origin: left center;
+  }
+  .cb-card.amber .cb-count { color: var(--amber); text-shadow: 0 0 18px rgba(255,179,71,0.5), 0 0 36px rgba(255,179,71,0.2); }
+  .cb-card.red   .cb-count { color: var(--red);   text-shadow: 0 0 18px rgba(255,51,85,0.5),  0 0 36px rgba(255,51,85,0.2); }
+  .cb-card.cyan  .cb-count { color: var(--cyan);  text-shadow: 0 0 18px rgba(0,255,204,0.5),  0 0 36px rgba(0,255,204,0.2); }
+
+  .cb-sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+  .cb-card.amber .cb-sub { color: rgba(255,179,71,0.7); }
+  .cb-card.red .cb-sub   { color: rgba(255,51,85,0.7); }
+  .cb-card.cyan .cb-sub  { color: rgba(0,255,204,0.7); }
+
+  @keyframes countPulse {
+    0%, 90%, 100% { transform: scale(1); }
+    95% { transform: scale(1.08); }
+  }
+  .cb-card .cb-count.pulse {
+    animation: countPulse 4s ease-in-out infinite;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer .nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  footer .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  footer .nav a:hover { color: var(--cyan); }
+  footer .nav a.active { color: var(--cyan); }
+  footer .build { color: var(--cyan-dim); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .panels { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .container { padding: 0 18px; }
+    header { padding: 20px 0 18px; }
+    .logo { font-size: 22px; letter-spacing: 4px; }
+    .logo-sub { font-size: 8px; }
+    .hub-status { font-size: 9px; padding: 6px 10px; letter-spacing: 1px; }
+
+    h1.page-title { font-size: 38px; }
+    .hero-stat .number { font-size: 22px; }
+    .hero-stat .label { font-size: 11px; letter-spacing: 1.5px; }
+    main { padding: 40px 0 48px; }
+
+    .panel { padding: 20px 18px 22px; }
+    .panel-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .chart-wrap { height: 320px; }
+    .chart-stats .saved-num { font-size: 24px; }
+    .cb-count { font-size: 36px; }
+
+    footer { font-size: 9px; }
+    footer .nav { gap: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 12 L7 8 L7 11 L17 11 L17 8 L21 12 L17 16 L17 13 L7 13 L7 16 Z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="logo">HERO</div>
+          <div class="logo-sub">MULTI-AGENT ORCHESTRATION</div>
+        </div>
+      </div>
+      <div class="hub-status">
+        <span class="status-dot"></span>
+        <span>ALL SYSTEMS OPERATIONAL</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="eyebrow">// INFRASTRUCTURE · LIVE METRICS</div>
+      <h1 class="page-title">TOKEN ECONOMY</h1>
+      <div class="hero-stat">
+        <span class="number">1,847,203</span>
+        <span class="label">TOKENS SAVED · LIFETIME</span>
+      </div>
+
+      <div class="panels">
+
+        <!-- LEFT: Token Economy Chart -->
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">TOKEN UTILIZATION</div>
+              <div class="panel-sub">14-DAY WINDOW · K TOKENS / DAY</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+              <div class="chart-legend">
+                <span class="legend-item red">
+                  <span class="legend-swatch dashed"></span>WITHOUT HERO
+                </span>
+                <span class="legend-item cyan">
+                  <span class="legend-swatch solid"></span>WITH HERO
+                </span>
+              </div>
+              <span class="badge-down">▼ 12.4% THIS WEEK</span>
+            </div>
+          </div>
+
+          <div class="chart-wrap">
+            <canvas id="tokenChart"></canvas>
+          </div>
+
+          <div class="chart-stats">
+            <div>
+              <div class="saved-num">1,847,203</div>
+              <div class="saved-label">LIFETIME SAVINGS</div>
+            </div>
+            <div class="saved-meta">
+              <div><strong>49.8%</strong> AVG REDUCTION</div>
+              <div><strong>$1,247.83</strong> COST AVOIDED</div>
+              <div>STATUS <span class="ok">● ACCELERATING</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIGHT: Circuit Breaker -->
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">CIRCUIT BREAKER</div>
+              <div class="panel-sub">PROTECTION LAYER · 24H</div>
+            </div>
+            <div class="cb-status">
+              <span class="dot"></span>ACTIVE
+            </div>
+          </div>
+
+          <div class="cb-list">
+
+            <!-- TRIPS -->
+            <div class="cb-card amber">
+              <div class="cb-top">
+                <div class="cb-name">TRIPS</div>
+                <div class="cb-icon amber" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3 L22 21 L2 21 Z"/>
+                    <line x1="12" y1="10" x2="12" y2="15"/>
+                    <circle cx="12" cy="18" r="0.6" fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="cb-count pulse" data-base="7">7</div>
+              <div class="cb-sub">LAST TRIP: 2H AGO</div>
+            </div>
+
+            <!-- QUARANTINES -->
+            <div class="cb-card red">
+              <div class="cb-top">
+                <div class="cb-name">QUARANTINES</div>
+                <div class="cb-icon red" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2 L20 6 V12 C20 17 16 21 12 22 C8 21 4 17 4 12 V6 Z"/>
+                    <line x1="9" y1="12" x2="15" y2="12"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="cb-count pulse" data-base="3">3</div>
+              <div class="cb-sub">AWAITING REVIEW</div>
+            </div>
+
+            <!-- DLQ -->
+            <div class="cb-card cyan">
+              <div class="cb-top">
+                <div class="cb-name">DLQ</div>
+                <div class="cb-icon cyan" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M8 12 L11 15 L16 9"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="cb-count pulse" data-base="12">12</div>
+              <div class="cb-sub">2 PROCESSED TODAY</div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="nav">
+        <a href="piece1-hero-shell.html">01 · HERO SHELL</a>
+        <a href="piece2-two-futures.html">02 · TWO FUTURES</a>
+        <a href="piece3-pipeline-bars.html">03 · PIPELINE STAGES</a>
+        <a href="piece4-token-circuit.html" class="active">04 · TOKEN ECONOMY</a>
+      </div>
+      <div class="build">BUILD --</div>
+    </footer>
+  </div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---------- Build timestamp updater ----------
+  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+
+  var buildEl = document.querySelector('footer .build');
+  function updateBuild() {
+    if (!buildEl) return;
+    var d = new Date();
+    var stamp = d.getFullYear() + '.' +
+                pad2(d.getMonth() + 1) + '.' +
+                pad2(d.getDate()) + ' · ' +
+                pad2(d.getHours()) + ':' +
+                pad2(d.getMinutes()) + ' GST';
+    buildEl.textContent = 'BUILD ' + stamp;
+  }
+  updateBuild();
+  setInterval(updateBuild, 30000);
+
+  // ---------- Token Economy Area Chart ----------
+  var dataWithout = [142, 138, 145, 132, 128, 135, 130, 126, 122, 118, 124, 115, 110, 107];
+  var dataWith    = [ 71,  69,  72,  66,  64,  68,  65,  63,  61,  59,  62,  58,  55,  53];
+  var dayLabels   = ['M','T','W','T','F','S','S','M','T','W','T','F','S','S'];
+
+  var canvas = document.getElementById('tokenChart');
+  var ctx = canvas.getContext('2d');
+  var dpr = Math.max(1, window.devicePixelRatio || 1);
+
+  var padL = 44, padR = 16, padT = 18, padB = 32;
+  var chartW = 0, chartH = 0;
+  var yMin = 0, yMax = 150;
+  var pointsWithout = [], pointsWith = [];
+
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    var cssW = Math.max(280, Math.floor(rect.width));
+    var cssH = Math.max(280, Math.floor(rect.height));
+    canvas.style.width = cssW + 'px';
+    canvas.style.height = cssH + 'px';
+    canvas.width = Math.floor(cssW * dpr);
+    canvas.height = Math.floor(cssH * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    chartW = cssW - padL - padR;
+    chartH = cssH - padT - padB;
+
+    function map(arr) {
+      return arr.map(function (v, i) {
+        var x = padL + (chartW * i) / (arr.length - 1);
+        var y = padT + chartH - ((v - yMin) / (yMax - yMin)) * chartH;
+        return { x: x, y: y };
+      });
+    }
+    pointsWithout = map(dataWithout);
+    pointsWith = map(dataWith);
+
+    draw(0); // start hidden (will animate)
+  }
+
+  // Smooth cubic Bezier path through points
+  function buildSmoothPath(ctx, points) {
+    if (points.length < 2) return;
+    var smoothing = 0.2;
+    ctx.beginPath();
+    ctx.moveTo(points[0].x, points[0].y);
+    for (var i = 0; i < points.length - 1; i++) {
+      var p0 = points[i - 1] || points[i];
+      var p1 = points[i];
+      var p2 = points[i + 1];
+      var p3 = points[i + 2] || p2;
+      var cp1x = p1.x + (p2.x - p0.x) * smoothing;
+      var cp1y = p1.y + (p2.y - p0.y) * smoothing;
+      var cp2x = p2.x - (p3.x - p1.x) * smoothing;
+      var cp2y = p2.y - (p3.y - p1.y) * smoothing;
+      ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, p2.x, p2.y);
+    }
+  }
+
+  function buildSmoothFillPath(ctx, points) {
+    buildSmoothPath(ctx, points);
+    // close to baseline for fill
+    var last = points[points.length - 1];
+    var first = points[0];
+    var baseY = padT + chartH;
+    ctx.lineTo(last.x, baseY);
+    ctx.lineTo(first.x, baseY);
+    ctx.closePath();
+  }
+
+  function drawGrid() {
+    // Y grid lines
+    var ySteps = 3; // 0, 75, 150
+    ctx.font = '10px ' + getMonoFont();
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'right';
+    for (var i = 0; i <= ySteps; i++) {
+      var val = (yMax / ySteps) * i;
+      var y = padT + chartH - ((val - yMin) / (yMax - yMin)) * chartH;
+      ctx.strokeStyle = 'rgba(0,255,204,0.06)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padL, y);
+      ctx.lineTo(padL + chartW, y);
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(90,90,106,0.95)';
+      ctx.fillText(Math.round(val) + 'K', padL - 8, y);
+    }
+
+    // X labels
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    ctx.fillStyle = 'rgba(90,90,106,0.9)';
+    var n = dayLabels.length;
+    for (var j = 0; j < n; j++) {
+      var x = padL + (chartW * j) / (n - 1);
+      ctx.fillText(dayLabels[j], x, padT + chartH + 10);
+    }
+  }
+
+  function getMonoFont() {
+    return 'JetBrains Mono, Fira Code, SF Mono, Menlo, Consolas, monospace';
+  }
+
+  function drawSeries(clipProgress) {
+    var clipX = padL + chartW * clipProgress;
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(padL, padT, Math.max(0.0001, clipX - padL), chartH);
+    ctx.clip();
+
+    // --- WITHOUT HERO (red, dashed) ---
+    // fill
+    var gradW = ctx.createLinearGradient(0, padT, 0, padT + chartH);
+    gradW.addColorStop(0, 'rgba(255,51,85,0.32)');
+    gradW.addColorStop(1, 'rgba(255,51,85,0)');
+    ctx.fillStyle = gradW;
+    buildSmoothFillPath(ctx, pointsWithout);
+    ctx.fill();
+
+    // line
+    ctx.strokeStyle = 'rgba(255,51,85,0.9)';
+    ctx.lineWidth = 1.6;
+    ctx.setLineDash([5, 4]);
+    buildSmoothPath(ctx, pointsWithout);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // --- WITH HERO (cyan, solid) ---
+    // fill
+    var gradC = ctx.createLinearGradient(0, padT, 0, padT + chartH);
+    gradC.addColorStop(0, 'rgba(0,255,204,0.45)');
+    gradC.addColorStop(1, 'rgba(0,255,204,0)');
+    ctx.fillStyle = gradC;
+    buildSmoothFillPath(ctx, pointsWith);
+    ctx.fill();
+
+    // line
+    ctx.strokeStyle = 'rgba(0,255,204,0.95)';
+    ctx.lineWidth = 2.2;
+    ctx.shadowColor = 'rgba(0,255,204,0.55)';
+    ctx.shadowBlur = 8;
+    buildSmoothPath(ctx, pointsWith);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+
+    // last-point dot for WITH HERO
+    var lastC = pointsWith[pointsWith.length - 1];
+    if (clipX >= lastC.x) {
+      ctx.fillStyle = '#00ffcc';
+      ctx.beginPath();
+      ctx.arc(lastC.x, lastC.y, 4, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(0,255,204,0.25)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(lastC.x, lastC.y, 8, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    ctx.restore();
+  }
+
+  var animStart = 0;
+  var animDur = 2000;
+  var animDone = false;
+
+  function draw(progress) {
+    ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
+    drawGrid();
+    drawSeries(progress);
+  }
+
+  function tick(now) {
+    if (!animStart) animStart = now;
+    var t = Math.min(1, (now - animStart) / animDur);
+    var eased = easeOutCubic(t);
+    draw(eased);
+    if (t < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      animDone = true;
+    }
+  }
+
+  // ---------- Stagger circuit cards ----------
+  function staggerCards() {
+    var cards = document.querySelectorAll('.cb-card');
+    cards.forEach(function (card, i) {
+      setTimeout(function () { card.classList.add('in'); }, 150 + i * 150);
+    });
+  }
+
+  // ---------- Init ----------
+  function init() {
+    resize();
+    requestAnimationFrame(tick);
+    staggerCards();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  var resizeTimer = null;
+  window.addEventListener('resize', function () {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      resize();
+      if (animDone) draw(1);
+    }, 100);
+  });
+})();
+</script>
+</body>
+</html>

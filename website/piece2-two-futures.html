@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERO — Two Futures</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --card-hi: #161622;
+    --cyan: #00ffcc;
+    --cyan-dim: rgba(0, 255, 204, 0.5);
+    --cyan-faint: rgba(0, 255, 204, 0.1);
+    --cyan-border: rgba(0, 255, 204, 0.2);
+    --red: #ff3355;
+    --red-glow: rgba(255, 51, 85, 0.45);
+    --red-faint: rgba(255, 51, 85, 0.08);
+    --red-border: rgba(255, 51, 85, 0.22);
+    --amber: #ffb347;
+    --amber-faint: rgba(255, 179, 71, 0.12);
+    --green: #00ff88;
+    --green-faint: rgba(0, 255, 136, 0.12);
+    --border: rgba(0, 255, 204, 0.1);
+    --text: #d8d8e0;
+    --muted: #5a5a6a;
+    --mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+
+  html, body { height: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    overflow-x: hidden;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 255, 204, 0.10), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 110%, rgba(0, 255, 204, 0.06), transparent 60%),
+      radial-gradient(ellipse 50% 30% at 10% 80%, rgba(255, 51, 85, 0.04), transparent 60%);
+  }
+
+  /* Grid backdrop */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 255, 204, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 204, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+  }
+
+  /* Vignette */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: var(--cyan);
+    box-shadow: 0 0 16px rgba(0, 255, 204, 0.25), inset 0 0 12px rgba(0, 255, 204, 0.1);
+    position: relative;
+  }
+  .brand-mark::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--cyan-faint);
+    border-radius: 4px;
+  }
+  .brand-mark svg { width: 18px; height: 18px; }
+
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo {
+    font-family: var(--mono);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 6px;
+    text-shadow: 0 0 12px rgba(0, 255, 204, 0.55), 0 0 24px rgba(0, 255, 204, 0.25);
+  }
+  .logo-sub {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 3px;
+    margin-top: 4px;
+  }
+
+  .hub-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--green);
+    padding: 8px 14px;
+    border: 1px solid rgba(0, 255, 136, 0.25);
+    border-radius: 999px;
+    background: rgba(0, 255, 136, 0.04);
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green), 0 0 16px rgba(0, 255, 136, 0.4);
+    animation: pulse 1.8s ease-in-out infinite;
+    position: relative;
+  }
+  .status-dot::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid var(--green);
+    animation: ring 1.8s ease-out infinite;
+    opacity: 0;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.9); }
+  }
+  @keyframes ring {
+    0% { transform: scale(0.6); opacity: 0.8; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+
+  /* Main */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 0;
+    gap: 40px;
+  }
+
+  /* Title block */
+  .title-block { text-align: center; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: rgba(0, 255, 204, 0.03);
+  }
+  .eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--cyan);
+  }
+
+  .title {
+    font-family: var(--mono);
+    font-size: clamp(28px, 4.5vw, 48px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .title .left-word {
+    color: var(--red);
+    text-shadow: 0 0 20px var(--red-glow), 0 0 40px rgba(255, 51, 85, 0.2);
+  }
+  .title .vs-word {
+    color: var(--muted);
+    font-size: 0.7em;
+    letter-spacing: 4px;
+    margin: 0 18px;
+    vertical-align: middle;
+    font-weight: 500;
+  }
+  .title .right-word {
+    color: var(--cyan);
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.55), 0 0 40px rgba(0, 255, 204, 0.25);
+  }
+
+  .subtitle {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .subtitle .dot { color: var(--border); margin: 0 8px; }
+
+  /* Split card */
+  .split-card {
+    display: grid;
+    grid-template-columns: 1fr 64px 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 520px;
+  }
+
+  .split-half {
+    position: relative;
+    border-radius: 14px;
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  /* LEFT: red */
+  .split-left {
+    background: linear-gradient(180deg, rgba(255, 51, 85, 0.05) 0%, rgba(18, 18, 26, 0.6) 100%);
+    border: 1px solid var(--red-border);
+    box-shadow:
+      0 0 32px rgba(255, 51, 85, 0.12),
+      inset 0 0 40px rgba(255, 51, 85, 0.04);
+    animation: leftGlow 5s ease-in-out infinite;
+  }
+  @keyframes leftGlow {
+    0%, 100% { box-shadow: 0 0 32px rgba(255, 51, 85, 0.12), inset 0 0 40px rgba(255, 51, 85, 0.04); }
+    50% { box-shadow: 0 0 48px rgba(255, 51, 85, 0.2), inset 0 0 60px rgba(255, 51, 85, 0.06); }
+  }
+  .split-left::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--red), transparent);
+    opacity: 0.6;
+  }
+  .split-left::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 0% 50%, rgba(255, 51, 85, 0.08), transparent 50%),
+      repeating-linear-gradient(0deg, transparent 0, transparent 3px, rgba(255, 51, 85, 0.012) 3px, rgba(255, 51, 85, 0.012) 4px);
+    pointer-events: none;
+  }
+  .split-left:hover {
+    border-color: var(--red);
+    animation: leftFlicker 0.4s steps(2, end) 1;
+  }
+  @keyframes leftFlicker {
+    0% { box-shadow: 0 0 24px rgba(255, 51, 85, 0.3), inset 0 0 30px rgba(255, 51, 85, 0.1); border-color: var(--red); }
+    25% { box-shadow: 0 0 8px rgba(255, 51, 85, 0.15), inset 0 0 10px rgba(255, 51, 85, 0.04); border-color: rgba(255, 51, 85, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(255, 51, 85, 0.35), inset 0 0 50px rgba(255, 51, 85, 0.12); border-color: var(--red); }
+    75% { box-shadow: 0 0 12px rgba(255, 51, 85, 0.18), inset 0 0 16px rgba(255, 51, 85, 0.05); border-color: rgba(255, 51, 85, 0.5); }
+    100% { box-shadow: 0 0 32px rgba(255, 51, 85, 0.2), inset 0 0 40px rgba(255, 51, 85, 0.08); border-color: var(--red-border); }
+  }
+
+  /* RIGHT: cyan */
+  .split-right {
+    background: linear-gradient(180deg, rgba(0, 255, 204, 0.05) 0%, rgba(18, 18, 26, 0.6) 100%);
+    border: 1px solid var(--cyan-border);
+    box-shadow:
+      0 0 32px rgba(0, 255, 204, 0.12),
+      inset 0 0 40px rgba(0, 255, 204, 0.04);
+    animation: rightGlow 5s ease-in-out infinite;
+  }
+  @keyframes rightGlow {
+    0%, 100% { box-shadow: 0 0 32px rgba(0, 255, 204, 0.12), inset 0 0 40px rgba(0, 255, 204, 0.04); }
+    50% { box-shadow: 0 0 48px rgba(0, 255, 204, 0.2), inset 0 0 60px rgba(0, 255, 204, 0.06); }
+  }
+  .split-right::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0.6;
+  }
+  .split-right::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 100% 50%, rgba(0, 255, 204, 0.08), transparent 50%);
+    pointer-events: none;
+  }
+  .split-right:hover {
+    border-color: var(--cyan);
+    box-shadow:
+      0 0 48px rgba(0, 255, 204, 0.35),
+      inset 0 0 60px rgba(0, 255, 204, 0.08);
+  }
+
+  /* Half header */
+  .half-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed currentColor;
+    border-color: var(--border);
+  }
+  .half-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+  .split-left .half-tag {
+    color: var(--red);
+    background: var(--red-faint);
+    border: 1px solid var(--red-border);
+  }
+  .split-right .half-tag {
+    color: var(--cyan);
+    background: var(--cyan-faint);
+    border: 1px solid var(--cyan-border);
+  }
+
+  .half-title {
+    font-family: var(--mono);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .split-left .half-title { color: var(--red); text-shadow: 0 0 14px var(--red-glow); }
+  .split-right .half-title { color: var(--cyan); text-shadow: 0 0 14px rgba(0, 255, 204, 0.5); }
+
+  .half-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .split-left .half-status { color: var(--amber); }
+  .split-right .half-status { color: var(--green); }
+
+  .status-pip {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .split-left .status-pip {
+    background: var(--amber);
+    box-shadow: 0 0 6px var(--amber);
+    animation: blink 1.2s steps(2, end) infinite;
+  }
+  .split-right .status-pip {
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.25; }
+  }
+
+  /* Metrics */
+  .metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .metric {
+    position: relative;
+    background: linear-gradient(180deg, var(--card) 0%, var(--card-hi) 100%);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    overflow: hidden;
+  }
+  .metric::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 2px;
+  }
+  .split-left .metric::after {
+    left: 0;
+    background: linear-gradient(180deg, transparent, var(--red), transparent);
+    opacity: 0.6;
+  }
+  .split-right .metric::after {
+    left: 0;
+    background: linear-gradient(180deg, transparent, var(--cyan), transparent);
+    opacity: 0.6;
+  }
+  .split-left .metric { border-left: none; }
+  .split-right .metric { border-left: none; }
+
+  .metric-main { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .metric-num {
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+  }
+  .split-left .metric-num { color: var(--red); text-shadow: 0 0 12px var(--red-glow); }
+  .split-right .metric-num { color: var(--cyan); text-shadow: 0 0 12px rgba(0, 255, 204, 0.5); }
+  .metric-num .unit {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-left: 4px;
+    text-shadow: none;
+  }
+
+  .metric-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .metric-label .id { color: var(--border); font-family: var(--mono); font-size: 9px; margin-left: 8px; letter-spacing: 1.5px; }
+
+  .metric-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .split-left .metric-indicator.warn {
+    background: var(--amber-faint);
+    color: var(--amber);
+    border: 1px solid rgba(255, 179, 71, 0.3);
+  }
+  .split-left .metric-indicator.crit {
+    background: rgba(255, 51, 85, 0.12);
+    color: var(--red);
+    border: 1px solid var(--red-border);
+  }
+  .split-right .metric-indicator.ok {
+    background: var(--green-faint);
+    color: var(--green);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+  }
+
+  /* Divider */
+  .divider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .divider-line {
+    position: absolute;
+    top: 0; bottom: 60px;
+    left: 50%;
+    width: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(255, 51, 85, 0.4) 20%,
+      rgba(255, 51, 85, 0.4) 50%,
+      rgba(0, 255, 204, 0.4) 50%,
+      rgba(0, 255, 204, 0.4) 80%,
+      transparent 100%);
+  }
+  .divider-line::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -2px;
+    width: 5px;
+    height: 30%;
+    background: linear-gradient(180deg, transparent, var(--red), transparent);
+    filter: blur(4px);
+    animation: dividerPulseLeft 2.8s ease-in-out infinite;
+  }
+  .divider-line::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: -2px;
+    width: 5px;
+    height: 30%;
+    background: linear-gradient(180deg, transparent, var(--cyan), transparent);
+    filter: blur(4px);
+    animation: dividerPulseRight 2.8s ease-in-out infinite;
+  }
+  @keyframes dividerPulseLeft {
+    0%, 100% { opacity: 0.4; transform: translateX(-1px); }
+    50% { opacity: 1; transform: translateX(-1px) scaleX(1.5); }
+  }
+  @keyframes dividerPulseRight {
+    0%, 100% { opacity: 0.4; transform: translateX(-1px); }
+    50% { opacity: 1; transform: translateX(-1px) scaleX(1.5); }
+  }
+
+  .vs-tag {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  .vs-tag::before, .vs-tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 18px;
+    height: 1px;
+    background: var(--border);
+  }
+  .vs-tag::before { right: 100%; }
+  .vs-tag::after { left: 100%; }
+
+  /* Footer */
+  footer {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  footer .build { color: var(--cyan-dim); }
+  footer .nav { display: flex; gap: 18px; }
+  footer .nav a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  footer .nav a:hover { color: var(--cyan); }
+  footer .nav .active { color: var(--cyan); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .container { padding: 0 18px; }
+    main { padding: 32px 0; gap: 28px; }
+    .split-card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 40px auto;
+      gap: 0;
+      min-height: 0;
+    }
+    .divider { flex-direction: row; }
+    .divider-line {
+      top: 50%;
+      left: 0; right: 0;
+      bottom: auto;
+      width: auto;
+      height: 1px;
+      transform: translateY(-50%);
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 51, 85, 0.4) 20%,
+        rgba(0, 255, 204, 0.4) 80%,
+        transparent 100%);
+    }
+    .divider-line::before {
+      top: -2px;
+      left: 20%;
+      width: 30%;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+      animation: dividerPulseLeftH 2.8s ease-in-out infinite;
+    }
+    .divider-line::after {
+      top: -2px;
+      left: auto;
+      right: 20%;
+      width: 30%;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      animation: dividerPulseRightH 2.8s ease-in-out infinite;
+    }
+    @keyframes dividerPulseLeftH {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; transform: scaleY(1.5); }
+    }
+    @keyframes dividerPulseRightH {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; transform: scaleY(1.5); }
+    }
+    .vs-tag { bottom: auto; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+    .vs-tag::before, .vs-tag::after { display: none; }
+  }
+  @media (max-width: 768px) {
+    header { padding: 20px 0 18px; }
+    .logo { font-size: 22px; letter-spacing: 4px; }
+    .logo-sub { font-size: 8px; }
+    .hub-status { font-size: 10px; padding: 6px 10px; letter-spacing: 1px; }
+    .brand-mark { width: 32px; height: 32px; }
+    .title { font-size: 26px; }
+    .title .vs-word { margin: 0 10px; }
+    .subtitle { font-size: 11px; letter-spacing: 2px; }
+    .split-half { padding: 22px 20px; gap: 14px; }
+    .metric { padding: 14px 14px; }
+    .metric-num { font-size: 26px; }
+    footer { font-size: 9px; }
+    footer .nav { gap: 12px; }
+  }
+  @media (max-width: 480px) {
+    .title { font-size: 22px; }
+    .title .vs-word { display: block; margin: 4px 0; }
+    .metric-num { font-size: 22px; }
+    .metric-indicator { width: 24px; height: 24px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 12 L7 8 L7 11 L17 11 L17 8 L21 12 L17 16 L17 13 L7 13 L7 16 Z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="logo">HERO</div>
+          <div class="logo-sub">MULTI-AGENT ORCHESTRATION</div>
+        </div>
+      </div>
+      <div class="hub-status" role="status" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>ALL SYSTEMS OPERATIONAL</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="title-block">
+        <div class="eyebrow">// PIPELINE COMPARISON · TWO FUTURES</div>
+        <h1 class="title">
+          <span class="left-word">WITHOUT HERO</span>
+          <span class="vs-word">vs</span>
+          <span class="right-word">WITH HERO</span>
+        </h1>
+        <p class="subtitle">Same pipeline<span class="dot">·</span>Two realities</p>
+      </section>
+
+      <section class="split-card" aria-label="Pipeline comparison">
+        <!-- LEFT: WITHOUT HERO -->
+        <div class="split-half split-left">
+          <div class="half-header">
+            <span class="half-tag">SCENARIO A</span>
+            <h2 class="half-title">WITHOUT HERO</h2>
+            <span class="half-status">
+              <span class="status-pip" aria-hidden="true"></span>
+              <span>⚠ CONSTRAINED · MANUAL OVERHEAD</span>
+            </span>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="5" data-suffix="">0</span></div>
+                <div class="metric-label">Agents deployed<span class="id">M.A1</span></div>
+              </div>
+              <div class="metric-indicator warn" title="Bottleneck">!</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="47" data-suffix="">0</span><span class="unit">min</span></div>
+                <div class="metric-label">Wall-clock time<span class="id">M.A2</span></div>
+              </div>
+              <div class="metric-indicator crit" title="Slow">↑</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="128" data-suffix="K">0</span><span class="unit">tokens</span></div>
+                <div class="metric-label">Tokens consumed<span class="id">M.A3</span></div>
+              </div>
+              <div class="metric-indicator crit" title="Wasteful">×</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="12" data-suffix="">0</span><span class="unit">%</span></div>
+                <div class="metric-label">Error rate<span class="id">M.A4</span></div>
+              </div>
+              <div class="metric-indicator warn" title="High">!</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="divider" aria-hidden="true">
+          <div class="divider-line"></div>
+          <div class="vs-tag">vs</div>
+        </div>
+
+        <!-- RIGHT: WITH HERO -->
+        <div class="split-half split-right">
+          <div class="half-header">
+            <span class="half-tag">SCENARIO B</span>
+            <h2 class="half-title">WITH HERO</h2>
+            <span class="half-status">
+              <span class="status-pip" aria-hidden="true"></span>
+              <span>✓ OPTIMAL · ORCHESTRATED</span>
+            </span>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="14" data-suffix="">0</span></div>
+                <div class="metric-label">Agents deployed<span class="id">M.B1</span></div>
+              </div>
+              <div class="metric-indicator ok" title="Scaled">✓</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="12" data-suffix="">0</span><span class="unit">min</span></div>
+                <div class="metric-label">Wall-clock time<span class="id">M.B2</span></div>
+              </div>
+              <div class="metric-indicator ok" title="Fast">✓</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="64" data-suffix="K">0</span><span class="unit">tokens</span></div>
+                <div class="metric-label">Tokens consumed<span class="id">M.B3</span></div>
+              </div>
+              <div class="metric-indicator ok" title="Efficient">✓</div>
+            </div>
+
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="2" data-suffix="">0</span><span class="unit">%</span></div>
+                <div class="metric-label">Error rate<span class="id">M.B4</span></div>
+              </div>
+              <div class="metric-indicator ok" title="Reliable">✓</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>HERO v0.1.0 · HUB: LOCAL</div>
+      <div class="nav">
+        <a href="piece1-hero-shell.html">01 · SHELL</a>
+        <a href="piece2-two-futures.html" class="active">02 · TWO FUTURES</a>
+        <a href="#">03 · ARCHITECTURE</a>
+        <a href="#">04 · COUNCIL</a>
+        <a href="#">05 · DEPLOY</a>
+        <a href="#">06 · SHIP</a>
+      </div>
+      <div class="build">BUILD 2026.06.19 · 07:37 GST</div>
+    </footer>
+  </div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---------- Count-up animations ----------
+  // LEFT: slow, choppy, stepped easing (simulates struggling)
+  // RIGHT: smooth easeOutCubic (clean orchestration)
+
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+  function choppyEase(t) {
+    // Stepped ease — feels like it's fighting through
+    var stepped = Math.floor(t * 14) / 14;
+    return stepped + (t - stepped) * 0.35;
+  }
+
+  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function animateCounters(root, duration, easeFn) {
+    var nodes = root.querySelectorAll('[data-count]');
+    var startT = null;
+    function tick(ts) {
+      if (startT === null) startT = ts;
+      var elapsed = ts - startT;
+      var p = Math.min(elapsed / duration, 1);
+      var eased = easeFn(p);
+      nodes.forEach(function (n) {
+        var target = parseInt(n.getAttribute('data-count'), 10);
+        var suffix = n.getAttribute('data-suffix') || '';
+        var v = Math.floor(eased * target);
+        n.textContent = v + suffix;
+      });
+      if (p < 1) requestAnimationFrame(tick);
+      else {
+        nodes.forEach(function (n) {
+          var target = parseInt(n.getAttribute('data-count'), 10);
+          var suffix = n.getAttribute('data-suffix') || '';
+          n.textContent = target + suffix;
+        });
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // Slight stagger: left starts first (struggling) then right follows smooth
+  var left = document.querySelector('.split-left');
+  var right = document.querySelector('.split-right');
+
+  setTimeout(function () { animateCounters(left, 2400, choppyEase); }, 200);
+  setTimeout(function () { animateCounters(right, 1600, easeOutCubic); }, 350);
+
+  // ---------- Live stat drift: queue/error rate gently fluctuates on the right ----------
+  // Adds a "live" feel without overdoing it
+  var rightNumEls = right.querySelectorAll('.metric-num span[data-count]');
+  var rightTargets = Array.prototype.map.call(rightNumEls, function (n) {
+    return {
+      el: n,
+      target: parseInt(n.getAttribute('data-count'), 10),
+      suffix: n.getAttribute('data-suffix') || '',
+      drift: parseInt(n.getAttribute('data-count'), 10) === 2 ? 1 : 0
+    };
+  });
+
+  setInterval(function () {
+    rightTargets.forEach(function (r) {
+      if (r.drift > 0) {
+        var v = r.target + (Math.random() < 0.5 ? 0 : 1);
+        r.el.textContent = v + r.suffix;
+        setTimeout(function () {
+          r.el.textContent = r.target + r.suffix;
+        }, 800);
+      }
+    });
+  }, 4200);
+
+  // ---------- Subtle red flicker on the left every so often ----------
+  // Reinforces the "constrained/manual" feel
+  var leftFlickerKeyframes = [
+    { offset: 0, opacity: 1 },
+    { offset: 0.05, opacity: 0.6 },
+    { offset: 0.1, opacity: 1 },
+    { offset: 0.15, opacity: 0.7 },
+    { offset: 0.2, opacity: 1 }
+  ];
+  setInterval(function () {
+    var metrics = left.querySelectorAll('.metric');
+    metrics.forEach(function (m, i) {
+      setTimeout(function () {
+        m.style.transition = 'opacity 0.08s';
+        m.style.opacity = '0.55';
+        setTimeout(function () {
+          m.style.opacity = '1';
+          setTimeout(function () {
+            m.style.opacity = '0.7';
+            setTimeout(function () { m.style.opacity = '1'; m.style.transition = ''; }, 60);
+          }, 50);
+        }, 60);
+      }, i * 90);
+    });
+  }, 9000);
+
+  // ---------- Subtle clock tick on footer ----------
+  var build = document.querySelector('footer .build');
+  function updateBuild() {
+    var d = new Date();
+    var stamp = d.getFullYear() + '.' +
+                pad2(d.getMonth() + 1) + '.' +
+                pad2(d.getDate()) + ' · ' +
+                pad2(d.getHours()) + ':' +
+                pad2(d.getMinutes()) + ' GST';
+    if (build) build.textContent = 'BUILD ' + stamp;
+  }
+  setInterval(updateBuild, 30000);
+})();
+</script>
+</body>
+</html>

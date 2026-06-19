@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERO — Soldier Roster</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --card-hi: #161622;
+    --cyan: #00ffcc;
+    --cyan-dim: rgba(0,255,204,0.5);
+    --cyan-faint: rgba(0,255,204,0.1);
+    --cyan-border: rgba(0,255,204,0.2);
+    --red: #ff3355;
+    --amber: #ffb347;
+    --green: #00ff88;
+    --green-faint: rgba(0,255,136,0.12);
+    --green-border: rgba(0,255,136,0.3);
+    --border: rgba(0,255,204,0.1);
+    --text: #d8d8e0;
+    --muted: #5a5a6a;
+    --mono: 'JetBrains Mono','Fira Code','SF Mono',Menlo,Consolas,monospace;
+    --sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    overflow-x: hidden;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,255,204,0.10), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 110%, rgba(0,255,204,0.06), transparent 60%),
+      radial-gradient(ellipse 50% 30% at 10% 80%, rgba(255,51,85,0.04), transparent 60%);
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,255,204,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,204,0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-mark {
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cyan);
+    text-shadow: 0 0 16px var(--cyan-dim), 0 0 40px var(--cyan-faint);
+    letter-spacing: -1px;
+  }
+  .logo-hex {
+    width: 32px; height: 32px;
+    border: 1.5px solid var(--cyan);
+    border-radius: 4px;
+    transform: rotate(12deg);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 13px; font-weight: 700;
+    color: var(--cyan); text-shadow: 0 0 8px var(--cyan-dim);
+    box-shadow: 0 0 12px var(--cyan-faint);
+  }
+  .hub-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--green);
+    padding: 8px 14px;
+    border: 1px solid rgba(0,255,136,0.15);
+    border-radius: 999px;
+    background: rgba(0,255,136,0.04);
+  }
+  .status-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--green); }
+    50% { opacity: 0.5; box-shadow: 0 0 14px var(--green), 0 0 24px rgba(0,255,136,0.3); }
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-border), transparent);
+    opacity: 0.5;
+  }
+  main { flex: 1; padding: 48px 0; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .title {
+    font-family: var(--mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .title .cyan { color: var(--cyan); text-shadow: 0 0 20px var(--cyan-dim); }
+  .subtitle {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 32px;
+  }
+  .subtitle .num { color: var(--cyan); font-weight: 700; }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .stat-pill {
+    padding: 10px 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .stat-pill .val {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .stat-pill .val.green { color: var(--green); }
+  .stat-pill .val.amber { color: var(--amber); }
+  .stat-pill .inf {
+    font-size: 32px;
+    color: var(--cyan);
+    text-shadow: 0 0 12px var(--cyan-dim);
+    transform: rotate(90deg);
+    display: inline-block;
+    line-height: 1;
+  }
+
+  /* Table */
+  .table-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+  .table-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-border), transparent);
+    opacity: 0.5;
+    z-index: 1;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--card-hi);
+    padding: 14px 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-weight: 500;
+    z-index: 1;
+  }
+  thead th:first-child { width: 4%; }
+  thead th:nth-child(2) { width: 18%; }
+  thead th:nth-child(3) { width: 18%; }
+  thead th:nth-child(4) { width: 12%; }
+  thead th:nth-child(5) { width: 12%; }
+  thead th:nth-child(6) { width: 10%; text-align: right; }
+  thead th:nth-child(7) { width: 13%; text-align: right; }
+  thead th:nth-child(8) { width: 13%; text-align: right; }
+  tbody tr {
+    transition: background 0.2s ease, border-color 0.2s ease;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  tbody tr.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  tbody tr:nth-child(even) { background: rgba(255,255,255,0.015); }
+  tbody tr:hover { background: rgba(0,255,204,0.04); }
+  tbody td {
+    padding: 11px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    font-size: 13px;
+    vertical-align: middle;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .rank { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .agent-name { font-weight: 600; font-size: 13px; }
+  .agent-name.cyan { color: var(--cyan); }
+  .agent-name.white { color: var(--text); }
+  .agent-name.amber { color: var(--amber); }
+  .model-id {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    margin-top: 1px;
+  }
+  .role-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    display: inline-block;
+    background: var(--cyan-faint);
+    color: var(--cyan);
+    border: 1px solid var(--cyan-border);
+  }
+  .role-tag.amber { background: rgba(255,179,71,0.08); color: var(--amber); border-color: rgba(255,179,71,0.2); }
+  .role-tag.red { background: rgba(255,51,85,0.08); color: var(--red); border-color: rgba(255,51,85,0.2); }
+  .role-tag.green { background: var(--green-faint); color: var(--green); border-color: var(--green-border); }
+  .role-tag.muted { background: rgba(90,90,106,0.1); color: var(--muted); border-color: rgba(90,90,106,0.2); }
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .status-pill.active {
+    background: var(--green-faint);
+    color: var(--green);
+    border: 1px solid var(--green-border);
+  }
+  .status-pill.standby {
+    background: rgba(255,179,71,0.08);
+    color: var(--amber);
+    border: 1px solid rgba(255,179,71,0.2);
+  }
+  .status-pill.idle {
+    background: rgba(90,90,106,0.1);
+    color: var(--muted);
+    border: 1px solid rgba(90,90,106,0.2);
+  }
+  .status-dot-sm {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+  }
+  .status-pill.active .status-dot-sm {
+    background: var(--green);
+    box-shadow: 0 0 4px var(--green);
+    animation: pulseSm 2s ease-in-out infinite;
+  }
+  .status-pill.standby .status-dot-sm {
+    background: var(--amber);
+    box-shadow: 0 0 4px var(--amber);
+    animation: pulseSm 2.5s ease-in-out infinite;
+  }
+  .status-pill.idle .status-dot-sm {
+    background: var(--muted);
+  }
+  @keyframes pulseSm {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .num-data {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .num-muted {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    position: relative;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  footer::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-border), transparent);
+    opacity: 0.5;
+  }
+  .nav { display: flex; gap: 12px; flex-wrap: wrap; }
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    letter-spacing: 1px;
+  }
+  .nav a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+  .nav a.active { color: var(--cyan); background: var(--cyan-faint); }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">
+      <div class="logo-hex">H</div>
+      <span class="logo-mark">HERO</span>
+    </div>
+    <div class="hub-status" role="status" aria-live="polite">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>ALL SYSTEMS OPERATIONAL</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="eyebrow">// ORCHESTRATION · AGENT ROSTER</div>
+    <h1 class="title">SOLDIER <span class="cyan">ROSTER</span></h1>
+    <p class="subtitle"><span class="num">14</span> ACTIVE AGENTS · <span class="num">6</span> ROLES · ∞ SCALABLE</p>
+
+    <div class="stats-bar">
+      <div class="stat-pill"><span class="val">14</span> ACTIVE AGENTS</div>
+      <div class="stat-pill"><span class="val">6</span> ROLES</div>
+      <div class="stat-pill"><span class="val green">3</span> COUNCIL</div>
+      <div class="stat-pill"><span class="inf">∞</span> SCALABLE</div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>AGENT</th>
+            <th>MODEL</th>
+            <th>ROLE</th>
+            <th>STATUS</th>
+            <th>TASKS</th>
+            <th>TOKENS</th>
+            <th>UPTIME</th>
+          </tr>
+        </thead>
+        <tbody id="rosterBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <div>HERO v0.1.0 · HUB: LOCAL</div>
+    <div class="nav">
+      <a href="piece1-hero-shell.html">01 · SHELL</a>
+      <a href="piece2-two-futures.html">02 · TWO FUTURES</a>
+      <a href="piece3-pipeline-bars.html">03 · PIPELINE</a>
+      <a href="piece4-token-circuit.html">04 · ECONOMY</a>
+      <a href="piece5-soldier-roster.html" class="active">05 · ROSTER</a>
+      <a href="#">06 · COUNTDOWN</a>
+    </div>
+    <div class="build" id="buildStamp">BUILD --</div>
+  </footer>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+  var build = document.getElementById('buildStamp');
+  function tick() {
+    var d = new Date();
+    build.textContent = 'BUILD ' + d.getFullYear() + '.' + pad2(d.getMonth()+1) + '.' + pad2(d.getDate()) + ' · ' + pad2(d.getHours()) + ':' + pad2(d.getMinutes()) + ' GST';
+  }
+  tick();
+  setInterval(tick, 30000);
+
+  var agents = [
+    {rank:1, name:'Kimi K2.6', model:'kimi/kimi-k2.6-16k', role:'BUILDER', roleCls:'cyan', status:'ACTIVE', statusCls:'active', tasks:47, tokens:'1.2M', uptime:'3h 41m', accent:'cyan'},
+    {rank:2, name:'MiMo V2.5 Pro', model:'xiaomi-token-plan/mimo-v2.5-pro', role:'DEEP THINKER', roleCls:'cyan', status:'ACTIVE', statusCls:'active', tasks:38, tokens:'892K', uptime:'3h 12m', accent:'cyan'},
+    {rank:3, name:'MiniMax M3', model:'minimax/MiniMax-M3', role:'REASONER', roleCls:'cyan', status:'ACTIVE', statusCls:'active', tasks:31, tokens:'674K', uptime:'2h 58m', accent:'cyan'},
+    {rank:4, name:'DeepSeek V4', model:'deepseek/deepseek-v4-flash', role:'COUNCIL', roleCls:'amber', status:'ACTIVE', statusCls:'active', tasks:29, tokens:'1.1M', uptime:'4h 02m', accent:'white'},
+    {rank:5, name:'Step 3.7 Flash', model:'stepfun-plan/step-3.7-flash', role:'EXECUTOR', roleCls:'amber', status:'STANDBY', statusCls:'standby', tasks:22, tokens:'445K', uptime:'1h 44m', accent:'white'},
+    {rank:6, name:'Step 3.6', model:'stepfun-plan/step-3.6', role:'CRITIC', roleCls:'red', status:'ACTIVE', statusCls:'active', tasks:18, tokens:'382K', uptime:'2h 11m', accent:'white'},
+    {rank:7, name:'Step 3.5 Flash', model:'stepfun-plan/soldier-7b', role:'WATCHDOG', roleCls:'muted', status:'IDLE', statusCls:'idle', tasks:12, tokens:'214K', uptime:'0h 52m', accent:'white'},
+    {rank:8, name:'Grok Imagine', model:'openrouter/x-ai/grok-imagine', role:'DESIGNER', roleCls:'green', status:'ACTIVE', statusCls:'active', tasks:9, tokens:'567K', uptime:'1h 37m', accent:'white'},
+    {rank:9, name:'GLM 5.1', model:'opencode-go/glm-5.1', role:'OBSERVER', roleCls:'muted', status:'STANDBY', statusCls:'standby', tasks:7, tokens:'128K', uptime:'0h 44m', accent:'white'},
+    {rank:10, name:'Claude 3.5 Sonnet', model:'anthropic/claude-3.5-sonnet', role:'ANALYST', roleCls:'cyan', status:'ACTIVE', statusCls:'active', tasks:15, tokens:'892K', uptime:'2h 23m', accent:'white'},
+    {rank:11, name:'GPT-4o', model:'openai/gpt-4o', role:'ADVISOR', roleCls:'amber', status:'STANDBY', statusCls:'standby', tasks:11, tokens:'945K', uptime:'1h 52m', accent:'white'},
+    {rank:12, name:'Gemini 2.5 Pro', model:'google/gemini-2.5-pro', role:'RESEARCH', roleCls:'green', status:'IDLE', statusCls:'idle', tasks:6, tokens:'312K', uptime:'0h 36m', accent:'white'},
+    {rank:13, name:'Llama 4', model:'meta/llama-4', role:'SCRIBE', roleCls:'green', status:'ACTIVE', statusCls:'active', tasks:4, tokens:'89K', uptime:'0h 18m', accent:'cyan'},
+    {rank:14, name:'Qwen 3', model:'qwen/qwen-3-30b', role:'RECRUIT', roleCls:'muted', status:'STANDBY', statusCls:'standby', tasks:2, tokens:'34K', uptime:'0h 09m', accent:'cyan'}
+  ];
+
+  var tbody = document.getElementById('rosterBody');
+  agents.forEach(function(a) {
+    var tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td class="rank">' + pad2(a.rank) + '</td>' +
+      '<td><div class="agent-name ' + a.accent + '">' + a.name + '</div><div class="model-id">' + a.model + '</div></td>' +
+      '<td><div class="model-id" style="font-size:11px;color:var(--text)">' + a.model.split('/')[1] || a.model + '</div></td>' +
+      '<td><span class="role-tag ' + a.roleCls + '">' + a.role + '</span></td>' +
+      '<td><span class="status-pill ' + a.statusCls + '"><span class="status-dot-sm"></span>' + a.status + '</span></td>' +
+      '<td class="num-data">' + a.tasks + '</td>' +
+      '<td class="num-muted">' + a.tokens + '</td>' +
+      '<td class="num-muted">' + a.uptime + '</td>';
+    tbody.appendChild(tr);
+  });
+
+  // Stagger entrance
+  var rows = tbody.querySelectorAll('tr');
+  rows.forEach(function(row, i) {
+    setTimeout(function() {
+      row.classList.add('visible');
+    }, 60 + i * 80);
+  });
+})();
+</script>
+</body>
+</html>
