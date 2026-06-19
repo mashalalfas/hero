@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERO — Multi-Agent Orchestration</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --card-hi: #161622;
+    --cyan: #00ffcc;
+    --cyan-dim: rgba(0, 255, 204, 0.5);
+    --cyan-faint: rgba(0, 255, 204, 0.1);
+    --red: #ff3355;
+    --amber: #ffb347;
+    --green: #00ff88;
+    --border: rgba(0, 255, 204, 0.1);
+    --text: #d8d8e0;
+    --muted: #5a5a6a;
+    --mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+
+  html, body { height: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    overflow-x: hidden;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 255, 204, 0.10), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 110%, rgba(0, 255, 204, 0.06), transparent 60%),
+      radial-gradient(ellipse 50% 30% at 10% 80%, rgba(255, 51, 85, 0.04), transparent 60%);
+  }
+
+  /* Grid backdrop */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 255, 204, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 204, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+  }
+
+  /* Vignette */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: var(--cyan);
+    box-shadow: 0 0 16px rgba(0, 255, 204, 0.25), inset 0 0 12px rgba(0, 255, 204, 0.1);
+    position: relative;
+  }
+  .brand-mark::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--cyan-faint);
+    border-radius: 4px;
+  }
+  .brand-mark svg { width: 18px; height: 18px; }
+
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo {
+    font-family: var(--mono);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 6px;
+    text-shadow: 0 0 12px rgba(0, 255, 204, 0.55), 0 0 24px rgba(0, 255, 204, 0.25);
+  }
+  .logo-sub {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 3px;
+    margin-top: 4px;
+  }
+
+  .hub-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--green);
+    padding: 8px 14px;
+    border: 1px solid rgba(0, 255, 136, 0.25);
+    border-radius: 999px;
+    background: rgba(0, 255, 136, 0.04);
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green), 0 0 16px rgba(0, 255, 136, 0.4);
+    animation: pulse 1.8s ease-in-out infinite;
+    position: relative;
+  }
+  .status-dot::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid var(--green);
+    animation: ring 1.8s ease-out infinite;
+    opacity: 0;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.9); }
+  }
+  @keyframes ring {
+    0% { transform: scale(0.6); opacity: 0.8; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+
+  /* Main */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 0;
+    gap: 56px;
+  }
+
+  /* Counter */
+  .counter-section { text-align: center; }
+
+  .counter-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: rgba(0, 255, 204, 0.03);
+  }
+  .counter-eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--cyan);
+  }
+
+  .counter-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .counter-value {
+    font-family: var(--mono);
+    font-size: clamp(120px, 22vw, 240px);
+    font-weight: 700;
+    color: var(--cyan);
+    line-height: 0.9;
+    text-shadow:
+      0 0 30px rgba(0, 255, 204, 0.55),
+      0 0 60px rgba(0, 255, 204, 0.25),
+      0 0 120px rgba(0, 255, 204, 0.12);
+    letter-spacing: -10px;
+    font-variant-numeric: tabular-nums;
+    position: relative;
+  }
+  .counter-value::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 18%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0.4;
+    animation: scanline 3s ease-in-out infinite;
+  }
+  @keyframes scanline {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.6; }
+  }
+
+  .counter-side {
+    text-align: left;
+    font-family: var(--mono);
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+  }
+  .counter-side .label { display: block; color: var(--text); font-size: 14px; letter-spacing: 4px; }
+  .counter-side .val { color: var(--cyan); }
+
+  .counter-sub {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--muted);
+    margin-top: 24px;
+  }
+  .counter-sub .accent { color: var(--cyan); text-shadow: 0 0 12px rgba(0, 255, 204, 0.4); }
+  .counter-sub .sep { color: var(--border); margin: 0 12px; }
+
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .stat-card {
+    background: linear-gradient(180deg, var(--card) 0%, var(--card-hi) 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-faint), transparent);
+  }
+  .stat-card:hover {
+    border-color: rgba(0, 255, 204, 0.35);
+    box-shadow: 0 0 24px rgba(0, 255, 204, 0.08), inset 0 0 24px rgba(0, 255, 204, 0.03);
+    transform: translateY(-2px);
+  }
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stat-label .id { color: rgba(0, 255, 204, 0.3); }
+  .stat-value {
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .stat-value.cyan { color: var(--cyan); text-shadow: 0 0 12px rgba(0, 255, 204, 0.35); }
+  .stat-value.amber { color: var(--amber); text-shadow: 0 0 12px rgba(255, 179, 71, 0.35); }
+  .stat-value.red { color: var(--red); text-shadow: 0 0 12px rgba(255, 51, 85, 0.35); }
+  .stat-delta {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+    letter-spacing: 1px;
+  }
+  .stat-delta .up { color: var(--green); }
+  .stat-delta .dn { color: var(--red); }
+
+  /* Log feed */
+  .log-section {
+    background: linear-gradient(180deg, var(--card) 0%, rgba(18, 18, 26, 0.6) 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .log-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0.5;
+  }
+  .log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .log-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .log-title .pulse {
+    width: 6px; height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--cyan);
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  .log-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+  }
+  .log-meta .ok { color: var(--green); }
+
+  .log-feed {
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 16px;
+  }
+  .log-feed::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 30px;
+    background: linear-gradient(to top, var(--card), transparent);
+    pointer-events: none;
+  }
+  .log-feed-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .log-line {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 5px 0;
+    color: var(--text);
+    display: grid;
+    grid-template-columns: 76px 22px 1fr;
+    gap: 12px;
+    align-items: center;
+    line-height: 1.5;
+    border-bottom: 1px dashed rgba(0, 255, 204, 0.04);
+  }
+  .log-time { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .log-emoji { font-size: 13px; }
+  .log-msg { color: var(--text); }
+  .log-line.new {
+    animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  footer .build { color: var(--cyan-dim); }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container { padding: 0 18px; }
+    header { padding: 20px 0 18px; }
+    .logo { font-size: 22px; letter-spacing: 4px; }
+    .logo-sub { font-size: 8px; }
+    .hub-status { font-size: 10px; padding: 6px 10px; letter-spacing: 1px; }
+    .brand-mark { width: 32px; height: 32px; }
+    main { padding: 40px 0; gap: 40px; }
+    .counter-row { gap: 12px; }
+    .counter-side { font-size: 10px; }
+    .counter-side .label { font-size: 12px; }
+    .counter-sub { font-size: 11px; letter-spacing: 3px; }
+    .counter-sub .sep { margin: 0 6px; }
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .stat-card { padding: 16px; }
+    .stat-value { font-size: 24px; }
+    .log-feed { height: 220px; }
+    .log-line { font-size: 11px; grid-template-columns: 64px 20px 1fr; }
+    footer { font-size: 9px; }
+  }
+  @media (max-width: 480px) {
+    .counter-side { display: none; }
+    .stats { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 12 L7 8 L7 11 L17 11 L17 8 L21 12 L17 16 L17 13 L7 13 L7 16 Z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="logo">HERO</div>
+          <div class="logo-sub">MULTI-AGENT ORCHESTRATION</div>
+        </div>
+      </div>
+      <div class="hub-status" role="status" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>ALL SYSTEMS OPERATIONAL</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="counter-section" aria-label="Active sandboxes">
+        <div class="counter-eyebrow">// HUB-LIVE · SANDBOX REGISTRY</div>
+        <div class="counter-row">
+          <div class="counter-value" id="counter">00</div>
+          <div class="counter-side">
+            <span class="label">ACTIVE</span>
+            <span>SANDBOXES</span>
+            <span class="val">▲ +2 / 1H</span>
+          </div>
+        </div>
+        <div class="counter-sub">
+          <span class="accent">21</span> NODES
+          <span class="sep">·</span>
+          <span class="accent">8</span> MODELS
+          <span class="sep">·</span>
+          <span class="accent">3</span> COUNCILS
+        </div>
+      </section>
+
+      <div class="stats" aria-label="System metrics">
+        <div class="stat-card">
+          <div class="stat-label"><span>TASKS DISPATCHED</span><span class="id">M.01</span></div>
+          <div class="stat-value cyan" id="tasksCount">0</div>
+          <div class="stat-delta"><span class="up">↑ 12%</span> · 24H</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label"><span>TOKENS SAVED</span><span class="id">M.02</span></div>
+          <div class="stat-value cyan" id="tokensSaved">1.8M</div>
+          <div class="stat-delta"><span class="up">↑ 24%</span> · 24H</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label"><span>UPTIME</span><span class="id">M.03</span></div>
+          <div class="stat-value">99.97<span style="font-size:18px;color:var(--muted)">%</span></div>
+          <div class="stat-delta">30D ROLLING</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label"><span>QUEUE DEPTH</span><span class="id">M.04</span></div>
+          <div class="stat-value amber" id="queueDepth">0</div>
+          <div class="stat-delta"><span id="queueState">— LIVE</span></div>
+        </div>
+      </div>
+
+      <section class="log-section" aria-label="Live agent activity feed">
+        <div class="log-header">
+          <div class="log-title">
+            <span class="pulse" aria-hidden="true"></span>
+            <span>LIVE FEED · AGENT ACTIVITY</span>
+          </div>
+          <div class="log-meta">UPLINK <span class="ok">● STABLE</span> · 12MS P50</div>
+        </div>
+        <div class="log-feed" id="logFeedWrap">
+          <div class="log-feed-inner" id="logFeed"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>HERO v0.1.0 · HUB: LOCAL</div>
+      <div class="build">BUILD 2026.06.19 · 07:24 GST</div>
+    </footer>
+  </div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---------- Counter: 0 → 21 ----------
+  var counterEl = document.getElementById('counter');
+  var target = 21;
+  var duration = 1800;
+  var startT = null;
+
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function tickCounter(ts) {
+    if (startT === null) startT = ts;
+    var elapsed = ts - startT;
+    var p = Math.min(elapsed / duration, 1);
+    var v = Math.floor(easeOutCubic(p) * target);
+    counterEl.textContent = v < 10 ? '0' + v : String(v);
+    if (p < 1) requestAnimationFrame(tickCounter);
+    else counterEl.textContent = target < 10 ? '0' + target : String(target);
+  }
+  requestAnimationFrame(tickCounter);
+
+  // ---------- Live stat pulses ----------
+  var tasksEl = document.getElementById('tasksCount');
+  var queueEl = document.getElementById('queueDepth');
+  var queueState = document.getElementById('queueState');
+  var tasks = 1247;
+
+  function fmt(n) { return n.toLocaleString('en-US'); }
+
+  setInterval(function () {
+    tasks += 1 + Math.floor(Math.random() * 3);
+    tasksEl.textContent = fmt(tasks);
+  }, 2200);
+
+  setInterval(function () {
+    var q = 1 + Math.floor(Math.random() * 5);
+    queueEl.textContent = q;
+    queueState.textContent = q < 4 ? '— HEALTHY' : '— BUSY';
+  }, 3200);
+
+  // ---------- Log feed ----------
+  var logFeed = document.getElementById('logFeed');
+  var feedWrap = document.getElementById('logFeedWrap');
+
+  var pool = [
+    ['🧠', 'Council deliberation complete', '· 3/3 votes YES · model: claude-opus'],
+    ['⚡', 'Pipeline dispatch', '→ FeyaPDF · task #4821 · eta 4s'],
+    ['🛡️', 'Circuit breaker', 'OK · threshold 0.85 · trips: 0'],
+    ['📊', 'Token economy', '· 1.8M saved this cycle · Δ +24%'],
+    ['🤖', 'Soldier spawned', '· Kimi K2.6 → sandbox FEYA-04'],
+    ['🔄', 'Context sync', '· 21 sandboxes · 0 drift · 12ms'],
+    ['💾', 'Snapshot sealed', '· STATE-2026-06-19T07:21:14Z'],
+    ['🎯', 'Task queue', '· 3 pending · 2 running · 0 stalled'],
+    ['⚙️', 'Model router', '· GPT-4o → DEEPSEEK-V4 (cost opt)'],
+    ['🌐', 'Uplink', '· stable · 12ms p50 · 38ms p99'],
+    ['🔐', 'Vault', '· sealed · 7 secrets rotated'],
+    ['📡', 'Heartbeat', '· 21/21 sandboxes online · rtt 14ms'],
+    ['🚀', 'Mission queued', '· feya/redesign-landing · prio HIGH'],
+    ['🧬', 'Skill synthesis', '· gen-landing v0.4 promoted to prod'],
+    ['⚖️', 'Budget guardrail', '· 64% of daily cap remaining'],
+    ['🎲', 'Council rotation', '· seed 0xA7F3 · 3 models elected'],
+    ['🛠️', 'Soldier retool', '· SWIFT-02 armed · tools: 7'],
+    ['📈', 'Throughput spike', '· +18% over 1h baseline'],
+    ['🌙', 'Night watch', '· Council sleeps · 1 sentinel active'],
+    ['🔥', 'Hot path', '· dispatch loop optimized → -12ms'],
+    ['🧹', 'Garbage collect', '· 14MB freed from L3 cache'],
+    ['🔭', 'Forecast', '· 1.2k tasks projected by EOD'],
+    ['🪪', 'Identity', '· session m3-alpha · scope: hub'],
+    ['🛰️', 'Sat-link', '· 21/21 nodes pinging · loss 0.00%'],
+    ['🧭', 'Navigator', '· route claude → deepseek · cost ↓ 38%'],
+    ['🎛️', 'Mixer tuned', '· ratio opus:sonnet:haiku = 2:5:3']
+  ];
+
+  var idx = 0;
+  var MAX_LINES = 11;
+
+  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+  function nowTime() {
+    var d = new Date();
+    return pad2(d.getHours()) + ':' + pad2(d.getMinutes()) + ':' + pad2(d.getSeconds());
+  }
+
+  function makeLine(animate) {
+    var entry = pool[idx % pool.length];
+    idx++;
+    var div = document.createElement('div');
+    div.className = 'log-line' + (animate ? ' new' : '');
+    div.innerHTML =
+      '<span class="log-time">' + nowTime() + '</span>' +
+      '<span class="log-emoji">' + entry[0] + '</span>' +
+      '<span class="log-msg"><strong style="color:var(--text);font-weight:600">' + entry[1] + '</strong> <span style="color:var(--muted)">' + entry[2] + '</span></span>';
+    return div;
+  }
+
+  // initial fill
+  for (var i = 0; i < 9; i++) logFeed.appendChild(makeLine(false));
+  feedWrap.scrollTop = feedWrap.scrollHeight;
+
+  // auto-scroll
+  setInterval(function () {
+    logFeed.appendChild(makeLine(true));
+    while (logFeed.children.length > MAX_LINES) {
+      logFeed.removeChild(logFeed.firstChild);
+    }
+    feedWrap.scrollTop = feedWrap.scrollHeight;
+  }, 2400);
+
+  // ---------- Subtle clock tick on footer ----------
+  var build = document.querySelector('footer .build');
+  function updateBuild() {
+    var d = new Date();
+    var stamp = d.getFullYear() + '.' +
+                pad2(d.getMonth() + 1) + '.' +
+                pad2(d.getDate()) + ' · ' +
+                pad2(d.getHours()) + ':' +
+                pad2(d.getMinutes()) + ' GST';
+    if (build) build.textContent = 'BUILD ' + stamp;
+  }
+  setInterval(updateBuild, 30000);
+})();
+</script>
+</body>
+</html>

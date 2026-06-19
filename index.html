@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERO — Multi-Agent Orchestration · Dashboard</title>
+<style>
+  /* =============================================================
+     RESET + ROOT
+     ============================================================= */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --card-hi: #161622;
+    --cyan: #00ffcc;
+    --cyan-dim: rgba(0, 255, 204, 0.5);
+    --cyan-faint: rgba(0, 255, 204, 0.1);
+    --cyan-border: rgba(0, 255, 204, 0.2);
+    --red: #ff3355;
+    --red-glow: rgba(255, 51, 85, 0.45);
+    --red-faint: rgba(255, 51, 85, 0.08);
+    --red-border: rgba(255, 51, 85, 0.22);
+    --amber: #ffb347;
+    --amber-faint: rgba(255, 179, 71, 0.12);
+    --amber-border: rgba(255, 179, 71, 0.3);
+    --green: #00ff88;
+    --green-faint: rgba(0, 255, 136, 0.12);
+    --green-border: rgba(0, 255, 136, 0.3);
+    --border: rgba(0, 255, 204, 0.1);
+    --text: #d8d8e0;
+    --muted: #5a5a6a;
+    --mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --header-h: 76px;
+  }
+  html, body { min-height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    overflow-x: hidden;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 255, 204, 0.10), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 110%, rgba(0, 255, 204, 0.06), transparent 60%),
+      radial-gradient(ellipse 50% 30% at 10% 80%, rgba(255, 51, 85, 0.04), transparent 60%);
+  }
+  /* Grid backdrop */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 255, 204, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 204, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+  }
+  /* Vignette */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* =============================================================
+     STICKY HEADER
+     ============================================================= */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: var(--cyan);
+    box-shadow: 0 0 16px rgba(0, 255, 204, 0.25), inset 0 0 12px rgba(0, 255, 204, 0.1);
+    position: relative;
+  }
+  .brand-mark::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--cyan-faint);
+    border-radius: 4px;
+  }
+  .brand-mark svg { width: 18px; height: 18px; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo {
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 5px;
+    text-shadow: 0 0 12px rgba(0, 255, 204, 0.55), 0 0 24px rgba(0, 255, 204, 0.25);
+  }
+  .logo-sub {
+    font-family: var(--mono);
+    font-size: 8px;
+    color: var(--muted);
+    letter-spacing: 3px;
+    margin-top: 3px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav a {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+  .nav a:hover {
+    color: var(--text);
+    background: rgba(0, 255, 204, 0.04);
+  }
+  .nav a.active {
+    color: var(--cyan);
+    background: var(--cyan-faint);
+    border-color: var(--cyan-border);
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.45);
+  }
+  .nav a .num {
+    color: rgba(0, 255, 204, 0.35);
+    margin-right: 4px;
+  }
+  .nav a.active .num { color: var(--cyan); }
+
+  .hub-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--green);
+    padding: 7px 12px;
+    border: 1px solid rgba(0, 255, 136, 0.25);
+    border-radius: 999px;
+    background: rgba(0, 255, 136, 0.04);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green), 0 0 16px rgba(0, 255, 136, 0.4);
+    animation: pulse 1.8s ease-in-out infinite;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .status-dot::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid var(--green);
+    animation: ring 1.8s ease-out infinite;
+    opacity: 0;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.9); }
+  }
+  @keyframes ring {
+    0% { transform: scale(0.6); opacity: 0.8; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+
+  /* Mobile hamburger */
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--cyan);
+    font-family: var(--mono);
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+
+  /* =============================================================
+     CONTAINER
+     ============================================================= */
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* =============================================================
+     SECTION BASE
+     ============================================================= */
+  section {
+    position: relative;
+    padding: 88px 0 96px;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+  .section-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    color: var(--cyan);
+    margin-bottom: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.85;
+    text-transform: uppercase;
+  }
+  .section-eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--cyan);
+  }
+  .section-eyebrow.muted { color: var(--muted); }
+  .section-eyebrow.muted::before { background: var(--muted); box-shadow: none; }
+
+  h1.section-title {
+    font-family: var(--mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  h1.section-title .cyan {
+    color: var(--cyan);
+    text-shadow: 0 0 20px var(--cyan-dim);
+  }
+  .section-sub {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+  }
+  .section-sub .num { color: var(--cyan); font-weight: 700; }
+  .section-sub .accent { color: var(--cyan-dim); }
+
+  h1.page-title {
+    font-family: var(--sans);
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    margin-bottom: 16px;
+    background: linear-gradient(180deg, #ffffff 0%, #c0c0d0 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* =============================================================
+     SECTION 1: OVERVIEW — hero shell
+     ============================================================= */
+  .counter-section { text-align: center; margin-bottom: 56px; }
+  .counter-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: rgba(0, 255, 204, 0.03);
+  }
+  .counter-eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--cyan);
+  }
+  .counter-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .counter-value {
+    font-family: var(--mono);
+    font-size: clamp(120px, 18vw, 220px);
+    font-weight: 700;
+    color: var(--cyan);
+    line-height: 0.9;
+    text-shadow:
+      0 0 30px rgba(0, 255, 204, 0.55),
+      0 0 60px rgba(0, 255, 204, 0.25),
+      0 0 120px rgba(0, 255, 204, 0.12);
+    letter-spacing: -10px;
+    font-variant-numeric: tabular-nums;
+    position: relative;
+  }
+  .counter-value::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 18%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0.4;
+    animation: scanline 3s ease-in-out infinite;
+  }
+  @keyframes scanline {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.6; }
+  }
+  .counter-side {
+    text-align: left;
+    font-family: var(--mono);
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+  }
+  .counter-side .label { display: block; color: var(--text); font-size: 14px; letter-spacing: 4px; }
+  .counter-side .val { color: var(--cyan); }
+  .counter-sub {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--muted);
+    margin-top: 24px;
+  }
+  .counter-sub .accent { color: var(--cyan); text-shadow: 0 0 12px rgba(0, 255, 204, 0.4); }
+  .counter-sub .sep { color: var(--border); margin: 0 12px; }
+
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    background: linear-gradient(180deg, var(--card) 0%, var(--card-hi) 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-faint), transparent);
+  }
+  .stat-card:hover {
+    border-color: rgba(0, 255, 204, 0.35);
+    box-shadow: 0 0 24px rgba(0, 255, 204, 0.08), inset 0 0 24px rgba(0, 255, 204, 0.03);
+    transform: translateY(-2px);
+  }
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stat-label .id { color: rgba(0, 255, 204, 0.3); }
+  .stat-value {
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .stat-value.cyan { color: var(--cyan); text-shadow: 0 0 12px rgba(0, 255, 204, 0.35); }
+  .stat-value.amber { color: var(--amber); text-shadow: 0 0 12px rgba(255, 179, 71, 0.35); }
+  .stat-value.red { color: var(--red); text-shadow: 0 0 12px rgba(255, 51, 85, 0.35); }
+  .stat-delta {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+    letter-spacing: 1px;
+  }
+  .stat-delta .up { color: var(--green); }
+  .stat-delta .dn { color: var(--red); }
+
+  /* Log feed */
+  .log-section {
+    background: linear-gradient(180deg, var(--card) 0%, rgba(18, 18, 26, 0.6) 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .log-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0.5;
+  }
+  .log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .log-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .log-title .pulse {
+    width: 6px; height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--cyan);
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  .log-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+  }
+  .log-meta .ok { color: var(--green); }
+  .log-feed {
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 16px;
+  }
+  .log-feed::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 30px;
+    background: linear-gradient(to top, var(--card), transparent);
+    pointer-events: none;
+  }
+  .log-feed-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .log-line {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 5px 0;
+    color: var(--text);
+    display: grid;
+    grid-template-columns: 76px 22px 1fr;
+    gap: 12px;
+    align-items: center;
+    line-height: 1.5;
+    border-bottom: 1px dashed rgba(0, 255, 204, 0.04);
+  }
+  .log-time { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .log-emoji { font-size: 13px; }
+  .log-msg { color: var(--text); }
+  .log-line.new { animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* =============================================================
+     SECTION 2: TWO FUTURES
+     ============================================================= */
+  .futures-title {
+    font-family: var(--mono);
+    font-size: clamp(28px, 4.5vw, 48px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .futures-title .left-word {
+    color: var(--red);
+    text-shadow: 0 0 20px var(--red-glow), 0 0 40px rgba(255, 51, 85, 0.2);
+  }
+  .futures-title .vs-word {
+    color: var(--muted);
+    font-size: 0.7em;
+    letter-spacing: 4px;
+    margin: 0 18px;
+    vertical-align: middle;
+    font-weight: 500;
+  }
+  .futures-title .right-word {
+    color: var(--cyan);
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.55), 0 0 40px rgba(0, 255, 204, 0.25);
+  }
+  .futures-sub {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .futures-sub .dot { color: var(--border); margin: 0 8px; }
+
+  .split-card {
+    display: grid;
+    grid-template-columns: 1fr 64px 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 520px;
+  }
+  .split-half {
+    position: relative;
+    border-radius: 14px;
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .split-left {
+    background: linear-gradient(180deg, rgba(255, 51, 85, 0.05) 0%, rgba(18, 18, 26, 0.6) 100%);
+    border: 1px solid var(--red-border);
+    box-shadow: 0 0 32px rgba(255, 51, 85, 0.12), inset 0 0 40px rgba(255, 51, 85, 0.04);
+    animation: leftGlow 5s ease-in-out infinite;
+  }
+  @keyframes leftGlow {
+    0%, 100% { box-shadow: 0 0 32px rgba(255, 51, 85, 0.12), inset 0 0 40px rgba(255, 51, 85, 0.04); }
+    50% { box-shadow: 0 0 48px rgba(255, 51, 85, 0.2), inset 0 0 60px rgba(255, 51, 85, 0.06); }
+  }
+  .split-left::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--red), transparent);
+    opacity: 0.6;
+  }
+  .split-left::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 0% 50%, rgba(255, 51, 85, 0.08), transparent 50%),
+      repeating-linear-gradient(0deg, transparent 0, transparent 3px, rgba(255, 51, 85, 0.012) 3px, rgba(255, 51, 85, 0.012) 4px);
+    pointer-events: none;
+  }
+  .split-right {
+    background: linear-gradient(180deg, rgba(0, 255, 204, 0.05) 0%, rgba(18, 18, 26, 0.6) 100%);
+    border: 1px solid var(--cyan-border);
+    box-shadow: 0 0 32px rgba(0, 255, 204, 0.12), inset 0 0 40px rgba(0, 255, 204, 0.04);
+    animation: rightGlow 5s ease-in-out infinite;
+  }
+  @keyframes rightGlow {
+    0%, 100% { box-shadow: 0 0 32px rgba(0, 255, 204, 0.12), inset 0 0 40px rgba(0, 255, 204, 0.04); }
+    50% { box-shadow: 0 0 48px rgba(0, 255, 204, 0.2), inset 0 0 60px rgba(0, 255, 204, 0.06); }
+  }
+  .split-right::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0.6;
+  }
+  .split-right::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 50%, rgba(0, 255, 204, 0.08), transparent 50%);
+    pointer-events: none;
+  }
+
+  .half-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .half-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+  .split-left .half-tag { color: var(--red); background: var(--red-faint); border: 1px solid var(--red-border); }
+  .split-right .half-tag { color: var(--cyan); background: var(--cyan-faint); border: 1px solid var(--cyan-border); }
+  .half-title {
+    font-family: var(--mono);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .split-left .half-title { color: var(--red); text-shadow: 0 0 14px var(--red-glow); }
+  .split-right .half-title { color: var(--cyan); text-shadow: 0 0 14px rgba(0, 255, 204, 0.5); }
+  .half-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .split-left .half-status { color: var(--amber); }
+  .split-right .half-status { color: var(--green); }
+  .status-pip {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .split-left .status-pip {
+    background: var(--amber);
+    box-shadow: 0 0 6px var(--amber);
+    animation: blink 1.2s steps(2, end) infinite;
+  }
+  .split-right .status-pip {
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.25; }
+  }
+
+  .metrics-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+  .metric {
+    position: relative;
+    background: linear-gradient(180deg, var(--card) 0%, var(--card-hi) 100%);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    overflow: hidden;
+  }
+  .metric::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0;
+    width: 2px;
+  }
+  .split-left .metric::after { background: linear-gradient(180deg, transparent, var(--red), transparent); opacity: 0.6; }
+  .split-right .metric::after { background: linear-gradient(180deg, transparent, var(--cyan), transparent); opacity: 0.6; }
+
+  .metric-main { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .metric-num {
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+  }
+  .split-left .metric-num { color: var(--red); text-shadow: 0 0 12px var(--red-glow); }
+  .split-right .metric-num { color: var(--cyan); text-shadow: 0 0 12px rgba(0, 255, 204, 0.5); }
+  .metric-num .unit {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-left: 4px;
+    text-shadow: none;
+  }
+  .metric-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .metric-label .id { color: var(--border); font-family: var(--mono); font-size: 9px; margin-left: 8px; letter-spacing: 1.5px; }
+  .metric-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .split-left .metric-indicator.warn { background: var(--amber-faint); color: var(--amber); border: 1px solid var(--amber-border); }
+  .split-left .metric-indicator.crit { background: rgba(255, 51, 85, 0.12); color: var(--red); border: 1px solid var(--red-border); }
+  .split-right .metric-indicator.ok { background: var(--green-faint); color: var(--green); border: 1px solid var(--green-border); }
+
+  /* Divider */
+  .divider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .divider-line {
+    position: absolute;
+    top: 0; bottom: 60px;
+    left: 50%;
+    width: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(255, 51, 85, 0.4) 20%,
+      rgba(255, 51, 85, 0.4) 50%,
+      rgba(0, 255, 204, 0.4) 50%,
+      rgba(0, 255, 204, 0.4) 80%,
+      transparent 100%);
+  }
+  .divider-line::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -2px;
+    width: 5px;
+    height: 30%;
+    background: linear-gradient(180deg, transparent, var(--red), transparent);
+    filter: blur(4px);
+    animation: dividerPulseLeft 2.8s ease-in-out infinite;
+  }
+  .divider-line::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: -2px;
+    width: 5px;
+    height: 30%;
+    background: linear-gradient(180deg, transparent, var(--cyan), transparent);
+    filter: blur(4px);
+    animation: dividerPulseRight 2.8s ease-in-out infinite;
+  }
+  @keyframes dividerPulseLeft {
+    0%, 100% { opacity: 0.4; transform: translateX(-1px); }
+    50% { opacity: 1; transform: translateX(-1px) scaleX(1.5); }
+  }
+  @keyframes dividerPulseRight {
+    0%, 100% { opacity: 0.4; transform: translateX(-1px); }
+    50% { opacity: 1; transform: translateX(-1px) scaleX(1.5); }
+  }
+  .vs-tag {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  .vs-tag::before, .vs-tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 18px;
+    height: 1px;
+    background: var(--border);
+  }
+  .vs-tag::before { right: 100%; }
+  .vs-tag::after { left: 100%; }
+
+  /* =============================================================
+     SECTION 3: PIPELINE
+     ============================================================= */
+  .stage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .stage-card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: 90px;
+    padding: 0 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  }
+  .stage-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 2px;
+    height: 100%;
+    background: transparent;
+    transition: background 0.25s ease;
+  }
+  .stage-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--cyan-border);
+    background: var(--card-hi);
+    box-shadow: 0 8px 32px rgba(0,255,204,0.12), 0 0 0 1px var(--cyan-border);
+  }
+  .stage-card:hover::before { background: var(--cyan); }
+  .stage-left {
+    min-width: 180px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .stage-name {
+    font-family: var(--mono);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--text);
+  }
+  .stage-agents {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.8px;
+  }
+  .stage-center { flex: 1; display: flex; align-items: center; min-width: 0; }
+  .progress-track {
+    width: 100%;
+    height: 28px;
+    background: var(--card-hi);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
+  }
+  .progress-track::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(90deg, transparent 0, transparent 19px, rgba(255,255,255,0.025) 19px, rgba(255,255,255,0.025) 20px);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+    transition: none;
+  }
+  .progress-fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, transparent 55%);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .progress-fill.green { background: linear-gradient(90deg, #00ff88 0%, #4dffaa 100%); color: #00ff88; }
+  .progress-fill.cyan  { background: linear-gradient(90deg, #00ffcc 0%, #4dffd9 100%); color: #00ffcc; }
+  .progress-fill.amber { background: linear-gradient(90deg, #ffb347 0%, #ffc266 100%); color: #ffb347; }
+  .progress-fill.muted { background: linear-gradient(90deg, #5a5a6a 0%, #6a6a7a 100%); color: #5a5a6a; }
+  .progress-fill.glow { animation: fillGlow 2.2s ease-in-out infinite; }
+  @keyframes fillGlow {
+    0%, 100% { box-shadow: 0 0 12px currentColor, inset 0 0 8px rgba(255,255,255,0.08); }
+    50% { box-shadow: 0 0 28px currentColor, inset 0 0 16px rgba(255,255,255,0.18); }
+  }
+  .stage-right {
+    min-width: 130px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .pill {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .pill.green { background: var(--green-faint); color: var(--green); border: 1px solid var(--green-border); }
+  .pill.cyan  { background: var(--cyan-faint); color: var(--cyan); border: 1px solid var(--cyan-border); }
+  .pill.amber { background: rgba(255,179,71,0.12); color: var(--amber); border: 1px solid var(--amber-border); }
+  .pill.muted { background: rgba(255,255,255,0.03); color: var(--muted); border: 1px solid rgba(90,90,106,0.2); }
+  .stage-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .stage-dot.green { background: var(--green); box-shadow: 0 0 8px var(--green), 0 0 14px rgba(0,255,136,0.4); }
+  .stage-dot.cyan  { background: var(--cyan);  box-shadow: 0 0 8px var(--cyan),  0 0 14px rgba(0,255,204,0.4); }
+  .stage-dot.amber { background: var(--amber); box-shadow: 0 0 8px var(--amber), 0 0 14px rgba(255,179,71,0.4); }
+  .stage-dot.muted { background: var(--muted); }
+  .stage-dot.pulse { position: relative; animation: dotPulse 1.5s ease-in-out infinite; }
+  .stage-dot.pulse::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    animation: dotRing 1.5s ease-out infinite;
+    opacity: 0;
+  }
+  @keyframes dotPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  @keyframes dotRing {
+    0% { transform: scale(0.5); opacity: 0.9; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+  .stage-dot.green.pulse { color: var(--green); }
+  .stage-dot.cyan.pulse  { color: var(--cyan); }
+
+  /* =============================================================
+     SECTION 4: ECONOMY
+     ============================================================= */
+  .hero-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .hero-stat .number {
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 18px rgba(0,255,204,0.45), 0 0 36px rgba(0,255,204,0.18);
+  }
+  .hero-stat .label {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 2.5px;
+  }
+  .panels {
+    display: grid;
+    grid-template-columns: 60fr 38fr;
+    gap: 24px;
+  }
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 26px 26px;
+    position: relative;
+    overflow: hidden;
+  }
+  .panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--cyan-border) 50%, transparent 100%);
+  }
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .panel-title {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--text);
+  }
+  .panel-sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    margin-top: 3px;
+  }
+  .chart-legend {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch {
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    position: relative;
+  }
+  .legend-swatch.dashed { background: transparent; border-top: 2px dashed currentColor; height: 0; }
+  .legend-swatch.solid { background: currentColor; height: 2px; }
+  .legend-item.red  { color: var(--red); }
+  .legend-item.cyan { color: var(--cyan); }
+  .badge-down {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: var(--green);
+    background: var(--green-faint);
+    border: 1px solid var(--green-border);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+  .chart-wrap {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  #tokenChart { display: block; width: 100%; height: 100%; }
+  .chart-stats {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .chart-stats .saved-num {
+    font-family: var(--mono);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 18px rgba(0,255,204,0.45), 0 0 36px rgba(0,255,204,0.18);
+    line-height: 1;
+  }
+  .chart-stats .saved-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2.5px;
+    margin-top: 6px;
+  }
+  .chart-stats .saved-meta {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+  }
+  .chart-stats .saved-meta strong { color: var(--text); font-weight: 600; }
+  .chart-stats .saved-meta .ok { color: var(--green); }
+
+  /* Circuit panel */
+  .cb-status {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--green);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cb-status .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  .cb-list { display: flex; flex-direction: column; gap: 12px; }
+  .cb-card {
+    position: relative;
+    background: var(--card-hi);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 16px 22px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .cb-card.in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.45s ease, transform 0.45s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  }
+  .cb-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+  .cb-card.amber::before { background: linear-gradient(180deg, var(--amber) 0%, rgba(255,179,71,0.2) 100%); }
+  .cb-card.red::before   { background: linear-gradient(180deg, var(--red) 0%, rgba(255,51,85,0.2) 100%); }
+  .cb-card.cyan::before  { background: linear-gradient(180deg, var(--cyan) 0%, rgba(0,255,204,0.2) 100%); }
+  .cb-card.amber { border-color: var(--amber-border); }
+  .cb-card.red   { border-color: var(--red-border); }
+  .cb-card.cyan  { border-color: var(--cyan-border); }
+  .cb-card.amber:hover { transform: translateY(-3px); background: #1a1820; box-shadow: 0 10px 28px rgba(255,179,71,0.15), 0 0 0 1px var(--amber-border); }
+  .cb-card.red:hover   { transform: translateY(-3px); background: #1c1418; box-shadow: 0 10px 28px rgba(255,51,85,0.18), 0 0 0 1px var(--red-border); }
+  .cb-card.cyan:hover  { transform: translateY(-3px); background: #0f1a18; box-shadow: 0 10px 28px rgba(0,255,204,0.18), 0 0 0 1px var(--cyan-border); }
+  .cb-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .cb-name { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2.5px; color: var(--muted); }
+  .cb-icon {
+    width: 26px; height: 26px;
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+  }
+  .cb-icon.amber { background: var(--amber-faint); color: var(--amber); border: 1px solid var(--amber-border); }
+  .cb-icon.red   { background: var(--red-faint);   color: var(--red);   border: 1px solid var(--red-border); }
+  .cb-icon.cyan  { background: var(--cyan-faint);  color: var(--cyan);  border: 1px solid var(--cyan-border); }
+  .cb-icon svg { width: 14px; height: 14px; }
+  .cb-count {
+    font-family: var(--mono);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1px;
+    display: inline-block;
+    transform-origin: left center;
+  }
+  .cb-card.amber .cb-count { color: var(--amber); text-shadow: 0 0 18px rgba(255,179,71,0.5), 0 0 36px rgba(255,179,71,0.2); }
+  .cb-card.red   .cb-count { color: var(--red);   text-shadow: 0 0 18px rgba(255,51,85,0.5),  0 0 36px rgba(255,51,85,0.2); }
+  .cb-card.cyan  .cb-count { color: var(--cyan);  text-shadow: 0 0 18px rgba(0,255,204,0.5),  0 0 36px rgba(0,255,204,0.2); }
+  .cb-sub { font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; color: var(--muted); margin-top: 8px; }
+  .cb-card.amber .cb-sub { color: rgba(255,179,71,0.7); }
+  .cb-card.red .cb-sub   { color: rgba(255,51,85,0.7); }
+  .cb-card.cyan .cb-sub  { color: rgba(0,255,204,0.7); }
+  @keyframes countPulse {
+    0%, 90%, 100% { transform: scale(1); }
+    95% { transform: scale(1.08); }
+  }
+  .cb-card .cb-count.pulse { animation: countPulse 4s ease-in-out infinite; }
+
+  /* =============================================================
+     SECTION 5: ROSTER
+     ============================================================= */
+  .stats-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .stat-pill {
+    padding: 10px 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .stat-pill .val {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .stat-pill .val.green { color: var(--green); }
+  .stat-pill .val.amber { color: var(--amber); }
+  .stat-pill .inf {
+    font-size: 32px;
+    color: var(--cyan);
+    text-shadow: 0 0 12px var(--cyan-dim);
+    transform: rotate(90deg);
+    display: inline-block;
+    line-height: 1;
+  }
+  .table-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+  .table-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-border), transparent);
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .table-scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 760px; }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--card-hi);
+    padding: 14px 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-weight: 500;
+    z-index: 1;
+  }
+  thead th:first-child { width: 4%; }
+  thead th:nth-child(2) { width: 18%; }
+  thead th:nth-child(3) { width: 18%; }
+  thead th:nth-child(4) { width: 12%; }
+  thead th:nth-child(5) { width: 12%; }
+  thead th:nth-child(6) { width: 10%; text-align: right; }
+  thead th:nth-child(7) { width: 13%; text-align: right; }
+  thead th:nth-child(8) { width: 13%; text-align: right; }
+  tbody tr {
+    transition: background 0.2s ease, border-color 0.2s ease;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  tbody tr.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  tbody tr:nth-child(even) { background: rgba(255,255,255,0.015); }
+  tbody tr:hover { background: rgba(0,255,204,0.04); }
+  tbody td {
+    padding: 11px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    font-size: 13px;
+    vertical-align: middle;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .rank { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .agent-name { font-weight: 600; font-size: 13px; }
+  .agent-name.cyan   { color: var(--cyan); }
+  .agent-name.white  { color: var(--text); }
+  .agent-name.amber  { color: var(--amber); }
+  .model-id {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    margin-top: 1px;
+  }
+  .role-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    display: inline-block;
+    background: var(--cyan-faint);
+    color: var(--cyan);
+    border: 1px solid var(--cyan-border);
+  }
+  .role-tag.amber  { background: rgba(255,179,71,0.08); color: var(--amber); border-color: rgba(255,179,71,0.2); }
+  .role-tag.red    { background: rgba(255,51,85,0.08);   color: var(--red);   border-color: rgba(255,51,85,0.2); }
+  .role-tag.green  { background: var(--green-faint);     color: var(--green); border-color: var(--green-border); }
+  .role-tag.muted  { background: rgba(90,90,106,0.1);    color: var(--muted); border-color: rgba(90,90,106,0.2); }
+  .status-pill-r {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .status-pill-r.active  { background: var(--green-faint); color: var(--green); border: 1px solid var(--green-border); }
+  .status-pill-r.standby { background: rgba(255,179,71,0.08); color: var(--amber); border: 1px solid rgba(255,179,71,0.2); }
+  .status-pill-r.idle    { background: rgba(90,90,106,0.1); color: var(--muted); border: 1px solid rgba(90,90,106,0.2); }
+  .status-pill-r .status-dot-sm { width: 5px; height: 5px; border-radius: 50%; }
+  .status-pill-r.active .status-dot-sm  { background: var(--green); box-shadow: 0 0 4px var(--green); animation: pulseSm 2s ease-in-out infinite; }
+  .status-pill-r.standby .status-dot-sm { background: var(--amber); box-shadow: 0 0 4px var(--amber); animation: pulseSm 2.5s ease-in-out infinite; }
+  .status-pill-r.idle .status-dot-sm    { background: var(--muted); }
+  @keyframes pulseSm {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .num-data {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .num-muted {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* =============================================================
+     SECTION 6: COUNTDOWN
+     ============================================================= */
+  .stage-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+  .gauge-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.4s ease;
+  }
+  .gauge-wrap:hover { filter: drop-shadow(0 0 18px var(--cyan-dim)); }
+  .gauge-wrap canvas { width: 100%; height: 100%; display: block; }
+  .gauge-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    text-align: center;
+  }
+  .gauge-d {
+    font-family: var(--mono);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -2px;
+    line-height: 1;
+    text-shadow: 0 0 24px rgba(0,0,0,0.6);
+  }
+  .gauge-d .unit { font-size: 24px; color: var(--muted); margin-left: 2px; }
+  .gauge-hm {
+    font-family: var(--mono);
+    font-size: 18px;
+    color: var(--text);
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+  .gauge-s {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--amber);
+    margin-top: 4px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255,179,71,0.5);
+  }
+  .gauge-s.tick { animation: tick 0.4s ease-out; }
+  @keyframes tick {
+    0%   { opacity: 0.4; transform: translateY(-2px); }
+    50%  { opacity: 1;   transform: translateY(0); }
+    100% { opacity: 1;   transform: translateY(0); }
+  }
+  .gauge-legend {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .gauge-legend .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 6px var(--amber);
+    margin-right: 8px;
+    vertical-align: middle;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .gauge-legend .accent { color: var(--amber); }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .metric-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0)), var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 16px 22px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--accent, var(--cyan));
+    box-shadow: 0 0 12px var(--accent, var(--cyan));
+  }
+  .metric-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent, var(--cyan-border));
+    box-shadow: 0 8px 24px -10px var(--accent-glow, var(--cyan-dim));
+  }
+  .metric-card .label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .metric-card .value {
+    font-family: var(--mono);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent, var(--cyan));
+    letter-spacing: -1px;
+    line-height: 1;
+    text-shadow: 0 0 16px var(--accent-glow, var(--cyan-dim));
+  }
+  .metric-card .foot {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .metric-card .foot .arrow { color: var(--green); }
+  .metric-card .foot .arrow.down { color: var(--amber); }
+  .metric-card[data-color="green"]   { --accent: var(--green); --accent-glow: rgba(0,255,136,0.45); }
+  .metric-card[data-color="amber"]   { --accent: var(--amber); --accent-glow: rgba(255,179,71,0.45); }
+  .metric-card[data-color="cyan"]    { --accent: var(--cyan);  --accent-glow: var(--cyan-dim); }
+  .metric-card[data-color="red"]     { --accent: var(--red);   --accent-glow: rgba(255,51,85,0.45); }
+
+  /* Timeline */
+  .section-head {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .section-head .accent { color: var(--cyan); }
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 6px; bottom: 6px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--cyan-border), transparent);
+  }
+  .tl-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    opacity: 0;
+    transform: translateX(-12px);
+    animation: slideIn 0.5s ease forwards;
+  }
+  .tl-item:nth-child(1) { animation-delay: 0.0s; }
+  .tl-item:nth-child(2) { animation-delay: 0.1s; }
+  .tl-item:nth-child(3) { animation-delay: 0.2s; }
+  .tl-item:nth-child(4) { animation-delay: 0.3s; }
+  .tl-item:nth-child(5) { animation-delay: 0.4s; }
+  .tl-item:hover {
+    transform: translateX(2px);
+    border-color: var(--cyan-border);
+    box-shadow: 0 4px 16px -8px var(--cyan-dim);
+  }
+  .tl-dot {
+    position: absolute;
+    left: -24px; top: 50%;
+    transform: translateY(-50%);
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 2px solid var(--green);
+    box-shadow: 0 0 8px rgba(0,255,136,0.5);
+  }
+  .tl-item[data-state="pending"] .tl-dot {
+    border-color: var(--amber);
+    box-shadow: 0 0 8px rgba(255,179,71,0.5);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .tl-icon { font-size: 14px; width: 18px; text-align: center; }
+  .tl-time {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    min-width: 70px;
+  }
+  .tl-text { flex: 1; font-size: 13px; color: var(--text); }
+  .tl-text .meta { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-left: 8px; }
+  .tl-badge {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    border: 1px solid var(--green-border);
+    background: var(--green-faint);
+    color: var(--green);
+  }
+  .tl-badge.amber { border-color: var(--amber-border); background: rgba(255,179,71,0.1); color: var(--amber); }
+  .tl-badge.cyan  { border-color: var(--cyan-border);  background: var(--cyan-faint);  color: var(--cyan); }
+
+  /* =============================================================
+     FOOTER
+     ============================================================= */
+  footer {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+  }
+  footer::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-border), transparent);
+    opacity: 0.5;
+  }
+  footer .nav-foot {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  footer .nav-foot a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  footer .nav-foot a:hover { color: var(--cyan); }
+  footer .build { color: var(--cyan-dim); }
+
+  /* =============================================================
+     RESPONSIVE
+     ============================================================= */
+  @media (max-width: 1024px) {
+    .panels { grid-template-columns: 1fr; }
+    .stage-grid { grid-template-columns: 1fr; gap: 36px; }
+    .metrics-grid { max-width: 360px; margin: 0 auto; width: 100%; }
+  }
+  @media (max-width: 900px) {
+    .split-card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 40px auto;
+      gap: 0;
+      min-height: 0;
+    }
+    .divider { flex-direction: row; }
+    .divider-line {
+      top: 50%;
+      left: 0; right: 0;
+      bottom: auto;
+      width: auto;
+      height: 1px;
+      transform: translateY(-50%);
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 51, 85, 0.4) 20%, rgba(0, 255, 204, 0.4) 80%, transparent 100%);
+    }
+    .divider-line::before {
+      top: -2px;
+      left: 20%;
+      width: 30%;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+      animation: dividerPulseLeftH 2.8s ease-in-out infinite;
+    }
+    .divider-line::after {
+      top: -2px;
+      left: auto;
+      right: 20%;
+      width: 30%;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      animation: dividerPulseRightH 2.8s ease-in-out infinite;
+    }
+    @keyframes dividerPulseLeftH {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; transform: scaleY(1.5); }
+    }
+    @keyframes dividerPulseRightH {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; transform: scaleY(1.5); }
+    }
+    .vs-tag { bottom: auto; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+    .vs-tag::before, .vs-tag::after { display: none; }
+  }
+  @media (max-width: 820px) {
+    .topbar-inner { padding: 12px 18px; gap: 12px; flex-wrap: wrap; }
+    .nav {
+      order: 3;
+      width: 100%;
+      flex: 0 0 100%;
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .nav a { font-size: 10px; padding: 6px 8px; }
+    .hub-status { font-size: 9px; padding: 5px 10px; letter-spacing: 1px; margin-left: auto; }
+  }
+  @media (max-width: 768px) {
+    .container { padding: 0 18px; }
+    section { padding: 60px 0 72px; }
+    h1.section-title { font-size: 22px; letter-spacing: 1px; }
+    .section-sub { font-size: 10px; letter-spacing: 1px; }
+    h1.page-title { font-size: 38px; }
+    .logo { font-size: 18px; letter-spacing: 3px; }
+    .logo-sub { font-size: 7px; letter-spacing: 2px; }
+    .brand-mark { width: 32px; height: 32px; }
+    .brand-mark svg { width: 16px; height: 16px; }
+
+    .futures-title { font-size: 26px; }
+    .futures-title .vs-word { margin: 0 10px; }
+    .futures-sub { font-size: 11px; letter-spacing: 2px; }
+    .split-half { padding: 22px 20px; gap: 14px; }
+    .metric { padding: 14px 14px; }
+    .metric-num { font-size: 26px; }
+
+    .stage-card { height: auto; padding: 16px; flex-wrap: wrap; gap: 14px; }
+    .stage-left { min-width: 0; flex: 1 1 auto; }
+    .stage-center { order: 3; flex: 0 0 100%; }
+    .stage-right { min-width: 0; flex: 0 0 auto; }
+    .stage-name { font-size: 14px; }
+
+    .panel { padding: 20px 18px 22px; }
+    .panel-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .chart-wrap { height: 320px; }
+    .chart-stats .saved-num { font-size: 24px; }
+    .cb-count { font-size: 36px; }
+
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .stat-card { padding: 16px; }
+    .stat-value { font-size: 24px; }
+    .log-feed { height: 220px; }
+    .log-line { font-size: 11px; grid-template-columns: 64px 20px 1fr; }
+    .counter-row { gap: 12px; }
+    .counter-side { font-size: 10px; }
+    .counter-side .label { font-size: 12px; }
+    .counter-sub { font-size: 11px; letter-spacing: 3px; }
+    .counter-sub .sep { margin: 0 6px; }
+
+    .title .vs-word { display: block; margin: 4px 0; }
+    .metric-num { font-size: 22px; }
+    .metric-indicator { width: 24px; height: 24px; font-size: 12px; }
+
+    .gauge-d { font-size: 44px; }
+    .gauge-hm { font-size: 15px; }
+    .gauge-s { font-size: 12px; }
+    .metric-card .value { font-size: 24px; }
+    .metric-card[data-color="amber"] .metric-card .value { font-size: 18px; }
+
+    footer { font-size: 9px; }
+    footer .nav-foot { gap: 10px; }
+  }
+  @media (max-width: 480px) {
+    .counter-side { display: none; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .nav a { font-size: 9px; padding: 5px 6px; }
+    .hub-status { display: none; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- =====================================================
+       STICKY HEADER + NAV
+       ===================================================== -->
+  <div class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a href="#overview" class="brand" aria-label="HERO home">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 12 L7 8 L7 11 L17 11 L17 8 L21 12 L17 16 L17 13 L7 13 L7 16 Z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="logo">HERO</div>
+          <div class="logo-sub">MULTI-AGENT ORCHESTRATION</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <a href="#overview" data-target="overview"><span class="num">01</span>OVERVIEW</a>
+        <a href="#futures"  data-target="futures"><span class="num">02</span>TWO FUTURES</a>
+        <a href="#pipeline" data-target="pipeline"><span class="num">03</span>PIPELINE</a>
+        <a href="#economy"  data-target="economy"><span class="num">04</span>ECONOMY</a>
+        <a href="#roster"   data-target="roster"><span class="num">05</span>ROSTER</a>
+        <a href="#countdown" data-target="countdown"><span class="num">06</span>COUNTDOWN</a>
+      </nav>
+
+      <div class="hub-status" role="status" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>ALL SYSTEMS OPERATIONAL</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- =================================================
+         SECTION 01 · OVERVIEW
+         ================================================= -->
+    <section id="overview" data-section="overview">
+      <div class="section-eyebrow">// OVERVIEW · HUB STATUS</div>
+      <h1 class="section-title">HERO <span class="cyan">SHELL</span></h1>
+      <div class="section-sub">HUB-LIVE · <span class="num">21</span> NODES · <span class="num">8</span> MODELS · <span class="num">3</span> COUNCILS</div>
+
+      <div class="counter-section" aria-label="Active sandboxes">
+        <div class="counter-eyebrow">// HUB-LIVE · SANDBOX REGISTRY</div>
+        <div class="counter-row">
+          <div class="counter-value" id="counter">00</div>
+          <div class="counter-side">
+            <span class="label">ACTIVE</span>
+            <span>SANDBOXES</span>
+            <span class="val">▲ +2 / 1H</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats" aria-label="System metrics">
+        <div class="stat-card">
+          <div class="stat-label"><span>TASKS DISPATCHED</span><span class="id">M.01</span></div>
+          <div class="stat-value cyan" id="tasksCount">0</div>
+          <div class="stat-delta"><span class="up">↑ 12%</span> · 24H</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label"><span>TOKENS SAVED</span><span class="id">M.02</span></div>
+          <div class="stat-value cyan" id="tokensSaved">1.8M</div>
+          <div class="stat-delta"><span class="up">↑ 24%</span> · 24H</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label"><span>UPTIME</span><span class="id">M.03</span></div>
+          <div class="stat-value">99.97<span style="font-size:18px;color:var(--muted)">%</span></div>
+          <div class="stat-delta">30D ROLLING</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label"><span>QUEUE DEPTH</span><span class="id">M.04</span></div>
+          <div class="stat-value amber" id="queueDepth">0</div>
+          <div class="stat-delta"><span id="queueState">— LIVE</span></div>
+        </div>
+      </div>
+
+      <section class="log-section" aria-label="Live agent activity feed">
+        <div class="log-header">
+          <div class="log-title">
+            <span class="pulse" aria-hidden="true"></span>
+            <span>LIVE FEED · AGENT ACTIVITY</span>
+          </div>
+          <div class="log-meta">UPLINK <span class="ok">● STABLE</span> · 12MS P50</div>
+        </div>
+        <div class="log-feed" id="logFeedWrap">
+          <div class="log-feed-inner" id="logFeed"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- =================================================
+         SECTION 02 · TWO FUTURES
+         ================================================= -->
+    <section id="futures" data-section="futures">
+      <div class="section-eyebrow">// PIPELINE COMPARISON · TWO FUTURES</div>
+      <h1 class="futures-title">
+        <span class="left-word">WITHOUT HERO</span>
+        <span class="vs-word">vs</span>
+        <span class="right-word">WITH HERO</span>
+      </h1>
+      <p class="futures-sub">Same pipeline<span class="dot">·</span>Two realities</p>
+
+      <section class="split-card" aria-label="Pipeline comparison">
+        <div class="split-half split-left">
+          <div class="half-header">
+            <span class="half-tag">SCENARIO A</span>
+            <h2 class="half-title">WITHOUT HERO</h2>
+            <span class="half-status">
+              <span class="status-pip" aria-hidden="true"></span>
+              <span>⚠ CONSTRAINED · MANUAL OVERHEAD</span>
+            </span>
+          </div>
+          <div class="metrics-col">
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="5" data-suffix="">0</span></div>
+                <div class="metric-label">Agents deployed<span class="id">M.A1</span></div>
+              </div>
+              <div class="metric-indicator warn" title="Bottleneck">!</div>
+            </div>
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="47" data-suffix="">0</span><span class="unit">min</span></div>
+                <div class="metric-label">Wall-clock time<span class="id">M.A2</span></div>
+              </div>
+              <div class="metric-indicator crit" title="Slow">↑</div>
+            </div>
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="128" data-suffix="K">0</span><span class="unit">tokens</span></div>
+                <div class="metric-label">Tokens consumed<span class="id">M.A3</span></div>
+              </div>
+              <div class="metric-indicator crit" title="Wasteful">×</div>
+            </div>
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="12" data-suffix="">0</span><span class="unit">%</span></div>
+                <div class="metric-label">Error rate<span class="id">M.A4</span></div>
+              </div>
+              <div class="metric-indicator warn" title="High">!</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider" aria-hidden="true">
+          <div class="divider-line"></div>
+          <div class="vs-tag">vs</div>
+        </div>
+
+        <div class="split-half split-right">
+          <div class="half-header">
+            <span class="half-tag">SCENARIO B</span>
+            <h2 class="half-title">WITH HERO</h2>
+            <span class="half-status">
+              <span class="status-pip" aria-hidden="true"></span>
+              <span>✓ OPTIMAL · ORCHESTRATED</span>
+            </span>
+          </div>
+          <div class="metrics-col">
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="14" data-suffix="">0</span></div>
+                <div class="metric-label">Agents deployed<span class="id">M.B1</span></div>
+              </div>
+              <div class="metric-indicator ok" title="Scaled">✓</div>
+            </div>
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="12" data-suffix="">0</span><span class="unit">min</span></div>
+                <div class="metric-label">Wall-clock time<span class="id">M.B2</span></div>
+              </div>
+              <div class="metric-indicator ok" title="Fast">✓</div>
+            </div>
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="64" data-suffix="K">0</span><span class="unit">tokens</span></div>
+                <div class="metric-label">Tokens consumed<span class="id">M.B3</span></div>
+              </div>
+              <div class="metric-indicator ok" title="Efficient">✓</div>
+            </div>
+            <div class="metric">
+              <div class="metric-main">
+                <div class="metric-num"><span data-count="2" data-suffix="">0</span><span class="unit">%</span></div>
+                <div class="metric-label">Error rate<span class="id">M.B4</span></div>
+              </div>
+              <div class="metric-indicator ok" title="Reliable">✓</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- =================================================
+         SECTION 03 · PIPELINE
+         ================================================= -->
+    <section id="pipeline" data-section="pipeline">
+      <div class="section-eyebrow">// PIPELINE · STAGE BREAKDOWN</div>
+      <h1 class="page-title">PIPELINE STAGES</h1>
+      <div class="section-sub">14 <span class="accent">AGENTS</span> · 5 <span class="accent">STAGES</span></div>
+
+      <div class="stage-list">
+        <div class="stage-card" data-fill="100">
+          <div class="stage-left">
+            <div class="stage-name">NAVIGATE</div>
+            <div class="stage-agents">3 agents</div>
+          </div>
+          <div class="stage-center">
+            <div class="progress-track"><div class="progress-fill green glow"></div></div>
+          </div>
+          <div class="stage-right">
+            <div class="pill green">IN PROGRESS</div>
+            <span class="stage-dot green pulse"></span>
+          </div>
+        </div>
+
+        <div class="stage-card" data-fill="72">
+          <div class="stage-left">
+            <div class="stage-name">BUILD</div>
+            <div class="stage-agents">5 agents</div>
+          </div>
+          <div class="stage-center">
+            <div class="progress-track"><div class="progress-fill cyan glow"></div></div>
+          </div>
+          <div class="stage-right">
+            <div class="pill cyan">ACTIVE</div>
+            <span class="stage-dot cyan pulse"></span>
+          </div>
+        </div>
+
+        <div class="stage-card" data-fill="35">
+          <div class="stage-left">
+            <div class="stage-name">HARDEN</div>
+            <div class="stage-agents">2 agents</div>
+          </div>
+          <div class="stage-center">
+            <div class="progress-track"><div class="progress-fill amber"></div></div>
+          </div>
+          <div class="stage-right">
+            <div class="pill amber">QUEUED</div>
+            <span class="stage-dot amber"></span>
+          </div>
+        </div>
+
+        <div class="stage-card" data-fill="18">
+          <div class="stage-left">
+            <div class="stage-name">VERIFY</div>
+            <div class="stage-agents">3 agents</div>
+          </div>
+          <div class="stage-center">
+            <div class="progress-track"><div class="progress-fill cyan"></div></div>
+          </div>
+          <div class="stage-right">
+            <div class="pill cyan">STANDBY</div>
+            <span class="stage-dot cyan"></span>
+          </div>
+        </div>
+
+        <div class="stage-card" data-fill="0">
+          <div class="stage-left">
+            <div class="stage-name">ARCHIVE</div>
+            <div class="stage-agents">1 agent</div>
+          </div>
+          <div class="stage-center">
+            <div class="progress-track"><div class="progress-fill muted"></div></div>
+          </div>
+          <div class="stage-right">
+            <div class="pill muted">IDLE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SECTION 04 · ECONOMY
+         ================================================= -->
+    <section id="economy" data-section="economy">
+      <div class="section-eyebrow">// INFRASTRUCTURE · LIVE METRICS</div>
+      <h1 class="page-title">TOKEN ECONOMY</h1>
+      <div class="hero-stat">
+        <span class="number">1,847,203</span>
+        <span class="label">TOKENS SAVED · LIFETIME</span>
+      </div>
+
+      <div class="panels">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">TOKEN UTILIZATION</div>
+              <div class="panel-sub">14-DAY WINDOW · K TOKENS / DAY</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+              <div class="chart-legend">
+                <span class="legend-item red"><span class="legend-swatch dashed"></span>WITHOUT HERO</span>
+                <span class="legend-item cyan"><span class="legend-swatch solid"></span>WITH HERO</span>
+              </div>
+              <span class="badge-down">▼ 12.4% THIS WEEK</span>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="tokenChart"></canvas>
+          </div>
+          <div class="chart-stats">
+            <div>
+              <div class="saved-num">1,847,203</div>
+              <div class="saved-label">LIFETIME SAVINGS</div>
+            </div>
+            <div class="saved-meta">
+              <div><strong>49.8%</strong> AVG REDUCTION</div>
+              <div><strong>$1,247.83</strong> COST AVOIDED</div>
+              <div>STATUS <span class="ok">● ACCELERATING</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">CIRCUIT BREAKER</div>
+              <div class="panel-sub">PROTECTION LAYER · 24H</div>
+            </div>
+            <div class="cb-status"><span class="dot"></span>ACTIVE</div>
+          </div>
+          <div class="cb-list">
+            <div class="cb-card amber">
+              <div class="cb-top">
+                <div class="cb-name">TRIPS</div>
+                <div class="cb-icon amber" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3 L22 21 L2 21 Z"/>
+                    <line x1="12" y1="10" x2="12" y2="15"/>
+                    <circle cx="12" cy="18" r="0.6" fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="cb-count pulse">7</div>
+              <div class="cb-sub">LAST TRIP: 2H AGO</div>
+            </div>
+            <div class="cb-card red">
+              <div class="cb-top">
+                <div class="cb-name">QUARANTINES</div>
+                <div class="cb-icon red" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2 L20 6 V12 C20 17 16 21 12 22 C8 21 4 17 4 12 V6 Z"/>
+                    <line x1="9" y1="12" x2="15" y2="12"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="cb-count pulse">3</div>
+              <div class="cb-sub">AWAITING REVIEW</div>
+            </div>
+            <div class="cb-card cyan">
+              <div class="cb-top">
+                <div class="cb-name">DLQ</div>
+                <div class="cb-icon cyan" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M8 12 L11 15 L16 9"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="cb-count pulse">12</div>
+              <div class="cb-sub">2 PROCESSED TODAY</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SECTION 05 · ROSTER
+         ================================================= -->
+    <section id="roster" data-section="roster">
+      <div class="section-eyebrow">// ORCHESTRATION · AGENT ROSTER</div>
+      <h1 class="section-title">SOLDIER <span class="cyan">ROSTER</span></h1>
+      <p class="section-sub"><span class="num">14</span> ACTIVE AGENTS · <span class="num">6</span> ROLES · ∞ SCALABLE</p>
+
+      <div class="stats-bar">
+        <div class="stat-pill"><span class="val">14</span> ACTIVE AGENTS</div>
+        <div class="stat-pill"><span class="val">6</span> ROLES</div>
+        <div class="stat-pill"><span class="val green">3</span> COUNCIL</div>
+        <div class="stat-pill"><span class="inf">∞</span> SCALABLE</div>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>AGENT</th>
+                <th>MODEL</th>
+                <th>ROLE</th>
+                <th>STATUS</th>
+                <th>TASKS</th>
+                <th>TOKENS</th>
+                <th>UPTIME</th>
+              </tr>
+            </thead>
+            <tbody id="rosterBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         SECTION 06 · COUNTDOWN
+         ================================================= -->
+    <section id="countdown" data-section="countdown">
+      <div class="section-eyebrow">// TIMELINE · DEADLINE TRACKER</div>
+      <h1 class="section-title">DEADLINE <span class="cyan">COUNTDOWN</span></h1>
+      <div class="section-sub">MILESTONE <span class="num">V1.3</span> · SHOOT DATE</div>
+
+      <div class="stage-grid">
+        <div>
+          <div class="gauge-wrap" id="gauge">
+            <canvas id="ring" width="720" height="720"></canvas>
+            <div class="gauge-center">
+              <div class="gauge-d" id="daysText">4<span class="unit">D</span></div>
+              <div class="gauge-hm" id="hmText">11H 23M</div>
+              <div class="gauge-s" id="secText">42S</div>
+            </div>
+          </div>
+          <div class="gauge-legend">
+            <span class="dot"></span>
+            SHOOT DEADLINE · <span class="accent">JUN 23 2026</span> · 18:00 GST
+          </div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card" data-color="green">
+            <div class="label">MILESTONES MET</div>
+            <div class="value">8<span style="color:var(--muted);font-size:18px;margin:0 4px;">/</span><span style="color:var(--muted);font-size:22px;">12</span></div>
+            <div class="foot"><span class="arrow">▲</span> 66% complete</div>
+          </div>
+          <div class="metric-card" data-color="amber">
+            <div class="label">BLOCKERS</div>
+            <div class="value">3</div>
+            <div class="foot"><span class="arrow down">▼</span> 2 resolved today</div>
+          </div>
+          <div class="metric-card" data-color="cyan">
+            <div class="label">TEAM VELOCITY</div>
+            <div class="value">14.2</div>
+            <div class="foot">pts / sprint day</div>
+          </div>
+          <div class="metric-card" data-color="amber">
+            <div class="label">RISK LEVEL</div>
+            <div class="value" style="font-size:24px;letter-spacing:1px;">MEDIUM</div>
+            <div class="foot"><span class="arrow down">▼</span> trending down</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head">// MILESTONE LOG — <span class="accent">LAST 72H</span></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-icon">✅</span>
+          <span class="tl-time">2H AGO</span>
+          <span class="tl-text">Pipeline build complete <span class="meta">— 3s build time</span></span>
+          <span class="tl-badge">DONE</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-icon">✅</span>
+          <span class="tl-time">5H AGO</span>
+          <span class="tl-text">Token economy optimization deployed <span class="meta">— 18K tokens saved</span></span>
+          <span class="tl-badge">DONE</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-icon">✅</span>
+          <span class="tl-time">12H AGO</span>
+          <span class="tl-text">Circuit breaker threshold adjusted <span class="meta">— 2 false positives eliminated</span></span>
+          <span class="tl-badge">DONE</span>
+        </div>
+        <div class="tl-item" data-state="pending">
+          <span class="tl-dot"></span>
+          <span class="tl-icon">🔄</span>
+          <span class="tl-time">28H AGO</span>
+          <span class="tl-text">Code review queue <span class="meta">— 4 PRs pending</span></span>
+          <span class="tl-badge amber">IN PROGRESS</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-icon">✅</span>
+          <span class="tl-time">48H AGO</span>
+          <span class="tl-text">Soldier roster expanded <span class="meta">— +3 agents added</span></span>
+          <span class="tl-badge cyan">EXPANDED</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="container">
+    <div>HERO v0.1.0 · HUB: LOCAL</div>
+    <div class="nav-foot">
+      <a href="#overview">01 · SHELL</a>
+      <a href="#futures">02 · TWO FUTURES</a>
+      <a href="#pipeline">03 · PIPELINE</a>
+      <a href="#economy">04 · ECONOMY</a>
+      <a href="#roster">05 · ROSTER</a>
+      <a href="#countdown">06 · COUNTDOWN</a>
+    </div>
+    <div class="build">BUILD <span id="buildTime">·····</span></div>
+  </footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ===============================================================
+  // UTILITIES
+  // ===============================================================
+  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  // Build timestamp
+  var buildEl = document.getElementById('buildTime');
+  function updateBuild() {
+    if (!buildEl) return;
+    var d = new Date();
+    buildEl.textContent = d.getFullYear() + '.' +
+      pad2(d.getMonth() + 1) + '.' + pad2(d.getDate()) + ' · ' +
+      pad2(d.getHours()) + ':' + pad2(d.getMinutes()) + ' GST';
+  }
+  updateBuild();
+  setInterval(updateBuild, 30000);
+
+  // ===============================================================
+  // STICKY NAV · active state via IntersectionObserver
+  // ===============================================================
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('#primaryNav a'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  var navById = {};
+  navLinks.forEach(function (a) { navById[a.getAttribute('data-target')] = a; });
+
+  // Smooth scroll on click (CSS already does scroll-behavior, but we add header offset)
+  navLinks.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var targetId = a.getAttribute('data-target');
+      var el = document.getElementById(targetId);
+      if (!el) return;
+      e.preventDefault();
+      var headerH = 76; // matches --header-h
+      var top = el.getBoundingClientRect().top + window.pageYOffset - headerH + 1;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  // Active state observer
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      // Pick the section closest to the top within the trigger zone
+      var active = null;
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          if (!active || entry.boundingClientRect.top < active.boundingClientRect.top) {
+            active = entry;
+          }
+        }
+      });
+      // If no entry is intersecting, fall back to closest-above-middle
+      if (!active) {
+        var mid = window.innerHeight * 0.35;
+        var best = null, bestDist = Infinity;
+        sections.forEach(function (s) {
+          var r = s.getBoundingClientRect();
+          var dist = Math.abs(r.top - mid);
+          if (r.top < window.innerHeight && r.bottom > 0 && dist < bestDist) {
+            best = s; bestDist = dist;
+          }
+        });
+        if (best) active = { target: best };
+      }
+      if (!active) return;
+      var id = active.target.getAttribute('id');
+      navLinks.forEach(function (a) { a.classList.remove('active'); });
+      if (navById[id]) navById[id].classList.add('active');
+    }, {
+      rootMargin: '-25% 0px -55% 0px',
+      threshold: [0, 0.1, 0.25, 0.5, 0.75]
+    });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+
+  // ===============================================================
+  // SECTION 1 · OVERVIEW
+  // ===============================================================
+  // Counter 0 → 21
+  (function () {
+    var counterEl = document.getElementById('counter');
+    if (!counterEl) return;
+    var target = 21;
+    var duration = 1800;
+    var startT = null;
+    function tick(ts) {
+      if (startT === null) startT = ts;
+      var elapsed = ts - startT;
+      var p = Math.min(elapsed / duration, 1);
+      var v = Math.floor(easeOutCubic(p) * target);
+      counterEl.textContent = v < 10 ? '0' + v : String(v);
+      if (p < 1) requestAnimationFrame(tick);
+      else counterEl.textContent = target < 10 ? '0' + target : String(target);
+    }
+    requestAnimationFrame(tick);
+  })();
+
+  // Stats live pulses
+  (function () {
+    var tasksEl = document.getElementById('tasksCount');
+    var queueEl = document.getElementById('queueDepth');
+    var queueState = document.getElementById('queueState');
+    if (!tasksEl) return;
+    var tasks = 1247;
+    function fmt(n) { return n.toLocaleString('en-US'); }
+    setInterval(function () {
+      tasks += 1 + Math.floor(Math.random() * 3);
+      tasksEl.textContent = fmt(tasks);
+    }, 2200);
+    setInterval(function () {
+      var q = 1 + Math.floor(Math.random() * 5);
+      queueEl.textContent = q;
+      queueState.textContent = q < 4 ? '— HEALTHY' : '— BUSY';
+    }, 3200);
+  })();
+
+  // Log feed
+  (function () {
+    var logFeed = document.getElementById('logFeed');
+    var feedWrap = document.getElementById('logFeedWrap');
+    if (!logFeed) return;
+    var pool = [
+      ['🧠', 'Council deliberation complete', '· 3/3 votes YES · model: claude-opus'],
+      ['⚡', 'Pipeline dispatch', '→ FeyaPDF · task #4821 · eta 4s'],
+      ['🛡️', 'Circuit breaker', 'OK · threshold 0.85 · trips: 0'],
+      ['📊', 'Token economy', '· 1.8M saved this cycle · Δ +24%'],
+      ['🤖', 'Soldier spawned', '· Kimi K2.6 → sandbox FEYA-04'],
+      ['🔄', 'Context sync', '· 21 sandboxes · 0 drift · 12ms'],
+      ['💾', 'Snapshot sealed', '· STATE-2026-06-19T07:21:14Z'],
+      ['🎯', 'Task queue', '· 3 pending · 2 running · 0 stalled'],
+      ['⚙️', 'Model router', '· GPT-4o → DEEPSEEK-V4 (cost opt)'],
+      ['🌐', 'Uplink', '· stable · 12ms p50 · 38ms p99'],
+      ['🔐', 'Vault', '· sealed · 7 secrets rotated'],
+      ['📡', 'Heartbeat', '· 21/21 sandboxes online · rtt 14ms'],
+      ['🚀', 'Mission queued', '· feya/redesign-landing · prio HIGH'],
+      ['🧬', 'Skill synthesis', '· gen-landing v0.4 promoted to prod'],
+      ['⚖️', 'Budget guardrail', '· 64% of daily cap remaining'],
+      ['🎲', 'Council rotation', '· seed 0xA7F3 · 3 models elected'],
+      ['🛠️', 'Soldier retool', '· SWIFT-02 armed · tools: 7'],
+      ['📈', 'Throughput spike', '· +18% over 1h baseline'],
+      ['🌙', 'Night watch', '· Council sleeps · 1 sentinel active'],
+      ['🔥', 'Hot path', '· dispatch loop optimized → -12ms'],
+      ['🧹', 'Garbage collect', '· 14MB freed from L3 cache'],
+      ['🔭', 'Forecast', '· 1.2k tasks projected by EOD'],
+      ['🪪', 'Identity', '· session m3-alpha · scope: hub'],
+      ['🛰️', 'Sat-link', '· 21/21 nodes pinging · loss 0.00%'],
+      ['🧭', 'Navigator', '· route claude → deepseek · cost ↓ 38%'],
+      ['🎛️', 'Mixer tuned', '· ratio opus:sonnet:haiku = 2:5:3']
+    ];
+    var idx = 0;
+    var MAX_LINES = 11;
+    function nowTime() {
+      var d = new Date();
+      return pad2(d.getHours()) + ':' + pad2(d.getMinutes()) + ':' + pad2(d.getSeconds());
+    }
+    function makeLine(animate) {
+      var entry = pool[idx % pool.length];
+      idx++;
+      var div = document.createElement('div');
+      div.className = 'log-line' + (animate ? ' new' : '');
+      div.innerHTML =
+        '<span class="log-time">' + nowTime() + '</span>' +
+        '<span class="log-emoji">' + entry[0] + '</span>' +
+        '<span class="log-msg"><strong style="color:var(--text);font-weight:600">' + entry[1] + '</strong> <span style="color:var(--muted)">' + entry[2] + '</span></span>';
+      return div;
+    }
+    for (var i = 0; i < 9; i++) logFeed.appendChild(makeLine(false));
+    feedWrap.scrollTop = feedWrap.scrollHeight;
+    setInterval(function () {
+      logFeed.appendChild(makeLine(true));
+      while (logFeed.children.length > MAX_LINES) {
+        logFeed.removeChild(logFeed.firstChild);
+      }
+      feedWrap.scrollTop = feedWrap.scrollHeight;
+    }, 2400);
+  })();
+
+  // ===============================================================
+  // SECTION 2 · TWO FUTURES — counter animations
+  // ===============================================================
+  (function () {
+    function choppyEase(t) {
+      var stepped = Math.floor(t * 14) / 14;
+      return stepped + (t - stepped) * 0.35;
+    }
+    function animateCounters(root, duration, easeFn) {
+      var nodes = root.querySelectorAll('[data-count]');
+      var startT = null;
+      function tick(ts) {
+        if (startT === null) startT = ts;
+        var elapsed = ts - startT;
+        var p = Math.min(elapsed / duration, 1);
+        var eased = easeFn(p);
+        nodes.forEach(function (n) {
+          var target = parseInt(n.getAttribute('data-count'), 10);
+          var suffix = n.getAttribute('data-suffix') || '';
+          var v = Math.floor(eased * target);
+          n.textContent = v + suffix;
+        });
+        if (p < 1) requestAnimationFrame(tick);
+        else {
+          nodes.forEach(function (n) {
+            var target = parseInt(n.getAttribute('data-count'), 10);
+            var suffix = n.getAttribute('data-suffix') || '';
+            n.textContent = target + suffix;
+          });
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+    var left = document.querySelector('.split-left');
+    var right = document.querySelector('.split-right');
+    if (!left || !right) return;
+
+    setTimeout(function () { animateCounters(left, 2400, choppyEase); }, 200);
+    setTimeout(function () { animateCounters(right, 1600, easeOutCubic); }, 350);
+
+    // Live drift on the right (error rate 2 occasionally pops to 3)
+    var rightNumEls = right.querySelectorAll('.metric-num span[data-count]');
+    var rightTargets = Array.prototype.map.call(rightNumEls, function (n) {
+      return {
+        el: n,
+        target: parseInt(n.getAttribute('data-count'), 10),
+        suffix: n.getAttribute('data-suffix') || '',
+        drift: parseInt(n.getAttribute('data-count'), 10) === 2 ? 1 : 0
+      };
+    });
+    setInterval(function () {
+      rightTargets.forEach(function (r) {
+        if (r.drift > 0) {
+          var v = r.target + (Math.random() < 0.5 ? 0 : 1);
+          r.el.textContent = v + r.suffix;
+          setTimeout(function () {
+            r.el.textContent = r.target + r.suffix;
+          }, 800);
+        }
+      });
+    }, 4200);
+
+    // Flicker on left every 9s
+    setInterval(function () {
+      var metrics = left.querySelectorAll('.metric');
+      metrics.forEach(function (m, i) {
+        setTimeout(function () {
+          m.style.transition = 'opacity 0.08s';
+          m.style.opacity = '0.55';
+          setTimeout(function () {
+            m.style.opacity = '1';
+            setTimeout(function () {
+              m.style.opacity = '0.7';
+              setTimeout(function () { m.style.opacity = '1'; m.style.transition = ''; }, 60);
+            }, 50);
+          }, 60);
+        }, i * 90);
+      });
+    }, 9000);
+  })();
+
+  // ===============================================================
+  // SECTION 3 · PIPELINE — staggered fills
+  // ===============================================================
+  (function () {
+    var cards = document.querySelectorAll('#pipeline .stage-card');
+    if (!cards.length) return;
+    function animateFills() {
+      cards.forEach(function (card, i) {
+        var fill = card.querySelector('.progress-fill');
+        if (!fill) return;
+        var target = parseFloat(card.getAttribute('data-fill')) || 0;
+        var delay = i * 200;
+        setTimeout(function () {
+          var start = performance.now();
+          var duration = 800;
+          function tick(now) {
+            var t = Math.min(1, (now - start) / duration);
+            var eased = easeOutCubic(t);
+            fill.style.width = (eased * target) + '%';
+            if (t < 1) requestAnimationFrame(tick);
+            else fill.style.width = target + '%';
+          }
+          requestAnimationFrame(tick);
+        }, delay);
+      });
+    }
+    // Re-animate when section enters view
+    var pipelineSection = document.getElementById('pipeline');
+    if (pipelineSection && 'IntersectionObserver' in window) {
+      var ran = false;
+      var fillObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !ran) {
+            ran = true;
+            animateFills();
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.1 });
+      fillObs.observe(pipelineSection);
+    } else {
+      animateFills();
+    }
+  })();
+
+  // ===============================================================
+  // SECTION 4 · ECONOMY — token chart + circuit stagger
+  // ===============================================================
+  (function () {
+    // ---- Circuit cards stagger ----
+    var cbCards = document.querySelectorAll('#economy .cb-card');
+    cbCards.forEach(function (card, i) {
+      setTimeout(function () { card.classList.add('in'); }, 150 + i * 150);
+    });
+
+    // ---- Token chart ----
+    var canvas = document.getElementById('tokenChart');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = Math.max(1, window.devicePixelRatio || 1);
+
+    var dataWithout = [142, 138, 145, 132, 128, 135, 130, 126, 122, 118, 124, 115, 110, 107];
+    var dataWith    = [ 71,  69,  72,  66,  64,  68,  65,  63,  61,  59,  62,  58,  55,  53];
+    var dayLabels   = ['M','T','W','T','F','S','S','M','T','W','T','F','S','S'];
+
+    var padL = 44, padR = 16, padT = 18, padB = 32;
+    var chartW = 0, chartH = 0;
+    var yMin = 0, yMax = 150;
+    var pointsWithout = [], pointsWith = [];
+
+    function resize() {
+      var rect = canvas.parentElement.getBoundingClientRect();
+      var cssW = Math.max(280, Math.floor(rect.width));
+      var cssH = Math.max(280, Math.floor(rect.height));
+      canvas.style.width = cssW + 'px';
+      canvas.style.height = cssH + 'px';
+      canvas.width = Math.floor(cssW * dpr);
+      canvas.height = Math.floor(cssH * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      chartW = cssW - padL - padR;
+      chartH = cssH - padT - padB;
+      function map(arr) {
+        return arr.map(function (v, i) {
+          var x = padL + (chartW * i) / (arr.length - 1);
+          var y = padT + chartH - ((v - yMin) / (yMax - yMin)) * chartH;
+          return { x: x, y: y };
+        });
+      }
+      pointsWithout = map(dataWithout);
+      pointsWith = map(dataWith);
+      if (animDone) draw(1);
+    }
+
+    function buildSmoothPath(c, points) {
+      if (points.length < 2) return;
+      var smoothing = 0.2;
+      c.beginPath();
+      c.moveTo(points[0].x, points[0].y);
+      for (var i = 0; i < points.length - 1; i++) {
+        var p0 = points[i - 1] || points[i];
+        var p1 = points[i];
+        var p2 = points[i + 1];
+        var p3 = points[i + 2] || p2;
+        var cp1x = p1.x + (p2.x - p0.x) * smoothing;
+        var cp1y = p1.y + (p2.y - p0.y) * smoothing;
+        var cp2x = p2.x - (p3.x - p1.x) * smoothing;
+        var cp2y = p2.y - (p3.y - p1.y) * smoothing;
+        c.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, p2.x, p2.y);
+      }
+    }
+    function buildSmoothFillPath(c, points) {
+      buildSmoothPath(c, points);
+      var last = points[points.length - 1];
+      var first = points[0];
+      var baseY = padT + chartH;
+      c.lineTo(last.x, baseY);
+      c.lineTo(first.x, baseY);
+      c.closePath();
+    }
+    function drawGrid() {
+      var ySteps = 3;
+      ctx.font = '10px ' + monoFont();
+      ctx.textBaseline = 'middle';
+      ctx.textAlign = 'right';
+      for (var i = 0; i <= ySteps; i++) {
+        var val = (yMax / ySteps) * i;
+        var y = padT + chartH - ((val - yMin) / (yMax - yMin)) * chartH;
+        ctx.strokeStyle = 'rgba(0,255,204,0.06)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padL, y);
+        ctx.lineTo(padL + chartW, y);
+        ctx.stroke();
+        ctx.fillStyle = 'rgba(90,90,106,0.95)';
+        ctx.fillText(Math.round(val) + 'K', padL - 8, y);
+      }
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+      ctx.fillStyle = 'rgba(90,90,106,0.9)';
+      var n = dayLabels.length;
+      for (var j = 0; j < n; j++) {
+        var x = padL + (chartW * j) / (n - 1);
+        ctx.fillText(dayLabels[j], x, padT + chartH + 10);
+      }
+    }
+    function monoFont() {
+      return 'JetBrains Mono, Fira Code, SF Mono, Menlo, Consolas, monospace';
+    }
+    function drawSeries(clipProgress) {
+      var clipX = padL + chartW * clipProgress;
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(padL, padT, Math.max(0.0001, clipX - padL), chartH);
+      ctx.clip();
+      // WITHOUT (red dashed + fill)
+      var gradW = ctx.createLinearGradient(0, padT, 0, padT + chartH);
+      gradW.addColorStop(0, 'rgba(255,51,85,0.32)');
+      gradW.addColorStop(1, 'rgba(255,51,85,0)');
+      ctx.fillStyle = gradW;
+      buildSmoothFillPath(ctx, pointsWithout);
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255,51,85,0.9)';
+      ctx.lineWidth = 1.6;
+      ctx.setLineDash([5, 4]);
+      buildSmoothPath(ctx, pointsWithout);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      // WITH (cyan solid + fill)
+      var gradC = ctx.createLinearGradient(0, padT, 0, padT + chartH);
+      gradC.addColorStop(0, 'rgba(0,255,204,0.45)');
+      gradC.addColorStop(1, 'rgba(0,255,204,0)');
+      ctx.fillStyle = gradC;
+      buildSmoothFillPath(ctx, pointsWith);
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(0,255,204,0.95)';
+      ctx.lineWidth = 2.2;
+      ctx.shadowColor = 'rgba(0,255,204,0.55)';
+      ctx.shadowBlur = 8;
+      buildSmoothPath(ctx, pointsWith);
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+      var lastC = pointsWith[pointsWith.length - 1];
+      if (clipX >= lastC.x) {
+        ctx.fillStyle = '#00ffcc';
+        ctx.beginPath();
+        ctx.arc(lastC.x, lastC.y, 4, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(0,255,204,0.25)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(lastC.x, lastC.y, 8, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+    var animStart = 0;
+    var animDur = 2000;
+    var animDone = false;
+    function draw(progress) {
+      ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
+      drawGrid();
+      drawSeries(progress);
+    }
+    function tick(now) {
+      if (!animStart) animStart = now;
+      var t = Math.min(1, (now - animStart) / animDur);
+      var eased = easeOutCubic(t);
+      draw(eased);
+      if (t < 1) requestAnimationFrame(tick);
+      else animDone = true;
+    }
+    // Run chart when section enters view
+    var economySection = document.getElementById('economy');
+    function startChart() {
+      resize();
+      requestAnimationFrame(tick);
+    }
+    if (economySection && 'IntersectionObserver' in window) {
+      var chartRan = false;
+      var chartObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !chartRan) {
+            chartRan = true;
+            startChart();
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.05 });
+      chartObs.observe(economySection);
+    } else {
+      startChart();
+    }
+    var resizeTimer = null;
+    window.addEventListener('resize', function () {
+      if (resizeTimer) clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if (animDone) {
+          resize();
+          draw(1);
+        }
+      }, 100);
+    });
+  })();
+
+  // ===============================================================
+  // SECTION 5 · ROSTER — 14 rows + stagger entrance
+  // ===============================================================
+  (function () {
+    var tbody = document.getElementById('rosterBody');
+    if (!tbody) return;
+    var agents = [
+      {rank:1, name:'Kimi K2.6', model:'kimi/kimi-k2.6-16k', role:'BUILDER', roleCls:'cyan', status:'ACTIVE', statusCls:'active', tasks:47, tokens:'1.2M', uptime:'3h 41m', accent:'cyan'},
+      {rank:2, name:'MiMo V2.5 Pro', model:'xiaomi-token-plan/mimo-v2.5-pro', role:'DEEP THINKER', roleCls:'cyan', status:'ACTIVE', statusCls:'active', tasks:38, tokens:'892K', uptime:'3h 12m', accent:'cyan'},
+      {rank:3, name:'MiniMax M3', model:'minimax/MiniMax-M3', role:'REASONER', roleCls:'cyan', status:'ACTIVE', statusCls:'active', tasks:31, tokens:'674K', uptime:'2h 58m', accent:'cyan'},
+      {rank:4, name:'DeepSeek V4', model:'deepseek/deepseek-v4-flash', role:'COUNCIL', roleCls:'amber', status:'ACTIVE', statusCls:'active', tasks:29, tokens:'1.1M', uptime:'4h 02m', accent:'white'},
+      {rank:5, name:'Step 3.7 Flash', model:'stepfun-plan/step-3.7-flash', role:'EXECUTOR', roleCls:'amber', status:'STANDBY', statusCls:'standby', tasks:22, tokens:'445K', uptime:'1h 44m', accent:'white'},
+      {rank:6, name:'Step 3.6', model:'stepfun-plan/step-3.6', role:'CRITIC', roleCls:'red', status:'ACTIVE', statusCls:'active', tasks:18, tokens:'382K', uptime:'2h 11m', accent:'white'},
+      {rank:7, name:'Step 3.5 Flash', model:'stepfun-plan/soldier-7b', role:'WATCHDOG', roleCls:'muted', status:'IDLE', statusCls:'idle', tasks:12, tokens:'214K', uptime:'0h 52m', accent:'white'},
+      {rank:8, name:'Grok Imagine', model:'openrouter/x-ai/grok-imagine', role:'DESIGNER', roleCls:'green', status:'ACTIVE', statusCls:'active', tasks:9, tokens:'567K', uptime:'1h 37m', accent:'white'},
+      {rank:9, name:'GLM 5.1', model:'opencode-go/glm-5.1', role:'OBSERVER', roleCls:'muted', status:'STANDBY', statusCls:'standby', tasks:7, tokens:'128K', uptime:'0h 44m', accent:'white'},
+      {rank:10, name:'Claude 3.5 Sonnet', model:'anthropic/claude-3.5-sonnet', role:'ANALYST', roleCls:'cyan', status:'ACTIVE', statusCls:'active', tasks:15, tokens:'892K', uptime:'2h 23m', accent:'white'},
+      {rank:11, name:'GPT-4o', model:'openai/gpt-4o', role:'ADVISOR', roleCls:'amber', status:'STANDBY', statusCls:'standby', tasks:11, tokens:'945K', uptime:'1h 52m', accent:'white'},
+      {rank:12, name:'Gemini 2.5 Pro', model:'google/gemini-2.5-pro', role:'RESEARCH', roleCls:'green', status:'IDLE', statusCls:'idle', tasks:6, tokens:'312K', uptime:'0h 36m', accent:'white'},
+      {rank:13, name:'Llama 4', model:'meta/llama-4', role:'SCRIBE', roleCls:'green', status:'ACTIVE', statusCls:'active', tasks:4, tokens:'89K', uptime:'0h 18m', accent:'cyan'},
+      {rank:14, name:'Qwen 3', model:'qwen/qwen-3-30b', role:'RECRUIT', roleCls:'muted', status:'STANDBY', statusCls:'standby', tasks:2, tokens:'34K', uptime:'0h 09m', accent:'cyan'}
+    ];
+    function buildRows() {
+      agents.forEach(function (a) {
+        var tr = document.createElement('tr');
+        var modelShort = a.model.split('/')[1] || a.model;
+        tr.innerHTML =
+          '<td class="rank">' + pad2(a.rank) + '</td>' +
+          '<td><div class="agent-name ' + a.accent + '">' + a.name + '</div><div class="model-id">' + a.model + '</div></td>' +
+          '<td><div class="model-id" style="font-size:11px;color:var(--text)">' + modelShort + '</div></td>' +
+          '<td><span class="role-tag ' + a.roleCls + '">' + a.role + '</span></td>' +
+          '<td><span class="status-pill-r ' + a.statusCls + '"><span class="status-dot-sm"></span>' + a.status + '</span></td>' +
+          '<td class="num-data">' + a.tasks + '</td>' +
+          '<td class="num-muted">' + a.tokens + '</td>' +
+          '<td class="num-muted">' + a.uptime + '</td>';
+        tbody.appendChild(tr);
+      });
+      // Stagger entrance
+      var rows = tbody.querySelectorAll('tr');
+      rows.forEach(function (row, i) {
+        setTimeout(function () { row.classList.add('visible'); }, 60 + i * 80);
+      });
+    }
+    var rosterSection = document.getElementById('roster');
+    if (rosterSection && 'IntersectionObserver' in window) {
+      var rosterRan = false;
+      var rosterObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !rosterRan) {
+            rosterRan = true;
+            buildRows();
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.05 });
+      rosterObs.observe(rosterSection);
+    } else {
+      buildRows();
+    }
+  })();
+
+  // ===============================================================
+  // SECTION 6 · COUNTDOWN — radial gauge + second ticker
+  // ===============================================================
+  (function () {
+    var canvas = document.getElementById('ring');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = Math.max(1, window.devicePixelRatio || 1);
+
+    function resizeCanvas() {
+      var rect = canvas.getBoundingClientRect();
+      canvas.width  = Math.round(rect.width  * dpr);
+      canvas.height = Math.round(rect.height * dpr);
+    }
+    resizeCanvas();
+
+    var SIZE = 720;
+    var cx = SIZE / 2;
+    var cy = SIZE / 2;
+    var radius = 300;
+    var stroke = 24;
+    var startAngle = -Math.PI / 2;
+    var fullSweep  = Math.PI * 2;
+
+    var progress = 0;
+    var target   = 0.35;
+    var animStart = null;
+    var animDur   = 1500;
+    var lastSec   = -1;
+
+    function colorFor(p) {
+      if (p > 0.6)  return { stroke: '#00ff88', glow: 'rgba(0,255,136,0.5)' };
+      if (p > 0.3)  return { stroke: '#ffb347', glow: 'rgba(255,179,71,0.5)' };
+      return            { stroke: '#ff3355', glow: 'rgba(255,51,85,0.5)' };
+    }
+
+    function drawRing(p) {
+      ctx.clearRect(0, 0, SIZE, SIZE);
+      // background arc
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, 0, fullSweep);
+      ctx.strokeStyle = '#161622';
+      ctx.lineWidth   = stroke;
+      ctx.lineCap     = 'round';
+      ctx.shadowColor = 'rgba(0,255,204,0.15)';
+      ctx.shadowBlur  = 8;
+      ctx.stroke();
+      // ticks
+      ctx.shadowBlur = 0;
+      for (var i = 0; i < 12; i++) {
+        var a = startAngle + (i / 12) * fullSweep;
+        var inner = radius - stroke/2 - 4;
+        var outer = radius - stroke/2 - 14;
+        var x1 = cx + Math.cos(a) * inner;
+        var y1 = cy + Math.sin(a) * inner;
+        var x2 = cx + Math.cos(a) * outer;
+        var y2 = cy + Math.sin(a) * outer;
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.strokeStyle = (i % 3 === 0) ? 'rgba(0,255,204,0.25)' : 'rgba(0,255,204,0.08)';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+      // foreground
+      var sweep = p * fullSweep;
+      if (sweep < 0.001) return;
+      var col = colorFor(p);
+      var grad = ctx.createLinearGradient(
+        cx + Math.cos(startAngle) * radius,
+        cy + Math.sin(startAngle) * radius,
+        cx + Math.cos(startAngle + sweep) * radius,
+        cy + Math.sin(startAngle + sweep) * radius
+      );
+      grad.addColorStop(0,   col.stroke);
+      grad.addColorStop(0.5, col.stroke);
+      grad.addColorStop(1,   col.stroke);
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, startAngle, startAngle + sweep, false);
+      ctx.strokeStyle = grad;
+      ctx.lineWidth   = stroke;
+      ctx.lineCap     = 'round';
+      ctx.shadowColor = col.glow;
+      ctx.shadowBlur  = 22;
+      ctx.stroke();
+      var leadX = cx + Math.cos(startAngle + sweep) * radius;
+      var leadY = cy + Math.sin(startAngle + sweep) * radius;
+      ctx.beginPath();
+      ctx.arc(leadX, leadY, stroke * 0.55, 0, fullSweep);
+      ctx.fillStyle = col.stroke;
+      ctx.shadowColor = col.glow;
+      ctx.shadowBlur  = 24;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius - stroke * 1.4, 0, fullSweep);
+      ctx.strokeStyle = col.glow.replace('0.5','0.08');
+      ctx.lineWidth   = 1;
+      ctx.shadowBlur  = 0;
+      ctx.stroke();
+    }
+
+    function tick(now) {
+      if (!animStart) animStart = now;
+      var t = Math.min(1, (now - animStart) / animDur);
+      var eased = easeOutCubic(t);
+      progress = eased * target;
+      drawRing(progress);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+
+    function startGauge() {
+      drawRing(0);
+      requestAnimationFrame(tick);
+    }
+
+    var gaugeSection = document.getElementById('countdown');
+    if (gaugeSection && 'IntersectionObserver' in window) {
+      var gRan = false;
+      var gObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !gRan) {
+            gRan = true;
+            startGauge();
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.05 });
+      gObs.observe(gaugeSection);
+    } else {
+      startGauge();
+    }
+
+    // Seconds ticker
+    var secEl = document.getElementById('secText');
+    function updateSec() {
+      if (!secEl) return;
+      var s = new Date().getSeconds();
+      var display = (60 - s) % 60;
+      if (display === lastSec) return;
+      lastSec = display;
+      secEl.textContent = (display < 10 ? '0' : '') + display + 'S';
+      secEl.classList.remove('tick');
+      void secEl.offsetWidth;
+      secEl.classList.add('tick');
+    }
+    updateSec();
+    setInterval(updateSec, 1000);
+
+    // Resize handler
+    window.addEventListener('resize', function () {
+      resizeCanvas();
+      if (animStart) drawRing(progress);
+    });
+  })();
+
+})();
+</script>
+</body>
+</html>

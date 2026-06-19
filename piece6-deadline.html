@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERO — Deadline Countdown</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --card-hi: #161622;
+    --cyan: #00ffcc;
+    --cyan-dim: rgba(0,255,204,0.5);
+    --cyan-faint: rgba(0,255,204,0.1);
+    --cyan-border: rgba(0,255,204,0.2);
+    --red: #ff3355;
+    --amber: #ffb347;
+    --green: #00ff88;
+    --green-faint: rgba(0,255,136,0.12);
+    --green-border: rgba(0,255,136,0.3);
+    --border: rgba(0,255,204,0.1);
+    --text: #d8d8e0;
+    --muted: #5a5a6a;
+    --mono: 'JetBrains Mono','Fira Code','SF Mono',Menlo,Consolas,monospace;
+    --sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    overflow-x: hidden;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,255,204,0.10), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 110%, rgba(0,255,204,0.06), transparent 60%),
+      radial-gradient(ellipse 50% 30% at 10% 80%, rgba(255,51,85,0.04), transparent 60%);
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,255,204,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,204,0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  /* ===== HEADER (consistent with all pieces) ===== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-hex {
+    width: 32px; height: 32px;
+    border: 1.5px solid var(--cyan);
+    border-radius: 4px;
+    transform: rotate(12deg);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 13px; font-weight: 700;
+    color: var(--cyan); text-shadow: 0 0 8px var(--cyan-dim);
+    box-shadow: 0 0 12px var(--cyan-faint);
+  }
+  .logo-mark {
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cyan);
+    text-shadow: 0 0 16px var(--cyan-dim), 0 0 40px var(--cyan-faint);
+    letter-spacing: -1px;
+  }
+  .hub-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--green);
+    padding: 8px 14px;
+    border: 1px solid rgba(0,255,136,0.15);
+    border-radius: 999px;
+    background: rgba(0,255,136,0.04);
+  }
+  .status-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--green); }
+    50% { opacity: 0.5; box-shadow: 0 0 14px var(--green), 0 0 24px rgba(0,255,136,0.3); }
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-border), transparent);
+    opacity: 0.5;
+  }
+  /* ===== MAIN ===== */
+  main { flex: 1; padding: 48px 0 24px; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .title {
+    font-family: var(--mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .title .cyan { color: var(--cyan); text-shadow: 0 0 20px var(--cyan-dim); }
+  .subtitle {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+  }
+  .subtitle .num { color: var(--cyan); font-weight: 700; }
+
+  /* ===== GAUGE STAGE ===== */
+  .stage {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+  .gauge-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.4s ease;
+  }
+  .gauge-wrap:hover {
+    filter: drop-shadow(0 0 18px var(--cyan-dim));
+  }
+  .gauge-wrap canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .gauge-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    text-align: center;
+  }
+  .gauge-d {
+    font-family: var(--mono);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -2px;
+    line-height: 1;
+    text-shadow: 0 0 24px rgba(0,0,0,0.6);
+  }
+  .gauge-d .unit {
+    font-size: 24px;
+    color: var(--muted);
+    margin-left: 2px;
+  }
+  .gauge-hm {
+    font-family: var(--mono);
+    font-size: 18px;
+    color: var(--text);
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+  .gauge-s {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--amber);
+    margin-top: 4px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255,179,71,0.5);
+  }
+  .gauge-s.tick { animation: tick 0.4s ease-out; }
+  @keyframes tick {
+    0%   { opacity: 0.4; transform: translateY(-2px); }
+    50%  { opacity: 1;   transform: translateY(0); }
+    100% { opacity: 1;   transform: translateY(0); }
+  }
+  .gauge-legend {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .gauge-legend .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 6px var(--amber);
+    margin-right: 8px;
+    vertical-align: middle;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .gauge-legend .accent { color: var(--amber); }
+
+  /* ===== METRIC CARDS ===== */
+  .metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .metric {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0)), var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 16px 22px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .metric::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--accent, var(--cyan));
+    box-shadow: 0 0 12px var(--accent, var(--cyan));
+  }
+  .metric:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent, var(--cyan-border));
+    box-shadow: 0 8px 24px -10px var(--accent, var(--cyan-dim));
+  }
+  .metric .label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .metric .value {
+    font-family: var(--mono);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent, var(--cyan));
+    letter-spacing: -1px;
+    line-height: 1;
+    text-shadow: 0 0 16px var(--accent-glow, var(--cyan-dim));
+  }
+  .metric .foot {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .metric .foot .arrow { color: var(--green); }
+  .metric .foot .arrow.down { color: var(--amber); }
+  .metric[data-color="green"]   { --accent: var(--green); --accent-glow: rgba(0,255,136,0.45); }
+  .metric[data-color="amber"]   { --accent: var(--amber); --accent-glow: rgba(255,179,71,0.45); }
+  .metric[data-color="cyan"]    { --accent: var(--cyan);  --accent-glow: var(--cyan-dim); }
+  .metric[data-color="red"]     { --accent: var(--red);   --accent-glow: rgba(255,51,85,0.45); }
+
+  /* ===== TIMELINE ===== */
+  .section-head {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .section-head .accent { color: var(--cyan); }
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 6px; bottom: 6px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--cyan-border), transparent);
+  }
+  .tl-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    opacity: 0;
+    transform: translateX(-12px);
+    animation: slideIn 0.5s ease forwards;
+  }
+  .tl-item:nth-child(1) { animation-delay: 0.0s; }
+  .tl-item:nth-child(2) { animation-delay: 0.1s; }
+  .tl-item:nth-child(3) { animation-delay: 0.2s; }
+  .tl-item:nth-child(4) { animation-delay: 0.3s; }
+  .tl-item:nth-child(5) { animation-delay: 0.4s; }
+  @keyframes slideIn {
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .tl-item:hover {
+    transform: translateX(2px);
+    border-color: var(--cyan-border);
+    box-shadow: 0 4px 16px -8px var(--cyan-dim);
+  }
+  .tl-dot {
+    position: absolute;
+    left: -24px; top: 50%;
+    transform: translateY(-50%);
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 2px solid var(--green);
+    box-shadow: 0 0 8px rgba(0,255,136,0.5);
+  }
+  .tl-item[data-state="pending"] .tl-dot {
+    border-color: var(--amber);
+    box-shadow: 0 0 8px rgba(255,179,71,0.5);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .tl-icon {
+    font-size: 14px;
+    width: 18px;
+    text-align: center;
+  }
+  .tl-time {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    min-width: 70px;
+  }
+  .tl-text {
+    flex: 1;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .tl-text .meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-left: 8px;
+  }
+  .tl-badge {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    border: 1px solid var(--green-border);
+    background: var(--green-faint);
+    color: var(--green);
+  }
+  .tl-badge.amber {
+    border-color: rgba(255,179,71,0.3);
+    background: rgba(255,179,71,0.1);
+    color: var(--amber);
+  }
+  .tl-badge.cyan {
+    border-color: var(--cyan-border);
+    background: var(--cyan-faint);
+    color: var(--cyan);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    margin-top: 48px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    position: relative;
+  }
+  footer::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan-border), transparent);
+    opacity: 0.5;
+  }
+  .nav {
+    display: flex;
+    gap: 8px;
+  }
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+  .nav a:hover {
+    color: var(--cyan);
+    border-color: var(--cyan-border);
+    background: var(--cyan-faint);
+  }
+  .nav a.active {
+    color: var(--cyan);
+    border-color: var(--cyan-border);
+    background: var(--cyan-faint);
+    box-shadow: 0 0 12px var(--cyan-faint);
+  }
+  .build {
+    color: var(--muted);
+  }
+  .build .sep { color: var(--border); margin: 0 8px; }
+  .build .acc { color: var(--cyan); }
+
+  /* responsive */
+  @media (max-width: 880px) {
+    .stage { grid-template-columns: 1fr; gap: 36px; }
+    .metrics { max-width: 360px; margin: 0 auto; width: 100%; }
+    .title { font-size: 22px; letter-spacing: 1px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">
+      <div class="logo-hex">H</div>
+      <div class="logo-mark">HERO</div>
+    </div>
+    <div class="hub-status">
+      <span class="status-dot"></span>
+      HUB ONLINE
+    </div>
+  </header>
+
+  <main>
+    <div class="eyebrow">// TIMELINE · DEADLINE TRACKER</div>
+    <h1 class="title">DEADLINE <span class="cyan">COUNTDOWN</span></h1>
+    <div class="subtitle">MILESTONE <span class="num">V1.3</span> · SHOOT DATE</div>
+
+    <!-- GAUGE STAGE -->
+    <section class="stage">
+      <div>
+        <div class="gauge-wrap" id="gauge">
+          <canvas id="ring" width="720" height="720"></canvas>
+          <div class="gauge-center">
+            <div class="gauge-d" id="daysText">4<span class="unit">D</span></div>
+            <div class="gauge-hm" id="hmText">11H 23M</div>
+            <div class="gauge-s" id="secText">42S</div>
+          </div>
+        </div>
+        <div class="gauge-legend">
+          <span class="dot"></span>
+          SHOOT DEADLINE · <span class="accent">JUN 23 2026</span> · 18:00 GST
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric" data-color="green">
+          <div class="label">MILESTONES MET</div>
+          <div class="value">8<span style="color:var(--muted);font-size:18px;margin:0 4px;">/</span><span style="color:var(--muted);font-size:22px;">12</span></div>
+          <div class="foot"><span class="arrow">▲</span> 66% complete</div>
+        </div>
+        <div class="metric" data-color="amber">
+          <div class="label">BLOCKERS</div>
+          <div class="value">3</div>
+          <div class="foot"><span class="arrow down">▼</span> 2 resolved today</div>
+        </div>
+        <div class="metric" data-color="cyan">
+          <div class="label">TEAM VELOCITY</div>
+          <div class="value">14.2</div>
+          <div class="foot">pts / sprint day</div>
+        </div>
+        <div class="metric" data-color="amber">
+          <div class="label">RISK LEVEL</div>
+          <div class="value" style="font-size:24px;letter-spacing:1px;">MEDIUM</div>
+          <div class="foot"><span class="arrow down">▼</span> trending down</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <div class="section-head">// MILESTONE LOG — <span class="accent">LAST 72H</span></div>
+    <div class="timeline">
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <span class="tl-icon">✅</span>
+        <span class="tl-time">2H AGO</span>
+        <span class="tl-text">Pipeline build complete <span class="meta">— 3s build time</span></span>
+        <span class="tl-badge">DONE</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <span class="tl-icon">✅</span>
+        <span class="tl-time">5H AGO</span>
+        <span class="tl-text">Token economy optimization deployed <span class="meta">— 18K tokens saved</span></span>
+        <span class="tl-badge">DONE</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <span class="tl-icon">✅</span>
+        <span class="tl-time">12H AGO</span>
+        <span class="tl-text">Circuit breaker threshold adjusted <span class="meta">— 2 false positives eliminated</span></span>
+        <span class="tl-badge">DONE</span>
+      </div>
+      <div class="tl-item" data-state="pending">
+        <span class="tl-dot"></span>
+        <span class="tl-icon">🔄</span>
+        <span class="tl-time">28H AGO</span>
+        <span class="tl-text">Code review queue <span class="meta">— 4 PRs pending</span></span>
+        <span class="tl-badge amber">IN PROGRESS</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <span class="tl-icon">✅</span>
+        <span class="tl-time">48H AGO</span>
+        <span class="tl-text">Soldier roster expanded <span class="meta">— +3 agents added</span></span>
+        <span class="tl-badge cyan">EXPANDED</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="nav">
+      <a href="piece1-hero-shell.html">01 · SHELL</a>
+      <a href="piece2-two-futures.html">02 · FUTURES</a>
+      <a href="piece3-pipeline-bars.html">03 · PIPELINE</a>
+      <a href="piece4-token-circuit.html">04 · CIRCUIT</a>
+      <a href="piece5-soldier-roster.html">05 · ROSTER</a>
+      <a href="piece6-deadline.html" class="active">06 · DEADLINE</a>
+    </div>
+    <div class="build" id="build">BUILD <span class="acc" id="buildTime">·····</span></div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  // ===== Build timestamp =====
+  function updateBuild() {
+    var d = new Date();
+    var pad = function(n){ return n < 10 ? '0' + n : '' + n; };
+    var stamp = d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()) +
+                ' · ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ' GST';
+    document.getElementById('buildTime').textContent = stamp;
+  }
+  updateBuild();
+  setInterval(updateBuild, 30000);
+
+  // ===== Canvas Radial Gauge =====
+  var canvas = document.getElementById('ring');
+  var ctx = canvas.getContext('2d');
+  var dpr = Math.max(1, window.devicePixelRatio || 1);
+
+  function resizeCanvas() {
+    var rect = canvas.getBoundingClientRect();
+    canvas.width  = Math.round(rect.width  * dpr);
+    canvas.height = Math.round(rect.height * dpr);
+  }
+  resizeCanvas();
+
+  // Geometry — 720 internal, drawn at 1:1 mapping
+  var SIZE = 720;
+  var cx = SIZE / 2;
+  var cy = SIZE / 2;
+  var radius = 300;
+  var stroke = 24; // 12px CSS * 2x DPR
+  var startAngle = -Math.PI / 2; // 12 o'clock
+  var fullSweep  = Math.PI * 2;
+
+  // State
+  var progress = 0.35;        // 35% remaining → amber zone
+  var target   = 0.35;
+  var animStart = null;
+  var animDur   = 1500;
+  var lastSec   = -1;
+
+  // Color by urgency
+  function colorFor(p) {
+    if (p > 0.6)  return { stroke: '#00ff88', glow: 'rgba(0,255,136,0.5)' };
+    if (p > 0.3)  return { stroke: '#ffb347', glow: 'rgba(255,179,71,0.5)' };
+    return         { stroke: '#ff3355', glow: 'rgba(255,51,85,0.5)' };
+  }
+
+  function drawRing(p) {
+    ctx.clearRect(0, 0, SIZE, SIZE);
+
+    // Background arc — full circle
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, 0, fullSweep);
+    ctx.strokeStyle = '#161622';
+    ctx.lineWidth   = stroke;
+    ctx.lineCap     = 'round';
+
+    // Soft outer glow on background ring
+    ctx.shadowColor = 'rgba(0,255,204,0.15)';
+    ctx.shadowBlur  = 8;
+    ctx.stroke();
+
+    // Tick marks every 30°
+    ctx.shadowBlur = 0;
+    for (var i = 0; i < 12; i++) {
+      var a = startAngle + (i / 12) * fullSweep;
+      var inner = radius - stroke/2 - 4;
+      var outer = radius - stroke/2 - 14;
+      var x1 = cx + Math.cos(a) * inner;
+      var y1 = cy + Math.sin(a) * inner;
+      var x2 = cx + Math.cos(a) * outer;
+      var y2 = cy + Math.sin(a) * outer;
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = (i % 3 === 0) ? 'rgba(0,255,204,0.25)' : 'rgba(0,255,204,0.08)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+
+    // Foreground arc — gradient stroke
+    var sweep = p * fullSweep;
+    if (sweep < 0.001) return;
+
+    var col = colorFor(p);
+
+    // Build a conic-like gradient by sampling stops along the arc
+    var grad = ctx.createLinearGradient(
+      cx + Math.cos(startAngle) * radius,
+      cy + Math.sin(startAngle) * radius,
+      cx + Math.cos(startAngle + sweep) * radius,
+      cy + Math.sin(startAngle + sweep) * radius
+    );
+    grad.addColorStop(0,    col.stroke);
+    grad.addColorStop(0.5,  col.stroke);
+    grad.addColorStop(1,    col.stroke);
+
+    // Cap indicator at the leading edge
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, startAngle, startAngle + sweep, false);
+    ctx.strokeStyle = grad;
+    ctx.lineWidth   = stroke;
+    ctx.lineCap     = 'round';
+    ctx.shadowColor = col.glow;
+    ctx.shadowBlur  = 22;
+    ctx.stroke();
+
+    // Leading-edge bright cap dot
+    var leadX = cx + Math.cos(startAngle + sweep) * radius;
+    var leadY = cy + Math.sin(startAngle + sweep) * radius;
+    ctx.beginPath();
+    ctx.arc(leadX, leadY, stroke * 0.55, 0, fullSweep);
+    ctx.fillStyle = col.stroke;
+    ctx.shadowColor = col.glow;
+    ctx.shadowBlur  = 24;
+    ctx.fill();
+
+    // Inner soft halo
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius - stroke * 1.4, 0, fullSweep);
+    ctx.strokeStyle = col.glow.replace('0.5','0.08');
+    ctx.lineWidth   = 1;
+    ctx.shadowBlur  = 0;
+    ctx.stroke();
+  }
+
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function tick(now) {
+    if (!animStart) animStart = now;
+    var t = Math.min(1, (now - animStart) / animDur);
+    var eased = easeOutCubic(t);
+    progress = eased * target;
+    drawRing(progress);
+    if (t < 1) requestAnimationFrame(tick);
+  }
+
+  // Initial draw, then animate in
+  drawRing(0);
+  requestAnimationFrame(tick);
+
+  // ===== Seconds ticker (visual pulse) =====
+  var secEl = document.getElementById('secText');
+  function updateSec() {
+    var s = new Date().getSeconds();
+    var display = (60 - s) % 60;
+    if (display === lastSec) return;
+    lastSec = display;
+    secEl.textContent = (display < 10 ? '0' : '') + display + 'S';
+    secEl.classList.remove('tick');
+    // force reflow
+    void secEl.offsetWidth;
+    secEl.classList.add('tick');
+  }
+  updateSec();
+  setInterval(updateSec, 1000);
+
+  // ===== Center text adjustments on resize =====
+  window.addEventListener('resize', function(){
+    resizeCanvas();
+    drawRing(progress);
+  });
+})();
+</script>
+</body>
+</html>
