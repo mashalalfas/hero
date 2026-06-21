@@ -33,7 +33,7 @@ from hero.commands.score import _score_pipeline, _score_verify
 # ── Main API ────────────────────────────────────────────────────────────
 
 
-def run_verify(sandbox_path: str | Path, verbose: bool = False) -> dict[str, Any]:
+def run_verify(sandbox_path: str | Path, verbose: bool = False, **kwargs: Any) -> dict[str, Any]:
     """Run VERIFY composite gate and return structured results.
 
     Scores all pipeline stages (pre-commit, build, harden, legal, cipr)
