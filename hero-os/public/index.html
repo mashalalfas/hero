@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERO OS — Agentic Operating System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="os-header">
+      <div class="header-left">
+        <div class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">HERO<span class="logo-os">OS</span></span>
+        </div>
+        <div class="header-status">
+          <span class="status-indicator" id="connection-status"></span>
+          <span class="status-text" id="connection-text">Connecting...</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-metrics">
+          <div class="metric">
+            <span class="metric-label">TOKENS</span>
+            <span class="metric-value" id="metric-tokens">0</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">AGENTS</span>
+            <span class="metric-value" id="metric-agents">0</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">CALLS</span>
+            <span class="metric-value" id="metric-calls">0</span>
+          </div>
+        </div>
+        <button class="btn-icon" id="btn-settings" title="Settings">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Grid -->
+    <main class="os-main">
+      <!-- Left: Pipeline Flow -->
+      <section class="panel panel-pipeline">
+        <div class="panel-header">
+          <h2>Pipeline Flow</h2>
+          <div class="panel-controls">
+            <button class="btn-sm" id="btn-zoom-in" title="Zoom in">+</button>
+            <button class="btn-sm" id="btn-zoom-out" title="Zoom out">−</button>
+            <button class="btn-sm" id="btn-zoom-reset" title="Reset">↺</button>
+          </div>
+        </div>
+        <div class="pipeline-container" id="pipeline-container">
+          <div class="pipeline-flow" id="pipeline-flow">
+            <!-- Pipeline nodes rendered by JS -->
+          </div>
+          <div class="pipeline-legend">
+            <span class="legend-item"><span class="legend-dot legend-idle"></span> Idle</span>
+            <span class="legend-item"><span class="legend-dot legend-running"></span> Running</span>
+            <span class="legend-item"><span class="legend-dot legend-done"></span> Done</span>
+            <span class="legend-item"><span class="legend-dot legend-error"></span> Error</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- Command Center -->
+        <section class="panel panel-command">
+          <div class="panel-header">
+            <h2>Command Center</h2>
+          </div>
+          <div class="command-form">
+            <div class="input-group">
+              <label class="input-label" for="sandbox-name">Sandbox</label>
+              <input type="text" id="sandbox-name" class="input" placeholder="my-project" autocomplete="off">
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="task-desc">Task</label>
+              <textarea id="task-desc" class="input input-textarea" rows="3" placeholder="Describe what you want HERO to build..."></textarea>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label class="input-label" for="model-select">Model</label>
+                <select id="model-select" class="input">
+                  <option value="">Auto (Lead)</option>
+                  <option value="stepfun/step-3.7-flash">Step 3.7 Flash</option>
+                  <option value="minimax/MiniMax-M2.7">MiniMax M2.7</option>
+                  <option value="openrouter/auto">OpenRouter Auto</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="mode-select">Mode</label>
+                <select id="mode-select" class="input">
+                  <option value="quick">Quick</option>
+                  <option value="full">Full Pipeline</option>
+                  <option value="ci">CI Only</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn-primary" id="btn-spawn">
+              <span class="btn-icon">▶</span>
+              <span>Deploy Army</span>
+            </button>
+          </div>
+          <div class="command-output" id="command-output"></div>
+        </section>
+
+        <!-- Agent Grid -->
+        <section class="panel panel-agents">
+          <div class="panel-header">
+            <h2>Active Agents</h2>
+            <span class="badge badge-live" id="agent-count">0 active</span>
+          </div>
+          <div class="agents-grid" id="agents-grid">
+            <!-- Agent cards rendered by JS -->
+          </div>
+        </section>
+
+        <!-- Task Queue -->
+        <section class="panel panel-queue">
+          <div class="panel-header">
+            <h2>Dispatch Queue</h2>
+            <button class="btn-sm btn-ghost" id="btn-refresh-queue">↻ Refresh</button>
+          </div>
+          <div class="queue-list" id="queue-list">
+            <div class="empty-queue">No pending tasks</div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <h3 id="modal-title">Sandbox Detail</h3>
+          <button class="btn-icon btn-close" id="modal-close">×</button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>

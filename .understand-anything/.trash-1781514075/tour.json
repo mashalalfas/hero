@@ -1,0 +1,129 @@
+{
+  "steps": [
+    {
+      "order": 1,
+      "title": "Project Overview",
+      "description": "Start with the README to understand the project's purpose and architecture.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Src",
+      "description": "Source code in src/.",
+      "nodeIds": [
+        "file:src/hero/__init__.py",
+        "file:src/hero/__main__.py",
+        "file:src/hero/analysis_cache.py",
+        "function:src/hero/analysis_cache.py:_hash_paths",
+        "function:src/hero/analysis_cache.py:_cache_key"
+      ]
+    },
+    {
+      "order": 4,
+      "title": ".Github",
+      "description": "Source code in .github/.",
+      "nodeIds": [
+        "function:.github/workflows/bandit.yml:section"
+      ]
+    },
+    {
+      "order": 5,
+      "title": ".Understand Anything",
+      "description": "Source code in .understand-anything/.",
+      "nodeIds": [
+        "function:.understand-anything/.trash-1780994847/assembled-graph.json:section",
+        "function:.understand-anything/.trash-1780994847/batch-1.json:section",
+        "function:.understand-anything/.trash-1780994847/batch-10.json:section",
+        "function:.understand-anything/.trash-1780994847/batch-11.json:section",
+        "function:.understand-anything/.trash-1780994847/batch-12.json:section"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Root",
+      "description": "Source code in root/.",
+      "nodeIds": [
+        "function:AGENTS.md:section",
+        "function:ARCHITECT_BLUEPRINT.md:section",
+        "function:COUNCIL_REPORT_HERO_REBUILD.md:section",
+        "function:COUNCIL_REPORT_LEGAL_PHASE.md:section",
+        "function:HEARTBEAT.md:section"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Docs",
+      "description": "Source code in docs/.",
+      "nodeIds": [
+        "function:docs/EXCHANGE_LAYER_IMPLEMENT.md:section",
+        "function:docs/EXCHANGE_LAYER_SPEC.md:section",
+        "function:docs/PIPELINE.md:section",
+        "function:docs/SUPERPOWER_INTEGRATION_PROPOSAL.md:section",
+        "function:docs/TEACH_SKILL_BUILD.md:section"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Graphify Out",
+      "description": "Source code in graphify-out/.",
+      "nodeIds": [
+        "function:graphify-out/.graphify_labels.json:section",
+        "function:graphify-out/GRAPH_REPORT.md:section",
+        "function:graphify-out/graph.json:section",
+        "function:graphify-out/manifest.json:section",
+        "function:graphify-out/cache/ast/007fbc919a1ffbbdebcb0f9a7038635692650ced8104140ce4dc3e6cf5f3a870.json:section"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Prompts",
+      "description": "Source code in prompts/.",
+      "nodeIds": [
+        "function:prompts/LEAD_BRIEF.md:section",
+        "function:prompts/soldier-1-design-system.md:section",
+        "function:prompts/soldier-2-api-layer.md:section",
+        "function:prompts/soldier-3-components.md:section",
+        "function:prompts/soldier-4-control-features.md:section"
+      ]
+    },
+    {
+      "order": 10,
+      "title": ".Openclaw",
+      "description": "Source code in .openclaw/.",
+      "nodeIds": [
+        "function:.openclaw/workspace-state.json:section"
+      ]
+    },
+    {
+      "order": 11,
+      "title": "Memory",
+      "description": "Source code in memory/.",
+      "nodeIds": [
+        "function:memory/2026-06-01.md:section",
+        "function:memory/2026-06-13.md:section"
+      ]
+    },
+    {
+      "order": 12,
+      "title": "Scripts",
+      "description": "Source code in scripts/.",
+      "nodeIds": [
+        "file:scripts/install-hero.sh"
+      ]
+    },
+    {
+      "order": 13,
+      "title": "Tests",
+      "description": "Source code in tests/.",
+      "nodeIds": [
+        "file:tests/__init__.py",
+        "file:tests/conftest.py",
+        "function:tests/conftest.py:clear_state_cache",
+        "file:tests/test_analysis_cache.py",
+        "function:tests/test_analysis_cache.py:clean_cache"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/hero/web/static/css/animations.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 21,
+      "nonEmptyLines": 17,
+      "metrics": {}
+    },
+    {
+      "path": "src/hero/web/static/css/base.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 63,
+      "nonEmptyLines": 52,
+      "metrics": {}
+    },
+    {
+      "path": "src/hero/web/static/css/components.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 546,
+      "nonEmptyLines": 513,
+      "metrics": {}
+    },
+    {
+      "path": "src/hero/web/static/css/layout.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 55,
+      "nonEmptyLines": 49,
+      "metrics": {}
+    },
+    {
+      "path": "src/hero/web/static/css/tokens.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 90,
+      "nonEmptyLines": 74,
+      "metrics": {}
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "nodes": [
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Document: AGENTS.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:AGENTS.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "AGENTS.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:ARCHITECT_BLUEPRINT.md",
+      "type": "document",
+      "name": "ARCHITECT_BLUEPRINT.md",
+      "filePath": "ARCHITECT_BLUEPRINT.md",
+      "summary": "Document: ARCHITECT_BLUEPRINT.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:ARCHITECT_BLUEPRINT.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "ARCHITECT_BLUEPRINT.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:COUNCIL_REPORT_HERO_REBUILD.md",
+      "type": "document",
+      "name": "COUNCIL_REPORT_HERO_REBUILD.md",
+      "filePath": "COUNCIL_REPORT_HERO_REBUILD.md",
+      "summary": "Document: COUNCIL_REPORT_HERO_REBUILD.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:COUNCIL_REPORT_HERO_REBUILD.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "COUNCIL_REPORT_HERO_REBUILD.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:COUNCIL_REPORT_LEGAL_PHASE.md",
+      "type": "document",
+      "name": "COUNCIL_REPORT_LEGAL_PHASE.md",
+      "filePath": "COUNCIL_REPORT_LEGAL_PHASE.md",
+      "summary": "Document: COUNCIL_REPORT_LEGAL_PHASE.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:COUNCIL_REPORT_LEGAL_PHASE.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "COUNCIL_REPORT_LEGAL_PHASE.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:HEARTBEAT.md",
+      "type": "document",
+      "name": "HEARTBEAT.md",
+      "filePath": "HEARTBEAT.md",
+      "summary": "Document: HEARTBEAT.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:HEARTBEAT.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "HEARTBEAT.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:HERO_V4_PLAN.md",
+      "type": "document",
+      "name": "HERO_V4_PLAN.md",
+      "filePath": "HERO_V4_PLAN.md",
+      "summary": "Document: HERO_V4_PLAN.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:HERO_V4_PLAN.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "HERO_V4_PLAN.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:IDENTITY.md",
+      "type": "document",
+      "name": "IDENTITY.md",
+      "filePath": "IDENTITY.md",
+      "summary": "Document: IDENTITY.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:IDENTITY.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "IDENTITY.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:Ideas_by_me.md",
+      "type": "document",
+      "name": "Ideas_by_me.md",
+      "filePath": "Ideas_by_me.md",
+      "summary": "Document: Ideas_by_me.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Ideas_by_me.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "Ideas_by_me.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:KIMI_NOTION_PLAN.md",
+      "type": "document",
+      "name": "KIMI_NOTION_PLAN.md",
+      "filePath": "KIMI_NOTION_PLAN.md",
+      "summary": "Document: KIMI_NOTION_PLAN.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:KIMI_NOTION_PLAN.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "KIMI_NOTION_PLAN.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:LEAD_DISPATCH_FIX.md",
+      "type": "document",
+      "name": "LEAD_DISPATCH_FIX.md",
+      "filePath": "LEAD_DISPATCH_FIX.md",
+      "summary": "Document: LEAD_DISPATCH_FIX.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:LEAD_DISPATCH_FIX.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "LEAD_DISPATCH_FIX.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:MINIMAX_KILL_FIX.md",
+      "type": "document",
+      "name": "MINIMAX_KILL_FIX.md",
+      "filePath": "MINIMAX_KILL_FIX.md",
+      "summary": "Document: MINIMAX_KILL_FIX.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:MINIMAX_KILL_FIX.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "MINIMAX_KILL_FIX.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:NAVIGATION_TREE.md",
+      "type": "document",
+      "name": "NAVIGATION_TREE.md",
+      "filePath": "NAVIGATION_TREE.md",
+      "summary": "Document: NAVIGATION_TREE.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:NAVIGATION_TREE.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "NAVIGATION_TREE.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:PIPELINE_DESIGN.md",
+      "type": "document",
+      "name": "PIPELINE_DESIGN.md",
+      "filePath": "PIPELINE_DESIGN.md",
+      "summary": "Document: PIPELINE_DESIGN.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:PIPELINE_DESIGN.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "PIPELINE_DESIGN.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:PLAN.md",
+      "type": "document",
+      "name": "PLAN.md",
+      "filePath": "PLAN.md",
+      "summary": "Document: PLAN.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:PLAN.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "PLAN.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Document: README.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:README.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "README.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:RESOURCES.md",
+      "type": "document",
+      "name": "RESOURCES.md",
+      "filePath": "RESOURCES.md",
+      "summary": "Document: RESOURCES.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:RESOURCES.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "RESOURCES.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:SOUL.md",
+      "type": "document",
+      "name": "SOUL.md",
+      "filePath": "SOUL.md",
+      "summary": "Document: SOUL.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:SOUL.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "SOUL.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:SPEC.md",
+      "type": "document",
+      "name": "SPEC.md",
+      "filePath": "SPEC.md",
+      "summary": "Document: SPEC.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:SPEC.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "SPEC.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:SPEC_VIEWPORT.md",
+      "type": "document",
+      "name": "SPEC_VIEWPORT.md",
+      "filePath": "SPEC_VIEWPORT.md",
+      "summary": "Document: SPEC_VIEWPORT.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:SPEC_VIEWPORT.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "SPEC_VIEWPORT.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:TOOLS.md",
+      "type": "document",
+      "name": "TOOLS.md",
+      "filePath": "TOOLS.md",
+      "summary": "Document: TOOLS.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:TOOLS.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "TOOLS.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

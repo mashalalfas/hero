@@ -1,0 +1,485 @@
+{
+  "nodes": [
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-27.json",
+      "type": "config",
+      "name": "batch-27.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-27.json",
+      "summary": "Config: batch-27.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-27.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-27.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-28.json",
+      "type": "config",
+      "name": "batch-28.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-28.json",
+      "summary": "Config: batch-28.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-28.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-28.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-29.json",
+      "type": "config",
+      "name": "batch-29.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-29.json",
+      "summary": "Config: batch-29.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-29.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-29.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-3.json",
+      "type": "config",
+      "name": "batch-3.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-3.json",
+      "summary": "Config: batch-3.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-3.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-3.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-30.json",
+      "type": "config",
+      "name": "batch-30.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-30.json",
+      "summary": "Config: batch-30.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-30.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-30.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-31.json",
+      "type": "config",
+      "name": "batch-31.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-31.json",
+      "summary": "Config: batch-31.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-31.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-31.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-32.json",
+      "type": "config",
+      "name": "batch-32.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-32.json",
+      "summary": "Config: batch-32.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-32.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-32.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-33.json",
+      "type": "config",
+      "name": "batch-33.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-33.json",
+      "summary": "Config: batch-33.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-33.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-33.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-34.json",
+      "type": "config",
+      "name": "batch-34.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-34.json",
+      "summary": "Config: batch-34.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-34.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-34.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-35.json",
+      "type": "config",
+      "name": "batch-35.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-35.json",
+      "summary": "Config: batch-35.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-35.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-35.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-36.json",
+      "type": "config",
+      "name": "batch-36.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-36.json",
+      "summary": "Config: batch-36.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-36.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-36.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-37.json",
+      "type": "config",
+      "name": "batch-37.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-37.json",
+      "summary": "Config: batch-37.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-37.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-37.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-4.json",
+      "type": "config",
+      "name": "batch-4.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-4.json",
+      "summary": "Config: batch-4.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-4.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-4.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-5.json",
+      "type": "config",
+      "name": "batch-5.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-5.json",
+      "summary": "Config: batch-5.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-5.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-5.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-6.json",
+      "type": "config",
+      "name": "batch-6.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-6.json",
+      "summary": "Config: batch-6.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-6.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-6.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-7.json",
+      "type": "config",
+      "name": "batch-7.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-7.json",
+      "summary": "Config: batch-7.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-7.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-7.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-8.json",
+      "type": "config",
+      "name": "batch-8.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-8.json",
+      "summary": "Config: batch-8.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-8.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-8.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batch-9.json",
+      "type": "config",
+      "name": "batch-9.json",
+      "filePath": ".understand-anything/.trash-1780994847/batch-9.json",
+      "summary": "Config: batch-9.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batch-9.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batch-9.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/batches.json",
+      "type": "config",
+      "name": "batches.json",
+      "filePath": ".understand-anything/.trash-1780994847/batches.json",
+      "summary": "Config: batches.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/batches.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/batches.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.trash-1780994847/fingerprint-input.json",
+      "type": "config",
+      "name": "fingerprint-input.json",
+      "filePath": ".understand-anything/.trash-1780994847/fingerprint-input.json",
+      "summary": "Config: fingerprint-input.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/.trash-1780994847/fingerprint-input.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/.trash-1780994847/fingerprint-input.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

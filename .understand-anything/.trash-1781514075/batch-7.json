@@ -1,0 +1,1566 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/commands/viewport.py",
+      "type": "file",
+      "name": "viewport.py",
+      "filePath": "src/hero/commands/viewport.py",
+      "summary": "File: viewport.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/viewport.py:viewport",
+      "type": "function",
+      "name": "viewport",
+      "filePath": "src/hero/commands/viewport.py",
+      "summary": "Function viewport",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/cache.py",
+      "type": "file",
+      "name": "cache.py",
+      "filePath": "src/hero/state/cache.py",
+      "summary": "File: cache.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/cache.py:CacheEntry",
+      "type": "class",
+      "name": "CacheEntry",
+      "filePath": "src/hero/state/cache.py",
+      "summary": "Class CacheEntry",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/cache.py:StateCache",
+      "type": "class",
+      "name": "StateCache",
+      "filePath": "src/hero/state/cache.py",
+      "summary": "Class StateCache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/viewport/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/delta.py",
+      "type": "file",
+      "name": "delta.py",
+      "filePath": "src/hero/viewport/delta.py",
+      "summary": "File: delta.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/delta.py:capture_previous",
+      "type": "function",
+      "name": "capture_previous",
+      "filePath": "src/hero/viewport/delta.py",
+      "summary": "Function capture_previous",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/delta.py:compute_delta",
+      "type": "function",
+      "name": "compute_delta",
+      "filePath": "src/hero/viewport/delta.py",
+      "summary": "Function compute_delta",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/delta.py:_copy_sandbox",
+      "type": "function",
+      "name": "_copy_sandbox",
+      "filePath": "src/hero/viewport/delta.py",
+      "summary": "Function _copy_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/delta.py:_render_delta_banner",
+      "type": "function",
+      "name": "_render_delta_banner",
+      "filePath": "src/hero/viewport/delta.py",
+      "summary": "Function _render_delta_banner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/delta.py:SessionDelta",
+      "type": "class",
+      "name": "SessionDelta",
+      "filePath": "src/hero/viewport/delta.py",
+      "summary": "Class SessionDelta",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/intel.py",
+      "type": "file",
+      "name": "intel.py",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "File: intel.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/intel.py:detect_bottlenecks",
+      "type": "function",
+      "name": "detect_bottlenecks",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Function detect_bottlenecks",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/intel.py:compute_budget_projections",
+      "type": "function",
+      "name": "compute_budget_projections",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Function compute_budget_projections",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/intel.py:generate_actions",
+      "type": "function",
+      "name": "generate_actions",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Function generate_actions",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/intel.py:_bottleneck_action_type",
+      "type": "function",
+      "name": "_bottleneck_action_type",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Function _bottleneck_action_type",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/intel.py:_git_summary",
+      "type": "function",
+      "name": "_git_summary",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Function _git_summary",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/intel.py:collect_sandbox_detail",
+      "type": "function",
+      "name": "collect_sandbox_detail",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Function collect_sandbox_detail",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/intel.py:Bottleneck",
+      "type": "class",
+      "name": "Bottleneck",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Class Bottleneck",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/intel.py:BudgetProjection",
+      "type": "class",
+      "name": "BudgetProjection",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Class BudgetProjection",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/intel.py:Action",
+      "type": "class",
+      "name": "Action",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Class Action",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/intel.py:SandboxDetail",
+      "type": "class",
+      "name": "SandboxDetail",
+      "filePath": "src/hero/viewport/intel.py",
+      "summary": "Class SandboxDetail",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/metrics.py",
+      "type": "file",
+      "name": "metrics.py",
+      "filePath": "src/hero/viewport/metrics.py",
+      "summary": "File: metrics.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/metrics.py:_parse_viewport_toon",
+      "type": "function",
+      "name": "_parse_viewport_toon",
+      "filePath": "src/hero/viewport/metrics.py",
+      "summary": "Function _parse_viewport_toon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/metrics.py:collect",
+      "type": "function",
+      "name": "collect",
+      "filePath": "src/hero/viewport/metrics.py",
+      "summary": "Function collect",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/metrics.py:SandboxMetrics",
+      "type": "class",
+      "name": "SandboxMetrics",
+      "filePath": "src/hero/viewport/metrics.py",
+      "summary": "Class SandboxMetrics",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/metrics.py:ArmyMetrics",
+      "type": "class",
+      "name": "ArmyMetrics",
+      "filePath": "src/hero/viewport/metrics.py",
+      "summary": "Class ArmyMetrics",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/metrics.py:MetricsCollector",
+      "type": "class",
+      "name": "MetricsCollector",
+      "filePath": "src/hero/viewport/metrics.py",
+      "summary": "Class MetricsCollector",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/renderer.py",
+      "type": "file",
+      "name": "renderer.py",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "File: renderer.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_usage_bar",
+      "type": "function",
+      "name": "_usage_bar",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _usage_bar",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_bar_color",
+      "type": "function",
+      "name": "_bar_color",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _bar_color",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_status_badge",
+      "type": "function",
+      "name": "_status_badge",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _status_badge",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_health_color",
+      "type": "function",
+      "name": "_health_color",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _health_color",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_render_status_bar",
+      "type": "function",
+      "name": "_render_status_bar",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _render_status_bar",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_render_header",
+      "type": "function",
+      "name": "_render_header",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _render_header",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_render_delta_banner",
+      "type": "function",
+      "name": "_render_delta_banner",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _render_delta_banner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_render_sandboxes",
+      "type": "function",
+      "name": "_render_sandboxes",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _render_sandboxes",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:_render_footer",
+      "type": "function",
+      "name": "_render_footer",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function _render_footer",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:build_layout",
+      "type": "function",
+      "name": "build_layout",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function build_layout",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:render_once",
+      "type": "function",
+      "name": "render_once",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function render_once",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:render_live",
+      "type": "function",
+      "name": "render_live",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function render_live",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function run",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/renderer.py:run_tree",
+      "type": "function",
+      "name": "run_tree",
+      "filePath": "src/hero/viewport/renderer.py",
+      "summary": "Function run_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/states.py",
+      "type": "file",
+      "name": "states.py",
+      "filePath": "src/hero/viewport/states.py",
+      "summary": "File: states.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/states.py:compute_sandbox_state",
+      "type": "function",
+      "name": "compute_sandbox_state",
+      "filePath": "src/hero/viewport/states.py",
+      "summary": "Function compute_sandbox_state",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/states.py:SandboxState",
+      "type": "class",
+      "name": "SandboxState",
+      "filePath": "src/hero/viewport/states.py",
+      "summary": "Class SandboxState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/tree.py",
+      "type": "file",
+      "name": "tree.py",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "File: tree.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:_status_icon",
+      "type": "function",
+      "name": "_status_icon",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function _status_icon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:_load_pipeline_manifest",
+      "type": "function",
+      "name": "_load_pipeline_manifest",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function _load_pipeline_manifest",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:_load_dispatch_files",
+      "type": "function",
+      "name": "_load_dispatch_files",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function _load_dispatch_files",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:_parse_viewport_toon",
+      "type": "function",
+      "name": "_parse_viewport_toon",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function _parse_viewport_toon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:build_tree",
+      "type": "function",
+      "name": "build_tree",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function build_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:_extract_pipeline_nodes",
+      "type": "function",
+      "name": "_extract_pipeline_nodes",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function _extract_pipeline_nodes",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:_resolve_status",
+      "type": "function",
+      "name": "_resolve_status",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function _resolve_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:_arch_status",
+      "type": "function",
+      "name": "_arch_status",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function _arch_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:_soldier_status",
+      "type": "function",
+      "name": "_soldier_status",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function _soldier_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree.py:build_pipeline_state",
+      "type": "function",
+      "name": "build_pipeline_state",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Function build_pipeline_state",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/tree.py:TreeNode",
+      "type": "class",
+      "name": "TreeNode",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Class TreeNode",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/tree.py:PipelineState",
+      "type": "class",
+      "name": "PipelineState",
+      "filePath": "src/hero/viewport/tree.py",
+      "summary": "Class PipelineState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/tree_renderer.py",
+      "type": "file",
+      "name": "tree_renderer.py",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "File: tree_renderer.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_status_icon",
+      "type": "function",
+      "name": "_status_icon",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _status_icon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_simple_tree",
+      "type": "function",
+      "name": "_render_simple_tree",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_simple_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:build_tree_text",
+      "type": "function",
+      "name": "build_tree_text",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function build_tree_text",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_build_rich_tree",
+      "type": "function",
+      "name": "_build_rich_tree",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _build_rich_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_tree_panel",
+      "type": "function",
+      "name": "_render_tree_panel",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_tree_panel",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_collapsed_sandbox",
+      "type": "function",
+      "name": "_render_collapsed_sandbox",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_collapsed_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_intel_panel",
+      "type": "function",
+      "name": "_render_intel_panel",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_intel_panel",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_budget_panel",
+      "type": "function",
+      "name": "_render_budget_panel",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_budget_panel",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_action_panel",
+      "type": "function",
+      "name": "_render_action_panel",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_action_panel",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_collect_pipeline_sandboxes",
+      "type": "function",
+      "name": "_collect_pipeline_sandboxes",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _collect_pipeline_sandboxes",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_build_dispatch_map",
+      "type": "function",
+      "name": "_build_dispatch_map",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _build_dispatch_map",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_footer",
+      "type": "function",
+      "name": "_render_footer",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_footer",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_status_bar",
+      "type": "function",
+      "name": "_render_status_bar",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_status_bar",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_single_node_tree",
+      "type": "function",
+      "name": "_render_single_node_tree",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_single_node_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_render_sandbox_detail_panel",
+      "type": "function",
+      "name": "_render_sandbox_detail_panel",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _render_sandbox_detail_panel",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:_estimate_height",
+      "type": "function",
+      "name": "_estimate_height",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function _estimate_height",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/viewport/tree_renderer.py:build_tree_layout",
+      "type": "function",
+      "name": "build_tree_layout",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Function build_tree_layout",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/tree_renderer.py:SparklineTracker",
+      "type": "class",
+      "name": "SparklineTracker",
+      "filePath": "src/hero/viewport/tree_renderer.py",
+      "summary": "Class SparklineTracker",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/server.py",
+      "type": "file",
+      "name": "server.py",
+      "filePath": "src/hero/web/server.py",
+      "summary": "File: server.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:_startup_watch_dispatch",
+      "type": "function",
+      "name": "_startup_watch_dispatch",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function _startup_watch_dispatch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:_cleanup_stale_dispatches",
+      "type": "function",
+      "name": "_cleanup_stale_dispatches",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function _cleanup_stale_dispatches",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:_watch_dispatch_dir",
+      "type": "function",
+      "name": "_watch_dispatch_dir",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function _watch_dispatch_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:_check_auth",
+      "type": "function",
+      "name": "_check_auth",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function _check_auth",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:_build_army_tree",
+      "type": "function",
+      "name": "_build_army_tree",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function _build_army_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:api_tree",
+      "type": "function",
+      "name": "api_tree",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function api_tree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:api_summary",
+      "type": "function",
+      "name": "api_summary",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function api_summary",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:api_sandbox",
+      "type": "function",
+      "name": "api_sandbox",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function api_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:api_sandbox_timeline",
+      "type": "function",
+      "name": "api_sandbox_timeline",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function api_sandbox_timeline",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:api_kill_sandbox",
+      "type": "function",
+      "name": "api_kill_sandbox",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function api_kill_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:api_spawn_sandbox",
+      "type": "function",
+      "name": "api_spawn_sandbox",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function api_spawn_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:api_bottlenecks",
+      "type": "function",
+      "name": "api_bottlenecks",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function api_bottlenecks",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:api_events",
+      "type": "function",
+      "name": "api_events",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function api_events",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:index",
+      "type": "function",
+      "name": "index",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function index",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/server.py:_serialize",
+      "type": "function",
+      "name": "_serialize",
+      "filePath": "src/hero/web/server.py",
+      "summary": "Function _serialize",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/commands/viewport.py",
+      "target": "function:src/hero/commands/viewport.py:viewport",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/cache.py",
+      "target": "class:src/hero/state/cache.py:CacheEntry",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/cache.py",
+      "target": "class:src/hero/state/cache.py:StateCache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/delta.py",
+      "target": "function:src/hero/viewport/delta.py:capture_previous",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/delta.py",
+      "target": "function:src/hero/viewport/delta.py:compute_delta",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/delta.py",
+      "target": "function:src/hero/viewport/delta.py:_copy_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/delta.py",
+      "target": "function:src/hero/viewport/delta.py:_render_delta_banner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/delta.py",
+      "target": "class:src/hero/viewport/delta.py:SessionDelta",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "function:src/hero/viewport/intel.py:detect_bottlenecks",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "function:src/hero/viewport/intel.py:compute_budget_projections",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "function:src/hero/viewport/intel.py:generate_actions",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "function:src/hero/viewport/intel.py:_bottleneck_action_type",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "function:src/hero/viewport/intel.py:_git_summary",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "function:src/hero/viewport/intel.py:collect_sandbox_detail",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "class:src/hero/viewport/intel.py:Bottleneck",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "class:src/hero/viewport/intel.py:BudgetProjection",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "class:src/hero/viewport/intel.py:Action",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/intel.py",
+      "target": "class:src/hero/viewport/intel.py:SandboxDetail",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/metrics.py",
+      "target": "function:src/hero/viewport/metrics.py:_parse_viewport_toon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/metrics.py",
+      "target": "function:src/hero/viewport/metrics.py:collect",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/metrics.py",
+      "target": "class:src/hero/viewport/metrics.py:SandboxMetrics",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/metrics.py",
+      "target": "class:src/hero/viewport/metrics.py:ArmyMetrics",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/metrics.py",
+      "target": "class:src/hero/viewport/metrics.py:MetricsCollector",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_usage_bar",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_bar_color",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_status_badge",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_health_color",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_render_status_bar",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_render_header",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_render_delta_banner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_render_sandboxes",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:_render_footer",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:build_layout",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:render_once",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:render_live",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:run",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/renderer.py",
+      "target": "function:src/hero/viewport/renderer.py:run_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/states.py",
+      "target": "function:src/hero/viewport/states.py:compute_sandbox_state",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/states.py",
+      "target": "class:src/hero/viewport/states.py:SandboxState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:_status_icon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:_load_pipeline_manifest",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:_load_dispatch_files",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:_parse_viewport_toon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:build_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:_extract_pipeline_nodes",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:_resolve_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:_arch_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:_soldier_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "function:src/hero/viewport/tree.py:build_pipeline_state",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "class:src/hero/viewport/tree.py:TreeNode",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree.py",
+      "target": "class:src/hero/viewport/tree.py:PipelineState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_status_icon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_simple_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:build_tree_text",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_build_rich_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_tree_panel",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_collapsed_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_intel_panel",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_budget_panel",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_action_panel",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_collect_pipeline_sandboxes",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_build_dispatch_map",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_footer",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_status_bar",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_single_node_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_render_sandbox_detail_panel",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:_estimate_height",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "function:src/hero/viewport/tree_renderer.py:build_tree_layout",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/tree_renderer.py",
+      "target": "class:src/hero/viewport/tree_renderer.py:SparklineTracker",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:_startup_watch_dispatch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:_cleanup_stale_dispatches",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:_watch_dispatch_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:_check_auth",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:_build_army_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:api_tree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:api_summary",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:api_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:api_sandbox_timeline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:api_kill_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:api_spawn_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:api_bottlenecks",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:api_events",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:index",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/server.py",
+      "target": "function:src/hero/web/server.py:_serialize",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

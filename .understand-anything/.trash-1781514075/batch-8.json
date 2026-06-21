@@ -1,0 +1,522 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/commands/hook.py",
+      "type": "file",
+      "name": "hook.py",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "File: hook.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:hook",
+      "type": "function",
+      "name": "hook",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function hook",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:list_hooks",
+      "type": "function",
+      "name": "list_hooks",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function list_hooks",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:run_hook",
+      "type": "function",
+      "name": "run_hook",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function run_hook",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:test_hook",
+      "type": "function",
+      "name": "test_hook",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function test_hook",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:enable_hook",
+      "type": "function",
+      "name": "enable_hook",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function enable_hook",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:disable_hook",
+      "type": "function",
+      "name": "disable_hook",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function disable_hook",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:cache_group",
+      "type": "function",
+      "name": "cache_group",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function cache_group",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:cache_clear",
+      "type": "function",
+      "name": "cache_clear",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function cache_clear",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/hook.py:cache_stats",
+      "type": "function",
+      "name": "cache_stats",
+      "filePath": "src/hero/commands/hook.py",
+      "summary": "Function cache_stats",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/core/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/hooks/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/core/hooks/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/hooks/cache.py",
+      "type": "file",
+      "name": "cache.py",
+      "filePath": "src/hero/core/hooks/cache.py",
+      "summary": "File: cache.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/hooks/cache.py:content_hash",
+      "type": "function",
+      "name": "content_hash",
+      "filePath": "src/hero/core/hooks/cache.py",
+      "summary": "Function content_hash",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/core/hooks/cache.py:CacheEntry",
+      "type": "class",
+      "name": "CacheEntry",
+      "filePath": "src/hero/core/hooks/cache.py",
+      "summary": "Class CacheEntry",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/core/hooks/cache.py:HookCache",
+      "type": "class",
+      "name": "HookCache",
+      "filePath": "src/hero/core/hooks/cache.py",
+      "summary": "Class HookCache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/hooks/circuit.py",
+      "type": "file",
+      "name": "circuit.py",
+      "filePath": "src/hero/core/hooks/circuit.py",
+      "summary": "File: circuit.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/core/hooks/circuit.py:HookCircuit",
+      "type": "class",
+      "name": "HookCircuit",
+      "filePath": "src/hero/core/hooks/circuit.py",
+      "summary": "Class HookCircuit",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/core/hooks/circuit.py:CircuitBreaker",
+      "type": "class",
+      "name": "CircuitBreaker",
+      "filePath": "src/hero/core/hooks/circuit.py",
+      "summary": "Class CircuitBreaker",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/hooks/config.py",
+      "type": "file",
+      "name": "config.py",
+      "filePath": "src/hero/core/hooks/config.py",
+      "summary": "File: config.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/hooks/config.py:load_hooks_config",
+      "type": "function",
+      "name": "load_hooks_config",
+      "filePath": "src/hero/core/hooks/config.py",
+      "summary": "Function load_hooks_config",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/hooks/config.py:get_hooks_for_event",
+      "type": "function",
+      "name": "get_hooks_for_event",
+      "filePath": "src/hero/core/hooks/config.py",
+      "summary": "Function get_hooks_for_event",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/core/hooks/config.py:HookConfig",
+      "type": "class",
+      "name": "HookConfig",
+      "filePath": "src/hero/core/hooks/config.py",
+      "summary": "Class HookConfig",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/hooks/runner.py",
+      "type": "file",
+      "name": "runner.py",
+      "filePath": "src/hero/core/hooks/runner.py",
+      "summary": "File: runner.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/hooks/runner.py:run_hooks_for_event",
+      "type": "function",
+      "name": "run_hooks_for_event",
+      "filePath": "src/hero/core/hooks/runner.py",
+      "summary": "Function run_hooks_for_event",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/core/hooks/runner.py:HookResult",
+      "type": "class",
+      "name": "HookResult",
+      "filePath": "src/hero/core/hooks/runner.py",
+      "summary": "Class HookResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/core/hooks/runner.py:HookRunner",
+      "type": "class",
+      "name": "HookRunner",
+      "filePath": "src/hero/core/hooks/runner.py",
+      "summary": "Class HookRunner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/project.py",
+      "type": "file",
+      "name": "project.py",
+      "filePath": "src/hero/core/project.py",
+      "summary": "File: project.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/project.py:_parse_index_toon",
+      "type": "function",
+      "name": "_parse_index_toon",
+      "filePath": "src/hero/core/project.py",
+      "summary": "Function _parse_index_toon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/project.py:resolve_sandbox",
+      "type": "function",
+      "name": "resolve_sandbox",
+      "filePath": "src/hero/core/project.py",
+      "summary": "Function resolve_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/project.py:detect_project_type",
+      "type": "function",
+      "name": "detect_project_type",
+      "filePath": "src/hero/core/project.py",
+      "summary": "Function detect_project_type",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/subprocess.py",
+      "type": "file",
+      "name": "subprocess.py",
+      "filePath": "src/hero/core/subprocess.py",
+      "summary": "File: subprocess.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/subprocess.py:safe_run",
+      "type": "function",
+      "name": "safe_run",
+      "filePath": "src/hero/core/subprocess.py",
+      "summary": "Function safe_run",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:hook",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:list_hooks",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:run_hook",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:test_hook",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:enable_hook",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:disable_hook",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:cache_group",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:cache_clear",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/hook.py",
+      "target": "function:src/hero/commands/hook.py:cache_stats",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/cache.py",
+      "target": "function:src/hero/core/hooks/cache.py:content_hash",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/cache.py",
+      "target": "class:src/hero/core/hooks/cache.py:CacheEntry",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/cache.py",
+      "target": "class:src/hero/core/hooks/cache.py:HookCache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/circuit.py",
+      "target": "class:src/hero/core/hooks/circuit.py:HookCircuit",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/circuit.py",
+      "target": "class:src/hero/core/hooks/circuit.py:CircuitBreaker",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/config.py",
+      "target": "function:src/hero/core/hooks/config.py:load_hooks_config",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/config.py",
+      "target": "function:src/hero/core/hooks/config.py:get_hooks_for_event",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/config.py",
+      "target": "class:src/hero/core/hooks/config.py:HookConfig",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/runner.py",
+      "target": "function:src/hero/core/hooks/runner.py:run_hooks_for_event",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/runner.py",
+      "target": "class:src/hero/core/hooks/runner.py:HookResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/hooks/runner.py",
+      "target": "class:src/hero/core/hooks/runner.py:HookRunner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/project.py",
+      "target": "function:src/hero/core/project.py:_parse_index_toon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/project.py",
+      "target": "function:src/hero/core/project.py:resolve_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/project.py",
+      "target": "function:src/hero/core/project.py:detect_project_type",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/subprocess.py",
+      "target": "function:src/hero/core/subprocess.py:safe_run",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

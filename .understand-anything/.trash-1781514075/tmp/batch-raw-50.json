@@ -1,0 +1,937 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/hero/web/COUNCIL_ANALYSIS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 381,
+      "nonEmptyLines": 281,
+      "sections": [
+        {
+          "heading": "COUNCIL_ANALYSIS.md — HERO Web Dashboard Redesign",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Gap Analysis: Current vs Vision",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "1.1 Vision: \"Which project is actively working\"",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "1.2 Vision: \"Token burn per project\"",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "1.3 Vision: \"Which agents flunked out / failed\"",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "1.4 Vision: \"Where the system is stuck\"",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "1.5 Vision: \"Control features (kill, spawn, dispatch)\"",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "2. Design Language Recommendations",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "2.1 Style: Cyber-Glass (Glassmorphism + Neon)",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "2.2 Color System",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "2.3 Typography",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "2.4 Animation Guidelines",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "2.5 What To Replace",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "3. Control Features: Feasibility Assessment",
+          "level": 2,
+          "line": 133
+        },
+        {
+          "heading": "3.1 Kill Sandbox — HIGH feasibility, LOW cost",
+          "level": 3,
+          "line": 135
+        },
+        {
+          "heading": "3.2 Spawn Agent — HIGH feasibility, MEDIUM cost",
+          "level": 3,
+          "line": 164
+        },
+        {
+          "heading": "3.3 Dispatch Tasks — HIGH feasibility, MEDIUM cost",
+          "level": 3,
+          "line": 189
+        },
+        {
+          "heading": "3.4 Auth Considerations",
+          "level": 3,
+          "line": 213
+        },
+        {
+          "heading": "3.5 Risk: Idempotency",
+          "level": 3,
+          "line": 217
+        },
+        {
+          "heading": "3.6 Risk: User Error",
+          "level": 3,
+          "line": 224
+        },
+        {
+          "heading": "4. Key Risks & Edge Cases",
+          "level": 2,
+          "line": 232
+        },
+        {
+          "heading": "4.1 Frontend Risk: Bundle Size",
+          "level": 3,
+          "line": 234
+        },
+        {
+          "heading": "4.2 Frontend Risk: Mobile Performance",
+          "level": 3,
+          "line": 244
+        },
+        {
+          "heading": "4.3 Backend Risk: SSE Overload",
+          "level": 3,
+          "line": 255
+        },
+        {
+          "heading": "4.4 Backend Risk: Control Endpoint Security",
+          "level": 3,
+          "line": 261
+        },
+        {
+          "heading": "4.5 Edge Case: Zero Sandboxes",
+          "level": 3,
+          "line": 275
+        },
+        {
+          "heading": "4.6 Edge Case: Network Loss",
+          "level": 3,
+          "line": 285
+        },
+        {
+          "heading": "4.7 Edge Case: Very Long Sandbox Names",
+          "level": 3,
+          "line": 291
+        },
+        {
+          "heading": "5. Priority Ranking of Features",
+          "level": 2,
+          "line": 299
+        },
+        {
+          "heading": "P0 — Must Have (Prerequisite for everything else)",
+          "level": 3,
+          "line": 301
+        },
+        {
+          "heading": "P1 — Should Have",
+          "level": 3,
+          "line": 309
+        },
+        {
+          "heading": "P2 — Nice to Have",
+          "level": 3,
+          "line": 317
+        },
+        {
+          "heading": "P3 — Stretch",
+          "level": 3,
+          "line": 326
+        },
+        {
+          "heading": "6. Recommended Implementation Order",
+          "level": 2,
+          "line": 338
+        },
+        {
+          "heading": "Phase 1 (Days 1-2) — Foundation + P0",
+          "level": 3,
+          "line": 340
+        },
+        {
+          "heading": "Phase 2 (Days 3-5) — Design + Responsive",
+          "level": 3,
+          "line": 346
+        },
+        {
+          "heading": "Phase 3 (Days 6-7) — Control Features",
+          "level": 3,
+          "line": 353
+        },
+        {
+          "heading": "Phase 4 (Days 8-10) — Polish + Stretch",
+          "level": 3,
+          "line": 360
+        },
+        {
+          "heading": "7. Backend API Contract (New Endpoints)",
+          "level": 2,
+          "line": 369
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 39
+      }
+    },
+    {
+      "path": "src/hero/web/COUNCIL_GLM_OPINION.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 280,
+      "nonEmptyLines": 228,
+      "sections": [
+        {
+          "heading": "COUNCIL OPINION — GLM 5.1 (UX & Edge Cases)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "The Problem I See",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "What's Wrong With the Current UX",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "1. The Flat Grid Is the Wrong Metaphor",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "2. No State Machine",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "3. No Accessibility",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "4. Mobile Is an Afterthought",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "My Stance: How the 3-Tab Navigation Should Work",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "Mobile-First Tab Architecture",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "The Active Tab: Rich Project Page",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "Edge Cases Nobody Wants to Handle",
+          "level": 2,
+          "line": 121
+        },
+        {
+          "heading": "1. SSE Disconnect Mid-View",
+          "level": 3,
+          "line": 123
+        },
+        {
+          "heading": "2. Project Transitions Active→Archived Mid-View",
+          "level": 3,
+          "line": 139
+        },
+        {
+          "heading": "3. Empty States (Critical, Currently Missing)",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "4. Loading States",
+          "level": 3,
+          "line": 219
+        },
+        {
+          "heading": "5. Error States",
+          "level": 3,
+          "line": 235
+        },
+        {
+          "heading": "Scroll Performance",
+          "level": 2,
+          "line": 249
+        },
+        {
+          "heading": "Accessibility Requirements",
+          "level": 2,
+          "line": 262
+        },
+        {
+          "heading": "My Verdict",
+          "level": 2,
+          "line": 272
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "src/hero/web/COUNCIL_KIMI_OPINION.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 224,
+      "nonEmptyLines": 190,
+      "sections": [
+        {
+          "heading": "COUNCIL OPINION — Kimi 2.6 (Architecture)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "The Problem I See",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "What's Wrong With the Current Data Flow",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "My Opinion: How to Fix It",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "1. Define \"Active\" and \"Archived\" Server-Side",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "2. Introduce a Project Entity",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "3. New API Endpoints",
+          "level": 3,
+          "line": 162
+        },
+        {
+          "heading": "4. SSE Refactoring",
+          "level": 3,
+          "line": 174
+        },
+        {
+          "heading": "5. Information Hierarchy",
+          "level": 3,
+          "line": 184
+        },
+        {
+          "heading": "6. What I'd Kill",
+          "level": 3,
+          "line": 207
+        },
+        {
+          "heading": "Tradeoff Assessment",
+          "level": 2,
+          "line": 214
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "src/hero/web/COUNCIL_MIMO_OPINION.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 277,
+      "nonEmptyLines": 199,
+      "sections": [
+        {
+          "heading": "Council Opinion — MiMo Pro (Implementation)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. SPA or Multi-page? Keep FastAPI+vanilla JS or Pivot?",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "2. What Survives? What Dies?",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "KEEP (reuse as-is or with minor edits):",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "KEEP BUT REWRITE:",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "DELETE:",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "BUILD NEW:",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "3. Separate App or Extend Current Server?",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "4. Build Order — What Gets Built First?",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "Phase 1: Data Layer (Day 1)",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "Phase 2: Navigation Shell (Day 1-2)",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "Phase 3: Overall Tab (Day 2-3)",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "Phase 4: Active Tab — First Pass (Day 3-4)",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "Phase 5: Active Tab — All Projects (Day 4-5)",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "Phase 6: Archived Tab (Day 5)",
+          "level": 3,
+          "line": 118
+        },
+        {
+          "heading": "Phase 7: Polish (Day 6)",
+          "level": 3,
+          "line": 123
+        },
+        {
+          "heading": "5. The Riskiest Part: \"Needs Literature to Navigate\"",
+          "level": 2,
+          "line": 132
+        },
+        {
+          "heading": "6. Concrete Build Timeline",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "Day 1: Foundation",
+          "level": 3,
+          "line": 173
+        },
+        {
+          "heading": "Day 2: Data Integration",
+          "level": 3,
+          "line": 178
+        },
+        {
+          "heading": "Day 3: Active Tab — Core",
+          "level": 3,
+          "line": 183
+        },
+        {
+          "heading": "Day 4: Active Tab — Multi-project",
+          "level": 3,
+          "line": 188
+        },
+        {
+          "heading": "Day 5: Archived + Polish",
+          "level": 3,
+          "line": 193
+        },
+        {
+          "heading": "Day 6: The \"Literature\" Feature",
+          "level": 3,
+          "line": 198
+        },
+        {
+          "heading": "Day 7: Final Polish",
+          "level": 3,
+          "line": 203
+        },
+        {
+          "heading": "7. Solo Builder: Where to Cut Corners vs. Where to Go Deep",
+          "level": 2,
+          "line": 210
+        },
+        {
+          "heading": "CUT CORNERS (save time, nobody will notice):",
+          "level": 3,
+          "line": 212
+        },
+        {
+          "heading": "GO DEEP (this is where quality lives):",
+          "level": 3,
+          "line": 221
+        },
+        {
+          "heading": "8. Making It Feel Sophisticated Without Bloat",
+          "level": 2,
+          "line": 230
+        },
+        {
+          "heading": "Libraries (if any):",
+          "level": 3,
+          "line": 236
+        },
+        {
+          "heading": "Patterns:",
+          "level": 3,
+          "line": 241
+        },
+        {
+          "heading": "Design Principles:",
+          "level": 3,
+          "line": 247
+        },
+        {
+          "heading": "What \"Sophisticated\" Actually Means:",
+          "level": 3,
+          "line": 254
+        },
+        {
+          "heading": "Final Verdict",
+          "level": 2,
+          "line": 264
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 34
+      }
+    },
+    {
+      "path": "src/hero/web/SPEC_DASHBOARD_V4.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1020,
+      "nonEmptyLines": 854,
+      "sections": [
+        {
+          "heading": "HERO Viewport Dashboard v4 — Specification",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Council Analysis",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Agent 1: Kimi 2.6 — Architecture & Data Model",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "Current State Assessment",
+          "level": 4,
+          "line": 7
+        },
+        {
+          "heading": "Data Model for v4",
+          "level": 4,
+          "line": 15
+        },
+        {
+          "heading": "Information Hierarchy (Active View)",
+          "level": 4,
+          "line": 35
+        },
+        {
+          "heading": "API Usage Strategy",
+          "level": 4,
+          "line": 81
+        },
+        {
+          "heading": "Data Enrichment Needs",
+          "level": 4,
+          "line": 89
+        },
+        {
+          "heading": "Agent 2: GLM 5.1 — Mobile UX & Edge Cases",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "Mobile-First Design Constraints",
+          "level": 4,
+          "line": 108
+        },
+        {
+          "heading": "States & Edge Cases",
+          "level": 4,
+          "line": 157
+        },
+        {
+          "heading": "Accessibility Requirements",
+          "level": 4,
+          "line": 177
+        },
+        {
+          "heading": "Touch Interactions",
+          "level": 4,
+          "line": 204
+        },
+        {
+          "heading": "Agent 3: MiMo Pro — UI Component Tree & Implementation Plan",
+          "level": 3,
+          "line": 213
+        },
+        {
+          "heading": "Component Architecture",
+          "level": 4,
+          "line": 215
+        },
+        {
+          "heading": "CSS Architecture",
+          "level": 4,
+          "line": 253
+        },
+        {
+          "heading": "Implementation Phases",
+          "level": 4,
+          "line": 268
+        },
+        {
+          "heading": "File Changes Required",
+          "level": 4,
+          "line": 304
+        },
+        {
+          "heading": "Performance Considerations",
+          "level": 4,
+          "line": 320
+        },
+        {
+          "heading": "Testing Strategy",
+          "level": 4,
+          "line": 328
+        },
+        {
+          "heading": "Final Specification",
+          "level": 2,
+          "line": 338
+        },
+        {
+          "heading": "1. Overview",
+          "level": 3,
+          "line": 340
+        },
+        {
+          "heading": "2. Architecture",
+          "level": 3,
+          "line": 348
+        },
+        {
+          "heading": "2.1 Technology Stack",
+          "level": 4,
+          "line": 350
+        },
+        {
+          "heading": "2.2 File Structure",
+          "level": 4,
+          "line": 356
+        },
+        {
+          "heading": "3. Data Model",
+          "level": 3,
+          "line": 393
+        },
+        {
+          "heading": "3.1 API Endpoints",
+          "level": 4,
+          "line": 395
+        },
+        {
+          "heading": "3.2 State Management",
+          "level": 4,
+          "line": 410
+        },
+        {
+          "heading": "4. Component Specifications",
+          "level": 3,
+          "line": 433
+        },
+        {
+          "heading": "4.1 Tab Bar Component",
+          "level": 4,
+          "line": 435
+        },
+        {
+          "heading": "4.2 Active View — Project Page",
+          "level": 4,
+          "line": 454
+        },
+        {
+          "heading": "4.3 Archived View",
+          "level": 4,
+          "line": 571
+        },
+        {
+          "heading": "5. Mobile UX Specifications",
+          "level": 3,
+          "line": 602
+        },
+        {
+          "heading": "5.1 Viewport & Breakpoints",
+          "level": 4,
+          "line": 604
+        },
+        {
+          "heading": "5.2 Touch Targets",
+          "level": 4,
+          "line": 619
+        },
+        {
+          "heading": "5.3 Mobile Layout Rules",
+          "level": 4,
+          "line": 625
+        },
+        {
+          "heading": "5.4 Gesture Support",
+          "level": 4,
+          "line": 634
+        },
+        {
+          "heading": "6. Accessibility Specifications",
+          "level": 3,
+          "line": 644
+        },
+        {
+          "heading": "6.1 WCAG 2.1 AA Compliance",
+          "level": 4,
+          "line": 646
+        },
+        {
+          "heading": "6.2 ARIA Structure",
+          "level": 4,
+          "line": 653
+        },
+        {
+          "heading": "6.3 Keyboard Shortcuts",
+          "level": 4,
+          "line": 692
+        },
+        {
+          "heading": "7. Performance Requirements",
+          "level": 3,
+          "line": 707
+        },
+        {
+          "heading": "7.1 Load Times",
+          "level": 4,
+          "line": 709
+        },
+        {
+          "heading": "7.2 Optimization Strategies",
+          "level": 4,
+          "line": 715
+        },
+        {
+          "heading": "7.3 Memory Management",
+          "level": 4,
+          "line": 723
+        },
+        {
+          "heading": "8. Error Handling",
+          "level": 3,
+          "line": 729
+        },
+        {
+          "heading": "8.1 Error States",
+          "level": 4,
+          "line": 731
+        },
+        {
+          "heading": "8.2 Retry Logic",
+          "level": 4,
+          "line": 741
+        },
+        {
+          "heading": "9. Testing Strategy",
+          "level": 3,
+          "line": 747
+        },
+        {
+          "heading": "9.1 Unit Tests",
+          "level": 4,
+          "line": 749
+        },
+        {
+          "heading": "9.2 Integration Tests",
+          "level": 4,
+          "line": 756
+        },
+        {
+          "heading": "9.3 E2E Tests",
+          "level": 4,
+          "line": 763
+        },
+        {
+          "heading": "9.4 Performance Tests",
+          "level": 4,
+          "line": 770
+        },
+        {
+          "heading": "10. Implementation Timeline",
+          "level": 3,
+          "line": 777
+        },
+        {
+          "heading": "11. Success Metrics",
+          "level": 3,
+          "line": 789
+        },
+        {
+          "heading": "12. Open Questions",
+          "level": 3,
+          "line": 797
+        },
+        {
+          "heading": "Appendix A: API Response Examples",
+          "level": 2,
+          "line": 807
+        },
+        {
+          "heading": "`/api/v1/sandbox/{name}/detail`",
+          "level": 3,
+          "line": 809
+        },
+        {
+          "heading": "`/api/v1/sandbox/{name}/phase`",
+          "level": 3,
+          "line": 859
+        },
+        {
+          "heading": "`/api/v1/sandbox/{name}/agents`",
+          "level": 3,
+          "line": 877
+        },
+        {
+          "heading": "Appendix B: Component Props & Events",
+          "level": 2,
+          "line": 927
+        },
+        {
+          "heading": "TabBar",
+          "level": 3,
+          "line": 929
+        },
+        {
+          "heading": "ProjectPage",
+          "level": 3,
+          "line": 942
+        },
+        {
+          "heading": "PhaseCard",
+          "level": 3,
+          "line": 957
+        },
+        {
+          "heading": "PipelineViz",
+          "level": 3,
+          "line": 975
+        },
+        {
+          "heading": "AgentList",
+          "level": 3,
+          "line": 989
+        },
+        {
+          "heading": "TokenBudget",
+          "level": 3,
+          "line": 1004
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 67
+      }
+    }
+  ]
+}

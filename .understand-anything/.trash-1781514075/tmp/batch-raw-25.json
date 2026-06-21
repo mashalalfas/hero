@@ -1,0 +1,2772 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 20,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 285,
+      "nonEmptyLines": 194,
+      "sections": [
+        {
+          "heading": "AGENTS.md - Your Workspace",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "First Run",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Session Startup",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Memory",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "🧠 MEMORY.md - Your Long-Term Memory",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "📝 Write It Down - No \"Mental Notes\"!",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "Red Lines",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "External vs Internal",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "Group Chats",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "💬 Know When to Speak!",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "😊 React Like a Human!",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "Prompt Templates",
+          "level": 2,
+          "line": 121
+        },
+        {
+          "heading": "Where templates live",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "How it works",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "Editing prompts",
+          "level": 3,
+          "line": 156
+        },
+        {
+          "heading": "Adding new rules",
+          "level": 3,
+          "line": 170
+        },
+        {
+          "heading": "Python API",
+          "level": 3,
+          "line": 176
+        },
+        {
+          "heading": "Tools",
+          "level": 2,
+          "line": 188
+        },
+        {
+          "heading": "💓 Heartbeats - Be Proactive!",
+          "level": 2,
+          "line": 200
+        },
+        {
+          "heading": "Heartbeat vs Cron: When to Use Each",
+          "level": 3,
+          "line": 206
+        },
+        {
+          "heading": "🔄 Memory Maintenance (During Heartbeats)",
+          "level": 3,
+          "line": 266
+        },
+        {
+          "heading": "Make It Yours",
+          "level": 2,
+          "line": 279
+        },
+        {
+          "heading": "Related",
+          "level": 2,
+          "line": 283
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 23
+      }
+    },
+    {
+      "path": "ARCHITECT_BLUEPRINT.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 703,
+      "nonEmptyLines": 550,
+      "sections": [
+        {
+          "heading": "ARCHITECT_BLUEPRINT — HERO Viewport v3 Cyber-Glass Overhaul",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Final File Tree",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "2. Data Flow",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "2.1 Primary Data Pipeline",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "2.2 SSE → State → Component Flow (Per Tick)",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "2.3 Kill Flow",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "3. Component Dependency Graph",
+          "level": 2,
+          "line": 146
+        },
+        {
+          "heading": "Module Import Rules",
+          "level": 3,
+          "line": 228
+        },
+        {
+          "heading": "4. Security Architecture",
+          "level": 2,
+          "line": 242
+        },
+        {
+          "heading": "4.1 Auth Flow",
+          "level": 3,
+          "line": 244
+        },
+        {
+          "heading": "4.2 Kill Endpoint Security Analysis",
+          "level": 3,
+          "line": 260
+        },
+        {
+          "heading": "4.3 XSS Prevention",
+          "level": 3,
+          "line": 276
+        },
+        {
+          "heading": "4.4 Recommendations (Non-blocking)",
+          "level": 3,
+          "line": 282
+        },
+        {
+          "heading": "5. Risk Register",
+          "level": 2,
+          "line": 290
+        },
+        {
+          "heading": "RISK 1: File Contention Between Parallel Soldiers (Wave 1, 3, 4)",
+          "level": 3,
+          "line": 292
+        },
+        {
+          "heading": "RISK 2: SSE Reconnect Race Condition",
+          "level": 3,
+          "line": 309
+        },
+        {
+          "heading": "RISK 3: Chart.js CDN Dependency Breaks Offline/No-Internet",
+          "level": 3,
+          "line": 326
+        },
+        {
+          "heading": "RISK 4: Font Loading Causes Layout Shift (FOUT/FOIT)",
+          "level": 3,
+          "line": 337
+        },
+        {
+          "heading": "RISK 5: Large Sandbox Trees Cause Render Jank",
+          "level": 3,
+          "line": 354
+        },
+        {
+          "heading": "RISK 6: Subprocess Kill Fails Silently or Hangs",
+          "level": 3,
+          "line": 371
+        },
+        {
+          "heading": "RISK 7: Backdrop-filter Not Supported in All Browsers",
+          "level": 3,
+          "line": 388
+        },
+        {
+          "heading": "6. Soldier Quality Standards",
+          "level": 2,
+          "line": 404
+        },
+        {
+          "heading": "6.1 Code Style",
+          "level": 3,
+          "line": 406
+        },
+        {
+          "heading": "6.2 Module Pattern",
+          "level": 3,
+          "line": 429
+        },
+        {
+          "heading": "6.3 XSS Rules",
+          "level": 3,
+          "line": 456
+        },
+        {
+          "heading": "6.4 CSS Rules",
+          "level": 3,
+          "line": 468
+        },
+        {
+          "heading": "6.5 Error Handling",
+          "level": 3,
+          "line": 490
+        },
+        {
+          "heading": "6.6 File Header Template",
+          "level": 3,
+          "line": 511
+        },
+        {
+          "heading": "7. Contingency Plans",
+          "level": 2,
+          "line": 527
+        },
+        {
+          "heading": "7.1 If a Soldier Fails to Create All Assigned Files",
+          "level": 3,
+          "line": 529
+        },
+        {
+          "heading": "7.2 If CSS Tokens Conflict Between Soldiers",
+          "level": 3,
+          "line": 552
+        },
+        {
+          "heading": "7.3 If server.py Kill Endpoint Breaks Existing Routes",
+          "level": 3,
+          "line": 564
+        },
+        {
+          "heading": "7.4 If Integration (Soldier 7) Produces a Broken index.html",
+          "level": 3,
+          "line": 582
+        },
+        {
+          "heading": "8. Pre-flight Checklist",
+          "level": 2,
+          "line": 593
+        },
+        {
+          "heading": "Before Wave 1 (Soldiers 1 + 2)",
+          "level": 3,
+          "line": 595
+        },
+        {
+          "heading": "Before Wave 2 (Soldier 3)",
+          "level": 3,
+          "line": 608
+        },
+        {
+          "heading": "Before Wave 3 (Soldiers 4 + 6)",
+          "level": 3,
+          "line": 630
+        },
+        {
+          "heading": "Before Wave 4 (Soldiers 5 + 7)",
+          "level": 3,
+          "line": 644
+        },
+        {
+          "heading": "Final Verification (After All Waves)",
+          "level": 3,
+          "line": 657
+        },
+        {
+          "heading": "9. Architect Notes",
+          "level": 2,
+          "line": 682
+        },
+        {
+          "heading": "What's Sound About This Plan",
+          "level": 3,
+          "line": 684
+        },
+        {
+          "heading": "What Could Be Better",
+          "level": 3,
+          "line": 691
+        },
+        {
+          "heading": "Final Guardrail",
+          "level": 3,
+          "line": 697
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 43
+      }
+    },
+    {
+      "path": "COUNCIL_REPORT_HERO_REBUILD.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 758,
+      "nonEmptyLines": 602,
+      "sections": [
+        {
+          "heading": "HERO Council Report — Full Pipeline Rebuild Plan",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Section 1 — Convergence (Points of Full Agreement)",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "1.1 The Scoring Foundation Is Solid",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "1.2 Execution Line Is Non-Negotiable",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "1.3 Solo Work Is Never Allowed",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "1.4 `hero go` Is the Orchestrator",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "1.5 The Build Order Is Clear",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "1.6 LEGAL Phase Scope",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "Section 2 — Disagreements (Resolved)",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "Disagreement A: Where Does `hero score` Get Called?",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "Disagreement B: Bypass Rules — Who Decides?",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "Disagreement C: What Constitutes a \"Stage\" in the Manifest?",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "Section 3 — Verdict: Numbered Build Phases",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "Phase 0 — Foundation (Already Complete)",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "Phase 1 — Stage Command Modules (Sequential, ~2 days)",
+          "level": 3,
+          "line": 74
+        },
+        {
+          "heading": "Phase 2 — `hero go` Redesign (Sequential, ~3 days)",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "Phase 3 — Integration Changes (Parallel-safe, ~1 day)",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Phase 4 — Legal-Compliance Skill (Sequential, ~1 day)",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "Phase 5 — Testing & Validation (Sequential, ~1 day)",
+          "level": 3,
+          "line": 146
+        },
+        {
+          "heading": "Section 4 — Dependency Graph",
+          "level": 2,
+          "line": 157
+        },
+        {
+          "heading": "Section 5 — Stage Implementation Plan",
+          "level": 2,
+          "line": 225
+        },
+        {
+          "heading": "5.1 PRE-COMMIT Stage",
+          "level": 3,
+          "line": 227
+        },
+        {
+          "heading": "5.2 BUILD Stage",
+          "level": 3,
+          "line": 256
+        },
+        {
+          "heading": "5.3 HARDEN Stage",
+          "level": 3,
+          "line": 286
+        },
+        {
+          "heading": "5.4 LEGAL Stage",
+          "level": 3,
+          "line": 325
+        },
+        {
+          "heading": "5.5 CI/PR Stage",
+          "level": 3,
+          "line": 365
+        },
+        {
+          "heading": "5.6 VERIFY Stage",
+          "level": 3,
+          "line": 394
+        },
+        {
+          "heading": "5.7 ARCHIVE Stage",
+          "level": 3,
+          "line": 422
+        },
+        {
+          "heading": "Section 6 — Integration Checklist",
+          "level": 2,
+          "line": 451
+        },
+        {
+          "heading": "6.1 `cli.py` Changes",
+          "level": 3,
+          "line": 453
+        },
+        {
+          "heading": "6.2 `config.yaml` Changes",
+          "level": 3,
+          "line": 462
+        },
+        {
+          "heading": "6.3 `army.yaml` Changes",
+          "level": 3,
+          "line": 495
+        },
+        {
+          "heading": "6.4 `go.py` → `hero go` Interaction with `hero check` and `hero score`",
+          "level": 3,
+          "line": 531
+        },
+        {
+          "heading": "Section 7 — Legal-Compliance Skill Specification",
+          "level": 2,
+          "line": 618
+        },
+        {
+          "heading": "7.1 Location",
+          "level": 3,
+          "line": 620
+        },
+        {
+          "heading": "7.2 Input/Output Contract",
+          "level": 3,
+          "line": 623
+        },
+        {
+          "heading": "7.3 Trigger Conditions",
+          "level": 3,
+          "line": 639
+        },
+        {
+          "heading": "7.4 Workflow (7 Steps)",
+          "level": 3,
+          "line": 647
+        },
+        {
+          "heading": "7.5 Template Registry",
+          "level": 3,
+          "line": 703
+        },
+        {
+          "heading": "7.6 Relationship to Existing Skills",
+          "level": 3,
+          "line": 712
+        },
+        {
+          "heading": "Section 8 — Summary Table: What to Build First",
+          "level": 2,
+          "line": 723
+        },
+        {
+          "heading": "Section 9 — Council Sign-Off",
+          "level": 2,
+          "line": 745
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 42
+      }
+    },
+    {
+      "path": "COUNCIL_REPORT_LEGAL_PHASE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 417,
+      "nonEmptyLines": 331,
+      "sections": [
+        {
+          "heading": "HERO Council Report — LEGAL Phase Integration",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Executive Summary",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Section 1 — Convergence (Points of Full Agreement)",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "1.1 LEGAL Must Be a Standalone Phase",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "1.2 Position in the Pipeline",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "1.3 What LEGAL Produces (minimum viable)",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "1.4 Legal Gate = Blocking",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "1.5 Reusable Across All HERO Projects",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "1.6 Archivist Fires Regardless",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "1.7 Melody_MD Zero-Data Special Case",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "Section 2 — Disagreements (Resolved Below)",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "Disagreement A: Standalone Phase vs. Sub-Phase of SHIP",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Disagreement B: Trigger Frequency — Every Build vs. Pre-SHIP Only",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "Disagreement C: EULA Source — Custom vs. Template",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "Disagreement D: Should a Custom Skill Be Created?",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "Section 3 — Verdict (Final Recommendations)",
+          "level": 2,
+          "line": 122
+        },
+        {
+          "heading": "3.1 Updated Pipeline Diagram",
+          "level": 3,
+          "line": 124
+        },
+        {
+          "heading": "3.2 What LEGAL Phase Produces (Detailed)",
+          "level": 3,
+          "line": 199
+        },
+        {
+          "heading": "Melody_MD Specific Output",
+          "level": 4,
+          "line": 201
+        },
+        {
+          "heading": "Reusable for All Projects",
+          "level": 4,
+          "line": 213
+        },
+        {
+          "heading": "3.3 Integration with Skills",
+          "level": 3,
+          "line": 237
+        },
+        {
+          "heading": "3.4 Trigger Conditions",
+          "level": 3,
+          "line": 277
+        },
+        {
+          "heading": "3.5 Toolchain Recommendations for Melody_MD",
+          "level": 3,
+          "line": 295
+        },
+        {
+          "heading": "Primary Tools (Use Now)",
+          "level": 4,
+          "line": 297
+        },
+        {
+          "heading": "Supplementary (Add in CI Pipeline)",
+          "level": 4,
+          "line": 307
+        },
+        {
+          "heading": "Not Needed for Melody_MD (Document Why)",
+          "level": 4,
+          "line": 315
+        },
+        {
+          "heading": "Section 4 — Recommended Next Actions",
+          "level": 2,
+          "line": 327
+        },
+        {
+          "heading": "Immediate (This Session)",
+          "level": 3,
+          "line": 329
+        },
+        {
+          "heading": "Short-Term (Next Sprint)",
+          "level": 3,
+          "line": 338
+        },
+        {
+          "heading": "Medium-Term (Next Month)",
+          "level": 3,
+          "line": 348
+        },
+        {
+          "heading": "Backlog (P2)",
+          "level": 3,
+          "line": 358
+        },
+        {
+          "heading": "Section 5 — Council Sign-Off",
+          "level": 2,
+          "line": 369
+        },
+        {
+          "heading": "Appendix A — Melody_MD Legal Quick-Start",
+          "level": 2,
+          "line": 381
+        },
+        {
+          "heading": "Appendix B — Legal Disclaimer",
+          "level": 2,
+          "line": 402
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 34
+      }
+    },
+    {
+      "path": "HEARTBEAT.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 9,
+      "nonEmptyLines": 6,
+      "sections": [
+        {
+          "heading": "Related",
+          "level": 2,
+          "line": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "HERO_V4_PLAN.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 206,
+      "nonEmptyLines": 155,
+      "sections": [
+        {
+          "heading": "HERO v4 — Multi-Agent Pipeline Evolution",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Motivation",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "2. New Stage Definitions",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Stage 9: `tdd-audit` (after build, before verify)",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "Stage 10: `improve-audit` (parallel to tdd-audit)",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "Stage 11: `harden+` (replaces/extends harden)",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "Stage 12: `anti-ai` (new)",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "Stage 13: `plan-gen` (post-processing, always last)",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "3. Pipeline Mode Mapping",
+          "level": 2,
+          "line": 140
+        },
+        {
+          "heading": "4. CLI Changes",
+          "level": 2,
+          "line": 155
+        },
+        {
+          "heading": "5. Implementation Plan",
+          "level": 2,
+          "line": 175
+        },
+        {
+          "heading": "6. Risks & Mitigations",
+          "level": 2,
+          "line": 189
+        },
+        {
+          "heading": "7. Does Not Break",
+          "level": 2,
+          "line": 201
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "IDENTITY.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 27,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "IDENTITY.md - Who Am I?",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Related",
+          "level": 2,
+          "line": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "Ideas_by_me.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 362,
+      "nonEmptyLines": 278,
+      "sections": [
+        {
+          "heading": "Ideas by me — Army Tree Viewport",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core Concept",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Node Anatomy",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "How Data Flows",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "Downstream (request → execution)",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "Upstream (results → delivery)",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "Error Forking",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "Multiple Pipelines",
+          "level": 2,
+          "line": 151
+        },
+        {
+          "heading": "Keyboard Navigation",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "Layout Modes",
+          "level": 2,
+          "line": 186
+        },
+        {
+          "heading": "Full tree (wide terminal)",
+          "level": 3,
+          "line": 188
+        },
+        {
+          "heading": "Compact tree (narrow terminal)",
+          "level": 3,
+          "line": 191
+        },
+        {
+          "heading": "Minimal tree (idle state)",
+          "level": 3,
+          "line": 198
+        },
+        {
+          "heading": "Why Tree Over Flow",
+          "level": 2,
+          "line": 207
+        },
+        {
+          "heading": "Android DeX Alternative — Desktop OS Phone App",
+          "level": 1,
+          "line": 226
+        },
+        {
+          "heading": "The Goal",
+          "level": 2,
+          "line": 232
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 243
+        },
+        {
+          "heading": "Key Android APIs (all public, no root/ADB):",
+          "level": 3,
+          "line": 254
+        },
+        {
+          "heading": "How DisplayLink Works (USB 2.0 → HDMI)",
+          "level": 2,
+          "line": 267
+        },
+        {
+          "heading": "Transport Comparison",
+          "level": 2,
+          "line": 280
+        },
+        {
+          "heading": "Build Phases",
+          "level": 2,
+          "line": 293
+        },
+        {
+          "heading": "Phase 0 — Foundation (1-2 weeks)",
+          "level": 3,
+          "line": 295
+        },
+        {
+          "heading": "Phase 1 — Wired Desktop MVP (2 weeks)",
+          "level": 3,
+          "line": 300
+        },
+        {
+          "heading": "Phase 2 — Wireless (2 weeks)",
+          "level": 3,
+          "line": 306
+        },
+        {
+          "heading": "Phase 3 — Native Android Apps (2 weeks)",
+          "level": 3,
+          "line": 312
+        },
+        {
+          "heading": "Phase 4 — Polish (2 weeks)",
+          "level": 3,
+          "line": 317
+        },
+        {
+          "heading": "Prior Art & References",
+          "level": 2,
+          "line": 328
+        },
+        {
+          "heading": "Key Technical Notes",
+          "level": 2,
+          "line": 341
+        },
+        {
+          "heading": "Limitation: DisplayLink mirrors only",
+          "level": 3,
+          "line": 343
+        },
+        {
+          "heading": "Limitation: WebRTC latency",
+          "level": 3,
+          "line": 349
+        },
+        {
+          "heading": "Limitation: Input injection",
+          "level": 3,
+          "line": 355
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 31
+      }
+    },
+    {
+      "path": "KIMI_NOTION_PLAN.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 812,
+      "nonEmptyLines": 683,
+      "sections": [
+        {
+          "heading": "KIMI NOTION PLAN — HERO Dashboard Clean-Slate Rewrite",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of Contents",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "1. Architecture Diagnosis",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "What's Actually Running",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "Key Findings",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "Architecture Fix Summary",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "2. CSS Clean-Slate Plan",
+          "level": 2,
+          "line": 63
+        },
+        {
+          "heading": "2.1 tokens.css — Design Tokens (White/Black Notion)",
+          "level": 3,
+          "line": 65
+        },
+        {
+          "heading": "2.2 base.css — Minimal Reset (Replace)",
+          "level": 3,
+          "line": 183
+        },
+        {
+          "heading": "2.3 layout.css — Simple Responsive Grid (Replace)",
+          "level": 3,
+          "line": 229
+        },
+        {
+          "heading": "2.4 components.css — Clean Cards (Replace)",
+          "level": 3,
+          "line": 278
+        },
+        {
+          "heading": "2.5 animations.css — Subtle Fades Only (Replace)",
+          "level": 3,
+          "line": 450
+        },
+        {
+          "heading": "3. JS Fix Plan",
+          "level": 2,
+          "line": 473
+        },
+        {
+          "heading": "3.1 app.js — Major Refactor",
+          "level": 3,
+          "line": 475
+        },
+        {
+          "heading": "3.2 tree-node.js — Fix renderTreeNode",
+          "level": 3,
+          "line": 511
+        },
+        {
+          "heading": "3.3 sandbox-card.js — Wire Up Kill Button + Subscribe Fix",
+          "level": 3,
+          "line": 554
+        },
+        {
+          "heading": "3.4 controls.js — Integrate Kill Button",
+          "level": 3,
+          "line": 589
+        },
+        {
+          "heading": "3.5 header.js — Minor Fix",
+          "level": 3,
+          "line": 599
+        },
+        {
+          "heading": "3.6 Remove Unused Files",
+          "level": 3,
+          "line": 603
+        },
+        {
+          "heading": "4. index.html Changes",
+          "level": 2,
+          "line": 614
+        },
+        {
+          "heading": "Remove",
+          "level": 3,
+          "line": 616
+        },
+        {
+          "heading": "Change",
+          "level": 3,
+          "line": 624
+        },
+        {
+          "heading": "Remove mobile GPU script",
+          "level": 3,
+          "line": 633
+        },
+        {
+          "heading": "Update HTML structure",
+          "level": 3,
+          "line": 639
+        },
+        {
+          "heading": "Remove",
+          "level": 3,
+          "line": 666
+        },
+        {
+          "heading": "5. Execution Order",
+          "level": 2,
+          "line": 673
+        },
+        {
+          "heading": "Phase 1: CSS Clean Slate (parallel-safe)",
+          "level": 3,
+          "line": 675
+        },
+        {
+          "heading": "Phase 2: JS Fixes (ordered)",
+          "level": 3,
+          "line": 684
+        },
+        {
+          "heading": "Phase 3: HTML",
+          "level": 3,
+          "line": 695
+        },
+        {
+          "heading": "Phase 4: Verify",
+          "level": 3,
+          "line": 700
+        },
+        {
+          "heading": "6. UI/UX Design Decisions (from UI/UX Pro Max)",
+          "level": 2,
+          "line": 716
+        },
+        {
+          "heading": "Style Decisions",
+          "level": 3,
+          "line": 718
+        },
+        {
+          "heading": "What Was Removed (Cyber-Glass → Notion)",
+          "level": 3,
+          "line": 740
+        },
+        {
+          "heading": "Empty State Design",
+          "level": 3,
+          "line": 759
+        },
+        {
+          "heading": "Color Palette Reference",
+          "level": 3,
+          "line": 774
+        },
+        {
+          "heading": "Appendix: File Changes Summary",
+          "level": 2,
+          "line": 794
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 36
+      }
+    },
+    {
+      "path": "LEAD_DISPATCH_FIX.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 203,
+      "nonEmptyLines": 156,
+      "sections": [
+        {
+          "heading": "LEAD DISPATCH FIX — Plan to Make Dispatch Entries Actually Execute",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. What's Broken",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Root Cause",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "Specific Code Paths",
+          "level": 3,
+          "line": 8
+        },
+        {
+          "heading": "Why It Exists",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "2. The Minimal Fix",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Option A: Dispatch Worker (Recommended)",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "Option B: Fix `SoldierSpawner` Directly",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Option C: Hybrid — Immediate for `spawn`, Deferred for `go`",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "3. Syncing Sandbox State",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "Current State Source",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "When to Update",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Cache Invalidation",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "Viewport Integration",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "4. File Changes Needed",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "New Files",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "Modified Files",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "Key Implementation Details",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "`src/hero/dispatch/worker.py` (new)",
+          "level": 4,
+          "line": 104
+        },
+        {
+          "heading": "Modification to `src/hero/commands/spawn.py`",
+          "level": 4,
+          "line": 146
+        },
+        {
+          "heading": "Modification to `src/hero/pipeline/watcher.py`",
+          "level": 4,
+          "line": 156
+        },
+        {
+          "heading": "5. Risk Assessment",
+          "level": 2,
+          "line": 166
+        },
+        {
+          "heading": "Low Risk",
+          "level": 3,
+          "line": 168
+        },
+        {
+          "heading": "Medium Risk",
+          "level": 3,
+          "line": 175
+        },
+        {
+          "heading": "High Risk (if not handled)",
+          "level": 3,
+          "line": 182
+        },
+        {
+          "heading": "Recommended Approach",
+          "level": 3,
+          "line": 188
+        },
+        {
+          "heading": "6. Implementation Order",
+          "level": 2,
+          "line": 193
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 27
+      }
+    },
+    {
+      "path": "MINIMAX_KILL_FIX.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 199,
+      "nonEmptyLines": 144,
+      "sections": [
+        {
+          "heading": "HERO Dashboard Kill Button — MiniMax Analysis & Fix",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Problem Statement",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Root Cause Analysis",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "🔴 BUG 1 (Critical): Missing `confirmation_token` in kill API call",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "🔴 BUG 2 (Critical): Card click handler fires for kill button clicks, triggering full re-render",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "🔴 BUG 3 (High): No mobile touch optimization (CSS)",
+          "level": 3,
+          "line": 79
+        },
+        {
+          "heading": "🟡 BUG 4 (Medium): `removeEventListener` passes `null`",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "🟡 BUG 5 (Low): No `:active` state on kill button",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "Why Playwright Desktop Tests Passed But Mobile Failed",
+          "level": 2,
+          "line": 138
+        },
+        {
+          "heading": "Files Changed",
+          "level": 2,
+          "line": 153
+        },
+        {
+          "heading": "`static/js/components/controls.js`",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "`static/js/components/sandbox-card.js`",
+          "level": 3,
+          "line": 158
+        },
+        {
+          "heading": "`static/css/components.css`",
+          "level": 3,
+          "line": 162
+        },
+        {
+          "heading": "Verification",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "Playwright Test (mobile emulation)",
+          "level": 3,
+          "line": 173
+        },
+        {
+          "heading": "Recommendations",
+          "level": 2,
+          "line": 195
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "NAVIGATION_TREE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 2395,
+      "nonEmptyLines": 2048,
+      "sections": [
+        {
+          "heading": "Navigation Tree — HERO",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Graphify Communities",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "Understand Layers",
+          "level": 2,
+          "line": 2115
+        },
+        {
+          "heading": "File Index",
+          "level": 2,
+          "line": 2126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "PIPELINE_DESIGN.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 239,
+      "nonEmptyLines": 196,
+      "sections": [
+        {
+          "heading": "HERO Pipeline Design",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Stage Details",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "Mode Presets",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "Role Responsibilities (Navigation)",
+          "level": 2,
+          "line": 101
+        },
+        {
+          "heading": "The Navigation Cycle",
+          "level": 2,
+          "line": 111
+        },
+        {
+          "heading": "How to Run",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "Self-Review Stage (③½)",
+          "level": 2,
+          "line": 168
+        },
+        {
+          "heading": "Scoring",
+          "level": 2,
+          "line": 215
+        },
+        {
+          "heading": "Pipeline Config Locations",
+          "level": 2,
+          "line": 227
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "PLAN.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 348,
+      "nonEmptyLines": 273,
+      "sections": [
+        {
+          "heading": "Implementation Plan: HERO CLI",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Architecture Decisions",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "What Exists (Phase 3 Complete)",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Improvement Plan (Kimi K2.6 Review)",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "Priority Order & Dependencies",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "Phase 5a: Reliability & Observability Foundation",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "Subtask 5a.1: Structured JSONL Logging",
+          "level": 4,
+          "line": 62
+        },
+        {
+          "heading": "Subtask 5a.2: Dead Letter Queue",
+          "level": 4,
+          "line": 68
+        },
+        {
+          "heading": "Subtask 5a.3: Circuit Breaker",
+          "level": 4,
+          "line": 74
+        },
+        {
+          "heading": "Subtask 5a.4: Model Fallback in Spawner",
+          "level": 4,
+          "line": 80
+        },
+        {
+          "heading": "Phase 5b: PipelineExecutor",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "Subtask 5b.1: PipelineExecutor Core",
+          "level": 4,
+          "line": 93
+        },
+        {
+          "heading": "Subtask 5b.2: `hero pipeline run` Command",
+          "level": 4,
+          "line": 106
+        },
+        {
+          "heading": "Subtask 5b.3: `hero go` Integration",
+          "level": 4,
+          "line": 112
+        },
+        {
+          "heading": "Phase 5c: Soldier Output QA Gate",
+          "level": 3,
+          "line": 120
+        },
+        {
+          "heading": "Subtask 5c.1: File-Scope Check",
+          "level": 4,
+          "line": 123
+        },
+        {
+          "heading": "Subtask 5c.2: Diff-Size Check",
+          "level": 4,
+          "line": 129
+        },
+        {
+          "heading": "Subtask 5c.3: Semantic Sanity Check",
+          "level": 4,
+          "line": 135
+        },
+        {
+          "heading": "Subtask 5c.4: QA Gate Integration",
+          "level": 4,
+          "line": 141
+        },
+        {
+          "heading": "Phase 5d: Git Workflow Integration",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "Subtask 5d.1: Auto-Branch on Pipeline Start",
+          "level": 4,
+          "line": 152
+        },
+        {
+          "heading": "Subtask 5d.2: Auto-Commit on Success",
+          "level": 4,
+          "line": 158
+        },
+        {
+          "heading": "Subtask 5d.3: Rollback on Failure",
+          "level": 4,
+          "line": 164
+        },
+        {
+          "heading": "Phase 5e: Token Efficiency",
+          "level": 3,
+          "line": 172
+        },
+        {
+          "heading": "Subtask 5e.1: Dynamic Budget Allocation",
+          "level": 4,
+          "line": 175
+        },
+        {
+          "heading": "Subtask 5e.2: Dispatch Queue TOON Format",
+          "level": 4,
+          "line": 181
+        },
+        {
+          "heading": "Subtask 5e.3: Context Deduplication",
+          "level": 4,
+          "line": 187
+        },
+        {
+          "heading": "Phase 5f: Cross-Sandbox Budget Queries",
+          "level": 3,
+          "line": 195
+        },
+        {
+          "heading": "Subtask 5f.1: Budget Summary Aggregation",
+          "level": 4,
+          "line": 198
+        },
+        {
+          "heading": "Subtask 5f.2: Budget History",
+          "level": 4,
+          "line": 204
+        },
+        {
+          "heading": "Phase 5g: Developer Experience",
+          "level": 3,
+          "line": 212
+        },
+        {
+          "heading": "Subtask 5g.1: `hero plan --interactive`",
+          "level": 4,
+          "line": 215
+        },
+        {
+          "heading": "Subtask 5g.2: `hero check --sandbox X`",
+          "level": 4,
+          "line": 221
+        },
+        {
+          "heading": "Subtask 5g.3: `hero watch --sandbox X`",
+          "level": 4,
+          "line": 227
+        },
+        {
+          "heading": "Phase 5h: Architecture Refinements",
+          "level": 3,
+          "line": 235
+        },
+        {
+          "heading": "Subtask 5h.1: TOON-ify Remaining JSON",
+          "level": 4,
+          "line": 238
+        },
+        {
+          "heading": "Subtask 5h.2: Sandbox Dependency Graph",
+          "level": 4,
+          "line": 244
+        },
+        {
+          "heading": "Subtask 5h.3: Task Complexity Estimator",
+          "level": 4,
+          "line": 250
+        },
+        {
+          "heading": "Execution Order (Recommended)",
+          "level": 2,
+          "line": 258
+        },
+        {
+          "heading": "Wave 1 — Foundation (parallelizable)",
+          "level": 3,
+          "line": 260
+        },
+        {
+          "heading": "Wave 2 — Reliability (sequential after Wave 1)",
+          "level": 3,
+          "line": 269
+        },
+        {
+          "heading": "Wave 3 — Pipeline (sequential after Wave 2)",
+          "level": 3,
+          "line": 276
+        },
+        {
+          "heading": "Wave 4 — QA & Git (parallel after Wave 3)",
+          "level": 3,
+          "line": 283
+        },
+        {
+          "heading": "Wave 5 — Integration (sequential after Wave 4)",
+          "level": 3,
+          "line": 292
+        },
+        {
+          "heading": "Wave 6 — DX & Architecture (parallel, last)",
+          "level": 3,
+          "line": 299
+        },
+        {
+          "heading": "Risks and Mitigations",
+          "level": 2,
+          "line": 311
+        },
+        {
+          "heading": "Open Questions (Answered)",
+          "level": 2,
+          "line": 323
+        },
+        {
+          "heading": "Execution Log",
+          "level": 2,
+          "line": 335
+        },
+        {
+          "heading": "Wave 1 — Foundation (2026-05-24)",
+          "level": 3,
+          "line": 337
+        },
+        {
+          "heading": "Lead Keyword Bug Fix (2026-05-25)",
+          "level": 3,
+          "line": 345
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 50
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 307,
+      "nonEmptyLines": 242,
+      "sections": [
+        {
+          "heading": "██████╗ ███████╗ ██████╗ ██████╗ ███╗   ██╗██╗    ██╗ █████╗ ██████╗  ██████╗",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "██╔══██╗██╔════╝██╔═══██╗██╔══██╗████╗  ██║██║    ██║██╔══██╗██╔══██╗██╔═══██╗",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "██████╔╝█████╗  ██║   ██║██████╔╝██╔██╗ ██║██║ █╗ ██║███████║██████╔╝██║   ██║",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "██╔══██╗██╔══╝  ██║   ██║██╔══██╗██║╚██╗██║██║███╗██║██╔══██║██╔══██╗██║   ██║",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "██║  ██╝███████╗╚██████╔╝██████╔╝██║ ╚████║╚███╔███╔╝██║  ██║██║  ██║╚██████╔╝",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "Quick Start",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "All Commands",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "Examples",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 140
+        },
+        {
+          "heading": "System Features",
+          "level": 2,
+          "line": 196
+        },
+        {
+          "heading": "Structured JSONL Logging",
+          "level": 3,
+          "line": 198
+        },
+        {
+          "heading": "Dynamic Budget Allocation",
+          "level": 3,
+          "line": 201
+        },
+        {
+          "heading": "TOON Format Dispatch Queue",
+          "level": 3,
+          "line": 204
+        },
+        {
+          "heading": "Circuit Breaker",
+          "level": 3,
+          "line": 207
+        },
+        {
+          "heading": "Model Fallback",
+          "level": 3,
+          "line": 210
+        },
+        {
+          "heading": "QA Gate",
+          "level": 3,
+          "line": 213
+        },
+        {
+          "heading": "Git Workflow",
+          "level": 3,
+          "line": 216
+        },
+        {
+          "heading": "Context Dedup",
+          "level": 3,
+          "line": 219
+        },
+        {
+          "heading": "Dead Letter Queue",
+          "level": 3,
+          "line": 222
+        },
+        {
+          "heading": "Dependency Graph",
+          "level": 3,
+          "line": 225
+        },
+        {
+          "heading": "External Prompt Templates",
+          "level": 3,
+          "line": 228
+        },
+        {
+          "heading": "TOON Format",
+          "level": 2,
+          "line": 233
+        },
+        {
+          "heading": "Configuration",
+          "level": 2,
+          "line": 264
+        },
+        {
+          "heading": "Documentation",
+          "level": 2,
+          "line": 282
+        },
+        {
+          "heading": "Development",
+          "level": 2,
+          "line": 289
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "RESOURCES.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 432,
+      "nonEmptyLines": 325,
+      "sections": [
+        {
+          "heading": "HERO Resources & Integration Plan",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Table of Contents",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "1. Hermes Agent Ecosystem",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Official & Community Repos",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "MiniMax AI / mmx-cli (User's Active Stack)",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "Already Installed",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "2. MCP Servers",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "Official Reference Servers",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "Archived (Still Useful)",
+          "level": 3,
+          "line": 71
+        },
+        {
+          "heading": "MCP Ecosystem Tools",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Integration Plan",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "3. Multi-Agent Orchestration",
+          "level": 2,
+          "line": 99
+        },
+        {
+          "heading": "Frameworks & Patterns",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "Key Patterns to Adopt",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "HERO's Unique Angle",
+          "level": 3,
+          "line": 120
+        },
+        {
+          "heading": "4. Agent Memory & Context",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "Memory Systems",
+          "level": 3,
+          "line": 132
+        },
+        {
+          "heading": "Context Management",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "Integration Plan",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "5. Code Knowledge Graphs",
+          "level": 2,
+          "line": 158
+        },
+        {
+          "heading": "Existing Tools",
+          "level": 3,
+          "line": 160
+        },
+        {
+          "heading": "graphify (Already Adopted)",
+          "level": 3,
+          "line": 171
+        },
+        {
+          "heading": "Integration Plan",
+          "level": 3,
+          "line": 179
+        },
+        {
+          "heading": "6. Token Optimization",
+          "level": 2,
+          "line": 188
+        },
+        {
+          "heading": "Formats & Techniques",
+          "level": 3,
+          "line": 190
+        },
+        {
+          "heading": "TOON Test Results (HERO Internal)",
+          "level": 3,
+          "line": 199
+        },
+        {
+          "heading": "HERO Token Budgets (from SAMB Constitution)",
+          "level": 3,
+          "line": 208
+        },
+        {
+          "heading": "Pre-Flight Formula",
+          "level": 3,
+          "line": 218
+        },
+        {
+          "heading": "7. CLI Frameworks",
+          "level": 2,
+          "line": 229
+        },
+        {
+          "heading": "Python Stack for HERO",
+          "level": 3,
+          "line": 231
+        },
+        {
+          "heading": "HERO CLI Design",
+          "level": 3,
+          "line": 241
+        },
+        {
+          "heading": "8. Sandbox & Isolation",
+          "level": 2,
+          "line": 256
+        },
+        {
+          "heading": "Tools",
+          "level": 3,
+          "line": 258
+        },
+        {
+          "heading": "HERO Sandbox Model",
+          "level": 3,
+          "line": 265
+        },
+        {
+          "heading": "9. Integration Roadmap",
+          "level": 2,
+          "line": 286
+        },
+        {
+          "heading": "Phase 0: Foundation (Now)",
+          "level": 3,
+          "line": 288
+        },
+        {
+          "heading": "Phase 1: Sandbox Engine",
+          "level": 3,
+          "line": 294
+        },
+        {
+          "heading": "Phase 2: Project Scanner + Graphify",
+          "level": 3,
+          "line": 300
+        },
+        {
+          "heading": "Phase 3: Constitution + Pre-Flight Gate",
+          "level": 3,
+          "line": 306
+        },
+        {
+          "heading": "Phase 4: Dispatcher (Lead → Soldiers)",
+          "level": 3,
+          "line": 312
+        },
+        {
+          "heading": "Phase 5: KATANA Checkpoints",
+          "level": 3,
+          "line": 318
+        },
+        {
+          "heading": "Phase 6: NUEMR Integration",
+          "level": 3,
+          "line": 324
+        },
+        {
+          "heading": "Phase 7: Advanced Features",
+          "level": 3,
+          "line": 329
+        },
+        {
+          "heading": "Quick Reference Links",
+          "level": 2,
+          "line": 338
+        },
+        {
+          "heading": "Hermes",
+          "level": 3,
+          "line": 340
+        },
+        {
+          "heading": "MCP",
+          "level": 3,
+          "line": 345
+        },
+        {
+          "heading": "mmx-cli (MiniMax AI)",
+          "level": 3,
+          "line": 350
+        },
+        {
+          "heading": "Multi-Agent",
+          "level": 3,
+          "line": 356
+        },
+        {
+          "heading": "Memory",
+          "level": 3,
+          "line": 361
+        },
+        {
+          "heading": "Code Intelligence",
+          "level": 3,
+          "line": 366
+        },
+        {
+          "heading": "CLI",
+          "level": 3,
+          "line": 372
+        },
+        {
+          "heading": "TOON",
+          "level": 3,
+          "line": 377
+        },
+        {
+          "heading": "10. Design Resources",
+          "level": 2,
+          "line": 383
+        },
+        {
+          "heading": "Icon Libraries",
+          "level": 3,
+          "line": 385
+        },
+        {
+          "heading": "UI Frameworks & Design Systems",
+          "level": 3,
+          "line": 395
+        },
+        {
+          "heading": "Flutter Design (User's Stack)",
+          "level": 3,
+          "line": 404
+        },
+        {
+          "heading": "Terminal Aesthetics",
+          "level": 3,
+          "line": 411
+        },
+        {
+          "heading": "HERO Design Decisions",
+          "level": 3,
+          "line": 420
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 58
+      }
+    },
+    {
+      "path": "SOUL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 42,
+      "nonEmptyLines": 23,
+      "sections": [
+        {
+          "heading": "SOUL.md - Who You Are",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core Truths",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Boundaries",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Vibe",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Continuity",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Related",
+          "level": 2,
+          "line": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "SPEC.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 695,
+      "nonEmptyLines": 566,
+      "sections": [
+        {
+          "heading": "HERO — CLI Multi-Agent Orchestration System",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "ASSUMPTIONS I'M MAKING",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Objective",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Tech Stack",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "Commands",
+          "level": 2,
+          "line": 81
+        },
+        {
+          "heading": "Project Structure",
+          "level": 2,
+          "line": 153
+        },
+        {
+          "heading": "Code Style",
+          "level": 2,
+          "line": 250
+        },
+        {
+          "heading": "Testing Strategy",
+          "level": 2,
+          "line": 299
+        },
+        {
+          "heading": "Boundaries",
+          "level": 2,
+          "line": 337
+        },
+        {
+          "heading": "Always Do",
+          "level": 3,
+          "line": 339
+        },
+        {
+          "heading": "Ask First",
+          "level": 3,
+          "line": 353
+        },
+        {
+          "heading": "Never Do",
+          "level": 3,
+          "line": 362
+        },
+        {
+          "heading": "Success Criteria",
+          "level": 2,
+          "line": 373
+        },
+        {
+          "heading": "Phase 0-3 (Core)",
+          "level": 3,
+          "line": 375
+        },
+        {
+          "heading": "Phase 5 — Reliability",
+          "level": 3,
+          "line": 386
+        },
+        {
+          "heading": "Phase 5 — PipelineExecutor",
+          "level": 3,
+          "line": 395
+        },
+        {
+          "heading": "Phase 5 — QA Gate & Git",
+          "level": 3,
+          "line": 403
+        },
+        {
+          "heading": "Phase 5 — Token Efficiency & DX",
+          "level": 3,
+          "line": 411
+        },
+        {
+          "heading": "PipelineExecutor",
+          "level": 2,
+          "line": 424
+        },
+        {
+          "heading": "Design",
+          "level": 3,
+          "line": 429
+        },
+        {
+          "heading": "Pipeline Manifest",
+          "level": 3,
+          "line": 442
+        },
+        {
+          "heading": "Commands",
+          "level": 3,
+          "line": 462
+        },
+        {
+          "heading": "Self-Review Stage",
+          "level": 3,
+          "line": 470
+        },
+        {
+          "heading": "Dependencies",
+          "level": 3,
+          "line": 494
+        },
+        {
+          "heading": "QA Gate",
+          "level": 2,
+          "line": 504
+        },
+        {
+          "heading": "Design",
+          "level": 3,
+          "line": 509
+        },
+        {
+          "heading": "Check Results",
+          "level": 3,
+          "line": 522
+        },
+        {
+          "heading": "Usage",
+          "level": 3,
+          "line": 534
+        },
+        {
+          "heading": "Git Workflow",
+          "level": 2,
+          "line": 547
+        },
+        {
+          "heading": "Design",
+          "level": 3,
+          "line": 552
+        },
+        {
+          "heading": "Error States",
+          "level": 3,
+          "line": 572
+        },
+        {
+          "heading": "Phase Plan",
+          "level": 2,
+          "line": 583
+        },
+        {
+          "heading": "Phase 0: Foundation (completed)",
+          "level": 3,
+          "line": 585
+        },
+        {
+          "heading": "Phase 1: Core Commands (completed)",
+          "level": 3,
+          "line": 591
+        },
+        {
+          "heading": "Phase 2: Advanced Commands (completed)",
+          "level": 3,
+          "line": 596
+        },
+        {
+          "heading": "Phase 3: Polish (completed)",
+          "level": 3,
+          "line": 601
+        },
+        {
+          "heading": "Phase 5: Reliability, Pipeline, QA, Git & DX (completed)",
+          "level": 3,
+          "line": 606
+        },
+        {
+          "heading": "Wave 1 — Foundation",
+          "level": 4,
+          "line": 608
+        },
+        {
+          "heading": "Wave 2 — Reliability",
+          "level": 4,
+          "line": 615
+        },
+        {
+          "heading": "Wave 3 — PipelineExecutor",
+          "level": 4,
+          "line": 620
+        },
+        {
+          "heading": "Wave 4 — QA & Git",
+          "level": 4,
+          "line": 625
+        },
+        {
+          "heading": "Wave 6 — DX & Architecture",
+          "level": 4,
+          "line": 634
+        },
+        {
+          "heading": "Phase 4: Future Work",
+          "level": 3,
+          "line": 639
+        },
+        {
+          "heading": "Open Questions",
+          "level": 2,
+          "line": 651
+        },
+        {
+          "heading": "Challenges Faced",
+          "level": 2,
+          "line": 661
+        },
+        {
+          "heading": "Lead Keyword Matching Bug (2026-05-25)",
+          "level": 3,
+          "line": 663
+        },
+        {
+          "heading": "Step 3.5 — Parallel Soldier Execution",
+          "level": 2,
+          "line": 683
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 47
+      }
+    },
+    {
+      "path": "SPEC_VIEWPORT.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 189,
+      "nonEmptyLines": 148,
+      "sections": [
+        {
+          "heading": "HERO Viewport + Token Efficiency — Implementation Spec",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Module 1: Cache Layer (hero/state/cache.py)",
+          "level": 2,
+          "line": 38
+        },
+        {
+          "heading": "Module 2: Metrics Collector (hero/viewport/metrics.py)",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "Module 3: Viewport Renderer (hero/viewport/renderer.py)",
+          "level": 2,
+          "line": 104
+        },
+        {
+          "heading": "Module 4: Dashboard Command (hero/commands/viewport.py)",
+          "level": 2,
+          "line": 131
+        },
+        {
+          "heading": "Module 5: Integration Points",
+          "level": 2,
+          "line": 142
+        },
+        {
+          "heading": "Token Efficiency Rules",
+          "level": 2,
+          "line": 152
+        },
+        {
+          "heading": "Acceptance Criteria",
+          "level": 2,
+          "line": 161
+        },
+        {
+          "heading": "Files to Create/Modify",
+          "level": 2,
+          "line": 173
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "TOOLS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 84,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "TOOLS.md - Local Notes",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Prompt Template System",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Quick edits",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "Template variables",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "Adding a project-specific override",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "What Goes Here",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Examples",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Why Separate?",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "Related",
+          "level": 2,
+          "line": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    }
+  ]
+}

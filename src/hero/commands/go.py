@@ -226,6 +226,23 @@ def _create_worktree(
 
     Returns the worktree path on success, None on failure.
     """
+    # Verify sandbox_path is a standalone git repo (not nested inside another)
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--show-toplevel"],
+            cwd=str(sandbox_path),
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if result.returncode != 0:
+            return None
+        toplevel = Path(result.stdout.strip()).resolve()
+        if toplevel != sandbox_path.resolve():
+            return None
+    except Exception:
+        return None
+
     try:
         main_branch = _detect_main_branch(sandbox_path)
         suffix = f"{pipeline_id}/{soldier_id}" if soldier_id else pipeline_id

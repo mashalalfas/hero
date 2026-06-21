@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "id": "document:src/hero/prompts/defaults/phases/archive.md",
+      "type": "document",
+      "name": "archive.md",
+      "filePath": "src/hero/prompts/defaults/phases/archive.md",
+      "summary": "Document: archive.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/prompts/defaults/phases/archive.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "src/hero/prompts/defaults/phases/archive.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/phases/fix.md",
+      "type": "document",
+      "name": "fix.md",
+      "filePath": "src/hero/prompts/defaults/phases/fix.md",
+      "summary": "Document: fix.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/phases/verify.md",
+      "type": "document",
+      "name": "verify.md",
+      "filePath": "src/hero/prompts/defaults/phases/verify.md",
+      "summary": "Document: verify.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": []
+}

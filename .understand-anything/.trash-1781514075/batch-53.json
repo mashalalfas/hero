@@ -1,0 +1,3213 @@
+{
+  "nodes": [
+    {
+      "id": "file:tests/conftest.py",
+      "type": "file",
+      "name": "conftest.py",
+      "filePath": "tests/conftest.py",
+      "summary": "File: conftest.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/conftest.py:clear_state_cache",
+      "type": "function",
+      "name": "clear_state_cache",
+      "filePath": "tests/conftest.py",
+      "summary": "Function clear_state_cache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_analysis_cache.py",
+      "type": "file",
+      "name": "test_analysis_cache.py",
+      "filePath": "tests/test_analysis_cache.py",
+      "summary": "File: test_analysis_cache.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_analysis_cache.py:clean_cache",
+      "type": "function",
+      "name": "clean_cache",
+      "filePath": "tests/test_analysis_cache.py",
+      "summary": "Function clean_cache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_analysis_cache.py:TestHashPaths",
+      "type": "class",
+      "name": "TestHashPaths",
+      "filePath": "tests/test_analysis_cache.py",
+      "summary": "Class TestHashPaths",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_analysis_cache.py:TestCacheKey",
+      "type": "class",
+      "name": "TestCacheKey",
+      "filePath": "tests/test_analysis_cache.py",
+      "summary": "Class TestCacheKey",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_analysis_cache.py:TestSetGetCached",
+      "type": "class",
+      "name": "TestSetGetCached",
+      "filePath": "tests/test_analysis_cache.py",
+      "summary": "Class TestSetGetCached",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_analysis_cache.py:TestCachedAnalyze",
+      "type": "class",
+      "name": "TestCachedAnalyze",
+      "filePath": "tests/test_analysis_cache.py",
+      "summary": "Class TestCachedAnalyze",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_analysis_cache.py:TestInvalidate",
+      "type": "class",
+      "name": "TestInvalidate",
+      "filePath": "tests/test_analysis_cache.py",
+      "summary": "Class TestInvalidate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_budget_katana.py",
+      "type": "file",
+      "name": "test_budget_katana.py",
+      "filePath": "tests/test_budget_katana.py",
+      "summary": "File: test_budget_katana.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_budget_katana.py:TestKatanaCycleIntegration",
+      "type": "class",
+      "name": "TestKatanaCycleIntegration",
+      "filePath": "tests/test_budget_katana.py",
+      "summary": "Class TestKatanaCycleIntegration",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_budget_katana.py:TestBudgetStateKatanaMethods",
+      "type": "class",
+      "name": "TestBudgetStateKatanaMethods",
+      "filePath": "tests/test_budget_katana.py",
+      "summary": "Class TestBudgetStateKatanaMethods",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_budget_katana.py:TestSandboxStateBudgetIntegration",
+      "type": "class",
+      "name": "TestSandboxStateBudgetIntegration",
+      "filePath": "tests/test_budget_katana.py",
+      "summary": "Class TestSandboxStateBudgetIntegration",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_budget.py",
+      "type": "file",
+      "name": "test_budget.py",
+      "filePath": "tests/test_budget.py",
+      "summary": "File: test_budget.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_budget.py:TestParseQueryExpression",
+      "type": "class",
+      "name": "TestParseQueryExpression",
+      "filePath": "tests/test_budget.py",
+      "summary": "Class TestParseQueryExpression",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_budget.py:TestLoadAllBudgets",
+      "type": "class",
+      "name": "TestLoadAllBudgets",
+      "filePath": "tests/test_budget.py",
+      "summary": "Class TestLoadAllBudgets",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_budget.py:TestFormatBudgetToon",
+      "type": "class",
+      "name": "TestFormatBudgetToon",
+      "filePath": "tests/test_budget.py",
+      "summary": "Class TestFormatBudgetToon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_build.py",
+      "type": "file",
+      "name": "test_build.py",
+      "filePath": "tests/test_build.py",
+      "summary": "File: test_build.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_build.py:cli_runner",
+      "type": "function",
+      "name": "cli_runner",
+      "filePath": "tests/test_build.py",
+      "summary": "Function cli_runner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_build.py:flutter_sandbox",
+      "type": "function",
+      "name": "flutter_sandbox",
+      "filePath": "tests/test_build.py",
+      "summary": "Function flutter_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_build.py:node_sandbox",
+      "type": "function",
+      "name": "node_sandbox",
+      "filePath": "tests/test_build.py",
+      "summary": "Function node_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_build.py:python_sandbox",
+      "type": "function",
+      "name": "python_sandbox",
+      "filePath": "tests/test_build.py",
+      "summary": "Function python_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_build.py:rust_sandbox",
+      "type": "function",
+      "name": "rust_sandbox",
+      "filePath": "tests/test_build.py",
+      "summary": "Function rust_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_build.py:empty_sandbox",
+      "type": "function",
+      "name": "empty_sandbox",
+      "filePath": "tests/test_build.py",
+      "summary": "Function empty_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build.py:TestDetectProjectType",
+      "type": "class",
+      "name": "TestDetectProjectType",
+      "filePath": "tests/test_build.py",
+      "summary": "Class TestDetectProjectType",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build.py:TestCheckBuild",
+      "type": "class",
+      "name": "TestCheckBuild",
+      "filePath": "tests/test_build.py",
+      "summary": "Class TestCheckBuild",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build.py:TestCheckObfuscation",
+      "type": "class",
+      "name": "TestCheckObfuscation",
+      "filePath": "tests/test_build.py",
+      "summary": "Class TestCheckObfuscation",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build.py:TestCheckProguard",
+      "type": "class",
+      "name": "TestCheckProguard",
+      "filePath": "tests/test_build.py",
+      "summary": "Class TestCheckProguard",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build.py:TestCheckDebugSymbols",
+      "type": "class",
+      "name": "TestCheckDebugSymbols",
+      "filePath": "tests/test_build.py",
+      "summary": "Class TestCheckDebugSymbols",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build.py:TestComputeBuildScore",
+      "type": "class",
+      "name": "TestComputeBuildScore",
+      "filePath": "tests/test_build.py",
+      "summary": "Class TestComputeBuildScore",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build.py:TestRunBuild",
+      "type": "class",
+      "name": "TestRunBuild",
+      "filePath": "tests/test_build.py",
+      "summary": "Class TestRunBuild",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build.py:TestBuildCommand",
+      "type": "class",
+      "name": "TestBuildCommand",
+      "filePath": "tests/test_build.py",
+      "summary": "Class TestBuildCommand",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_cache.py",
+      "type": "file",
+      "name": "test_cache.py",
+      "filePath": "tests/test_cache.py",
+      "summary": "File: test_cache.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_cache.py:tmp_sandbox",
+      "type": "function",
+      "name": "tmp_sandbox",
+      "filePath": "tests/test_cache.py",
+      "summary": "Function tmp_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cache.py:TestCacheEntry",
+      "type": "class",
+      "name": "TestCacheEntry",
+      "filePath": "tests/test_cache.py",
+      "summary": "Class TestCacheEntry",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cache.py:TestStateCacheBasic",
+      "type": "class",
+      "name": "TestStateCacheBasic",
+      "filePath": "tests/test_cache.py",
+      "summary": "Class TestStateCacheBasic",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cache.py:TestLRUEviction",
+      "type": "class",
+      "name": "TestLRUEviction",
+      "filePath": "tests/test_cache.py",
+      "summary": "Class TestLRUEviction",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cache.py:TestThreadSafety",
+      "type": "class",
+      "name": "TestThreadSafety",
+      "filePath": "tests/test_cache.py",
+      "summary": "Class TestThreadSafety",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cache.py:TestBatchLoad",
+      "type": "class",
+      "name": "TestBatchLoad",
+      "filePath": "tests/test_cache.py",
+      "summary": "Class TestBatchLoad",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cache.py:TestBatchLoadWithLoader",
+      "type": "class",
+      "name": "TestBatchLoadWithLoader",
+      "filePath": "tests/test_cache.py",
+      "summary": "Class TestBatchLoadWithLoader",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cache.py:TestInvalidateAfterMutation",
+      "type": "class",
+      "name": "TestInvalidateAfterMutation",
+      "filePath": "tests/test_cache.py",
+      "summary": "Class TestInvalidateAfterMutation",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_cipr.py",
+      "type": "file",
+      "name": "test_cipr.py",
+      "filePath": "tests/test_cipr.py",
+      "summary": "File: test_cipr.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_cipr.py:_make_flutter_project",
+      "type": "function",
+      "name": "_make_flutter_project",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Function _make_flutter_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_cipr.py:_make_node_project",
+      "type": "function",
+      "name": "_make_node_project",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Function _make_node_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_cipr.py:_make_rails_project",
+      "type": "function",
+      "name": "_make_rails_project",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Function _make_rails_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_cipr.py:_make_python_project",
+      "type": "function",
+      "name": "_make_python_project",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Function _make_python_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestIsRailsProject",
+      "type": "class",
+      "name": "TestIsRailsProject",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestIsRailsProject",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestCountTestFailures",
+      "type": "class",
+      "name": "TestCountTestFailures",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestCountTestFailures",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestRunTests",
+      "type": "class",
+      "name": "TestRunTests",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestRunTests",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestRunTrivy",
+      "type": "class",
+      "name": "TestRunTrivy",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestRunTrivy",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestCheckBuildArtifacts",
+      "type": "class",
+      "name": "TestCheckBuildArtifacts",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestCheckBuildArtifacts",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestRunBrakeman",
+      "type": "class",
+      "name": "TestRunBrakeman",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestRunBrakeman",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestComputeCiprScore",
+      "type": "class",
+      "name": "TestComputeCiprScore",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestComputeCiprScore",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestRunCipr",
+      "type": "class",
+      "name": "TestRunCipr",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestRunCipr",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_cipr.py:TestCLI",
+      "type": "class",
+      "name": "TestCLI",
+      "filePath": "tests/test_cipr.py",
+      "summary": "Class TestCLI",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_core.py",
+      "type": "file",
+      "name": "test_core.py",
+      "filePath": "tests/test_core.py",
+      "summary": "File: test_core.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_core.py:TestDetectProjectType",
+      "type": "class",
+      "name": "TestDetectProjectType",
+      "filePath": "tests/test_core.py",
+      "summary": "Class TestDetectProjectType",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_core.py:TestResolveSandbox",
+      "type": "class",
+      "name": "TestResolveSandbox",
+      "filePath": "tests/test_core.py",
+      "summary": "Class TestResolveSandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_core.py:TestParseIndexToon",
+      "type": "class",
+      "name": "TestParseIndexToon",
+      "filePath": "tests/test_core.py",
+      "summary": "Class TestParseIndexToon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_core.py:TestSafeRun",
+      "type": "class",
+      "name": "TestSafeRun",
+      "filePath": "tests/test_core.py",
+      "summary": "Class TestSafeRun",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_deploy.py",
+      "type": "file",
+      "name": "test_deploy.py",
+      "filePath": "tests/test_deploy.py",
+      "summary": "File: test_deploy.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_deploy.py:cli_runner",
+      "type": "function",
+      "name": "cli_runner",
+      "filePath": "tests/test_deploy.py",
+      "summary": "Function cli_runner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_deploy.py:mock_index",
+      "type": "function",
+      "name": "mock_index",
+      "filePath": "tests/test_deploy.py",
+      "summary": "Function mock_index",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_deploy.py:sandbox_dirs",
+      "type": "function",
+      "name": "sandbox_dirs",
+      "filePath": "tests/test_deploy.py",
+      "summary": "Function sandbox_dirs",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_deploy.py:TestDeployCommand",
+      "type": "class",
+      "name": "TestDeployCommand",
+      "filePath": "tests/test_deploy.py",
+      "summary": "Class TestDeployCommand",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_deploy.py:TestDeployOutputFormat",
+      "type": "class",
+      "name": "TestDeployOutputFormat",
+      "filePath": "tests/test_deploy.py",
+      "summary": "Class TestDeployOutputFormat",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_dlq.py",
+      "type": "file",
+      "name": "test_dlq.py",
+      "filePath": "tests/test_dlq.py",
+      "summary": "File: test_dlq.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_dlq.py:_clean_dlq_dir",
+      "type": "function",
+      "name": "_clean_dlq_dir",
+      "filePath": "tests/test_dlq.py",
+      "summary": "Function _clean_dlq_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_dlq.py:sample_task_data",
+      "type": "function",
+      "name": "sample_task_data",
+      "filePath": "tests/test_dlq.py",
+      "summary": "Function sample_task_data",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_dlq.py:TestSendToDlq",
+      "type": "class",
+      "name": "TestSendToDlq",
+      "filePath": "tests/test_dlq.py",
+      "summary": "Class TestSendToDlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_dlq.py:TestListDlq",
+      "type": "class",
+      "name": "TestListDlq",
+      "filePath": "tests/test_dlq.py",
+      "summary": "Class TestListDlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_dlq.py:TestRetryFromDlq",
+      "type": "class",
+      "name": "TestRetryFromDlq",
+      "filePath": "tests/test_dlq.py",
+      "summary": "Class TestRetryFromDlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_dlq.py:TestClearDlq",
+      "type": "class",
+      "name": "TestClearDlq",
+      "filePath": "tests/test_dlq.py",
+      "summary": "Class TestClearDlq",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_graphify.py",
+      "type": "file",
+      "name": "test_graphify.py",
+      "filePath": "tests/test_graphify.py",
+      "summary": "File: test_graphify.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_graphify.py:TestFindGraphifyBinary",
+      "type": "class",
+      "name": "TestFindGraphifyBinary",
+      "filePath": "tests/test_graphify.py",
+      "summary": "Class TestFindGraphifyBinary",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_graphify.py:TestGraphifyClient",
+      "type": "class",
+      "name": "TestGraphifyClient",
+      "filePath": "tests/test_graphify.py",
+      "summary": "Class TestGraphifyClient",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_graphify.py:TestBuildQuery",
+      "type": "class",
+      "name": "TestBuildQuery",
+      "filePath": "tests/test_graphify.py",
+      "summary": "Class TestBuildQuery",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_graphify.py:TestParseResponse",
+      "type": "class",
+      "name": "TestParseResponse",
+      "filePath": "tests/test_graphify.py",
+      "summary": "Class TestParseResponse",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_harden.py",
+      "type": "file",
+      "name": "test_harden.py",
+      "filePath": "tests/test_harden.py",
+      "summary": "File: test_harden.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_harden.py:_make_flutter_project",
+      "type": "function",
+      "name": "_make_flutter_project",
+      "filePath": "tests/test_harden.py",
+      "summary": "Function _make_flutter_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_harden.py:_make_node_project",
+      "type": "function",
+      "name": "_make_node_project",
+      "filePath": "tests/test_harden.py",
+      "summary": "Function _make_node_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_harden.py:TestComputeHardenScore",
+      "type": "class",
+      "name": "TestComputeHardenScore",
+      "filePath": "tests/test_harden.py",
+      "summary": "Class TestComputeHardenScore",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_harden.py:TestScanSecrets",
+      "type": "class",
+      "name": "TestScanSecrets",
+      "filePath": "tests/test_harden.py",
+      "summary": "Class TestScanSecrets",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_harden.py:TestRunTrivy",
+      "type": "class",
+      "name": "TestRunTrivy",
+      "filePath": "tests/test_harden.py",
+      "summary": "Class TestRunTrivy",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_harden.py:TestRootDetection",
+      "type": "class",
+      "name": "TestRootDetection",
+      "filePath": "tests/test_harden.py",
+      "summary": "Class TestRootDetection",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_harden.py:TestCertPinning",
+      "type": "class",
+      "name": "TestCertPinning",
+      "filePath": "tests/test_harden.py",
+      "summary": "Class TestCertPinning",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_harden.py:TestDebugSymbols",
+      "type": "class",
+      "name": "TestDebugSymbols",
+      "filePath": "tests/test_harden.py",
+      "summary": "Class TestDebugSymbols",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_harden.py:TestRunHarden",
+      "type": "class",
+      "name": "TestRunHarden",
+      "filePath": "tests/test_harden.py",
+      "summary": "Class TestRunHarden",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_harden.py:TestCLI",
+      "type": "class",
+      "name": "TestCLI",
+      "filePath": "tests/test_harden.py",
+      "summary": "Class TestCLI",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_heartbeat.py",
+      "type": "file",
+      "name": "test_heartbeat.py",
+      "filePath": "tests/test_heartbeat.py",
+      "summary": "File: test_heartbeat.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_heartbeat.py:TestHeartbeatState",
+      "type": "class",
+      "name": "TestHeartbeatState",
+      "filePath": "tests/test_heartbeat.py",
+      "summary": "Class TestHeartbeatState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_heartbeat.py:TestHeartbeatStateStaticMethods",
+      "type": "class",
+      "name": "TestHeartbeatStateStaticMethods",
+      "filePath": "tests/test_heartbeat.py",
+      "summary": "Class TestHeartbeatStateStaticMethods",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_heartbeat.py:TestHeartbeatData",
+      "type": "class",
+      "name": "TestHeartbeatData",
+      "filePath": "tests/test_heartbeat.py",
+      "summary": "Class TestHeartbeatData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_heartbeat.py:TestSpawnerCreatesHeartbeat",
+      "type": "class",
+      "name": "TestSpawnerCreatesHeartbeat",
+      "filePath": "tests/test_heartbeat.py",
+      "summary": "Class TestSpawnerCreatesHeartbeat",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_legal.py",
+      "type": "file",
+      "name": "test_legal.py",
+      "filePath": "tests/test_legal.py",
+      "summary": "File: test_legal.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_legal.py:runner",
+      "type": "function",
+      "name": "runner",
+      "filePath": "tests/test_legal.py",
+      "summary": "Function runner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_legal.py:tmp_project",
+      "type": "function",
+      "name": "tmp_project",
+      "filePath": "tests/test_legal.py",
+      "summary": "Function tmp_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_legal.py:tmp_node_project",
+      "type": "function",
+      "name": "tmp_node_project",
+      "filePath": "tests/test_legal.py",
+      "summary": "Function tmp_node_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_legal.py:_make_flutter_lock",
+      "type": "function",
+      "name": "_make_flutter_lock",
+      "filePath": "tests/test_legal.py",
+      "summary": "Function _make_flutter_lock",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestResolveSandbox",
+      "type": "class",
+      "name": "TestResolveSandbox",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestResolveSandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestLoadOrCreateLegalConfig",
+      "type": "class",
+      "name": "TestLoadOrCreateLegalConfig",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestLoadOrCreateLegalConfig",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestScanLicensesFlutter",
+      "type": "class",
+      "name": "TestScanLicensesFlutter",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestScanLicensesFlutter",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestScanLicensesNode",
+      "type": "class",
+      "name": "TestScanLicensesNode",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestScanLicensesNode",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestCheckLicenseScan",
+      "type": "class",
+      "name": "TestCheckLicenseScan",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestCheckLicenseScan",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestCheckSbom",
+      "type": "class",
+      "name": "TestCheckSbom",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestCheckSbom",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestCheckEula",
+      "type": "class",
+      "name": "TestCheckEula",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestCheckEula",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestCheckPrivacyPolicy",
+      "type": "class",
+      "name": "TestCheckPrivacyPolicy",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestCheckPrivacyPolicy",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestCopyrightReuse",
+      "type": "class",
+      "name": "TestCopyrightReuse",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestCopyrightReuse",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestComputeLegalScore",
+      "type": "class",
+      "name": "TestComputeLegalScore",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestComputeLegalScore",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestRunLegal",
+      "type": "class",
+      "name": "TestRunLegal",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestRunLegal",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestLegalCLI",
+      "type": "class",
+      "name": "TestLegalCLI",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestLegalCLI",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_legal.py:TestEdgeCases",
+      "type": "class",
+      "name": "TestEdgeCases",
+      "filePath": "tests/test_legal.py",
+      "summary": "Class TestEdgeCases",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_locks.py",
+      "type": "file",
+      "name": "test_locks.py",
+      "filePath": "tests/test_locks.py",
+      "summary": "File: test_locks.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_locks.py:_isolate_lock_dir",
+      "type": "function",
+      "name": "_isolate_lock_dir",
+      "filePath": "tests/test_locks.py",
+      "summary": "Function _isolate_lock_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_locks.py:TestFileLock",
+      "type": "class",
+      "name": "TestFileLock",
+      "filePath": "tests/test_locks.py",
+      "summary": "Class TestFileLock",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_locks.py:TestExchange",
+      "type": "class",
+      "name": "TestExchange",
+      "filePath": "tests/test_locks.py",
+      "summary": "Class TestExchange",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_locks.py:TestLockAndExchange",
+      "type": "class",
+      "name": "TestLockAndExchange",
+      "filePath": "tests/test_locks.py",
+      "summary": "Class TestLockAndExchange",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_logging.py",
+      "type": "file",
+      "name": "test_logging.py",
+      "filePath": "tests/test_logging.py",
+      "summary": "File: test_logging.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_logging.py:_reset_logger_cache",
+      "type": "function",
+      "name": "_reset_logger_cache",
+      "filePath": "tests/test_logging.py",
+      "summary": "Function _reset_logger_cache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_logging.py:tmp_log_dir",
+      "type": "function",
+      "name": "tmp_log_dir",
+      "filePath": "tests/test_logging.py",
+      "summary": "Function tmp_log_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_logging.py:tmp_config",
+      "type": "function",
+      "name": "tmp_config",
+      "filePath": "tests/test_logging.py",
+      "summary": "Function tmp_config",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_logging.py:_patch_env",
+      "type": "function",
+      "name": "_patch_env",
+      "filePath": "tests/test_logging.py",
+      "summary": "Function _patch_env",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_logging.py:TestJsonlFormat",
+      "type": "class",
+      "name": "TestJsonlFormat",
+      "filePath": "tests/test_logging.py",
+      "summary": "Class TestJsonlFormat",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_logging.py:TestRotation",
+      "type": "class",
+      "name": "TestRotation",
+      "filePath": "tests/test_logging.py",
+      "summary": "Class TestRotation",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_logging.py:TestLevelFiltering",
+      "type": "class",
+      "name": "TestLevelFiltering",
+      "filePath": "tests/test_logging.py",
+      "summary": "Class TestLevelFiltering",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_logging.py:TestGetLogger",
+      "type": "class",
+      "name": "TestGetLogger",
+      "filePath": "tests/test_logging.py",
+      "summary": "Class TestGetLogger",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_pipeline_executor_qa.py",
+      "type": "file",
+      "name": "test_pipeline_executor_qa.py",
+      "filePath": "tests/test_pipeline_executor_qa.py",
+      "summary": "File: test_pipeline_executor_qa.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor_qa.py:sandbox_repo",
+      "type": "function",
+      "name": "sandbox_repo",
+      "filePath": "tests/test_pipeline_executor_qa.py",
+      "summary": "Function sandbox_repo",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor_qa.py:manifest_with_sandbox",
+      "type": "function",
+      "name": "manifest_with_sandbox",
+      "filePath": "tests/test_pipeline_executor_qa.py",
+      "summary": "Function manifest_with_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor_qa.py:manifest_file",
+      "type": "function",
+      "name": "manifest_file",
+      "filePath": "tests/test_pipeline_executor_qa.py",
+      "summary": "Function manifest_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pipeline_executor_qa.py:TestCircuitBreakerGate",
+      "type": "class",
+      "name": "TestCircuitBreakerGate",
+      "filePath": "tests/test_pipeline_executor_qa.py",
+      "summary": "Class TestCircuitBreakerGate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pipeline_executor_qa.py:TestQAGateIntegration",
+      "type": "class",
+      "name": "TestQAGateIntegration",
+      "filePath": "tests/test_pipeline_executor_qa.py",
+      "summary": "Class TestQAGateIntegration",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_pipeline_executor.py",
+      "type": "file",
+      "name": "test_pipeline_executor.py",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "File: test_pipeline_executor.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor.py:manifest_data",
+      "type": "function",
+      "name": "manifest_data",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Function manifest_data",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor.py:manifest_file",
+      "type": "function",
+      "name": "manifest_file",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Function manifest_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor.py:dispatch_dir",
+      "type": "function",
+      "name": "dispatch_dir",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Function dispatch_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor.py:_make_dispatch_toon",
+      "type": "function",
+      "name": "_make_dispatch_toon",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Function _make_dispatch_toon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor.py:_mock_get_task",
+      "type": "function",
+      "name": "_mock_get_task",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Function _mock_get_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor.py:_do_get_task",
+      "type": "function",
+      "name": "_do_get_task",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Function _do_get_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pipeline_executor.py:_parse_simple_toon",
+      "type": "function",
+      "name": "_parse_simple_toon",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Function _parse_simple_toon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pipeline_executor.py:TestPipelineResult",
+      "type": "class",
+      "name": "TestPipelineResult",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Class TestPipelineResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pipeline_executor.py:TestPipelineExecutorInit",
+      "type": "class",
+      "name": "TestPipelineExecutorInit",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Class TestPipelineExecutorInit",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pipeline_executor.py:TestPipelineExecutorFindExtraTasks",
+      "type": "class",
+      "name": "TestPipelineExecutorFindExtraTasks",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Class TestPipelineExecutorFindExtraTasks",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pipeline_executor.py:TestPipelineExecutorPollTasks",
+      "type": "class",
+      "name": "TestPipelineExecutorPollTasks",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Class TestPipelineExecutorPollTasks",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pipeline_executor.py:TestPipelineExecutorRun",
+      "type": "class",
+      "name": "TestPipelineExecutorRun",
+      "filePath": "tests/test_pipeline_executor.py",
+      "summary": "Class TestPipelineExecutorRun",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_pre_commit.py",
+      "type": "file",
+      "name": "test_pre_commit.py",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "File: test_pre_commit.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pre_commit.py:runner",
+      "type": "function",
+      "name": "runner",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Function runner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_pre_commit.py:tmp_project",
+      "type": "function",
+      "name": "tmp_project",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Function tmp_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pre_commit.py:TestResolveSandbox",
+      "type": "class",
+      "name": "TestResolveSandbox",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Class TestResolveSandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pre_commit.py:TestDetectProjectType",
+      "type": "class",
+      "name": "TestDetectProjectType",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Class TestDetectProjectType",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pre_commit.py:TestCheckSecrets",
+      "type": "class",
+      "name": "TestCheckSecrets",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Class TestCheckSecrets",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pre_commit.py:TestCheckLint",
+      "type": "class",
+      "name": "TestCheckLint",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Class TestCheckLint",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pre_commit.py:TestCheckCopyright",
+      "type": "class",
+      "name": "TestCheckCopyright",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Class TestCheckCopyright",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pre_commit.py:TestComputeScore",
+      "type": "class",
+      "name": "TestComputeScore",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Class TestComputeScore",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pre_commit.py:TestRunPreCommit",
+      "type": "class",
+      "name": "TestRunPreCommit",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Class TestRunPreCommit",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_pre_commit.py:TestCLI",
+      "type": "class",
+      "name": "TestCLI",
+      "filePath": "tests/test_pre_commit.py",
+      "summary": "Class TestCLI",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_prompts.py",
+      "type": "file",
+      "name": "test_prompts.py",
+      "filePath": "tests/test_prompts.py",
+      "summary": "File: test_prompts.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_prompts.py:TestResolveTemplate",
+      "type": "class",
+      "name": "TestResolveTemplate",
+      "filePath": "tests/test_prompts.py",
+      "summary": "Class TestResolveTemplate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_prompts.py:TestRenderTemplate",
+      "type": "class",
+      "name": "TestRenderTemplate",
+      "filePath": "tests/test_prompts.py",
+      "summary": "Class TestRenderTemplate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_prompts.py:TestLoadRule",
+      "type": "class",
+      "name": "TestLoadRule",
+      "filePath": "tests/test_prompts.py",
+      "summary": "Class TestLoadRule",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_qa_gate.py",
+      "type": "file",
+      "name": "test_qa_gate.py",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "File: test_qa_gate.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_qa_gate.py:sandbox_with_git",
+      "type": "function",
+      "name": "sandbox_with_git",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Function sandbox_with_git",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_qa_gate.py:_add_and_stage",
+      "type": "function",
+      "name": "_add_and_stage",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Function _add_and_stage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_qa_gate.py:TestQAResult",
+      "type": "class",
+      "name": "TestQAResult",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Class TestQAResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_qa_gate.py:TestFileScopeCheck",
+      "type": "class",
+      "name": "TestFileScopeCheck",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Class TestFileScopeCheck",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_qa_gate.py:TestDiffSizeCheck",
+      "type": "class",
+      "name": "TestDiffSizeCheck",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Class TestDiffSizeCheck",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_qa_gate.py:TestHandleFailure",
+      "type": "class",
+      "name": "TestHandleFailure",
+      "filePath": "tests/test_qa_gate.py",
+      "summary": "Class TestHandleFailure",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_score.py",
+      "type": "file",
+      "name": "test_score.py",
+      "filePath": "tests/test_score.py",
+      "summary": "File: test_score.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_score.py:runner",
+      "type": "function",
+      "name": "runner",
+      "filePath": "tests/test_score.py",
+      "summary": "Function runner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_score.py:tmp_project",
+      "type": "function",
+      "name": "tmp_project",
+      "filePath": "tests/test_score.py",
+      "summary": "Function tmp_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestResolveSandbox",
+      "type": "class",
+      "name": "TestResolveSandbox",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestResolveSandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestDetectProjectType",
+      "type": "class",
+      "name": "TestDetectProjectType",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestDetectProjectType",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestSecretScan",
+      "type": "class",
+      "name": "TestSecretScan",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestSecretScan",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestCopyrightHeaders",
+      "type": "class",
+      "name": "TestCopyrightHeaders",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestCopyrightHeaders",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestScoreVerify",
+      "type": "class",
+      "name": "TestScoreVerify",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestScoreVerify",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_score.py:TestCLI",
+      "type": "class",
+      "name": "TestCLI",
+      "filePath": "tests/test_score.py",
+      "summary": "Class TestCLI",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_spawn.py",
+      "type": "file",
+      "name": "test_spawn.py",
+      "filePath": "tests/test_spawn.py",
+      "summary": "File: test_spawn.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_spawn.py:clear_dispatch_queue_env",
+      "type": "function",
+      "name": "clear_dispatch_queue_env",
+      "filePath": "tests/test_spawn.py",
+      "summary": "Function clear_dispatch_queue_env",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_spawn.py:TestSoldierSpawner",
+      "type": "class",
+      "name": "TestSoldierSpawner",
+      "filePath": "tests/test_spawn.py",
+      "summary": "Class TestSoldierSpawner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_spawn.py:TestBuildContext",
+      "type": "class",
+      "name": "TestBuildContext",
+      "filePath": "tests/test_spawn.py",
+      "summary": "Class TestBuildContext",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_state.py",
+      "type": "file",
+      "name": "test_state.py",
+      "filePath": "tests/test_state.py",
+      "summary": "File: test_state.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_state.py:TestIndexState",
+      "type": "class",
+      "name": "TestIndexState",
+      "filePath": "tests/test_state.py",
+      "summary": "Class TestIndexState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_state.py:TestSandboxState",
+      "type": "class",
+      "name": "TestSandboxState",
+      "filePath": "tests/test_state.py",
+      "summary": "Class TestSandboxState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_state.py:TestBudgetState",
+      "type": "class",
+      "name": "TestBudgetState",
+      "filePath": "tests/test_state.py",
+      "summary": "Class TestBudgetState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_status.py",
+      "type": "file",
+      "name": "test_status.py",
+      "filePath": "tests/test_status.py",
+      "summary": "File: test_status.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:_isolate_status_dir",
+      "type": "function",
+      "name": "_isolate_status_dir",
+      "filePath": "tests/test_status.py",
+      "summary": "Function _isolate_status_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:_write",
+      "type": "function",
+      "name": "_write",
+      "filePath": "tests/test_status.py",
+      "summary": "Function _write",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_write_and_read_roundtrip",
+      "type": "function",
+      "name": "test_write_and_read_roundtrip",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_write_and_read_roundtrip",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_read_missing_returns_none",
+      "type": "function",
+      "name": "test_read_missing_returns_none",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_read_missing_returns_none",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_overwrite_is_atomic",
+      "type": "function",
+      "name": "test_overwrite_is_atomic",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_overwrite_is_atomic",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_list_status_empty_when_no_files",
+      "type": "function",
+      "name": "test_list_status_empty_when_no_files",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_list_status_empty_when_no_files",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_list_status_sorted_newest_first",
+      "type": "function",
+      "name": "test_list_status_sorted_newest_first",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_list_status_sorted_newest_first",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_list_status_filter_by_sandbox",
+      "type": "function",
+      "name": "test_list_status_filter_by_sandbox",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_list_status_filter_by_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_clean_status_removes_old",
+      "type": "function",
+      "name": "test_clean_status_removes_old",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_clean_status_removes_old",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_clean_status_noop_on_empty_dir",
+      "type": "function",
+      "name": "test_clean_status_noop_on_empty_dir",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_clean_status_noop_on_empty_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_status.py:test_write_adds_timestamp",
+      "type": "function",
+      "name": "test_write_adds_timestamp",
+      "filePath": "tests/test_status.py",
+      "summary": "Function test_write_adds_timestamp",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/conftest.py",
+      "target": "function:tests/conftest.py:clear_state_cache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analysis_cache.py",
+      "target": "function:tests/test_analysis_cache.py:clean_cache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analysis_cache.py",
+      "target": "class:tests/test_analysis_cache.py:TestHashPaths",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analysis_cache.py",
+      "target": "class:tests/test_analysis_cache.py:TestCacheKey",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analysis_cache.py",
+      "target": "class:tests/test_analysis_cache.py:TestSetGetCached",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analysis_cache.py",
+      "target": "class:tests/test_analysis_cache.py:TestCachedAnalyze",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analysis_cache.py",
+      "target": "class:tests/test_analysis_cache.py:TestInvalidate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_budget_katana.py",
+      "target": "class:tests/test_budget_katana.py:TestKatanaCycleIntegration",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_budget_katana.py",
+      "target": "class:tests/test_budget_katana.py:TestBudgetStateKatanaMethods",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_budget_katana.py",
+      "target": "class:tests/test_budget_katana.py:TestSandboxStateBudgetIntegration",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_budget.py",
+      "target": "class:tests/test_budget.py:TestParseQueryExpression",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_budget.py",
+      "target": "class:tests/test_budget.py:TestLoadAllBudgets",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_budget.py",
+      "target": "class:tests/test_budget.py:TestFormatBudgetToon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "function:tests/test_build.py:cli_runner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "function:tests/test_build.py:flutter_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "function:tests/test_build.py:node_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "function:tests/test_build.py:python_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "function:tests/test_build.py:rust_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "function:tests/test_build.py:empty_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "class:tests/test_build.py:TestDetectProjectType",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "class:tests/test_build.py:TestCheckBuild",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "class:tests/test_build.py:TestCheckObfuscation",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "class:tests/test_build.py:TestCheckProguard",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "class:tests/test_build.py:TestCheckDebugSymbols",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "class:tests/test_build.py:TestComputeBuildScore",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "class:tests/test_build.py:TestRunBuild",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build.py",
+      "target": "class:tests/test_build.py:TestBuildCommand",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cache.py",
+      "target": "function:tests/test_cache.py:tmp_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cache.py",
+      "target": "class:tests/test_cache.py:TestCacheEntry",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cache.py",
+      "target": "class:tests/test_cache.py:TestStateCacheBasic",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cache.py",
+      "target": "class:tests/test_cache.py:TestLRUEviction",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cache.py",
+      "target": "class:tests/test_cache.py:TestThreadSafety",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cache.py",
+      "target": "class:tests/test_cache.py:TestBatchLoad",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cache.py",
+      "target": "class:tests/test_cache.py:TestBatchLoadWithLoader",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cache.py",
+      "target": "class:tests/test_cache.py:TestInvalidateAfterMutation",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "function:tests/test_cipr.py:_make_flutter_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "function:tests/test_cipr.py:_make_node_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "function:tests/test_cipr.py:_make_rails_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "function:tests/test_cipr.py:_make_python_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestIsRailsProject",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestCountTestFailures",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestRunTests",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestRunTrivy",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestCheckBuildArtifacts",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestRunBrakeman",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestComputeCiprScore",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestRunCipr",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cipr.py",
+      "target": "class:tests/test_cipr.py:TestCLI",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_core.py",
+      "target": "class:tests/test_core.py:TestDetectProjectType",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_core.py",
+      "target": "class:tests/test_core.py:TestResolveSandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_core.py",
+      "target": "class:tests/test_core.py:TestParseIndexToon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_core.py",
+      "target": "class:tests/test_core.py:TestSafeRun",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_deploy.py",
+      "target": "function:tests/test_deploy.py:cli_runner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_deploy.py",
+      "target": "function:tests/test_deploy.py:mock_index",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_deploy.py",
+      "target": "function:tests/test_deploy.py:sandbox_dirs",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_deploy.py",
+      "target": "class:tests/test_deploy.py:TestDeployCommand",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_deploy.py",
+      "target": "class:tests/test_deploy.py:TestDeployOutputFormat",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_dlq.py",
+      "target": "function:tests/test_dlq.py:_clean_dlq_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_dlq.py",
+      "target": "function:tests/test_dlq.py:sample_task_data",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_dlq.py",
+      "target": "class:tests/test_dlq.py:TestSendToDlq",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_dlq.py",
+      "target": "class:tests/test_dlq.py:TestListDlq",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_dlq.py",
+      "target": "class:tests/test_dlq.py:TestRetryFromDlq",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_dlq.py",
+      "target": "class:tests/test_dlq.py:TestClearDlq",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_graphify.py",
+      "target": "class:tests/test_graphify.py:TestFindGraphifyBinary",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_graphify.py",
+      "target": "class:tests/test_graphify.py:TestGraphifyClient",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_graphify.py",
+      "target": "class:tests/test_graphify.py:TestBuildQuery",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_graphify.py",
+      "target": "class:tests/test_graphify.py:TestParseResponse",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "function:tests/test_harden.py:_make_flutter_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "function:tests/test_harden.py:_make_node_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "class:tests/test_harden.py:TestComputeHardenScore",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "class:tests/test_harden.py:TestScanSecrets",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "class:tests/test_harden.py:TestRunTrivy",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "class:tests/test_harden.py:TestRootDetection",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "class:tests/test_harden.py:TestCertPinning",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "class:tests/test_harden.py:TestDebugSymbols",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "class:tests/test_harden.py:TestRunHarden",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_harden.py",
+      "target": "class:tests/test_harden.py:TestCLI",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_heartbeat.py",
+      "target": "class:tests/test_heartbeat.py:TestHeartbeatState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_heartbeat.py",
+      "target": "class:tests/test_heartbeat.py:TestHeartbeatStateStaticMethods",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_heartbeat.py",
+      "target": "class:tests/test_heartbeat.py:TestHeartbeatData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_heartbeat.py",
+      "target": "class:tests/test_heartbeat.py:TestSpawnerCreatesHeartbeat",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "function:tests/test_legal.py:runner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "function:tests/test_legal.py:tmp_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "function:tests/test_legal.py:tmp_node_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "function:tests/test_legal.py:_make_flutter_lock",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestResolveSandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestLoadOrCreateLegalConfig",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestScanLicensesFlutter",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestScanLicensesNode",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestCheckLicenseScan",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestCheckSbom",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestCheckEula",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestCheckPrivacyPolicy",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestCopyrightReuse",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestComputeLegalScore",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestRunLegal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestLegalCLI",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_legal.py",
+      "target": "class:tests/test_legal.py:TestEdgeCases",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_locks.py",
+      "target": "function:tests/test_locks.py:_isolate_lock_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_locks.py",
+      "target": "class:tests/test_locks.py:TestFileLock",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_locks.py",
+      "target": "class:tests/test_locks.py:TestExchange",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_locks.py",
+      "target": "class:tests/test_locks.py:TestLockAndExchange",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_logging.py",
+      "target": "function:tests/test_logging.py:_reset_logger_cache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_logging.py",
+      "target": "function:tests/test_logging.py:tmp_log_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_logging.py",
+      "target": "function:tests/test_logging.py:tmp_config",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_logging.py",
+      "target": "function:tests/test_logging.py:_patch_env",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_logging.py",
+      "target": "class:tests/test_logging.py:TestJsonlFormat",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_logging.py",
+      "target": "class:tests/test_logging.py:TestRotation",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_logging.py",
+      "target": "class:tests/test_logging.py:TestLevelFiltering",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_logging.py",
+      "target": "class:tests/test_logging.py:TestGetLogger",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor_qa.py",
+      "target": "function:tests/test_pipeline_executor_qa.py:sandbox_repo",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor_qa.py",
+      "target": "function:tests/test_pipeline_executor_qa.py:manifest_with_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor_qa.py",
+      "target": "function:tests/test_pipeline_executor_qa.py:manifest_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor_qa.py",
+      "target": "class:tests/test_pipeline_executor_qa.py:TestCircuitBreakerGate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor_qa.py",
+      "target": "class:tests/test_pipeline_executor_qa.py:TestQAGateIntegration",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "function:tests/test_pipeline_executor.py:manifest_data",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "function:tests/test_pipeline_executor.py:manifest_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "function:tests/test_pipeline_executor.py:dispatch_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "function:tests/test_pipeline_executor.py:_make_dispatch_toon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "function:tests/test_pipeline_executor.py:_mock_get_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "function:tests/test_pipeline_executor.py:_do_get_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "function:tests/test_pipeline_executor.py:_parse_simple_toon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "class:tests/test_pipeline_executor.py:TestPipelineResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "class:tests/test_pipeline_executor.py:TestPipelineExecutorInit",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "class:tests/test_pipeline_executor.py:TestPipelineExecutorFindExtraTasks",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "class:tests/test_pipeline_executor.py:TestPipelineExecutorPollTasks",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pipeline_executor.py",
+      "target": "class:tests/test_pipeline_executor.py:TestPipelineExecutorRun",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "function:tests/test_pre_commit.py:runner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "function:tests/test_pre_commit.py:tmp_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "class:tests/test_pre_commit.py:TestResolveSandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "class:tests/test_pre_commit.py:TestDetectProjectType",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "class:tests/test_pre_commit.py:TestCheckSecrets",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "class:tests/test_pre_commit.py:TestCheckLint",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "class:tests/test_pre_commit.py:TestCheckCopyright",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "class:tests/test_pre_commit.py:TestComputeScore",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "class:tests/test_pre_commit.py:TestRunPreCommit",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_pre_commit.py",
+      "target": "class:tests/test_pre_commit.py:TestCLI",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_prompts.py",
+      "target": "class:tests/test_prompts.py:TestResolveTemplate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_prompts.py",
+      "target": "class:tests/test_prompts.py:TestRenderTemplate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_prompts.py",
+      "target": "class:tests/test_prompts.py:TestLoadRule",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "function:tests/test_qa_gate.py:sandbox_with_git",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "function:tests/test_qa_gate.py:_add_and_stage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "class:tests/test_qa_gate.py:TestQAResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "class:tests/test_qa_gate.py:TestFileScopeCheck",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "class:tests/test_qa_gate.py:TestDiffSizeCheck",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_qa_gate.py",
+      "target": "class:tests/test_qa_gate.py:TestHandleFailure",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "function:tests/test_score.py:runner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "function:tests/test_score.py:tmp_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestResolveSandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestDetectProjectType",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestSecretScan",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestCopyrightHeaders",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestScoreVerify",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_score.py",
+      "target": "class:tests/test_score.py:TestCLI",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_spawn.py",
+      "target": "function:tests/test_spawn.py:clear_dispatch_queue_env",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_spawn.py",
+      "target": "class:tests/test_spawn.py:TestSoldierSpawner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_spawn.py",
+      "target": "class:tests/test_spawn.py:TestBuildContext",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_state.py",
+      "target": "class:tests/test_state.py:TestIndexState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_state.py",
+      "target": "class:tests/test_state.py:TestSandboxState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_state.py",
+      "target": "class:tests/test_state.py:TestBudgetState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:_isolate_status_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:_write",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_write_and_read_roundtrip",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_read_missing_returns_none",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_overwrite_is_atomic",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_list_status_empty_when_no_files",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_list_status_sorted_newest_first",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_list_status_filter_by_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_clean_status_removes_old",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_clean_status_noop_on_empty_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_status.py",
+      "target": "function:tests/test_status.py:test_write_adds_timestamp",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

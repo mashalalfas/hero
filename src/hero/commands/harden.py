@@ -109,8 +109,22 @@ def _run_trivy(sandbox_path: Path) -> tuple[list[str], str]:
                 pass
         return [], "trivy not installed (skipped)"
 
+    skip_dirs = [
+        "node_modules", ".pub-cache", "vendor", "third_party",
+        ".venv", "venv", ".dart_tool", ".git", "build", "dist",
+        ".bundled_packages", ".hero",
+    ]
+    cmd = [
+        "trivy", "fs",
+        "--severity", "CRITICAL",
+        "--no-progress",
+    ]
+    for d in skip_dirs:
+        cmd.extend(["--skip-dirs", d])
+    cmd.append(str(sandbox_path))
+
     result, err = _safe_run(
-        ["trivy", "fs", "--severity", "CRITICAL", "--no-progress", str(sandbox_path)],
+        cmd,
         cwd=sandbox_path,
         timeout=120,
     )

@@ -1,0 +1,1907 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/archivist/inline.py",
+      "type": "file",
+      "name": "inline.py",
+      "filePath": "src/hero/archivist/inline.py",
+      "summary": "File: inline.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/archivist/inline.py:_ensure_herolog",
+      "type": "function",
+      "name": "_ensure_herolog",
+      "filePath": "src/hero/archivist/inline.py",
+      "summary": "Function _ensure_herolog",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/archivist/inline.py:_append",
+      "type": "function",
+      "name": "_append",
+      "filePath": "src/hero/archivist/inline.py",
+      "summary": "Function _append",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/archivist/inline.py:capture_council",
+      "type": "function",
+      "name": "capture_council",
+      "filePath": "src/hero/archivist/inline.py",
+      "summary": "Function capture_council",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/archivist/inline.py:capture_planning",
+      "type": "function",
+      "name": "capture_planning",
+      "filePath": "src/hero/archivist/inline.py",
+      "summary": "Function capture_planning",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/archivist/inline.py:capture_soldier",
+      "type": "function",
+      "name": "capture_soldier",
+      "filePath": "src/hero/archivist/inline.py",
+      "summary": "Function capture_soldier",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/archivist/inline.py:get_herolog_tail",
+      "type": "function",
+      "name": "get_herolog_tail",
+      "filePath": "src/hero/archivist/inline.py",
+      "summary": "Function get_herolog_tail",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/assemble.py",
+      "type": "file",
+      "name": "assemble.py",
+      "filePath": "src/hero/commands/assemble.py",
+      "summary": "File: assemble.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/assemble.py:assemble",
+      "type": "function",
+      "name": "assemble",
+      "filePath": "src/hero/commands/assemble.py",
+      "summary": "Function assemble",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/assemble.py:_analyze_flutter",
+      "type": "function",
+      "name": "_analyze_flutter",
+      "filePath": "src/hero/commands/assemble.py",
+      "summary": "Function _analyze_flutter",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/assemble.py:_analyze_node",
+      "type": "function",
+      "name": "_analyze_node",
+      "filePath": "src/hero/commands/assemble.py",
+      "summary": "Function _analyze_node",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/deploy.py",
+      "type": "file",
+      "name": "deploy.py",
+      "filePath": "src/hero/commands/deploy.py",
+      "summary": "File: deploy.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/deploy.py:_spawn_in_sandbox",
+      "type": "function",
+      "name": "_spawn_in_sandbox",
+      "filePath": "src/hero/commands/deploy.py",
+      "summary": "Function _spawn_in_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/deploy.py:deploy",
+      "type": "function",
+      "name": "deploy",
+      "filePath": "src/hero/commands/deploy.py",
+      "summary": "Function deploy",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/eval.py",
+      "type": "file",
+      "name": "eval.py",
+      "filePath": "src/hero/commands/eval.py",
+      "summary": "File: eval.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/eval.py:eval",
+      "type": "function",
+      "name": "eval",
+      "filePath": "src/hero/commands/eval.py",
+      "summary": "Function eval",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/eval.py:_display_scorecard",
+      "type": "function",
+      "name": "_display_scorecard",
+      "filePath": "src/hero/commands/eval.py",
+      "summary": "Function _display_scorecard",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/eval.py:_show_scorecard",
+      "type": "function",
+      "name": "_show_scorecard",
+      "filePath": "src/hero/commands/eval.py",
+      "summary": "Function _show_scorecard",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/eval.py:_list_evaluations",
+      "type": "function",
+      "name": "_list_evaluations",
+      "filePath": "src/hero/commands/eval.py",
+      "summary": "Function _list_evaluations",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/orchestrate.py",
+      "type": "file",
+      "name": "orchestrate.py",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "File: orchestrate.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:orchestrate",
+      "type": "function",
+      "name": "orchestrate",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function orchestrate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_read_plan",
+      "type": "function",
+      "name": "_read_plan",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _read_plan",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_get_src_map",
+      "type": "function",
+      "name": "_get_src_map",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _get_src_map",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_estimate_tokens",
+      "type": "function",
+      "name": "_estimate_tokens",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _estimate_tokens",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_call_lead_model",
+      "type": "function",
+      "name": "_call_lead_model",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _call_lead_model",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_analyze_task",
+      "type": "function",
+      "name": "_analyze_task",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _analyze_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_detect_project_type",
+      "type": "function",
+      "name": "_detect_project_type",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _detect_project_type",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_extract_file_refs",
+      "type": "function",
+      "name": "_extract_file_refs",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _extract_file_refs",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_check_flutter",
+      "type": "function",
+      "name": "_check_flutter",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _check_flutter",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_check_python",
+      "type": "function",
+      "name": "_check_python",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _check_python",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/orchestrate.py:_check_node",
+      "type": "function",
+      "name": "_check_node",
+      "filePath": "src/hero/commands/orchestrate.py",
+      "summary": "Function _check_node",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/pipeline.py",
+      "type": "file",
+      "name": "pipeline.py",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "File: pipeline.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:_resolve_pipeline_mode",
+      "type": "function",
+      "name": "_resolve_pipeline_mode",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function _resolve_pipeline_mode",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:_render_progress",
+      "type": "function",
+      "name": "_render_progress",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function _render_progress",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:_load_manifest",
+      "type": "function",
+      "name": "_load_manifest",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function _load_manifest",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:_collect_all_pipelines",
+      "type": "function",
+      "name": "_collect_all_pipelines",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function _collect_all_pipelines",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:_run_inline",
+      "type": "function",
+      "name": "_run_inline",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function _run_inline",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:_run_fallback_stage",
+      "type": "function",
+      "name": "_run_fallback_stage",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function _run_fallback_stage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:pipeline",
+      "type": "function",
+      "name": "pipeline",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function pipeline",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function run",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:status",
+      "type": "function",
+      "name": "status",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:list_pipelines",
+      "type": "function",
+      "name": "list_pipelines",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function list_pipelines",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pipeline.py:rollback",
+      "type": "function",
+      "name": "rollback",
+      "filePath": "src/hero/commands/pipeline.py",
+      "summary": "Function rollback",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/prune.py",
+      "type": "file",
+      "name": "prune.py",
+      "filePath": "src/hero/commands/prune.py",
+      "summary": "File: prune.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/prune.py:prune",
+      "type": "function",
+      "name": "prune",
+      "filePath": "src/hero/commands/prune.py",
+      "summary": "Function prune",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/spawn.py",
+      "type": "file",
+      "name": "spawn.py",
+      "filePath": "src/hero/commands/spawn.py",
+      "summary": "File: spawn.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/spawn.py:spawn",
+      "type": "function",
+      "name": "spawn",
+      "filePath": "src/hero/commands/spawn.py",
+      "summary": "Function spawn",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/tell.py",
+      "type": "file",
+      "name": "tell.py",
+      "filePath": "src/hero/commands/tell.py",
+      "summary": "File: tell.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/tell.py:detect_role",
+      "type": "function",
+      "name": "detect_role",
+      "filePath": "src/hero/commands/tell.py",
+      "summary": "Function detect_role",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/tell.py:detect_sandboxes",
+      "type": "function",
+      "name": "detect_sandboxes",
+      "filePath": "src/hero/commands/tell.py",
+      "summary": "Function detect_sandboxes",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/tell.py:break_down_task",
+      "type": "function",
+      "name": "break_down_task",
+      "filePath": "src/hero/commands/tell.py",
+      "summary": "Function break_down_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/tell.py:tell",
+      "type": "function",
+      "name": "tell",
+      "filePath": "src/hero/commands/tell.py",
+      "summary": "Function tell",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/locks.py",
+      "type": "file",
+      "name": "locks.py",
+      "filePath": "src/hero/core/locks.py",
+      "summary": "File: locks.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/core/locks.py:FileLock",
+      "type": "class",
+      "name": "FileLock",
+      "filePath": "src/hero/core/locks.py",
+      "summary": "Class FileLock",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/git/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/git/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/git/branch.py",
+      "type": "file",
+      "name": "branch.py",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "File: branch.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/git/branch.py:create_pipeline_branch",
+      "type": "function",
+      "name": "create_pipeline_branch",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "Function create_pipeline_branch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/git/branch.py:commit_pipeline_changes",
+      "type": "function",
+      "name": "commit_pipeline_changes",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "Function commit_pipeline_changes",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/git/branch.py:rollback_pipeline",
+      "type": "function",
+      "name": "rollback_pipeline",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "Function rollback_pipeline",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/git/branch.py:get_current_branch",
+      "type": "function",
+      "name": "get_current_branch",
+      "filePath": "src/hero/git/branch.py",
+      "summary": "Function get_current_branch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/pipeline/executor.py",
+      "type": "file",
+      "name": "executor.py",
+      "filePath": "src/hero/pipeline/executor.py",
+      "summary": "File: executor.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/pipeline/executor.py:PipelineResult",
+      "type": "class",
+      "name": "PipelineResult",
+      "filePath": "src/hero/pipeline/executor.py",
+      "summary": "Class PipelineResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/pipeline/executor.py:PipelineExecutor",
+      "type": "class",
+      "name": "PipelineExecutor",
+      "filePath": "src/hero/pipeline/executor.py",
+      "summary": "Class PipelineExecutor",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/prompts/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/prompts/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/prompts/loader.py",
+      "type": "file",
+      "name": "loader.py",
+      "filePath": "src/hero/prompts/loader.py",
+      "summary": "File: loader.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/prompts/loader.py:_resolve_template",
+      "type": "function",
+      "name": "_resolve_template",
+      "filePath": "src/hero/prompts/loader.py",
+      "summary": "Function _resolve_template",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/prompts/loader.py:render_template",
+      "type": "function",
+      "name": "render_template",
+      "filePath": "src/hero/prompts/loader.py",
+      "summary": "Function render_template",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/prompts/loader.py:load_rule",
+      "type": "function",
+      "name": "load_rule",
+      "filePath": "src/hero/prompts/loader.py",
+      "summary": "Function load_rule",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/reliability/circuit_breaker.py",
+      "type": "file",
+      "name": "circuit_breaker.py",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "File: circuit_breaker.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:_load",
+      "type": "function",
+      "name": "_load",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function _load",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:_save",
+      "type": "function",
+      "name": "_save",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function _save",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:_ensure_sandbox",
+      "type": "function",
+      "name": "_ensure_sandbox",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function _ensure_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:record_failure",
+      "type": "function",
+      "name": "record_failure",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function record_failure",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:record_success",
+      "type": "function",
+      "name": "record_success",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function record_success",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:is_quarantined",
+      "type": "function",
+      "name": "is_quarantined",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function is_quarantined",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:unquarantine",
+      "type": "function",
+      "name": "unquarantine",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function unquarantine",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:get_status",
+      "type": "function",
+      "name": "get_status",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function get_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/reliability/circuit_breaker.py:get_all_status",
+      "type": "function",
+      "name": "get_all_status",
+      "filePath": "src/hero/reliability/circuit_breaker.py",
+      "summary": "Function get_all_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/soldier/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/context.py",
+      "type": "file",
+      "name": "context.py",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "File: context.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/context.py:build_context",
+      "type": "function",
+      "name": "build_context",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Function build_context",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/context.py:BudgetConfig",
+      "type": "class",
+      "name": "BudgetConfig",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Class BudgetConfig",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/context.py:KatanaData",
+      "type": "class",
+      "name": "KatanaData",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Class KatanaData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/context.py:SandboxData",
+      "type": "class",
+      "name": "SandboxData",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Class SandboxData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/context.py:ContextCache",
+      "type": "class",
+      "name": "ContextCache",
+      "filePath": "src/hero/soldier/context.py",
+      "summary": "Class ContextCache",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/dispatch.py",
+      "type": "file",
+      "name": "dispatch.py",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "File: dispatch.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_ensure_dir",
+      "type": "function",
+      "name": "_ensure_dir",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _ensure_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:enqueue",
+      "type": "function",
+      "name": "enqueue",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function enqueue",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_write_toon_entry",
+      "type": "function",
+      "name": "_write_toon_entry",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _write_toon_entry",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_read_task_file",
+      "type": "function",
+      "name": "_read_task_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _read_task_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_write_task_file",
+      "type": "function",
+      "name": "_write_task_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _write_task_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_iter_task_files",
+      "type": "function",
+      "name": "_iter_task_files",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _iter_task_files",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_load_task_from_file",
+      "type": "function",
+      "name": "_load_task_from_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _load_task_from_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_parse_toon_file",
+      "type": "function",
+      "name": "_parse_toon_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _parse_toon_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_parse_toon_value",
+      "type": "function",
+      "name": "_parse_toon_value",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _parse_toon_value",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:list_pending",
+      "type": "function",
+      "name": "list_pending",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function list_pending",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:list_all",
+      "type": "function",
+      "name": "list_all",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function list_all",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:get_task",
+      "type": "function",
+      "name": "get_task",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function get_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:mark_dispatched",
+      "type": "function",
+      "name": "mark_dispatched",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function mark_dispatched",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:mark_completed",
+      "type": "function",
+      "name": "mark_completed",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function mark_completed",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:mark_failed",
+      "type": "function",
+      "name": "mark_failed",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function mark_failed",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:purge_stale",
+      "type": "function",
+      "name": "purge_stale",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function purge_stale",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:clear_completed",
+      "type": "function",
+      "name": "clear_completed",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function clear_completed",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:get_sessions_spawn_command",
+      "type": "function",
+      "name": "get_sessions_spawn_command",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function get_sessions_spawn_command",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_delete_task_file",
+      "type": "function",
+      "name": "_delete_task_file",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _delete_task_file",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/dispatch.py:_build_task_prompt",
+      "type": "function",
+      "name": "_build_task_prompt",
+      "filePath": "src/hero/soldier/dispatch.py",
+      "summary": "Function _build_task_prompt",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/soldier/spawner.py",
+      "type": "file",
+      "name": "spawner.py",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "File: spawner.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:load_army_config",
+      "type": "function",
+      "name": "load_army_config",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function load_army_config",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:_compute_complexity",
+      "type": "function",
+      "name": "_compute_complexity",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function _compute_complexity",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:estimate_budget",
+      "type": "function",
+      "name": "estimate_budget",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function estimate_budget",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:get_model_for_role",
+      "type": "function",
+      "name": "get_model_for_role",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function get_model_for_role",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:_build_hermes_command",
+      "type": "function",
+      "name": "_build_hermes_command",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function _build_hermes_command",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/soldier/spawner.py:_resolve_tokens",
+      "type": "function",
+      "name": "_resolve_tokens",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Function _resolve_tokens",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/soldier/spawner.py:SoldierSpawner",
+      "type": "class",
+      "name": "SoldierSpawner",
+      "filePath": "src/hero/soldier/spawner.py",
+      "summary": "Class SoldierSpawner",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/state/index.py",
+      "type": "file",
+      "name": "index.py",
+      "filePath": "src/hero/state/index.py",
+      "summary": "File: index.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/index.py:SandboxEntry",
+      "type": "class",
+      "name": "SandboxEntry",
+      "filePath": "src/hero/state/index.py",
+      "summary": "Class SandboxEntry",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/index.py:IndexData",
+      "type": "class",
+      "name": "IndexData",
+      "filePath": "src/hero/state/index.py",
+      "summary": "Class IndexData",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/state/index.py:IndexState",
+      "type": "class",
+      "name": "IndexState",
+      "filePath": "src/hero/state/index.py",
+      "summary": "Class IndexState",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/archivist/inline.py",
+      "target": "function:src/hero/archivist/inline.py:_ensure_herolog",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/archivist/inline.py",
+      "target": "function:src/hero/archivist/inline.py:_append",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/archivist/inline.py",
+      "target": "function:src/hero/archivist/inline.py:capture_council",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/archivist/inline.py",
+      "target": "function:src/hero/archivist/inline.py:capture_planning",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/archivist/inline.py",
+      "target": "function:src/hero/archivist/inline.py:capture_soldier",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/archivist/inline.py",
+      "target": "function:src/hero/archivist/inline.py:get_herolog_tail",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/assemble.py",
+      "target": "function:src/hero/commands/assemble.py:assemble",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/assemble.py",
+      "target": "function:src/hero/commands/assemble.py:_analyze_flutter",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/assemble.py",
+      "target": "function:src/hero/commands/assemble.py:_analyze_node",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/deploy.py",
+      "target": "function:src/hero/commands/deploy.py:_spawn_in_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/deploy.py",
+      "target": "function:src/hero/commands/deploy.py:deploy",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/eval.py",
+      "target": "function:src/hero/commands/eval.py:eval",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/eval.py",
+      "target": "function:src/hero/commands/eval.py:_display_scorecard",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/eval.py",
+      "target": "function:src/hero/commands/eval.py:_show_scorecard",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/eval.py",
+      "target": "function:src/hero/commands/eval.py:_list_evaluations",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:orchestrate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_read_plan",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_get_src_map",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_estimate_tokens",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_call_lead_model",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_analyze_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_detect_project_type",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_extract_file_refs",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_check_flutter",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_check_python",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/orchestrate.py",
+      "target": "function:src/hero/commands/orchestrate.py:_check_node",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:_resolve_pipeline_mode",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:_render_progress",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:_load_manifest",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:_collect_all_pipelines",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:_run_inline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:_run_fallback_stage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:pipeline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:run",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:list_pipelines",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pipeline.py",
+      "target": "function:src/hero/commands/pipeline.py:rollback",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/prune.py",
+      "target": "function:src/hero/commands/prune.py:prune",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/spawn.py",
+      "target": "function:src/hero/commands/spawn.py:spawn",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/tell.py",
+      "target": "function:src/hero/commands/tell.py:detect_role",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/tell.py",
+      "target": "function:src/hero/commands/tell.py:detect_sandboxes",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/tell.py",
+      "target": "function:src/hero/commands/tell.py:break_down_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/tell.py",
+      "target": "function:src/hero/commands/tell.py:tell",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/locks.py",
+      "target": "class:src/hero/core/locks.py:FileLock",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/git/branch.py",
+      "target": "function:src/hero/git/branch.py:create_pipeline_branch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/git/branch.py",
+      "target": "function:src/hero/git/branch.py:commit_pipeline_changes",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/git/branch.py",
+      "target": "function:src/hero/git/branch.py:rollback_pipeline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/git/branch.py",
+      "target": "function:src/hero/git/branch.py:get_current_branch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/pipeline/executor.py",
+      "target": "class:src/hero/pipeline/executor.py:PipelineResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/pipeline/executor.py",
+      "target": "class:src/hero/pipeline/executor.py:PipelineExecutor",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/prompts/loader.py",
+      "target": "function:src/hero/prompts/loader.py:_resolve_template",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/prompts/loader.py",
+      "target": "function:src/hero/prompts/loader.py:render_template",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/prompts/loader.py",
+      "target": "function:src/hero/prompts/loader.py:load_rule",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:_load",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:_save",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:_ensure_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:record_failure",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:record_success",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:is_quarantined",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:unquarantine",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:get_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/reliability/circuit_breaker.py",
+      "target": "function:src/hero/reliability/circuit_breaker.py:get_all_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "function:src/hero/soldier/context.py:build_context",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "class:src/hero/soldier/context.py:BudgetConfig",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "class:src/hero/soldier/context.py:KatanaData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "class:src/hero/soldier/context.py:SandboxData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/context.py",
+      "target": "class:src/hero/soldier/context.py:ContextCache",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_ensure_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:enqueue",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_write_toon_entry",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_read_task_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_write_task_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_iter_task_files",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_load_task_from_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_parse_toon_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_parse_toon_value",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:list_pending",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:list_all",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:get_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:mark_dispatched",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:mark_completed",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:mark_failed",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:purge_stale",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:clear_completed",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:get_sessions_spawn_command",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_delete_task_file",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/dispatch.py",
+      "target": "function:src/hero/soldier/dispatch.py:_build_task_prompt",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:load_army_config",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:_compute_complexity",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:estimate_budget",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:get_model_for_role",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:_build_hermes_command",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "function:src/hero/soldier/spawner.py:_resolve_tokens",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/soldier/spawner.py",
+      "target": "class:src/hero/soldier/spawner.py:SoldierSpawner",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/index.py",
+      "target": "class:src/hero/state/index.py:SandboxEntry",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/index.py",
+      "target": "class:src/hero/state/index.py:IndexData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/state/index.py",
+      "target": "class:src/hero/state/index.py:IndexState",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

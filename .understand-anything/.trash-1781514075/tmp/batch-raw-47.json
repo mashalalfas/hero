@@ -1,0 +1,645 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "prompts/LEAD_BRIEF.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 112,
+      "nonEmptyLines": 93,
+      "sections": [
+        {
+          "heading": "LEAD_BRIEF — HERO Viewport v3: Cyber-Glass Overhaul",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mission",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Current State",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Target Architecture",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "4 Implementation Waves",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "Wave 1: Foundation (Design System + API Layer)",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "Wave 2: Components (Build on Wave 1)",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "Wave 3: Control Features + Polish",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "Wave 4: Mobile + Integration",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "Spawn Order",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "Verification Strategy",
+          "level": 2,
+          "line": 91
+        },
+        {
+          "heading": "Key Constraints",
+          "level": 2,
+          "line": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "prompts/soldier-1-design-system.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 173,
+      "nonEmptyLines": 150,
+      "sections": [
+        {
+          "heading": "SOLDIER BRIEF 1 — Design System",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "TASK",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "FILES TO CREATE",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "SPEC",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "tokens.css — Design Tokens",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "base.css — Reset + Typography",
+          "level": 3,
+          "line": 103
+        },
+        {
+          "heading": "layout.css — Bento Grid System",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "components.css — All UI Components",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "animations.css — Keyframes + Transitions",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "DESIGN",
+          "level": 2,
+          "line": 153
+        },
+        {
+          "heading": "CONSTRAINTS",
+          "level": 2,
+          "line": 159
+        },
+        {
+          "heading": "ACCEPTANCE",
+          "level": 2,
+          "line": 166
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "prompts/soldier-2-api-layer.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 151,
+      "nonEmptyLines": 139,
+      "sections": [
+        {
+          "heading": "SOLDIER BRIEF 2 — API Layer (Services + Utils)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "TASK",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "FILES TO CREATE",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "SPEC",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "auth.js — Token Management",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "api.js — Fetch Wrappers",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "sse.js — EventSource Manager",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "state.js — Reactive State Store",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "dom.js — DOM Utilities",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "DESIGN",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "CONSTRAINTS",
+          "level": 2,
+          "line": 135
+        },
+        {
+          "heading": "ACCEPTANCE",
+          "level": 2,
+          "line": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "prompts/soldier-3-components.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 158,
+      "nonEmptyLines": 138,
+      "sections": [
+        {
+          "heading": "SOLDIER BRIEF 3 — UI Components",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "TASK",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "FILES TO CREATE",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "COMPONENT LIFECYCLE PATTERN",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "SPEC",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "header.js",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "stats-bar.js",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "sandbox-card.js",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "tree-node.js",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "detail-panel.js",
+          "level": 3,
+          "line": 76
+        },
+        {
+          "heading": "timeline.js",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "sparkline.js",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "controls.js",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "toast.js",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "modal.js",
+          "level": 3,
+          "line": 124
+        },
+        {
+          "heading": "DESIGN",
+          "level": 2,
+          "line": 133
+        },
+        {
+          "heading": "CONSTRAINTS",
+          "level": 2,
+          "line": 141
+        },
+        {
+          "heading": "ACCEPTANCE",
+          "level": 2,
+          "line": 149
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 18
+      }
+    },
+    {
+      "path": "prompts/soldier-4-control-features.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 170,
+      "nonEmptyLines": 141,
+      "sections": [
+        {
+          "heading": "SOLDIER BRIEF 4 — Control Features (Kill Endpoint + UI)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "TASK",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "FILES TO MODIFY",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "FILES TO CREATE (or verify exist from Soldier 3)",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "SPEC",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Server: Kill Endpoint",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "Server: Spawn Endpoint (bonus)",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "Frontend: controls.js",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "Frontend: modal.js",
+          "level": 3,
+          "line": 127
+        },
+        {
+          "heading": "DESIGN",
+          "level": 2,
+          "line": 146
+        },
+        {
+          "heading": "CONSTRAINTS",
+          "level": 2,
+          "line": 153
+        },
+        {
+          "heading": "ACCEPTANCE",
+          "level": 2,
+          "line": 161
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "prompts/soldier-5-mobile-responsive.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 251,
+      "nonEmptyLines": 207,
+      "sections": [
+        {
+          "heading": "SOLDIER BRIEF 5 — Mobile Responsive",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "TASK",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "FILES TO MODIFY",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "FILES TO CREATE",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "SPEC",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "layout.css — Responsive Bento Grid",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "components.css — Touch Targets",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "base.css — Mobile Typography",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "mobile-nav.js — Mobile Navigation",
+          "level": 3,
+          "line": 160
+        },
+        {
+          "heading": "DESIGN",
+          "level": 2,
+          "line": 225
+        },
+        {
+          "heading": "CONSTRAINTS",
+          "level": 2,
+          "line": 233
+        },
+        {
+          "heading": "ACCEPTANCE",
+          "level": 2,
+          "line": 241
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "prompts/soldier-6-futuristic-polish.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 313,
+      "nonEmptyLines": 268,
+      "sections": [
+        {
+          "heading": "SOLDIER BRIEF 6 — Futuristic Polish (Glassmorphism + Effects)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "TASK",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "FILES TO CREATE",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "FILES TO MODIFY",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "SPEC",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Font Integration (index.html)",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "tokens.css — Add Effect Tokens",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "animations.css — Advanced Keyframes",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "components.css — Glassmorphism",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "effects.js — Particle System",
+          "level": 3,
+          "line": 205
+        },
+        {
+          "heading": "DESIGN",
+          "level": 2,
+          "line": 286
+        },
+        {
+          "heading": "CONSTRAINTS",
+          "level": 2,
+          "line": 295
+        },
+        {
+          "heading": "ACCEPTANCE",
+          "level": 2,
+          "line": 303
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "prompts/soldier-7-integration.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 400,
+      "nonEmptyLines": 335,
+      "sections": [
+        {
+          "heading": "SOLDIER BRIEF 7 — Integration (app.js + index.html Rewrite)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "TASK",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "FILES TO CREATE",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "FILES TO REWRITE",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "FILES TO DELETE",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "SPEC",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "index.html — New Shell",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "js/app.js — Entry Point",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "DESIGN",
+          "level": 2,
+          "line": 374
+        },
+        {
+          "heading": "CONSTRAINTS",
+          "level": 2,
+          "line": 380
+        },
+        {
+          "heading": "ACCEPTANCE",
+          "level": 2,
+          "line": 388
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    }
+  ]
+}

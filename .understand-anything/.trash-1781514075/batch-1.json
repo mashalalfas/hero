@@ -1,0 +1,2982 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/__main__.py",
+      "type": "file",
+      "name": "__main__.py",
+      "filePath": "src/hero/__main__.py",
+      "summary": "File: __main__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/analysis_cache.py",
+      "type": "file",
+      "name": "analysis_cache.py",
+      "filePath": "src/hero/analysis_cache.py",
+      "summary": "File: analysis_cache.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/analysis_cache.py:_hash_paths",
+      "type": "function",
+      "name": "_hash_paths",
+      "filePath": "src/hero/analysis_cache.py",
+      "summary": "Function _hash_paths",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/analysis_cache.py:_cache_key",
+      "type": "function",
+      "name": "_cache_key",
+      "filePath": "src/hero/analysis_cache.py",
+      "summary": "Function _cache_key",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/analysis_cache.py:get_cached",
+      "type": "function",
+      "name": "get_cached",
+      "filePath": "src/hero/analysis_cache.py",
+      "summary": "Function get_cached",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/analysis_cache.py:set_cached",
+      "type": "function",
+      "name": "set_cached",
+      "filePath": "src/hero/analysis_cache.py",
+      "summary": "Function set_cached",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/analysis_cache.py:invalidate",
+      "type": "function",
+      "name": "invalidate",
+      "filePath": "src/hero/analysis_cache.py",
+      "summary": "Function invalidate",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/analysis_cache.py:cached_analyze",
+      "type": "function",
+      "name": "cached_analyze",
+      "filePath": "src/hero/analysis_cache.py",
+      "summary": "Function cached_analyze",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/cli.py",
+      "type": "file",
+      "name": "cli.py",
+      "filePath": "src/hero/cli.py",
+      "summary": "File: cli.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/cli.py:ensure_hero_home",
+      "type": "function",
+      "name": "ensure_hero_home",
+      "filePath": "src/hero/cli.py",
+      "summary": "Function ensure_hero_home",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/cli.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "src/hero/cli.py",
+      "summary": "Function main",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/commands/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/archive.py",
+      "type": "file",
+      "name": "archive.py",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "File: archive.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:_ensure_archive_dir",
+      "type": "function",
+      "name": "_ensure_archive_dir",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function _ensure_archive_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:_collect_build_artifacts",
+      "type": "function",
+      "name": "_collect_build_artifacts",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function _collect_build_artifacts",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:_collect_sbom",
+      "type": "function",
+      "name": "_collect_sbom",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function _collect_sbom",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:_collect_legal_docs",
+      "type": "function",
+      "name": "_collect_legal_docs",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function _collect_legal_docs",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:_write_journal",
+      "type": "function",
+      "name": "_write_journal",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function _write_journal",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:_consolidate_memory",
+      "type": "function",
+      "name": "_consolidate_memory",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function _consolidate_memory",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:_compute_archive_score",
+      "type": "function",
+      "name": "_compute_archive_score",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function _compute_archive_score",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:run_archive",
+      "type": "function",
+      "name": "run_archive",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function run_archive",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/archive.py:archive",
+      "type": "function",
+      "name": "archive",
+      "filePath": "src/hero/commands/archive.py",
+      "summary": "Function archive",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/build.py",
+      "type": "file",
+      "name": "build.py",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "File: build.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/build.py:_check_build",
+      "type": "function",
+      "name": "_check_build",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "Function _check_build",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/build.py:_check_obfuscation",
+      "type": "function",
+      "name": "_check_obfuscation",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "Function _check_obfuscation",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/build.py:_check_proguard",
+      "type": "function",
+      "name": "_check_proguard",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "Function _check_proguard",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/build.py:_check_debug_symbols",
+      "type": "function",
+      "name": "_check_debug_symbols",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "Function _check_debug_symbols",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/build.py:_check_autoversion",
+      "type": "function",
+      "name": "_check_autoversion",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "Function _check_autoversion",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/build.py:_compute_build_score",
+      "type": "function",
+      "name": "_compute_build_score",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "Function _compute_build_score",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/build.py:run_build",
+      "type": "function",
+      "name": "run_build",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "Function run_build",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/build.py:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "src/hero/commands/build.py",
+      "summary": "Function build",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/check.py",
+      "type": "file",
+      "name": "check.py",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "File: check.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:_status_icon",
+      "type": "function",
+      "name": "_status_icon",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function _status_icon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:_warn_icon",
+      "type": "function",
+      "name": "_warn_icon",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function _warn_icon",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:detect_project_type",
+      "type": "function",
+      "name": "detect_project_type",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function detect_project_type",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:_check_budget",
+      "type": "function",
+      "name": "_check_budget",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function _check_budget",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:_check_heartbeat",
+      "type": "function",
+      "name": "_check_heartbeat",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function _check_heartbeat",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:_check_git",
+      "type": "function",
+      "name": "_check_git",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function _check_git",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:_check_build",
+      "type": "function",
+      "name": "_check_build",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function _check_build",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:_check_circuit_breaker",
+      "type": "function",
+      "name": "_check_circuit_breaker",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function _check_circuit_breaker",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:_check_dispatch",
+      "type": "function",
+      "name": "_check_dispatch",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function _check_dispatch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/check.py:check",
+      "type": "function",
+      "name": "check",
+      "filePath": "src/hero/commands/check.py",
+      "summary": "Function check",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/cipr.py",
+      "type": "file",
+      "name": "cipr.py",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "File: cipr.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:_is_rails_project",
+      "type": "function",
+      "name": "_is_rails_project",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function _is_rails_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:_count_test_failures",
+      "type": "function",
+      "name": "_count_test_failures",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function _count_test_failures",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:_run_tests",
+      "type": "function",
+      "name": "_run_tests",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function _run_tests",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:_run_trivy",
+      "type": "function",
+      "name": "_run_trivy",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function _run_trivy",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:_check_build_artifacts",
+      "type": "function",
+      "name": "_check_build_artifacts",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function _check_build_artifacts",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:_run_brakeman",
+      "type": "function",
+      "name": "_run_brakeman",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function _run_brakeman",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:_compute_cipr_score",
+      "type": "function",
+      "name": "_compute_cipr_score",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function _compute_cipr_score",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:run_cipr",
+      "type": "function",
+      "name": "run_cipr",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function run_cipr",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:cipr",
+      "type": "function",
+      "name": "cipr",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function cipr",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/cipr.py:_test_cmd_label",
+      "type": "function",
+      "name": "_test_cmd_label",
+      "filePath": "src/hero/commands/cipr.py",
+      "summary": "Function _test_cmd_label",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/dispatch.py",
+      "type": "file",
+      "name": "dispatch.py",
+      "filePath": "src/hero/commands/dispatch.py",
+      "summary": "File: dispatch.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dispatch.py:dispatch",
+      "type": "function",
+      "name": "dispatch",
+      "filePath": "src/hero/commands/dispatch.py",
+      "summary": "Function dispatch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dispatch.py:list_cmd",
+      "type": "function",
+      "name": "list_cmd",
+      "filePath": "src/hero/commands/dispatch.py",
+      "summary": "Function list_cmd",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dispatch.py:all_cmd",
+      "type": "function",
+      "name": "all_cmd",
+      "filePath": "src/hero/commands/dispatch.py",
+      "summary": "Function all_cmd",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dispatch.py:spawn_cmd",
+      "type": "function",
+      "name": "spawn_cmd",
+      "filePath": "src/hero/commands/dispatch.py",
+      "summary": "Function spawn_cmd",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dispatch.py:clear_cmd",
+      "type": "function",
+      "name": "clear_cmd",
+      "filePath": "src/hero/commands/dispatch.py",
+      "summary": "Function clear_cmd",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dispatch.py:_show_pending",
+      "type": "function",
+      "name": "_show_pending",
+      "filePath": "src/hero/commands/dispatch.py",
+      "summary": "Function _show_pending",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/dispatch.py:_show_spawn_ready",
+      "type": "function",
+      "name": "_show_spawn_ready",
+      "filePath": "src/hero/commands/dispatch.py",
+      "summary": "Function _show_spawn_ready",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/go.py",
+      "type": "file",
+      "name": "go.py",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "File: go.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_resolve_mode",
+      "type": "function",
+      "name": "_resolve_mode",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _resolve_mode",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_run_stage_safe",
+      "type": "function",
+      "name": "_run_stage_safe",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _run_stage_safe",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_ensure_brainstorm_dir",
+      "type": "function",
+      "name": "_ensure_brainstorm_dir",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _ensure_brainstorm_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_ensure_worktree_base",
+      "type": "function",
+      "name": "_ensure_worktree_base",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _ensure_worktree_base",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_detect_main_branch",
+      "type": "function",
+      "name": "_detect_main_branch",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _detect_main_branch",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_create_worktree",
+      "type": "function",
+      "name": "_create_worktree",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _create_worktree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_prune_worktree",
+      "type": "function",
+      "name": "_prune_worktree",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _prune_worktree",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_is_open_ended_task",
+      "type": "function",
+      "name": "_is_open_ended_task",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _is_open_ended_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_run_brainstorm",
+      "type": "function",
+      "name": "_run_brainstorm",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _run_brainstorm",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_write_journal_entry",
+      "type": "function",
+      "name": "_write_journal_entry",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _write_journal_entry",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_consolidate_journal",
+      "type": "function",
+      "name": "_consolidate_journal",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _consolidate_journal",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_check_circuit_breaker",
+      "type": "function",
+      "name": "_check_circuit_breaker",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _check_circuit_breaker",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_diff_errors",
+      "type": "function",
+      "name": "_diff_errors",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _diff_errors",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_ensure_pipeline_dir",
+      "type": "function",
+      "name": "_ensure_pipeline_dir",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _ensure_pipeline_dir",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_detect_project_type",
+      "type": "function",
+      "name": "_detect_project_type",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _detect_project_type",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_run_analysis",
+      "type": "function",
+      "name": "_run_analysis",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _run_analysis",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_build_verify_task",
+      "type": "function",
+      "name": "_build_verify_task",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _build_verify_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_build_archive_task",
+      "type": "function",
+      "name": "_build_archive_task",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _build_archive_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_build_self_review_task",
+      "type": "function",
+      "name": "_build_self_review_task",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _build_self_review_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_get_escalation_model",
+      "type": "function",
+      "name": "_get_escalation_model",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _get_escalation_model",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_build_fix_task",
+      "type": "function",
+      "name": "_build_fix_task",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _build_fix_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:_get_ts_errors",
+      "type": "function",
+      "name": "_get_ts_errors",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function _get_ts_errors",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/go.py:go",
+      "type": "function",
+      "name": "go",
+      "filePath": "src/hero/commands/go.py",
+      "summary": "Function go",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/graph.py",
+      "type": "file",
+      "name": "graph.py",
+      "filePath": "src/hero/commands/graph.py",
+      "summary": "File: graph.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/graph.py:_build_toon_output",
+      "type": "function",
+      "name": "_build_toon_output",
+      "filePath": "src/hero/commands/graph.py",
+      "summary": "Function _build_toon_output",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/graph.py:graph",
+      "type": "function",
+      "name": "graph",
+      "filePath": "src/hero/commands/graph.py",
+      "summary": "Function graph",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/graph.py:query",
+      "type": "function",
+      "name": "query",
+      "filePath": "src/hero/commands/graph.py",
+      "summary": "Function query",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/graph.py:dependencies",
+      "type": "function",
+      "name": "dependencies",
+      "filePath": "src/hero/commands/graph.py",
+      "summary": "Function dependencies",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/harden.py",
+      "type": "file",
+      "name": "harden.py",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "File: harden.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/harden.py:_scan_secrets",
+      "type": "function",
+      "name": "_scan_secrets",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "Function _scan_secrets",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/harden.py:_run_trivy",
+      "type": "function",
+      "name": "_run_trivy",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "Function _run_trivy",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/harden.py:_check_root_detection",
+      "type": "function",
+      "name": "_check_root_detection",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "Function _check_root_detection",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/harden.py:_check_cert_pinning",
+      "type": "function",
+      "name": "_check_cert_pinning",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "Function _check_cert_pinning",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/harden.py:_check_debug_symbols_stripped",
+      "type": "function",
+      "name": "_check_debug_symbols_stripped",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "Function _check_debug_symbols_stripped",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/harden.py:_compute_harden_score",
+      "type": "function",
+      "name": "_compute_harden_score",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "Function _compute_harden_score",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/harden.py:run_harden",
+      "type": "function",
+      "name": "run_harden",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "Function run_harden",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/harden.py:harden",
+      "type": "function",
+      "name": "harden",
+      "filePath": "src/hero/commands/harden.py",
+      "summary": "Function harden",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/legal.py",
+      "type": "file",
+      "name": "legal.py",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "File: legal.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_now",
+      "type": "function",
+      "name": "_now",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _now",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_read_text_safe",
+      "type": "function",
+      "name": "_read_text_safe",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _read_text_safe",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_write_text",
+      "type": "function",
+      "name": "_write_text",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _write_text",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_normalise_license_id",
+      "type": "function",
+      "name": "_normalise_license_id",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _normalise_license_id",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_licence_in_list",
+      "type": "function",
+      "name": "_licence_in_list",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _licence_in_list",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_load_or_create_legal_config",
+      "type": "function",
+      "name": "_load_or_create_legal_config",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _load_or_create_legal_config",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_scan_licenses_node",
+      "type": "function",
+      "name": "_scan_licenses_node",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _scan_licenses_node",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_scan_licenses_flutter",
+      "type": "function",
+      "name": "_scan_licenses_flutter",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _scan_licenses_flutter",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_check_license_scan",
+      "type": "function",
+      "name": "_check_license_scan",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _check_license_scan",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_generate_sbom_flutter",
+      "type": "function",
+      "name": "_generate_sbom_flutter",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _generate_sbom_flutter",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_check_sbom",
+      "type": "function",
+      "name": "_check_sbom",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _check_sbom",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_check_eula",
+      "type": "function",
+      "name": "_check_eula",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _check_eula",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_generate_privacy_via_openterms",
+      "type": "function",
+      "name": "_generate_privacy_via_openterms",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _generate_privacy_via_openterms",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_generate_privacy_fallback",
+      "type": "function",
+      "name": "_generate_privacy_fallback",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _generate_privacy_fallback",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_check_privacy_policy",
+      "type": "function",
+      "name": "_check_privacy_policy",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _check_privacy_policy",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:_compute_legal_score",
+      "type": "function",
+      "name": "_compute_legal_score",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function _compute_legal_score",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:run_legal",
+      "type": "function",
+      "name": "run_legal",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function run_legal",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/legal.py:legal",
+      "type": "function",
+      "name": "legal",
+      "filePath": "src/hero/commands/legal.py",
+      "summary": "Function legal",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/pre_commit.py",
+      "type": "file",
+      "name": "pre_commit.py",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "File: pre_commit.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:_resolve_sandbox",
+      "type": "function",
+      "name": "_resolve_sandbox",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function _resolve_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:_detect_project_type",
+      "type": "function",
+      "name": "_detect_project_type",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function _detect_project_type",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:_safe_run",
+      "type": "function",
+      "name": "_safe_run",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function _safe_run",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:_check_secrets",
+      "type": "function",
+      "name": "_check_secrets",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function _check_secrets",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:_check_lint",
+      "type": "function",
+      "name": "_check_lint",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function _check_lint",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:_check_copyright",
+      "type": "function",
+      "name": "_check_copyright",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function _check_copyright",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:_compute_score",
+      "type": "function",
+      "name": "_compute_score",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function _compute_score",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:run_pre_commit",
+      "type": "function",
+      "name": "run_pre_commit",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function run_pre_commit",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/pre_commit.py:pre_commit",
+      "type": "function",
+      "name": "pre_commit",
+      "filePath": "src/hero/commands/pre_commit.py",
+      "summary": "Function pre_commit",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/ready.py",
+      "type": "file",
+      "name": "ready.py",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "File: ready.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/ready.py:_check_cli",
+      "type": "function",
+      "name": "_check_cli",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "Function _check_cli",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/ready.py:_check_venv",
+      "type": "function",
+      "name": "_check_venv",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "Function _check_venv",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/ready.py:_check_stages",
+      "type": "function",
+      "name": "_check_stages",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "Function _check_stages",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/ready.py:_check_sandboxes",
+      "type": "function",
+      "name": "_check_sandboxes",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "Function _check_sandboxes",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/ready.py:_check_pipeline_doc",
+      "type": "function",
+      "name": "_check_pipeline_doc",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "Function _check_pipeline_doc",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/ready.py:_compute_readiness_score",
+      "type": "function",
+      "name": "_compute_readiness_score",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "Function _compute_readiness_score",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/ready.py:run_readiness",
+      "type": "function",
+      "name": "run_readiness",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "Function run_readiness",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/ready.py:ready",
+      "type": "function",
+      "name": "ready",
+      "filePath": "src/hero/commands/ready.py",
+      "summary": "Function ready",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/scan.py",
+      "type": "file",
+      "name": "scan.py",
+      "filePath": "src/hero/commands/scan.py",
+      "summary": "File: scan.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/scan.py:_is_project_root",
+      "type": "function",
+      "name": "_is_project_root",
+      "filePath": "src/hero/commands/scan.py",
+      "summary": "Function _is_project_root",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/scan.py:discover_projects",
+      "type": "function",
+      "name": "discover_projects",
+      "filePath": "src/hero/commands/scan.py",
+      "summary": "Function discover_projects",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/scan.py:scan",
+      "type": "function",
+      "name": "scan",
+      "filePath": "src/hero/commands/scan.py",
+      "summary": "Function scan",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/score.py",
+      "type": "file",
+      "name": "score.py",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "File: score.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_resolve_sandbox",
+      "type": "function",
+      "name": "_resolve_sandbox",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _resolve_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_run",
+      "type": "function",
+      "name": "_run",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _run",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_safe_run",
+      "type": "function",
+      "name": "_safe_run",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _safe_run",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_detect_project_type",
+      "type": "function",
+      "name": "_detect_project_type",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _detect_project_type",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_count_lines",
+      "type": "function",
+      "name": "_count_lines",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _count_lines",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_scan_secrets_gitleaks",
+      "type": "function",
+      "name": "_scan_secrets_gitleaks",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _scan_secrets_gitleaks",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_scan_secrets_fallback",
+      "type": "function",
+      "name": "_scan_secrets_fallback",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _scan_secrets_fallback",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_count_copyright_headers",
+      "type": "function",
+      "name": "_count_copyright_headers",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _count_copyright_headers",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_score_pre_commit",
+      "type": "function",
+      "name": "_score_pre_commit",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _score_pre_commit",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_score_build",
+      "type": "function",
+      "name": "_score_build",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _score_build",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_score_harden",
+      "type": "function",
+      "name": "_score_harden",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _score_harden",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_score_legal",
+      "type": "function",
+      "name": "_score_legal",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _score_legal",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_score_cipr",
+      "type": "function",
+      "name": "_score_cipr",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _score_cipr",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_score_verify",
+      "type": "function",
+      "name": "_score_verify",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _score_verify",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_score_pipeline",
+      "type": "function",
+      "name": "_score_pipeline",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _score_pipeline",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_format_score_line",
+      "type": "function",
+      "name": "_format_score_line",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _format_score_line",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:_print_scores",
+      "type": "function",
+      "name": "_print_scores",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function _print_scores",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/score.py:score",
+      "type": "function",
+      "name": "score",
+      "filePath": "src/hero/commands/score.py",
+      "summary": "Function score",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/status.py",
+      "type": "file",
+      "name": "status.py",
+      "filePath": "src/hero/commands/status.py",
+      "summary": "File: status.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/status.py:status",
+      "type": "function",
+      "name": "status",
+      "filePath": "src/hero/commands/status.py",
+      "summary": "Function status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/status.py:_show_sandbox_status",
+      "type": "function",
+      "name": "_show_sandbox_status",
+      "filePath": "src/hero/commands/status.py",
+      "summary": "Function _show_sandbox_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/status.py:_show_sandbox_status_merged",
+      "type": "function",
+      "name": "_show_sandbox_status_merged",
+      "filePath": "src/hero/commands/status.py",
+      "summary": "Function _show_sandbox_status_merged",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/status.py:_render_status",
+      "type": "function",
+      "name": "_render_status",
+      "filePath": "src/hero/commands/status.py",
+      "summary": "Function _render_status",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/verify.py",
+      "type": "file",
+      "name": "verify.py",
+      "filePath": "src/hero/commands/verify.py",
+      "summary": "File: verify.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/verify.py:run_verify",
+      "type": "function",
+      "name": "run_verify",
+      "filePath": "src/hero/commands/verify.py",
+      "summary": "Function run_verify",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/verify.py:verify",
+      "type": "function",
+      "name": "verify",
+      "filePath": "src/hero/commands/verify.py",
+      "summary": "Function verify",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/stages/archive.py",
+      "type": "file",
+      "name": "archive.py",
+      "filePath": "src/hero/stages/archive.py",
+      "summary": "File: archive.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/archive.py:run_archive",
+      "type": "function",
+      "name": "run_archive",
+      "filePath": "src/hero/stages/archive.py",
+      "summary": "Function run_archive",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/stages/build.py",
+      "type": "file",
+      "name": "build.py",
+      "filePath": "src/hero/stages/build.py",
+      "summary": "File: build.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/build.py:run_build",
+      "type": "function",
+      "name": "run_build",
+      "filePath": "src/hero/stages/build.py",
+      "summary": "Function run_build",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/stages/cipr.py",
+      "type": "file",
+      "name": "cipr.py",
+      "filePath": "src/hero/stages/cipr.py",
+      "summary": "File: cipr.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/cipr.py:run_cipr",
+      "type": "function",
+      "name": "run_cipr",
+      "filePath": "src/hero/stages/cipr.py",
+      "summary": "Function run_cipr",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/stages/harden.py",
+      "type": "file",
+      "name": "harden.py",
+      "filePath": "src/hero/stages/harden.py",
+      "summary": "File: harden.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/harden.py:run_harden",
+      "type": "function",
+      "name": "run_harden",
+      "filePath": "src/hero/stages/harden.py",
+      "summary": "Function run_harden",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/stages/legal.py",
+      "type": "file",
+      "name": "legal.py",
+      "filePath": "src/hero/stages/legal.py",
+      "summary": "File: legal.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/legal.py:run_legal",
+      "type": "function",
+      "name": "run_legal",
+      "filePath": "src/hero/stages/legal.py",
+      "summary": "Function run_legal",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/stages/pre_commit.py",
+      "type": "file",
+      "name": "pre_commit.py",
+      "filePath": "src/hero/stages/pre_commit.py",
+      "summary": "File: pre_commit.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/pre_commit.py:run_pre_commit",
+      "type": "function",
+      "name": "run_pre_commit",
+      "filePath": "src/hero/stages/pre_commit.py",
+      "summary": "Function run_pre_commit",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/stages/verify.py",
+      "type": "file",
+      "name": "verify.py",
+      "filePath": "src/hero/stages/verify.py",
+      "summary": "File: verify.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/verify.py:run_verify",
+      "type": "function",
+      "name": "run_verify",
+      "filePath": "src/hero/stages/verify.py",
+      "summary": "Function run_verify",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/analysis_cache.py",
+      "target": "function:src/hero/analysis_cache.py:_hash_paths",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/analysis_cache.py",
+      "target": "function:src/hero/analysis_cache.py:_cache_key",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/analysis_cache.py",
+      "target": "function:src/hero/analysis_cache.py:get_cached",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/analysis_cache.py",
+      "target": "function:src/hero/analysis_cache.py:set_cached",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/analysis_cache.py",
+      "target": "function:src/hero/analysis_cache.py:invalidate",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/analysis_cache.py",
+      "target": "function:src/hero/analysis_cache.py:cached_analyze",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/cli.py",
+      "target": "function:src/hero/cli.py:ensure_hero_home",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/cli.py",
+      "target": "function:src/hero/cli.py:main",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:_ensure_archive_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:_collect_build_artifacts",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:_collect_sbom",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:_collect_legal_docs",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:_write_journal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:_consolidate_memory",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:_compute_archive_score",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:run_archive",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/archive.py",
+      "target": "function:src/hero/commands/archive.py:archive",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/build.py",
+      "target": "function:src/hero/commands/build.py:_check_build",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/build.py",
+      "target": "function:src/hero/commands/build.py:_check_obfuscation",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/build.py",
+      "target": "function:src/hero/commands/build.py:_check_proguard",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/build.py",
+      "target": "function:src/hero/commands/build.py:_check_debug_symbols",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/build.py",
+      "target": "function:src/hero/commands/build.py:_check_autoversion",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/build.py",
+      "target": "function:src/hero/commands/build.py:_compute_build_score",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/build.py",
+      "target": "function:src/hero/commands/build.py:run_build",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/build.py",
+      "target": "function:src/hero/commands/build.py:build",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:_status_icon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:_warn_icon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:detect_project_type",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:_check_budget",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:_check_heartbeat",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:_check_git",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:_check_build",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:_check_circuit_breaker",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:_check_dispatch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/check.py",
+      "target": "function:src/hero/commands/check.py:check",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:_is_rails_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:_count_test_failures",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:_run_tests",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:_run_trivy",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:_check_build_artifacts",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:_run_brakeman",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:_compute_cipr_score",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:run_cipr",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:cipr",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/cipr.py",
+      "target": "function:src/hero/commands/cipr.py:_test_cmd_label",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dispatch.py",
+      "target": "function:src/hero/commands/dispatch.py:dispatch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dispatch.py",
+      "target": "function:src/hero/commands/dispatch.py:list_cmd",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dispatch.py",
+      "target": "function:src/hero/commands/dispatch.py:all_cmd",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dispatch.py",
+      "target": "function:src/hero/commands/dispatch.py:spawn_cmd",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dispatch.py",
+      "target": "function:src/hero/commands/dispatch.py:clear_cmd",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dispatch.py",
+      "target": "function:src/hero/commands/dispatch.py:_show_pending",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/dispatch.py",
+      "target": "function:src/hero/commands/dispatch.py:_show_spawn_ready",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_resolve_mode",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_run_stage_safe",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_ensure_brainstorm_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_ensure_worktree_base",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_detect_main_branch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_create_worktree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_prune_worktree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_is_open_ended_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_run_brainstorm",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_write_journal_entry",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_consolidate_journal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_check_circuit_breaker",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_diff_errors",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_ensure_pipeline_dir",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_detect_project_type",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_run_analysis",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_build_verify_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_build_archive_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_build_self_review_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_get_escalation_model",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_build_fix_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:_get_ts_errors",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/go.py",
+      "target": "function:src/hero/commands/go.py:go",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/graph.py",
+      "target": "function:src/hero/commands/graph.py:_build_toon_output",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/graph.py",
+      "target": "function:src/hero/commands/graph.py:graph",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/graph.py",
+      "target": "function:src/hero/commands/graph.py:query",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/graph.py",
+      "target": "function:src/hero/commands/graph.py:dependencies",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/harden.py",
+      "target": "function:src/hero/commands/harden.py:_scan_secrets",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/harden.py",
+      "target": "function:src/hero/commands/harden.py:_run_trivy",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/harden.py",
+      "target": "function:src/hero/commands/harden.py:_check_root_detection",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/harden.py",
+      "target": "function:src/hero/commands/harden.py:_check_cert_pinning",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/harden.py",
+      "target": "function:src/hero/commands/harden.py:_check_debug_symbols_stripped",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/harden.py",
+      "target": "function:src/hero/commands/harden.py:_compute_harden_score",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/harden.py",
+      "target": "function:src/hero/commands/harden.py:run_harden",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/harden.py",
+      "target": "function:src/hero/commands/harden.py:harden",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_now",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_read_text_safe",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_write_text",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_normalise_license_id",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_licence_in_list",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_load_or_create_legal_config",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_scan_licenses_node",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_scan_licenses_flutter",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_check_license_scan",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_generate_sbom_flutter",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_check_sbom",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_check_eula",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_generate_privacy_via_openterms",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_generate_privacy_fallback",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_check_privacy_policy",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:_compute_legal_score",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:run_legal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/legal.py",
+      "target": "function:src/hero/commands/legal.py:legal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:_resolve_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:_detect_project_type",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:_safe_run",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:_check_secrets",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:_check_lint",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:_check_copyright",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:_compute_score",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:run_pre_commit",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/pre_commit.py",
+      "target": "function:src/hero/commands/pre_commit.py:pre_commit",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/ready.py",
+      "target": "function:src/hero/commands/ready.py:_check_cli",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/ready.py",
+      "target": "function:src/hero/commands/ready.py:_check_venv",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/ready.py",
+      "target": "function:src/hero/commands/ready.py:_check_stages",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/ready.py",
+      "target": "function:src/hero/commands/ready.py:_check_sandboxes",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/ready.py",
+      "target": "function:src/hero/commands/ready.py:_check_pipeline_doc",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/ready.py",
+      "target": "function:src/hero/commands/ready.py:_compute_readiness_score",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/ready.py",
+      "target": "function:src/hero/commands/ready.py:run_readiness",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/ready.py",
+      "target": "function:src/hero/commands/ready.py:ready",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/scan.py",
+      "target": "function:src/hero/commands/scan.py:_is_project_root",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/scan.py",
+      "target": "function:src/hero/commands/scan.py:discover_projects",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/scan.py",
+      "target": "function:src/hero/commands/scan.py:scan",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_resolve_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_run",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_safe_run",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_detect_project_type",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_count_lines",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_scan_secrets_gitleaks",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_scan_secrets_fallback",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_count_copyright_headers",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_score_pre_commit",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_score_build",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_score_harden",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_score_legal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_score_cipr",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_score_verify",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_score_pipeline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_format_score_line",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:_print_scores",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/score.py",
+      "target": "function:src/hero/commands/score.py:score",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/status.py",
+      "target": "function:src/hero/commands/status.py:status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/status.py",
+      "target": "function:src/hero/commands/status.py:_show_sandbox_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/status.py",
+      "target": "function:src/hero/commands/status.py:_show_sandbox_status_merged",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/status.py",
+      "target": "function:src/hero/commands/status.py:_render_status",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/verify.py",
+      "target": "function:src/hero/commands/verify.py:run_verify",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/verify.py",
+      "target": "function:src/hero/commands/verify.py:verify",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/archive.py",
+      "target": "function:src/hero/stages/archive.py:run_archive",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/build.py",
+      "target": "function:src/hero/stages/build.py:run_build",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/cipr.py",
+      "target": "function:src/hero/stages/cipr.py:run_cipr",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/harden.py",
+      "target": "function:src/hero/stages/harden.py:run_harden",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/legal.py",
+      "target": "function:src/hero/stages/legal.py:run_legal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/pre_commit.py",
+      "target": "function:src/hero/stages/pre_commit.py:run_pre_commit",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/verify.py",
+      "target": "function:src/hero/stages/verify.py:run_verify",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

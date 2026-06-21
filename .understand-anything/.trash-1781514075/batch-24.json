@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "config:.understand-anything/tmp/batch-raw-6.json",
+      "type": "config",
+      "name": "batch-raw-6.json",
+      "filePath": ".understand-anything/tmp/batch-raw-6.json",
+      "summary": "Config: batch-raw-6.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/tmp/batch-raw-6.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/tmp/batch-raw-6.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/tmp/batch-raw-7.json",
+      "type": "config",
+      "name": "batch-raw-7.json",
+      "filePath": ".understand-anything/tmp/batch-raw-7.json",
+      "summary": "Config: batch-raw-7.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/tmp/batch-raw-7.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/tmp/batch-raw-7.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/tmp/batch-raw-8.json",
+      "type": "config",
+      "name": "batch-raw-8.json",
+      "filePath": ".understand-anything/tmp/batch-raw-8.json",
+      "summary": "Config: batch-raw-8.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/tmp/batch-raw-8.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/tmp/batch-raw-8.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/tmp/batch-raw-9.json",
+      "type": "config",
+      "name": "batch-raw-9.json",
+      "filePath": ".understand-anything/tmp/batch-raw-9.json",
+      "summary": "Config: batch-raw-9.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.understand-anything/tmp/batch-raw-9.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".understand-anything/tmp/batch-raw-9.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,197 @@
+{
+  "nodes": [
+    {
+      "id": "document:prompts/LEAD_BRIEF.md",
+      "type": "document",
+      "name": "LEAD_BRIEF.md",
+      "filePath": "prompts/LEAD_BRIEF.md",
+      "summary": "Document: LEAD_BRIEF.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:prompts/LEAD_BRIEF.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "prompts/LEAD_BRIEF.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:prompts/soldier-1-design-system.md",
+      "type": "document",
+      "name": "soldier-1-design-system.md",
+      "filePath": "prompts/soldier-1-design-system.md",
+      "summary": "Document: soldier-1-design-system.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:prompts/soldier-1-design-system.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "prompts/soldier-1-design-system.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:prompts/soldier-2-api-layer.md",
+      "type": "document",
+      "name": "soldier-2-api-layer.md",
+      "filePath": "prompts/soldier-2-api-layer.md",
+      "summary": "Document: soldier-2-api-layer.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:prompts/soldier-2-api-layer.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "prompts/soldier-2-api-layer.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:prompts/soldier-3-components.md",
+      "type": "document",
+      "name": "soldier-3-components.md",
+      "filePath": "prompts/soldier-3-components.md",
+      "summary": "Document: soldier-3-components.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:prompts/soldier-3-components.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "prompts/soldier-3-components.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:prompts/soldier-4-control-features.md",
+      "type": "document",
+      "name": "soldier-4-control-features.md",
+      "filePath": "prompts/soldier-4-control-features.md",
+      "summary": "Document: soldier-4-control-features.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:prompts/soldier-4-control-features.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "prompts/soldier-4-control-features.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:prompts/soldier-5-mobile-responsive.md",
+      "type": "document",
+      "name": "soldier-5-mobile-responsive.md",
+      "filePath": "prompts/soldier-5-mobile-responsive.md",
+      "summary": "Document: soldier-5-mobile-responsive.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:prompts/soldier-5-mobile-responsive.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "prompts/soldier-5-mobile-responsive.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:prompts/soldier-6-futuristic-polish.md",
+      "type": "document",
+      "name": "soldier-6-futuristic-polish.md",
+      "filePath": "prompts/soldier-6-futuristic-polish.md",
+      "summary": "Document: soldier-6-futuristic-polish.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:prompts/soldier-6-futuristic-polish.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "prompts/soldier-6-futuristic-polish.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:prompts/soldier-7-integration.md",
+      "type": "document",
+      "name": "soldier-7-integration.md",
+      "filePath": "prompts/soldier-7-integration.md",
+      "summary": "Document: soldier-7-integration.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:prompts/soldier-7-integration.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "prompts/soldier-7-integration.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

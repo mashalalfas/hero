@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HERO — the invisible network</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060a06;
+    --cyan: #00ffaa;
+    --cyan-dim: rgba(0, 255, 170, 0.5);
+    --cyan-faint: rgba(0, 255, 170, 0.1);
+    --cyan-glow: rgba(0, 255, 170, 0.35);
+    --amber: #ffaa33;
+    --red: #ff3355;
+    --warm: #fff8e7;
+    --text: #d0d8d0;
+    --muted: #5a6a5a;
+    --mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+    --serif: 'Playfair Display', 'Newsreader', 'Georgia', serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    overflow-x: hidden;
+  }
+
+  body {
+    /* The scroll track. 400vh gives us a long enough page to drive growth 0→1. */
+    min-height: 400vh;
+    position: relative;
+  }
+
+  #scroll-track {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1px; height: 400vh;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  /* Background layer — substrate texture, dimmed and blurred */
+  #bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: url('substrate-bg.jpg') center / cover no-repeat;
+    opacity: 0.15;
+    filter: blur(4px) saturate(0.7);
+    pointer-events: none;
+  }
+
+  /* The main viewport wrapper — receives the SVG displacement filter */
+  #viewport-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* The canvas — full viewport, behind the nucleus in z-order */
+  #mycelium {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    display: block;
+  }
+
+  /* Nucleus — fixed center */
+  #nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 280px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  #nucleus img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow:
+      0 0 60px rgba(0, 255, 170, 0.35),
+      0 0 120px rgba(0, 255, 170, 0.2),
+      inset 0 0 40px rgba(0, 0, 0, 0.4);
+    animation: nucleus-breathe 4s ease-in-out infinite;
+  }
+
+  #nucleus-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 720px;
+    height: 720px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 255, 170, 0.22) 0%,
+      rgba(0, 255, 170, 0.10) 25%,
+      rgba(0, 255, 170, 0.04) 50%,
+      transparent 75%
+    );
+    border-radius: 50%;
+    animation: glow-breathe 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  #nucleus-pulse {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 320px;
+    height: 320px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: 1px solid rgba(0, 255, 170, 0.4);
+    border-radius: 50%;
+    animation: pulse-ring 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes nucleus-breathe {
+    0%, 100% {
+      transform: scale(0.98);
+      filter: brightness(0.95) contrast(1.05);
+    }
+    50% {
+      transform: scale(1.02);
+      filter: brightness(1.1) contrast(1.0);
+    }
+  }
+
+  @keyframes glow-breathe {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1.0; }
+  }
+
+  @keyframes pulse-ring {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(0.95);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.15);
+      opacity: 0.7;
+    }
+  }
+
+  /* Title — fixed center, below nucleus */
+  #title {
+    position: absolute;
+    top: calc(50% + 200px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    animation: title-fade-in 2.5s ease-out 1.2s forwards;
+  }
+
+  #title h1 {
+    font-family: var(--serif);
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--cyan);
+    letter-spacing: 0.4em;
+    text-shadow:
+      0 0 20px rgba(0, 255, 170, 0.6),
+      0 0 40px rgba(0, 255, 170, 0.3);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  #title p {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-style: italic;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  @keyframes title-fade-in {
+    from { opacity: 0; transform: translate(-50%, 8px); }
+    to   { opacity: 1; transform: translate(-50%, 0); }
+  }
+
+  /* Header — minimal wordmark */
+  header {
+    position: fixed;
+    top: 28px;
+    left: 32px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .wordmark {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cyan);
+    letter-spacing: 0.3em;
+    text-shadow:
+      0 0 12px rgba(0, 255, 170, 0.5),
+      0 0 24px rgba(0, 255, 170, 0.2);
+    text-transform: uppercase;
+  }
+
+  /* SVG displacement filter container */
+  .svg-filters {
+    position: fixed;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+
+  /* Mobile: smaller nucleus */
+  @media (max-width: 768px) {
+    #nucleus { width: 180px; height: 180px; }
+    #nucleus-glow { width: 480px; height: 480px; }
+    #nucleus-pulse { width: 220px; height: 220px; }
+    #title { top: calc(50% + 140px); }
+    #title h1 { font-size: 32px; }
+    #title p { font-size: 14px; }
+    .wordmark { font-size: 22px; }
+    /* Disable displacement on mobile */
+    #viewport-wrapper { filter: none; }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    #nucleus img, #nucleus-glow, #nucleus-pulse { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG filters for organic distortion -->
+<svg class="svg-filters" aria-hidden="true">
+  <defs>
+    <filter id="organic-distort">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- Background layer -->
+<div id="bg-layer"></div>
+
+<!-- Scroll track (invisible, gives body height) -->
+<div id="scroll-track"></div>
+
+<!-- Main viewport wrapper with displacement filter -->
+<div id="viewport-wrapper">
+
+  <canvas id="mycelium"></canvas>
+
+  <!-- Nucleus -->
+  <div id="nucleus">
+    <div id="nucleus-glow"></div>
+    <div id="nucleus-pulse"></div>
+    <img src="nucleus-hero.jpg" alt="HERO Neural Nucleus" />
+  </div>
+
+  <!-- Title -->
+  <div id="title">
+    <h1>HERO</h1>
+    <p>the invisible network</p>
+  </div>
+
+</div>
+
+<!-- Header wordmark -->
+<header>
+  <span class="wordmark">HERO</span>
+</header>
+
+<script>
+(function() {
+  'use strict';
+
+  // ========================================================================
+  // PERLIN NOISE — 3D, seeded, used for organic filament displacement
+  // ========================================================================
+  const Perlin = (function() {
+    // Seeded shuffle using Mulberry32
+    function mulberry32(seed) {
+      return function() {
+        let t = seed += 0x6D2B79F5;
+        t = Math.imul(t ^ (t >>> 15), t | 1);
+        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+    }
+
+    const perm = new Uint8Array(512);
+    {
+      const p = new Uint8Array(256);
+      for (let i = 0; i < 256; i++) p[i] = i;
+      const rng = mulberry32(42);
+      for (let i = 255; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        const tmp = p[i]; p[i] = p[j]; p[j] = tmp;
+      }
+      for (let i = 0; i < 512; i++) perm[i] = p[i & 255];
+    }
+
+    function fade(t) { return t * t * t * (t * (t * 6 - 15) + 10); }
+    function lerp(t, a, b) { return a + t * (b - a); }
+    function grad(hash, x, y, z) {
+      const h = hash & 15;
+      const u = h < 8 ? x : y;
+      const v = h < 4 ? y : (h === 12 || h === 14 ? x : z);
+      return ((h & 1) ? -u : u) + ((h & 2) ? -v : v);
+    }
+
+    function noise3D(x, y, z) {
+      const X = Math.floor(x) & 255;
+      const Y = Math.floor(y) & 255;
+      const Z = Math.floor(z) & 255;
+      x -= Math.floor(x);
+      y -= Math.floor(y);
+      z -= Math.floor(z);
+      const u = fade(x), v = fade(y), w = fade(z);
+      const A = perm[X] + Y, AA = perm[A] + Z, AB = perm[A + 1] + Z;
+      const B = perm[X + 1] + Y, BA = perm[B] + Z, BB = perm[B + 1] + Z;
+      return lerp(w,
+        lerp(v,
+          lerp(u, grad(perm[AA], x, y, z), grad(perm[BA], x - 1, y, z)),
+          lerp(u, grad(perm[AB], x, y - 1, z), grad(perm[BB], x - 1, y - 1, z))),
+        lerp(v,
+          lerp(u, grad(perm[AA + 1], x, y, z - 1), grad(perm[BA + 1], x - 1, y, z - 1)),
+          lerp(u, grad(perm[AB + 1], x, y - 1, z), grad(perm[BB + 1], x - 1, y - 1, z - 1)))
+      ) * 0.5; // normalize to roughly [-0.5, 0.5]
+    }
+
+    return { noise: noise3D };
+  })();
+
+  // ========================================================================
+  // STATE
+  // ========================================================================
+  const state = {
+    width: 0,
+    height: 0,
+    dpr: 1,
+    cx: 0,
+    cy: 0,
+    scrollProgress: 0,
+    isMobile: false,
+    isTablet: false,
+    filamentCount: 80,
+    particleCount: 200,
+    useDisplacement: true,
+  };
+
+  // ========================================================================
+  // FILAMENT GENERATION
+  // ========================================================================
+  const allFilamentSegments = []; // each: { x1,y1,cx,cy,x2,y2,width,isAnastomosis,parentFilament,distanceFromCenter,lastWavePulse,age }
+  const soldierNodes = [];        // each: { x, y, width, flicker, lastFlicker, active }
+  const filamentPaths = [];       // each: { segments: [...] } for particle path-following
+  const allNodes = [];            // node positions for anastomosis lookup
+
+  function distance(x1, y1, x2, y2) {
+    const dx = x2 - x1, dy = y2 - y1;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  function findNearestNode(x, y, maxDist) {
+    let best = null;
+    let bestDist = maxDist || Infinity;
+    for (let i = 0; i < allNodes.length; i++) {
+      const n = allNodes[i];
+      const d = distance(x, y, n.x, n.y);
+      if (d < bestDist) {
+        bestDist = d;
+        best = n;
+      }
+    }
+    return best;
+  }
+
+  function generateFilament(startX, startY, startAngle, depth, maxDepth, parentFilamentId) {
+    const segments = [];
+    let x = startX, y = startY, angle = startAngle;
+    let width = 3.5 + Math.random() * 1.5; // thick near nucleus
+    const numSegments = 4 + Math.floor(Math.random() * 5); // 4-8
+
+    let distFromCenter = distance(x, y, state.cx, state.cy);
+
+    for (let i = 0; i < numSegments; i++) {
+      // Displace angle with Perlin noise for organic curving
+      const n = Perlin.noise(x * 0.008, y * 0.008, depth * 0.4 + i * 0.2);
+      angle += n * 0.7;
+
+      // Length varies
+      const len = 40 + Math.random() * 80;
+      const endX = x + Math.cos(angle) * len;
+      const endY = y + Math.sin(angle) * len;
+
+      // Taper width
+      width *= (0.74 + 0.16 * Math.random());
+
+      // Micro-kink: displace midpoint with noise
+      const kinkX = Perlin.noise(x * 0.02, y * 0.02, i * 0.3) * 22;
+      const kinkY = Perlin.noise(x * 0.02 + 7.3, y * 0.02 + 7.3, i * 0.3 + 100) * 22;
+      const midX = (x + endX) / 2 + kinkX;
+      const midY = (y + endY) / 2 + kinkY;
+
+      const seg = {
+        x1: x, y1: y,
+        cx: midX, cy: midY,
+        x2: endX, y2: endY,
+        width: Math.max(width, 0.4),
+        isAnastomosis: false,
+        parentFilament: parentFilamentId,
+        distanceFromCenter: distFromCenter,
+        lastWavePulse: -10,
+        age: 0,
+      };
+      segments.push(seg);
+      allFilamentSegments.push(seg);
+
+      // Add a node at the start (for anastomosis)
+      if (i === 0) allNodes.push({ x, y, seg });
+
+      x = endX; y = endY;
+      distFromCenter = distance(x, y, state.cx, state.cy);
+
+      // Branch probability
+      const branchProb = 0.32 - i * 0.035;
+      if (Math.random() < branchProb && depth < maxDepth) {
+        const branchAngle = angle + (Math.random() - 0.5) * 1.3;
+        const branchId = filamentPaths.length;
+        const branch = generateFilament(x, y, branchAngle, depth + 1, maxDepth, branchId);
+        branch.segments.forEach(s => allFilamentSegments.push(s));
+        filamentPaths.push(branch);
+        allNodes.push({ x, y, seg });
+      }
+
+      // Anastomosis: small chance to connect to a nearby node
+      if (Math.random() < 0.06 && allNodes.length > 15 && i > 1) {
+        const nearest = findNearestNode(x, y, 80);
+        if (nearest) {
+          const d = distance(x, y, nearest.x, nearest.y);
+          if (d > 20 && d < 80) {
+            const anastSeg = {
+              x1: x, y1: y,
+              cx: (x + nearest.x) / 2 + (Math.random() - 0.5) * 20,
+              cy: (y + nearest.y) / 2 + (Math.random() - 0.5) * 20,
+              x2: nearest.x, y2: nearest.y,
+              width: Math.max(width * 0.6, 0.3),
+              isAnastomosis: true,
+              parentFilament: parentFilamentId,
+              distanceFromCenter: (distFromCenter + distance(nearest.x, nearest.y, state.cx, state.cy)) / 2,
+              lastWavePulse: -10,
+              age: 0,
+            };
+            segments.push(anastSeg);
+            allFilamentSegments.push(anastSeg);
+          }
+        }
+      }
+    }
+
+    // Add end node
+    allNodes.push({ x, y, seg: segments[segments.length - 1] });
+
+    // Soldier endpoint
+    soldierNodes.push({
+      x, y,
+      width: width,
+      flicker: Math.random() * Math.PI * 2,
+      lastFlicker: 0,
+      active: false,
+    });
+
+    return { segments };
+  }
+
+  function buildAllFilaments() {
+    allFilamentSegments.length = 0;
+    soldierNodes.length = 0;
+    filamentPaths.length = 0;
+    allNodes.length = 0;
+
+    const centerX = state.cx;
+    const centerY = state.cy;
+    const nucleusRadius = 140;
+
+    const baseCount = state.filamentCount;
+    const maxDepth = state.isMobile ? 2 : 3;
+
+    for (let i = 0; i < baseCount; i++) {
+      // Distribute angles evenly with jitter for irregularity
+      const angleBase = (i / baseCount) * Math.PI * 2;
+      const angle = angleBase + (Math.random() - 0.5) * 0.25;
+
+      // Start point on or just outside the nucleus circumference
+      const startR = nucleusRadius * (0.6 + Math.random() * 0.5);
+      const startX = centerX + Math.cos(angle) * startR;
+      const startY = centerY + Math.sin(angle) * startR;
+
+      const fid = filamentPaths.length;
+      const filament = generateFilament(startX, startY, angle, 0, maxDepth, fid);
+      filamentPaths.push(filament);
+    }
+  }
+
+  // ========================================================================
+  // PARTICLE SYSTEM
+  // ========================================================================
+  const particles = [];
+
+  class Particle {
+    constructor() {
+      this.reset();
+    }
+    reset() {
+      if (filamentPaths.length === 0) {
+        this.x = state.cx; this.y = state.cy;
+        return;
+      }
+      // Pick a random filament
+      const path = filamentPaths[Math.floor(Math.random() * filamentPaths.length)];
+      this.path = path;
+      this.segIndex = 0;
+      this.segT = Math.random(); // start somewhere along the first segment
+      this.speed = 0.3 + Math.random() * 0.4; // segments per second base
+      this.charge = Math.random() * 0.5; // 0-1
+      this.bursting = false;
+      this.burstTimer = 0;
+      this.chargeRate = 0.15 + Math.random() * 0.35; // per second
+      this.trail = [];
+      this.size = 1.5 + Math.random() * 1.5;
+      this.color = [0, 255, 170];
+
+      // Compute initial position
+      this.updatePosition();
+    }
+    updatePosition() {
+      const path = this.path;
+      if (!path || path.segments.length === 0) return;
+      const seg = path.segments[Math.min(this.segIndex, path.segments.length - 1)];
+      // Quadratic bezier at t
+      const t = this.segT;
+      const mt = 1 - t;
+      this.x = mt * mt * seg.x1 + 2 * mt * t * seg.cx + t * t * seg.x2;
+      this.y = mt * mt * seg.y1 + 2 * mt * t * seg.cy + t * t * seg.y2;
+    }
+    update(dt) {
+      if (!this.path || this.path.segments.length === 0) {
+        this.reset();
+        return;
+      }
+
+      // Charge builds up
+      this.charge += this.chargeRate * dt;
+      if (this.charge >= 1.0) {
+        // Burst!
+        this.bursting = true;
+        this.burstTimer = 0.3;
+        this.charge = 0;
+        this.color = [255, 255, 255];
+        this.size = 3 + Math.random() * 1.5;
+      }
+
+      if (this.bursting) {
+        this.burstTimer -= dt;
+        if (this.burstTimer <= 0) {
+          this.bursting = false;
+          this.color = [0, 255, 170];
+          this.size = 1.5 + Math.random() * 1.5;
+        }
+        this.speed = 1.5 + Math.random() * 0.6;
+      } else {
+        this.speed = 0.3 + Math.random() * 0.2;
+      }
+
+      // Move along path
+      this.segT += this.speed * dt;
+      while (this.segT >= 1.0) {
+        this.segT -= 1.0;
+        this.segIndex++;
+        if (this.segIndex >= this.path.segments.length) {
+          // Reached the end — burst and respawn
+          this.charge = 1.0; // force burst on respawn
+          this.reset();
+          return;
+        }
+      }
+
+      // Trail: keep last 3 positions
+      this.trail.push({ x: this.x, y: this.y });
+      if (this.trail.length > 3) this.trail.shift();
+
+      this.updatePosition();
+    }
+    draw(ctx) {
+      // Trail
+      for (let i = 0; i < this.trail.length; i++) {
+        const t = this.trail[i];
+        const alpha = (i + 1) / this.trail.length * 0.4;
+        ctx.fillStyle = `rgba(${this.color[0]},${this.color[1]},${this.color[2]},${alpha})`;
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, this.size * 0.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      // Head
+      const headAlpha = this.bursting ? 1.0 : 0.85;
+      ctx.fillStyle = `rgba(${this.color[0]},${this.color[1]},${this.color[2]},${headAlpha})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+      // Burst glow
+      if (this.bursting) {
+        const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 4);
+        grad.addColorStop(0, `rgba(255, 255, 255, 0.4)`);
+        grad.addColorStop(1, `rgba(255, 255, 255, 0)`);
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size * 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  }
+
+  function buildParticles() {
+    particles.length = 0;
+    for (let i = 0; i < state.particleCount; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  // ========================================================================
+  // SIGNAL WAVES
+  // ========================================================================
+  const signalWave = {
+    active: false,
+    progress: 0, // 0 to 1
+    duration: 1.6, // seconds
+    nextStart: 2.0, // first wave at 2s
+  };
+
+  function updateSignalWave(dt, now) {
+    if (!signalWave.active) {
+      signalWave.nextStart -= dt;
+      if (signalWave.nextStart <= 0) {
+        signalWave.active = true;
+        signalWave.progress = 0;
+        signalWave.duration = 1.4 + Math.random() * 0.4;
+        signalWave.nextStart = 4 + Math.random() * 2; // 4-6s
+      }
+    } else {
+      signalWave.progress += dt / signalWave.duration;
+      if (signalWave.progress >= 1.0) {
+        signalWave.active = false;
+        signalWave.progress = 0;
+      }
+
+      // Mark filament segments the wave has passed
+      const currentRadius = signalWave.progress * Math.max(state.width, state.height) * 0.9;
+      for (let i = 0; i < allFilamentSegments.length; i++) {
+        const seg = allFilamentSegments[i];
+        // If the wave radius has just reached this segment's distance
+        const dist = seg.distanceFromCenter;
+        if (Math.abs(dist - currentRadius) < 30) {
+          seg.lastWavePulse = now;
+        }
+      }
+    }
+  }
+
+  // ========================================================================
+  // CANVAS RENDERING
+  // ========================================================================
+  const canvas = document.getElementById('mycelium');
+  const ctx = canvas.getContext('2d', { alpha: true });
+
+  function resizeCanvas() {
+    state.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    state.width = window.innerWidth;
+    state.height = window.innerHeight;
+    canvas.width = state.width * state.dpr;
+    canvas.height = state.height * state.dpr;
+    canvas.style.width = state.width + 'px';
+    canvas.style.height = state.height + 'px';
+    ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+
+    state.cx = state.width / 2;
+    state.cy = state.height / 2;
+
+    // Determine device tier
+    const w = state.width;
+    state.isMobile = w < 768;
+    state.isTablet = w >= 768 && w < 1024;
+    state.useDisplacement = !state.isMobile;
+
+    if (state.isMobile) {
+      state.filamentCount = 30;
+      state.particleCount = 0;
+    } else if (state.isTablet) {
+      state.filamentCount = 60;
+      state.particleCount = 150;
+    } else {
+      state.filamentCount = 110;
+      state.particleCount = 350;
+    }
+
+    // Toggle displacement via CSS class
+    if (state.useDisplacement) {
+      document.getElementById('viewport-wrapper').style.filter = 'url(#organic-distort)';
+    } else {
+      document.getElementById('viewport-wrapper').style.filter = 'none';
+    }
+
+    // Rebuild network for new size
+    buildAllFilaments();
+    buildParticles();
+  }
+
+  // Debounced resize
+  let resizeTimer = null;
+  window.addEventListener('resize', function() {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeCanvas, 150);
+  });
+
+  // Scroll handler
+  window.addEventListener('scroll', function() {
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    state.scrollProgress = docH > 0 ? Math.min(1, Math.max(0, window.scrollY / docH)) : 0;
+  }, { passive: true });
+
+  // ========================================================================
+  // RENDER LOOP
+  // ========================================================================
+  let lastTime = performance.now();
+
+  function render(now) {
+    const dt = Math.min((now - lastTime) / 1000, 0.05); // cap dt at 50ms
+    lastTime = now;
+
+    // Clear with slight fade for trail effect (subtle, very low alpha)
+    ctx.clearRect(0, 0, state.width, state.height);
+
+    // Update signal wave
+    updateSignalWave(dt, now);
+
+    // --- Draw filaments ---
+    const visibleCount = Math.floor(allFilamentSegments.length * state.scrollProgress);
+    const fadeIn = Math.min(1, state.scrollProgress * 3); // ramp up opacity quickly in first 33% of scroll
+
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    for (let i = 0; i < visibleCount; i++) {
+      const seg = allFilamentSegments[i];
+      seg.age += dt;
+
+      // Wave pulse boost
+      const waveAge = (now - seg.lastWavePulse) / 1000;
+      const waveBoost = waveAge < 0.5 ? (1 - waveAge / 0.5) * 0.6 : 0;
+
+      // Opacity based on scroll and wave
+      const baseAlpha = seg.isAnastomosis ? 0.22 : 0.32;
+      const alpha = baseAlpha * fadeIn + waveBoost;
+
+      // Animate width slightly with noise for "breathing" feel
+      const widthMod = 0.85 + 0.3 * Math.sin(now * 0.001 + i * 0.3);
+      const lineWidth = seg.width * widthMod;
+
+      ctx.strokeStyle = `rgba(0, 255, 170, ${alpha})`;
+      ctx.lineWidth = lineWidth;
+
+      ctx.beginPath();
+      ctx.moveTo(seg.x1, seg.y1);
+      ctx.quadraticCurveTo(seg.cx, seg.cy, seg.x2, seg.y2);
+      ctx.stroke();
+
+      // Glow pass for thicker filaments
+      if (lineWidth > 1.5 && !seg.isAnastomosis) {
+        ctx.strokeStyle = `rgba(0, 255, 170, ${alpha * 0.25})`;
+        ctx.lineWidth = lineWidth * 2.5;
+        ctx.beginPath();
+        ctx.moveTo(seg.x1, seg.y1);
+        ctx.quadraticCurveTo(seg.cx, seg.cy, seg.x2, seg.y2);
+        ctx.stroke();
+      }
+    }
+
+    // --- Draw soldier nodes ---
+    if (state.scrollProgress > 0.4) {
+      const soldierFade = Math.min(1, (state.scrollProgress - 0.4) / 0.3);
+      for (let i = 0; i < soldierNodes.length; i++) {
+        const s = soldierNodes[i];
+        if (!s.active && state.scrollProgress > 0.5) s.active = true;
+        if (!s.active) continue;
+
+        // Flicker
+        const flickerAge = (now - s.lastFlicker) / 1000;
+        if (flickerAge > 0.25 + Math.random() * 0.5) {
+          s.lastFlicker = now;
+          s.flicker = Math.random() * Math.PI * 2;
+        }
+        const flicker = 0.5 + 0.5 * Math.sin(s.flicker + now * 0.005);
+
+        const baseRadius = 3 + s.width * 0.5;
+        const radius = baseRadius * flicker * soldierFade;
+        const alpha = 0.7 * flicker * soldierFade;
+
+        // Glow
+        const grad = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, radius * 3);
+        grad.addColorStop(0, `rgba(0, 255, 170, ${alpha})`);
+        grad.addColorStop(0.4, `rgba(0, 255, 170, ${alpha * 0.4})`);
+        grad.addColorStop(1, `rgba(0, 255, 170, 0)`);
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, radius * 3, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Core
+        ctx.fillStyle = `rgba(255, 255, 255, ${alpha * 0.9})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, radius * 0.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // --- Draw particles ---
+    if (state.particleCount > 0) {
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update(dt);
+        particles[i].draw(ctx);
+      }
+    }
+
+    // --- Draw signal wave ring ---
+    if (signalWave.active) {
+      const radius = signalWave.progress * Math.max(state.width, state.height) * 0.9;
+      const alpha = (1 - signalWave.progress) * 0.35;
+      ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(state.cx, state.cy, radius, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Inner softer ring
+      ctx.strokeStyle = `rgba(0, 255, 170, ${alpha * 0.6})`;
+      ctx.lineWidth = 8;
+      ctx.beginPath();
+      ctx.arc(state.cx, state.cy, radius, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    requestAnimationFrame(render);
+  }
+
+  // ========================================================================
+  // INIT
+  // ========================================================================
+  resizeCanvas();
+  requestAnimationFrame(render);
+
+})();
+</script>
+</body>
+</html>

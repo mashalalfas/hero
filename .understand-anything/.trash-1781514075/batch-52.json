@@ -1,0 +1,1058 @@
+{
+  "nodes": [
+    {
+      "id": "config:.openclaw/workspace-state.json",
+      "type": "config",
+      "name": "workspace-state.json",
+      "filePath": ".openclaw/workspace-state.json",
+      "summary": "Config: workspace-state.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:.openclaw/workspace-state.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": ".openclaw/workspace-state.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.understand-anything/.trash-1780994847/tmp/ua-inline-validate.cjs",
+      "type": "file",
+      "name": "ua-inline-validate.cjs",
+      "filePath": ".understand-anything/.trash-1780994847/tmp/ua-inline-validate.cjs",
+      "summary": "File: ua-inline-validate.cjs",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:graphify-out/.graphify_root",
+      "type": "file",
+      "name": ".graphify_root",
+      "filePath": "graphify-out/.graphify_root",
+      "summary": "File: .graphify_root",
+      "tags": [
+        "unknown",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/fea62c5e47a4333aab73cce903f07836feb266955d8a988c7afb345ab7cafdf1.json",
+      "type": "config",
+      "name": "fea62c5e47a4333aab73cce903f07836feb266955d8a988c7afb345ab7cafdf1.json",
+      "filePath": "graphify-out/cache/ast/fea62c5e47a4333aab73cce903f07836feb266955d8a988c7afb345ab7cafdf1.json",
+      "summary": "Config: fea62c5e47a4333aab73cce903f07836feb266955d8a988c7afb345ab7cafdf1.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/ast/fea62c5e47a4333aab73cce903f07836feb266955d8a988c7afb345ab7cafdf1.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/ast/fea62c5e47a4333aab73cce903f07836feb266955d8a988c7afb345ab7cafdf1.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/stat-index.json",
+      "type": "config",
+      "name": "stat-index.json",
+      "filePath": "graphify-out/cache/stat-index.json",
+      "summary": "Config: stat-index.json",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:graphify-out/cache/stat-index.json:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "graphify-out/cache/stat-index.json",
+      "summary": "Section: section",
+      "tags": [
+        "json",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:HEARTBEAT.toon",
+      "type": "file",
+      "name": "HEARTBEAT.toon",
+      "filePath": "HEARTBEAT.toon",
+      "summary": "File: HEARTBEAT.toon",
+      "tags": [
+        "toon",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:memory/2026-06-01.md",
+      "type": "document",
+      "name": "2026-06-01.md",
+      "filePath": "memory/2026-06-01.md",
+      "summary": "Document: 2026-06-01.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:memory/2026-06-01.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "memory/2026-06-01.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:memory/2026-06-13.md",
+      "type": "document",
+      "name": "2026-06-13.md",
+      "filePath": "memory/2026-06-13.md",
+      "summary": "Document: 2026-06-13.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:memory/2026-06-13.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "memory/2026-06-13.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/install-hero.sh",
+      "type": "file",
+      "name": "install-hero.sh",
+      "filePath": "scripts/install-hero.sh",
+      "summary": "File: install-hero.sh",
+      "tags": [
+        "shell",
+        "script"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/archivist/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/archivist/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/brainstorm.py",
+      "type": "file",
+      "name": "brainstorm.py",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "File: brainstorm.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/brainstorm.py:_build_reverse_index",
+      "type": "function",
+      "name": "_build_reverse_index",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "Function _build_reverse_index",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/brainstorm.py:_detect_new_project",
+      "type": "function",
+      "name": "_detect_new_project",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "Function _detect_new_project",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/brainstorm.py:_extract_gates",
+      "type": "function",
+      "name": "_extract_gates",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "Function _extract_gates",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/brainstorm.py:_match_skills",
+      "type": "function",
+      "name": "_match_skills",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "Function _match_skills",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/brainstorm.py:_is_mechanical_task",
+      "type": "function",
+      "name": "_is_mechanical_task",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "Function _is_mechanical_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/brainstorm.py:_write_brief",
+      "type": "function",
+      "name": "_write_brief",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "Function _write_brief",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/brainstorm.py:brainstorm_task",
+      "type": "function",
+      "name": "brainstorm_task",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "Function brainstorm_task",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/brainstorm.py:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "src/hero/commands/brainstorm.py",
+      "summary": "Function run",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/commands/viewport_audit.py",
+      "type": "file",
+      "name": "viewport_audit.py",
+      "filePath": "src/hero/commands/viewport_audit.py",
+      "summary": "File: viewport_audit.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/viewport_audit.py:_load_openclaw_providers",
+      "type": "function",
+      "name": "_load_openclaw_providers",
+      "filePath": "src/hero/commands/viewport_audit.py",
+      "summary": "Function _load_openclaw_providers",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/viewport_audit.py:_load_openclaw_defaults",
+      "type": "function",
+      "name": "_load_openclaw_defaults",
+      "filePath": "src/hero/commands/viewport_audit.py",
+      "summary": "Function _load_openclaw_defaults",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/viewport_audit.py:_load_models_json",
+      "type": "function",
+      "name": "_load_models_json",
+      "filePath": "src/hero/commands/viewport_audit.py",
+      "summary": "Function _load_models_json",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/viewport_audit.py:_load_army_models",
+      "type": "function",
+      "name": "_load_army_models",
+      "filePath": "src/hero/commands/viewport_audit.py",
+      "summary": "Function _load_army_models",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/commands/viewport_audit.py:viewport",
+      "type": "function",
+      "name": "viewport",
+      "filePath": "src/hero/commands/viewport_audit.py",
+      "summary": "Function viewport",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/core/exchange.py",
+      "type": "file",
+      "name": "exchange.py",
+      "filePath": "src/hero/core/exchange.py",
+      "summary": "File: exchange.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/exchange.py:ensure_channel",
+      "type": "function",
+      "name": "ensure_channel",
+      "filePath": "src/hero/core/exchange.py",
+      "summary": "Function ensure_channel",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/exchange.py:post_message",
+      "type": "function",
+      "name": "post_message",
+      "filePath": "src/hero/core/exchange.py",
+      "summary": "Function post_message",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/exchange.py:read_messages",
+      "type": "function",
+      "name": "read_messages",
+      "filePath": "src/hero/core/exchange.py",
+      "summary": "Function read_messages",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/exchange.py:read_state",
+      "type": "function",
+      "name": "read_state",
+      "filePath": "src/hero/core/exchange.py",
+      "summary": "Function read_state",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/core/exchange.py:write_state",
+      "type": "function",
+      "name": "write_state",
+      "filePath": "src/hero/core/exchange.py",
+      "summary": "Function write_state",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/graph/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/graph/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/graph/dependencies.py",
+      "type": "file",
+      "name": "dependencies.py",
+      "filePath": "src/hero/graph/dependencies.py",
+      "summary": "File: dependencies.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/graph/dependencies.py:scan_all_sandboxes",
+      "type": "function",
+      "name": "scan_all_sandboxes",
+      "filePath": "src/hero/graph/dependencies.py",
+      "summary": "Function scan_all_sandboxes",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/graph/dependencies.py:scan_sandbox",
+      "type": "function",
+      "name": "scan_sandbox",
+      "filePath": "src/hero/graph/dependencies.py",
+      "summary": "Function scan_sandbox",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/graph/dependencies.py:_resolve_sandbox_path",
+      "type": "function",
+      "name": "_resolve_sandbox_path",
+      "filePath": "src/hero/graph/dependencies.py",
+      "summary": "Function _resolve_sandbox_path",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/graph/dependencies.py:_extract_deps",
+      "type": "function",
+      "name": "_extract_deps",
+      "filePath": "src/hero/graph/dependencies.py",
+      "summary": "Function _extract_deps",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/graph/dependencies.py:Dependency",
+      "type": "class",
+      "name": "Dependency",
+      "filePath": "src/hero/graph/dependencies.py",
+      "summary": "Class Dependency",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/graph/dependencies.py:ScanResult",
+      "type": "class",
+      "name": "ScanResult",
+      "filePath": "src/hero/graph/dependencies.py",
+      "summary": "Class ScanResult",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/mcp_server.py",
+      "type": "file",
+      "name": "mcp_server.py",
+      "filePath": "src/hero/mcp_server.py",
+      "summary": "File: mcp_server.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/mcp_server.py:jsonrpc_error",
+      "type": "function",
+      "name": "jsonrpc_error",
+      "filePath": "src/hero/mcp_server.py",
+      "summary": "Function jsonrpc_error",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/mcp_server.py:jsonrpc_result",
+      "type": "function",
+      "name": "jsonrpc_result",
+      "filePath": "src/hero/mcp_server.py",
+      "summary": "Function jsonrpc_result",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/mcp_server.py:jsonrpc_notification",
+      "type": "function",
+      "name": "jsonrpc_notification",
+      "filePath": "src/hero/mcp_server.py",
+      "summary": "Function jsonrpc_notification",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/mcp_server.py:run_hero",
+      "type": "function",
+      "name": "run_hero",
+      "filePath": "src/hero/mcp_server.py",
+      "summary": "Function run_hero",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/mcp_server.py:handle_request",
+      "type": "function",
+      "name": "handle_request",
+      "filePath": "src/hero/mcp_server.py",
+      "summary": "Function handle_request",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/mcp_server.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "src/hero/mcp_server.py",
+      "summary": "Function main",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/rules/context-budget.md",
+      "type": "document",
+      "name": "context-budget.md",
+      "filePath": "src/hero/prompts/defaults/rules/context-budget.md",
+      "summary": "Document: context-budget.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:src/hero/prompts/defaults/rules/tdd.md",
+      "type": "document",
+      "name": "tdd.md",
+      "filePath": "src/hero/prompts/defaults/rules/tdd.md",
+      "summary": "Document: tdd.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/prompts/defaults/rules/tdd.md:section",
+      "type": "function",
+      "name": "section",
+      "filePath": "src/hero/prompts/defaults/rules/tdd.md",
+      "summary": "Section: section",
+      "tags": [
+        "markdown",
+        "section"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/hero/stages/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/stages/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/__init__.py:_load_stage",
+      "type": "function",
+      "name": "_load_stage",
+      "filePath": "src/hero/stages/__init__.py",
+      "summary": "Function _load_stage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/__init__.py:run_stage",
+      "type": "function",
+      "name": "run_stage",
+      "filePath": "src/hero/stages/__init__.py",
+      "summary": "Function run_stage",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/__init__.py:resolve_mode",
+      "type": "function",
+      "name": "resolve_mode",
+      "filePath": "src/hero/stages/__init__.py",
+      "summary": "Function resolve_mode",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/__init__.py:_resolve_smart_mode",
+      "type": "function",
+      "name": "_resolve_smart_mode",
+      "filePath": "src/hero/stages/__init__.py",
+      "summary": "Function _resolve_smart_mode",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/__init__.py:_get_changed_files",
+      "type": "function",
+      "name": "_get_changed_files",
+      "filePath": "src/hero/stages/__init__.py",
+      "summary": "Function _get_changed_files",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/stages/__init__.py:_match_glob",
+      "type": "function",
+      "name": "_match_glob",
+      "filePath": "src/hero/stages/__init__.py",
+      "summary": "Function _match_glob",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/viewport/compaction.py",
+      "type": "file",
+      "name": "compaction.py",
+      "filePath": "src/hero/viewport/compaction.py",
+      "summary": "File: compaction.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/compaction.py:Event",
+      "type": "class",
+      "name": "Event",
+      "filePath": "src/hero/viewport/compaction.py",
+      "summary": "Class Event",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/viewport/compaction.py:CompactionEngine",
+      "type": "class",
+      "name": "CompactionEngine",
+      "filePath": "src/hero/viewport/compaction.py",
+      "summary": "Class CompactionEngine",
+      "tags": [
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/hero/web/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "src/hero/web/static/index.html",
+      "summary": "File: index.html",
+      "tags": [
+        "html",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/sparkline.js",
+      "type": "file",
+      "name": "sparkline.js",
+      "filePath": "src/hero/web/static/js/components/sparkline.js",
+      "summary": "File: sparkline.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/sparkline.js:renderSparkline",
+      "type": "function",
+      "name": "renderSparkline",
+      "filePath": "src/hero/web/static/js/components/sparkline.js",
+      "summary": "Function renderSparkline",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/sparkline.js:uniqueId",
+      "type": "function",
+      "name": "uniqueId",
+      "filePath": "src/hero/web/static/js/components/sparkline.js",
+      "summary": "Function uniqueId",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/renderer/styles/desktop.css",
+      "type": "file",
+      "name": "desktop.css",
+      "filePath": "src/renderer/styles/desktop.css",
+      "summary": "File: desktop.css",
+      "tags": [
+        "css",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "tests/__init__.py",
+      "summary": "File: __init__.py",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/commands/brainstorm.py",
+      "target": "function:src/hero/commands/brainstorm.py:_build_reverse_index",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/brainstorm.py",
+      "target": "function:src/hero/commands/brainstorm.py:_detect_new_project",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/brainstorm.py",
+      "target": "function:src/hero/commands/brainstorm.py:_extract_gates",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/brainstorm.py",
+      "target": "function:src/hero/commands/brainstorm.py:_match_skills",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/brainstorm.py",
+      "target": "function:src/hero/commands/brainstorm.py:_is_mechanical_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/brainstorm.py",
+      "target": "function:src/hero/commands/brainstorm.py:_write_brief",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/brainstorm.py",
+      "target": "function:src/hero/commands/brainstorm.py:brainstorm_task",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/brainstorm.py",
+      "target": "function:src/hero/commands/brainstorm.py:run",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/viewport_audit.py",
+      "target": "function:src/hero/commands/viewport_audit.py:_load_openclaw_providers",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/viewport_audit.py",
+      "target": "function:src/hero/commands/viewport_audit.py:_load_openclaw_defaults",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/viewport_audit.py",
+      "target": "function:src/hero/commands/viewport_audit.py:_load_models_json",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/viewport_audit.py",
+      "target": "function:src/hero/commands/viewport_audit.py:_load_army_models",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/commands/viewport_audit.py",
+      "target": "function:src/hero/commands/viewport_audit.py:viewport",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/exchange.py",
+      "target": "function:src/hero/core/exchange.py:ensure_channel",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/exchange.py",
+      "target": "function:src/hero/core/exchange.py:post_message",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/exchange.py",
+      "target": "function:src/hero/core/exchange.py:read_messages",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/exchange.py",
+      "target": "function:src/hero/core/exchange.py:read_state",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/core/exchange.py",
+      "target": "function:src/hero/core/exchange.py:write_state",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graph/dependencies.py",
+      "target": "function:src/hero/graph/dependencies.py:scan_all_sandboxes",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graph/dependencies.py",
+      "target": "function:src/hero/graph/dependencies.py:scan_sandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graph/dependencies.py",
+      "target": "function:src/hero/graph/dependencies.py:_resolve_sandbox_path",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graph/dependencies.py",
+      "target": "function:src/hero/graph/dependencies.py:_extract_deps",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graph/dependencies.py",
+      "target": "class:src/hero/graph/dependencies.py:Dependency",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/graph/dependencies.py",
+      "target": "class:src/hero/graph/dependencies.py:ScanResult",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/mcp_server.py",
+      "target": "function:src/hero/mcp_server.py:jsonrpc_error",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/mcp_server.py",
+      "target": "function:src/hero/mcp_server.py:jsonrpc_result",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/mcp_server.py",
+      "target": "function:src/hero/mcp_server.py:jsonrpc_notification",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/mcp_server.py",
+      "target": "function:src/hero/mcp_server.py:run_hero",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/mcp_server.py",
+      "target": "function:src/hero/mcp_server.py:handle_request",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/mcp_server.py",
+      "target": "function:src/hero/mcp_server.py:main",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/__init__.py",
+      "target": "function:src/hero/stages/__init__.py:_load_stage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/__init__.py",
+      "target": "function:src/hero/stages/__init__.py:run_stage",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/__init__.py",
+      "target": "function:src/hero/stages/__init__.py:resolve_mode",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/__init__.py",
+      "target": "function:src/hero/stages/__init__.py:_resolve_smart_mode",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/__init__.py",
+      "target": "function:src/hero/stages/__init__.py:_get_changed_files",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/stages/__init__.py",
+      "target": "function:src/hero/stages/__init__.py:_match_glob",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/compaction.py",
+      "target": "class:src/hero/viewport/compaction.py:Event",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/viewport/compaction.py",
+      "target": "class:src/hero/viewport/compaction.py:CompactionEngine",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/sparkline.js",
+      "target": "function:src/hero/web/static/js/components/sparkline.js:renderSparkline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/sparkline.js",
+      "target": "function:src/hero/web/static/js/components/sparkline.js:uniqueId",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

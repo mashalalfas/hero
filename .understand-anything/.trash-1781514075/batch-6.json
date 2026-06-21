@@ -1,0 +1,1087 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/hero/web/static/js/app.js",
+      "type": "file",
+      "name": "app.js",
+      "filePath": "src/hero/web/static/js/app.js",
+      "summary": "File: app.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/app.js:connectSSE",
+      "type": "function",
+      "name": "connectSSE",
+      "filePath": "src/hero/web/static/js/app.js",
+      "summary": "Function connectSSE",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/app.js:loadData",
+      "type": "function",
+      "name": "loadData",
+      "filePath": "src/hero/web/static/js/app.js",
+      "summary": "Function loadData",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/app.js:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "src/hero/web/static/js/app.js",
+      "summary": "Function init",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/controls.js",
+      "type": "file",
+      "name": "controls.js",
+      "filePath": "src/hero/web/static/js/components/controls.js",
+      "summary": "File: controls.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/controls.js:renderControls",
+      "type": "function",
+      "name": "renderControls",
+      "filePath": "src/hero/web/static/js/components/controls.js",
+      "summary": "Function renderControls",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/detail-panel.js",
+      "type": "file",
+      "name": "detail-panel.js",
+      "filePath": "src/hero/web/static/js/components/detail-panel.js",
+      "summary": "File: detail-panel.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/detail-panel.js:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "src/hero/web/static/js/components/detail-panel.js",
+      "summary": "Function create",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/header.js",
+      "type": "file",
+      "name": "header.js",
+      "filePath": "src/hero/web/static/js/components/header.js",
+      "summary": "File: header.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/header.js:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "src/hero/web/static/js/components/header.js",
+      "summary": "Function create",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/modal.js",
+      "type": "file",
+      "name": "modal.js",
+      "filePath": "src/hero/web/static/js/components/modal.js",
+      "summary": "File: modal.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/modal.js:showModal",
+      "type": "function",
+      "name": "showModal",
+      "filePath": "src/hero/web/static/js/components/modal.js",
+      "summary": "Function showModal",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/modal.js:closeModal",
+      "type": "function",
+      "name": "closeModal",
+      "filePath": "src/hero/web/static/js/components/modal.js",
+      "summary": "Function closeModal",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/sandbox-card.js",
+      "type": "file",
+      "name": "sandbox-card.js",
+      "filePath": "src/hero/web/static/js/components/sandbox-card.js",
+      "summary": "File: sandbox-card.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/sandbox-card.js:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "src/hero/web/static/js/components/sandbox-card.js",
+      "summary": "Function create",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/sandbox-card.js:render",
+      "type": "function",
+      "name": "render",
+      "filePath": "src/hero/web/static/js/components/sandbox-card.js",
+      "summary": "Function render",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/sandbox-card.js:renderCard",
+      "type": "function",
+      "name": "renderCard",
+      "filePath": "src/hero/web/static/js/components/sandbox-card.js",
+      "summary": "Function renderCard",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/stats-bar.js",
+      "type": "file",
+      "name": "stats-bar.js",
+      "filePath": "src/hero/web/static/js/components/stats-bar.js",
+      "summary": "File: stats-bar.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/stats-bar.js:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "src/hero/web/static/js/components/stats-bar.js",
+      "summary": "Function create",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/stats-bar.js:render",
+      "type": "function",
+      "name": "render",
+      "filePath": "src/hero/web/static/js/components/stats-bar.js",
+      "summary": "Function render",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/timeline.js",
+      "type": "file",
+      "name": "timeline.js",
+      "filePath": "src/hero/web/static/js/components/timeline.js",
+      "summary": "File: timeline.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/timeline.js:renderTimeline",
+      "type": "function",
+      "name": "renderTimeline",
+      "filePath": "src/hero/web/static/js/components/timeline.js",
+      "summary": "Function renderTimeline",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/timeline.js:renderEvent",
+      "type": "function",
+      "name": "renderEvent",
+      "filePath": "src/hero/web/static/js/components/timeline.js",
+      "summary": "Function renderEvent",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/toast.js",
+      "type": "file",
+      "name": "toast.js",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "File: toast.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/toast.js:initToastContainer",
+      "type": "function",
+      "name": "initToastContainer",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "Function initToastContainer",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/toast.js:showToast",
+      "type": "function",
+      "name": "showToast",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "Function showToast",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/toast.js:dismissToast",
+      "type": "function",
+      "name": "dismissToast",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "Function dismissToast",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/toast.js:typeIcon",
+      "type": "function",
+      "name": "typeIcon",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "Function typeIcon",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/toast.js:showSuccessToast",
+      "type": "function",
+      "name": "showSuccessToast",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "Function showSuccessToast",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/toast.js:showErrorToast",
+      "type": "function",
+      "name": "showErrorToast",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "Function showErrorToast",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/toast.js:showInfoToast",
+      "type": "function",
+      "name": "showInfoToast",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "Function showInfoToast",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/toast.js:showWarningToast",
+      "type": "function",
+      "name": "showWarningToast",
+      "filePath": "src/hero/web/static/js/components/toast.js",
+      "summary": "Function showWarningToast",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/components/tree-node.js",
+      "type": "file",
+      "name": "tree-node.js",
+      "filePath": "src/hero/web/static/js/components/tree-node.js",
+      "summary": "File: tree-node.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/tree-node.js:getDotClass",
+      "type": "function",
+      "name": "getDotClass",
+      "filePath": "src/hero/web/static/js/components/tree-node.js",
+      "summary": "Function getDotClass",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/tree-node.js:renderTreeNode",
+      "type": "function",
+      "name": "renderTreeNode",
+      "filePath": "src/hero/web/static/js/components/tree-node.js",
+      "summary": "Function renderTreeNode",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/components/tree-node.js:renderTree",
+      "type": "function",
+      "name": "renderTree",
+      "filePath": "src/hero/web/static/js/components/tree-node.js",
+      "summary": "Function renderTree",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/services/api.js",
+      "type": "file",
+      "name": "api.js",
+      "filePath": "src/hero/web/static/js/services/api.js",
+      "summary": "File: api.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/api.js:apiFetch",
+      "type": "function",
+      "name": "apiFetch",
+      "filePath": "src/hero/web/static/js/services/api.js",
+      "summary": "Function apiFetch",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/api.js:fetchTree",
+      "type": "function",
+      "name": "fetchTree",
+      "filePath": "src/hero/web/static/js/services/api.js",
+      "summary": "Function fetchTree",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/api.js:fetchSummary",
+      "type": "function",
+      "name": "fetchSummary",
+      "filePath": "src/hero/web/static/js/services/api.js",
+      "summary": "Function fetchSummary",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/api.js:fetchSandbox",
+      "type": "function",
+      "name": "fetchSandbox",
+      "filePath": "src/hero/web/static/js/services/api.js",
+      "summary": "Function fetchSandbox",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/api.js:fetchBottlenecks",
+      "type": "function",
+      "name": "fetchBottlenecks",
+      "filePath": "src/hero/web/static/js/services/api.js",
+      "summary": "Function fetchBottlenecks",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/api.js:killSandbox",
+      "type": "function",
+      "name": "killSandbox",
+      "filePath": "src/hero/web/static/js/services/api.js",
+      "summary": "Function killSandbox",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/api.js:spawnSandbox",
+      "type": "function",
+      "name": "spawnSandbox",
+      "filePath": "src/hero/web/static/js/services/api.js",
+      "summary": "Function spawnSandbox",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/services/auth.js",
+      "type": "file",
+      "name": "auth.js",
+      "filePath": "src/hero/web/static/js/services/auth.js",
+      "summary": "File: auth.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/auth.js:setToken",
+      "type": "function",
+      "name": "setToken",
+      "filePath": "src/hero/web/static/js/services/auth.js",
+      "summary": "Function setToken",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/auth.js:getToken",
+      "type": "function",
+      "name": "getToken",
+      "filePath": "src/hero/web/static/js/services/auth.js",
+      "summary": "Function getToken",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/auth.js:clearToken",
+      "type": "function",
+      "name": "clearToken",
+      "filePath": "src/hero/web/static/js/services/auth.js",
+      "summary": "Function clearToken",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/auth.js:hasToken",
+      "type": "function",
+      "name": "hasToken",
+      "filePath": "src/hero/web/static/js/services/auth.js",
+      "summary": "Function hasToken",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/services/sse.js",
+      "type": "file",
+      "name": "sse.js",
+      "filePath": "src/hero/web/static/js/services/sse.js",
+      "summary": "File: sse.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/hero/web/static/js/services/sse.js:SSEManager",
+      "type": "class",
+      "name": "SSEManager",
+      "filePath": "src/hero/web/static/js/services/sse.js",
+      "summary": "Class SSEManager",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/services/state.js",
+      "type": "file",
+      "name": "state.js",
+      "filePath": "src/hero/web/static/js/services/state.js",
+      "summary": "File: state.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/state.js:_createStore",
+      "type": "function",
+      "name": "_createStore",
+      "filePath": "src/hero/web/static/js/services/state.js",
+      "summary": "Function _createStore",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/state.js:_getInstance",
+      "type": "function",
+      "name": "_getInstance",
+      "filePath": "src/hero/web/static/js/services/state.js",
+      "summary": "Function _getInstance",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/state.js:getState",
+      "type": "function",
+      "name": "getState",
+      "filePath": "src/hero/web/static/js/services/state.js",
+      "summary": "Function getState",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/state.js:setState",
+      "type": "function",
+      "name": "setState",
+      "filePath": "src/hero/web/static/js/services/state.js",
+      "summary": "Function setState",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/state.js:subscribe",
+      "type": "function",
+      "name": "subscribe",
+      "filePath": "src/hero/web/static/js/services/state.js",
+      "summary": "Function subscribe",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/state.js:getSnapshot",
+      "type": "function",
+      "name": "getSnapshot",
+      "filePath": "src/hero/web/static/js/services/state.js",
+      "summary": "Function getSnapshot",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/services/state.js:createStore",
+      "type": "function",
+      "name": "createStore",
+      "filePath": "src/hero/web/static/js/services/state.js",
+      "summary": "Function createStore",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/hero/web/static/js/utils/dom.js",
+      "type": "file",
+      "name": "dom.js",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "File: dom.js",
+      "tags": [
+        "javascript",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/utils/dom.js:escapeHtml",
+      "type": "function",
+      "name": "escapeHtml",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "Function escapeHtml",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/utils/dom.js:escapeAttr",
+      "type": "function",
+      "name": "escapeAttr",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "Function escapeAttr",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/utils/dom.js:$",
+      "type": "function",
+      "name": "$",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "Function $",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/utils/dom.js:$$",
+      "type": "function",
+      "name": "$$",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "Function $$",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/utils/dom.js:createElement",
+      "type": "function",
+      "name": "createElement",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "Function createElement",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/utils/dom.js:debounce",
+      "type": "function",
+      "name": "debounce",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "Function debounce",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/utils/dom.js:timeAgo",
+      "type": "function",
+      "name": "timeAgo",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "Function timeAgo",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/hero/web/static/js/utils/dom.js:formatNumber",
+      "type": "function",
+      "name": "formatNumber",
+      "filePath": "src/hero/web/static/js/utils/dom.js",
+      "summary": "Function formatNumber",
+      "tags": [
+        "javascript"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/hero/web/static/js/app.js",
+      "target": "function:src/hero/web/static/js/app.js:connectSSE",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/app.js",
+      "target": "function:src/hero/web/static/js/app.js:loadData",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/app.js",
+      "target": "function:src/hero/web/static/js/app.js:init",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/controls.js",
+      "target": "function:src/hero/web/static/js/components/controls.js:renderControls",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/detail-panel.js",
+      "target": "function:src/hero/web/static/js/components/detail-panel.js:create",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/header.js",
+      "target": "function:src/hero/web/static/js/components/header.js:create",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/modal.js",
+      "target": "function:src/hero/web/static/js/components/modal.js:showModal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/modal.js",
+      "target": "function:src/hero/web/static/js/components/modal.js:closeModal",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/sandbox-card.js",
+      "target": "function:src/hero/web/static/js/components/sandbox-card.js:create",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/sandbox-card.js",
+      "target": "function:src/hero/web/static/js/components/sandbox-card.js:render",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/sandbox-card.js",
+      "target": "function:src/hero/web/static/js/components/sandbox-card.js:renderCard",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/stats-bar.js",
+      "target": "function:src/hero/web/static/js/components/stats-bar.js:create",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/stats-bar.js",
+      "target": "function:src/hero/web/static/js/components/stats-bar.js:render",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/timeline.js",
+      "target": "function:src/hero/web/static/js/components/timeline.js:renderTimeline",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/timeline.js",
+      "target": "function:src/hero/web/static/js/components/timeline.js:renderEvent",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/toast.js",
+      "target": "function:src/hero/web/static/js/components/toast.js:initToastContainer",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/toast.js",
+      "target": "function:src/hero/web/static/js/components/toast.js:showToast",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/toast.js",
+      "target": "function:src/hero/web/static/js/components/toast.js:dismissToast",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/toast.js",
+      "target": "function:src/hero/web/static/js/components/toast.js:typeIcon",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/toast.js",
+      "target": "function:src/hero/web/static/js/components/toast.js:showSuccessToast",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/toast.js",
+      "target": "function:src/hero/web/static/js/components/toast.js:showErrorToast",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/toast.js",
+      "target": "function:src/hero/web/static/js/components/toast.js:showInfoToast",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/toast.js",
+      "target": "function:src/hero/web/static/js/components/toast.js:showWarningToast",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/tree-node.js",
+      "target": "function:src/hero/web/static/js/components/tree-node.js:getDotClass",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/tree-node.js",
+      "target": "function:src/hero/web/static/js/components/tree-node.js:renderTreeNode",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/components/tree-node.js",
+      "target": "function:src/hero/web/static/js/components/tree-node.js:renderTree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/api.js",
+      "target": "function:src/hero/web/static/js/services/api.js:apiFetch",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/api.js",
+      "target": "function:src/hero/web/static/js/services/api.js:fetchTree",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/api.js",
+      "target": "function:src/hero/web/static/js/services/api.js:fetchSummary",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/api.js",
+      "target": "function:src/hero/web/static/js/services/api.js:fetchSandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/api.js",
+      "target": "function:src/hero/web/static/js/services/api.js:fetchBottlenecks",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/api.js",
+      "target": "function:src/hero/web/static/js/services/api.js:killSandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/api.js",
+      "target": "function:src/hero/web/static/js/services/api.js:spawnSandbox",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/auth.js",
+      "target": "function:src/hero/web/static/js/services/auth.js:setToken",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/auth.js",
+      "target": "function:src/hero/web/static/js/services/auth.js:getToken",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/auth.js",
+      "target": "function:src/hero/web/static/js/services/auth.js:clearToken",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/auth.js",
+      "target": "function:src/hero/web/static/js/services/auth.js:hasToken",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/sse.js",
+      "target": "class:src/hero/web/static/js/services/sse.js:SSEManager",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/state.js",
+      "target": "function:src/hero/web/static/js/services/state.js:_createStore",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/state.js",
+      "target": "function:src/hero/web/static/js/services/state.js:_getInstance",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/state.js",
+      "target": "function:src/hero/web/static/js/services/state.js:getState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/state.js",
+      "target": "function:src/hero/web/static/js/services/state.js:setState",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/state.js",
+      "target": "function:src/hero/web/static/js/services/state.js:subscribe",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/state.js",
+      "target": "function:src/hero/web/static/js/services/state.js:getSnapshot",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/services/state.js",
+      "target": "function:src/hero/web/static/js/services/state.js:createStore",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/utils/dom.js",
+      "target": "function:src/hero/web/static/js/utils/dom.js:escapeHtml",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/utils/dom.js",
+      "target": "function:src/hero/web/static/js/utils/dom.js:escapeAttr",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/utils/dom.js",
+      "target": "function:src/hero/web/static/js/utils/dom.js:$",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/utils/dom.js",
+      "target": "function:src/hero/web/static/js/utils/dom.js:$$",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/utils/dom.js",
+      "target": "function:src/hero/web/static/js/utils/dom.js:createElement",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/utils/dom.js",
+      "target": "function:src/hero/web/static/js/utils/dom.js:debounce",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/utils/dom.js",
+      "target": "function:src/hero/web/static/js/utils/dom.js:timeAgo",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/hero/web/static/js/utils/dom.js",
+      "target": "function:src/hero/web/static/js/utils/dom.js:formatNumber",
+      "type": "contains",
+      "weight": 1.0
+    }
+  ]
+}

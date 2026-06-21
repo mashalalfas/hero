@@ -1,0 +1,1273 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docs/EXCHANGE_LAYER_IMPLEMENT.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1845,
+      "nonEmptyLines": 1521,
+      "sections": [
+        {
+          "heading": "Exchange Layer — Implementation Brief",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "🚨 Critical: Context Window Guardrails",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Guardrail 1: Lead is NOT in the message path",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "Guardrail 2: No CC pattern",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "Guardrail 3: listen() has a batch limit",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "Guardrail 4: Per-soldier assignment file",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "Guardrail 5: Archive consumed messages",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "File Path Reference",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "Files to CREATE",
+          "level": 3,
+          "line": 79
+        },
+        {
+          "heading": "Files to MODIFY",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "Step-by-Step Implementation",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "Step 1: Message Data Model (`exchange/message.py`)",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "Step 2: Lock (`exchange/lock.py`)",
+          "level": 3,
+          "line": 294
+        },
+        {
+          "heading": "Guardrail 6: Soldier uses assignment file, not task list scan",
+          "level": 3,
+          "line": 356
+        },
+        {
+          "heading": "Step 3: Core Exchange Layer (`exchange/core.py`)",
+          "level": 3,
+          "line": 365
+        },
+        {
+          "heading": "Guardrail 4 Implementation: Per-Soldier Assignments",
+          "level": 3,
+          "line": 642
+        },
+        {
+          "heading": "Step 4: Task List (`exchange/task_list.py`)",
+          "level": 3,
+          "line": 694
+        },
+        {
+          "heading": "Step 5: Result Pipe (`exchange/pipe.py`)",
+          "level": 3,
+          "line": 892
+        },
+        {
+          "heading": "Step 6: Review (`exchange/review.py`)",
+          "level": 3,
+          "line": 979
+        },
+        {
+          "heading": "Step 7: Reliability (`exchange/reliability.py`)",
+          "level": 3,
+          "line": 1105
+        },
+        {
+          "heading": "Step 8: CLI Commands (`commands/exchange.py`)",
+          "level": 3,
+          "line": 1197
+        },
+        {
+          "heading": "Step 9: CLI Registration (`cli.py`)",
+          "level": 3,
+          "line": 1638
+        },
+        {
+          "heading": "Step 10: Integration Points",
+          "level": 3,
+          "line": 1654
+        },
+        {
+          "heading": "A. `deploy.py` — Add `--exchange` flag",
+          "level": 4,
+          "line": 1656
+        },
+        {
+          "heading": "B. `spawner.py` — Register in roster",
+          "level": 4,
+          "line": 1677
+        },
+        {
+          "heading": "C. `go.py` — Add `--exchange` flag",
+          "level": 4,
+          "line": 1698
+        },
+        {
+          "heading": "D. `context.py` — Inject exchange context",
+          "level": 4,
+          "line": 1710
+        },
+        {
+          "heading": "Step 11: Tests",
+          "level": 3,
+          "line": 1724
+        },
+        {
+          "heading": "Implementation Order",
+          "level": 2,
+          "line": 1803
+        },
+        {
+          "heading": "Acceptance Criteria",
+          "level": 2,
+          "line": 1832
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 31
+      }
+    },
+    {
+      "path": "docs/EXCHANGE_LAYER_SPEC.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 576,
+      "nonEmptyLines": 471,
+      "sections": [
+        {
+          "heading": "Exchange Layer — Inter-Agent Message Bus",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Overview & Motivation",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "Problem",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "Solution",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "Design Principles",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "2. Architecture",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Directory Structure",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "3. Data Model",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "Message Schema (TOON format)",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "Channel Registry (CHANNEL.toon)",
+          "level": 3,
+          "line": 112
+        },
+        {
+          "heading": "Shared Task List (TASKS.toon)",
+          "level": 3,
+          "line": 135
+        },
+        {
+          "heading": "4. Communication Patterns",
+          "level": 2,
+          "line": 159
+        },
+        {
+          "heading": "Pattern 1: Direct Messaging (Soldier → Soldier)",
+          "level": 3,
+          "line": 161
+        },
+        {
+          "heading": "Pattern 2: Broadcast (Soldier → All)",
+          "level": 3,
+          "line": 180
+        },
+        {
+          "heading": "Pattern 3: Shared Task List (Agent Teams pattern)",
+          "level": 3,
+          "line": 196
+        },
+        {
+          "heading": "Pattern 4: Result Passing (Pipeline)",
+          "level": 3,
+          "line": 222
+        },
+        {
+          "heading": "Pattern 5: Adversarial Review",
+          "level": 3,
+          "line": 244
+        },
+        {
+          "heading": "5. API Surface",
+          "level": 2,
+          "line": 269
+        },
+        {
+          "heading": "CLI Commands",
+          "level": 3,
+          "line": 271
+        },
+        {
+          "heading": "Integration Flags",
+          "level": 3,
+          "line": 283
+        },
+        {
+          "heading": "Python API",
+          "level": 3,
+          "line": 291
+        },
+        {
+          "heading": "6. Integration Points",
+          "level": 2,
+          "line": 322
+        },
+        {
+          "heading": "SoldierSpawner Integration (`hero/soldier/spawner.py`)",
+          "level": 3,
+          "line": 324
+        },
+        {
+          "heading": "Deploy Integration (`hero/commands/deploy.py`)",
+          "level": 3,
+          "line": 336
+        },
+        {
+          "heading": "Go Integration (`hero/commands/go.py`)",
+          "level": 3,
+          "line": 356
+        },
+        {
+          "heading": "PipelineExecutor Integration",
+          "level": 3,
+          "line": 367
+        },
+        {
+          "heading": "7. Delivery Guarantees & Edge Cases",
+          "level": 2,
+          "line": 376
+        },
+        {
+          "heading": "Delivery Semantics",
+          "level": 3,
+          "line": 378
+        },
+        {
+          "heading": "Edge Cases",
+          "level": 3,
+          "line": 389
+        },
+        {
+          "heading": "Retry Mechanism",
+          "level": 3,
+          "line": 401
+        },
+        {
+          "heading": "8. Comparison to Reference Systems",
+          "level": 2,
+          "line": 420
+        },
+        {
+          "heading": "9. Implementation Plan",
+          "level": 2,
+          "line": 437
+        },
+        {
+          "heading": "Phase 1: Foundation (Core + Storage)",
+          "level": 3,
+          "line": 439
+        },
+        {
+          "heading": "Phase 2: CLI Commands",
+          "level": 3,
+          "line": 455
+        },
+        {
+          "heading": "Phase 3: Integration with Spawner & Deploy",
+          "level": 3,
+          "line": 468
+        },
+        {
+          "heading": "Phase 4: Shared Task List (Agent Teams Pattern)",
+          "level": 3,
+          "line": 481
+        },
+        {
+          "heading": "Phase 5: Reviewer / Adversarial Pattern",
+          "level": 3,
+          "line": 492
+        },
+        {
+          "heading": "Phase 6: Cleanup & Reliability",
+          "level": 3,
+          "line": 503
+        },
+        {
+          "heading": "10. Migration Path",
+          "level": 2,
+          "line": 520
+        },
+        {
+          "heading": "Appendix: .toon Format Reference",
+          "level": 2,
+          "line": 552
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 40
+      }
+    },
+    {
+      "path": "docs/PIPELINE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 176,
+      "nonEmptyLines": 145,
+      "sections": [
+        {
+          "heading": "HERO Army Pipeline — Logical Flow",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core Principle: No user prompts between steps.",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "The Flow",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "Rules",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "No Solo Work",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "No Skipping Steps",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "Soldiers: 1 Task, 2 Files, No Scope Creep",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "Verifier: Fail Fast",
+          "level": 3,
+          "line": 96
+        },
+        {
+          "heading": "Archivist: Append Only",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "Communicator: Report, Don't Build",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "This File is Law",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "Implementation (CLI Commands)",
+          "level": 2,
+          "line": 120
+        },
+        {
+          "heading": "Current Status (2026-05-24)",
+          "level": 2,
+          "line": 147
+        },
+        {
+          "heading": "Current Status (2026-05-24 13:48)",
+          "level": 2,
+          "line": 162
+        },
+        {
+          "heading": "`hero go` output",
+          "level": 3,
+          "line": 173
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "docs/SUPERPOWER_INTEGRATION_PROPOSAL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 481,
+      "nonEmptyLines": 366,
+      "sections": [
+        {
+          "heading": "Superpower → HERO Integration Proposal",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Executive Summary",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "1. TDD Strict Enforcement",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "What Superpower Does",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "Where It Goes in HERO",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "Implementation",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "A. TDD Gate (`hero/qa/tdd_gate.py` — new file)",
+          "level": 4,
+          "line": 41
+        },
+        {
+          "heading": "B. Soldier Brief Update (`hero/soldier/spawner.py`)",
+          "level": 4,
+          "line": 84
+        },
+        {
+          "heading": "C. Pipeline Integration (`hero/pipeline/executor.py`)",
+          "level": 4,
+          "line": 111
+        },
+        {
+          "heading": "2. Git Worktree Isolation",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "What Superpower Does",
+          "level": 3,
+          "line": 132
+        },
+        {
+          "heading": "Where It Goes in HERO",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "Implementation",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "A. Worktree Manager (`hero/git/worktree.py` — new file)",
+          "level": 4,
+          "line": 151
+        },
+        {
+          "heading": "B. PipelineExecutor Integration",
+          "level": 4,
+          "line": 210
+        },
+        {
+          "heading": "C. CLI Flag",
+          "level": 4,
+          "line": 233
+        },
+        {
+          "heading": "3. Brainstorm Phase (Hard Gate)",
+          "level": 2,
+          "line": 242
+        },
+        {
+          "heading": "What Superpower Does",
+          "level": 3,
+          "line": 244
+        },
+        {
+          "heading": "Where It Goes in HERO",
+          "level": 3,
+          "line": 251
+        },
+        {
+          "heading": "Implementation",
+          "level": 3,
+          "line": 259
+        },
+        {
+          "heading": "A. Brainstorm Module (`hero/brainstorm/gate.py` — new file)",
+          "level": 4,
+          "line": 261
+        },
+        {
+          "heading": "B. `hero think` Command (`hero/commands/think.py` — new file)",
+          "level": 4,
+          "line": 357
+        },
+        {
+          "heading": "C. `hero go` Integration",
+          "level": 4,
+          "line": 387
+        },
+        {
+          "heading": "Integration Map",
+          "level": 2,
+          "line": 405
+        },
+        {
+          "heading": "Pipeline Stages (Updated)",
+          "level": 2,
+          "line": 428
+        },
+        {
+          "heading": "New Files",
+          "level": 2,
+          "line": 445
+        },
+        {
+          "heading": "Modified Files",
+          "level": 2,
+          "line": 457
+        },
+        {
+          "heading": "Rollout Priority",
+          "level": 2,
+          "line": 469
+        },
+        {
+          "heading": "Success Metrics",
+          "level": 2,
+          "line": 477
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 29
+      }
+    },
+    {
+      "path": "docs/TEACH_SKILL_BUILD.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 933,
+      "nonEmptyLines": 732,
+      "sections": [
+        {
+          "heading": "HERO Teach Skill — Build Brief",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "0. Pre-flight checklist",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "1. Scaffold the project",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "`package.json` scripts",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "`tsconfig.json` (replace the generated one)",
+          "level": 3,
+          "line": 62
+        },
+        {
+          "heading": "`vite.config.ts`",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "`tailwind.config.ts`",
+          "level": 3,
+          "line": 119
+        },
+        {
+          "heading": "`src/styles/globals.css`",
+          "level": 3,
+          "line": 153
+        },
+        {
+          "heading": "2. Folder skeleton",
+          "level": 2,
+          "line": 194
+        },
+        {
+          "heading": "3. Component architecture",
+          "level": 2,
+          "line": 238
+        },
+        {
+          "heading": "3.1 `src/lib/mdx.tsx` — MDX components map",
+          "level": 3,
+          "line": 242
+        },
+        {
+          "heading": "3.2 `src/lib/shiki.ts` — code highlighter",
+          "level": 3,
+          "line": 262
+        },
+        {
+          "heading": "3.3 `src/components/CodeBlock.tsx`",
+          "level": 3,
+          "line": 277
+        },
+        {
+          "heading": "3.4 `src/components/ScoreBadge.tsx`",
+          "level": 3,
+          "line": 305
+        },
+        {
+          "heading": "3.5 `src/components/Callout.tsx`",
+          "level": 3,
+          "line": 321
+        },
+        {
+          "heading": "3.6 `src/components/ThemeToggle.tsx`",
+          "level": 3,
+          "line": 349
+        },
+        {
+          "heading": "3.7 `src/components/Nav.tsx` and `Footer.tsx`",
+          "level": 3,
+          "line": 383
+        },
+        {
+          "heading": "3.8 `src/components/PipelineMap.tsx` (the centerpiece)",
+          "level": 3,
+          "line": 387
+        },
+        {
+          "heading": "3.9 `src/components/NodePill.tsx`",
+          "level": 3,
+          "line": 436
+        },
+        {
+          "heading": "3.10 `src/components/NodePanel.tsx`",
+          "level": 3,
+          "line": 466
+        },
+        {
+          "heading": "3.11 `src/components/ToonVsJson.tsx`",
+          "level": 3,
+          "line": 477
+        },
+        {
+          "heading": "3.12 `src/components/SearchBar.tsx`",
+          "level": 3,
+          "line": 481
+        },
+        {
+          "heading": "4. Pages",
+          "level": 2,
+          "line": 487
+        },
+        {
+          "heading": "4.1 `src/pages/Home.tsx`",
+          "level": 3,
+          "line": 495
+        },
+        {
+          "heading": "4.2 `src/pages/Architecture.tsx`",
+          "level": 3,
+          "line": 499
+        },
+        {
+          "heading": "4.3 `src/pages/Pipeline.tsx`",
+          "level": 3,
+          "line": 503
+        },
+        {
+          "heading": "4.4 `src/pages/ExchangeLayer.tsx`",
+          "level": 3,
+          "line": 507
+        },
+        {
+          "heading": "4.5 `src/pages/Commands.tsx`",
+          "level": 3,
+          "line": 511
+        },
+        {
+          "heading": "4.6 `src/pages/CommandPage.tsx`",
+          "level": 3,
+          "line": 537
+        },
+        {
+          "heading": "4.7 `src/pages/Roles.tsx` and `RolePage.tsx`",
+          "level": 3,
+          "line": 541
+        },
+        {
+          "heading": "4.8 `src/pages/GettingStarted.tsx`",
+          "level": 3,
+          "line": 545
+        },
+        {
+          "heading": "4.9 `src/pages/Examples.tsx` and `ExamplePage.tsx`",
+          "level": 3,
+          "line": 549
+        },
+        {
+          "heading": "4.10 `src/pages/Learn.tsx` and `About.tsx`",
+          "level": 3,
+          "line": 553
+        },
+        {
+          "heading": "4.11 `src/pages/NotFound.tsx`",
+          "level": 3,
+          "line": 557
+        },
+        {
+          "heading": "5. Data",
+          "level": 2,
+          "line": 563
+        },
+        {
+          "heading": "5.1 `src/types.ts`",
+          "level": 3,
+          "line": 565
+        },
+        {
+          "heading": "5.2 `src/data/pipeline.json` (hand-authored)",
+          "level": 3,
+          "line": 604
+        },
+        {
+          "heading": "5.3 `scripts/extract-commands.mjs`",
+          "level": 3,
+          "line": 608
+        },
+        {
+          "heading": "5.4 `scripts/extract-roles.mjs`",
+          "level": 3,
+          "line": 637
+        },
+        {
+          "heading": "5.5 `src/data/examples/*.mdx`",
+          "level": 3,
+          "line": 641
+        },
+        {
+          "heading": "6. Routing & app shell",
+          "level": 2,
+          "line": 658
+        },
+        {
+          "heading": "6.1 `src/main.tsx`",
+          "level": 3,
+          "line": 660
+        },
+        {
+          "heading": "6.2 `src/App.tsx`",
+          "level": 3,
+          "line": 681
+        },
+        {
+          "heading": "6.3 `index.html`",
+          "level": 3,
+          "line": 725
+        },
+        {
+          "heading": "7. Local development",
+          "level": 2,
+          "line": 747
+        },
+        {
+          "heading": "Development tips",
+          "level": 3,
+          "line": 768
+        },
+        {
+          "heading": "8. Build & verification",
+          "level": 2,
+          "line": 777
+        },
+        {
+          "heading": "9. Deploy to Cloudflare Pages",
+          "level": 2,
+          "line": 800
+        },
+        {
+          "heading": "9.1 First-time setup",
+          "level": 3,
+          "line": 802
+        },
+        {
+          "heading": "9.2 Connect the GitHub repo (recommended)",
+          "level": 3,
+          "line": 814
+        },
+        {
+          "heading": "9.3 Manual deploy (alternative)",
+          "level": 3,
+          "line": 829
+        },
+        {
+          "heading": "9.4 Custom domain",
+          "level": 3,
+          "line": 838
+        },
+        {
+          "heading": "10. Maintenance & updates",
+          "level": 2,
+          "line": 844
+        },
+        {
+          "heading": "10.1 Updating commands",
+          "level": 3,
+          "line": 846
+        },
+        {
+          "heading": "10.2 Updating examples",
+          "level": 3,
+          "line": 880
+        },
+        {
+          "heading": "10.3 Adding a new role",
+          "level": 3,
+          "line": 889
+        },
+        {
+          "heading": "10.4 Adding a new pipeline stage",
+          "level": 3,
+          "line": 899
+        },
+        {
+          "heading": "11. Troubleshooting",
+          "level": 2,
+          "line": 907
+        },
+        {
+          "heading": "12. Definition of done",
+          "level": 2,
+          "line": 921
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 59
+      }
+    },
+    {
+      "path": "docs/TEACH_SKILL_DESIGN.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 974,
+      "nonEmptyLines": 777,
+      "sections": [
+        {
+          "heading": "HERO Teach Skill — Website Design",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Vision",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "What the Teach Skill is",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "Why it exists",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "🎨 Delivery model: `hero teach` CLI command",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "Audience and tone",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "2. Site Architecture",
+          "level": 2,
+          "line": 81
+        },
+        {
+          "heading": "Top-level pages",
+          "level": 3,
+          "line": 83
+        },
+        {
+          "heading": "Information architecture (navigation)",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "Content hierarchy per page",
+          "level": 3,
+          "line": 129
+        },
+        {
+          "heading": "URL strategy",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "File routing (Vite + React Router — see §5)",
+          "level": 3,
+          "line": 156
+        },
+        {
+          "heading": "3. Pipeline Map Design",
+          "level": 2,
+          "line": 179
+        },
+        {
+          "heading": "3.1 Layout",
+          "level": 3,
+          "line": 187
+        },
+        {
+          "heading": "3.2 Visual treatment per node",
+          "level": 3,
+          "line": 237
+        },
+        {
+          "heading": "3.3 Edges and flow",
+          "level": 3,
+          "line": 260
+        },
+        {
+          "heading": "3.4 Interactivity (Architecture page)",
+          "level": 3,
+          "line": 271
+        },
+        {
+          "heading": "3.5 Interactivity (Pipeline page)",
+          "level": 3,
+          "line": 284
+        },
+        {
+          "heading": "3.6 Tech for the diagram",
+          "level": 3,
+          "line": 295
+        },
+        {
+          "heading": "3.7 Stages and details (canonical data)",
+          "level": 3,
+          "line": 313
+        },
+        {
+          "heading": "3.8 Example run (used in animations and screenshots)",
+          "level": 3,
+          "line": 336
+        },
+        {
+          "heading": "4. Content Plan",
+          "level": 2,
+          "line": 348
+        },
+        {
+          "heading": "4.1 Landing page (`/`)",
+          "level": 3,
+          "line": 350
+        },
+        {
+          "heading": "4.2 Architecture page (`/architecture`)",
+          "level": 3,
+          "line": 374
+        },
+        {
+          "heading": "4.3 Pipeline page (`/pipeline`)",
+          "level": 3,
+          "line": 388
+        },
+        {
+          "heading": "4.4 Exchange Layer page (`/exchange`)",
+          "level": 3,
+          "line": 405
+        },
+        {
+          "heading": "4.5 Commands page (`/commands`)",
+          "level": 3,
+          "line": 423
+        },
+        {
+          "heading": "4.6 Roles page (`/roles`)",
+          "level": 3,
+          "line": 445
+        },
+        {
+          "heading": "4.7 Getting Started page (`/getting-started`)",
+          "level": 3,
+          "line": 460
+        },
+        {
+          "heading": "4.8 Examples page (`/examples`)",
+          "level": 3,
+          "line": 475
+        },
+        {
+          "heading": "4.9 Learn page (`/learn`)",
+          "level": 3,
+          "line": 488
+        },
+        {
+          "heading": "4.10 About page (`/about`)",
+          "level": 3,
+          "line": 499
+        },
+        {
+          "heading": "5. Tech Stack",
+          "level": 2,
+          "line": 512
+        },
+        {
+          "heading": "5.1 Build & framework",
+          "level": 3,
+          "line": 514
+        },
+        {
+          "heading": "5.2 Static vs SPA",
+          "level": 3,
+          "line": 531
+        },
+        {
+          "heading": "5.3 Why this stack over alternatives",
+          "level": 3,
+          "line": 541
+        },
+        {
+          "heading": "5.4 Folder structure",
+          "level": 3,
+          "line": 551
+        },
+        {
+          "heading": "5.5 Build commands",
+          "level": 3,
+          "line": 608
+        },
+        {
+          "heading": "5.6 Hosting",
+          "level": 3,
+          "line": 619
+        },
+        {
+          "heading": "6. Visual Design",
+          "level": 2,
+          "line": 643
+        },
+        {
+          "heading": "6.1 Brand & mood",
+          "level": 3,
+          "line": 645
+        },
+        {
+          "heading": "6.2 🎨 Colour palette (from UI-UX-Pro-Max · Developer Tool / IDE)",
+          "level": 3,
+          "line": 654
+        },
+        {
+          "heading": "6.3 🎨 Typography (from UI-UX-Pro-Max · Developer Mono pairing)",
+          "level": 3,
+          "line": 693
+        },
+        {
+          "heading": "6.4 Layout",
+          "level": 3,
+          "line": 720
+        },
+        {
+          "heading": "6.5 Mobile responsiveness",
+          "level": 3,
+          "line": 727
+        },
+        {
+          "heading": "6.6 Accessibility",
+          "level": 3,
+          "line": 737
+        },
+        {
+          "heading": "6.7 Imagery & icons",
+          "level": 3,
+          "line": 745
+        },
+        {
+          "heading": "6.8 Mockup descriptions (text-only)",
+          "level": 3,
+          "line": 752
+        },
+        {
+          "heading": "7. Implementation Plan",
+          "level": 2,
+          "line": 819
+        },
+        {
+          "heading": "7.1 Phases",
+          "level": 3,
+          "line": 821
+        },
+        {
+          "heading": "7.2 Dependencies on the user",
+          "level": 3,
+          "line": 859
+        },
+        {
+          "heading": "7.3 Risks and mitigations",
+          "level": 3,
+          "line": 870
+        },
+        {
+          "heading": "7.4 Out of scope for v1",
+          "level": 3,
+          "line": 880
+        },
+        {
+          "heading": "8. Success Metrics",
+          "level": 2,
+          "line": 890
+        },
+        {
+          "heading": "8.1 Launch criteria (must-have)",
+          "level": 3,
+          "line": 892
+        },
+        {
+          "heading": "8.2 Adoption signals (30-day post-launch)",
+          "level": 3,
+          "line": 904
+        },
+        {
+          "heading": "8.3 Content health (quarterly review)",
+          "level": 3,
+          "line": 915
+        },
+        {
+          "heading": "8.4 Maintenance load",
+          "level": 3,
+          "line": 923
+        },
+        {
+          "heading": "9. Open questions for the user",
+          "level": 2,
+          "line": 933
+        },
+        {
+          "heading": "10. Appendix — file index",
+          "level": 2,
+          "line": 950
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 60
+      }
+    }
+  ]
+}

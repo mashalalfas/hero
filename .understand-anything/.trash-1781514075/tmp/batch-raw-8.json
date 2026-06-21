@@ -1,0 +1,1878 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/hero/commands/hook.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 343,
+      "nonEmptyLines": 274,
+      "functions": [
+        {
+          "name": "hook",
+          "startLine": 30,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "list_hooks",
+          "startLine": 43,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "run_hook",
+          "startLine": 112,
+          "endLine": 173,
+          "params": [
+            "event",
+            "config",
+            "context"
+          ]
+        },
+        {
+          "name": "test_hook",
+          "startLine": 184,
+          "endLine": 222,
+          "params": [
+            "event",
+            "config"
+          ]
+        },
+        {
+          "name": "enable_hook",
+          "startLine": 233,
+          "endLine": 260,
+          "params": [
+            "hook_id",
+            "config"
+          ]
+        },
+        {
+          "name": "disable_hook",
+          "startLine": 271,
+          "endLine": 298,
+          "params": [
+            "hook_id",
+            "config"
+          ]
+        },
+        {
+          "name": "cache_group",
+          "startLine": 302,
+          "endLine": 304,
+          "params": []
+        },
+        {
+          "name": "cache_clear",
+          "startLine": 314,
+          "endLine": 323,
+          "params": [
+            "hook_id"
+          ]
+        },
+        {
+          "name": "cache_stats",
+          "startLine": 327,
+          "endLine": 339,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "hook",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "list_hooks",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "run_hook",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "test_hook",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "enable_hook",
+          "line": 225,
+          "isDefault": false
+        },
+        {
+          "name": "disable_hook",
+          "line": 263,
+          "isDefault": false
+        },
+        {
+          "name": "cache_group",
+          "line": 301,
+          "isDefault": false
+        },
+        {
+          "name": "cache_clear",
+          "line": 307,
+          "isDefault": false
+        },
+        {
+          "name": "cache_stats",
+          "line": 326,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_hooks",
+          "callee": "load_hooks_config",
+          "lineNumber": 50
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "click.echo",
+          "lineNumber": 52
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "click.echo",
+          "lineNumber": 56
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "hook_circuit.get_degraded",
+          "lineNumber": 59
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "click.echo",
+          "lineNumber": 61
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "len",
+          "lineNumber": 61
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "click.echo",
+          "lineNumber": 64
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "click.echo",
+          "lineNumber": 68
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "script.exists",
+          "lineNumber": 72
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "script.stat",
+          "lineNumber": 72
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "script.exists",
+          "lineNumber": 74
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "click.echo",
+          "lineNumber": 86
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "click.echo",
+          "lineNumber": 93
+        },
+        {
+          "caller": "list_hooks",
+          "callee": "len",
+          "lineNumber": 93
+        },
+        {
+          "caller": "run_hook",
+          "callee": "load_hooks_config",
+          "lineNumber": 123
+        },
+        {
+          "caller": "run_hook",
+          "callee": "click.echo",
+          "lineNumber": 125
+        },
+        {
+          "caller": "run_hook",
+          "callee": "SystemExit",
+          "lineNumber": 126
+        },
+        {
+          "caller": "run_hook",
+          "callee": "pair.split",
+          "lineNumber": 131
+        },
+        {
+          "caller": "run_hook",
+          "callee": "HookRunner",
+          "lineNumber": 134
+        },
+        {
+          "caller": "run_hook",
+          "callee": "get_hooks_for_event",
+          "lineNumber": 136
+        },
+        {
+          "caller": "run_hook",
+          "callee": "click.echo",
+          "lineNumber": 138
+        },
+        {
+          "caller": "run_hook",
+          "callee": "click.echo",
+          "lineNumber": 141
+        },
+        {
+          "caller": "run_hook",
+          "callee": "len",
+          "lineNumber": 141
+        },
+        {
+          "caller": "run_hook",
+          "callee": "runner.run_event",
+          "lineNumber": 143
+        },
+        {
+          "caller": "run_hook",
+          "callee": "click.echo",
+          "lineNumber": 153
+        },
+        {
+          "caller": "run_hook",
+          "callee": "r.stderr.strip",
+          "lineNumber": 157
+        },
+        {
+          "caller": "run_hook",
+          "callee": "r.stderr.strip().split",
+          "lineNumber": 158
+        },
+        {
+          "caller": "run_hook",
+          "callee": "r.stderr.strip",
+          "lineNumber": 158
+        },
+        {
+          "caller": "run_hook",
+          "callee": "click.echo",
+          "lineNumber": 159
+        },
+        {
+          "caller": "run_hook",
+          "callee": "click.echo",
+          "lineNumber": 161
+        },
+        {
+          "caller": "run_hook",
+          "callee": "click.echo",
+          "lineNumber": 170
+        },
+        {
+          "caller": "test_hook",
+          "callee": "load_hooks_config",
+          "lineNumber": 191
+        },
+        {
+          "caller": "test_hook",
+          "callee": "click.echo",
+          "lineNumber": 193
+        },
+        {
+          "caller": "test_hook",
+          "callee": "SystemExit",
+          "lineNumber": 194
+        },
+        {
+          "caller": "test_hook",
+          "callee": "get_hooks_for_event",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_hook",
+          "callee": "click.echo",
+          "lineNumber": 198
+        },
+        {
+          "caller": "test_hook",
+          "callee": "click.echo",
+          "lineNumber": 201
+        },
+        {
+          "caller": "test_hook",
+          "callee": "len",
+          "lineNumber": 201
+        },
+        {
+          "caller": "test_hook",
+          "callee": "hook_circuit.is_degraded",
+          "lineNumber": 205
+        },
+        {
+          "caller": "test_hook",
+          "callee": "h.script_path.exists",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_hook",
+          "callee": "h.script_path.stat",
+          "lineNumber": 209
+        },
+        {
+          "caller": "test_hook",
+          "callee": "click.echo",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_hook",
+          "callee": "click.echo",
+          "lineNumber": 219
+        },
+        {
+          "caller": "test_hook",
+          "callee": "PurePath",
+          "lineNumber": 219
+        },
+        {
+          "caller": "test_hook",
+          "callee": "click.echo",
+          "lineNumber": 222
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "config_path.exists",
+          "lineNumber": 241
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "click.echo",
+          "lineNumber": 242
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "SystemExit",
+          "lineNumber": 243
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "yaml.safe_load",
+          "lineNumber": 245
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "config_path.read_text",
+          "lineNumber": 245
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "raw.get",
+          "lineNumber": 246
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "entry.get",
+          "lineNumber": 250
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "click.echo",
+          "lineNumber": 256
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "SystemExit",
+          "lineNumber": 257
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "config_path.write_text",
+          "lineNumber": 259
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "yaml.dump",
+          "lineNumber": 259
+        },
+        {
+          "caller": "enable_hook",
+          "callee": "click.echo",
+          "lineNumber": 260
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "config_path.exists",
+          "lineNumber": 279
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "click.echo",
+          "lineNumber": 280
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "SystemExit",
+          "lineNumber": 281
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "yaml.safe_load",
+          "lineNumber": 283
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "config_path.read_text",
+          "lineNumber": 283
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "raw.get",
+          "lineNumber": 284
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "entry.get",
+          "lineNumber": 288
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "click.echo",
+          "lineNumber": 294
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "SystemExit",
+          "lineNumber": 295
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "config_path.write_text",
+          "lineNumber": 297
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "yaml.dump",
+          "lineNumber": 297
+        },
+        {
+          "caller": "disable_hook",
+          "callee": "click.echo",
+          "lineNumber": 298
+        },
+        {
+          "caller": "cache_clear",
+          "callee": "hook_cache.clear",
+          "lineNumber": 319
+        },
+        {
+          "caller": "cache_clear",
+          "callee": "click.echo",
+          "lineNumber": 321
+        },
+        {
+          "caller": "cache_clear",
+          "callee": "click.echo",
+          "lineNumber": 323
+        },
+        {
+          "caller": "cache_stats",
+          "callee": "click.echo",
+          "lineNumber": 333
+        },
+        {
+          "caller": "cache_stats",
+          "callee": "click.echo",
+          "lineNumber": 334
+        },
+        {
+          "caller": "cache_stats",
+          "callee": "click.echo",
+          "lineNumber": 335
+        },
+        {
+          "caller": "cache_stats",
+          "callee": "click.echo",
+          "lineNumber": 336
+        },
+        {
+          "caller": "cache_stats",
+          "callee": "click.echo",
+          "lineNumber": 337
+        },
+        {
+          "caller": "cache_stats",
+          "callee": "click.echo",
+          "lineNumber": 338
+        },
+        {
+          "caller": "cache_stats",
+          "callee": "click.echo",
+          "lineNumber": 339
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 9,
+        "functionCount": 9,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/core/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 9,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/core/hooks/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 24,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/core/hooks/cache.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 191,
+      "nonEmptyLines": 154,
+      "functions": [
+        {
+          "name": "content_hash",
+          "startLine": 35,
+          "endLine": 45,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CacheEntry",
+          "startLine": 49,
+          "endLine": 80,
+          "methods": [
+            "expired",
+            "to_dict",
+            "from_dict"
+          ],
+          "properties": [
+            "hook_id",
+            "content_hash",
+            "result",
+            "created_at",
+            "ttl"
+          ]
+        },
+        {
+          "name": "HookCache",
+          "startLine": 83,
+          "endLine": 187,
+          "methods": [
+            "__init__",
+            "_cache_path",
+            "_load",
+            "_save",
+            "get",
+            "set",
+            "clear",
+            "stats"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "content_hash",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "CacheEntry",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "HookCache",
+          "line": 83,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "content_hash",
+          "callee": "\"\\x00\".join",
+          "lineNumber": 44
+        },
+        {
+          "caller": "content_hash",
+          "callee": "hashlib.sha256(joined.encode(\"utf-8\")).hexdigest",
+          "lineNumber": 45
+        },
+        {
+          "caller": "content_hash",
+          "callee": "hashlib.sha256",
+          "lineNumber": 45
+        },
+        {
+          "caller": "content_hash",
+          "callee": "joined.encode",
+          "lineNumber": 45
+        },
+        {
+          "caller": "expired",
+          "callee": "time.time",
+          "lineNumber": 61
+        },
+        {
+          "caller": "from_dict",
+          "callee": "cls",
+          "lineNumber": 74
+        },
+        {
+          "caller": "from_dict",
+          "callee": "d.get",
+          "lineNumber": 79
+        },
+        {
+          "caller": "__init__",
+          "callee": "CACHE_DIR.mkdir",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_cache_path",
+          "callee": "hook_id.replace(\"/\", \"_\").replace",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_cache_path",
+          "callee": "hook_id.replace",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_load",
+          "callee": "self._cache_path",
+          "lineNumber": 99
+        },
+        {
+          "caller": "_load",
+          "callee": "path.exists",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_load",
+          "callee": "json.loads",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_load",
+          "callee": "path.read_text",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_load",
+          "callee": "CacheEntry.from_dict",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_load",
+          "callee": "raw.items",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_save",
+          "callee": "self._cache_path",
+          "lineNumber": 109
+        },
+        {
+          "caller": "_save",
+          "callee": "v.to_dict",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_save",
+          "callee": "entries.items",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_save",
+          "callee": "path.write_text",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_save",
+          "callee": "json.dumps",
+          "lineNumber": 111
+        },
+        {
+          "caller": "get",
+          "callee": "self._load",
+          "lineNumber": 123
+        },
+        {
+          "caller": "get",
+          "callee": "entries.get",
+          "lineNumber": 124
+        },
+        {
+          "caller": "get",
+          "callee": "self._save",
+          "lineNumber": 132
+        },
+        {
+          "caller": "set",
+          "callee": "self._load",
+          "lineNumber": 152
+        },
+        {
+          "caller": "set",
+          "callee": "CacheEntry",
+          "lineNumber": 153
+        },
+        {
+          "caller": "set",
+          "callee": "self._save",
+          "lineNumber": 159
+        },
+        {
+          "caller": "clear",
+          "callee": "self._cache_path",
+          "lineNumber": 174
+        },
+        {
+          "caller": "clear",
+          "callee": "path.exists",
+          "lineNumber": 175
+        },
+        {
+          "caller": "clear",
+          "callee": "path.unlink",
+          "lineNumber": 176
+        },
+        {
+          "caller": "clear",
+          "callee": "CACHE_DIR.glob",
+          "lineNumber": 179
+        },
+        {
+          "caller": "clear",
+          "callee": "path.unlink",
+          "lineNumber": 180
+        },
+        {
+          "caller": "stats",
+          "callee": "dict",
+          "lineNumber": 187
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "src/hero/core/hooks/circuit.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 172,
+      "nonEmptyLines": 135,
+      "classes": [
+        {
+          "name": "HookCircuit",
+          "startLine": 23,
+          "endLine": 52,
+          "methods": [
+            "to_dict",
+            "from_dict"
+          ],
+          "properties": [
+            "hook_id",
+            "failure_count",
+            "degraded",
+            "degraded_at",
+            "last_failure",
+            "last_failure_at"
+          ]
+        },
+        {
+          "name": "CircuitBreaker",
+          "startLine": 55,
+          "endLine": 168,
+          "methods": [
+            "__init__",
+            "_load",
+            "_save",
+            "is_degraded",
+            "record_failure",
+            "record_success",
+            "reset_session",
+            "get_degraded",
+            "get_all"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HookCircuit",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "CircuitBreaker",
+          "line": 55,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "from_dict",
+          "callee": "cls",
+          "lineNumber": 45
+        },
+        {
+          "caller": "from_dict",
+          "callee": "d.get",
+          "lineNumber": 47
+        },
+        {
+          "caller": "from_dict",
+          "callee": "d.get",
+          "lineNumber": 48
+        },
+        {
+          "caller": "from_dict",
+          "callee": "d.get",
+          "lineNumber": 49
+        },
+        {
+          "caller": "from_dict",
+          "callee": "d.get",
+          "lineNumber": 50
+        },
+        {
+          "caller": "from_dict",
+          "callee": "d.get",
+          "lineNumber": 51
+        },
+        {
+          "caller": "__init__",
+          "callee": "CIRCUIT_PATH.parent.mkdir",
+          "lineNumber": 68
+        },
+        {
+          "caller": "__init__",
+          "callee": "self._load",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_load",
+          "callee": "CIRCUIT_PATH.exists",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_load",
+          "callee": "json.loads",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_load",
+          "callee": "CIRCUIT_PATH.read_text",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_load",
+          "callee": "HookCircuit.from_dict",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_load",
+          "callee": "raw.items",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_save",
+          "callee": "v.to_dict",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_save",
+          "callee": "self._circuits.items",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_save",
+          "callee": "CIRCUIT_PATH.write_text",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_save",
+          "callee": "json.dumps",
+          "lineNumber": 85
+        },
+        {
+          "caller": "is_degraded",
+          "callee": "self._circuits.get",
+          "lineNumber": 96
+        },
+        {
+          "caller": "record_failure",
+          "callee": "time.time",
+          "lineNumber": 114
+        },
+        {
+          "caller": "record_failure",
+          "callee": "self._circuits.get",
+          "lineNumber": 115
+        },
+        {
+          "caller": "record_failure",
+          "callee": "HookCircuit",
+          "lineNumber": 117
+        },
+        {
+          "caller": "record_failure",
+          "callee": "self._save",
+          "lineNumber": 127
+        },
+        {
+          "caller": "record_failure",
+          "callee": "self._save",
+          "lineNumber": 130
+        },
+        {
+          "caller": "record_success",
+          "callee": "self._circuits.get",
+          "lineNumber": 139
+        },
+        {
+          "caller": "record_success",
+          "callee": "self._save",
+          "lineNumber": 146
+        },
+        {
+          "caller": "reset_session",
+          "callee": "self._circuits.clear",
+          "lineNumber": 150
+        },
+        {
+          "caller": "reset_session",
+          "callee": "CIRCUIT_PATH.exists",
+          "lineNumber": 151
+        },
+        {
+          "caller": "reset_session",
+          "callee": "CIRCUIT_PATH.unlink",
+          "lineNumber": 152
+        },
+        {
+          "caller": "get_degraded",
+          "callee": "self._circuits.values",
+          "lineNumber": 160
+        },
+        {
+          "caller": "get_all",
+          "callee": "dict",
+          "lineNumber": 168
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "src/hero/core/hooks/config.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 179,
+      "nonEmptyLines": 148,
+      "functions": [
+        {
+          "name": "load_hooks_config",
+          "startLine": 107,
+          "endLine": 159,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "get_hooks_for_event",
+          "startLine": 162,
+          "endLine": 179,
+          "params": [
+            "hooks",
+            "event"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "HookConfig",
+          "startLine": 40,
+          "endLine": 104,
+          "methods": [
+            "__post_init__",
+            "config_dir",
+            "script_path",
+            "tier",
+            "to_dict"
+          ],
+          "properties": [
+            "event",
+            "hook_id",
+            "rule",
+            "action",
+            "max_tokens",
+            "cache_ttl",
+            "script",
+            "enabled"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HookConfig",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "load_hooks_config",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "get_hooks_for_event",
+          "line": 162,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__post_init__",
+          "callee": "ValueError",
+          "lineNumber": 54
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "sorted",
+          "lineNumber": 56
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "ValueError",
+          "lineNumber": 59
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "sorted",
+          "lineNumber": 61
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "ValueError",
+          "lineNumber": 64
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "ValueError",
+          "lineNumber": 68
+        },
+        {
+          "caller": "script_path",
+          "callee": "Path",
+          "lineNumber": 80
+        },
+        {
+          "caller": "script_path",
+          "callee": "p.is_absolute",
+          "lineNumber": 81
+        },
+        {
+          "caller": "script_path",
+          "callee": "(self.config_dir / p).resolve",
+          "lineNumber": 83
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "config_path.exists",
+          "lineNumber": 124
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "yaml.safe_load",
+          "lineNumber": 127
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "config_path.read_text",
+          "lineNumber": 127
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "raw.get",
+          "lineNumber": 128
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "set",
+          "lineNumber": 131
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "enumerate",
+          "lineNumber": 133
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "isinstance",
+          "lineNumber": 134
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "ValueError",
+          "lineNumber": 135
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "entry.get",
+          "lineNumber": 139
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "ValueError",
+          "lineNumber": 141
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "seen_ids.add",
+          "lineNumber": 144
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "hooks.append",
+          "lineNumber": 146
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "HookConfig",
+          "lineNumber": 147
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "entry.get",
+          "lineNumber": 148
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "entry.get",
+          "lineNumber": 150
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "entry.get",
+          "lineNumber": 151
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "entry.get",
+          "lineNumber": 152
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "entry.get",
+          "lineNumber": 153
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "entry.get",
+          "lineNumber": 154
+        },
+        {
+          "caller": "load_hooks_config",
+          "callee": "entry.get",
+          "lineNumber": 155
+        },
+        {
+          "caller": "get_hooks_for_event",
+          "callee": "matching.sort",
+          "lineNumber": 178
+        },
+        {
+          "caller": "get_hooks_for_event",
+          "callee": "priority.get",
+          "lineNumber": 178
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/hero/core/hooks/runner.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 339,
+      "nonEmptyLines": 293,
+      "functions": [
+        {
+          "name": "run_hooks_for_event",
+          "startLine": 320,
+          "endLine": 339,
+          "params": [
+            "event",
+            "config_path",
+            "context"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "HookResult",
+          "startLine": 39,
+          "endLine": 78,
+          "methods": [
+            "tier",
+            "to_dict"
+          ],
+          "properties": [
+            "hook_id",
+            "event",
+            "action",
+            "success",
+            "exit_code",
+            "stdout",
+            "stderr",
+            "duration_ms",
+            "cached",
+            "degraded",
+            "error",
+            "timestamp"
+          ]
+        },
+        {
+          "name": "HookRunner",
+          "startLine": 81,
+          "endLine": 317,
+          "methods": [
+            "__init__",
+            "run_event",
+            "_run_one",
+            "_handle_failure",
+            "_handle_failure_result",
+            "_audit",
+            "tokens_used"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HookResult",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "HookRunner",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "run_hooks_for_event",
+          "line": 320,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "tier",
+          "callee": "{\n            \"block\": \"CRITICAL\",\n            \"warn\": \"IMPORTANT\",\n            \"silent\": \"OPTIONAL\",\n        }.get",
+          "lineNumber": 57
+        },
+        {
+          "caller": "run_event",
+          "callee": "get_hooks_for_event",
+          "lineNumber": 118
+        },
+        {
+          "caller": "run_event",
+          "callee": "logger.debug",
+          "lineNumber": 120
+        },
+        {
+          "caller": "run_event",
+          "callee": "self._run_one",
+          "lineNumber": 126
+        },
+        {
+          "caller": "run_event",
+          "callee": "results.append",
+          "lineNumber": 127
+        },
+        {
+          "caller": "run_event",
+          "callee": "logger.warning",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_run_one",
+          "callee": "time.time",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._circuit.is_degraded",
+          "lineNumber": 145
+        },
+        {
+          "caller": "_run_one",
+          "callee": "logger.warning",
+          "lineNumber": 146
+        },
+        {
+          "caller": "_run_one",
+          "callee": "HookResult",
+          "lineNumber": 147
+        },
+        {
+          "caller": "_run_one",
+          "callee": "logger.warning",
+          "lineNumber": 162
+        },
+        {
+          "caller": "_run_one",
+          "callee": "HookResult",
+          "lineNumber": 163
+        },
+        {
+          "caller": "_run_one",
+          "callee": "json.dumps",
+          "lineNumber": 177
+        },
+        {
+          "caller": "_run_one",
+          "callee": "content_hash",
+          "lineNumber": 178
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._cache.get",
+          "lineNumber": 179
+        },
+        {
+          "caller": "_run_one",
+          "callee": "logger.debug",
+          "lineNumber": 181
+        },
+        {
+          "caller": "_run_one",
+          "callee": "HookResult",
+          "lineNumber": 182
+        },
+        {
+          "caller": "_run_one",
+          "callee": "cached.get",
+          "lineNumber": 186
+        },
+        {
+          "caller": "_run_one",
+          "callee": "cached.get",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_run_one",
+          "callee": "cached.get",
+          "lineNumber": 188
+        },
+        {
+          "caller": "_run_one",
+          "callee": "cached.get",
+          "lineNumber": 189
+        },
+        {
+          "caller": "_run_one",
+          "callee": "script.exists",
+          "lineNumber": 196
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._handle_failure",
+          "lineNumber": 197
+        },
+        {
+          "caller": "_run_one",
+          "callee": "os.access",
+          "lineNumber": 201
+        },
+        {
+          "caller": "_run_one",
+          "callee": "script.chmod",
+          "lineNumber": 203
+        },
+        {
+          "caller": "_run_one",
+          "callee": "script.stat",
+          "lineNumber": 203
+        },
+        {
+          "caller": "_run_one",
+          "callee": "os.environ.copy",
+          "lineNumber": 207
+        },
+        {
+          "caller": "_run_one",
+          "callee": "str",
+          "lineNumber": 211
+        },
+        {
+          "caller": "_run_one",
+          "callee": "context.items",
+          "lineNumber": 212
+        },
+        {
+          "caller": "_run_one",
+          "callee": "key.upper",
+          "lineNumber": 213
+        },
+        {
+          "caller": "_run_one",
+          "callee": "str",
+          "lineNumber": 213
+        },
+        {
+          "caller": "_run_one",
+          "callee": "subprocess.run",
+          "lineNumber": 216
+        },
+        {
+          "caller": "_run_one",
+          "callee": "str",
+          "lineNumber": 217
+        },
+        {
+          "caller": "_run_one",
+          "callee": "time.time",
+          "lineNumber": 224
+        },
+        {
+          "caller": "_run_one",
+          "callee": "HookResult",
+          "lineNumber": 230
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._circuit.record_success",
+          "lineNumber": 242
+        },
+        {
+          "caller": "_run_one",
+          "callee": "json.dumps",
+          "lineNumber": 245
+        },
+        {
+          "caller": "_run_one",
+          "callee": "content_hash",
+          "lineNumber": 246
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._cache.set",
+          "lineNumber": 247
+        },
+        {
+          "caller": "_run_one",
+          "callee": "result.to_dict",
+          "lineNumber": 250
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._handle_failure_result",
+          "lineNumber": 254
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._audit",
+          "lineNumber": 256
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._handle_failure",
+          "lineNumber": 261
+        },
+        {
+          "caller": "_run_one",
+          "callee": "self._handle_failure",
+          "lineNumber": 265
+        },
+        {
+          "caller": "_handle_failure",
+          "callee": "time.time",
+          "lineNumber": 271
+        },
+        {
+          "caller": "_handle_failure",
+          "callee": "HookResult",
+          "lineNumber": 272
+        },
+        {
+          "caller": "_handle_failure",
+          "callee": "self._handle_failure_result",
+          "lineNumber": 283
+        },
+        {
+          "caller": "_handle_failure",
+          "callee": "self._audit",
+          "lineNumber": 284
+        },
+        {
+          "caller": "_handle_failure_result",
+          "callee": "self._circuit.record_failure",
+          "lineNumber": 289
+        },
+        {
+          "caller": "_handle_failure_result",
+          "callee": "logger.warning",
+          "lineNumber": 295
+        },
+        {
+          "caller": "_audit",
+          "callee": "AUDIT_DIR.mkdir",
+          "lineNumber": 302
+        },
+        {
+          "caller": "_audit",
+          "callee": "result.to_dict",
+          "lineNumber": 303
+        },
+        {
+          "caller": "_audit",
+          "callee": "time.time",
+          "lineNumber": 304
+        },
+        {
+          "caller": "_audit",
+          "callee": "logger.info",
+          "lineNumber": 305
+        },
+        {
+          "caller": "_audit",
+          "callee": "round",
+          "lineNumber": 312
+        },
+        {
+          "caller": "run_hooks_for_event",
+          "callee": "load_hooks_config",
+          "lineNumber": 337
+        },
+        {
+          "caller": "run_hooks_for_event",
+          "callee": "HookRunner",
+          "lineNumber": 338
+        },
+        {
+          "caller": "run_hooks_for_event",
+          "callee": "runner.run_event",
+          "lineNumber": 339
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "src/hero/core/project.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 198,
+      "nonEmptyLines": 164,
+      "functions": [
+        {
+          "name": "_parse_index_toon",
+          "startLine": 36,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "resolve_sandbox",
+          "startLine": 47,
+          "endLine": 78,
+          "params": [
+            "sandbox_name_or_path"
+          ]
+        },
+        {
+          "name": "detect_project_type",
+          "startLine": 83,
+          "endLine": 198,
+          "params": [
+            "path"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_parse_index_toon",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_sandbox",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "detect_project_type",
+          "line": 83,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_parse_index_toon",
+          "callee": "INDEX_PATH.exists",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_parse_index_toon",
+          "callee": "INDEX_PATH.read_text",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_parse_index_toon",
+          "callee": "m.group",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_parse_index_toon",
+          "callee": "m.group",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_parse_index_toon",
+          "callee": "_INDEX_ENTRY_RE.finditer",
+          "lineNumber": 44
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "_parse_index_toon",
+          "lineNumber": 60
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "Path(index[sandbox_name_or_path]).resolve",
+          "lineNumber": 62
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "Path",
+          "lineNumber": 62
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "Path",
+          "lineNumber": 65
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "candidate.exists",
+          "lineNumber": 66
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "candidate.resolve",
+          "lineNumber": 67
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "dev.exists",
+          "lineNumber": 71
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "dev.resolve",
+          "lineNumber": 72
+        },
+        {
+          "caller": "resolve_sandbox",
+          "callee": "FileNotFoundError",
+          "lineNumber": 74
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"project.godot\").exists",
+          "lineNumber": 118
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"engine.cfg\").exists",
+          "lineNumber": 118
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 119
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"pubspec.yaml\").exists",
+          "lineNumber": 126
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 127
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"package.json\").exists",
+          "lineNumber": 137
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "json.loads",
+          "lineNumber": 140
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "pkg.read_text",
+          "lineNumber": 140
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "pkg_data.get",
+          "lineNumber": 145
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "pkg_data.get",
+          "lineNumber": 146
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "pkg_data.get",
+          "lineNumber": 148
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 151
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 162
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"pyproject.toml\").exists",
+          "lineNumber": 178
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 179
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "(path / \"Cargo.toml\").exists",
+          "lineNumber": 188
+        },
+        {
+          "caller": "detect_project_type",
+          "callee": "result.update",
+          "lineNumber": 189
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/hero/core/subprocess.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 47,
+      "functions": [
+        {
+          "name": "safe_run",
+          "startLine": 16,
+          "endLine": 54,
+          "params": [
+            "cmd",
+            "cwd",
+            "timeout"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "safe_run",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "safe_run",
+          "callee": "subprocess.run",
+          "lineNumber": 41
+        },
+        {
+          "caller": "safe_run",
+          "callee": "str",
+          "lineNumber": 43
+        },
+        {
+          "caller": "safe_run",
+          "callee": "str",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

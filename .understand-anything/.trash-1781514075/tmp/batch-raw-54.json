@@ -1,0 +1,313 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "tests/test_toon.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 255,
+      "nonEmptyLines": 182,
+      "classes": [
+        {
+          "name": "TestToonRead",
+          "startLine": 18,
+          "endLine": 95,
+          "methods": [
+            "test_simple_key_value",
+            "test_list_format",
+            "test_nested_dict",
+            "test_comments_ignored",
+            "test_empty_list",
+            "test_boolean_values",
+            "test_float_values",
+            "test_file_not_found"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestToonWrite",
+          "startLine": 98,
+          "endLine": 142,
+          "methods": [
+            "test_simple_key_value",
+            "test_list_format",
+            "test_nested_dict",
+            "test_empty_list"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestRoundTrip",
+          "startLine": 145,
+          "endLine": 193,
+          "methods": [
+            "test_simple_dict_roundtrip",
+            "test_dict_with_lists_roundtrip",
+            "test_dict_with_nested_roundtrip",
+            "test_mixed_types_roundtrip"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestJsonToToon",
+          "startLine": 196,
+          "endLine": 233,
+          "methods": [
+            "test_simple_json_conversion",
+            "test_json_with_lists",
+            "test_json_with_nested",
+            "test_json_to_toon_returns_toon_string"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestErrorHandling",
+          "startLine": 236,
+          "endLine": 255,
+          "methods": [
+            "test_malformed_toon_non_dict",
+            "test_json_to_toon_invalid_json"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestToonRead",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "TestToonWrite",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "TestRoundTrip",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "TestJsonToToon",
+          "line": 196,
+          "isDefault": false
+        },
+        {
+          "name": "TestErrorHandling",
+          "line": 236,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_simple_key_value",
+          "callee": "path.write_text",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_simple_key_value",
+          "callee": "toon_read",
+          "lineNumber": 27
+        },
+        {
+          "caller": "test_list_format",
+          "callee": "path.write_text",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_list_format",
+          "callee": "toon_read",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_nested_dict",
+          "callee": "path.write_text",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_nested_dict",
+          "callee": "toon_read",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_comments_ignored",
+          "callee": "path.write_text",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_comments_ignored",
+          "callee": "toon_read",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_empty_list",
+          "callee": "path.write_text",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_empty_list",
+          "callee": "toon_read",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_boolean_values",
+          "callee": "path.write_text",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_boolean_values",
+          "callee": "toon_read",
+          "lineNumber": 77
+        },
+        {
+          "caller": "test_float_values",
+          "callee": "path.write_text",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_float_values",
+          "callee": "toon_read",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_file_not_found",
+          "callee": "toon_read",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_simple_key_value",
+          "callee": "toon_write",
+          "lineNumber": 106
+        },
+        {
+          "caller": "test_simple_key_value",
+          "callee": "path.read_text",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_list_format",
+          "callee": "toon_write",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_list_format",
+          "callee": "path.read_text",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_nested_dict",
+          "callee": "toon_write",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_nested_dict",
+          "callee": "path.read_text",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_empty_list",
+          "callee": "toon_write",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_empty_list",
+          "callee": "path.read_text",
+          "lineNumber": 141
+        },
+        {
+          "caller": "test_simple_dict_roundtrip",
+          "callee": "toon_write",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_simple_dict_roundtrip",
+          "callee": "toon_read",
+          "lineNumber": 154
+        },
+        {
+          "caller": "test_dict_with_lists_roundtrip",
+          "callee": "toon_write",
+          "lineNumber": 163
+        },
+        {
+          "caller": "test_dict_with_lists_roundtrip",
+          "callee": "toon_read",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_dict_with_nested_roundtrip",
+          "callee": "toon_write",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_dict_with_nested_roundtrip",
+          "callee": "toon_read",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_mixed_types_roundtrip",
+          "callee": "toon_write",
+          "lineNumber": 190
+        },
+        {
+          "caller": "test_mixed_types_roundtrip",
+          "callee": "toon_read",
+          "lineNumber": 191
+        },
+        {
+          "caller": "test_simple_json_conversion",
+          "callee": "json_to_toon",
+          "lineNumber": 202
+        },
+        {
+          "caller": "test_json_with_lists",
+          "callee": "json_to_toon",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_json_with_nested",
+          "callee": "json_to_toon",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_json_to_toon_returns_toon_string",
+          "callee": "json.dumps",
+          "lineNumber": 226
+        },
+        {
+          "caller": "test_json_to_toon_returns_toon_string",
+          "callee": "json_to_toon",
+          "lineNumber": 228
+        },
+        {
+          "caller": "test_malformed_toon_non_dict",
+          "callee": "path.write_text",
+          "lineNumber": 244
+        },
+        {
+          "caller": "test_malformed_toon_non_dict",
+          "callee": "toon_read",
+          "lineNumber": 247
+        },
+        {
+          "caller": "test_json_to_toon_invalid_json",
+          "callee": "pytest.raises",
+          "lineNumber": 254
+        },
+        {
+          "caller": "test_json_to_toon_invalid_json",
+          "callee": "json_to_toon",
+          "lineNumber": 255
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 5
+      }
+    }
+  ]
+}
